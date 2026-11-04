@@ -10,7 +10,7 @@
   <a href="https://nigelhartman.github.io/interaction_twin/showcase/walkthrough.html">3-minute walkthrough</a>
 </p>
 
-[![Watch Interaction Twin — 45-second trailer](docs/media/trailer-poster.jpg)](https://nigelhartman.github.io/interaction_twin/showcase/film.html)
+https://github.com/user-attachments/assets/e5097536-f51c-4747-9b42-e236fd88cb21
 
 <p align="center">▶ <a href="docs/media/interaction-twin-45s.mp4">Open the trailer MP4</a> · Sound and English captions on the demo page.</p>
 
