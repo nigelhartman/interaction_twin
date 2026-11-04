@@ -4,7 +4,7 @@ const ROOT=path.resolve(__dirname,'..'),read=name=>JSON.parse(fs.readFileSync(pa
 const catalog=read('showcase/public/library-catalog.json'),index=read('showcase/public/cases-index.json'),Reviews=require('../showcase/sam3d-models.js');
 globalThis.Sam3DModelReviews=Reviews;const Assets=require('../showcase/robotics-lab-assets.js');
 function node(tag='div'){return{tagName:tag.toUpperCase(),children:[],dataset:{},style:{},value:'',textContent:'',hidden:false,disabled:false,checked:true,readyState:1,duration:100,currentTime:0,paused:true,src:'',events:{},focused:false,focus(){this.focused=true;},contentWindow:{messages:[],postMessage(m,o){this.messages.push({message:m,origin:o});}},classList:{add(){},toggle(){}},append(...rows){this.children.push(...rows)},replaceChildren(...rows){this.children=rows},setAttribute(k,v){this[k]=v},removeAttribute(k){delete this[k]},pause(){this.paused=true;},addEventListener(type,fn){this.events[type]=fn;}};}
-async function controller({tamperProgram=false,curated=true,mutateIndex=null,sceneRow=null,search='',unavailableSource=null}={}){
+async function controller({tamperProgram=false,curated=true,mutateIndex=null,sceneRow=null,search='',unavailableSource=null,staticTwin=null}={}){
  const calls=[],events={},nodes=new Map(),get=id=>{if(!nodes.has(id))nodes.set(id,node(['case-select','moving-asset','container-asset','step-select'].includes(id)?'select':'div'));return nodes.get(id);};
  const publicIndex=copy(index),publicCatalog=copy(catalog);publicIndex.curated=curated;if(mutateIndex)mutateIndex(publicIndex);
  // Isolated transport-availability negative: real source/program bytes and all
@@ -15,7 +15,7 @@ async function controller({tamperProgram=false,curated=true,mutateIndex=null,sce
   calls.push(String(url));if(url==='public/cases-index.json')return{ok:true,json:async()=>publicIndex};
   if(String(url).startsWith(location.origin+'/files/data/')){const relative=decodeURIComponent(String(url).split('/files/')[1]);assert.ok(index.cases.some(c=>c.interaction_path===relative),'Only exact curated procedure files may be requested');const raw=fs.readFileSync(path.join(ROOT,relative));const bytes=(typeof tamperProgram==='function'?tamperProgram(relative):tamperProgram)?Buffer.from('{}'):raw;return{ok:true,arrayBuffer:async()=>bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength)};}
   throw Error('Unexpected request '+url);
- }};ctx.window=ctx;ctx.globalThis=ctx;vm.createContext(ctx);vm.runInContext(fs.readFileSync(path.join(ROOT,'showcase/sam3d-models.js'),'utf8'),ctx);vm.runInContext(fs.readFileSync(path.join(ROOT,'showcase/robotics-lab-assets.js'),'utf8'),ctx);
+ }};if(staticTwin)ctx.StaticTwin=staticTwin;ctx.window=ctx;ctx.globalThis=ctx;vm.createContext(ctx);vm.runInContext(fs.readFileSync(path.join(ROOT,'showcase/sam3d-models.js'),'utf8'),ctx);vm.runInContext(fs.readFileSync(path.join(ROOT,'showcase/robotics-lab-assets.js'),'utf8'),ctx);
  const source=fs.readFileSync(path.join(ROOT,'showcase/robotics-lab.js'),'utf8').replace(/^import .*;\s*$/gm,'').replaceAll('import.meta.url',JSON.stringify(location.origin+'/showcase/robotics-lab.js'));
  await vm.runInContext('(async()=>{'+source+'})()',ctx,{filename:'showcase/robotics-lab.js'});for(let i=0;i<5;i++)await new Promise(setImmediate);return{ctx,get,calls,events};
 }
@@ -72,4 +72,18 @@ test('an unknown explicit deep-link twin stops before selecting another recordin
 test('the lab has only two primary tabs; experiments stay in a closed advanced drawer',async()=>{
  const html=fs.readFileSync(path.join(ROOT,'showcase/robotics-lab.html'),'utf8'),tabs=html.match(/role="tab"/g)||[];assert.equal(tabs.length,2);assert.match(html,/<details id="lab-advanced" class="lab-advanced">/);assert.ok(html.indexOf('id="mode-robot"')>html.indexOf('id="lab-advanced"'));assert.ok(html.indexOf('id="mode-physics"')>html.indexOf('id="lab-advanced"'));
  const h=await controller();h.get('mode-replay').events.keydown({key:'End',preventDefault(){}});assert.equal(h.ctx.RoboticsLab.snapshot().public_mode,'workbench');assert.equal(h.get('workbench-panel').hidden,false);assert.equal(h.get('lab-advanced').hidden,true);h.get('mode-workbench').events.keydown({key:'ArrowRight',preventDefault(){}});assert.equal(h.ctx.RoboticsLab.snapshot().public_mode,'replay');h.ctx.RoboticsLab.setMode('physics');assert.equal(h.get('lab-advanced').open,true);assert.equal(h.get('physics-panel').hidden,false);assert.match(h.get('physics-frame').src,/physics-bench/);
+});
+
+test('static robot selection offers only declared saved baselines and preserves unsupported source selection',async()=>{
+ const jabra=index.cases.find(c=>c.interaction.tracklets.some(t=>t.id==='case_base')),wallet=index.cases.find(c=>c.interaction.tracklets.some(t=>t.id==='gold_coin')),phone=index.cases.find(c=>c.interaction.tracklets.some(t=>t.id==='phone_blue')),ids=[jabra.id,wallet.id];
+ const h=await controller({search:'?case='+phone.id+'&mode=workbench',staticTwin:{robotCapabilities:async()=>({scope:'saved_baselines',twin_ids:ids})}});
+ assert.equal(h.ctx.RoboticsLab.snapshot().case_id,phone.id,'An unsupported robot does not silently switch to another source.');assert.equal(h.get('workbench-frame').src,undefined);assert.equal(h.get('workbench-frame').hidden,true);assert.deepEqual(h.get('case-select').children.filter(n=>!n.disabled).map(n=>n.value).sort(),[...ids].sort());assert.match(h.get('workbench-unavailable').children[0].textContent,/not available/);assert.ok(h.get('workbench-unavailable').children.some(n=>n.href?.includes('case='+phone.id)&&n.href.includes('mode=replay')));
+ h.ctx.RoboticsLab.setMode('replay');assert.equal(h.get('case-select').children.length,index.cases.length);assert.equal(h.get('case-select').value,phone.id);
+ h.ctx.RoboticsLab.setMode('workbench');h.get('case-select').value=wallet.id;await h.get('case-select').onchange();assert.equal(h.get('workbench-frame').hidden,false);assert.equal(h.get('workbench-unavailable').hidden,true);assert.match(h.get('workbench-frame').src,new RegExp('case='+encodeURIComponent(wallet.id)));
+});
+
+test('static robot capability failures retain recorded access but never open a fallback workbench',async()=>{
+ for(const staticTwin of[{robotCapabilities:async()=>{throw Error('Capability download failed.');}},{robotCapabilities:async()=>({scope:'all',twin_ids:[]})},{robotCapabilities:async()=>({scope:'saved_baselines',twin_ids:['not_curated']})},{}]){
+  const h=await controller({search:'?mode=workbench',staticTwin});assert.equal(h.get('workbench-frame').src,undefined);assert.equal(h.get('workbench-frame').hidden,true);assert.equal(h.get('case-select').disabled,true);assert.match(h.get('workbench-unavailable').children[0].textContent,/could not be verified/);h.ctx.RoboticsLab.setMode('replay');assert.equal(h.get('case-select').disabled,false);assert.equal(h.get('case-select').children.length,index.cases.length);
+ }
 });

@@ -1,6 +1,6 @@
 {
   "format": "interaction-twin-public-source-release",
-  "version": 3,
+  "version": 6,
   "owner_authorized_repository": "nigelhartman/interaction_twin",
   "layout": "self_contained_runtime_in_app; documentation_at_root",
   "private_state_excluded": true,
@@ -13,8 +13,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "5cf99fb9ded999a61602f631cc5185d0174734910db2cc945b23b19a2b32d323",
-      "bytes": 7571
+      "sha256": "8ba2ab2fadf45bbd38ae65f09ec5180d8ca9fca494496fb11bd10298dfcf1fd1",
+      "bytes": 7999
     },
     {
       "path": "app/admin/admin.css",
@@ -1127,6 +1127,11 @@
       "bytes": 87
     },
     {
+      "path": "app/requirements-review.txt",
+      "sha256": "f1f9811800e9652f910d48363959ac99a5912f6ad98a6f0463160fb7e838ac0e",
+      "bytes": 286
+    },
+    {
       "path": "app/requirements-sam.lock.txt",
       "sha256": "7fd54814806928dd66a5890ccba993da815f6730864df00db21b16c7e9a68224",
       "bytes": 454
@@ -1473,8 +1478,8 @@
     },
     {
       "path": "app/scripts/build_github_pages_20261104_v1.py",
-      "sha256": "4aa39b7a1c2afef2e1ee1a63a7131d37033c2153cdb7a112a59af0e80e80bf36",
-      "bytes": 12693
+      "sha256": "fa170829e66edea98ce33ae328490d36f63a3ef1a62e360244ae7f1156f8d3df",
+      "bytes": 13078
     },
     {
       "path": "app/scripts/build_initial_sam3d_review.py",
@@ -1667,6 +1672,11 @@
       "bytes": 12113
     },
     {
+      "path": "app/scripts/build_submission_final_20261104_v2.py",
+      "sha256": "107b795fdecdea9f5793cd86bd8472a2facafc2285532cbf56cb1607d5148451",
+      "bytes": 17016
+    },
+    {
       "path": "app/scripts/build_submission_review_artifacts.py",
       "sha256": "0647f2bfc950ecf8865551411d4fc200c8075d1519356427bab4a67c945917f3",
       "bytes": 6964
@@ -1710,6 +1720,11 @@
       "path": "app/scripts/check_rigidity_feasibility.py",
       "sha256": "4bfdb311e14a60f080dee8b26cc4a566f0243753c8efbaf070152c050c762efc",
       "bytes": 481
+    },
+    {
+      "path": "app/scripts/check_source_release.py",
+      "sha256": "1d4d07e9792211e136b274eb8041b05fa6f96ecfb7d63428203cddbf04f1f1f9",
+      "bytes": 5847
     },
     {
       "path": "app/scripts/compare_automatic_cameras.py",
@@ -2713,8 +2728,8 @@
     },
     {
       "path": "app/showcase/agent-setup.html",
-      "sha256": "1e3ce3f553996230b6c4376f1b295772cba4885c988f322b3e368be9b9396b4f",
-      "bytes": 6506
+      "sha256": "02418b83dd2fda9592e99df050e7afb3a17f5ddef26490e3789b012d7a5e615a",
+      "bytes": 6857
     },
     {
       "path": "app/showcase/agents.css",
@@ -2723,8 +2738,8 @@
     },
     {
       "path": "app/showcase/agents.html",
-      "sha256": "331bea0861b06ccbbc57704c98f1fd56300afc00a9b1532a00e434c20b551e24",
-      "bytes": 7434
+      "sha256": "8f37cffdef04edcbc082580755164b2d27f456bc44b615dac271038c71c3cd32",
+      "bytes": 7534
     },
     {
       "path": "app/showcase/agents.js",
@@ -2748,13 +2763,28 @@
     },
     {
       "path": "app/showcase/aligned-scene.js",
-      "sha256": "ffb97fac1d1c1d6da2cd44070d9adbcc24f5e3d7ff4e9b580bc73c7d0f2be467",
-      "bytes": 27579
+      "sha256": "cbda51a1f26a9a4f12db8721f5524587f844513a0af7d884566e3481ba930196",
+      "bytes": 28533
     },
     {
       "path": "app/showcase/app.js",
       "sha256": "bc5d7b65374c27f69ee9b736a27616d7c6a2cbfafa60d2a9f7b23f62583ac954",
       "bytes": 21602
+    },
+    {
+      "path": "app/showcase/architecture.css",
+      "sha256": "079b2adfc64f650d0c9f7bc20bb2b411918033d351c20e83fb1ea10d4b20bbaf",
+      "bytes": 7989
+    },
+    {
+      "path": "app/showcase/architecture.html",
+      "sha256": "2973b231f92c0b8a3beae72c4f9366b7af3da0e8c4af873bee872af2a8563334",
+      "bytes": 8601
+    },
+    {
+      "path": "app/showcase/architecture.js",
+      "sha256": "9c0de7c47242585b977a678ac3bb2b677a2200aa55f6eef02c32e08ce5a6d5ac",
+      "bytes": 2641
     },
     {
       "path": "app/showcase/auto-scene-camera-v1.js",
@@ -2878,8 +2908,8 @@
     },
     {
       "path": "app/showcase/index.html",
-      "sha256": "5422b92cee04a1334ecacfa8b6dde63413c0f220560036e2784f963263ea1d27",
-      "bytes": 11856
+      "sha256": "792b8bd51b8c18440b2c32e6368db29569309ae87abb4710f626ec921d7cd288",
+      "bytes": 12081
     },
     {
       "path": "app/showcase/laptop-hinge-review-v1.html",
@@ -2893,18 +2923,18 @@
     },
     {
       "path": "app/showcase/library.css",
-      "sha256": "a57a42547ac066580129c9025326cc163fabb603a581f2637e783f9f9c330125",
-      "bytes": 26105
+      "sha256": "51ec55ef38efec6d23614ee45db412f3eefc82338d32e91d1050798b4c022b32",
+      "bytes": 28477
     },
     {
       "path": "app/showcase/library.html",
-      "sha256": "93de6a65c6f10228a56af202a25b4962ccfb6806c5a1c5491ae6dc894b621ad5",
-      "bytes": 15483
+      "sha256": "df84942866085a949d5bfc91c9c9c77493293fb15459cbe1bcf5418dde67bdf6",
+      "bytes": 15661
     },
     {
       "path": "app/showcase/library.js",
-      "sha256": "2547e7de7d71d4bd54449f19065b01fbe43ffa719c4a2ea2118bf74491adda02",
-      "bytes": 50951
+      "sha256": "c5551a3e85e7ecb1cf54362aba4ed6475f6fd62202e65276b795501f32d98b93",
+      "bytes": 52679
     },
     {
       "path": "app/showcase/mark.svg",
@@ -2945,6 +2975,11 @@
       "path": "app/showcase/nonrigid-observations-contract.js",
       "sha256": "fd315cbb16b311aac9e5922e035426fca1121c6b6e1ec6ed4a6335c8dc5b0499",
       "bytes": 6548
+    },
+    {
+      "path": "app/showcase/object-program-summary-v1.js",
+      "sha256": "ef4bafd93a38414a9a20fc1d8d19c9e864938308c6352301febcb06b63994960",
+      "bytes": 6678
     },
     {
       "path": "app/showcase/physics-bench-contract.js",
@@ -3028,8 +3063,8 @@
     },
     {
       "path": "app/showcase/robot-workbench-ui-v2.js",
-      "sha256": "b4f74c33613bc2784988bdbdb5493ff4e4810a347c1e0042d043116ccb09b0a5",
-      "bytes": 6072
+      "sha256": "097fc85cde1abba40ab1839635bc9d170a624ead20eb4fb56f5110a4cbe8e9eb",
+      "bytes": 7365
     },
     {
       "path": "app/showcase/robot-workbench.css",
@@ -3043,8 +3078,8 @@
     },
     {
       "path": "app/showcase/robot-workbench.js",
-      "sha256": "5ca77e97f62ae26b689380dbc242a73b1ab0ae0ff00431ecf404efc7acbc8714",
-      "bytes": 29134
+      "sha256": "512cb9c8390662196581bc534e7dedf5c785d1aa9abbe0345d29f45bbcf61653",
+      "bytes": 30262
     },
     {
       "path": "app/showcase/robotics-lab-assets.js",
@@ -3063,8 +3098,8 @@
     },
     {
       "path": "app/showcase/robotics-lab.js",
-      "sha256": "b321b99e70fd1ba4bd60d3aefe634b6809f28082f407f4f67825a9df3eefb750",
-      "bytes": 41848
+      "sha256": "63f349873ba90029142fc291f324c91a9172e8ccbdbd7acdd2682ee99aed07dd",
+      "bytes": 44660
     },
     {
       "path": "app/showcase/sam3d-models.js",
@@ -3138,8 +3173,8 @@
     },
     {
       "path": "app/showcase/walkthrough.html",
-      "sha256": "4eb20e2b22e2d91f4adb8948d71ed7b3aaffe48ec84054ebe3ad9e68ccc24cb8",
-      "bytes": 3193
+      "sha256": "125d716e88fde131d4a0b6d486ee5186d5faaf8ae695656a51102a4252c8d6bd",
+      "bytes": 3266
     },
     {
       "path": "app/sim_readiness.py",
@@ -3543,8 +3578,8 @@
     },
     {
       "path": "app/tests/test_aligned_scene_lifecycle.cjs",
-      "sha256": "1878d0cdedfd17c9a4f4deb3a51b8d213319b0113c04741158235205a877bfd5",
-      "bytes": 42154
+      "sha256": "af0481d4f1d5b00afd70fe365c3e39e6f7daedb7b2d72ce2daf00369046a826b",
+      "bytes": 49377
     },
     {
       "path": "app/tests/test_aligned_scene_viewer.py",
@@ -3570,6 +3605,11 @@
       "path": "app/tests/test_approach_evidence.py",
       "sha256": "5c86ca07fbed6d09049396b0a0199cf0909eba5ec9db94a3fc6e9616689bf839",
       "bytes": 5007
+    },
+    {
+      "path": "app/tests/test_architecture_explainer.cjs",
+      "sha256": "83ef29b869f0d2ba790fbda1b7445f86b24e7d6361e1d1e629647cd1635d09b5",
+      "bytes": 3487
     },
     {
       "path": "app/tests/test_assembly_scale_feasibility.py",
@@ -4168,8 +4208,8 @@
     },
     {
       "path": "app/tests/test_library_expansion.cjs",
-      "sha256": "a6f1f9826dfc5f89adb676488d837be20e7dd9c4acc5a5a6e55b7390c8cad917",
-      "bytes": 18738
+      "sha256": "e51db5829c07ec8ada783b924a6781810ee3768fd472f73045a114de1342dbfa",
+      "bytes": 24271
     },
     {
       "path": "app/tests/test_library_query.py",
@@ -4467,6 +4507,11 @@
       "bytes": 16797
     },
     {
+      "path": "app/tests/test_object_program_summary_v1.cjs",
+      "sha256": "2dfbae434b989fa86fd35fbd1e0f4498da717896bc2825c4998c5da319a8b747",
+      "bytes": 6514
+    },
+    {
       "path": "app/tests/test_observed_calibration.py",
       "sha256": "4241fe98f92d46606bef394797ea814c69217f0800ca0e49fbb7dd1fbfc6d505",
       "bytes": 6939
@@ -4633,8 +4678,8 @@
     },
     {
       "path": "app/tests/test_public_robotics_lab.cjs",
-      "sha256": "e86f7f104afbdbbd64b161685ed9edc9e140ab7ecdcdeec13fec9fd268327516",
-      "bytes": 14245
+      "sha256": "5762a44aca03e4e7b7790823e83dd042ea95b1812aaf8ed878024e1b9abcd470",
+      "bytes": 16716
     },
     {
       "path": "app/tests/test_raster_preculling.py",
@@ -4965,6 +5010,21 @@
       "path": "app/tests/test_stage5.py",
       "sha256": "3047e0feee5d6ce471e175694d57da23619c30d7401dee2a1e234ee53905b149",
       "bytes": 12843
+    },
+    {
+      "path": "app/tests/test_static_pages_adapter.cjs",
+      "sha256": "6ebac985c0d85cea288d7435bdfaea55811da0d35bc5db8225dd20662833dabf",
+      "bytes": 2809
+    },
+    {
+      "path": "app/tests/test_static_robot_fallback.cjs",
+      "sha256": "4c4efa567eb2dc394586e38480e00ab0e3c94942b5513f62134377af8f61fdea",
+      "bytes": 4601
+    },
+    {
+      "path": "app/tests/test_submission_final_v2_animation.py",
+      "sha256": "33d2649bd9891d3b4317dd8141dfaf5132334d76638d6c5d4a90197c7191a242",
+      "bytes": 5243
     },
     {
       "path": "app/tests/test_submission_review_artifacts.py",
@@ -5428,8 +5488,8 @@
     },
     {
       "path": "docs/PUBLIC_RELEASE.md",
-      "sha256": "53571e53721733fb8adddcf523128c2a32eb345f4d62e85b27e2494da8761484",
-      "bytes": 2403
+      "sha256": "ad3f191c3db07088b7e28dcc7ecefc3a499ac35721ce8e55c5dacd09cd8a957a",
+      "bytes": 2720
     },
     {
       "path": "docs/admin-api.md",
@@ -5450,6 +5510,11 @@
       "path": "docs/cable-trace-2d-v1.md",
       "sha256": "a83cc65035581204064affcc10581a5a6ca350673b9f4f17cef2dfd26dd134f8",
       "bytes": 2637
+    },
+    {
+      "path": "docs/ci/source-review.yml",
+      "sha256": "e6b1de003622e1c4e2bcb563684a467793a537d9e0c4afae4d1f5959bae72700",
+      "bytes": 919
     },
     {
       "path": "docs/data-contract.md",
@@ -5473,8 +5538,8 @@
     },
     {
       "path": "docs/mcp.md",
-      "sha256": "d8f2e9bbc033619da33ee7e6bf1e1f8684abb6f366226a7b8dc760990d2baf96",
-      "bytes": 19130
+      "sha256": "92238e47c0f9c3e9ffdc5a1c1921aa6b4b49f216a941db7259990e067d2db95d",
+      "bytes": 20220
     },
     {
       "path": "docs/media/interaction-twin-45s.mp4",
@@ -5523,8 +5588,8 @@
     },
     {
       "path": "docs/pipeline.md",
-      "sha256": "c77610f837284f28e9a7176b5b5c0dae052384717bea48f36175e678b028911b",
-      "bytes": 23545
+      "sha256": "4408d7025114f5ef89950f222eeb86bd577a5da2f816f4236163c38a4832da5d",
+      "bytes": 23482
     },
     {
       "path": "docs/portable-assets.md",
@@ -5603,8 +5668,8 @@
     },
     {
       "path": "docs/source-setup.md",
-      "sha256": "06bdab29ccd96a4b0e66855182a386309cb9fa898fccaae9b5e3ec7fade037d0",
-      "bytes": 3596
+      "sha256": "73d031f66a5106cf92ba49a5c3cbc5b06f970ad580a240116d21091441864140",
+      "bytes": 4496
     },
     {
       "path": "docs/submission-demo-20261101.md",
@@ -5613,19 +5678,41 @@
     },
     {
       "path": "docs/technical-overview-20261104.md",
-      "sha256": "bc4c13969e5c6553d4739bf8b48a6f6c33a97d3b700565413b183650b8e697e8",
-      "bytes": 19226
+      "sha256": "e5d6cebab175f707063f828cefcd9fb6153e663042fcfc0a4c2c72952aadd3cb",
+      "bytes": 7635
     }
   ],
   "manifest_self_excluded": true,
   "layout_verification": {
     "python_fixture_checks_passed": 27,
-    "node_fixture_checks_passed": 27,
+    "node_fixture_checks_passed": 65,
     "node_saved_data_skips": 3,
+    "local_documentation_links_checked": 55,
     "empty_catalog_build": {
       "cases": 0,
       "errors": []
     },
-    "data_dependent_controller_test": "not_runnable_without_separately_saved_catalog"
+    "isolated_loopback_startup": {
+      "health": "ready",
+      "landing_http": 200,
+      "own_child_server_stopped": true
+    },
+    "fresh_review_environment": {
+      "python": "3.12.13",
+      "platform": "macOS arm64",
+      "dependency_packages": 7,
+      "model_runtimes_installed": false,
+      "command": "python -B scripts/check_source_release.py"
+    },
+    "site_packages_disabled_memory_query_checks": 18,
+    "saved_catalog_dependent_tests": "Not run from code-only snapshot; exact saved catalog and assets are deliberately separate.",
+    "remote_linux_ci": "Not enabled; optional docs/ci/source-review.yml recipe provided. Reported fixture/startup passes are local.",
+    "fresh_model_inference": false,
+    "media_storyboard_fixture_checks": {
+      "passed": 8,
+      "runtime": "Existing Pillow-enabled development environment; separate from fresh lightweight review",
+      "film_or_audio_generated_by_checks": false
+    },
+    "optional_ci_recipe": "docs/ci/source-review.yml"
   }
 }

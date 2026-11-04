@@ -13,27 +13,25 @@ file writes, robot control or physics execution are exposed as tools.
 
 ## Connect a client
 
-The dedicated runtime is `.venv-mcp`, using the official `mcp==2.3.0` Python SDK.
-Its installed packages are pinned in `requirements-mcp.lock.txt`. The server uses
-stdio, so the client launches it as a subprocess and communicates over its input
-and output streams. It does not require the web workspace server to be running.
+MCP needs its separate SDK environment; the lightweight source-review environment does not include the SDK. The recorded development runtime used the official `mcp==2.3.0` Python SDK, with its environment snapshot in [`app/requirements-mcp.lock.txt`](../app/requirements-mcp.lock.txt). Model weights and API keys are not needed for saved, read-only retrieval.
 
-Set the client's MCP subprocess command to:
+Configure the client to launch a subprocess with paths adapted to your own checkout:
 
-```text
-/Users/nigelhartman/Documents/ChatGPT/MetaHack/interaction-twin/.venv-mcp/bin/python
+```json
+{
+  "mcpServers": {
+    "interaction-twin": {
+      "command": "/absolute/path/to/mcp-environment/bin/python",
+      "args": [
+        "/absolute/path/to/interaction_twin/app/scripts/serve_twin_mcp.py",
+        "--curated"
+      ]
+    }
+  }
+}
 ```
 
-with this one argument:
-
-```text
-/Users/nigelhartman/Documents/ChatGPT/MetaHack/interaction-twin/scripts/serve_twin_mcp.py
-```
-
-`mcp/interaction-twin.example.json` contains the same values in the common
-`mcpServers` JSON configuration format. Adapt it to the chosen client's settings
-format. No account credentials or environment variables are required. Nothing
-has been added automatically to the user's client configuration.
+The server communicates over stdio; the web server need not be running. A code-only checkout contains no saved curated catalog, so populate approved artifacts before retrieval. The GitHub Pages website is a static browser demonstration and does not provide a hosted MCP endpoint. Nothing is added automatically to a client's configuration.
 
 The default server reads `showcase/public/library-index.json`, its hash-pinned
 catalog, curated cases and the exact public artifact allowlist. A new upload is
@@ -55,14 +53,20 @@ the default scope; neither scope exposes mutation or execution tools.
 
 ## Available tools
 
-All twenty tools advertise `readOnlyHint: true`, `destructiveHint: false`,
+All twenty-six tools advertise `readOnlyHint: true`, `destructiveHint: false`,
 `idempotentHint: true` and `openWorldHint: false`.
 
 | Tool | Purpose |
 | --- | --- |
-| `search_twins(query, limit, parts?, actions?, relations?, backends?, readiness?, sort?, direction?, offset?, group_by?)` | Search derived footage/program metadata with the same filter contract as the human library. Maximum 25 results per page. |
+| `search_twins(query, limit, parts?, actions?, relations?, backends?, readiness?, task_classes?, sort?, direction?, offset?, group_by?, include_legacy?)` | Search derived footage/program metadata with the same filter contract as the human library. Maximum 25 results per page. |
 | `get_library_facets(group_by?)` | Discover current filter values/counts, sorting options, grouping and pagination contract. |
 | `get_kinematics(twin_id)` | Read the source/program/asset-bound descriptive object-program v0.2: estimated joint frames/axes, observed radian ranges, angle curves and removable hypotheses. No inference, physical validation or robot execution. |
+| `get_derived_assembly(twin_id)` | Inspect the declared curated geometry derivative and lineage; original native kinematics remain separate. |
+| `list_derived_artifacts(twin_id)` | List exact current refinement, appearance and cable-sidecar resources with hashes and opaque IDs. |
+| `get_observed_surfaces(twin_id)` | Inspect supported source-visible 2.5D surfaces and evidence; hidden geometry remains unknown. |
+| `get_motion_hypotheses(twin_id)` | Retrieve separate curated source-conditioned pose hypotheses without rewriting original unknown observations. |
+| `get_connection_interfaces(twin_id)` | Inspect source-bound interface candidates attributed to owner capture context, not measured fit. |
+| `prepare_cross_recording_task(phone_twin_id, charger_twin_id, instruction?)` | Compile an evidence-linked phone/charger task draft while preserving compatibility and execution unknowns. |
 | `get_generated_candidate(twin_id, component_id)` | Retrieve the default SAM 3D geometry candidate and exact source/GLB resource descriptors. Does not replace historical program assets or reuse their poses. |
 | `describe_twin(twin_id)` | Inspect components, candidate relationships, variables, assets, procedure summary, reasoning provider and limitations. |
 | `get_procedure(twin_id, step_id?)` | Read all steps or one identified step together with the cited evidence records. |
@@ -184,8 +188,8 @@ The current motion registry publishes the three original 3-fps Jabra component
 experiments. The separately sampled density experiments are not registered in
 this adapter version. Resources preserve saved hypotheses and their independent
 episode coordinates; they do not replace program poses, interpolate gaps or
-establish a common assembly. See the [motion scope report](short-interval-motion.md)
-and [project overview](../README.md) for the current results and limits.
+establish a common assembly. See the [technical overview](technical-overview-20261104.md)
+and [object-program contract](object-program.md) for current results and limits.
 
 The saved fresh-case rehearsal made **36 actual local SDK calls**, retrieving
 three unchanged native GLBs, six cited JPEGs, four procedure steps and the new

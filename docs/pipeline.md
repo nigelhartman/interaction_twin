@@ -106,11 +106,11 @@ Saving creates a new read-only sidecar at `data/user-revisions/{published_id}/re
 
 The automatic compiler and schema remain frozen so their recorded hashes still identify historical outputs. `revisions.validate_derivative` validates a copy through the Stage 5 contract, normalizing only the two automatic-schema review flags on that copy. The returned derivative keeps its actual human-review flags and separate authorship disclosure. All other reference, state, identity, source, geometry, pose and runtime-policy constraints remain enforced. This is a scoped review adapter, not a relaxation of the automatic-output contract.
 
-Workspace review decisions are not automatically benchmark ground truth. A benchmark correctness judgment still needs the separately described, hash-bound human assessment in [benchmark.md](benchmark.md).
+Workspace review decisions are not automatically benchmark ground truth. They do not establish measured physical accuracy; any correctness evaluation needs its own hash-bound human assessment and declared comparison basis.
 
 ## Benchmark and agent catalog
 
-Open [the saved-evidence benchmark](../workspace/benchmark/index.html) to compare actual preserved cohorts, source linkage, mask observations, generated tracklets, conditional motion coverage, failures and receipt-backed runtimes. It performs no inference. Different sampling and model budgets remain visible; there is no accuracy total or physical correctness score. Rebuild it with `.venv-sam/bin/python scripts/run_benchmark.py`; see [benchmark.md](benchmark.md).
+The development workspace includes saved-evidence cohort diagnostics for source linkage, masks, tracklets, conditional motion, failures and receipt-backed runtimes. Those private diagnostic artifacts are not bundled in this source release. The public release provides no aggregate physical-accuracy benchmark. Different sampling and model budgets must remain visible in any comparison.
 
 [The agent catalog preview](../app/workspace/agents.html) shows saved responses produced by the real Python catalog. This page does not connect an LLM or start MCP. The separate read-only MCP server exposes search, component/procedure/state/evidence/asset queries and a descriptive simulation handoff over stdio. Setup and the prepared local client configuration are in [mcp.md](mcp.md). MCP has no upload, inference, paid API, scheduler, arbitrary-path or physical-execution tools. Generated assets and demonstrations still report `simulation_ready: false`.
 

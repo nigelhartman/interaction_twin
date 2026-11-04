@@ -38,7 +38,7 @@ The public demo is **static and read-only**: five owner-recorded examples, saved
 4. **Review before publishing.** Separate Muse role prompts and deterministic checks critique a revision. Up to two targeted repair rounds can follow; the owner approves the exact result.
 5. **Describe and reuse.** A source-linked object program keeps parts, estimated joints, steps and evidence together. People and agents retrieve the same curated version.
 
-Feedback memory stores revocable guidance for later runs. It does not retrain model weights. Reviewer roles use separate prompts to the same Muse model; they are not independent models or a guarantee of correctness.
+Feedback memory stores revocable guidance for later runs. It does not retrain model weights. Reviewer roles use separate prompts to the same Muse model; they are not independent models or a guarantee of correctness. See the [illustrated workflow](https://nigelhartman.github.io/interaction_twin/showcase/architecture.html) for the exact Muse, saved MCP and local robot-demo scopes.
 
 ## More than a mesh
 
@@ -75,12 +75,15 @@ app/                Python services, browser app, scripts and tests
 
 The repository contains the custom application source. Saved demonstrations are deployed separately to the `gh-pages` branch; model weights, environments, credentials and private owner state are excluded.
 
-Start with the [source setup guide](docs/source-setup.md). A prepared Python environment and FFmpeg are required; fresh model inference additionally needs Meta access and a configured GPU worker. No API key is required to browse the public demo.
+Start with the [source setup guide](docs/source-setup.md). The lightweight review needs Python 3.12 and Node.js 22; FFmpeg and model-specific environments are needed for media processing and inference. No API key is required to browse the public demo.
 
 ```sh
-git clone https://github.com/nigelhartman/interaction_twin.git
+git clone --branch main --single-branch --depth 1 https://github.com/nigelhartman/interaction_twin.git
 cd interaction_twin/app
-# Follow docs/source-setup.md to prepare your environment.
+python3.12 -m venv .venv-review
+source .venv-review/bin/activate
+python -m pip install -r requirements-review.txt
+python -B scripts/check_source_release.py
 python -B scripts/build_workspace.py --no-replays
 python -B scripts/serve_workspace.py --host 127.0.0.1 --port 8766
 ```
@@ -95,7 +98,7 @@ Without separately supplied artifacts the source build opens an empty library. I
 
 ## Built with Meta · built by Nigel
 
-Created for the **Meta Global AI Developer Hackathon 2026**. Meta supplies Muse Spark, SAM 3.1 and SAM 3D Objects; additional upstream work includes CoTracker and Three.js. The custom contribution is the application, descriptive representation, orchestration, source checks, review workflow, curated library, MCP handoff and task authoring. Upstream models and SDKs remain the work of their authors; this project makes no world-first or benchmark-superiority claim.
+Created for the **Meta Global AI Developer Hackathon 2026**. Meta supplies Muse Spark, SAM 3.1 and SAM 3D Objects; additional upstream work includes CoTracker and Three.js. The custom contribution is the application, descriptive representation, orchestration, source checks, review workflow, curated library, MCP handoff and task authoring. The [implementation map](docs/technical-overview-20261104.md#custom-implementation-map) links each part to its source. Upstream models and SDKs remain the work of their authors; this project makes no world-first or benchmark-superiority claim.
 
 See [attribution and release scope](docs/PUBLIC_RELEASE.md). There is currently no project-wide open-source license grant; dependency notices retain their own terms.
 

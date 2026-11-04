@@ -1,0 +1,34 @@
+# Optional GitHub Actions recipe; not an enabled workflow in this repository.
+# To enable later, copy to .github/workflows/review.yml with appropriate authorization.
+name: Source review
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install lightweight review dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements-review.txt
+      - name: Check source-only contracts and empty startup
+        run: python -B scripts/check_source_release.py

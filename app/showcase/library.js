@@ -109,6 +109,7 @@ function paintCollections(catalog,selected='',choose=null){
  const box=$(choose?'library-collections':'task-class-preview');if(!box)return;box.replaceChildren();
  for(const definition of TASK_CLASSES){
   const count=catalog.records.filter(record=>taskClasses(record).includes(definition.id)).length;
+  if(!count&&selected!==definition.id)continue;
   const card=el(choose?'button':'a',undefined,'task-class');
   if(choose){card.type='button';card.setAttribute('aria-pressed',String(selected===definition.id));card.addEventListener('click',()=>choose(selected===definition.id?'':definition.id));}
   else card.href='library.html?'+new URLSearchParams({task_classes:definition.id});
@@ -166,6 +167,7 @@ function sam3dReviews(record){
  }
 }
 function details(record){
+ renderProgramSummary(record);
  sam3dReviews(record);
  $('detail-title').textContent=shortTitle(record);$('detail-summary').textContent=record.summary;const qualityNote=$('detail-quality-note');if(qualityNote){qualityNote.textContent=record.public_note||'';qualityNote.hidden=!record.public_note;}$('open-workspace').href=workspace(record);$('open-robotics').hidden=true;$('open-insights').href=workspace(record,{view:'intelligence'});
  const names=new Map(record.components.map(c=>[c.id,c.label]));const relations=$('relation-list');relations.replaceChildren();for(const r of record.relationships){const e=el('article',undefined,'library-relation');const line=el('div',undefined,'relation-nodes');line.append(el('strong',names.get(r.subject_track_id)),el('span',human(r.predicate)),el('strong',names.get(r.object_track_id)));e.append(line,el('p',r.rationale||'Source-linked model proposal.'),el('small',human(r.status||'model proposal'),'relation-meta'),citationLinks(record,r.citations));if(r.limitations?.length)e.append(el('p',r.limitations.join(' · '),'library-note'));relations.append(e);}
@@ -245,6 +247,16 @@ function formatDocument(raw,binding,label){
  const text=new TextDecoder().decode(raw),doc=JSON.parse(text);$('program-document').textContent=JSON.stringify(doc,null,2);$('program-format').textContent=label;
  const link=$('description-download');link.href=fileURL(binding);link.hidden=false;
 }
+function renderProgramSummary(record,aligned=null){
+ const box=$('object-program-summary'),S=root.ObjectProgramSummaryV1;if(!box)return;box.replaceChildren();box.hidden=true;if(!S)return;
+ const summary=S.summarize(record,aligned),scope=el('p',summary.scope,'program-summary-scope'),grid=el('div',undefined,'program-summary-grid'),structure=el('div'),sequence=el('div');
+ structure.append(el('h4','Parts'),el('p',summary.parts.join(' · '),'program-summary-parts'),el('h4','Connections'));
+ const links=el('ul',undefined,'program-summary-connections');for(const row of summary.connections){const item=el('li');item.append(el('strong',row.title),el('span',row.kind,'program-summary-kind'),el('p',row.detail));links.append(item);}structure.append(links);
+ sequence.append(el('h4','Selected demonstrated steps'));const steps=el('ol',undefined,'program-summary-steps');for(const step of summary.steps){const item=el('li');item.append(el('span',String(step.index).padStart(2,'0')),el('span',step.title));steps.append(item);}sequence.append(steps);
+ const all=el('button','See all '+summary.step_count+' steps →','text-button');all.type='button';all.addEventListener('click',()=>{if(current?.id===record.id)showTab('actions');});sequence.append(all);
+ if(summary.evidence.length){sequence.append(el('h4','Check the source'));const evidence=citationLinks(record,summary.evidence);evidence.classList.add('program-summary-evidence');sequence.append(evidence);}
+ grid.append(structure,sequence);box.append(scope,grid,el('p',summary.scope_note,'program-summary-note'));box.hidden=false;
+}
 async function startPreview(record,raw){
  clearPreview();const token=previewEpoch;previewOwner=record;
  const video=$('twin-source-video'),frame=$('twin-alignment-frame'),status=$('twin-alignment-status');if(!video||!frame||!status)return;
@@ -255,13 +267,14 @@ async function startPreview(record,raw){
   const aligned=root.AlignedScenes?await root.AlignedScenes.find(record.source.sha256):null;if(token!==previewEpoch)return;
   if(!aligned){status.textContent='A connected scene is not available for this recording yet.';$('preview-scope').textContent='Inspect its generated parts and descriptive procedure in the other tabs.';return;}
   if(root.AlignedSceneContract?.matchesProgram){const program=JSON.parse(new TextDecoder().decode(raw)),binding={interaction:program,interaction_path:record.interaction.path,original_sha256:record.interaction.sha256},reviews=root.Sam3DModelReviews?.forRecording(record)||[];if(!root.AlignedSceneContract.matchesProgram(aligned.manifest,binding,reviews,aligned.derived_assembly))throw Error('Scene does not match this curated program and its original native components.');}
+  renderProgramSummary(record,aligned);
   previewBinding=aligned;previewView='source';const supported=root.AlignedSceneContract?.previewTime(aligned.manifest,aligned.observed_surfaces?.document);if(supported&&Number.isFinite(supported.time_s)&&supported.time_s>=0&&supported.time_s<=record.duration_s&&!previewUserInteracted){previewInitialSeek={epoch:token,source:record.source.sha256,time_s:supported.time_s};applyInitialPreview();}for(const id of ['preview-camera','preview-orbit'])$(id).disabled=false;
   $('preview-camera').setAttribute('aria-pressed','true');$('preview-orbit').setAttribute('aria-pressed','false');
   frame.loading='eager';frame.hidden=false;frame.src='aligned-scene.html?'+new URLSearchParams({source:record.source.sha256,path:aligned.reference.path,sha256:aligned.reference.sha256,bytes:String(aligned.reference.bytes),presentation:'landing'});
   status.hidden=true;$('preview-scope').textContent=aligned.derived_assembly?'Reviewed geometry refinements · source-linked estimates; physical fit and contact remain unverified.':'Source-linked replay · depth, opening angles and physical fit remain estimates.';renderDownloads(record,aligned);
   if(aligned.observed_surfaces){$('preview-scope').textContent='Observed surfaces · estimated depth; hidden geometry and numerical joint parameters are unknown. Original SAM models remain in 3D parts.';$('program-document').textContent=JSON.stringify(aligned.observed_surfaces.document,null,2);$('program-format').textContent='Source-visible surface program';$('description-download').href=fileURL(aligned.observed_surfaces.artifact);}
   else if(aligned.object_program){const doc=await root.AlignedScenes.checked(aligned.object_program);if(token!==previewEpoch)return;$('program-document').textContent=JSON.stringify(doc,null,2);$('program-format').textContent=aligned.derived_assembly?'Refined twin program v1':'Object program v'+doc.version;$('description-download').href=fileURL(aligned.object_program);}
- }catch(error){if(token!==previewEpoch)return;previewBinding=null;frame.removeAttribute('src');frame.hidden=true;status.hidden=false;status.textContent='Saved scene unavailable: '+error.message;renderDownloads(record);formatDocument(raw,record.interaction,'Procedure JSON');for(const id of ['preview-camera','preview-orbit'])$(id).disabled=true;}
+ }catch(error){if(token!==previewEpoch)return;previewBinding=null;frame.removeAttribute('src');frame.hidden=true;status.hidden=false;status.textContent='Saved scene unavailable: '+error.message;renderProgramSummary(record);renderDownloads(record);formatDocument(raw,record.interaction,'Procedure JSON');for(const id of ['preview-camera','preview-orbit'])$(id).disabled=true;}
 }
 function connectPreview(){
  const video=$('twin-source-video');if(!video)return;
