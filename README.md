@@ -40,6 +40,12 @@ The public demo is **static and read-only**: five owner-recorded examples, saved
 
 Feedback memory stores revocable guidance for later runs. It does not retrain model weights. Reviewer roles use separate prompts to the same Muse model; they are not independent models or a guarantee of correctness. See the [illustrated workflow](https://nigelhartman.github.io/interaction_twin/showcase/architecture.html) for the exact Muse, saved MCP and local robot-demo scopes.
 
+## Why Muse Spark
+
+**An interaction needs visual reasoning as well as geometry.** Meta reports strengths in [entity recognition and localization](https://ai.meta.com/blog/introducing-muse-spark-msl/) and [visual reasoning with closer inspection through tools](https://research.meta.ai/blog/multimodal-intelligence-of-muse-spark-1-2). Those capabilities fit our need to identify parts, reason about demonstrated actions and critique a reconstruction against its source.
+
+We use **Muse Spark 1.3** for proposals and separate review prompts, **SAM 3.1** for masks, and **SAM 3D Objects** for mesh drafts. Our code checks evidence and mechanics before owner approval. Muse supports a [1,048,576-token context](https://dev.meta.ai/docs/models#muse-spark); our runs use bounded evidence packets and explicit feedback retrieval. See the [model-choice rationale and evaluation caveats](docs/technical-overview-20261104.md#why-muse-spark).
+
 ## More than a mesh
 
 The descriptive format preserves:

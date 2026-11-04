@@ -4,6 +4,38 @@ Interaction Twin prepares reusable object-interaction context from ordinary demo
 
 The [public demo](https://nigelhartman.github.io/interaction_twin/) contains five owner-recorded example families. It is a static snapshot: saved results and browser rendering, with no upload, paid inference, private admin or hosted MCP service. The source branch contains the implementation; see the [review setup](source-setup.md) to run it with an empty catalog.
 
+## Why Muse Spark
+
+Our task spans visual evidence, relationships and action order. A useful model must help explain what moves, how parts relate and what a proposed reconstruction gets wrong. We use Muse Spark 1.3 for that reasoning and review role, while segmentation, mesh generation and deterministic checks have separate responsibilities.
+
+| Published capability | Relevance to Interaction Twin | Current implementation |
+| --- | --- | --- |
+| Visual understanding and grounding | Identify candidate parts and reason about their visible relationships. | Muse proposes components, relationships and demonstrated steps; SAM supplies masks. |
+| Reasoning with closer visual inspection | Compare evidence with a generated result and propose a targeted correction. | A separate visual-audit workflow supplies selected source frames, masks and renders to Muse. Its hosted calls return structured critiques, with no open-ended tool access. Optional hosted role reviews use text metadata only. |
+| Long-context reasoning | Keep evidence references, structured descriptions and repair constraints together. | Bounded request packets and explicit, scoped feedback retrieval; we do not send an entire unfiltered session. |
+| Agentic instruction following | Preserve constraints across build, review and repair. | Our orchestrator enforces round limits, budget guards, source checks and exact owner approval. |
+
+Meta describes entity recognition and localization in its [Muse Spark introduction](https://ai.meta.com/blog/introducing-muse-spark-msl/), and reports that Muse Spark 1.2's multimodal gains are greatest with tools for closer inspection in its [multimodal article](https://research.meta.ai/blog/multimodal-intelligence-of-muse-spark-1-2). These published capabilities motivate the choice; applying them to object-interaction review is our design decision, rather than a published accuracy result for this application.
+
+The [API model documentation](https://dev.meta.ai/docs/models#muse-spark) lists a **1,048,576-token context window** for Spark versions 1.1–1.3. Context is information supplied to a request, not automatic access to past sessions or permanent memory. Our persistent feedback store retrieves relevant guidance explicitly; it does not retrain the model.
+
+The [1.3 release notes, dated 2 September 2026](https://research.meta.ai/blog/introducing-muse-spark-1-3), describe better instruction following, cleaner coding output and clarification of ambiguous requests. Meta engineers reported approximately **25% fewer tokens and 20% fewer tool calls than 1.2** in internal coding comparisons. This is a provider-reported result, not a measured saving for Interaction Twin.
+
+### What the 54% benchmark means
+
+Meta's [20 August 2026 multimodal report](https://research.meta.ai/blog/multimodal-intelligence-of-muse-spark-1-2) lists these **tool-enabled ZeroBench pass@5** results:
+
+| Model | Reported score |
+| --- | ---: |
+| GPT-5.6 Sol | 54.6% |
+| Muse Spark 1.2 | 54.0% |
+| Claude Opus 5 | 47.5% |
+| Gemini 3.7 Flash | 30.0% |
+
+The [evaluation methodology](https://research.meta.ai/static/muse-spark-1-2-multimodal-evaluation-methodology) uses 100 questions, five sampled attempts, tools and each model's maximum available reasoning setting. A question receives credit if any of its five attempts is judged correct. Third-party configurations are best-effort. The 0.6-point difference does not establish statistical equivalence. These are provider-reported **1.2** results, not single-attempt accuracy, a 1.3 score or an Interaction Twin evaluation.
+
+Visual reasoning does not by itself recover complete hidden geometry, establish metric dimensions or validate contact. We have not run a controlled comparison establishing that Muse is the best model for this project. Fallible model critiques remain subject to source evidence and deterministic checks.
+
 ## From a recording to an object program
 
 ```text

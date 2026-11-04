@@ -1,6 +1,6 @@
 {
   "format": "interaction-twin-public-source-release",
-  "version": 10,
+  "version": 11,
   "owner_authorized_repository": "nigelhartman/interaction_twin",
   "layout": "self_contained_runtime_in_app; documentation_at_root",
   "private_state_excluded": true,
@@ -13,8 +13,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "c042b0926c4332e54d5e0768c733e25ba2fbc3a46ad7d838576cf4a6c1f6c311",
-      "bytes": 8247
+      "sha256": "ee8ef6d9bdca6e8cf14045eb544439f6c1941462f970b8200e3ecc0e5cdaafd7",
+      "bytes": 9179
     },
     {
       "path": "app/admin/admin.css",
@@ -5748,8 +5748,8 @@
     },
     {
       "path": "docs/technical-overview-20261104.md",
-      "sha256": "35a3b33067ec33cb49026126348cbdc3234fe68807e3b3b949bdacb2e22ee509",
-      "bytes": 8445
+      "sha256": "865739e145f25d439d906d21a0347c6d1ae3a402335cd3ce9ab4e3d5a088e417",
+      "bytes": 12317
     }
   ],
   "manifest_self_excluded": true,
@@ -5757,7 +5757,7 @@
     "python_fixture_checks_passed": 27,
     "node_fixture_checks_passed": 66,
     "node_saved_data_skips": 3,
-    "local_documentation_links_checked": 56,
+    "local_documentation_links_checked": 57,
     "empty_catalog_build": {
       "cases": 0,
       "errors": []
