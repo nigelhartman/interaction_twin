@@ -107,3 +107,25 @@ charges, overages, actual-usage validation, the SAM video minimum, bounded-timeo
 proof validation, immutable audits, stale-code admission fencing, and concurrency
 at the cap with a retained unknown hold. No real API requests are made by these
 tests.
+
+## Explicit review of one preserved visual transport failure
+
+`acknowledge_reviewed_visual_transport()` is a separate, manually invoked audit
+for the single preserved request identified in `bounded_visual_transport_audit_v1.py`.
+It does not infer a timeout or assert that a failed request was free. The audit
+reconstructs the exact original two-image wire payload, checks its original
+receipts and one-attempt transport implementation, and proves that the existing
+full-context input reservation plus the 6,500-token total output limit covers
+its maximum estimated charge: **1.338345 USD**.
+
+The owner renewed authorization to continue within the existing allowance on
+4 November. An independent code/evidence review and temporary-ledger tests
+preceded the explicit classification. Every micro-dollar remains held, actual
+usage remains unknown, and the old request cannot be retried. No allowance,
+history or settled charge changes. This exception is pinned to those exact
+retained evidence bytes; unrelated failures still block. The app, transports and
+workers never invoke it automatically. Source-only distributions intentionally
+omit the private audit packets, so this operation fails closed there.
+
+Additional offline verification:
+`python3 -m unittest tests.test_visual_transport_budget_audit_v1`.

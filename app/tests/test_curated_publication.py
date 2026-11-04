@@ -158,6 +158,30 @@ class CuratedPublicationTests(unittest.TestCase):
         self.assertEqual(cases[0]['original_sha256'],pointer['sha256'])
         self.assertEqual(cases[0]['interaction_path'],pointer['path'])
 
+    def test_semantic_overlay_expires_on_new_approval_without_blocking_publication(self):
+        import semantic_relation_corrections_v1 as S
+        old={'revision_id':'revision_'+'a'*32,'fingerprint':'a'*64};new={'revision_id':'revision_'+'b'*32,'fingerprint':'b'*64}
+        record=copy.deepcopy(self.record);record['curation']=new
+        descriptor={'format':S.FORMAT,'version':1,'source':self.video,'evidence_program':self.interaction,'scene_ref':self.asset,'review_ref':self.metadata,'approved_revision_binding':old,'policy':S.POLICY}
+        pointer=self.file('data/approved/semantic-correction.json',descriptor)
+        self.file(S.CONFIG,{'version':1,'recordings':{self.video['sha256']:{'descriptor':pointer}}})
+        entry={'record':record,'case':self.case,'aligned':None}
+        with patch.object(C,'_approved_records',return_value=[entry]):result=C.build(root=self.root)
+        catalog=C.read(self.root/'showcase/public/library-catalog.json');current=catalog['records'][0]
+        self.assertEqual(current['curation'],new);self.assertNotIn('semantic_correction',current)
+        diagnostic=result['expired_semantic_corrections'][0];self.assertEqual(diagnostic['reason'],'approved_revision_changed');self.assertEqual(diagnostic['previous_revision_binding'],old);self.assertEqual(diagnostic['current_revision_binding'],new);self.assertEqual(catalog['provenance']['expired_semantic_corrections'],[diagnostic])
+        self.assertNotIn(pointer,C.read(self.root/'showcase/public/public-assets.json')['assets'])
+        # Revision expiration never suppresses a corrupt exact descriptor pin.
+        (self.root/pointer['path']).write_text('{}')
+        with patch.object(C,'_approved_records',return_value=[entry]),self.assertRaisesRegex(ValueError,'bytes changed'):C.build(root=self.root)
+
+    def test_current_semantic_overlay_corruption_is_not_treated_as_expiration(self):
+        import semantic_relation_corrections_v1 as S
+        binding={'revision_id':'revision_'+'a'*32,'fingerprint':'a'*64};record=copy.deepcopy(self.record);record['curation']=binding
+        descriptor={'format':S.FORMAT,'version':1,'source':self.video,'evidence_program':self.interaction,'scene_ref':self.asset,'review_ref':self.metadata,'approved_revision_binding':binding,'policy':{**S.POLICY,'human_reviewed':True}}
+        pointer=self.file('data/approved/semantic-correction.json',descriptor);self.file(S.CONFIG,{'version':1,'recordings':{self.video['sha256']:{'descriptor':pointer}}})
+        with patch.object(C,'_approved_records',return_value=[{'record':record,'case':self.case,'aligned':None}]),self.assertRaisesRegex(ValueError,'overstates'):C.build(root=self.root)
+
     def test_changed_previous_catalog_cannot_reassign_public_identities(self):
         self.seed()
         with patch.object(C,'_approved_records',return_value=[]):C.build(root=self.root)

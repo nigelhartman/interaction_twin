@@ -347,6 +347,8 @@ def build(*, root=ROOT, bootstrap_existing=False):
                     references(child)
         elif isinstance(value,list):
             for child in value:references(child)
+    import semantic_relation_corrections_v1 as S
+    semantic_pins=S.selections(root);semantic_expirations=[]
     records=[];cases=[];scenes=[];surface_pins=observed_surface_displays(root);motion_pins=source_motion_displays(root)
     for entry in chosen:
         record,case=copy.deepcopy(entry['record']),copy.deepcopy(entry['case'])
@@ -367,6 +369,20 @@ def build(*, root=ROOT, bootstrap_existing=False):
         object_doc=read(local(root,entry['aligned']['object_program']['path'])) if entry.get('aligned',{} ) and entry['aligned'].get('object_program') else None
         connected_doc=read(local(root,entry['aligned']['manifest']['path'])) if entry.get('aligned') else None
         record['task_classes']=derive_task_classes(program,object_program=object_doc,scene=connected_doc)
+        semantic=semantic_pins.get(record['source']['sha256'])
+        if semantic:
+            pointer=semantic['descriptor'];descriptor=json.loads(S.read_exact(root,pointer))
+            binding=S.revision_binding(descriptor)
+            require(descriptor['source']['sha256']==record['source']['sha256'],'Semantic selector source differs')
+            current_binding={k:record['curation'][k]for k in ['revision_id','fingerprint']}
+            if binding!=current_binding:
+                # Expiration is this one exact lifecycle condition. Invalid
+                # descriptor bytes, policy and current bindings still fail.
+                semantic_expirations.append({'source_sha256':record['source']['sha256'],'artifact_sha256':pointer['sha256'],'reason':'approved_revision_changed','previous_revision_binding':binding,'current_revision_binding':current_binding})
+            else:
+                review=S.validate(descriptor,record,program,entry['aligned']['manifest'],lambda r:S.read_exact(root,r))
+                record=S.project(record,descriptor,pointer)
+                for r in [pointer,*S.artifacts(descriptor,review)]:references(r)
         from library_query import derive_index
         record['search_index']=derive_index(record)
         # Source evidence is public; arbitrary compiler inputs, model prompts,
@@ -499,6 +515,7 @@ def build(*, root=ROOT, bootstrap_existing=False):
                  'steps':sum(len(r['steps']) for r in records),'eligible_saved_versions':len(records)},
       'records':records,'excluded_records':[],'query_contract':CONTRACT,
       'provenance':{'builder_sha256':sha(__file__),'curation':'explicit_owner_approval_no_latest_file_selection'}}
+    if semantic_expirations:document['provenance']['expired_semantic_corrections']=semantic_expirations
     raw=encoded(document);digest=hashlib.sha256(raw.encode()).hexdigest();catalog_name='library-catalog-'+digest+'.json'
     index={'format':'interaction-twin-library-index','version':1,'catalog':{'path':catalog_name,'sha256':digest,'bytes':len(raw.encode())},'summary':document['summary']}
     # Evidence admission first, immutable content second, public pointers last.
@@ -509,7 +526,7 @@ def build(*, root=ROOT, bootstrap_existing=False):
     atomic(out/'cases-index.json',encoded(public_cases));atomic(out/'cases-index.js','window.TWIN_CASES='+encoded(public_cases)+';\n')
     atomic(out/'library-index.json',encoded(index));atomic(out/'library-index.js','window.INTERACTION_LIBRARY_INDEX='+encoded(index)+';\n')
     return {'status':'curated_snapshot_ready','records':len(records),'approved_records':len(approved),'assets':len(assets),
-            'catalog_sha256':digest,'new_api_calls':0,'new_model_calls':0}
+            'catalog_sha256':digest,'new_api_calls':0,'new_model_calls':0,'expired_semantic_corrections':semantic_expirations}
 
 
 def query(request=None, *, facets=False, root=ROOT):

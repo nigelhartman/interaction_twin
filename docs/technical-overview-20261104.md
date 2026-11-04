@@ -20,6 +20,8 @@ A [descriptive object program](object-program.md) binds component IDs and asset 
 
 Original model outputs remain available separately from declared geometry refinements, source-visible 2.5D surfaces and temporal hypotheses. Unsupported observations stay explicit. Source-image checks establish only their stated image-space support.
 
+Source-reviewed semantic corrections are separate, source-bound overlays: the original relationship and evidence remain inspectable. A selected correction expires when its approved revision, source program or scene changes. Revising a candidate relation does not establish physical attachment or modify geometry/poses.
+
 ## Build, review, improve, approve
 
 ```text
@@ -35,6 +37,8 @@ The extended film V2 animates this review loop and a separate Muse â†’ SAM 3.1 â
 
 The bounded improvement policy permits an initial result followed by **at most two repairs**. Targeted stages can revisit reasoning, tracking, reconstruction or mechanics. The workflow retains comparable measured improvements and stops on insufficient evidence, regression, exhausted rounds or budget/transport uncertainty. Automatic review never substitutes for owner approval of the exact revision. The public code omits private activation receipts and budgets; opening a fresh checkout does not activate paid review.
 
+The private review desk can compare an earlier scene with the current revision on the same source clock. Optional part, joint and timestamp targets stay private review annotations; approval remains restricted to the exact current revision.
+
 Feedback memory retrieves scoped, revocable human guidance for a later run. Exact-recording guidance takes precedence; transfer to an object family or global method requires an explicit scope. This is context retrieval, **not model-weight training**, and feedback does not become observed fact.
 
 ## Custom implementation map
@@ -48,6 +52,7 @@ These are implementation entry points in this release. Meta and upstream authors
 | Joint proposal, constrained fitting and connected replay | [mechanism_pipeline.py](../app/mechanism_pipeline.py), [sam3d_mechanisms.py](../app/sam3d_mechanisms.py), [browser scene contract](../app/showcase/aligned-scene-contract.js) |
 | Source-visible geometry and separate motion hypotheses | [surface contract](../app/source_visible_flexure_contract_v1.py), [temporal continuity](../app/source_temporal_continuity_v1.py), [curated motion adapter](../app/curated_motion_hypotheses_v1.py) |
 | Review roles, bounded repair and exact owner approval | [review_agents.py](../app/review_agents.py), [Muse reviews](../app/admin_muse_reviews.py), [visual audit](../app/admin_visual_audit.py), [execution policy](../app/admin_execution_policy.py), [workflow](../app/admin_workflow.py) |
+| Source-bound semantic correction overlays | [correction contract](../app/semantic_relation_corrections_v1.py), [publication adapter](../app/semantic_correction_publication_v1.py) |
 | Revocable feedback retrieval | [agent_memory.py](../app/agent_memory.py) |
 | Curated human/agent discovery and fixed artifact access | [library_query.py](../app/library_query.py), [curated catalog](../app/curated_twin_catalog.py), [MCP server](../app/scripts/serve_twin_mcp.py) |
 | Cross-recording interface/task drafts | [cross_recording_task.py](../app/cross_recording_task.py) |

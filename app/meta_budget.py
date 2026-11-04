@@ -484,6 +484,9 @@ class BudgetLedger:
             db.execute("CREATE TABLE IF NOT EXISTS admin_text_unknown_audits (request_id TEXT PRIMARY KEY REFERENCES requests(request_id), proof_json TEXT NOT NULL, proof_sha256 TEXT NOT NULL, authorization_reference TEXT NOT NULL, retained_reservation INTEGER NOT NULL CHECK(retained_reservation>0), created TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP)")
             db.execute("CREATE TRIGGER IF NOT EXISTS admin_text_audit_no_update BEFORE UPDATE ON admin_text_unknown_audits BEGIN SELECT RAISE(ABORT, 'immutable_admin_text_audit'); END")
             db.execute("CREATE TRIGGER IF NOT EXISTS admin_text_audit_no_delete BEFORE DELETE ON admin_text_unknown_audits BEGIN SELECT RAISE(ABORT, 'immutable_admin_text_audit'); END")
+            db.execute("CREATE TABLE IF NOT EXISTS visual_transport_unknown_audits (request_id TEXT PRIMARY KEY REFERENCES requests(request_id), proof_json TEXT NOT NULL, proof_sha256 TEXT NOT NULL, authorization_reference TEXT NOT NULL, retained_reservation INTEGER NOT NULL CHECK(retained_reservation>0), created TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP)")
+            db.execute("CREATE TRIGGER IF NOT EXISTS visual_transport_audit_no_update BEFORE UPDATE ON visual_transport_unknown_audits BEGIN SELECT RAISE(ABORT, 'immutable_visual_transport_audit'); END")
+            db.execute("CREATE TRIGGER IF NOT EXISTS visual_transport_audit_no_delete BEFORE DELETE ON visual_transport_unknown_audits BEGIN SELECT RAISE(ABORT, 'immutable_visual_transport_audit'); END")
             # Older loaded Python code does not count the new state. Fence its
             # connections at INSERT instead of letting a stale process admit work
             # while omitting retained bounds. Only reviewed connections register
@@ -631,6 +634,41 @@ class BudgetLedger:
                 (request_id,encoded,proof_hash,authorization_reference,row['reserved']))
             changed=db.execute("UPDATE requests SET state='bounded_unknown',updated=CURRENT_TIMESTAMP WHERE request_id=? AND state='uncertain'",(request_id,)).rowcount
             if changed!=1:raise BudgetError('admin_text_audit_state_changed')
+            return {'request_id':request_id,'state':'bounded_unknown','reserved_usd':usd(row['reserved']),
+                'unknown_usage':True,'proof_sha256':proof_hash,'newly_acknowledged':True,
+                'reservation_released_usd':'0.000000','new_model_requests':0}
+
+    def acknowledge_reviewed_visual_transport(self, request_id: str, *, proof: dict,
+                                              authorization_reference: str, project_root=None) -> dict:
+        """Manually classify ONE proved full-context maximum; release no money.
+
+        The proof is pinned to a preserved once-only visual attempt. Actual usage
+        remains unknown; neither timeout nor no-billing is asserted. Runtime
+        transport and workers never invoke this. Existing caps/history remain.
+        """
+        from bounded_visual_transport_audit_v1 import REQUEST,FIELDS,validate_row
+        _identity(request_id);_identity(authorization_reference)
+        if request_id!=REQUEST or not isinstance(proof,dict) or set(proof)!=FIELDS:
+            raise BudgetError('visual_bound_proof_invalid')
+        try:encoded=json.dumps(proof,sort_keys=True,separators=(',',':'),allow_nan=False)
+        except (TypeError,ValueError):raise BudgetError('visual_bound_proof_invalid') from None
+        proof_hash=hashlib.sha256(encoded.encode()).hexdigest()
+        with self._transaction() as db:
+            row=db.execute('SELECT * FROM requests WHERE request_id=?',(request_id,)).fetchone()
+            if row is None:raise BudgetError('unknown_request')
+            previous=db.execute('SELECT * FROM visual_transport_unknown_audits WHERE request_id=?',(request_id,)).fetchone()
+            if previous is not None:
+                if (previous['proof_sha256']!=proof_hash or previous['proof_json']!=encoded or
+                        previous['authorization_reference']!=authorization_reference or previous['retained_reservation']!=row['reserved']):
+                    raise BudgetError('visual_bound_acknowledgement_conflict')
+                return {'request_id':request_id,'state':row['state'],'reserved_usd':usd(row['reserved']),
+                    'unknown_usage':row['state']=='bounded_unknown','proof_sha256':proof_hash,'newly_acknowledged':False,
+                    'reservation_released_usd':'0.000000','new_model_requests':0}
+            validate_row(row,proof,root=Path(project_root or Path(__file__).resolve().parent))
+            db.execute('INSERT INTO visual_transport_unknown_audits (request_id,proof_json,proof_sha256,authorization_reference,retained_reservation) VALUES (?,?,?,?,?)',
+                (request_id,encoded,proof_hash,authorization_reference,row['reserved']))
+            changed=db.execute("UPDATE requests SET state='bounded_unknown',updated=CURRENT_TIMESTAMP WHERE request_id=? AND state='uncertain'",(request_id,)).rowcount
+            if changed!=1:raise BudgetError('visual_bound_state_changed')
             return {'request_id':request_id,'state':'bounded_unknown','reserved_usd':usd(row['reserved']),
                 'unknown_usage':True,'proof_sha256':proof_hash,'newly_acknowledged':True,
                 'reservation_released_usd':'0.000000','new_model_requests':0}

@@ -6,3 +6,14 @@ function harness(){const tasks=['jabra','wallet'].map(id=>({twin_id:id,instructi
 test('static capabilities identify only exact saved robot twins and share one index read',async()=>{const h=harness();const [a,b]=await Promise.all([h.api.robotCapabilities(),h.api.robotCapabilities()]);assert.equal(a.scope,'saved_baselines');assert.deepEqual(Array.from(a.twin_ids),['jabra','wallet']);assert.equal(h.calls.length,1);assert.deepEqual(Array.from(b.twin_ids),Array.from(a.twin_ids));});
 test('starter links require a loaded, matching task and kit instead of guessing an earbud fallback',async()=>{const h=harness();assert.throws(()=>h.api.bundleURL(h.params('jabra')),/Load/);await h.api.robotCapabilities();for(const id of['phone','wallet-looking-but-unsupported'])assert.throws(()=>h.api.bundleURL(h.params(id)),/No saved baseline/);const p=h.params('jabra');p.set('kit_id','wrong');assert.throws(()=>h.api.bundleURL(p),/No saved baseline/);p.set('kit_id','kit');p.set('instruction','Different task');assert.throws(()=>h.api.bundleURL(p),/No saved baseline/);assert.equal(h.api.bundleURL(h.params('wallet')),'/interaction_twin/showcase/demos/robotics/wallet/starter.zip');});
 test('plan transport preserves exact task selection and rejects unrelated APIs or unsafe starter paths',async()=>{const h=harness();await h.api.robotJSON('/api/robotics/plan?'+h.params('jabra'));assert.equal(h.calls.at(-1),'/interaction_twin/showcase/demos/robotics/jabra/task.json');await assert.rejects(h.api.robotJSON('/api/robotics/plan?'+h.params('phone')),/No saved baseline/);await assert.rejects(h.api.robotJSON('/api/admin'),/no API/);h.index.tasks[0].starter.path='../private.zip';assert.throws(()=>h.api.bundleURL(h.params('jabra')),/Invalid saved starter/);});
+test('static library omits the backend-only facets link while the local page and saved query controls remain',()=>{
+ const result=JSON.parse(execFileSync('python3',['-B','-c',"import sys,json;from pathlib import Path;sys.path.insert(0,'scripts');from build_github_pages_20261104_v1 import rewrite_viewer;p=Path('showcase/library.html');local=p.read_text();print(json.dumps({'local':local,'static':rewrite_viewer(local,'/interaction_twin/','showcase/library.html'),'other':rewrite_viewer(local,'/interaction_twin/','showcase/unrelated.html')}))"],{cwd:ROOT,encoding:'utf8'}));
+ assert.match(result.local,/href=[\"']\/api\/library\/facets[\"']/);
+ assert.doesNotMatch(result.static,/\/api\/library\/facets/);
+ for(const id of ['library-copy-query','library-query-json','library-query-code'])assert.match(result.static,new RegExp('id="'+id+'"'));
+ assert.match(result.static,/Use this search with an agent/);
+ assert.doesNotMatch(result.local,/agents\.html#robot-task-kit/);
+ assert.match(result.local,/href="robotics-lab\.html">Explore robot task previews/);
+ assert.match(result.static,/href="robotics-lab\.html">Explore robot task previews/);
+ assert.match(result.other,/href=[\"']\/api\/library\/facets[\"']/);
+});

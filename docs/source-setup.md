@@ -39,7 +39,7 @@ Open the URL printed by the server. The code-only checkout has an **empty librar
 
 ## What this setup verifies
 
-The review recipe was installed in a fresh isolated CPython 3.12 environment on macOS arm64. The check covers owner approval and repair bounds, feedback-memory scoping, library queries, robot UI contracts, connected-scene math, empty-catalog generation and isolated HTTP startup. The fresh run passed 27 Python checks and 65 Node checks; three saved-data Node checks were explicitly skipped. Release entry-document links also resolve within the checkout. Eighteen memory/query fixtures were also checked with Python site packages disabled (`-I -S`).
+The review recipe was installed in a fresh isolated CPython 3.12 environment on macOS arm64. The check covers owner approval and repair bounds, feedback-memory scoping, library queries, robot UI contracts, connected-scene math, empty-catalog generation and isolated HTTP startup. The fresh run passed 27 Python checks and 66 Node checks; three saved-data Node checks were explicitly skipped. Release entry-document links also resolve within the checkout. Eighteen memory/query fixtures were also checked with Python site packages disabled (`-I -S`).
 
 An optional [CI recipe](ci/source-review.yml) provides the same command for Linux with Python 3.12 and Node.js 22. Remote CI is **not enabled** in this repository; the reported passes above are local checks. To enable CI later, copy the recipe to `.github/workflows/review.yml` using an appropriately authorized GitHub connection. These checks do not reproduce full model inference or measure physical accuracy.
 

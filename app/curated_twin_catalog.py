@@ -164,6 +164,14 @@ class CuratedTwinCatalog(TwinCatalog):
     def describe(self,twin_id):
         result=super().describe(twin_id);record,_=self._record(twin_id)
         result['curation']=copy.deepcopy(record['curation'])
+        correction=self.semantic_correction(twin_id)
+        if correction:
+            result['original_relationships']=copy.deepcopy(result['relationships'])
+            result['relationships']=copy.deepcopy(record['relationships'])
+            result['semantic_correction']={'artifact':copy.deepcopy(correction['artifact']),
+                'scope':'source_reviewed_candidate_host_correction_not_verified_attachment',
+                'inspection_tool':'list_derived_artifacts','original_program_uri':f'twin://{twin_id}/program',
+                'human_reviewed':False,'physical_accuracy_verified':False}
         if record.get('observed_surfaces'):
             result['observed_surfaces']={'artifact':copy.deepcopy(record['observed_surfaces']),
                 'scope':'source_visible_monocular_depth_observations',
@@ -180,6 +188,64 @@ class CuratedTwinCatalog(TwinCatalog):
                 'scope':'declared_source_mask_refit_geometric_derivative',
                 'original_native_program_preserved':True,'physical_accuracy_verified':False,
                 'simulation_ready':False}
+        return result
+
+    def semantic_correction(self,twin_id):
+        """Exact currently selected source-review overlay; never discover one."""
+        record,_=self._record(twin_id);reference=record.get('semantic_correction')
+        if reference is None:return None
+        import semantic_relation_corrections_v1 as S
+        document=json.loads(self._bytes(reference,maximum=128*1024))
+        program=json.loads(self._bytes(record['interaction'],maximum=8*1024*1024))
+        index,_=self._json('showcase/public/aligned-scenes.json')
+        rows=[row for row in index['scenes']if row.get('source_sha256')==record['source']['sha256']]
+        if len(rows)!=1:raise ValueError('Semantic correction current scene is ambiguous')
+        self._checked(rows[0]['manifest'],maximum=8*1024*1024)
+        review=S.validate(document,record,program,rows[0]['manifest'],lambda r:self._bytes(r,maximum=8*1024*1024))
+        # Reproduce every effective relation from its original program plus the
+        # declared exact change; arbitrary corrected catalog text is not trusted.
+        base=copy.deepcopy(record);base.pop('semantic_correction')
+        originals={r['id']:r for r in program['relationships']}
+        base['relationships']=[{**copy.deepcopy(originals[r['id']]),'citations':copy.deepcopy(r['citations'])}for r in record['relationships']]
+        expected=S.project(base,document,reference)
+        if expected['relationships']!=record['relationships']:raise ValueError('Effective semantic projection changed')
+        return {'artifact':copy.deepcopy(reference),'document':document,'review':review}
+
+    def simulation_manifest(self,twin_id):
+        result=super().simulation_manifest(twin_id);record,_=self._record(twin_id)
+        correction=self.semantic_correction(twin_id)
+        if correction:
+            result['original_candidate_relationships']=copy.deepcopy(result['candidate_relationships'])
+            result['candidate_relationships']=copy.deepcopy(record['relationships'])
+            draft=result.get('preparation_draft')
+            if draft is not None:
+                draft['original_candidate_relationships']=copy.deepcopy(draft['candidate_relationships'])
+                draft['candidate_relationships']=copy.deepcopy(record['relationships'])
+                draft['semantic_correction']=copy.deepcopy(correction['artifact'])
+            result['semantic_correction']={'artifact':copy.deepcopy(correction['artifact']),
+                'scope':'source_reviewed_candidate_host_correction_not_verified_attachment',
+                'original_program_preserved':True,'human_reviewed':False,'physical_accuracy_verified':False}
+        return result
+
+    def _kinematics_descriptor(self,twin_id,document,digest):
+        result=copy.deepcopy(super()._kinematics_descriptor(twin_id,document,digest))
+        correction=self.semantic_correction(twin_id)
+        if correction:
+            result['original_removable_relationships']=copy.deepcopy(result.get('removable_relationships',[]))
+            for edge in result.get('removable_relationships',[]):
+                for c in correction['document']['corrections']:
+                    old,new=c['original'],c['replacement']
+                    if edge.get('child_id')==old['subject_track_id']and edge.get('parent_id')==old['object_track_id']:
+                        edge['parent_id']=new['object_track_id'];edge['semantic_correction']=copy.deepcopy(correction['artifact'])
+            result['semantic_correction']={'artifact':copy.deepcopy(correction['artifact']),'original_object_program_preserved':True,'scope':'source_reviewed_candidate_host_correction_not_verified_attachment'}
+        return result
+
+    def kinematics(self,twin_id):
+        result=super().kinematics(twin_id);correction=self.semantic_correction(twin_id)
+        if correction:
+            record,_=self._record(twin_id)
+            result['semantic_correction']={'artifact':copy.deepcopy(correction['artifact']),'original_object_program_preserved':True,'scope':'Apply this declared overlay for current candidate relationships; object_program is the unchanged original.'}
+            result['effective_candidate_relationships']=copy.deepcopy(record['relationships'])
         return result
 
     def derived_assembly(self,twin_id):

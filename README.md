@@ -53,6 +53,8 @@ See the [object-program format](docs/object-program.md), [MCP guide](docs/mcp.md
 
 For the earbud example, the lid follows its parent through an estimated revolute joint. Attachment is enforced by forward kinematics. That prevents independent lid drift, while the physical hinge location, metric dimensions and contact still require validation.
 
+Source-backed semantic corrections remain separate from the original model program and retain its evidence. The private owner desk compares before/current revisions at the same source time and lets feedback target a part, joint or timestamp; approval still belongs to the exact current revision.
+
 ## One task, two recordings
 
 **“Prepare a task to charge this phone.”**

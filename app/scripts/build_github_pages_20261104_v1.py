@@ -53,6 +53,10 @@ def rewrite_viewer(text, base, name):
         text = text.replace('return expected;', 'return '+json.dumps(base)+'+expected.slice(1);')
     if name.endswith('library.js'):
         text = text.replace("'/api/library?'+params", "'public/library-catalog.json'")
+    if name=='showcase/library.html':
+        # Facets require the local backend. Keep the saved JSON/MCP example,
+        # without exporting a dead host-root API link to the static site.
+        text = re.sub(r'<a\b[^>]*\bhref=([\"\'])/api/library/facets\1[^>]*>.*?</a>', '', text, flags=re.DOTALL)
     if name=='showcase/app.js':
         text=text.replace('async function processor(){',"async function processor(){if(window.StaticTwin){$('processor-status').textContent='Read-only demo · saved results';return;}")
     if name.endswith('robot-workbench.js'):

@@ -150,6 +150,17 @@ class CuratedDerivedArtifacts:
                     trace['source_sha256'] == document['source']['sha256'],
                     'Nonrigid trace belongs to another source or format')
 
+        correction=self.catalog.semantic_correction(twin_id)
+        if correction:
+            import semantic_relation_corrections_v1 as S
+            found={**found,'semantic_correction_ref':correction['artifact']}
+            add(correction['artifact'],'source_reviewed_semantic_correction')
+            for reference in S.artifacts(correction['document'],correction['review']):
+                # The full video remains a source binding, not a newly granted
+                # large binary route under this 8MiB sidecar resource contract.
+                if reference==correction['document']['source']:continue
+                add(reference,'semantic_correction_source_evidence')
+
         artifacts = {}
         for path, item in sorted(by_path.items()):
             ref = item['reference']
@@ -182,4 +193,6 @@ class CuratedDerivedArtifacts:
         current, _ = self.catalog._record(twin_id)
         require(current.get('derived_assembly') == found['artifact'],
                 'Curated declaration changed during resource read; list again')
+        require(current.get('semantic_correction')==found.get('semantic_correction_ref'),
+                'Curated semantic correction changed during resource read; list again')
         return raw
