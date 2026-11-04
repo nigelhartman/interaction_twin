@@ -1,6 +1,6 @@
 {
   "format": "interaction-twin-public-source-release",
-  "version": 9,
+  "version": 10,
   "owner_authorized_repository": "nigelhartman/interaction_twin",
   "layout": "self_contained_runtime_in_app; documentation_at_root",
   "private_state_excluded": true,
@@ -13,8 +13,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "4421e54f3e9f41b7fc7a39737b1fb83a5168e43c79919a626f953ae3c5c8d11d",
-      "bytes": 8316
+      "sha256": "c042b0926c4332e54d5e0768c733e25ba2fbc3a46ad7d838576cf4a6c1f6c311",
+      "bytes": 8247
     },
     {
       "path": "app/admin/admin.css",
@@ -5757,7 +5757,7 @@
     "python_fixture_checks_passed": 27,
     "node_fixture_checks_passed": 66,
     "node_saved_data_skips": 3,
-    "local_documentation_links_checked": 57,
+    "local_documentation_links_checked": 56,
     "empty_catalog_build": {
       "cases": 0,
       "errors": []
