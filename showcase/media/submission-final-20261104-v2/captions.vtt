@@ -59,7 +59,7 @@ The object program keeps more than shape. It links parts, estimated joint frames
 
 15
 00:01:21.300 --> 00:01:34.600
-Muse proposes the twin. Separate review prompts and code checks critique it. Targeted repairs can run for two rounds. Then you approve. Saved feedback guides later runs.
+Muse proposes parts and actions. Separate critic prompts use the same Muse model, alongside code checks. Up to two repair rounds can follow, then the owner approves. Feedback becomes guidance for later runs.
 
 16
 00:01:35.300 --> 00:01:47.600
@@ -75,7 +75,7 @@ The browser robot makes the handoff visible. This full rehearsal places the case
 
 19
 00:02:30.300 --> 00:02:49.600
-Python handles processing and review. The object program connects our curated M C P catalog and Three J S viewers. Meta supplies the models. We built orchestration, source checks, approval, exports and task authoring. GitHub Pages serves saved results without API keys.
+Meta Muse proposes parts and actions. SAM three point one segments them; SAM three D drafts meshes. Our Python code builds source-linked object programs and manages checks, review and approval. Read-only M C P and Three J S viewers make those programs reusable.
 
 20
 00:02:50.300 --> 00:02:59.700

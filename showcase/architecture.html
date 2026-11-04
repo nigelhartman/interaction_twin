@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f7f8fb">
+<meta name="description" content="How Interaction Twin uses Meta Muse, SAM 3.1 and SAM 3D to build source-linked object programs, review them and hand them to people and agents.">
+<title>How it works · Interaction Twin</title>
+<link rel="icon" href="brand/v2/mark.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="cobalt.css"><link rel="stylesheet" href="architecture.css"><script defer src="architecture.js"></script>
+<script src="/interaction_twin/static-demo.js"></script><style>.static-demo-note{padding:7px 24px;text-align:center;background:#eef2ff;color:#3659b8;font:12px system-ui;letter-spacing:.03em}</style></head>
+<body class="architecture-page"><a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><a class="brand" href="index.html"><img src="brand/v2/mark.svg" alt="" width="30" height="30">Interaction Twin</a><nav aria-label="Main navigation"><a href="index.html">Project</a><a href="library.html">Library</a><a href="robotics-lab.html">Robotics lab</a><a href="agents.html">For agents</a></nav></header>
+<main class="architecture-main" id="main">
+<section class="architecture-intro"><div class="eyebrow">HOW IT WORKS</div><h1>Build. Review.<br><em>Keep the evidence.</em></h1><p>A video becomes 3D parts, connected motion and a descriptive program. Review can improve the draft. You decide what enters the library.</p></section>
+<section class="workflow" aria-labelledby="workflow-title" data-phase="0" data-playing="false">
+<div class="workflow-heading"><div><span class="small-label">ILLUSTRATED WORKFLOW</span><h2 id="workflow-title">A draft. A critique. Your approval.</h2></div><button id="workflow-control" class="workflow-control" type="button" aria-label="Play illustration" hidden>Play illustration <span aria-hidden="true">↻</span></button></div>
+<div class="workflow-stage">
+<svg class="workflow-connectors" viewBox="0 0 1000 150" preserveAspectRatio="none" aria-hidden="true"><path class="forward" d="M235 66H420M580 66H765"/><path class="repair" d="M500 112V138H170V112"/><path class="arrow" d="m408 61 12 5-12 5m345-10 12 5-12 5"/><path class="repair-arrow" d="m165 124 5-12 5 12"/></svg>
+<ol class="workflow-nodes" aria-label="Build a proposal, review and optionally repair it up to twice, then owner approval">
+<li data-node="0"><span class="node-number">01</span><h3>Build</h3><p>Muse proposes a twin.</p><span class="node-note">Parts · relationships · evidence</span></li>
+<li data-node="1"><span class="node-number">02</span><h3>Review &amp; improve</h3><p>Critic prompts + code checks.</p><span class="node-note">Up to two targeted repairs</span></li>
+<li data-node="2"><span class="node-number">03</span><h3>You approve</h3><p>An exact revision enters the library.</p><span class="node-note">Human decision · curated result</span></li>
+</ol><span class="repair-label" aria-hidden="true">repair if needed</span>
+</div>
+<p class="workflow-caption" id="workflow-caption">Illustration only. The review loop does not run when you open this page.</p>
+<p class="workflow-key">Separate prompts to the same Muse model. Deterministic checks remain separate. Approval is never automatic.</p>
+</section>
+<section class="architecture-section" aria-labelledby="meta-title"><div class="section-kicker">THE META PIPELINE</div><h2 id="meta-title">Shape, motion and meaning.</h2>
+<ol class="meta-pipeline">
+<li><span>01</span><h3>Find &amp; track</h3><p><strong>Muse</strong> discovers candidate parts and actions in the video. <strong>SAM 3.1</strong> supplies visible-part masks.</p></li>
+<li><span>02</span><h3>Generate parts</h3><p><strong>SAM 3D Objects</strong> generates draft meshes from selected source views and masks.</p></li>
+<li><span>03</span><h3>Connect &amp; describe</h3><p><strong>Muse</strong> proposes relationships and steps. Geometry code fits estimated joints; the object program binds them to source evidence.</p></li>
+<li><span>04</span><h3>Review &amp; curate</h3><p>Role reviews and deterministic checks guide bounded repairs. The owner approves the exact version before public retrieval.</p></li>
+</ol><p class="architecture-boundary">Generated shape and motion are estimates. Review does not establish metric accuracy, contact, grasp stability or successful insertion.</p></section>
+<section class="architecture-section reuse-section" aria-labelledby="reuse-title"><div><div class="section-kicker">AFTER THE LIBRARY</div><h2 id="reuse-title">Build the twin.<br>Then let an agent use it.</h2><p>These are two different stages. The build pipeline creates and reviews the asset. An external agent can later search the curated library through MCP, retrieve its parts and evidence, and propose a new task.</p></div><div class="reuse-card"><span class="small-label">SAVED EXAMPLE · TWO RECORDINGS</span><h3>“Prepare a task to charge this phone.”</h3><p>A scripted MCP run retrieves the phone, cable and charger. A separate Muse critique reviews the task metadata.</p><a href="agents.html#charge-phone-example">Explore the saved task →</a><a class="quiet-link" href="demos/charge-phone-v1/muse-review.json">Read the saved Muse critique ↗</a><small>Metadata-only review. No live model call or physical charging.</small></div></section>
+<details class="implementation-details"><summary>Implementation &amp; what we built <span aria-hidden="true">+</span></summary><div class="implementation-content">
+<h2>The custom contribution</h2><p>Interaction Twin connects perception outputs into a source-bound object program: component identities, estimated joint frames and angles, demonstrated steps, exact artifact references and uncertainty. The browser, approval workflow and read-only MCP tools use the same curated records.</p>
+<ul class="code-links"><li><a href="https://github.com/nigelhartman/interaction_twin/blob/main/app/object_program.py">Object programs ↗</a><span>Descriptive parts, joints and source bindings.</span></li><li><a href="https://github.com/nigelhartman/interaction_twin/blob/main/app/admin_workflow.py">Bounded workflow ↗</a><span>Build, compare, stop and approve exact revisions.</span></li><li><a href="https://github.com/nigelhartman/interaction_twin/blob/main/app/admin_muse_reviews.py">Muse role prompts ↗</a><span>Evidence, geometry, mechanics and semantics.</span></li><li><a href="https://github.com/nigelhartman/interaction_twin/blob/main/app/twin_catalog.py">Curated catalog ↗</a><span>Shared records for people and agent tools.</span></li><li><a href="https://github.com/nigelhartman/interaction_twin/blob/main/app/scripts/serve_twin_mcp.py">Read-only MCP ↗</a><span>Search, inspect and retrieve saved artifacts.</span></li></ul>
+<h3>Review scopes stay explicit</h3><p>Hosted role reviewers use separate prompts to the same Muse model; they are not independent models. The default hosted role packet contains text metadata, not source images or meshes. Source/render visual audits are a separately enabled workflow. Code checks validate source hashes, artifact structure, IDs, joint contracts and declared evidence; they do not certify faithful geometry.</p>
+<h3>Repairs stop, then you decide</h3><p>The workflow allows an initial build and up to two targeted repair rounds. It compares revisions where evidence is comparable and stops for regression, insufficient evidence, budget or the round limit. An owner must approve the exact result. Private feedback memory supplies retrievable guidance for later prompts; it does not train model weights.</p>
+<h3>The browser robot is a separate tool</h3><p>The robotics workbench compiles supported instructions locally into a typed task and runs bounded kinematics in Three.js. It makes no Muse call and does not simulate grasp forces or insertion. The separate Newton bench replays a saved CPU contact experiment under assumed parameters.</p>
+<p class="implementation-note">Meta supplies the perception and reasoning models. The source-bound program, curation, checks, browser experience and reusable MCP handoff are the project’s integration work. This page illustrates that architecture; it is not a recording of a live inference run.</p>
+</div></details>
+<div class="architecture-next"><a class="button primary" href="library.html?case=flow-sam3d-default-e2e-20261102-v1--flow-procedure-1">Inspect the earbuds example <span aria-hidden="true">↗</span></a><a href="walkthrough.html">Watch the three-minute walkthrough →</a></div>
+</main><footer class="architecture-footer"><span>Interaction Twin · Research prototype</span><a href="index.html#creator">Built by Nigel Hartman ↗</a></footer>
+</body></html>
