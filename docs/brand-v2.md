@@ -8,9 +8,9 @@ The selected artwork is original vector geometry made for Interaction Twin. Prod
 
 ## Current assets
 
-- [Icon SVG](../showcase/brand/v2/mark.svg) and [transparent 1024px PNG](../showcase/brand/v2/mark-1024.png).
-- [16px](../showcase/brand/v2/favicon-16.png), [32px](../showcase/brand/v2/favicon-32.png) and [180px](../showcase/brand/v2/favicon-180.png) browser/app icons.
-- [Wordmark](../showcase/brand/v2/wordmark.svg) and [wordmark for dark surfaces](../showcase/brand/v2/wordmark-dark.svg), with matching PNG versions.
+- [Icon SVG](../app/showcase/brand/v2/mark.svg) and [transparent 1024px PNG](../showcase/brand/v2/mark-1024.png).
+- [16px](../app/showcase/brand/v2/favicon-16.png), [32px](../app/showcase/brand/v2/favicon-32.png) and [180px](../app/showcase/brand/v2/favicon-180.png) browser/app icons.
+- [Wordmark](../app/showcase/brand/v2/wordmark.svg) and [wordmark for dark surfaces](../app/showcase/brand/v2/wordmark-dark.svg), with matching PNG versions.
 - [Social avatar](../showcase/brand/v2/social-mark-512.png) and [1200×630 social card](../showcase/brand/v2/social-card-1200x630.png).
 - [Brand board](../showcase/brand/v2/brand-board.png), showing actual small sizes, header context and palette.
 
@@ -18,6 +18,6 @@ The source SVG and raster icon come from the same rectangle and rounded-line pri
 
 ## Versioned marketing context
 
-[marketing-brand-v2.json](../config/marketing-brand-v2.json) is the current machine-readable identity. It names the exact SVG and `logo_raster_path` used for new marketing campaigns. Campaigns retain their captured identity and source hashes. The original `showcase/mark.svg` and `config/marketing-brand.json` remain byte-for-byte historical assets, so earlier films and their provenance stay reproducible.
+[marketing-brand-v2.json](../app/config/marketing-brand-v2.json) is the current machine-readable identity. It names the exact SVG and `logo_raster_path` used for new marketing campaigns. Campaigns retain their captured identity and source hashes. The original `showcase/mark.svg` and `config/marketing-brand.json` remain byte-for-byte historical assets, so earlier films and their provenance stay reproducible.
 
 This addendum describes the new identity. The existing [marketing art direction](marketing-art-direction.md) continues to define the pacing, typography, evidence and music rules.

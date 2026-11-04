@@ -53,6 +53,8 @@ def rewrite_viewer(text, base, name):
         text = text.replace('return expected;', 'return '+json.dumps(base)+'+expected.slice(1);')
     if name.endswith('library.js'):
         text = text.replace("'/api/library?'+params", "'public/library-catalog.json'")
+    if name=='showcase/app.js':
+        text=text.replace('async function processor(){',"async function processor(){if(window.StaticTwin){$('processor-status').textContent='Read-only demo · saved results';return;}")
     if name.endswith('robot-workbench.js'):
         # Read saved exact baselines, then use the existing bounded JS compiler.
         text = text.replace('async function jsonURL(url){', "async function jsonURL(url){if(url.startsWith('/api/'))return StaticTwin.robotJSON(url);")
@@ -103,6 +105,9 @@ def build(output, base):
     assert excluded['source']['path'] not in assets and len(ids)==5
     output.mkdir(parents=True); inventory=[]
     def put(name, raw, role, original=None):
+        if any(r['path']==name for r in inventory):
+            assert role=='filtered_static_catalog' and name.startswith('showcase/public/')
+            inventory[:]=[r for r in inventory if r['path']!=name]
         p=output/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(raw)
         inventory.append({**identity(name,raw),'role':role,**({'original_ref':original}if original else {})})
     for path,pointer in sorted(assets.items()): put('files/'+path,(ROOT/path).read_bytes(),'unchanged_curated_artifact',pointer)

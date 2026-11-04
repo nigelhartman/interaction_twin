@@ -4,7 +4,7 @@ The original v0.1 evidence procedure is immutable. A separate
 `data/object-programs/<version>/object-program.json` connects that procedure to
 its unchanged SAM 3D assets, a Muse mechanism graph, estimated joint frames and a
 source-time angle curve. The public contract is
-[`schemas/object-program.schema.json`](../schemas/object-program.schema.json).
+[`schemas/object-program.schema.json`](../app/schemas/object-program.schema.json).
 
 A component that comes out of a holder is represented as a removable relation.
 It is not automatically attached by a joint. A persistently attached lid may have

@@ -112,7 +112,7 @@ Workspace review decisions are not automatically benchmark ground truth. A bench
 
 Open [the saved-evidence benchmark](../workspace/benchmark/index.html) to compare actual preserved cohorts, source linkage, mask observations, generated tracklets, conditional motion coverage, failures and receipt-backed runtimes. It performs no inference. Different sampling and model budgets remain visible; there is no accuracy total or physical correctness score. Rebuild it with `.venv-sam/bin/python scripts/run_benchmark.py`; see [benchmark.md](benchmark.md).
 
-[The agent catalog preview](../workspace/agents.html) shows saved responses produced by the real Python catalog. This page does not connect an LLM or start MCP. The separate read-only MCP server exposes search, component/procedure/state/evidence/asset queries and a descriptive simulation handoff over stdio. Setup and the prepared local client configuration are in [mcp.md](mcp.md). MCP has no upload, inference, paid API, scheduler, arbitrary-path or physical-execution tools. Generated assets and demonstrations still report `simulation_ready: false`.
+[The agent catalog preview](../app/workspace/agents.html) shows saved responses produced by the real Python catalog. This page does not connect an LLM or start MCP. The separate read-only MCP server exposes search, component/procedure/state/evidence/asset queries and a descriptive simulation handoff over stdio. Setup and the prepared local client configuration are in [mcp.md](mcp.md). MCP has no upload, inference, paid API, scheduler, arbitrary-path or physical-execution tools. Generated assets and demonstrations still report `simulation_ready: false`.
 
 ## Meta API profiles and separate GPU readiness
 

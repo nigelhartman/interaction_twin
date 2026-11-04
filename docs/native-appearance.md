@@ -84,7 +84,7 @@ model executed. Genuine SAM 3D inference has not yet run in this project.
 
 ## Inspection and verification
 
-Open [Texture alignment checks](../workspace/appearance.html) for a local visual
+Open [Texture alignment checks](../app/workspace/appearance.html) for a local visual
 inspection page. Software fixtures have known geometry and poses and are labelled
 synthetic; they are not added to the genuine model catalog. The page also compares
 an unchanged saved Jabra model against the historical rendering path.

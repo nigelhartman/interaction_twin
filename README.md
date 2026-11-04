@@ -1,4 +1,4 @@
-<p align="center"><img src="showcase/brand/v2/mark.svg" width="68" alt="Interaction Twin logo"></p>
+<p align="center"><img src="app/showcase/brand/v2/mark.svg" width="68" alt="Interaction Twin logo"></p>
 
 <h1 align="center">Interaction Twin</h1>
 <p align="center"><strong>Show it once. Keep how it works.</strong></p>
@@ -61,6 +61,16 @@ The saved demonstration uses a real scripted MCP client to retrieve phone and ch
 
 This illustrates reuse across recordings. Shared cable identity, connector seating, electrical compatibility and successful charging remain unverified. The example is a saved retrieval trace, not a live autonomous robot.
 
+## Repository layout
+
+```text
+README.md           Project overview and films
+docs/               Architecture, formats and setup
+app/                Python services, browser app, scripts and tests
+```
+
+`gh-pages` holds the separate static demo. Application commands run from `app/`.
+
 ## Run the source locally
 
 The repository contains the custom application source. Saved demonstrations are deployed separately to the `gh-pages` branch; model weights, environments, credentials and private owner state are excluded.
@@ -69,7 +79,7 @@ Start with the [source setup guide](docs/source-setup.md). A prepared Python env
 
 ```sh
 git clone https://github.com/nigelhartman/interaction_twin.git
-cd interaction_twin
+cd interaction_twin/app
 # Follow docs/source-setup.md to prepare your environment.
 python -B scripts/build_workspace.py --no-replays
 python -B scripts/serve_workspace.py --host 127.0.0.1 --port 8766

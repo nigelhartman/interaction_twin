@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """45 s real-output trailer + 135 s current app/implementation walkthrough.
 
-Preserves the opening encoded video packets. No remote models or new geometry.
+Copies the opening video stream without re-encoding. No models or new geometry.
 The review loop is explicitly illustrative, not a fabricated API recording.
 """
 from __future__ import annotations
@@ -88,32 +88,42 @@ def frame(t,a):
     return im,{'film_s':t+45,'kind':kind,'model_call_performed':False,'geometry_modified':False}
 
 def main():
-    OUT.mkdir(exist_ok=True);MEDIA.mkdir(exist_ok=True);assert not (MEDIA/'interaction-twin-3min.mp4').exists();audio_dir=OUT/'audio-v4';audio_dir.mkdir(exist_ok=False)
+    resume='--finalize-existing' in sys.argv
+    OUT.mkdir(exist_ok=True);MEDIA.mkdir(exist_ok=True);assert not (MEDIA/'interaction-twin-3min.mp4').exists();audio_dir=OUT/'audio-v4'
     A.STORIES['submission-tail']={'duration_s':D,'cues':CUES,'voice':'Samantha','music':{'bpm':96,'kind':'documentary','seed':8414}}
-    audio,cues=A.make_audio('submission-tail',audio_dir)
+    if resume:audio=audio_dir/'mix.wav';cues=[{'start_s':s,'end_s':e,'text':v}for s,e,v in CUES]
+    else:audio_dir.mkdir(exist_ok=False);audio,cues=A.make_audio('submission-tail',audio_dir)
     # Retain natural speech speed; fail rather than accelerating a dense script.
     speech=json.loads((audio_dir/'audio.json').read_text());assert all(v['atempo']==1 for v in speech['voice'])
     a=F.Assets(ROOT/'output/flagship-trailer-20261104-v1/intake-v1/manifest.json')
     tail=OUT/'walkthrough-tail.mp4';clock=[];proofs=[]
     cmd=['ffmpeg','-nostdin','-v','error','-f','rawvideo','-pix_fmt','rgb24','-s',f'{W}x{H}','-r',str(FPS),'-i','pipe:0','-i',str(audio),'-t',str(D),'-c:v','libx264','-threads','4','-preset','veryfast','-crf','18','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-movflags','+faststart',str(tail)]
-    process=subprocess.Popen(cmd,stdin=subprocess.PIPE,stderr=subprocess.PIPE)
-    try:
-        for n in range(D*FPS):
-            image,trace=frame(n/FPS,a);clock.append(trace)
-            if n in {0,270,600,1140,1410,1650,1980,2400,2700,3000,3240,3510,3780,3990}:
-                p=OUT/f'frame-{n:04}.jpg';image.save(p,quality=95);proofs.append({'time_s':n/FPS+45,'file':F.ref(p)})
-            process.stdin.write(image.tobytes())
-        process.stdin.close();err=process.stderr.read();assert process.wait()==0,err.decode()
-    finally:a.close()
+    if not resume:
+        process=subprocess.Popen(cmd,stdin=subprocess.PIPE,stderr=subprocess.PIPE)
+        try:
+            for n in range(D*FPS):
+                image,trace=frame(n/FPS,a);clock.append(trace)
+                if n in {0,270,600,1140,1410,1650,1980,2400,2700,3000,3240,3510,3780,3990}:
+                    p=OUT/f'frame-{n:04}.jpg';image.save(p,quality=95);proofs.append({'time_s':n/FPS+45,'file':F.ref(p)})
+                process.stdin.write(image.tobytes())
+            process.stdin.close();err=process.stderr.read();assert process.wait()==0,err.decode()
+        finally:a.close()
+    else:
+        assert A.verify_video(tail,{'duration_s':135})
+        proofs=[{'time_s':int(p.stem.split('-')[1])/FPS+45,'file':F.ref(p)}for p in sorted(OUT.glob('frame-*.jpg'))]
+        clock=[{'film_s':n/FPS+45,'chapter':next(title for s,e,title in BEATS if s<=n/FPS<e),'model_call_performed':False,'geometry_modified':False}for n in range(D*FPS)];a.close()
     listing=OUT/'concat.txt';listing.write_text(''.join("file '"+str(p).replace("'","'\\''")+"'\n" for p in [OPENING,tail]))
     movie=MEDIA/'interaction-twin-3min.mp4'
-    subprocess.run(['ffmpeg','-nostdin','-v','error','-f','concat','-safe','0','-i',str(listing),'-t','180','-c','copy','-movflags','+faststart',str(movie)],check=True)
+    joined=OUT/'concat-mux-v2.mp4'
+    subprocess.run(['ffmpeg','-nostdin','-v','error','-f','concat','-safe','0','-i',str(listing),'-t','180','-c','copy',str(joined)],check=True)
+    joined_probe=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-of','json',str(joined)]));offset=next(s for s in joined_probe['streams']if s['codec_type']=='video')['start_time']
+    subprocess.run(['ffmpeg','-nostdin','-v','error','-itsoffset',str(-float(offset)),'-i',str(joined),'-map','0:v','-map','0:a','-c:v','copy','-af','asetpts=PTS-STARTPTS,apad=whole_dur=180,atrim=0:180','-c:a','aac','-b:a','192k','-t','180','-movflags','+faststart',str(movie)],check=True)
     probe=A.verify_video(movie,{'duration_s':180})
     first=(OPENING.parent/'captions.vtt').read_text();extension=''.join(f'{len(F.CUES)+i+1}\n{A.V.stamp(r["start_s"]+45)} --> {A.V.stamp(r["end_s"]+45)}\n{r["text"]}\n\n'for i,r in enumerate(cues));(MEDIA/'captions.vtt').write_text(first+'\n'+extension)
     (MEDIA/'transcript.txt').write_text((OPENING.parent/'transcript.txt').read_text()+'\n\n'+'\n\n'.join(r['text']for r in cues)+'\n')
     subprocess.run(['ffmpeg','-nostdin','-v','error','-ss','1','-i',str(movie),'-frames:v','1','-q:v','2',str(MEDIA/'poster.jpg')],check=True)
     A.contact_sheet(proofs,OUT/'contact-sheet.jpg');write(OUT/'clock.json',clock)
-    write(MEDIA/'provenance.json',{'format':'interaction-twin-final-submission-film','version':1,'opening':F.ref(OPENING),'opening_encoded_video_packets_preserved':True,'duration_s':180,'movie':F.ref(movie),'captions':F.ref(MEDIA/'captions.vtt'),'probe':probe,'tail_beats':BEATS,'source_captures':a.fresh,'current_catalog':a.catalog_ref,'screenshots':[F.ref(p)for p in sorted((OUT/'captures').glob('*.png'))],'audio':F.ref(audio_dir/'audio.json'),'clock':F.ref(OUT/'clock.json'),'builder':F.ref(Path(__file__)),'new_api_calls':0,'new_gpu_calls':0,'workflow_animation':'illustration_not_live_API_trace','robot_scope':'authored_kinematics_not_physical_control','publication':False})
+    write(MEDIA/'provenance.json',{'format':'interaction-twin-final-submission-film','version':1,'opening':F.ref(OPENING),'opening_video_stream_copied_without_reencoding':True,'duration_s':180,'movie':F.ref(movie),'captions':F.ref(MEDIA/'captions.vtt'),'probe':probe,'tail_beats':BEATS,'source_captures':a.fresh,'current_catalog':a.catalog_ref,'screenshots':[F.ref(p)for p in sorted((OUT/'captures').glob('*.png'))],'audio':F.ref(audio_dir/'audio.json'),'clock':F.ref(OUT/'clock.json'),'builder':F.ref(Path(__file__)),'new_api_calls':0,'new_gpu_calls':0,'workflow_animation':'illustration_not_live_API_trace','robot_scope':'authored_kinematics_not_physical_control','publication':False})
     print(json.dumps({'movie':F.ref(movie),'probe':probe},indent=2))
 
 if __name__=='__main__':main()

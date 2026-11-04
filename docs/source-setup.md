@@ -1,3 +1,5 @@
+> Run application commands below from the repository’s `app/` directory. Paths named `<checkout>` refer to that application directory.
+
 # Local source setup
 
 This guide was retained from the verified code-only preparation. The public release adds the README, trailer, and static deployment described in [PUBLIC_RELEASE.md](PUBLIC_RELEASE.md). References below to a private preparation describe that earlier packaging step; the source was subsequently published at the owner's request.
@@ -6,7 +8,7 @@ This guide was retained from the verified code-only preparation. The public rele
 
 This is a deliberately selected **code-only** snapshot prepared on 4 November
 2026. It is not a distributable installation or the separate saved judge demo.
-The exact unmodified project README is [README.project.md](README.project.md).
+The exact unmodified project README is [historical technical README](release/README-project-historical.md).
 The manifest binds every included file to its original source hash, or marks it
 as a newly generated package document. No original checkout file is rewritten.
 
