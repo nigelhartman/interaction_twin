@@ -1,0 +1,139 @@
+"""Publication-time reproduction of declared automatic geometry derivatives."""
+from __future__ import annotations
+import hashlib,json
+from pathlib import Path
+import cv2
+import numpy as np
+from PIL import Image
+
+import declared_geometry_view_v1 as V
+from native_appearance import load_native_glb,render_native_mask
+import object_program as O
+import sam3d_mechanisms as M
+
+ROOT=Path(__file__).resolve().parent
+
+
+def _reader(root):
+    root=Path(root).resolve()
+    def read(pointer,maximum=64*1024*1024):
+        V.reference(pointer,maximum);return O.checked_ref(pointer,root,maximum).read_bytes()
+    return read
+
+
+def _indices(pointer,read,maximum):
+    raw=read(pointer,maximum=64*1024*1024)
+    doc=json.loads(raw);doc=doc.get('indices')if isinstance(doc,dict)else doc
+    V.require(isinstance(doc,list)and 3<=len(doc)<=maximum and all(type(i)is int and 0<=i<maximum for i in doc)and len(set(doc))==len(doc),'Unique bounded original geometry index map required')
+    return np.asarray(doc,dtype=np.int64)
+
+
+def _appearance_equal(first,second,vertex_indices=None):
+    V.require(len(first.appearance.primitives)==len(second.appearance.primitives),'Derivative changed primitive/material inventory')
+    for a,b in zip(first.appearance.primitives,second.appearance.primitives):
+        V.require(a.sampler==b.sampler and a.double_sided==b.double_sided and a.winding_sign==b.winding_sign and np.array_equal(a.factor,b.factor),'Derivative altered native material/sampler/culling')
+        ids=slice(None)if vertex_indices is None else vertex_indices
+        for name in ['uv','tint']:
+            x,y=getattr(a,name),getattr(b,name)
+            V.require((x is None)==(y is None)and(x is None or np.array_equal(x[ids],y)),'Derivative changed exact selected native UV/color values')
+        V.require((a.texture_linear is None)==(b.texture_linear is None)and(a.texture_linear is None or np.array_equal(a.texture_linear,b.texture_linear)),'Derivative changed native texture pixels without a projection operation')
+
+
+def reproduce_asset(operation_record,read):
+    original=load_native_glb(read(operation_record.get('input_asset',operation_record['original_asset'])));derived=load_native_glb(read(operation_record['derived_asset']))
+    expected_vertices=original.vertices.copy();expected_faces=original.faces.copy();vertex_indices=None;projection=False
+    for operation in operation_record['operations']:
+        if operation['kind']=='affine_positions':
+            matrix=np.asarray(operation['matrix'],float);V.matrix(operation['matrix']);singular=np.linalg.svd(matrix[:3,:3],compute_uv=False)
+            V.require(np.linalg.det(matrix[:3,:3])>0 and singular.min()>=.60 and singular.max()<=1.40,'Affine correction is reflected, singular or exceeds its declared calibration scope')
+            expected_vertices=(expected_vertices@matrix[:3,:3].T+matrix[:3,3]).astype(np.float32).astype(float)
+        elif operation['kind']=='indexed_triangle_subset':
+            selected=_indices(operation['original_face_indices'],read,len(expected_faces));expected_faces=expected_faces[selected]
+            if operation.get('original_vertex_indices'):
+                ids=_indices(operation['original_vertex_indices'],read,len(expected_vertices));inverse=np.full(len(expected_vertices),-1,np.int64);inverse[ids]=np.arange(len(ids));V.require((inverse[expected_faces]>=0).all(),'Compact subset omits a referenced original vertex')
+                expected_vertices=expected_vertices[ids];expected_faces=inverse[expected_faces];vertex_indices=ids
+        elif operation['kind']=='observed_surface_texture_projection':
+            import observed_surface_projection_v1 as P
+            V.require(not projection and operation is operation_record['operations'][-1],'One final observed appearance operation is supported')
+            projection_report=json.loads(read(operation['projection_report_ref']));projection_input=load_native_glb(read(projection_report['input_asset_ref']))
+            V.require(np.allclose(expected_vertices,projection_input.vertices,atol=1e-7,rtol=0)and np.array_equal(expected_faces,projection_input.faces),'Projection input differs from the preceding declared geometry operations')
+            _appearance_equal(original,projection_input,vertex_indices)
+            P.validate_operation(original,derived,operation,read);projection=True
+        else:raise ValueError('Unsupported declared geometry reproduction')
+    V.require(expected_vertices.shape==derived.vertices.shape and np.allclose(expected_vertices,derived.vertices,atol=1e-7,rtol=0),'Derived positions differ from declared automatic operations')
+    V.require(np.array_equal(expected_faces,derived.faces),'Derived triangles differ from declared exact original subset')
+    if not projection:_appearance_equal(original,derived,vertex_indices)
+    active=derived.vertices[np.unique(derived.faces)];return {'original_vertex_count':len(original.vertices),'derived_vertex_count':len(derived.vertices),'original_face_count':len(original.faces),'derived_face_count':len(derived.faces),
+        'active_bounds':[active.min(0).tolist(),active.max(0).tolist()],'source_geometry_reproduced':True,'native_appearance_preserved':not projection}
+
+
+def _slab_check(report,meshes,scene):
+    calibration=report.get('calibration')
+    if calibration is None:return None
+    V.require(calibration['method']=='source_reviewed_flush_footprints_opposed_panel_normals_nonpenetrating_rear_edge_hinge','Unknown planar calibration proof')
+    joint=scene['mechanics']['joints'][0];parent=meshes[joint['parent_id']].vertices;child=meshes[joint['child_id']].vertices;normal=np.asarray(calibration['parent_interior_normal']);maximum=float((parent@normal).max());gaps=[];basis=np.asarray(calibration['parent_frame']);pq=parent@basis;pivot=np.asarray(calibration['pivot_parent_native'])@basis
+    for q in np.linspace(0,np.pi,181):
+        matrix=M.forward(np.eye(4),joint['parent_from_joint'],joint['axis'],float(q),joint['joint_from_child_zero']);positions=child@matrix[:3,:3].T+matrix[:3,3]
+        if calibration.get('clearance_scope')=='finite_parent_footprint_only; crossing_behind_rear_edge_is_not_deck_penetration':
+            xyz=positions@basis;inside=(xyz[:,0]>=pq[:,0].min())&(xyz[:,0]<=pq[:,0].max())&(xyz[:,1]>=pivot[1])&(xyz[:,1]<=pq[:,1].max());gap=float((positions[inside]@normal).min()-maximum)if inside.any()else calibration['numeric_clearance_epsilon_native']
+        else:gap=float((positions@normal).min()-maximum)
+        gaps.append(gap)
+    V.require(min(gaps)>=-1e-7 and abs(min(gaps)-calibration['minimum_signed_deck_clearance_native'])<1e-6,'Declared panel calibration still sinks into the keyboard support plane')
+    return {'minimum_signed_deck_clearance_native':min(gaps),'angle_count':len(gaps),'physical_collision_validation':False}
+
+
+def validate_files(document,*,root=ROOT,recompute_pixels=True):
+    root=Path(root).resolve();read=_reader(root);view=V.validate(document,read);O.validate(view['base'],root=root)
+    critic_bindings=None
+    if recompute_pixels:
+        import critic_source_binding_v1
+        critic_bindings=critic_source_binding_v1.validate_files(document,root=root)
+    if view.get('parent_derived_assembly') is not None:
+        import refined_assembly_contract
+        refined_assembly_contract.validate(view['parent_derived_assembly'],root=root)
+    report,audit,scene,old=view['geometry_report'],view['source_audit'],view['scene'],view['baseline_scene']
+    reproductions={row['component_id']:reproduce_asset(row,read)for row in report['assets']if row['operations']}
+    meshes={p['id']:load_native_glb(read(p['asset']))for p in scene['components']};slab=_slab_check(report,meshes,scene)
+    rows=audit.get('validation_samples',[]);V.require(isinstance(rows,list)and 2<=len(rows)<=16,'Predeclared source validation frames required')
+    held=[r for r in rows if r['role']=='heldout'];V.require(len(held)>=2,'At least two source frames held out from global geometry selection required')
+    measured=[]
+    if recompute_pixels:
+        oldmeshes={p['id']:load_native_glb(read(p['asset']))for p in old['components']}
+        raster_ids=audit.get('raster_validation_component_ids',[p['id']for p in scene['components']])
+        V.require(isinstance(raster_ids,list)and len(set(raster_ids))==len(raster_ids)and set(raster_ids)<=set(meshes),'Invalid raster component selection')
+        omitted=set(meshes)-set(raster_ids)
+        if omitted:
+            V.require(document.get('nonrigid_observations_ref') is not None,'Only declared nonrigid components may be omitted from rigid raster audits')
+            nonrigid=json.loads(read(document['nonrigid_observations_ref']));V.require(omitted=={nonrigid['component_id']},'Raster audit omitted an undeclared rigid component')
+        for sample in rows:
+            i=sample['sample_index'];raster=sample['raster'];w,h=raster['width'],raster['height'];k=np.asarray(raster['K']);V.require(16<=w<=1024 and 16<=h<=1024 and w*h<=1048576,'Bounded original-aspect comparison raster required')
+            original_k=np.asarray(scene['camera']['K'],float).copy();sx,sy=w/scene['source']['width'],h/scene['source']['height'];original_k[0]*=sx;original_k[1]*=sy;original_k[0,2]+=(sx-1)/2;original_k[1,2]+=(sy-1)/2
+            V.require(np.allclose(k,original_k,atol=1e-8),'Audit render camera differs from the source camera')
+            Image.open(O.checked_ref(sample['source_rgb_ref'],root));targets=[]
+            for target in sample['source_mask_refs']:
+                V.require(target['component_id']in raster_ids,'Source mask targets an excluded raster component')
+                with Image.open(O.checked_ref(target['artifact'],root))as image:
+                    raw=np.asarray(image);V.require(raw.shape==(scene['source']['height'],scene['source']['width'])and set(np.unique(raw))<={0,1,255},'Original-raster binary source masks required');targets.append(cv2.resize((raw>0).astype(np.uint8),(w,h),interpolation=cv2.INTER_NEAREST)>0)
+            V.require(targets,'An observed source mask is required');target=np.logical_or.reduce(targets);before=np.zeros((h,w),bool);after=before.copy()
+            for doc,assets,destination in [(old,oldmeshes,before),(scene,meshes,after)]:
+                for part in doc['components']:
+                    if part['id']not in raster_ids:continue
+                    pose=next(r for r in part['poses']if r['source_sample_index']==i)
+                    if pose['camera_from_native_mesh']is None:continue
+                    r,t,s=M.rotation_pose(pose['camera_from_native_mesh']);destination|=render_native_mask(assets[part['id']],k,r,t,w,h,scale=s)['mask']
+            score=lambda a:float(np.count_nonzero(target&a)/max(1,np.count_nonzero(target|a)))
+            a,b=score(before),score(after);V.require(abs(a-sample['before_union_iou'])<1e-12 and abs(b-sample['after_union_iou'])<1e-12,'Stored source mask comparison cannot be reproduced')
+            if sample['role']=='heldout':V.require(sample['retained']and b>=.65 and b>=a-.05,'Held-out source comparison failed the reviewed minimum/regression gate')
+            measured.append({'sample_index':i,'before_union_iou':a,'after_union_iou':b})
+    else:
+        # This switch is for isolated structural fixtures; publication MUST use
+        # the default. A resulting receipt cannot claim pixel reproduction.
+        measured=[]
+    appearance_proof=None
+    if document.get('source_appearance_states_ref')and recompute_pixels:
+        import source_appearance_projection_v1 as A
+        appearance_document=json.loads(read(document['source_appearance_states_ref'],maximum=8*1024*1024))
+        appearance_proof=A.validate_files(appearance_document,root=root)
+    return {'format':'interaction-twin-geometry-derivative-validation','version':1,'document_sha256':hashlib.sha256(json.dumps(document,sort_keys=True,separators=(',',':')).encode()).hexdigest(),
+        'geometry_reproduction':reproductions,'slab_clearance':slab,'source_pixel_comparisons':measured,'source_pixels_recomputed':recompute_pixels,
+        'critic_source_bindings':critic_bindings,'source_appearance_pixel_reproduction':appearance_proof,'physical_accuracy_verified':False,'simulation_ready':False}

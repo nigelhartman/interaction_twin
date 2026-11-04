@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f8fb">
+  <meta name="description" content="Let your agent search source-linked interaction twins, inspect their parts and retrieve descriptive programs through a read-only catalog or local MCP.">
+  <title>For agents · Interaction Twin</title>
+  <link rel="icon" href="brand/v2/mark.svg" type="image/svg+xml"><link rel="icon" href="brand/v2/favicon-32.png" sizes="32x32" type="image/png"><link rel="apple-touch-icon" href="brand/v2/favicon-180.png" sizes="180x180">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cobalt.css">
+  <link rel="stylesheet" href="agents.css">
+  <script defer src="agents.js"></script>
+  <script defer src="agent-charge-example.js"></script>
+</head>
+<body class="agent-guide-page">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="brand" href="index.html"><img src="brand/v2/mark.svg" alt="" width="32" height="32">Interaction Twin</a>
+  <nav aria-label="Main navigation"><a href="index.html">Project</a><a href="library.html">Library</a><a href="robotics-lab.html">Robotics lab</a><a href="agents.html" aria-current="page">For agents</a></nav>
+  
+</header>
+<main class="wrap agents-main" id="main">
+  <section class="agents-intro" aria-labelledby="agents-title">
+    <div class="eyebrow">FOR AGENTS</div>
+    <h1 id="agents-title">Find the object.<br>Understand the interaction.</h1>
+    <p>Search the same twin library people browse. Read its parts, estimated joints and demonstrated steps—with the original video evidence attached.</p>
+  </section>
+
+  <section class="agent-connect-card" aria-labelledby="connect-title">
+    <div class="agent-card-heading"><div><span class="small-label">A QUICK FIRST LOOK</span><h2 id="connect-title">Connect your agent.</h2></div></div>
+    <label class="agent-field-label" for="agent-prompt">Copy this line into your agent</label>
+    <div class="agent-connection-field">
+      <input id="agent-prompt" type="text" readonly spellcheck="false" aria-describedby="agent-prompt-note prompt-copy-status" value="Connect to Interaction Twin: /showcase/agent-setup.html">
+      <button class="agent-copy-icon" id="copy-agent-prompt" type="button" aria-label="Copy agent connection" title="Copy agent connection">
+        <svg class="agent-copy-glyph" viewBox="0 0 24 24" width="21" height="21" aria-hidden="true" focusable="false"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"></path></svg>
+        <svg class="agent-copied-glyph" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"></path></svg>
+      </button>
+    </div>
+    <p class="agent-field-note" id="agent-prompt-note">Paste it into your agent to get started. <a href="agent-setup.html">Connection guide ↗</a></p>
+    <p id="prompt-copy-status" class="agent-copy-status" role="status" aria-live="polite"></p>
+  </section>
+
+  <section class="agent-flow" aria-label="What an agent can do">
+    <article><span>01</span><h3>Discover</h3><p>Find twins by part, action or mechanism.</p></article>
+    <article><span>02</span><h3>Inspect</h3><p>Read the program and follow its source evidence.</p></article>
+    <article><span>03</span><h3>Retrieve</h3><p>Get component geometry and a descriptive handoff.</p></article>
+  </section>
+
+  <section class="agent-example" id="charge-phone-example" aria-labelledby="charge-example-title">
+    <header class="agent-example-heading"><span class="small-label">SAVED MCP EXAMPLE · TWO RECORDINGS</span><h2 id="charge-example-title">Charge this phone.</h2><p>A phone from one video. A cable and charger from another. The agent brings their descriptions together into a task draft.</p></header>
+    <label class="agent-field-label" for="charge-example-prompt">Try asking your agent</label>
+    <div class="agent-connection-field agent-example-prompt">
+      <textarea id="charge-example-prompt" readonly rows="2" spellcheck="false" aria-describedby="charge-copy-status">Prepare a task to charge this phone.</textarea>
+      <button class="agent-copy-icon" id="copy-charge-prompt" type="button" aria-label="Copy phone task prompt" title="Copy phone task prompt"><svg class="agent-copy-glyph" viewBox="0 0 24 24" width="21" height="21" aria-hidden="true" focusable="false"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"></path></svg><svg class="agent-copied-glyph" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"></path></svg></button>
+    </div>
+    <p id="charge-copy-status" class="agent-copy-status" role="status" aria-live="polite"></p>
+    <p id="charge-example-status" class="agent-example-status" role="status" aria-live="polite">Loading the saved example…</p>
+    <div id="charge-example-content" hidden>
+      <div class="agent-example-assets" id="charge-example-assets" aria-label="Parts retrieved from the library"></div>
+      <ol class="agent-example-steps" aria-label="How the task comes together"><li><span>01</span><div><h3>Find the parts</h3><p>Retrieve the phone, cable and charger with their source evidence.</p></div></li><li><span>02</span><div><h3>Match the interfaces</h3><p>Use the attributed USB-C descriptions to propose connections.</p></div></li><li><span>03</span><div><h3>Build a task draft</h3><p>Reuse demonstrated steps and flag what still needs checking.</p></div></li></ol>
+      <div class="agent-example-result"><div><span class="small-label">THE RESULT</span><h3>A source-linked task, ready to inspect.</h3><p id="charge-task-summary"></p></div><a href="demos/charge-phone-v1/task.json" download>Task JSON ↓</a></div>
+      <p class="agent-example-boundary">Fit, cable behaviour and successful charging still need validation. This example prepares a draft; it does not operate a robot.</p>
+      <details class="agent-example-details"><summary>How the agent did it <span aria-hidden="true">+</span></summary><div><p id="charge-trace-summary"></p><p id="charge-review-summary"></p><div class="agent-example-evidence"><a href="demos/charge-phone-v1/trace.json" download>Saved MCP trace ↓</a><a href="demos/charge-phone-v1/muse-review.json" download>Muse critique ↓</a></div><small>This is a saved scripted MCP execution and a separate metadata review. Opening this page makes no model call.</small></div></details>
+    </div>
+  </section>
+</main>
+<footer class="site-footer wrap" id="creator">
+  <div class="footer-project"><a class="brand" href="index.html"><img src="brand/v2/mark.svg" alt="" width="32" height="32">Interaction Twin</a><p>From demonstrations to reusable object programs.</p><small>Research prototype · 2026</small></div>
+  <div class="creator-card"><span class="small-label">BUILT BY</span><h3>Nigel Hartman</h3><p>XR and AI developer, connecting spatial computing with practical machine learning.</p><div><a href="https://nigelhartman.de" rel="noopener" target="_blank">Portfolio ↗</a><a href="https://github.com/nigelhartman" rel="noopener" target="_blank">GitHub ↗</a><a href="https://www.linkedin.com/in/nigelhartman/" rel="noopener" target="_blank">LinkedIn ↗</a></div></div>
+  
+</footer>
+</body>
+</html>

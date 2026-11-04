@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="270" viewBox="0 0 1440 270" role="img" aria-label="Video to parts, shape, object program and agent reuse">
+<rect width="1440" height="270" rx="26" fill="#f7f8fb"/>
+<g font-family="Arial, sans-serif"><text x="44" y="45" fill="#626b7b" font-size="14" letter-spacing="3">THE PIPELINE</text>
+<g fill="white" stroke="#dfe3eb" stroke-width="2"><rect x="36" y="80" width="242" height="140" rx="16"/><rect x="318" y="80" width="242" height="140" rx="16"/><rect x="600" y="80" width="242" height="140" rx="16"/><rect x="882" y="80" width="242" height="140" rx="16"/><rect x="1164" y="80" width="240" height="140" rx="16"/></g>
+<g fill="#3766ed" font-size="16" font-weight="bold"><text x="58" y="115">01 · VIDEO</text><text x="340" y="115">02 · SAM 3.1</text><text x="622" y="115">03 · SAM 3D</text><text x="904" y="115">04 · OBJECT PROGRAM</text><text x="1186" y="115">05 · REUSE</text></g>
+<g fill="#151923" font-size="23" font-weight="bold"><text x="58" y="159">Show an interaction</text><text x="340" y="159">Find the parts</text><text x="622" y="159">Build their shape</text><text x="904" y="159">Keep how it works</text><text x="1186" y="159">People + agents</text></g>
+<g fill="#626b7b" font-size="15"><text x="58" y="194">Ordinary demonstration</text><text x="340" y="194">Source-linked masks</text><text x="622" y="194">Separate mesh drafts</text><text x="904" y="194">Muse + source checks</text><text x="1186" y="194">Library · MCP · robot tasks</text></g>
+<g fill="#3766ed" font-size="27"><text x="287" y="160">→</text><text x="569" y="160">→</text><text x="851" y="160">→</text><text x="1133" y="160">→</text></g></g></svg>

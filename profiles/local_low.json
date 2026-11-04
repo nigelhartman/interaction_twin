@@ -1,0 +1,17 @@
+{
+  "id": "local_low",
+  "title": "Local low settings \u00b7 fresh inference",
+  "mode": "local_inference",
+  "fps": 1,
+  "max_dimension": 960,
+  "max_frames": 120,
+  "max_duration_s": 120,
+  "reconstruct_limit": 3,
+  "mesh_resolution": 64,
+  "pose_search_width": 128,
+  "pose_refine_count": 2,
+  "pose_max_evaluations": 45,
+  "phase_timeout_s": 900,
+  "reasoning_timeout_s": 300,
+  "disclosure": "Uses hosted OpenAI through the local Codex CLI for discovery, mask audit and procedure proposals; SAM 2.1 Tiny, TripoSR and CoTracker run on local Apple MPS. No manual geometry or pose edits. Automatically budgets up to three distinct component observations; independent component failures remain explicit."
+}

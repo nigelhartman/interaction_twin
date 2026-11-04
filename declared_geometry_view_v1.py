@@ -1,0 +1,164 @@
+"""Stdlib-only reader of an explicitly approved geometry/kinematics derivative.
+
+The callback enforces the curated artifact allowlist. Heavy geometry and pixel
+reproduction belongs to the publication validator, never an HTTP/MCP reader.
+"""
+from __future__ import annotations
+import hashlib
+import json
+import math
+from pathlib import PurePosixPath
+import re
+
+FORMAT='interaction-twin-declared-geometry-derivative'
+REPORT='interaction-twin-geometry-derivative-report'
+AUDIT='interaction-twin-geometry-source-audit'
+ORIGINS={'unchanged_SAM_3D_inference','inherited_approved_geometry_derivative','automatic_affine_calibration','indexed_triangle_subset','indexed_triangle_subset_compact','observed_surface_texture_projection','automatic_geometry_operation_chain'}
+CLAIMS={'original_native_assets_preserved':True,'declared_geometry_derivative_used':True,'manual_geometry_or_poses_used':False,
+        'physical_accuracy_verified':False,'simulation_ready':False,'physical_robot_execution_available':False}
+
+
+def require(value,message):
+    if not value:raise ValueError(message)
+
+
+def reference(value,maximum=64*1024*1024):
+    require(isinstance(value,dict)and set(value)=={'path','sha256','bytes'},'Exact geometry artifact reference required')
+    p=value['path'];require(isinstance(p,str)and p.startswith('data/')and re.fullmatch(r'[A-Za-z0-9_./-]+',p)and str(PurePosixPath(p))==p and not any(i in {'','.','..'}or i.startswith('.')for i in p.split('/')),'Ordinary geometry data path required')
+    require(isinstance(value['sha256'],str)and re.fullmatch('[a-f0-9]{64}',value['sha256'])and type(value['bytes'])is int and 0<value['bytes']<=maximum,'Bounded geometry hash and length required')
+    return value
+
+
+def finite(v):return type(v)in {int,float}and math.isfinite(v)
+
+
+def matrix(value):
+    require(isinstance(value,list)and len(value)==4 and all(isinstance(r,list)and len(r)==4 and all(finite(v)for v in r)for r in value)and value[3]==[0,0,0,1],'Finite homogeneous geometry transform required');return value
+
+
+def multiply(a,b):return [[sum(a[i][k]*b[k][j]for k in range(4))for j in range(4)]for i in range(4)]
+
+
+def rotation(axis,q):
+    x,y,z=axis;c,s=math.cos(q),math.sin(q);v=1-c
+    return [[x*x*v+c,x*y*v-z*s,x*z*v+y*s,0],[y*x*v+z*s,y*y*v+c,y*z*v-x*s,0],[z*x*v-y*s,z*y*v+x*s,z*z*v+c,0],[0,0,0,1]]
+
+
+def _index(rows,key):
+    require(isinstance(rows,list)and len(rows)<=2048,'Bounded geometry inventory required');out={}
+    for row in rows:require(isinstance(row,dict)and key in row and row[key]not in out,'Unique geometry inventory IDs required');out[row[key]]=row
+    return out
+
+
+def project_joint(joint):
+    fields=['id','type','parent_id','child_id','status','axis','parent_from_joint','joint_from_child_zero','parent_anchor_native','child_anchor_native',
+            'parent_native_scale','child_native_scale','limits_rad','limits_kind','physical_limits_rad','zero_reference','angle_quality','evidence_ids','matrix_convention','physical_accuracy_verified','simulation_ready']
+    return {**{k:joint[k]for k in fields if k in joint},'samples':[{k:r[k]for k in ['source_sample_index','timestamp_s','status','q_rad']}for r in joint['samples']]}
+
+
+def validate(document,read_bytes):
+    require(callable(read_bytes),'Approved artifact reader required');json.dumps(document,allow_nan=False)
+    require(document.get('format')==FORMAT and document.get('version')==1 and document.get('claims')==CLAIMS and document.get('physical_accuracy_verified')is False and document.get('simulation_ready')is False,'Unknown or physically upgraded geometry derivative')
+    cache={}
+    def read(pointer,maximum=16*1024*1024):
+        reference(pointer,maximum);key=(pointer['path'],pointer['sha256'],pointer['bytes'])
+        if key not in cache:
+            raw=read_bytes(pointer,maximum=maximum);require(isinstance(raw,(bytes,bytearray))and len(raw)==pointer['bytes']and hashlib.sha256(raw).hexdigest()==pointer['sha256'],'Approved geometry bytes changed')
+            cache[key]=json.loads(raw,parse_constant=lambda _:(_ for _ in ()).throw(ValueError('Nonfinite geometry JSON')))
+        return cache[key]
+    base=read(document['base_object_program_ref']);old=read(document['baseline_scene_ref']);scene=read(document['scene_ref']);report=read(document['refinement_report_ref']);audit=read(document['source_alignment_audit_ref'])
+    require(base.get('format')=='interaction-twin-object-program'and base.get('version')=='0.2'and base.get('physical_accuracy_verified')is False and base.get('simulation_ready')is False,'Original native object program required')
+    parent=None
+    if document.get('parent_derived_assembly_ref'):
+        import declared_assembly_view
+        parent=read(document['parent_derived_assembly_ref'])
+        declared_assembly_view.validate(parent,read_bytes)
+        require(parent['base_object_program_ref']==document['base_object_program_ref']and parent['scene_ref']==document['baseline_scene_ref'],'Approved parent assembly lineage differs')
+    else:require(base['constrained_scene']==document['baseline_scene_ref'],'Original native baseline scene differs')
+    require(base['evidence_program']==document['evidence_program']==old['original_program']==scene['original_program'],'Native/derived source lineage differs')
+    require(document['source']==base['source']==old['source']==scene['source']and old['camera']==scene['camera']and old['timing']==scene['timing'],'Derivative changed source, camera or source-clock policy')
+    require(scene.get('physical_accuracy_verified')is False and scene.get('simulation_ready')is False and scene.get('manual_geometry_or_poses_used')is False and scene.get('accepted_motion_poses')==0,'Derived estimates cannot become measured physics')
+    require(report.get('format')==REPORT and report.get('version')==1 and report.get('baseline_scene_ref')==document['baseline_scene_ref']and report.get('base_object_program_ref')==document['base_object_program_ref']and report.get('source_sha256')==scene['source']['sha256']and report.get('manual_geometry_or_poses_used')is False and report.get('physical_accuracy_verified')is False,'Geometry operation report lineage differs')
+    require(audit.get('format')==AUDIT and audit.get('version')==1 and audit.get('baseline_scene_ref')==document['baseline_scene_ref']and audit.get('geometry_report_ref')==document['refinement_report_ref']and audit.get('source_sha256')==scene['source']['sha256']and audit.get('manual_geometry_or_poses_used')is False and audit.get('physical_accuracy_verified')is False,'Geometry source audit lineage differs')
+    require(document['source_audit_summary']==audit['summary']and audit['summary'].get('default_eligible')is True and audit['summary'].get('geometric_gates_passed')is True and audit['summary'].get('source_pixel_gates_passed')is True and audit['summary'].get('physical_accuracy_verified')is False,'Geometry derivative is not eligible for reviewed presentation')
+    require(scene.get('declared_geometry_derivative',{}).get('geometry_report_ref')==document['refinement_report_ref']and scene['declared_geometry_derivative'].get('source_alignment_audit_ref')==document['source_alignment_audit_ref'],'Scene lacks its declared operation/audit binding')
+    originals=_index(base['component_assets'],'component_id');oldparts=_index(old['components'],'id');parts=_index(scene['components'],'id');bindings=_index(document['component_assets'],'component_id');operations=_index(report['assets'],'component_id')
+    require(set(originals)==set(oldparts)==set(parts)==set(bindings)==set(operations),'Original/derived component inventory differs')
+    changed=0
+    for identifier,binding in bindings.items():
+        native=originals[identifier];part=parts[identifier];op=operations[identifier]
+        for k in ['native_glb','original_native_glb','native_metadata']:reference(binding[k])
+        require(binding['geometry_origin']in ORIGINS and binding['original_native_glb']==native['native_glb']and binding['native_glb']==part['asset']==op['derived_asset']and binding['original_native_glb']==op['original_asset'],'Derived asset origin mapping differs')
+        input_asset=op.get('input_asset',op['original_asset']);reference(input_asset)
+        require(input_asset==oldparts[identifier]['asset'],'Operation input does not match its exact approved baseline asset')
+        approved_scale=oldparts[identifier]['native_uniform_scale']if parent is not None else native['native_uniform_scale']
+        require(binding['native_metadata']==native['native_metadata']==part['native_metadata']and binding['native_uniform_scale']==approved_scale==part['native_uniform_scale'],'Native inference metadata/scale was silently changed')
+        require(op['geometry_origin']==binding['geometry_origin']and isinstance(op['operations'],list)and len(op['operations'])<=8,'Declared geometry operation kind differs')
+        if binding['geometry_origin']=='unchanged_SAM_3D_inference':require(binding['native_glb']==binding['original_native_glb']and op['operations']==[],'Unchanged native asset was replaced')
+        elif binding['geometry_origin']=='inherited_approved_geometry_derivative':
+            require(parent is not None and binding['native_glb']==input_asset and op['operations']==[] and any(c['component_id']==identifier and c['native_glb']==input_asset for c in parent['component_assets']),'Inherited derivative is not the exact approved parent asset')
+        else:require(binding['native_glb']!=binding['original_native_glb']and op['operations'],'Derived asset needs explicit operations');changed+=1
+        for operation in op['operations']:
+            require(operation.get('kind')in {'affine_positions','indexed_triangle_subset','observed_surface_texture_projection'},'Unsupported geometry operation')
+            if operation['kind']=='affine_positions':matrix(operation['matrix'])
+            elif operation['kind']=='indexed_triangle_subset':
+                reference(operation['original_face_indices'])
+                if operation.get('original_vertex_indices'):reference(operation['original_vertex_indices'])
+            else:reference(operation['projection_report_ref'])
+        oldrows=_index(oldparts[identifier]['poses'],'source_sample_index');rows=_index(part['poses'],'source_sample_index')
+        require(set(rows)==set(oldrows),'Derivative changed source samples')
+        for index,row in rows.items():
+            require(row['timestamp_s']==oldrows[index]['timestamp_s'],'Derivative source PTS changed')
+            if oldrows[index]['status']=='unknown':require(row['status']=='unknown'and row['camera_from_native_mesh']is None,'Derivative filled an original unknown')
+            if row['status']=='unknown':require(row['camera_from_native_mesh']is None,'Unknown geometry pose is visible')
+            else:matrix(row['camera_from_native_mesh'])
+    require(changed>0 or report.get('kinematic_refinement')is True,'Derivative declares no changed geometry or mechanism')
+    joints=scene.get('mechanics',{}).get('joints',[]);require(document['joints']==[project_joint(j)for j in joints],'Derived joint program differs from scene')
+    require(document['removable_relationships']==base['removable_relationships']and document['unresolved_connections']==base['unresolved_connections'],'Semantic relationships were silently rewritten')
+    for joint in joints:
+        require(joint['type']=='revolute'and joint['status']=='estimated'and joint['parent_id']in parts and joint['child_id']in parts,'Unsupported derived persistent joint')
+        a,b=matrix(joint['parent_from_joint']),matrix(joint['joint_from_child_zero']);axis=joint['axis'];require(len(axis)==3 and all(finite(v)for v in axis)and abs(sum(v*v for v in axis)-1)<1e-7,'Derived joint axis is not unit length')
+        parents=_index(parts[joint['parent_id']]['poses'],'source_sample_index');children=_index(parts[joint['child_id']]['poses'],'source_sample_index');samples=_index(joint['samples'],'source_sample_index');require(set(samples)==set(parents)==set(children),'Derived joint clocks differ')
+        for index,q in samples.items():
+            p,c=parents[index],children[index];require(q['timestamp_s']==p['timestamp_s']==c['timestamp_s'],'Derived joint PTS differs')
+            if q['status']=='unknown':require(q['q_rad']is None and c['camera_from_native_mesh']is None,'Unknown joint child remained visible');continue
+            require(p['status']==c['status']=='estimated'and finite(q['q_rad']),'Unsupported derived joint input')
+            expected=multiply(multiply(multiply(p['camera_from_native_mesh'],a),rotation(axis,q['q_rad'])),b)
+            require(max(abs(expected[i][j]-c['camera_from_native_mesh'][i][j])for i in range(4)for j in range(4))<1e-8,'Derived child does not follow its fixed joint')
+    attachments=document.get('temporary_attachments',[])
+    require(attachments==scene.get('temporary_attachments',[]) and isinstance(attachments,list) and len(attachments)<=32,'Temporary attachment projection differs')
+    attached=set()
+    for connection in attachments:
+        pid,cid=connection['parent_id'],connection['child_id'];indices=connection['source_sample_indices']
+        require(pid in parts and cid in parts and pid!=cid and cid not in attached and cid not in {j['child_id']for j in joints} and connection['physical_contact_verified']is False,'Invalid temporary estimated attachment')
+        attached.add(cid);transform=matrix(connection['parent_from_child'])
+        require(isinstance(indices,list) and 2<=len(indices)<=20000 and all(type(i)is int for i in indices) and indices==sorted(set(indices)),'Bounded exact temporary source indices required')
+        parents=_index(parts[pid]['poses'],'source_sample_index');children=_index(parts[cid]['poses'],'source_sample_index')
+        for index in indices:
+            p,c=parents.get(index),children.get(index)
+            require(p and c and p['camera_from_native_mesh'] is not None and c['camera_from_native_mesh'] is not None,'Temporary attachment filled an unsupported source pose')
+            expected=multiply(p['camera_from_native_mesh'],transform)
+            require(max(abs(expected[i][j]-c['camera_from_native_mesh'][i][j])for i in range(4)for j in range(4))<1e-7,'Temporary child does not follow the saved parent-relative frame')
+    graph={j['child_id']:j['parent_id']for j in [*joints,*attachments]}
+    for child in graph:
+        visited=set();node=child
+        while node in graph:
+            require(node not in visited,'Cyclic temporary attachment graph')
+            visited.add(node);node=graph[node]
+    require(document.get('visual_review_refs')==audit.get('visual_review_refs')and isinstance(document['visual_review_refs'],list)and 1<=len(document['visual_review_refs'])<=6,'Source/render visual review lineage required')
+    for pointer in document['visual_review_refs']:
+        review=read(pointer);require(review.get('format')=='interaction-twin-assembly-image-critic-review'and review.get('physical_accuracy_verified')is False and review.get('automatic_approval')is False,'Unknown visual comparison receipt')
+        receipt=read(review['receipt'],2*1024*1024);read(review['model_result']);require(receipt.get('status')=='complete_accounted'and receipt.get('model')=='muse-spark-1.3','Visual comparison was not an actual accounted model result')
+    nonrigid=None
+    if document.get('nonrigid_observations_ref'):
+        import nonrigid_observations_v1
+        sidecar=read(document['nonrigid_observations_ref']);nonrigid=nonrigid_observations_v1.validate(sidecar,read_bytes)
+        require(sidecar['evidence_program']==document['evidence_program']and all(document['source'].get(k)==v for k,v in sidecar['source'].items()),'Nonrigid observations belong to another recording')
+    appearance=None
+    if document.get('source_appearance_states_ref'):
+        import source_appearance_states_v1 as A
+        sidecar=read(document['source_appearance_states_ref'],A.MAX_BYTES);appearance=A.validate(sidecar,read_bytes)
+        previous=appearance['previous_derived_assembly']
+        require('source_appearance_states_ref'not in previous and previous=={k:v for k,v in document.items()if k!='source_appearance_states_ref'},'Source appearance changed approved geometry, scene or semantic descriptor')
+        require(sidecar['scene_ref']==document['scene_ref']and sidecar['evidence_program']==document['evidence_program']and sidecar['source']==document['source'],'Source appearance belongs to another derived scene')
+    return {'document':document,'base':base,'baseline_scene':old,'scene':scene,'geometry_report':report,'source_audit':audit,'parent_derived_assembly':parent,'nonrigid_observations':nonrigid,'source_appearance_states':appearance}

@@ -1,0 +1,89 @@
+{
+  "format": "interaction-twin-marketing-brand",
+  "version": 2,
+  "style_id": "cobalt-motion-v2",
+  "style_name": "Cobalt Motion",
+  "product_name": "Interaction Twin",
+  "slogan": "Show it once. Keep how it works.",
+  "logo_path": "showcase/brand/v2/mark.svg",
+  "palette": {
+    "background": "#f7f8fb",
+    "surface": "#ffffff",
+    "ink": "#151923",
+    "muted": "#626b7b",
+    "accent": "#3766ed",
+    "line": "#dfe3eb",
+    "soft_accent": "#eef2ff"
+  },
+  "type": {
+    "family": "Arial",
+    "headline_weight": "bold",
+    "body_weight": "regular",
+    "headline_max_words": 8,
+    "caption_max_characters": 90,
+    "text_style": "Sentence case; direct, concrete and short."
+  },
+  "layout": {
+    "safe_margin_fraction": 0.08,
+    "footage_fit": "contain",
+    "reframe_policy": "Preserve the full interaction unless an explicitly labelled editorial crop is selected.",
+    "one_message_per_scene": true
+  },
+  "motion": {
+    "intro_s": 2.0,
+    "outro_s": 2.0,
+    "transition_s": 0.25,
+    "allowed_transitions": [
+      "crossfade",
+      "cobalt_wipe",
+      "cut"
+    ],
+    "logo_motion": "Subtle fade and scale from 94% to 100%.",
+    "scene_rhythm": "Show actual product evidence within three seconds; hold readable proof for three to five seconds.",
+    "avoid": [
+      "flashing",
+      "glitch effects",
+      "spinning type",
+      "busy particles",
+      "constant zooms"
+    ]
+  },
+  "audio": {
+    "direction": "Instrumental minimal electronic pulse, clean and understated; no vocals.",
+    "target_lufs": -22,
+    "true_peak_db": -2,
+    "fade_in_s": 0.6,
+    "fade_out_s": 1.2,
+    "default_music": "original_project_instrumental",
+    "pixabay_policy": "Use locally imported audio with saved track page, contributor and licence acknowledgement. Preserve any Content ID/certificate information. Never claim a guaranteed claim-free licence."
+  },
+  "narrative": [
+    "Show the real interaction.",
+    "Reveal segmentation or separate native parts.",
+    "Explain the connected object program.",
+    "Show the library, agent handoff or robot task."
+  ],
+  "copy": {
+    "voice": "Precise, curious, professional. Show the capability before describing the architecture.",
+    "x_max_characters": 280,
+    "linkedin_max_characters": 1500,
+    "cta": "Explore the object library.",
+    "avoid": [
+      "guaranteed",
+      "perfect reconstruction",
+      "fully autonomous robot",
+      "physics-ready",
+      "first ever",
+      "trained robot policy"
+    ]
+  },
+  "evidence_rules": [
+    "Only use declared, hash-verified project media.",
+    "Do not describe an existing example as a new release unless its release status supports that statement.",
+    "Label authored robot staging and position cues; do not claim physical grasp, contact or robot learning.",
+    "SAM masks are observed model outputs; generated geometry and motion remain estimates.",
+    "Saved preferences guide editing, never change the underlying evidence or approval status.",
+    "Approval enables a downloadable marketing package, not automatic social publication."
+  ],
+  "logo_raster_path": "showcase/brand/v2/mark-1024.png"
+}

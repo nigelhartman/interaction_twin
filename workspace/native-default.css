@@ -1,0 +1,8 @@
+.sam3d-workspace .scene-box>#scene,.sam3d-workspace .scene-box>.scene-empty,.sam3d-workspace .scene-box>.scene-error,.sam3d-workspace .scene-box>.scene-hint,.sam3d-workspace .scene-panel>.scene-options,.sam3d-workspace .scene-panel>.panel-head>.segmented{display:none!important}
+#workspace-native-model{position:absolute;inset:0;width:100%;height:100%;border:0;background:#edf2eb}
+#workspace-native-model[hidden],#workspace-native-status[hidden]{display:none!important}
+#workspace-native-status{position:absolute;inset:0;display:grid;place-content:center;padding:28px;text-align:center;font-size:13px;line-height:1.7;color:#b6cebf;background:#111e22}
+.native-workspace-foot{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:12px 15px;border-top:1px solid #2b3b46;font-size:11px}
+.native-workspace-foot label{display:flex;gap:8px;align-items:center;min-width:0}.native-workspace-foot select{max-width:280px;min-height:34px;min-width:0}.native-workspace-foot a{white-space:nowrap;color:#a4e4c3}
+.native-workspace-note{font-size:10px;line-height:1.6;margin:0;padding:0 15px 12px;color:#92a89d}.native-workspace-advanced{padding:0 15px 12px;font-size:10px;color:#8da296}.native-workspace-advanced summary{cursor:pointer}.native-workspace-advanced a{display:block;padding-top:9px;color:#a9bcb0}
+@media(max-width:760px){.native-workspace-foot{align-items:flex-start;flex-direction:column}.native-workspace-foot label{width:100%}.native-workspace-foot select{flex:1;max-width:100%}}

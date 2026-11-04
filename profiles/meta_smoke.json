@@ -1,0 +1,21 @@
+{
+  "id": "meta_smoke",
+  "title": "Meta reasoning smoke \u00b7 coarse preview",
+  "mode": "local_inference",
+  "fps": 0.25,
+  "max_dimension": 960,
+  "max_frames": 20,
+  "max_duration_s": 70,
+  "reconstruct_limit": 3,
+  "mesh_resolution": 48,
+  "pose_search_width": 96,
+  "pose_refine_count": 1,
+  "pose_max_evaluations": 30,
+  "phase_timeout_s": 900,
+  "reasoning_timeout_s": 300,
+  "disclosure": "Sends sampled frames to Meta Model API for discovery, visual audit and procedure reasoning. SAM 2.1 Tiny segmentation runs on local Apple MPS. TripoSR (non-Meta) reconstruction and CoTracker3 motion remain local. Every paid request uses the shared $100 estimated-cost guard; dashboard credits and other tools are outside this local ledger. No manual geometry, poses or silent fallback.",
+  "reasoning_provider": "meta_api",
+  "reasoning_model": "muse-spark-1.3",
+  "max_output_tokens": 16000,
+  "segmentation_provider": "sam2_mps"
+}

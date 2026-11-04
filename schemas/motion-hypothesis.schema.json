@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "interaction-twin-source-conditioned-motion-hypotheses-v1",
+  "title": "Separate source-conditioned estimated motion",
+  "type": "object",
+  "required": ["format", "version", "twin_id", "source_ref", "evidence_program_ref", "baseline_scene_ref", "flow_proofs_ref", "policy", "camera", "groups", "source_unknowns_preserved", "native_geometry_modified", "physical_accuracy_verified", "simulation_ready", "new_API_calls", "new_GPU_calls"],
+  "properties": {
+    "format": {"const": "interaction-twin-source-conditioned-motion-hypotheses"},
+    "version": {"const": 1},
+    "twin_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,159}$"},
+    "source_ref": {"$ref": "#/$defs/reference"},
+    "evidence_program_ref": {"$ref": "#/$defs/reference"},
+    "baseline_scene_ref": {"$ref": "#/$defs/reference"},
+    "flow_proofs_ref": {"$ref": "#/$defs/reference"},
+    "parent_motion_hypothesis_ref": {"$ref": "#/$defs/reference"},
+    "selection_report_ref": {"$ref": "#/$defs/reference"},
+    "source_SAM_temporal_observations_ref": {"$ref": "#/$defs/reference"},
+    "source_unknowns_preserved": {"const": true},
+    "native_geometry_modified": {"const": false},
+    "physical_accuracy_verified": {"const": false},
+    "simulation_ready": {"const": false},
+    "new_API_calls": {"const": 0},
+    "new_GPU_calls": {"const": 0},
+    "policy": {
+      "type": "object",
+      "required": ["maximum_anchor_gap_s", "maximum_viewer_interpolation_gap_s", "maximum_one_sided_distance_s", "minimum_PnP_inliers", "original_unknown_poses_or_barriers_changed", "physical_accuracy_verified"],
+      "properties": {
+        "maximum_anchor_gap_s": {"type": "number", "exclusiveMinimum": 0, "maximum": 4},
+        "maximum_viewer_interpolation_gap_s": {"type": "number", "exclusiveMinimum": 0, "maximum": 0.22},
+        "maximum_one_sided_distance_s": {"type": "number", "exclusiveMinimum": 0, "maximum": 1},
+        "minimum_PnP_inliers": {"type": "integer", "minimum": 12},
+        "original_unknown_poses_or_barriers_changed": {"const": false},
+        "physical_accuracy_verified": {"const": false}
+      }
+    },
+    "camera": {
+      "type": "object", "required": ["K", "width", "height"],
+      "properties": {
+        "K": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "number"}}},
+        "width": {"type": "integer", "minimum": 16, "maximum": 1280},
+        "height": {"type": "integer", "minimum": 16, "maximum": 1280}
+      }
+    },
+    "groups": {"type": "array", "maxItems": 32, "items": {"$ref": "#/$defs/group"}}
+  },
+  "$defs": {
+    "reference": {
+      "type": "object", "additionalProperties": false, "required": ["path", "sha256", "bytes"],
+      "properties": {
+        "path": {"type": "string", "pattern": "^data/[A-Za-z0-9_./-]+$", "maxLength": 1024},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "bytes": {"type": "integer", "minimum": 1, "maximum": 268435456}
+      }
+    },
+    "matrix": {"type": "array", "minItems": 4, "maxItems": 4, "items": {"type": "array", "minItems": 4, "maxItems": 4, "items": {"type": "number"}}},
+    "anchor": {
+      "type": "object", "required": ["component_id", "source_sample_index", "timestamp_s", "camera_from_native_mesh", "source_RGB_ref"],
+      "properties": {
+        "component_id": {"type": "string", "minLength": 1, "maxLength": 160},
+        "source_sample_index": {"type": "integer", "minimum": 1},
+        "timestamp_s": {"type": "number", "minimum": 0},
+        "camera_from_native_mesh": {"$ref": "#/$defs/matrix"},
+        "source_RGB_ref": {"$ref": "#/$defs/reference"},
+        "source_mask_ref": {"anyOf": [{"$ref": "#/$defs/reference"}, {"type": "null"}]}
+      }
+    },
+    "prediction": {
+      "type": "object", "required": ["timestamp_s", "source_sample_index", "source_RGB", "status", "component_poses", "joint_states", "flow_proof_id", "original_unknown_row_preserved"],
+      "properties": {
+        "timestamp_s": {"type": "number", "minimum": 0},
+        "source_sample_index": {"type": ["integer", "null"], "minimum": 1},
+        "source_RGB": {"type": "object", "required": ["timestamp_s", "decoded_gray_sha256", "tracking_width", "tracking_height"]},
+        "status": {"enum": ["estimated", "withheld"]},
+        "component_poses": {"type": "object", "maxProperties": 32, "additionalProperties": {"$ref": "#/$defs/matrix"}},
+        "joint_states": {"type": "array", "maxItems": 31},
+        "flow_proof_id": {"type": "string", "minLength": 1, "maxLength": 256},
+        "original_unknown_row_preserved": {"const": true},
+        "support": {"enum": ["past_and_future_RGB_agree", "one_sided_near_anchor_RGB", "source_SAM_mask_conditioned_pose"]},
+        "view_segment_id": {"type": "string", "minLength": 1, "maxLength": 256},
+        "evidence_kind": {"const": "conditional_model_mask_fit"}
+      },
+      "allOf": [
+        {"if": {"properties": {"status": {"const": "estimated"}}}, "then": {"required": ["support", "view_segment_id"], "properties": {"component_poses": {"minProperties": 1}}}},
+        {"if": {"properties": {"status": {"const": "withheld"}}}, "then": {"properties": {"component_poses": {"maxProperties": 0}, "joint_states": {"maxItems": 0}}}}
+      ]
+    },
+    "episode": {
+      "type": "object", "required": ["id", "anchor_before", "anchor_after", "original_unknown_indices", "predictions"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "maxLength": 256},
+        "anchor_before": {"$ref": "#/$defs/anchor"},
+        "anchor_after": {"$ref": "#/$defs/anchor"},
+        "driver_before": {"$ref": "#/$defs/anchor"},
+        "driver_after": {"$ref": "#/$defs/anchor"},
+        "original_unknown_indices": {"type": "array", "maxItems": 1024, "items": {"type": "integer", "minimum": 1}},
+        "view_change_break": {"type": "boolean"},
+        "predictions": {"type": "array", "maxItems": 256, "items": {"$ref": "#/$defs/prediction"}}
+      }
+    },
+    "group": {
+      "type": "object", "required": ["root_component_id", "component_ids", "episodes"],
+      "properties": {
+        "root_component_id": {"type": "string", "minLength": 1, "maxLength": 160},
+        "component_ids": {"type": "array", "minItems": 1, "maxItems": 32, "uniqueItems": true, "items": {"type": "string"}},
+        "episodes": {"type": "array", "maxItems": 256, "items": {"$ref": "#/$defs/episode"}}
+      }
+    }
+  }
+}

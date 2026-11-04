@@ -1,0 +1,156 @@
+{
+  "type": "object",
+  "properties": {
+    "summary": {
+      "type": "string"
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "event_type": {
+            "type": "string",
+            "enum": [
+              "cover_open_visible",
+              "cover_motion",
+              "outward_handling",
+              "table_placement",
+              "pickup",
+              "inward_handling",
+              "occlusion",
+              "other"
+            ]
+          },
+          "start_s": {
+            "type": "number"
+          },
+          "end_s": {
+            "type": "number"
+          },
+          "participant_track_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "description": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "proposed",
+              "uncertain"
+            ]
+          },
+          "evidence_samples": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "event_type",
+          "start_s",
+          "end_s",
+          "participant_track_ids",
+          "description",
+          "status",
+          "evidence_samples",
+          "limitations"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "identity_links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "from_track_id": {
+            "type": "string"
+          },
+          "to_track_id": {
+            "type": "string"
+          },
+          "relation": {
+            "type": "string",
+            "enum": [
+              "possibly_same_entity",
+              "cannot_determine"
+            ]
+          },
+          "rationale": {
+            "type": "string"
+          },
+          "evidence_samples": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "required": [
+          "from_track_id",
+          "to_track_id",
+          "relation",
+          "rationale",
+          "evidence_samples"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "mask_concerns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "track_id": {
+            "type": "string"
+          },
+          "evidence_samples": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "track_id",
+          "evidence_samples",
+          "description"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "uncertainties": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "summary",
+    "events",
+    "identity_links",
+    "mask_concerns",
+    "uncertainties"
+  ],
+  "additionalProperties": false
+}

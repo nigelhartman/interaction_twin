@@ -1,0 +1,17 @@
+{
+  "id": "local_smoke",
+  "title": "Local smoke test \u00b7 fresh coarse inference",
+  "mode": "local_inference",
+  "fps": 0.25,
+  "max_dimension": 960,
+  "max_frames": 20,
+  "max_duration_s": 70,
+  "reconstruct_limit": 3,
+  "mesh_resolution": 48,
+  "pose_search_width": 96,
+  "pose_refine_count": 1,
+  "pose_max_evaluations": 30,
+  "phase_timeout_s": 900,
+  "reasoning_timeout_s": 300,
+  "disclosure": "Runs actual models at one sampled frame every four seconds. This tests orchestration, not dense motion quality. Reasoning is hosted OpenAI via local Codex; local inference is SAM 2.1 Tiny, TripoSR and CoTracker on MPS. Budgets up to three distinct component observations with independent failure receipts; physical assembly is not established."
+}

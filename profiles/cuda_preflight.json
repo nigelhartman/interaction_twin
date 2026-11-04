@@ -1,0 +1,6 @@
+{
+  "id": "cuda_preflight",
+  "title": "SAM 3.1 + SAM 3D readiness check",
+  "mode": "preflight",
+  "disclosure": "Checks prepared public-code adapters and local prerequisites only. Does not contact the cluster, download gated weights, inspect tokens or generate model results."
+}

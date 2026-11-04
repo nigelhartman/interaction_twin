@@ -1,0 +1,22 @@
+{
+  "id": "meta_sam31_video_low",
+  "title": "Meta SAM 3.1 video boxes + reasoning \u00b7 1 fps",
+  "mode": "local_inference",
+  "fps": 1,
+  "max_dimension": 960,
+  "max_frames": 120,
+  "max_duration_s": 120,
+  "reconstruct_limit": 3,
+  "mesh_resolution": 64,
+  "pose_search_width": 128,
+  "pose_refine_count": 2,
+  "pose_max_evaluations": 45,
+  "phase_timeout_s": 900,
+  "reasoning_timeout_s": 300,
+  "disclosure": "Sends sampled frames to Meta for Muse Spark reasoning and one SAM 3.1 video request using unchanged model-proposed box seeds. Video frames map explicitly to original source times; missing/withheld masks stay absent. TripoSR (non-Meta) reconstruction and CoTracker3 motion remain local. The shared $100 estimated-cost guard applies; this is not an account credit balance or verified physical twin.",
+  "reasoning_provider": "meta_api",
+  "reasoning_model": "muse-spark-1.3",
+  "max_output_tokens": 16000,
+  "segmentation_provider": "meta_sam31_api",
+  "segmentation_mode": "video_boxes"
+}

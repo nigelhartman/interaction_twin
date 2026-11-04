@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head><script src="admin-fetch.js"></script>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Physics Lab · Interaction Twin</title>
+  <link rel="stylesheet" href="physics-lab.css">
+  <script type="module" src="physics-lab.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to report</a>
+  <header class="topbar"><a class="brand" href="submission.html">INTERACTION TWIN <span>/ Physics Lab</span></a>
+    <nav aria-label="Project views"><a href="geometry-lab.html">Geometry</a><a href="index.html?new=1">Upload video</a><a href="simulation.html">Robot illustration</a></nav>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="hero">
+      <p class="eyebrow">SOURCE-BOUND PHYSICS PREFLIGHT</p>
+      <h1>From visual parts<br>to physical inputs.</h1>
+      <p class="intro">Inspect the real meshes, see what still needs measuring, and review a separate CPU solver check.</p>
+      <p id="load-status" class="status" role="status">Checking saved report hashes…</p>
+      <div class="hero-links"><a href="#parts">Inspect parts <span aria-hidden="true">↓</span></a><a href="#solver">Review solver test <span aria-hidden="true">↓</span></a><button id="download-report" disabled>Download audited report</button></div>
+    </section>
+    <div id="report" hidden>
+      <section class="stats" aria-label="Report inventory" id="stats"></section>
+      <section id="parts" class="section">
+        <div class="section-heading"><div><p class="eyebrow">01 · SOURCE-BACKED ASSETS</p><h2>What the meshes contain</h2></div><span class="tag">Native units · scale unknown</span></div>
+        <p class="section-intro">These are the original generated component meshes. Topology checks describe the file; they do not establish accurate cavities, wall thickness or dimensions.</p>
+        <div id="part-cards" class="cards"></div>
+        <details class="evidence-detail"><summary>Observed and inferred camera geometry</summary><p>The source-derived surface and both optional completion layers remain separate diagnostic versions. None is accepted as collision geometry.</p><div id="version-cards" class="cards"></div></details>
+      </section>
+      <section id="missing" class="section">
+        <div class="section-heading"><div><p class="eyebrow">02 · REQUIRED PHYSICAL INPUTS</p><h2>What still needs measuring</h2></div><span class="tag warn">Object trial blocked</span></div>
+        <p class="section-intro">No simulator defaults fill these fields. An image-aligned pose or a visual “attached to” relation does not establish a metric assembly or a hinge.</p>
+        <div id="requirements" class="requirements"></div>
+        <details class="evidence-detail"><summary id="all-gaps-summary">All missing-input records</summary><div id="all-gaps" class="gap-list"></div></details>
+      </section>
+      <section id="assembly" class="section assembly-section">
+        <div class="section-heading"><div><p class="eyebrow">03 · SHARED-FRAME EVIDENCE</p><h2>Can the parts share a frame?</h2></div><span class="tag">Corrected V2 · read only</span></div>
+        <p id="assembly-status" class="status" role="status">Verifying corrected assembly records…</p>
+        <div id="assembly-content"></div>
+      </section>
+      <section id="solver" class="section">
+        <div class="section-heading"><div><p class="eyebrow">04 · SEPARATE SOFTWARE CHECK</p><h2>A real CPU solver run</h2></div><span class="tag">Synthetic fixture only</span></div>
+        <p id="engine-description" class="section-intro"></p>
+        <div class="solver-alert" id="solver-outcome"></div>
+        <div class="charts"><figure><figcaption><strong>Height over time</strong><span>Saved box-center positions. Analytic free fall is shown before contact.</span></figcaption><svg id="height-chart" viewBox="0 0 800 320" role="img" aria-label="Synthetic box height over two seconds"></svg><div class="legend"><span><i class="actual"></i>CPU solver</span><span><i class="reference"></i>Free-fall reference</span></div></figure>
+          <figure><figcaption><strong>Horizontal drift over time</strong><span>The unchanged 5 mm limit remains visible. The lateral check failed.</span></figcaption><svg id="drift-chart" viewBox="0 0 800 320" role="img" aria-label="Synthetic box lateral drift versus five millimeter threshold"></svg><div class="legend"><span><i class="actual"></i>Saved lateral distance</span><span><i class="limit"></i>5 mm limit</span></div></figure></div>
+        <div id="fixture-checks" class="check-grid"></div>
+        <details class="evidence-detail"><summary>Test definition, numerical correction and original receipt</summary><div id="fixture-detail"></div><button id="download-fixture">Download unchanged solver receipt</button></details>
+      </section>
+      <section class="section next-section">
+        <p class="eyebrow">05 · NEXT IMPROVEMENT · EXISTING VIDEO</p><h2 id="next-title"></h2><p id="next-benefit" class="section-intro"></p>
+        <div id="priorities" class="priorities"></div><a class="primary-link" href="geometry-lab.html">Inspect video reconstruction <span aria-hidden="true">↗</span></a>
+      </section>
+      <details class="evidence-detail integrity"><summary>Source identities and claim boundaries</summary><div id="integrity"></div></details>
+    </div>
+  </main>
+  <footer><span>Read-only saved analysis · no model or simulation starts from this page.</span><a href="submission.html">Demo Desk ↗</a></footer>
+</body>
+</html>

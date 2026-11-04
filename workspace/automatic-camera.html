@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><script src="admin-fetch.js"></script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f6f7f0"><title>Camera from Video · Interaction Twin</title><link rel="stylesheet" href="automatic-camera.css"></head>
+<body class="automatic-camera-page"><header><a href="../showcase/index.html">↔ Interaction Twin</a><nav><a href="geometry-lab.html">Reconstruction Studio ↗</a><a href="index.html?new=1">Upload video +</a></nav></header><main><section class="ac-page-intro"><div class="ac-eyebrow">ORDINARY VIDEO, EXPLICIT UNCERTAINTY</div><h1>Your video has clues.<br><em>Recover the camera.</em></h1><p>No special target or new recording is required. We compare camera explanations of existing footage, then preserve the uncertainty when the pixels do not identify one stable answer.</p></section><section id="automatic-camera"></section></main><script type="module">
+import {createAutomaticCameraPanel,AUTOMATIC_CAMERA_RECORDS} from './automatic-camera.js';
+const panel=createAutomaticCameraPanel(document.getElementById('automatic-camera'));
+const params=new URLSearchParams(location.search);
+if(['case','track','source'].some(key=>params.has(key))){
+ panel.setBinding({caseId:params.get('case'),trackId:params.get('track'),sourceSha256:params.get('source')});
+}else{
+ const row=AUTOMATIC_CAMERA_RECORDS[0];
+ if(row)panel.setBinding({caseId:row.case_id,trackId:row.track_id,sourceSha256:row.source_sha256});
+}
+window.addEventListener('pagehide',()=>panel.dispose(),{once:true});
+</script></body></html>

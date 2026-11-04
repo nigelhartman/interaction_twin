@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="From a captured interaction to reusable parts, connections and evidence. Watch the 45-second Interaction Twin film.">
+  <title>The film · Interaction Twin</title>
+  <link rel="icon" href="brand/v2/mark.svg" type="image/svg+xml">
+  <link rel="icon" href="brand/v2/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="brand/v2/favicon-180.png" sizes="180x180">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cobalt.css">
+  <link rel="stylesheet" href="presentation-polish.css">
+</head>
+<body class="film-page">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="brand/v2/mark.svg" width="30" height="30" alt="">Interaction Twin</a>
+    <nav aria-label="Main navigation"><a href="index.html">Project</a><a href="library.html">Library</a><a href="robotics-lab.html">Robotics lab</a><a href="agents.html">For agents</a></nav>
+  </header>
+  <main id="main" class="film-main">
+    <section class="film-intro" aria-labelledby="film-title">
+      <div><div class="eyebrow">THE FILM · 45 SECONDS</div><h1 id="film-title">Show it once.<br><em>Keep how it works.</em></h1></div>
+      <div><p>From a real demonstration to 3D parts, connected motion, a robot task preview and a source-linked agent workflow.</p><a class="film-collection-link" href="trailers.html">Explore six alternate film directions <span aria-hidden="true">↗</span></a></div>
+    </section>
+    <figure class="film-player" aria-label="Interaction Twin 45-second project film">
+      <video id="project-film" controls playsinline preload="metadata" poster="media/flagship-20261104-v1/cut-v2/poster.jpg">
+        <source src="media/flagship-20261104-v1/cut-v2/interaction-twin-flagship-45s.mp4" type="video/mp4">
+        <track kind="captions" srclang="en" label="English" src="media/flagship-20261104-v1/cut-v2/captions.vtt">
+        Your browser cannot play this video. <a href="media/flagship-20261104-v1/cut-v2/interaction-twin-flagship-45s.mp4">Download the film.</a>
+      </video>
+    </figure>
+    <nav class="film-chapters" aria-label="Film chapters">
+      <button type="button" data-film-time="0" aria-controls="project-film" aria-current="true"><span>00:00</span> Pipeline</button>
+      <button type="button" data-film-time="3" aria-controls="project-film"><span>00:03</span> Segment</button>
+      <button type="button" data-film-time="6" aria-controls="project-film"><span>00:06</span> Shape</button>
+      <button type="button" data-film-time="9" aria-controls="project-film"><span>00:09</span> Connect</button>
+      <button type="button" data-film-time="12" aria-controls="project-film"><span>00:12</span> Robot task</button>
+      <button type="button" data-film-time="27" aria-controls="project-film"><span>00:27</span> Reuse</button>
+      <button type="button" data-film-time="35" aria-controls="project-film"><span>00:35</span> Agent draft</button>
+      <button type="button" data-film-time="39" aria-controls="project-film"><span>00:39</span> Library</button>
+    </nav>
+    <div class="film-actions">
+      <a class="button primary" href="library.html">Explore the twin library <span aria-hidden="true">↗</span></a>
+      <nav class="film-secondary-actions" aria-label="More about the film"><a href="walkthrough.html">Full walkthrough · 3 min →</a><a href="media/flagship-20261104-v1/cut-v2/interaction-twin-flagship-45s.mp4" download>Download the film ↓</a></nav>
+    </div>
+    <details class="film-footage">
+      <summary>About the footage</summary>
+      <ul>
+        <li>Actual owner video, saved SAM 3.1 masks and SAM 3D components. Connected replay uses estimated joints and documented geometry refinements; original assets remain available.</li>
+        <li>The phone inspection is a partial source-visible surface with estimated depth. It retains observed RGB and mask support, without completing hidden geometry.</li>
+        <li>The robot completes an authored kinematic preview: place and open the case, release both earbuds onto their targets, then close it. Grasp forces and physical contact are unverified.</li>
+        <li>The agent sequence explains an actual saved MCP task draft across phone and charger recordings. Owner-described USB-C interfaces form candidates; insertion, electrical fit and charging are not executed or verified. Original music and local synthetic narration.</li>
+      </ul>
+    </details>
+    <p class="film-credit">Designed and built by <a href="index.html#creator">Nigel Hartman</a>. Original procedural instrumental music.</p>
+  </main>
+  <script src="film-chapters.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+"""Automatic closed-panel recovery from source masks and declared source states.
+
+The existing native assets and measured seam anchors are retained. A source-
+observed closed slab can drive an occluded parent through the same fixed joint.
+This is camera-relative kinematic estimation, never observed hidden geometry,
+contact validation, a physical joint stop, or an inferred independent base pose.
+"""
+from __future__ import annotations
+
+import math
+import cv2
+import numpy as np
+from scipy.spatial.transform import Rotation
+
+import sam3d_mechanisms as M
+import sam3d_common_scene as S
+
+POLICY = {
+    'minimum_template_inliers': 12,
+    'minimum_template_inlier_fraction': .40,
+    'minimum_template_foreground_coverage': .15,
+    'maximum_template_reprojection_px': 3.,
+    'minimum_convex_union_iou': .72,
+    'minimum_convex_visible_panel_iou': .72,
+    'maximum_quad_reprojection_extent_fraction': .055,
+    'minimum_exterior_facing_cosine_magnitude': .05,
+    'maximum_closed_thickness_major_extent_fraction': .12,
+    'maximum_planar_normal_abs_dot_error': .025,
+    'closure_grid_count': 721,
+    'new_api_calls': 0,
+    'new_gpu_calls': 0,
+    'physical_accuracy_verified': False,
+}
+
+
+def require(value, message):
+    if not value:
+        raise ValueError(message)
+
+
+def closure_geometry(parent_vertices, child_vertices, joint):
+    """Select a thin, overlapping, opposed-face slab closure automatically.
+
+    The smaller-footprint of the two parallel configurations distinguishes a
+    folded laptop from an unfolded flat pair. Full original vertices are used;
+    neither the anchors nor native scales are changed by this search.
+    """
+    parent = np.asarray(parent_vertices, float)
+    child = np.asarray(child_vertices, float)
+    require(min(len(parent), len(child)) >= 4 and np.isfinite(parent).all() and np.isfinite(child).all(), 'Finite native slabs required')
+    basis = np.linalg.svd(parent-parent.mean(0), full_matrices=False)[2]
+    parent_projected = parent @ basis.T
+    parent_extent = np.ptp(parent_projected, axis=0)
+    require(parent_extent[-1] < .15*parent_extent[0], 'Parent is not approximately slab-like')
+    child_basis = np.linalg.svd(child-child.mean(0), full_matrices=False)[2]
+    require(np.ptp(child @ child_basis.T, axis=0)[-1] < .15*np.ptp(child @ child_basis.T, axis=0)[0], 'Child is not approximately slab-like')
+    rows = []
+    # Extremes under a fixed joint rotation can be evaluated on exact convex
+    # hull vertices without changing the underlying asset or any native vertex.
+    from scipy.spatial import ConvexHull
+    child_hull = child[ConvexHull(child).vertices]
+    parent_low, parent_high = parent_projected.min(0), parent_projected.max(0)
+    for angle in np.linspace(-math.pi, math.pi, POLICY['closure_grid_count']):
+        relative = M.forward(np.eye(4), joint['parent_from_joint'], joint['axis'], float(angle), joint['joint_from_child_zero'])
+        transformed = child_hull @ relative[:3, :3].T + relative[:3, 3]
+        projected = transformed @ basis.T
+        low = np.minimum(parent_low, projected.min(0)); high = np.maximum(parent_high, projected.max(0))
+        extent = high-low
+        rotation = M.rotation_pose(relative)[0]
+        parallel_error = 1-abs(float(basis[-1] @ (rotation @ child_basis[-1])))
+        # Folding must place both panel footprints on the same side of the seam.
+        footprint_ratio = float(np.prod(extent[:2])/np.prod(parent_extent[:2]))
+        rows.append({'angle_rad': float(angle), 'thickness_native': float(extent[-1]),
+                     'footprint_ratio': footprint_ratio, 'parallel_error': parallel_error,
+                     'relative_matrix': relative.tolist(),
+                     'objective': float(extent[-1]/parent_extent[0]+.10*max(0., footprint_ratio-1.))})
+    eligible = [r for r in rows if r['parallel_error'] <= POLICY['maximum_planar_normal_abs_dot_error'] and r['footprint_ratio'] <= 1.35]
+    require(eligible, 'No folded, nearly parallel panel configuration found')
+    chosen = min(eligible, key=lambda row: (row['objective'], abs(row['angle_rad'])))
+    require(chosen['thickness_native']/parent_extent[0] < POLICY['maximum_closed_thickness_major_extent_fraction'], 'No sufficiently thin closed configuration')
+    return {**chosen, 'method': 'exact_native_convex_extrema_thin_overlapping_parallel_panel_search',
+            'parent_major_extent_native': float(parent_extent[0]), 'grid_count': len(rows),
+            'joint_anchors_unchanged': True, 'native_geometry_unchanged': True,
+            'physical_closed_angle_verified': False, 'contact_and_interpenetration_verified': False}
+
+
+def template_features(rgb, mask):
+    gray = cv2.cvtColor(np.asarray(rgb), cv2.COLOR_RGB2GRAY)
+    inside = cv2.erode(np.asarray(mask, np.uint8)*255, np.ones((5,5), np.uint8))
+    keypoints, descriptors = cv2.SIFT_create(nfeatures=1800).detectAndCompute(gray, inside)
+    return {'keypoints': keypoints, 'descriptors': descriptors, 'mask': inside > 0}
+
+
+def template_support(reference, target, same_frame=False):
+    """Require spatially distributed foreground consensus, not a state guess."""
+    if same_frame:
+        return {'accepted': True, 'method': 'direct_accounted_Muse_source_state', 'inliers': None, 'inlier_fraction': None, 'foreground_coverage': None}
+    if reference['descriptors'] is None or target['descriptors'] is None:
+        return {'accepted': False, 'reason': 'insufficient_foreground_features'}
+    matches = [a for pair in cv2.BFMatcher().knnMatch(reference['descriptors'], target['descriptors'], k=2)
+               if len(pair) == 2 for a,b in [pair] if a.distance < .70*b.distance]
+    if len(matches) < POLICY['minimum_template_inliers']:
+        return {'accepted': False, 'reason': 'insufficient_foreground_matches', 'matches': len(matches)}
+    first = np.float32([reference['keypoints'][m.queryIdx].pt for m in matches])
+    second = np.float32([target['keypoints'][m.trainIdx].pt for m in matches])
+    homography, kept = cv2.findHomography(first, second, cv2.RANSAC, POLICY['maximum_template_reprojection_px'], maxIters=1500)
+    if homography is None or kept is None:
+        return {'accepted': False, 'reason': 'foreground_homography_unavailable'}
+    kept = kept.ravel() > 0
+    area = cv2.contourArea(cv2.convexHull(second[kept])) if np.count_nonzero(kept) >= 3 else 0.
+    coverage = float(area/max(1, np.count_nonzero(target['mask'])))
+    count, fraction = int(kept.sum()), float(kept.mean())
+    accepted = count >= POLICY['minimum_template_inliers'] and fraction >= POLICY['minimum_template_inlier_fraction'] and coverage >= POLICY['minimum_template_foreground_coverage']
+    return {'accepted': accepted, 'reason': None if accepted else 'weak_or_spatially_concentrated_foreground_consensus',
+            'method': 'source_SIFT_ratio_and_RANSAC_foreground_homography', 'matches': len(matches),
+            'inliers': count, 'inlier_fraction': fraction, 'foreground_coverage': coverage,
+            'homography': homography.tolist(), 'hidden_part_pixels_observed': False}
+
+
+def mask_quad(mask):
+    contours = cv2.findContours(np.asarray(mask, np.uint8), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)[0]
+    require(contours, 'Visible panel mask unavailable')
+    hull = cv2.convexHull(max(contours, key=cv2.contourArea))
+    for epsilon in [.005, .01, .015, .02, .025, .03, .04, .05, .07]:
+        quad = cv2.approxPolyDP(hull, epsilon*cv2.arcLength(hull, True), True)
+        if len(quad) == 4:
+            return quad[:,0].astype(float)
+    raise ValueError('Visible panel has no supported quadrilateral contour')
+
+
+def panel_pose(vertices, mask, camera, native_scale, prior_matrix, interior_normal, *, visible_face='exterior'):
+    """Fit a native planar panel to a SAM quadrilateral with exterior facing.
+
+    PnP uses image coordinates rather than an arbitrary scene translation. The
+    front normal is anchored by an already supported, source-visible interior.
+    The prior only resolves the two long-edge orientations; it supplies no pose.
+    """
+    require(visible_face in {'exterior','interior'}, 'An explicit source-visible panel face is required')
+    vertices = np.asarray(vertices, float); center = vertices.mean(0)
+    basis = np.linalg.svd(vertices-center, full_matrices=False)[2]
+    coordinates = (vertices-center) @ basis.T
+    low, high = np.percentile(coordinates, [.3,99.7], axis=0)
+    corners = np.array([[low[0],low[1],0.], [high[0],low[1],0.], [high[0],high[1],0.], [low[0],high[1],0.]]) @ basis+center
+    quad = mask_quad(mask); k = np.asarray(camera['K'], float)
+    prior_rotation = M.rotation_pose(prior_matrix)[0]
+    rows = []
+    for reverse in [False, True]:
+        for shift in range(4):
+            pixels = np.ascontiguousarray(np.roll(quad[::-1] if reverse else quad, shift, axis=0), np.float64)
+            try:
+                _, rotations, translations, errors = cv2.solvePnPGeneric(np.ascontiguousarray(corners*native_scale, np.float64), pixels, k, None, flags=cv2.SOLVEPNP_IPPE)
+            except cv2.error:
+                continue
+            for rvec,tvec,error in zip(rotations,translations,errors):
+                rotation = cv2.Rodrigues(rvec)[0]; translation = tvec.ravel()
+                matrix = np.eye(4); matrix[:3,:3] = rotation*native_scale; matrix[:3,3] = translation
+                if np.min((vertices @ matrix[:3,:3].T+translation)[:,2]) <= 1e-5:
+                    continue
+                cosine = float((rotation @ interior_normal) @ (-translation)/np.linalg.norm(translation))
+                if ((visible_face=='exterior' and cosine >= -POLICY['minimum_exterior_facing_cosine_magnitude']) or
+                        (visible_face=='interior' and cosine <= POLICY['minimum_exterior_facing_cosine_magnitude'])):
+                    continue
+                reprojection = float(error[0]); distance = float(Rotation.from_matrix(rotation @ prior_rotation.T).magnitude())
+                rows.append({'camera_from_native_mesh': matrix.tolist(), 'quad_reprojection_px': reprojection,
+                             'interior_facing_cosine': cosine, 'prior_orientation_distance_rad': distance,
+                             'objective': reprojection+2*distance})
+    require(rows, 'No positive-depth source-facing panel solution')
+    chosen = min(rows, key=lambda row: row['objective'])
+    require(chosen['quad_reprojection_px'] <= POLICY['maximum_quad_reprojection_extent_fraction']*min(S.mask_shape(mask)['extent']), 'Quadrilateral PnP residual is too large')
+    return {**chosen, 'source_quad_pixels': quad.tolist(), 'candidate_count': len(rows),
+            'method': 'SAM_quadrilateral_native_PCA_plane_IPPE_with_source_facing_gate', 'visible_face':visible_face,
+            'physical_pose_verified': False}

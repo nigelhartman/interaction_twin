@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="The 45-second flagship and six alternate films about Interaction Twin: from an everyday demonstration to connected, descriptive digital twins for people and agents.">
+  <title>The films · Interaction Twin</title>
+  <link rel="icon" href="brand/v2/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="cobalt.css"><link rel="stylesheet" href="trailers.css">
+</head>
+<body class="trailers-page">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header"><a class="brand" href="index.html"><img src="brand/v2/mark.svg" width="30" height="30" alt="">Interaction Twin</a><nav aria-label="Main navigation"><a href="index.html">Project</a><a href="library.html">Library</a><a href="robotics-lab.html">Robotics lab</a><a href="agents.html">For agents</a></nav></header>
+  <main id="main" class="trailers-main">
+    <section class="trailers-intro">
+      <div><p class="trailers-eyebrow">THE FILM COLLECTION <span aria-hidden="true">/</span> 01—06</p><h1>One project.<br><em>Six perspectives.</em></h1></div>
+      <div class="trailers-intro-copy"><p>From everyday video to objects that carry their shape, motion and meaning.</p><span>Six alternate stories. Watch a cut, compare the approaches, download your choice.</span><a class="button primary" href="film.html">Watch the 45-second flagship <span aria-hidden="true">↗</span></a></div>
+    </section>
+    <div class="trailers-toolbar"><div class="trailer-filters" role="group" aria-label="Filter films by shape"><button type="button" data-format="all" aria-pressed="true">All films <span>6</span></button><button type="button" data-format="landscape" aria-pressed="false">Landscape</button><button type="button" data-format="portrait" aria-pressed="false">Vertical</button><button type="button" data-format="square" aria-pressed="false">Square</button></div><p id="film-count" role="status">Six ways into the same idea.</p></div>
+    <section id="trailer-grid" class="trailer-grid" aria-label="Choose a film"><noscript><p>Enable JavaScript to browse the six films, or <a href="film.html">watch the 45-second flagship film</a>.</p></noscript></section>
+    <section class="trailer-afterword"><div><span class="trailers-eyebrow">TRY WHAT YOU SEE</span><h2>The films are an introduction.<br>The twins are yours to inspect.</h2></div><a class="button primary" href="library.html">Explore the library <span aria-hidden="true">↗</span></a></section>
+    <details class="trailer-notes"><summary>About these films</summary><p>These are editorial cuts of saved project footage, generated parts and working browser previews. Connected motion uses estimated joints. Robot sequences are authored kinematic rehearsals, not trained policies or validated physical grasps. Any Newton segment is a separate CPU contact experiment using assumed parameters. Original project music and local synthetic narration.</p><p>Nothing is posted automatically. Choose where to share a cut. The project’s physical scale, contact and insertion accuracy still need independent validation.</p><a href="film.html">Watch the flagship project film →</a></details>
+  </main>
+  <footer class="trailers-footer"><a class="brand" href="index.html"><img src="brand/v2/mark.svg" width="24" height="24" alt="">Interaction Twin</a><p>Show it once. Keep how it works.</p><a href="index.html#creator">Built by Nigel Hartman ↗</a></footer>
+  <dialog id="trailer-dialog" aria-labelledby="trailer-title" aria-describedby="trailer-description">
+    <div class="trailer-dialog-head"><span id="trailer-number">01 / 06</span><span id="trailer-genre"></span><button type="button" id="close-trailer" aria-label="Close film">✕</button></div>
+    <div class="trailer-dialog-body"><div class="trailer-video-stage"><video id="collection-video" controls playsinline preload="metadata" aria-label="Selected project film"></video><p id="video-error" role="alert" hidden>This film could not be opened. Try the direct download below.</p></div><aside class="trailer-story"><span id="trailer-audience" class="trailers-eyebrow"></span><h2 id="trailer-title"></h2><p id="trailer-description"></p><ol id="trailer-arc"></ol><a id="download-trailer" class="button primary" download>Download MP4 <span aria-hidden="true">↓</span></a><a id="trailer-transcript" download>Transcript ↓</a><div class="trailer-navigation"><button type="button" id="previous-trailer" aria-label="Previous film">← Previous</button><button type="button" id="next-trailer" aria-label="Next film">Next →</button></div><p class="trailer-playing-note">Sound on for the full story.</p></aside></div>
+  </dialog>
+  <script src="trailer-collection.js"></script><script src="trailers.js"></script>
+</body></html>

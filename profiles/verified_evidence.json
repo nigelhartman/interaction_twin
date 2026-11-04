@@ -1,0 +1,6 @@
+{
+  "id": "verified_evidence",
+  "title": "Verify saved evidence · no new inference",
+  "mode": "verified_evidence",
+  "disclosure": "Verifies saved input and artifact hashes, validates the procedure and registers it for review. No new segmentation, reconstruction or reasoning inference runs."
+}

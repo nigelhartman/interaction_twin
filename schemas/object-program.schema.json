@@ -1,0 +1,739 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "interaction-twin-object-program"
+    },
+    "version": {
+      "const": "0.2"
+    },
+    "created_utc": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_program": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "path",
+        "sha256",
+        "bytes"
+      ],
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object"
+    },
+    "source_scene": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "path",
+        "sha256",
+        "bytes"
+      ],
+      "additionalProperties": false
+    },
+    "constrained_scene": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "path",
+        "sha256",
+        "bytes"
+      ],
+      "additionalProperties": false
+    },
+    "mechanics": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "path",
+        "sha256",
+        "bytes"
+      ],
+      "additionalProperties": false
+    },
+    "proposal": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "path",
+        "sha256",
+        "bytes"
+      ],
+      "additionalProperties": false
+    },
+    "component_assets": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 32,
+      "items": {
+        "type": "object",
+        "properties": {
+          "component_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "native_glb": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "bytes": {
+                "type": "integer",
+                "minimum": 1
+              }
+            },
+            "required": [
+              "path",
+              "sha256",
+              "bytes"
+            ],
+            "additionalProperties": false
+          },
+          "native_metadata": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "bytes": {
+                "type": "integer",
+                "minimum": 1
+              }
+            },
+            "required": [
+              "path",
+              "sha256",
+              "bytes"
+            ],
+            "additionalProperties": false
+          },
+          "native_uniform_scale": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          }
+        },
+        "required": [
+          "component_id",
+          "native_glb",
+          "native_metadata",
+          "native_uniform_scale"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "joints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "const": "revolute"
+          },
+          "parent_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "child_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "const": "estimated"
+          },
+          "axis": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 3,
+            "maxItems": 3
+          },
+          "axis_frame": {
+            "const": "joint_frame_after_parent_from_joint"
+          },
+          "parent_from_joint": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 4,
+              "maxItems": 4
+            },
+            "minItems": 4,
+            "maxItems": 4
+          },
+          "joint_from_child_zero": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 4,
+              "maxItems": 4
+            },
+            "minItems": 4,
+            "maxItems": 4
+          },
+          "parent_anchor_native": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 3,
+            "maxItems": 3
+          },
+          "child_anchor_native": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 3,
+            "maxItems": 3
+          },
+          "parent_anchor_vertex_id": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "child_anchor_vertex_id": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "parent_native_scale": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "child_native_scale": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "limits_rad": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "limits_kind": {
+            "const": "observed_estimated_range_not_verified_physical_stops"
+          },
+          "physical_limits_rad": {
+            "type": "null"
+          },
+          "angle_quality": {
+            "type": "object",
+            "properties": {
+              "angle_visual_consistency": {
+                "type": "boolean"
+              },
+              "test": {
+                "const": "all_cited_supported_open_states_separated_from_cited_closed_zero_by_more_than_declared_threshold"
+              },
+              "declared_separation_threshold_rad": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "state_comparisons": {
+                "type": "array",
+                "maxItems": 24,
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "source_sample_index": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "timestamp_s": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "cited_state": {
+                      "enum": [
+                        "open",
+                        "closed"
+                      ]
+                    },
+                    "q_rad": {
+                      "type": "number"
+                    },
+                    "distance_from_closed_reference_rad": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  },
+                  "required": [
+                    "source_sample_index",
+                    "timestamp_s",
+                    "cited_state",
+                    "q_rad",
+                    "distance_from_closed_reference_rad"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "angle_interpretation": {
+                "enum": [
+                  "model_configuration_parameter_not_verified_opening_angle",
+                  "estimated_opening_configuration_not_physically_calibrated"
+                ]
+              },
+              "confidence": {
+                "const": "low"
+              },
+              "physical_angle_verified": {
+                "const": false
+              },
+              "zero_state_alignment_verified": {
+                "const": false
+              },
+              "source_alignment_verified": {
+                "const": false
+              },
+              "quality_flags": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "maxItems": 12
+              }
+            },
+            "required": [
+              "angle_visual_consistency",
+              "test",
+              "declared_separation_threshold_rad",
+              "state_comparisons",
+              "angle_interpretation",
+              "confidence",
+              "physical_angle_verified",
+              "zero_state_alignment_verified",
+              "source_alignment_verified",
+              "quality_flags"
+            ],
+            "additionalProperties": false
+          },
+          "zero_reference": {
+            "type": "object",
+            "properties": {
+              "source_sample_index": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "timestamp_s": {
+                "type": "number",
+                "minimum": 0
+              },
+              "state": {
+                "enum": [
+                  "estimated_closed",
+                  "model_reference_state_unknown"
+                ]
+              }
+            },
+            "required": [
+              "source_sample_index",
+              "timestamp_s",
+              "state"
+            ],
+            "additionalProperties": false
+          },
+          "samples": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "source_sample_index": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "timestamp_s": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "status": {
+                  "enum": [
+                    "estimated",
+                    "unknown"
+                  ]
+                },
+                "q_rad": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "source_sample_index",
+                "timestamp_s",
+                "status",
+                "q_rad"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1,
+            "maxItems": 10000
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "maxItems": 16
+          },
+          "matrix_convention": {
+            "const": "parent_native_pose * parent_from_joint(inverse_parent_scale) * axis_rotation(q) * joint_from_child_zero(child_scale_once)"
+          },
+          "physical_accuracy_verified": {
+            "const": false
+          },
+          "simulation_ready": {
+            "const": false
+          }
+        },
+        "required": [
+          "id",
+          "type",
+          "parent_id",
+          "child_id",
+          "status",
+          "axis",
+          "axis_frame",
+          "parent_from_joint",
+          "joint_from_child_zero",
+          "parent_anchor_native",
+          "child_anchor_native",
+          "parent_anchor_vertex_id",
+          "child_anchor_vertex_id",
+          "parent_native_scale",
+          "child_native_scale",
+          "limits_rad",
+          "limits_kind",
+          "physical_limits_rad",
+          "angle_quality",
+          "zero_reference",
+          "samples",
+          "evidence_ids",
+          "matrix_convention",
+          "physical_accuracy_verified",
+          "simulation_ready"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 12
+    },
+    "unresolved_connections": {
+      "type": "array",
+      "maxItems": 24,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "parent_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "child_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "enum": [
+              "fixed",
+              "revolute",
+              "prismatic",
+              "unknown"
+            ]
+          },
+          "status": {
+            "const": "unknown"
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "diagnostic": {
+            "type": "string",
+            "maxLength": 500
+          }
+        },
+        "required": [
+          "id",
+          "parent_id",
+          "child_id",
+          "type",
+          "status",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "removable_relationships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "parent_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "child_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "joint_type": {
+            "const": "removable"
+          },
+          "attachment": {
+            "const": "removable"
+          },
+          "confidence": {
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ]
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "physical_accuracy_verified": {
+            "const": false
+          }
+        },
+        "required": [
+          "id",
+          "parent_id",
+          "child_id",
+          "joint_type",
+          "attachment",
+          "confidence",
+          "evidence_ids",
+          "physical_accuracy_verified"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 24
+    },
+    "coordinate_system": {
+      "type": "object",
+      "properties": {
+        "camera_frame": {
+          "const": "opencv_x_right_y_down_z_forward"
+        },
+        "length_units": {
+          "const": "inferred_arbitrary_scene_units_no_metric_scale"
+        },
+        "angle_units": {
+          "const": "radians"
+        },
+        "unknown_sample_policy": {
+          "const": "withhold_joint_and_child_when_parent_or_joint_unknown"
+        },
+        "physical_stops": {
+          "const": "unknown"
+        }
+      },
+      "required": [
+        "camera_frame",
+        "length_units",
+        "angle_units",
+        "unknown_sample_policy",
+        "physical_stops"
+      ],
+      "additionalProperties": false
+    },
+    "implementation_provenance": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "properties": {
+          "original_path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "minLength": 1
+          },
+          "archived_file": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "bytes": {
+                "type": "integer",
+                "minimum": 1
+              }
+            },
+            "required": [
+              "path",
+              "sha256",
+              "bytes"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "original_path",
+          "sha256",
+          "archived_file"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "physical_accuracy_verified": {
+      "const": false
+    },
+    "simulation_ready": {
+      "const": false
+    },
+    "robot_execution_available": {
+      "const": false
+    },
+    "manual_joint_coordinates_used": {
+      "const": false
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "maxItems": 32
+    }
+  },
+  "required": [
+    "format",
+    "version",
+    "created_utc",
+    "evidence_program",
+    "source",
+    "source_scene",
+    "constrained_scene",
+    "mechanics",
+    "proposal",
+    "component_assets",
+    "joints",
+    "unresolved_connections",
+    "removable_relationships",
+    "coordinate_system",
+    "implementation_provenance",
+    "physical_accuracy_verified",
+    "simulation_ready",
+    "robot_execution_available",
+    "manual_joint_coordinates_used",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

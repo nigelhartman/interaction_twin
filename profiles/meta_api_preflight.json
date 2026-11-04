@@ -1,0 +1,6 @@
+{
+  "id": "meta_api_preflight",
+  "title": "Meta API readiness \u00b7 no requests",
+  "mode": "preflight",
+  "disclosure": "Readiness report for the budgeted Meta API adapters. This action itself makes no request, reads no credential and performs no model inference."
+}

@@ -1,0 +1,7 @@
+/* Exact sample selection and native camera transforms. No pose interpolation. */
+export const SEEK_EPSILON_S=1e-6;
+export function exactSample(frames,time){if(!Number.isFinite(time))return null;return frames.find(f=>Number.isFinite(f.timestamp_s)&&Math.abs(f.timestamp_s-time)<=SEEK_EPSILON_S)||null;}
+export function displayPose(frame,branch='candidate',allowReference=true){const row=branch==='baseline'?frame?.baseline:frame;if(!row||!(row.status==='supported_nonreference_candidate'||allowReference&&row.status==='reference_unverified'))return null;const p=row.pose;if(!p||!Array.isArray(p.R)||p.R.length!==3||!p.R.every(r=>Array.isArray(r)&&r.length===3&&r.every(Number.isFinite))||!Array.isArray(p.t)||p.t.length!==3||!p.t.every(Number.isFinite))return null;return p;}
+export function poseMatrix(R,t){if(!Array.isArray(R)||R.length!==3||!R.every(r=>Array.isArray(r)&&r.length===3&&r.every(Number.isFinite))||!Array.isArray(t)||t.length!==3||!t.every(Number.isFinite))throw Error('Invalid saved pose');return[R[0][0],R[1][0],R[2][0],0,R[0][1],R[1][1],R[2][1],0,R[0][2],R[1][2],R[2][2],0,...t,1];}
+export function projectCV(point,R,t,K){const q=R.map((r,i)=>r.reduce((n,v,j)=>n+v*point[j],t[i]));if(!q.every(Number.isFinite)||q[2]<=0)return null;return[(K[0][0]*q[0]+K[0][1]*q[1])/q[2]+K[0][2],K[1][1]*q[1]/q[2]+K[1][2]];}
+export function sampleState(frame,branch='candidate'){const row=branch==='baseline'?frame?.baseline:frame;return row?.status==='supported_nonreference_candidate'?'supported':row?.status==='reference_unverified'?'reference':'withheld';}

@@ -1,0 +1,125 @@
+/* Exercise the actual public controller, its fetch epochs and one shared inspector. */
+const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),{webcrypto,createHash}=require('node:crypto');
+const ROOT=path.resolve(__dirname,'..'),script=fs.readFileSync(path.join(ROOT,'showcase/library.js'),'utf8'),html=fs.readFileSync(path.join(ROOT,'showcase/library.html'),'utf8');
+const saved=JSON.parse(fs.readFileSync(path.join(ROOT,'showcase/public/library-catalog.json'))),alignedIndex=JSON.parse(fs.readFileSync(path.join(ROOT,'showcase/public/aligned-scenes.json')));
+const sha=raw=>createHash('sha256').update(raw).digest('hex'),clone=value=>JSON.parse(JSON.stringify(value)),deferred=()=>{let resolve;const promise=new Promise(r=>resolve=r);return{promise,resolve};};
+const until=async(check,message)=>{for(let i=0;i<180;i++){if(check())return;await new Promise(resolve=>setImmediate(resolve));}throw Error(message);};
+
+function fixture({query='',catalog=clone(saved),find}={}){
+ const removals=[],requests=[],blocked=new Map(),windowListeners={},frames=new Map(),blobURLs=new Set();let serial=0;
+ const location={url:new URL('http://127.0.0.1:8766/showcase/library.html'+query),get href(){return this.url.href;},get origin(){return this.url.origin;},get hash(){return this.url.hash;}};
+ let document;
+ function simple(node,selector){
+  if(node.tagName==='#document')return false;
+  const tag=selector.match(/^[a-zA-Z][\w-]*/)?.[0];if(tag&&node.tagName!==tag.toLowerCase())return false;
+  const id=selector.match(/#([\w-]+)/)?.[1];if(id&&node.id!==id)return false;
+  if([...selector.matchAll(/\.([\w-]+)/g)].some(m=>!node.classList.contains(m[1])))return false;
+  for(const m of selector.matchAll(/\[([\w-]+)(?:=["']?([^\]"']+)["']?)?\]/g)){const value=node.getAttribute(m[1]);if(value===null||(m[2]!==undefined&&value!==m[2]))return false;}
+  return true;
+ }
+ function matches(node,selector){
+  return selector.split(',').some(part=>{const pieces=part.trim().split(/\s+/);if(!simple(node,pieces.pop()))return false;let parent=node.parentElement;while(pieces.length){const wanted=pieces.pop();while(parent&&!simple(parent,wanted))parent=parent.parentElement;if(!parent)return false;parent=parent.parentElement;}return true;});
+ }
+ class Node{
+  constructor(tag){this.tagName=tag.toLowerCase();this.parentElement=null;this.children=[];this.attributes={};this.dataset={};this.style={};this.listeners={};this.hidden=false;this.paused=true;this.currentTime=0;this.readyState=0;this.messages=[];this.scrolls=[];this.contentWindow={postMessage:(data,origin)=>this.messages.push({data,origin})};}
+  get id(){return this.attributes.id||'';}set id(v){this.attributes.id=String(v);}
+  get className(){return this.attributes.class||'';}set className(v){this.attributes.class=String(v);}
+  get classList(){const node=this;return{contains:c=>node.className.split(/\s+/).includes(c),add(...cs){node.className=[...new Set([...node.className.split(/\s+/).filter(Boolean),...cs])].join(' ');},remove(...cs){node.className=node.className.split(/\s+/).filter(c=>!cs.includes(c)).join(' ');},toggle(c,on){const present=this.contains(c);on=on===undefined?!present:!!on;on?this.add(c):this.remove(c);return on;}};}
+  get isConnected(){let n=this;while(n){if(n===document.root)return true;n=n.parentElement;}return false;}
+  get options(){return this.querySelectorAll('option');}get value(){return this._value===undefined?(this.tagName==='select'?this.options[0]?.value||'':''):this._value;}set value(v){this._value=String(v);}
+  get src(){return this.attributes.src;}set src(v){this.attributes.src=String(v);if(this.tagName==='img')queueMicrotask(()=>this.onload?.());}
+  get textContent(){return this._text||this.children.map(n=>n.textContent).join('');}set textContent(v){this._text=String(v);for(const child of [...this.children])child.remove();}
+  set innerHTML(v){this.textContent=v;}
+  getAttribute(k){if(k==='hidden')return this.hidden?'':null;if(k.startsWith('data-'))return this.dataset[k.slice(5).replace(/-([a-z])/g,(_,c)=>c.toUpperCase())]??null;return this.attributes[k]??null;}
+  setAttribute(k,v){if(k==='hidden')this.hidden=true;else if(k.startsWith('data-'))this.dataset[k.slice(5).replace(/-([a-z])/g,(_,c)=>c.toUpperCase())]=String(v);else this.attributes[k]=String(v);if(k==='value')this.value=v;}
+  removeAttribute(k){delete this.attributes[k];if(k==='hidden')this.hidden=false;}
+  contains(node){return node===this||this.children.some(c=>c.contains(node));}
+  _detach(){if(!this.parentElement)return;if(this.isConnected)for(const frame of [this,...this.querySelectorAll('iframe')])if(frame.tagName==='iframe'&&frame.src)removals.push(frame);const siblings=this.parentElement.children;siblings.splice(siblings.indexOf(this),1);this.parentElement=null;}
+  append(...nodes){for(const node of nodes){if(typeof node==='string')continue;node._detach();node.parentElement=this;this.children.push(node);}}
+  insertBefore(node,before){if(node===before)return;if(!before){this.append(node);return;}assert.equal(before.parentElement,this);node._detach();node.parentElement=this;this.children.splice(this.children.indexOf(before),0,node);}
+  replaceChildren(...nodes){for(const child of [...this.children])child._detach();this._text='';this.append(...nodes);}
+  remove(){this._detach();}replaceWith(node){const parent=this.parentElement;parent.insertBefore(node,this);this._detach();}
+  cloneNode(){const node=new Node(this.tagName);node.attributes={...this.attributes};node.dataset={...this.dataset};node.hidden=this.hidden;return node;}
+  querySelectorAll(selector){const result=[];for(const child of this.children){if(matches(child,selector))result.push(child);result.push(...child.querySelectorAll(selector));}return result;}
+  querySelector(selector){return this.querySelectorAll(selector)[0]||null;}
+  closest(selector){for(let node=this;node;node=node.parentElement)if(matches(node,selector))return node;return null;}
+  addEventListener(name,fn){(this.listeners[name]||=[]).push(fn);}async fire(name,extra={}){return Promise.all((this.listeners[name]||[]).map(fn=>fn({target:this,currentTarget:this,preventDefault(){},...extra})));}
+  focus(){document.activeElement=this;}scrollIntoView(value){this.scrolls.push(value);}
+  pause(){this.paused=true;}load(){this.readyState=0;this.currentTime=0;this.paused=true;}play(){this.paused=false;return this.fire('play');}
+ }
+ document={root:new Node('#document'),currentScript:{src:location.origin+'/showcase/library.js'},activeElement:null,createElement:tag=>new Node(tag),getElementById(id){return this.root.querySelector('#'+id);},querySelectorAll(selector){return this.root.querySelectorAll(selector);}};
+ const stack=[document.root],voidTags=new Set(['meta','link','img','input','br','hr','source','wbr']);
+ for(const match of html.matchAll(/<\/?[^>]+>/g)){
+  const token=match[0];if(/^<!/.test(token))continue;const name=token.match(/^<\/?([\w-]+)/)?.[1]?.toLowerCase();if(!name)continue;
+  if(token.startsWith('</')){for(let i=stack.length-1;i>0;i--)if(stack[i].tagName===name){stack.length=i;break;}continue;}
+  const node=new Node(name),attributes=token.slice(token.indexOf(name)+name.length).replace(/\/?\s*>$/,'');
+  for(const item of attributes.matchAll(/([^\s=/>]+)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+)))?/g))node.setAttribute(item[1],item[2]??item[3]??item[4]??'');
+  stack.at(-1).append(node);if(!voidTags.has(name)&&!token.endsWith('/>'))stack.push(node);
+ }
+ document.body=document.root.querySelector('body');
+ const catalogRaw=Buffer.from(JSON.stringify(catalog)),catalogName='library-catalog-'+sha(catalogRaw)+'.json';
+ const indexRaw=Buffer.from(JSON.stringify({format:'interaction-twin-library-index',version:1,catalog:{path:catalogName,sha256:sha(catalogRaw),bytes:catalogRaw.length}}));
+ const response=(raw,wait)=>({ok:true,status:200,text:async()=>raw.toString(),arrayBuffer:async()=>{if(wait)await wait.promise;return raw.buffer.slice(raw.byteOffset,raw.byteOffset+raw.byteLength);}});
+ const context={document,location,URL,URLSearchParams,TextDecoder,TextEncoder,Blob,AbortController,crypto:webcrypto,navigator:{clipboard:{writeText:async()=>{}}},history:{replaceState(_a,_b,value){location.url=new URL(value,location.href);}},matchMedia:()=>({matches:true}),requestAnimationFrame:fn=>{frames.set(++serial,fn);return serial;},cancelAnimationFrame:id=>frames.delete(id),addEventListener:(name,fn)=>(windowListeners[name]||=[]).push(fn),Sam3DModelReviews:require('../showcase/sam3d-models.js'),AlignedSceneContract:require('../showcase/aligned-scene-contract.js'),
+  fetch:async(value,options={})=>{const url=new URL(value,location.href);requests.push({path:url.pathname,signal:options.signal});if(url.pathname.endsWith('/library-index.json'))return response(indexRaw);if(url.pathname.endsWith('/'+catalogName))return response(catalogRaw);if(!url.pathname.startsWith('/files/data/'))throw Error('No noncurated resource fixture: '+url.pathname);const relative=url.pathname.slice('/files/'.length),raw=fs.readFileSync(path.join(ROOT,relative));return response(raw,blocked.get(relative));},
+  AlignedScenes:{find:find||(async source=>{const row=alignedIndex.scenes.find(r=>r.source_sha256===source);return row?require('./derived_scene_fixture.cjs')({reference:row.manifest,manifest:JSON.parse(fs.readFileSync(path.join(ROOT,row.manifest.path))),object_program:row.derived_assembly||row.object_program,...(row.derived_assembly?{base_object_program:row.object_program,derived_assembly:{artifact:row.derived_assembly,document:JSON.parse(fs.readFileSync(path.join(ROOT,row.derived_assembly.path)))}}:{})}):null;}),checked:async reference=>JSON.parse(fs.readFileSync(path.join(ROOT,reference.path)))}};
+ const originalCreate=URL.createObjectURL;context.URL=class extends URL{static createObjectURL(blob){const value=originalCreate(blob);blobURLs.add(value);return value;}static revokeObjectURL(value){blobURLs.delete(value);URL.revokeObjectURL(value);}};
+ const injected=script.replace('\nstart();\n','\nroot.__expansion={start,select,collapse,renderCards};\n');assert.notEqual(injected,script,'Actual controller hook insertion required');vm.runInNewContext(injected,context,{filename:'showcase/library.js'});
+ return{context,document,location,requests,blocked,removals,frames,hooks:context.__expansion,records:catalog.records,node:id=>document.getElementById(id),host(id){return document.querySelectorAll('.library-item').find(n=>n.dataset.twin===id);},async start(){await context.__expansion.start();},hold(relative){const value=deferred();blocked.set(relative,value);return value;},flushFrames(){const waiting=[...frames.values()];frames.clear();for(const fn of waiting)fn();},close(){context.__expansion.collapse();for(const fn of windowListeners.pagehide||[])fn();for(const value of blobURLs)URL.revokeObjectURL(value);}};
+}
+const jabra=saved.records.find(r=>r.sam3d_reviews?.length===4),other=saved.records.find(r=>r.id!==jabra.id);
+
+test('a curated quality note is visible on the compact card and in its expanded inspector',async t=>{
+ const catalog=clone(saved),record=catalog.records.find(r=>r.id===jabra.id);
+ record.public_title='Laptop + charging cable';
+ record.public_note='Estimated hinge: 27 supported samples, 39 unknown. Screen texture and physical fit remain unverified.';
+ const ui=fixture({catalog});t.after(()=>ui.close());await ui.start();
+ assert.equal(ui.host(record.id).querySelector('h3').textContent,record.public_title);
+ assert.equal(ui.host(record.id).querySelector('.library-note').textContent,record.public_note);
+ await ui.hooks.select(record);
+ assert.equal(ui.node('detail-quality-note').textContent,record.public_note);
+ assert.equal(ui.node('detail-quality-note').hidden,false);
+ assert.equal(ui.node('detail-summary').textContent,record.summary);
+ assert.equal(ui.node('library-detail').parentElement,ui.host(record.id));
+});
+
+test('default browsing renders compact disclosures and does not load a program or auto-open a twin',async t=>{
+ const ui=fixture();t.after(()=>ui.close());await ui.start();
+ assert.equal(ui.document.querySelectorAll('.library-item').length,saved.records.length);assert.equal(ui.document.querySelectorAll('.is-expanded').length,0);assert.equal(ui.node('library-detail').parentElement,ui.node('library-detail-parking'));assert.equal(ui.node('library-detail').hidden,true);
+ for(const host of ui.document.querySelectorAll('.library-item')){const button=host.querySelector('.library-card');assert.equal(button.tagName,'button');assert.equal(button.getAttribute('aria-expanded'),'false');assert.equal(button.getAttribute('aria-controls'),'library-detail');}
+ assert.ok(ui.requests.every(r=>!saved.records.some(record=>r.path==='/files/'+record.interaction.path)));assert.equal(ui.location.url.searchParams.has('case'),false);
+});
+
+test('selecting a card expands that wrapper with one sibling inspector and minimize restores its trigger and filters',async t=>{
+ const ui=fixture({query:'?sort=duration&direction=desc'});t.after(()=>ui.close());await ui.start();await ui.hooks.select(jabra,true);const host=ui.host(jabra.id),button=host.querySelector('.library-card'),detail=ui.node('library-detail');
+ assert.equal(detail.parentElement,host);assert.equal(button.hidden,true);assert.equal(button.getAttribute('aria-expanded'),'true');assert.equal(button.contains(detail),false);assert.equal(ui.document.querySelectorAll('#library-detail').length,1);assert.equal(ui.document.querySelectorAll('.is-expanded').length,1);
+ await ui.node('minimize-twin').fire('click');assert.equal(detail.parentElement,ui.node('library-detail-parking'));assert.equal(detail.hidden,true);assert.equal(button.hidden,false);assert.equal(button.getAttribute('aria-expanded'),'false');assert.equal(ui.document.activeElement,button);assert.equal(ui.location.url.searchParams.get('sort'),'duration');assert.equal(ui.location.url.searchParams.get('direction'),'desc');assert.equal(ui.location.url.searchParams.has('case'),false);ui.flushFrames();assert.equal(detail.scrolls.length,0,'A queued scroll cannot jump after minimizing');
+});
+
+test('minimizing during uncancellable program verification prevents a late response from reopening or starting media',async t=>{
+ const ui=fixture();t.after(()=>ui.close());await ui.start();const held=ui.hold(jabra.interaction.path),pending=ui.hooks.select(jabra,true);await until(()=>ui.requests.some(r=>r.path==='/files/'+jabra.interaction.path),'Program verification did not begin');
+ await ui.node('minimize-twin').fire('click');held.resolve();await pending;ui.flushFrames();
+ assert.equal(ui.document.querySelectorAll('.is-expanded').length,0);assert.equal(ui.node('library-detail').hidden,true);assert.equal(ui.node('library-detail').parentElement,ui.node('library-detail-parking'));assert.equal(ui.node('twin-source-video').src,undefined);assert.equal(ui.node('twin-alignment-frame').src,undefined);assert.equal(ui.location.url.searchParams.has('case'),false);assert.equal(ui.requests.find(r=>r.path==='/files/'+jabra.interaction.path).signal.aborted,true);
+});
+
+test('rapid A to B selection keeps B open when A finishes verification last',async t=>{
+ const ui=fixture();t.after(()=>ui.close());await ui.start();const a=ui.hold(jabra.interaction.path),b=ui.hold(other.interaction.path),first=ui.hooks.select(jabra),second=ui.hooks.select(other);b.resolve();await second;a.resolve();await first;
+ assert.equal(ui.node('library-detail').parentElement,ui.host(other.id));assert.equal(ui.host(other.id).querySelector('.library-card').hidden,true);assert.equal(ui.host(jabra.id).querySelector('.library-card').hidden,false);assert.equal(ui.document.querySelectorAll('.is-expanded').length,1);assert.equal(ui.node('detail-title').textContent,other.public_title||other.title);assert.equal(ui.node('twin-source-video').src,'/files/'+other.source.path);assert.equal(ui.location.url.searchParams.get('case'),other.id);
+});
+
+test('sorting and filtering a still-visible twin retain its live expanded host, iframe and source clock',async t=>{
+ const ui=fixture();t.after(()=>ui.close());await ui.start();await ui.hooks.select(jabra);await until(()=>ui.node('twin-alignment-frame').src,'Connected scene did not load');const host=ui.host(jabra.id),detail=ui.node('library-detail'),frame=ui.node('twin-alignment-frame'),video=ui.node('twin-source-video'),src=frame.src;video.currentTime=16.7;const removed=ui.removals.length;
+ ui.hooks.renderCards([...ui.records].reverse());ui.hooks.renderCards([jabra]);
+ assert.equal(ui.host(jabra.id),host);assert.equal(detail.parentElement,host);assert.equal(frame.isConnected,true);assert.equal(frame.src,src);assert.equal(video.currentTime,16.7);assert.equal(ui.removals.length,removed,'Reconciliation must not unmount an active iframe ancestor');assert.equal(ui.document.querySelectorAll('.is-expanded').length,1);
+});
+
+test('filtering the selected twin out closes it and cancels a pending scene discovery',async t=>{
+ const lookup=deferred(),ui=fixture({find:()=>lookup.promise});t.after(()=>ui.close());await ui.start();await ui.hooks.select(jabra);ui.node('library-search').value='no-such-twin-in-curated-library';await ui.node('library-search').fire('input');lookup.resolve(null);await new Promise(r=>setImmediate(r));
+ assert.equal(ui.document.querySelectorAll('.library-item').length,0);assert.equal(ui.node('library-detail').parentElement,ui.node('library-detail-parking'));assert.equal(ui.node('library-detail').hidden,true);assert.equal(ui.node('twin-source-video').paused,true);assert.equal(ui.node('twin-source-video').src,undefined);assert.equal(ui.node('twin-alignment-frame').src,undefined);assert.equal(ui.location.url.searchParams.has('case'),false);assert.equal(ui.location.url.searchParams.get('query'),'no-such-twin-in-curated-library');
+});
+
+test('explicit case aliases and part hashes open only their curated twin and collapse removes the selection hash',async t=>{
+ const catalog=clone(saved),record=catalog.records.find(r=>r.id===jabra.id),alias='curated-test-historical-alias';record.other_saved_versions.push({id:alias,interaction:record.interaction});catalog.summary.eligible_saved_versions++;
+ const ui=fixture({query:'?case='+alias+'#sam3d-models',catalog});t.after(()=>ui.close());await ui.start();assert.equal(ui.node('library-detail').parentElement,ui.host(jabra.id));assert.equal(ui.node('view-parts').getAttribute('aria-selected'),'true');assert.equal(ui.location.url.searchParams.get('case'),jabra.id);
+ await ui.node('minimize-twin').fire('click');assert.equal(ui.location.hash,'');assert.equal(ui.location.url.searchParams.has('case'),false);assert.equal(ui.node('sam3d-native-frame').src,undefined);assert.equal(ui.node('twin-alignment-frame').src,undefined);
+});

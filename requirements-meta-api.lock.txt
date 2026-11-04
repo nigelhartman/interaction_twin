@@ -1,0 +1,2 @@
+# Hosted SAM output decoder; does not download GPU checkpoints.
+meta-sam-parser==0.1.0

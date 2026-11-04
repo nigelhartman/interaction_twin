@@ -1,0 +1,26 @@
+# Portable interaction assets
+
+The package is a local, descriptive handoff: untouched generated GLBs, the original evidence program, sampled images, optional SAM masks, exact conditional motion, candidate relationships and explicit missing physics. It is not a calibrated robot simulation or a shared physical assembly. Each component retains its own native coordinates and generated scale. Unknown time intervals have no state assertion or pose.
+
+Export a catalog case into a **new** folder (its parent must exist):
+
+```sh
+.venv-sam/bin/python scripts/export_twin_package.py --twin-id jabra-stage6-v1--procedure-v1 --output data/my-portable-twin
+.venv-sam/bin/python scripts/inspect_twin_package.py data/my-portable-twin.zip --extract-to /private/tmp/my-imported-twin
+```
+
+Open the imported `index.html` directly in a browser. It uses local JavaScript/CSS, embedded GLB geometry/appearance and package-relative image links. No server, CDN, fetch, hosted API, model inference or original workspace is needed. Source video is **omitted by default**; `--include-video` explicitly bundles that private recording. Images and masks are private recording evidence too; the export does not publish them.
+
+The viewer offers orbit/pan/zoom, native asset inspection, separate conditional camera-relative motion, exact source-sample navigation, saved masks, procedure steps, candidate relationships, point state assertions and original-GLB/program downloads. A timeline position between evidence samples clears state and hides conditional motion; native inspection remains available. Image evidence may show the nearest sample for inspection and is labelled as such. There is no invented camera projection or combined multi-part assembly.
+
+`manifest.json` maps original identifiers and citations to package-relative files with SHA256 and byte counts. The exact original program bytes remain unchanged in ordinary local exports. A scripted MCP client receives JSON serialization instead; its package labels that serialization and preserves the original program hash as a **separate citation**, not a false byte identity.
+
+The importer validates paths, expanded ZIP/file budgets, duplicates, symlinks, file hashes, original semantics, asset hashes, embedded GLB geometry/materials and trusted local viewer code before extracting into a fresh directory. It rejects executable viewer-data changes even when someone updates the manifest hashes. Hashes provide integrity, **not publisher authenticity**. Inspect an unfamiliar package before opening its HTML. Only supported static embedded GLB triangles, node transforms, vertex colors, UVs and embedded PNG/JPEG base-color textures are accepted; unsupported external references, skinning, animation or sparse/morph geometry fail explicitly. Appearance uses unlit base color; it does not reproduce every PBR shading parameter.
+
+The prototype inspector requires an exact match with its installed trusted viewer templates. A package made before a viewer-template update can still be opened as its preserved local artifact, but that newer inspector will reject it rather than silently trusting changed code. Re-export into a fresh directory to validate with the current prototype; old packages and their receipts remain unchanged. A future versioned distribution needs a maintained viewer-version allowlist or authenticated releases.
+
+The bytes-only `portable_twin.build_package` accepts an already validated document plus program, GLB, evidence and optional mask/video byte maps. It reads no source asset paths. The explicit local `export_case` adapter gathers declared files through the confined catalog. This split allows the MCP demonstration to package resources actually returned by the server.
+
+Recovery validation on 2026-10-29 exported the saved three-component Jabra case, validated its ZIP, imported into a separate `/private/tmp` directory, revalidated all 620 package files and confirmed byte-identical original program/GLBs. The runtime contract test executes the actual shipped viewer and scene JavaScript with DOM/WebGL doubles to check controls, native triangle draw decisions, selected-component motion, exact states, unknown gaps, withheld-pose hiding and zero network calls. This does **not** verify browser pixels or real WebGL rendering. The computer-use browser security boundary blocked navigation to `file://`, so standalone offline visual QA is explicitly unconfirmed; no alternate-browser workaround was attempted.
+
+An independent review found that the early v2 viewer skipped the immediate next sample when navigating from a gap, and skipped the last sample when pressing Previous after its timestamp. The preserved v2 package is superseded by a fresh v3 export. The corrected controls choose the strictly next/previous source timestamp; runtime regressions include 0.1s → Next → 0.2s and Previous after the last sample. The importer also now joins displayed reconstruction backend, appearance policy and original path citations to the preserved program, rejecting rehashed false provenance. This correction changes trusted viewer hashes; earlier packages remain unchanged as historical artifacts and are rejected by the current exact-template inspector.

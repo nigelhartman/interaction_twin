@@ -1,0 +1,21 @@
+{
+  "id": "meta_sam31_low",
+  "title": "Meta reasoning + SAM 3.1 API \u00b7 1 fps",
+  "mode": "local_inference",
+  "fps": 1,
+  "max_dimension": 960,
+  "max_frames": 120,
+  "max_duration_s": 120,
+  "reconstruct_limit": 3,
+  "mesh_resolution": 64,
+  "pose_search_width": 128,
+  "pose_refine_count": 2,
+  "pose_max_evaluations": 45,
+  "phase_timeout_s": 900,
+  "reasoning_timeout_s": 300,
+  "disclosure": "Sends sampled frames to Meta Model API for discovery, visual audit and procedure reasoning. Uses paid SAM 3.1 API segmentation on sampled frames. TripoSR (non-Meta) reconstruction and CoTracker3 motion remain local. Every paid request uses the shared $100 estimated-cost guard; dashboard credits and other tools are outside this local ledger. No manual geometry, poses or silent fallback.",
+  "reasoning_provider": "meta_api",
+  "reasoning_model": "muse-spark-1.3",
+  "max_output_tokens": 16000,
+  "segmentation_provider": "meta_sam31_api"
+}

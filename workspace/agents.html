@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head><script src="admin-fetch.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Inspect saved, evidence-linked Interaction Twin responses that a local agent can read over MCP.">
+  <title>Interaction Twin · Agent catalog</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="agents.css">
+  <script defer src="agent-preview.js"></script>
+  <link rel="stylesheet" href="fresh-handoff.css?v=20261101-2"><script defer src="fresh-handoff.js?v=20261101-2"></script>
+  <link rel="stylesheet" href="model-assessment.css?v=20261101-1"><script defer src="model-assessment.js?v=20261101-1"></script>
+  <script defer src="agents.js"></script>
+  <script defer src="reconstruction-preview.js"></script>
+  <script defer src="agent-reconstructions.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../showcase/index.html"><span class="brand-mark" aria-hidden="true">↔</span><span>Interaction Twin<small>VIDEO → COMPONENTS → PROCEDURES</small></span></a>
+  <nav class="top-actions" aria-label="Project navigation"><a href="../showcase/index.html">Project</a><a href="index.html">Workspace</a><a href="benchmark/index.html">Benchmark</a></nav>
+</header>
+<main class="agents-main">
+  <div class="eyebrow">LOCAL AGENT CATALOG</div>
+  <div class="agents-heading"><div><h1>Make the recording queryable.</h1><p>Read components, cited steps and exact visual states through a small set of tools.</p></div><span class="tag subdued">READ ONLY · NO INFERENCE</span></div>
+  <div class="preview-notice"><span class="notice-icon" aria-hidden="true">◈</span><div><strong>This is a saved response preview.</strong><p>The page combines saved Python catalog responses, recorded MCP runs and a separately labelled Meta assessment. This browser does not run an LLM, connect to MCP, call a paid API or execute the procedure. The actual MCP SDK transport is tested separately.</p></div></div>
+  <p id="agents-error" class="error-banner" hidden></p>
+  <section class="model-assessment" id="model-assessment" aria-labelledby="model-assessment-title"><div class="eyebrow">SAVED META REASONING + REAL READ-ONLY MCP · JABRA CASE BASE</div><h2 id="model-assessment-title">Let the model plan the inspection.</h2><p>The goal: identify what a robotics developer can reuse and what still needs validation.</p><div id="model-assessment-body"><p>Reading the saved model-directed run…</p></div></section>
+  <section class="handoff-preview" id="fresh-handoff"><div class="eyebrow">NEW / REAL LOCAL MCP RUN · SAME FRESH PROJECT</div><h2>Parts, procedure and motion.<br>One inspectable handoff.</h2><div id="fresh-handoff-body"><p>Reading the saved, source-bound package…</p></div></section>
+  <section class="agent-package panel" id="inspection-package" aria-labelledby="package-title" hidden>
+    <div class="package-copy"><div class="eyebrow">REAL MCP CLIENT · SAVED RUN</div><h2 id="package-title">More than a mesh.<br>A reusable inspection task.</h2><p>A local client retrieved a component, its source evidence, procedure and quality report, then saved one portable package.</p><div class="package-stats" id="package-stats"></div><div class="package-links" id="package-links"></div><p class="tiny-note">Scripted SDK client. No LLM, paid call, robot action or simulator execution.</p></div>
+    <div class="package-proof"><div class="package-evidence"><img id="package-image" alt="Original source frame for the recorded MCP component inspection"><div><span class="tag subdued">SOURCE LINKED</span><h3>Inspect the case lid</h3><p id="package-binding"></p><button id="open-package-twin" class="text-button">Explore this recording ↗</button></div></div><ol class="package-flow"><li><span>01</span><div><strong>Find the component</strong><code>list_reconstructions</code></div></li><li><span>02</span><div><strong>Read geometry + limits</strong><code>get_reconstruction_report</code></div></li><li><span>03</span><div><strong>Reuse the demonstration</strong><code>get_procedure + get_evidence</code></div></li></ol><details class="package-trace"><summary>Inspect the actual recorded calls</summary><ol id="package-call-list"></ol></details></div>
+  </section>
+  <section class="panel reconstruction-tools" id="reconstruction-tools" aria-labelledby="reconstruction-title">
+    <div class="reconstruction-heading"><div><div class="eyebrow">THREE NEW READ ONLY TOOLS</div><h2 id="reconstruction-title">Choose a reconstruction. Keep its evidence.</h2><p>Observed patches, optional inferred fill and independent model previews remain separate versions.</p></div><span class="tag subdued">DIAGNOSTIC · NOT PHYSICS READY</span></div>
+    <div class="reconstruction-controls"><label for="reconstruction-version">Saved version<select id="reconstruction-version"></select></label><p id="reconstruction-context" aria-live="polite"></p></div>
+    <div class="reconstruction-empty" id="reconstruction-empty" hidden>No reconstruction version is published for this recording yet. Its original component assets and tool responses remain below.</div>
+    <div id="reconstruction-content"><div class="reconstruction-metrics" id="reconstruction-metrics"></div><div class="reconstruction-links" id="reconstruction-links"></div><div class="reconstruction-code-tabs" role="group" aria-label="Saved reconstruction tool response"><button data-reconstruction-tool="list_reconstructions" class="active">list_reconstructions</button><button data-reconstruction-tool="get_reconstruction">get_reconstruction</button><button data-reconstruction-tool="get_reconstruction_report">get_reconstruction_report</button></div><div class="reconstruction-code-grid"><div><div class="code-heading"><h3>Equivalent tool request</h3></div><pre id="reconstruction-request" tabindex="0"></pre><p id="reconstruction-limit" class="tiny-note"></p></div><div><div class="code-heading"><h3 id="reconstruction-response-title">Saved Python catalog response</h3><button id="download-reconstruction-response" class="text-button">JSON ↓</button></div><pre id="reconstruction-response" tabindex="0"></pre></div></div></div>
+  </section>
+  <section class="catalog-grid" aria-label="Saved twin tool preview">
+    <aside class="panel twin-context">
+      <div class="panel-head"><span><i class="dot green"></i> Saved twin</span></div>
+      <div class="context-body"><label for="twin-select">Choose a recording</label><select id="twin-select"></select><a id="open-workspace" href="index.html">Open this twin in the workspace ↗</a><div class="context-image"><img id="source-frame" alt="Original cited source frame"></div><h2 id="twin-title"></h2><p id="twin-summary"></p><div id="twin-stats" class="twin-stats"></div><div class="hash-line"><span>Original program SHA256</span><code id="program-hash"></code></div></div>
+    </aside>
+    <div class="response-workbench">
+      <div class="tool-tabs" role="tablist" aria-label="Catalog tool responses">
+        <button role="tab" id="tab-describe" data-tool="describe_twin" aria-controls="tool-panel" aria-selected="true">describe_twin</button>
+        <button role="tab" id="tab-procedure" data-tool="get_procedure" aria-controls="tool-panel" aria-selected="false">get_procedure</button>
+        <button role="tab" id="tab-state" data-tool="query_state" aria-controls="tool-panel" aria-selected="false">query_state</button>
+        <button role="tab" id="tab-simulation" data-tool="get_simulation_manifest" aria-controls="tool-panel" aria-selected="false">simulation handoff</button>
+      </div>
+      <section id="tool-panel" class="panel tool-panel" role="tabpanel" aria-labelledby="tab-describe">
+        <div class="tool-explanation"><h2 id="tool-title"></h2><p id="tool-description"></p><div id="state-controls" class="state-controls" hidden><div class="segmented" role="group" aria-label="Select saved state query"><button id="state-exact" class="active">Exact cited sample</button><button id="state-gap">Between observations</button></div><p id="state-note" aria-live="polite"></p></div></div>
+        <div class="code-heading"><h3>Tool + arguments</h3><span>Equivalent MCP tool request</span></div><pre id="request-json" tabindex="0" aria-label="Saved tool request JSON"></pre>
+        <div class="code-heading"><h3>Saved catalog response</h3><button id="download-response" class="text-button">Download JSON ↓</button></div><pre id="response-json" tabindex="0" aria-label="Actual saved catalog response JSON"></pre>
+      </section>
+    </div>
+  </section>
+  <section class="handoff-grid">
+    <div class="panel handoff-card"><div class="eyebrow">COMPONENT ASSETS</div><h2>Use the generated geometry.</h2><p>These links point to the declared GLBs in the saved program. Hidden surfaces and colours are model predictions; dimensions and common scale are unverified.</p><div id="asset-links" class="asset-links"></div><button id="download-handoff" class="primary">Download simulation handoff ↓</button><p class="tiny-note">Descriptive JSON only. It does not launch a simulator or perform a robot action.</p></div>
+    <div class="panel handoff-card"><div class="eyebrow">PHYSICS IS A SEPARATE VALIDATION STEP</div><h2>A useful starting point, with visible limits.</h2><ul class="physics-list"><li>Native component units; no verified shared metric world.</li><li>Joint axes, collision shapes, mass and inertia are missing.</li><li>Friction, physical contact and hidden seating are unverified.</li><li>States are unknown between cited observations; unsupported poses are absent.</li></ul><span class="tag subdued">SIMULATION READY: FALSE</span></div>
+  </section>
+  <section class="panel setup-card"><div><div class="eyebrow">CONNECT YOUR OWN LOCAL AGENT</div><h2>The real interface is MCP over stdio.</h2><p>Use this configuration in an MCP-capable client. It points to the prepared local runtime and read-only server. Adding it does not grant tools for uploads, inference, scheduler changes or file writes.</p><p>Keep recording text as untrusted source data. The server describes what was observed; it does not instruct an agent to carry out physical actions.</p></div><div><div class="code-heading"><h3>Local client configuration</h3><button id="download-config" class="text-button">Download JSON ↓</button></div><pre id="setup-json" tabindex="0" aria-label="Local MCP client setup JSON"></pre><p class="tiny-note">This page does not install or start the server. Paths are specific to this machine.</p></div></section>
+  <footer><span id="snapshot-date">Saved catalog snapshot</span><span>Local private recordings · no public distribution</span><a href="agent-preview.json" download>Full saved preview JSON ↓</a></footer>
+</main>
+</body>
+</html>
