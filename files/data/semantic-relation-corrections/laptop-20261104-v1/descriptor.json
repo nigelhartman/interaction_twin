@@ -1,0 +1,87 @@
+{
+  "format": "interaction-twin-source-reviewed-relation-corrections",
+  "version": 1,
+  "evidence_program": {
+    "path": "data/flow-capture-laptop-20261103-v1/flow-procedure-1/interaction.json",
+    "sha256": "ad13657bba9544af8a4b0b11611ef38fe9d5da1520303354d87906003aca25ce",
+    "bytes": 85703
+  },
+  "source": {
+    "path": "data/flow-capture-laptop-20261103-v1/source/video.mp4",
+    "sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+    "bytes": 13153854
+  },
+  "scene_ref": {
+    "path": "data/laptop-mating-20261104-v1/final-candidate-v2/scene.json",
+    "sha256": "b18bdee88ee71132d930dace670cba2c0f959196b7d74171842682aeea531afb",
+    "bytes": 281431
+  },
+  "approved_revision_binding": {
+    "revision_id": "revision_68fd82b9279349889c7e683faef155d5",
+    "fingerprint": "c8e658c2249d6649d3e0796ecc8f927affe55709af519e857cc7129480f078d7"
+  },
+  "review_ref": {
+    "path": "data/semantic-relation-corrections/laptop-20261104-v1/source-review.json",
+    "sha256": "de711d2914ac4b5485d347fc68c6bd29e4cda4bacaaed52e78128e6ce7590295",
+    "bytes": 2722
+  },
+  "policy": {
+    "original_program_preserved": true,
+    "geometry_or_poses_modified": false,
+    "physical_accuracy_verified": false,
+    "simulation_ready": false,
+    "human_reviewed": false,
+    "fresh_Muse_review": false,
+    "authorization": "owner_requested_autonomous_source_review",
+    "expires_on_approved_revision_change": true
+  },
+  "corrections": [
+    {
+      "relationship_id": "r_cable_to_laptop",
+      "original": {
+        "id": "r_cable_to_laptop",
+        "limitations": [
+          "Plug-socket contact occluded.",
+          "Thin deformable cable shape varies; tight box approximate.",
+          "Early rear cable continuity unresolved."
+        ],
+        "object_track_id": "laptop_lid",
+        "predicate": "removable_from",
+        "rationale": "Cable seen at laptop edge, then held detached, then brought back to edge suggesting removable functional link.",
+        "status": "inferred",
+        "subject_track_id": "power_cable",
+        "evidence_ids": [
+          "source_000055",
+          "source_000058",
+          "source_000065",
+          "source_000066"
+        ]
+      },
+      "replacement": {
+        "id": "r_cable_to_laptop",
+        "limitations": [
+          "Plug-socket contact occluded.",
+          "Thin deformable cable shape varies; tight box approximate.",
+          "Early rear cable continuity unresolved.",
+          "Source-reviewed candidate host correction; exact port position, contact, seating and electrical operation remain unknown."
+        ],
+        "object_track_id": "laptop_base",
+        "predicate": "removable_from",
+        "rationale": "Independent source-image review places the candidate removable cable host at the left rear base edge below the display lid. Later frames show separate handling near the closed laptop; exact port contact and successful reconnection remain unverified.",
+        "status": "inferred",
+        "subject_track_id": "power_cable",
+        "evidence_ids": [
+          "source_000055",
+          "source_000058",
+          "source_000065",
+          "source_000066"
+        ]
+      },
+      "inference": "source_reviewed_candidate_not_verified_attachment",
+      "limitations": [
+        "Host assignment is an independently source-reviewed inference.",
+        "Exact connector location, port identity and successful final reconnection are unknown."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "format": "interaction-twin-source-relation-review",
+  "version": 1,
+  "created_at_utc": "2026-11-04T21:01:14.290304+00:00",
+  "evidence_program": {
+    "path": "data/flow-capture-laptop-20261103-v1/flow-procedure-1/interaction.json",
+    "sha256": "ad13657bba9544af8a4b0b11611ef38fe9d5da1520303354d87906003aca25ce",
+    "bytes": 85703
+  },
+  "source_sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+  "method": "direct_pixel_inspection_independent_of_original_Muse_proposal",
+  "reviewer": "Codex source-image review",
+  "human_reviewed": false,
+  "model_API_called": false,
+  "frames": [
+    {
+      "evidence_id": "source_000055",
+      "source_sample_index": 55,
+      "timestamp_s": 37.567233,
+      "frame": {
+        "path": "data/flow-capture-laptop-20261103-v1/frames/000055.jpg",
+        "sha256": "aa17b5d37ec200ffa74dfef81b134dd8e715f33045cab95fe59901f0aa25ddd3",
+        "bytes": 25933
+      },
+      "finding": "Cable reaches the left rear edge below the lifted display lid. A base-hosted connection is the source-supported candidate; precise port contact is occluded."
+    },
+    {
+      "evidence_id": "source_000058",
+      "source_sample_index": 58,
+      "timestamp_s": 39.666867,
+      "frame": {
+        "path": "data/flow-capture-laptop-20261103-v1/frames/000058.jpg",
+        "sha256": "04a7ee112951694764eca146ad9873328f823dc54634ce5acd7c5646927295b8",
+        "bytes": 30516
+      },
+      "finding": "The connector is held separately above the closed laptop. This does not establish a connection to the display lid."
+    },
+    {
+      "evidence_id": "source_000065",
+      "source_sample_index": 65,
+      "timestamp_s": 44.556133,
+      "frame": {
+        "path": "data/flow-capture-laptop-20261103-v1/frames/000065.jpg",
+        "sha256": "72e4c35354436021e60f912518a3d8bd938680408ccb4433dbd59c8da4fa8b56",
+        "bytes": 31744
+      },
+      "finding": "The cable is held near the left side of the closed laptop. The exact port and whether seating has occurred are not visible."
+    },
+    {
+      "evidence_id": "source_000066",
+      "source_sample_index": 66,
+      "timestamp_s": 45.2328,
+      "frame": {
+        "path": "data/flow-capture-laptop-20261103-v1/frames/000066.jpg",
+        "sha256": "c905533348fd7ecf4047f690910c1b4091c516db103411f54120ae0b3b1d24f6",
+        "bytes": 27895
+      },
+      "finding": "The connector is still handled near the left edge of the closed laptop. No successful reconnection, seating or electrical operation is established."
+    }
+  ],
+  "conclusion": "The candidate cable host is laptop_base rather than laptop_lid. Attachment, exact port coordinates, final seating and electrical operation remain unverified."
+}
