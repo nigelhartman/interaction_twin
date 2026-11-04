@@ -31,9 +31,9 @@ Build → Separate reviewer prompts + code checks → You approve → Curated li
            at most two
 ```
 
-The pipeline has four review roles: **evidence, geometry, mechanics and semantics**. Deterministic checks validate references and contracts. When paid review is explicitly enabled, separate prompts ask the same Muse model to critique those areas. This is role separation, not four independent models. A separately activated visual critic can inspect source images, masks and native renders.
+The pipeline has four review roles: **evidence, geometry, mechanics and semantics**. Deterministic checks validate references and contracts. When paid review is explicitly enabled, separate prompts ask the same Muse model to critique those areas. This is role separation, not four independent models. A separately activated visual critic uses a separate prompt to the same Muse model to inspect source images, masks and native renders.
 
-The extended film V2 animates this review loop and a separate Muse → SAM 3.1 → SAM 3D → object program → MCP/viewers map. Both are architecture illustrations, not live model-event traces.
+The extended film animates this review loop and a separate Muse → SAM 3.1 → SAM 3D → object program → MCP/viewers map. Both are architecture illustrations, not live model-event traces.
 
 The bounded improvement policy permits an initial result followed by **at most two repairs**. Targeted stages can revisit reasoning, tracking, reconstruction or mechanics. The workflow retains comparable measured improvements and stops on insufficient evidence, regression, exhausted rounds or budget/transport uncertainty. Automatic review never substitutes for owner approval of the exact revision. The public code omits private activation receipts and budgets; opening a fresh checkout does not activate paid review.
 
@@ -62,7 +62,7 @@ This map identifies shipped custom implementation, not exact creation dates. The
 
 ## Agent reuse and robotics
 
-The [local MCP server](mcp.md) provides read-only discovery, exact source/program inspection, model/evidence resources and bounded task preparation. A saved scripted client performed **42 MCP calls**, retrieved six native GLBs and nine source images, and prepared a five-step phone/charger draft. A separate Muse metadata critique records unresolved compatibility. The saved trace is not a live autonomous agent or proof of successful charging.
+When run locally from source, the [MCP server](mcp.md) provides read-only discovery, exact source/program inspection, model/evidence resources and bounded task preparation. A saved scripted client performed **42 MCP calls**, retrieved six native GLBs and nine source images, and prepared a five-step phone/charger draft. A separate Muse metadata critique records unresolved compatibility. The saved trace is not a live autonomous agent or proof of successful charging.
 
 The browser robot uses an authored five-DOF rig, inverse kinematics and typed pick/place/open/close actions. Supported instructions compile locally. Its motion is a kinematic rehearsal; it does not establish grasp, contact or insertion success. A separate [Newton CPU experiment](newton-physics-bench.md) demonstrates bounded rigid-body contact with declared proxy geometry and assumed parameters. It does not validate robot grasping.
 

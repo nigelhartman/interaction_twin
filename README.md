@@ -25,14 +25,14 @@ An object is more than its shape. A case opens on a hinge. Earbuds can be remove
 | Explore | What you can do |
 | --- | --- |
 | [Twin library](https://nigelhartman.github.io/interaction_twin/showcase/library.html) | Expand an example, compare video and replay, inspect parts and download GLB + JSON. |
-| [Robotics lab](https://nigelhartman.github.io/interaction_twin/showcase/robotics-lab.html) | Explore recorded motion and a complete browser robot rehearsal. |
+| [Robotics lab](https://nigelhartman.github.io/interaction_twin/showcase/robotics-lab.html) | Explore recorded motion and an authored browser robot rehearsal. |
 | [For agents](https://nigelhartman.github.io/interaction_twin/showcase/agents.html) | Copy the connection guide and inspect a saved cross-recording task draft. |
 
 The public demo is **static and read-only**: five owner-recorded examples, saved model outputs and browser rendering. It runs no uploads, private admin service, paid model calls or hosted MCP server. Supported robot instructions compile locally; the page does not control hardware.
 
 ## From perception to reuse
 
-1. **Find the parts.** Muse proposes components and prompts; SAM 3.1 segments visible components.
+1. **Find the parts.** Muse Spark proposes components and segmentation prompts; SAM 3.1 segments visible components.
 2. **Generate shape.** SAM 3D Objects produces separate mesh drafts from selected frames and masks.
 3. **Connect motion and meaning.** Muse proposes relationships and actions. Local source and geometry checks estimate supported connections and motion.
 4. **Review before publishing.** Separate Muse role prompts and deterministic checks critique a revision. Up to two targeted repair rounds can follow; the owner approves the exact result.
