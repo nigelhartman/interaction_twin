@@ -1,0 +1,135 @@
+{
+  "source_sample_index": 28,
+  "timestamp_s": 9.067467,
+  "status": "source_observed_prior",
+  "native_closed_asset_preserved": {
+    "path": "data/sam3d-native-candidates-20261102/wallet-holder-v1/asset.glb",
+    "sha256": "ee809bb3ec9a63c928e5317001840454f585d9fd4632f2aef6ffad2cef367456",
+    "bytes": 15706696
+  },
+  "qualitative_state": {
+    "confidence": 0.9,
+    "pouch_flap_state": "open",
+    "reason": "Host leaf stationary open while small lid lifted by fingers showing both snap dots and dark pouch interior.",
+    "source_index": 28,
+    "wallet_state": "open"
+  },
+  "reason": "exact_source_RGB_SAM_region_with_CPU_learned_monocular_depth_prior",
+  "asset": {
+    "path": "data/source-visible-flexure/wallet-20261104-v4/source-028/observed-surface.glb",
+    "sha256": "3b2b58e6aa4629f2963f412b36735a8309fc108b7c2a048e22d61c417431fb36",
+    "bytes": 108212
+  },
+  "source_RGB": {
+    "path": "data/flow-rigid-parts-wallet-20261031-v1/frames/000028.jpg",
+    "sha256": "5b6d46ef490fea23a5ef789e663caffe14a9c816eb5759ccb7647757d252100c",
+    "bytes": 31282
+  },
+  "source_masks": [
+    {
+      "track_id": "wallet_holder",
+      "path": "data/flow-rigid-parts-wallet-20261031-v1/segmentation/flow-components-1/raw_masks/wallet_holder/000028.png",
+      "sha256": "2a0be3ab917ce6920efd970ee7b15d1aad287f50f38e6a8d86cc3acbd7722fd3",
+      "bytes": 3514
+    },
+    {
+      "track_id": "pouch_flap",
+      "path": "data/flow-rigid-parts-wallet-20261031-v1/segmentation/flow-components-1/raw_masks/pouch_flap/000028.png",
+      "sha256": "4bc9005731c4ffbc57a6ae848c387e85dcae6f617a4c1d23ba34cd0d7c2b1e71",
+      "bytes": 1615
+    }
+  ],
+  "source_pixel_map": {
+    "path": "data/source-visible-flexure/wallet-20261104-v4/source-028/source-pixel-map.npz",
+    "sha256": "66f7a541f93867a799f13795a3f053480c770440cafda9f591801e34f49536a6",
+    "bytes": 20671
+  },
+  "source_grid_stride_px": 9,
+  "depth_prior_model_intrinsics": [
+    [
+      1.7231508493423462,
+      0.0,
+      0.5
+    ],
+    [
+      0.0,
+      0.9692723751068115,
+      0.5
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "valid_mask_depth_fraction": 1.0,
+  "camera_from_asset": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "depth_scale_gauge": 2.51278094458931,
+  "native_prior_translation_z": 1.234552459886176,
+  "vertices": 1626,
+  "triangles": 2982,
+  "source_visible_only": true,
+  "virtual_flexure": {
+    "format": "interaction-twin-virtual-flexure-parameters",
+    "type": "virtual_flexure_band",
+    "status": "unknown",
+    "origin_camera": null,
+    "axis_camera": null,
+    "angle_rad": null,
+    "reason": "monocular_prior_does_not_identifiably_recover_material_joint_or_fold_axis",
+    "angle_is_measured": false,
+    "physical_accuracy_verified": false
+  },
+  "wall_seconds": 0.23965979198692366,
+  "new_API_calls": 0,
+  "new_GPU_calls": 0,
+  "physical_accuracy_verified": false,
+  "parent_research_asset_sha256": "34fb9e42bf85564d7220a95d878bbfb2fd0943b57c8286b88de776d4179eca45",
+  "depth_model": {
+    "name": "Ruicheng/moge-2-vits-normal",
+    "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+    "device": "cpu"
+  },
+  "triangles_pruned_by_unknown_pixel_footprint": 72,
+  "triangle_source_footprint_verified": true,
+  "hidden_backs_culled": true,
+  "unlit_exact_vertex_RGB": true,
+  "visible_component_ids": [
+    "wallet_holder",
+    "pouch_flap"
+  ],
+  "appearance_mode": "exact_source_JPEG_projected_UV",
+  "texture_source_RGB": {
+    "path": "data/flow-rigid-parts-wallet-20261031-v1/frames/000028.jpg",
+    "sha256": "5b6d46ef490fea23a5ef789e663caffe14a9c816eb5759ccb7647757d252100c",
+    "bytes": 31282
+  },
+  "sampled_source_RGB_attribute": "_SOURCE_RGB",
+  "vertex_RGB_multiplied_into_texture": false,
+  "geometry_unchanged_from_footprint_verified_parent": true
+}

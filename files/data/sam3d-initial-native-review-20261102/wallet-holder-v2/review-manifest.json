@@ -1,0 +1,130 @@
+{
+  "format": "sam3d-initial-native-review",
+  "version": 2,
+  "fixture": false,
+  "native_only": true,
+  "component_id": "wallet_holder",
+  "title": "Wallet holder",
+  "source": {
+    "video_sha256": "b153e7ce79f140c861764c832ba3def149f5596ab4fe23bd3d671af913d5c021",
+    "sample_index": 99,
+    "timestamp_s": 32.869556,
+    "source_case": "flow-rigid-parts-wallet-20261031-v1",
+    "source_sample_index": 99,
+    "time_domain": "source_video_presentation_seconds"
+  },
+  "image_size": [
+    540,
+    960
+  ],
+  "native_glb_sha256": "ee809bb3ec9a63c928e5317001840454f585d9fd4632f2aef6ffad2cef367456",
+  "native_up": "Y",
+  "mesh_stats": {
+    "bounds": [
+      [
+        -0.3847944736480713,
+        -0.1263883113861084,
+        -0.4987870454788208
+      ],
+      [
+        0.3854786157608032,
+        0.1268407702445984,
+        0.49965599179267883
+      ]
+    ],
+    "primitive_count": 1,
+    "rendered_vertices": 392632,
+    "faces": 785300,
+    "appearance_modes": [
+      "vertex_rgb"
+    ],
+    "rendering_policy": "unlit base color; embedded images/UVs/node transforms preserved; PBR physics not simulated"
+  },
+  "appearance": "official notebook defaults: model-generated vertex colour and coloured Gaussian splat; UV texture baking disabled",
+  "files": [
+    {
+      "path": "candidate-geometry.bin",
+      "sha256": "aed2339066643ae1f705f5abd39ed5e1a8cf75b473c97faa87f406fb2d364f19",
+      "bytes": 31410992
+    },
+    {
+      "path": "candidate-scene.json",
+      "sha256": "6397231bcc6d37bb2820eaf1f905df46619b634d7b4a0e32652b0a6ae630a1df",
+      "bytes": 1656
+    },
+    {
+      "path": "candidate.glb",
+      "sha256": "ee809bb3ec9a63c928e5317001840454f585d9fd4632f2aef6ffad2cef367456",
+      "bytes": 15706696
+    },
+    {
+      "path": "mask-overlay.png",
+      "sha256": "010df17eb6eb4bab87ec26929c59e6cf63a9fa3cc9f5d431b46297cf478c6658",
+      "bytes": 3463
+    },
+    {
+      "path": "model-metadata.json",
+      "sha256": "15c5f560fcb1a10626f3b656b99fb55d71d5bdd2b2934e227fd5b0b044812e7a",
+      "bytes": 15489
+    },
+    {
+      "path": "source-mask.png",
+      "sha256": "1c9927734f4bd301eb8f2684033e75fcfcf34813d6e7acaea58df64536fd58bc",
+      "bytes": 1685
+    },
+    {
+      "path": "source-rgb.png",
+      "sha256": "a2f2a21c80fdf10136d2cd4cb6b2e4dbd08831f638cad79d03a143cad6b237d1",
+      "bytes": 191264
+    }
+  ],
+  "initial_handoff": {
+    "path": "data/initial-sam3d-handoffs/flow-rigid-parts-wallet-20261031-v1-wallet_holder-20261102-v1/handoff.json",
+    "sha256": "96e5db2abfb8c1bca556074e3019daea62ccefe3c384755c093af9c429d868ed",
+    "bytes": 2513
+  },
+  "import_receipt": {
+    "path": "data/sam3d-native-candidates-20261102/wallet-holder-v1/import.json",
+    "sha256": "5e263ae8d25848bd7ef318243f648911a276c9962b441434704e823333a33c7a"
+  },
+  "scope": {
+    "baseline_required": false,
+    "original_geometry_modified": false,
+    "old_pose_reused": false,
+    "source_video_placement_established": false,
+    "physical_accuracy_verified": false,
+    "metric_scale_verified": false,
+    "assembly_verified": false,
+    "contact_verified": false,
+    "simulation_ready": false,
+    "selected": false,
+    "catalog_changed": false
+  },
+  "renderer": {
+    "shared_source_sha256": "b5e5ad7e2ff040d43886590da70b77ccbaa4cb804e983d47aaf68824514740d6",
+    "review_copy_sha256": "09c6e6f73d21256b2e7be403f767f5c641e32f54954bfde7b4f18d2c59f40c44",
+    "display_background": "neutral",
+    "display_clear_rgba": [
+      0.91,
+      0.93,
+      0.9,
+      1.0
+    ],
+    "native_up": "Y",
+    "geometry_or_material_changed": false,
+    "pbr_rendering": false,
+    "splat_rendering": false
+  },
+  "geometry_transport": {
+    "format": "lossless-native-geometry",
+    "version": 1,
+    "byte_order": "little",
+    "float_encoding": "ieee754-float64",
+    "index_encoding": "uint32",
+    "descriptor_bytes": 1656,
+    "geometry_bytes": 31410992,
+    "combined_scene_budget_bytes": 67108864,
+    "geometry_sha256": "aed2339066643ae1f705f5abd39ed5e1a8cf75b473c97faa87f406fb2d364f19"
+  },
+  "execution_scope": "Genuine-result source bytes revalidated; standalone native candidate only. No physical validity or motion acceptance."
+}

@@ -1,0 +1,734 @@
+{
+  "format": "interaction-twin-cross-recording-task",
+  "version": 1,
+  "compiler_version": "cross-recording-task-1",
+  "instruction": "Prepare a task to charge this phone.",
+  "intent": "prepare_charge_phone",
+  "status": "draft_requires_validation",
+  "planning_method": "deterministic_typed_composition_not_live_llm",
+  "sources": [
+    {
+      "role": "phone",
+      "twin_id": "flow-capture-phone-20261103-v1--flow-procedure-1",
+      "program_sha256": "98cd7e5bb4fc375fb7c164dec7d9a09973d072ccd108449204af9ce942d36165",
+      "program_uri": "twin://flow-capture-phone-20261103-v1--flow-procedure-1/program",
+      "source": {
+        "path": "data/flow-capture-phone-20261103-v1/source/video.mp4",
+        "sha256": "1835410d17216b36642759a4a3aa488485f3d62c52df8920b56c58e7a50213b8",
+        "original_sha256": "c2c1a433fe4ec3463c4b318aaa687802520bf3a4fcb740c376a8299b1a4d4fc4",
+        "duration_s": 32.358022,
+        "time_domain": "source_video_presentation_seconds"
+      },
+      "assets": [
+        {
+          "track_id": "cable_connector",
+          "sha256": "87ec1e06556cdd1703ddc4620b3f00967b0c6cc9f9156571ce4b6ae60a4d59e8",
+          "uri": "twin://flow-capture-phone-20261103-v1--flow-procedure-1/assets/cable_connector"
+        },
+        {
+          "track_id": "phone_blue",
+          "sha256": "384fcf3aeb759d32b87a399d1ef0b91e7570bc871ef5fb7e480542cb1fada544",
+          "uri": "twin://flow-capture-phone-20261103-v1--flow-procedure-1/assets/phone_blue"
+        }
+      ],
+      "library_url": "/showcase/library.html?case=flow-capture-phone-20261103-v1--flow-procedure-1",
+      "interfaces": [
+        {
+          "id": "phone_port",
+          "component_id": "phone_blue",
+          "role": "receptacle",
+          "connector_family": "usb_c",
+          "location": "device_port",
+          "step_ids": [
+            "s5_contact_edge"
+          ],
+          "evidence_ids": [
+            "source_000035",
+            "source_000038"
+          ],
+          "twin_id": "flow-capture-phone-20261103-v1--flow-procedure-1",
+          "program_sha256": "98cd7e5bb4fc375fb7c164dec7d9a09973d072ccd108449204af9ce942d36165",
+          "type_attribution": "owner_capture_context",
+          "owner_context_id": "owner_phone_capture_description_20261103",
+          "observed_contact_status": "saved_model_proposal_not_verified_seating",
+          "pose": null,
+          "metric_dimensions": null,
+          "electrical_specifications": null,
+          "physical_fit_verified": false,
+          "evidence": [
+            {
+              "id": "source_000035",
+              "timestamp_s": 23.759444,
+              "frame_sha256": "259bdaec9b8fae3ec90819d71d5fd02ceeb7038ab051876fddd48ceda5fc64ab",
+              "uri": "twin://flow-capture-phone-20261103-v1--flow-procedure-1/evidence/source_000035",
+              "frame_url": "/files/data/flow-capture-phone-20261103-v1/frames/000035.jpg",
+              "video_url": "/files/data/flow-capture-phone-20261103-v1/source/video.mp4#t=23.759444"
+            },
+            {
+              "id": "source_000038",
+              "timestamp_s": 25.859078,
+              "frame_sha256": "68a01034bef81f8f33bd09ca1b1813698a70bc6ba6f37b8ac6f4e792f041967d",
+              "uri": "twin://flow-capture-phone-20261103-v1--flow-procedure-1/evidence/source_000038",
+              "frame_url": "/files/data/flow-capture-phone-20261103-v1/frames/000038.jpg",
+              "video_url": "/files/data/flow-capture-phone-20261103-v1/source/video.mp4#t=25.859078"
+            }
+          ]
+        },
+        {
+          "id": "phone_video_plug",
+          "component_id": "cable_connector",
+          "role": "plug",
+          "connector_family": "usb_c",
+          "location": "device_end",
+          "step_ids": [
+            "s4_bring_cable",
+            "s5_contact_edge"
+          ],
+          "evidence_ids": [
+            "source_000034",
+            "source_000035",
+            "source_000038"
+          ],
+          "twin_id": "flow-capture-phone-20261103-v1--flow-procedure-1",
+          "program_sha256": "98cd7e5bb4fc375fb7c164dec7d9a09973d072ccd108449204af9ce942d36165",
+          "type_attribution": "owner_capture_context",
+          "owner_context_id": "owner_phone_capture_description_20261103",
+          "observed_contact_status": "saved_model_proposal_not_verified_seating",
+          "pose": null,
+          "metric_dimensions": null,
+          "electrical_specifications": null,
+          "physical_fit_verified": false,
+          "evidence": [
+            {
+              "id": "source_000034",
+              "timestamp_s": 23.059567,
+              "frame_sha256": "fb4a5c3d2f5cbf16e27234eef9aa9c1f07c454adc14608f38cad5e54e940fb21",
+              "uri": "twin://flow-capture-phone-20261103-v1--flow-procedure-1/evidence/source_000034",
+              "frame_url": "/files/data/flow-capture-phone-20261103-v1/frames/000034.jpg",
+              "video_url": "/files/data/flow-capture-phone-20261103-v1/source/video.mp4#t=23.059567"
+            },
+            {
+              "id": "source_000035",
+              "timestamp_s": 23.759444,
+              "frame_sha256": "259bdaec9b8fae3ec90819d71d5fd02ceeb7038ab051876fddd48ceda5fc64ab",
+              "uri": "twin://flow-capture-phone-20261103-v1--flow-procedure-1/evidence/source_000035",
+              "frame_url": "/files/data/flow-capture-phone-20261103-v1/frames/000035.jpg",
+              "video_url": "/files/data/flow-capture-phone-20261103-v1/source/video.mp4#t=23.759444"
+            },
+            {
+              "id": "source_000038",
+              "timestamp_s": 25.859078,
+              "frame_sha256": "68a01034bef81f8f33bd09ca1b1813698a70bc6ba6f37b8ac6f4e792f041967d",
+              "uri": "twin://flow-capture-phone-20261103-v1--flow-procedure-1/evidence/source_000038",
+              "frame_url": "/files/data/flow-capture-phone-20261103-v1/frames/000038.jpg",
+              "video_url": "/files/data/flow-capture-phone-20261103-v1/source/video.mp4#t=25.859078"
+            }
+          ]
+        }
+      ],
+      "owner_context": {
+        "id": "owner_phone_capture_description_20261103",
+        "attribution": "Owner's capture description in this project conversation, 3 November 2026.",
+        "statement": "I connected the USB-C cable to my phone with the USB-C port.",
+        "status": "owner_reported_not_independently_measured"
+      }
+    },
+    {
+      "role": "charger",
+      "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+      "program_sha256": "462365b90da28aa1b57d225000acd367e2c583db0755c3ab105edeefd221b209",
+      "program_uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/program",
+      "source": {
+        "path": "data/flow-capture-charger-20261103-v1/source/video.mp4",
+        "sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c",
+        "original_sha256": "53e407b9a288c199cf6e1827ad5ec99693a86714885c8c628e77daf48802d2df",
+        "duration_s": 45.4229,
+        "time_domain": "source_video_presentation_seconds"
+      },
+      "assets": [
+        {
+          "track_id": "wall_outlet",
+          "sha256": "476967630214300899877caf98739ae9e2c738069bf47c715db10f8e7cdb2f12",
+          "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/assets/wall_outlet"
+        },
+        {
+          "track_id": "adapter_early",
+          "sha256": "74635a414ec57bd5e92bbda01a9b55bb77a8e01152c97c53d8773f0abbf98636",
+          "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/assets/adapter_early"
+        },
+        {
+          "track_id": "power_cable",
+          "sha256": "9d308a2d35d4b6eb63a6af7fdd71c9b440d6c41200416d2894d5e4aa33a0e147",
+          "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/assets/power_cable"
+        },
+        {
+          "track_id": "adapter_late",
+          "sha256": "369ce5a10634764fac142c654571a5b9281e5379aa947e906619d7809b9f1287",
+          "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/assets/adapter_late"
+        }
+      ],
+      "library_url": "/showcase/library.html?case=flow-capture-charger-20261103-v1--flow-procedure-1",
+      "interfaces": [
+        {
+          "id": "adapter_port",
+          "component_id": "adapter_late",
+          "role": "receptacle",
+          "connector_family": "usb_c",
+          "location": "adapter_port",
+          "step_ids": [
+            "step_join_cable_adapter"
+          ],
+          "evidence_ids": [
+            "source_000034",
+            "source_000037"
+          ],
+          "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+          "program_sha256": "462365b90da28aa1b57d225000acd367e2c583db0755c3ab105edeefd221b209",
+          "type_attribution": "owner_capture_context",
+          "owner_context_id": "owner_charger_capture_description_20261103",
+          "observed_contact_status": "saved_model_proposal_not_verified_seating",
+          "pose": null,
+          "metric_dimensions": null,
+          "electrical_specifications": null,
+          "physical_fit_verified": false,
+          "evidence": [
+            {
+              "id": "source_000034",
+              "timestamp_s": 23.062989,
+              "frame_sha256": "bf6f581f93f825bfec55033c961091869e1ea29abd97bea9999799b28999b5e5",
+              "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/evidence/source_000034",
+              "frame_url": "/files/data/flow-capture-charger-20261103-v1/frames/000034.jpg",
+              "video_url": "/files/data/flow-capture-charger-20261103-v1/source/video.mp4#t=23.062989"
+            },
+            {
+              "id": "source_000037",
+              "timestamp_s": 25.159378,
+              "frame_sha256": "6d1df1d16b111c9c7acc5850474720e26cdc081dc3330dec8f0ad913bfaa6d34",
+              "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/evidence/source_000037",
+              "frame_url": "/files/data/flow-capture-charger-20261103-v1/frames/000037.jpg",
+              "video_url": "/files/data/flow-capture-charger-20261103-v1/source/video.mp4#t=25.159378"
+            }
+          ]
+        },
+        {
+          "id": "cable_adapter_end",
+          "component_id": "power_cable",
+          "role": "plug",
+          "connector_family": "usb_c",
+          "location": "adapter_end",
+          "step_ids": [
+            "step_join_cable_adapter"
+          ],
+          "evidence_ids": [
+            "source_000034",
+            "source_000037"
+          ],
+          "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+          "program_sha256": "462365b90da28aa1b57d225000acd367e2c583db0755c3ab105edeefd221b209",
+          "type_attribution": "owner_capture_context",
+          "owner_context_id": "owner_charger_capture_description_20261103",
+          "observed_contact_status": "saved_model_proposal_not_verified_seating",
+          "pose": null,
+          "metric_dimensions": null,
+          "electrical_specifications": null,
+          "physical_fit_verified": false,
+          "evidence": [
+            {
+              "id": "source_000034",
+              "timestamp_s": 23.062989,
+              "frame_sha256": "bf6f581f93f825bfec55033c961091869e1ea29abd97bea9999799b28999b5e5",
+              "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/evidence/source_000034",
+              "frame_url": "/files/data/flow-capture-charger-20261103-v1/frames/000034.jpg",
+              "video_url": "/files/data/flow-capture-charger-20261103-v1/source/video.mp4#t=23.062989"
+            },
+            {
+              "id": "source_000037",
+              "timestamp_s": 25.159378,
+              "frame_sha256": "6d1df1d16b111c9c7acc5850474720e26cdc081dc3330dec8f0ad913bfaa6d34",
+              "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/evidence/source_000037",
+              "frame_url": "/files/data/flow-capture-charger-20261103-v1/frames/000037.jpg",
+              "video_url": "/files/data/flow-capture-charger-20261103-v1/source/video.mp4#t=25.159378"
+            }
+          ]
+        },
+        {
+          "id": "cable_free_end",
+          "component_id": "power_cable",
+          "role": "plug",
+          "connector_family": "usb_c",
+          "location": "free_end",
+          "step_ids": [
+            "step_display_cable_end"
+          ],
+          "evidence_ids": [
+            "source_000057",
+            "source_000059"
+          ],
+          "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+          "program_sha256": "462365b90da28aa1b57d225000acd367e2c583db0755c3ab105edeefd221b209",
+          "type_attribution": "owner_capture_context",
+          "owner_context_id": "owner_charger_capture_description_20261103",
+          "observed_contact_status": "saved_model_proposal_not_verified_seating",
+          "pose": null,
+          "metric_dimensions": null,
+          "electrical_specifications": null,
+          "physical_fit_verified": false,
+          "evidence": [
+            {
+              "id": "source_000057",
+              "timestamp_s": 39.090567,
+              "frame_sha256": "8b88f972971d449da218cb254d3a6314cffa82fe34a45ef7c02cf2d1cbe0a81e",
+              "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/evidence/source_000057",
+              "frame_url": "/files/data/flow-capture-charger-20261103-v1/frames/000057.jpg",
+              "video_url": "/files/data/flow-capture-charger-20261103-v1/source/video.mp4#t=39.090567"
+            },
+            {
+              "id": "source_000059",
+              "timestamp_s": 40.490378,
+              "frame_sha256": "e58279679a875ee8eafcedb22102f079a0b5dc6947087d62fb70c585686187ef",
+              "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/evidence/source_000059",
+              "frame_url": "/files/data/flow-capture-charger-20261103-v1/frames/000059.jpg",
+              "video_url": "/files/data/flow-capture-charger-20261103-v1/source/video.mp4#t=40.490378"
+            }
+          ]
+        },
+        {
+          "id": "adapter_mains_input",
+          "component_id": "adapter_late",
+          "role": "plug",
+          "connector_family": "eu_mains_unspecified",
+          "location": "mains_prongs",
+          "step_ids": [
+            "step_insert_outlet"
+          ],
+          "evidence_ids": [
+            "source_000045",
+            "source_000047"
+          ],
+          "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+          "program_sha256": "462365b90da28aa1b57d225000acd367e2c583db0755c3ab105edeefd221b209",
+          "type_attribution": "owner_capture_context",
+          "owner_context_id": "owner_charger_capture_description_20261103",
+          "observed_contact_status": "saved_model_proposal_not_verified_seating",
+          "pose": null,
+          "metric_dimensions": null,
+          "electrical_specifications": null,
+          "physical_fit_verified": false,
+          "evidence": [
+            {
+              "id": "source_000045",
+              "timestamp_s": 30.735211,
+              "frame_sha256": "bddedf475c670397a850b687a4cd4c3515986853858a2cb2d36b8de38a62a7a7",
+              "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/evidence/source_000045",
+              "frame_url": "/files/data/flow-capture-charger-20261103-v1/frames/000045.jpg",
+              "video_url": "/files/data/flow-capture-charger-20261103-v1/source/video.mp4#t=30.735211"
+            },
+            {
+              "id": "source_000047",
+              "timestamp_s": 32.124911,
+              "frame_sha256": "4cf7f4c2560d89806b5039f8bda731f7547d803480e2c5851b39f498508c83ee",
+              "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/evidence/source_000047",
+              "frame_url": "/files/data/flow-capture-charger-20261103-v1/frames/000047.jpg",
+              "video_url": "/files/data/flow-capture-charger-20261103-v1/source/video.mp4#t=32.124911"
+            }
+          ]
+        },
+        {
+          "id": "wall_socket",
+          "component_id": "wall_outlet",
+          "role": "receptacle",
+          "connector_family": "eu_mains_unspecified",
+          "location": "wall_socket",
+          "step_ids": [
+            "step_insert_outlet"
+          ],
+          "evidence_ids": [
+            "source_000045",
+            "source_000047"
+          ],
+          "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+          "program_sha256": "462365b90da28aa1b57d225000acd367e2c583db0755c3ab105edeefd221b209",
+          "type_attribution": "owner_capture_context",
+          "owner_context_id": "owner_charger_capture_description_20261103",
+          "observed_contact_status": "saved_model_proposal_not_verified_seating",
+          "pose": null,
+          "metric_dimensions": null,
+          "electrical_specifications": null,
+          "physical_fit_verified": false,
+          "evidence": [
+            {
+              "id": "source_000045",
+              "timestamp_s": 30.735211,
+              "frame_sha256": "bddedf475c670397a850b687a4cd4c3515986853858a2cb2d36b8de38a62a7a7",
+              "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/evidence/source_000045",
+              "frame_url": "/files/data/flow-capture-charger-20261103-v1/frames/000045.jpg",
+              "video_url": "/files/data/flow-capture-charger-20261103-v1/source/video.mp4#t=30.735211"
+            },
+            {
+              "id": "source_000047",
+              "timestamp_s": 32.124911,
+              "frame_sha256": "4cf7f4c2560d89806b5039f8bda731f7547d803480e2c5851b39f498508c83ee",
+              "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/evidence/source_000047",
+              "frame_url": "/files/data/flow-capture-charger-20261103-v1/frames/000047.jpg",
+              "video_url": "/files/data/flow-capture-charger-20261103-v1/source/video.mp4#t=32.124911"
+            }
+          ]
+        }
+      ],
+      "owner_context": {
+        "id": "owner_charger_capture_description_20261103",
+        "attribution": "Owner's capture description in this project conversation, 3 November 2026.",
+        "statement": "An Apple charger connects to a cable, then a European power socket. Both ends of the cable are USB-C.",
+        "status": "owner_reported_not_independently_measured"
+      }
+    }
+  ],
+  "connection_candidates": [
+    {
+      "id": "cable_to_adapter",
+      "title": "Cable → adapter",
+      "interfaces": [
+        {
+          "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+          "interface_id": "cable_adapter_end",
+          "component_id": "power_cable"
+        },
+        {
+          "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+          "interface_id": "adapter_port",
+          "component_id": "adapter_late"
+        }
+      ],
+      "connector_family": "usb_c",
+      "status": "candidate_requires_validation",
+      "type_basis": "attributed_owner_capture_context",
+      "cross_recording": false,
+      "physical_instance_identity": "within_recording_tracklet_candidate",
+      "physical_fit_verified": false,
+      "electrical_compatibility": "unknown",
+      "charging_success": "unknown",
+      "observed_pair_in_one_recording": true,
+      "evidence": [
+        {
+          "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+          "program_sha256": "462365b90da28aa1b57d225000acd367e2c583db0755c3ab105edeefd221b209",
+          "step_ids": [
+            "step_join_cable_adapter"
+          ],
+          "evidence_ids": [
+            "source_000034",
+            "source_000037"
+          ]
+        },
+        {
+          "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+          "program_sha256": "462365b90da28aa1b57d225000acd367e2c583db0755c3ab105edeefd221b209",
+          "step_ids": [
+            "step_join_cable_adapter"
+          ],
+          "evidence_ids": [
+            "source_000034",
+            "source_000037"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cable_to_phone",
+      "title": "Cable from recording A → phone from recording B",
+      "interfaces": [
+        {
+          "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+          "interface_id": "cable_free_end",
+          "component_id": "power_cable"
+        },
+        {
+          "twin_id": "flow-capture-phone-20261103-v1--flow-procedure-1",
+          "interface_id": "phone_port",
+          "component_id": "phone_blue"
+        }
+      ],
+      "connector_family": "usb_c",
+      "status": "candidate_requires_validation",
+      "type_basis": "attributed_owner_capture_context",
+      "cross_recording": true,
+      "physical_instance_identity": "unknown",
+      "physical_fit_verified": false,
+      "electrical_compatibility": "unknown",
+      "charging_success": "unknown",
+      "observed_pair_in_one_recording": false,
+      "evidence": [
+        {
+          "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+          "program_sha256": "462365b90da28aa1b57d225000acd367e2c583db0755c3ab105edeefd221b209",
+          "step_ids": [
+            "step_display_cable_end"
+          ],
+          "evidence_ids": [
+            "source_000057",
+            "source_000059"
+          ]
+        },
+        {
+          "twin_id": "flow-capture-phone-20261103-v1--flow-procedure-1",
+          "program_sha256": "98cd7e5bb4fc375fb7c164dec7d9a09973d072ccd108449204af9ce942d36165",
+          "step_ids": [
+            "s5_contact_edge"
+          ],
+          "evidence_ids": [
+            "source_000035",
+            "source_000038"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adapter_to_socket",
+      "title": "Adapter → socket",
+      "interfaces": [
+        {
+          "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+          "interface_id": "adapter_mains_input",
+          "component_id": "adapter_late"
+        },
+        {
+          "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+          "interface_id": "wall_socket",
+          "component_id": "wall_outlet"
+        }
+      ],
+      "connector_family": "eu_mains_unspecified",
+      "status": "candidate_requires_validation",
+      "type_basis": "attributed_owner_capture_context",
+      "cross_recording": false,
+      "physical_instance_identity": "within_recording_tracklet_candidate",
+      "physical_fit_verified": false,
+      "electrical_compatibility": "unknown",
+      "charging_success": "unknown",
+      "observed_pair_in_one_recording": true,
+      "evidence": [
+        {
+          "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+          "program_sha256": "462365b90da28aa1b57d225000acd367e2c583db0755c3ab105edeefd221b209",
+          "step_ids": [
+            "step_insert_outlet"
+          ],
+          "evidence_ids": [
+            "source_000045",
+            "source_000047"
+          ]
+        },
+        {
+          "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+          "program_sha256": "462365b90da28aa1b57d225000acd367e2c583db0755c3ab105edeefd221b209",
+          "step_ids": [
+            "step_insert_outlet"
+          ],
+          "evidence_ids": [
+            "source_000045",
+            "source_000047"
+          ]
+        }
+      ]
+    }
+  ],
+  "task_draft": {
+    "sequence_kind": "evidence_linked_templates_not_robot_commands",
+    "steps": [
+      {
+        "id": "inspect_parts",
+        "title": "Retrieve the phone, cable and adapter",
+        "kind": "inspection",
+        "depends_on": [],
+        "connection_id": null,
+        "source_steps": [
+          {
+            "twin_id": "flow-capture-phone-20261103-v1--flow-procedure-1",
+            "program_sha256": "98cd7e5bb4fc375fb7c164dec7d9a09973d072ccd108449204af9ce942d36165",
+            "step_id": "s3_show_edges",
+            "start_s": 6.2956,
+            "end_s": 9.794989,
+            "evidence_ids": [
+              "source_000010",
+              "source_000013",
+              "source_000015"
+            ]
+          },
+          {
+            "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+            "program_sha256": "462365b90da28aa1b57d225000acd367e2c583db0755c3ab105edeefd221b209",
+            "step_id": "step_display_cable_end",
+            "start_s": 39.090567,
+            "end_s": 40.490378,
+            "evidence_ids": [
+              "source_000057",
+              "source_000058",
+              "source_000059"
+            ]
+          }
+        ],
+        "completion_status": "artifact_retrieval_only_no_physical_success"
+      },
+      {
+        "id": "prepare_adapter_end",
+        "title": "Reuse the demonstrated cable-to-adapter step",
+        "kind": "source_step_template",
+        "depends_on": [
+          "inspect_parts"
+        ],
+        "connection_id": "cable_to_adapter",
+        "source_steps": [
+          {
+            "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+            "program_sha256": "462365b90da28aa1b57d225000acd367e2c583db0755c3ab105edeefd221b209",
+            "step_id": "step_join_cable_adapter",
+            "start_s": 23.062989,
+            "end_s": 25.159378,
+            "evidence_ids": [
+              "source_000034",
+              "source_000035",
+              "source_000036",
+              "source_000037"
+            ]
+          }
+        ],
+        "completion_status": "blocked_until_fit_and_electrical_validation"
+      },
+      {
+        "id": "prepare_phone_end",
+        "title": "Propose the other cable end for the phone port",
+        "kind": "cross_recording_composition_candidate",
+        "depends_on": [
+          "prepare_adapter_end"
+        ],
+        "connection_id": "cable_to_phone",
+        "source_steps": [
+          {
+            "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+            "program_sha256": "462365b90da28aa1b57d225000acd367e2c583db0755c3ab105edeefd221b209",
+            "step_id": "step_display_cable_end",
+            "start_s": 39.090567,
+            "end_s": 40.490378,
+            "evidence_ids": [
+              "source_000057",
+              "source_000058",
+              "source_000059"
+            ]
+          },
+          {
+            "twin_id": "flow-capture-phone-20261103-v1--flow-procedure-1",
+            "program_sha256": "98cd7e5bb4fc375fb7c164dec7d9a09973d072ccd108449204af9ce942d36165",
+            "step_id": "s4_bring_cable",
+            "start_s": 21.659811,
+            "end_s": 23.059567,
+            "evidence_ids": [
+              "source_000032",
+              "source_000033",
+              "source_000034"
+            ]
+          },
+          {
+            "twin_id": "flow-capture-phone-20261103-v1--flow-procedure-1",
+            "program_sha256": "98cd7e5bb4fc375fb7c164dec7d9a09973d072ccd108449204af9ce942d36165",
+            "step_id": "s5_contact_edge",
+            "start_s": 23.759444,
+            "end_s": 25.859078,
+            "evidence_ids": [
+              "source_000035",
+              "source_000036",
+              "source_000037",
+              "source_000038"
+            ]
+          }
+        ],
+        "completion_status": "not_demonstrated_across_recordings"
+      },
+      {
+        "id": "prepare_power_setup",
+        "title": "Keep the demonstrated socket step as a blocked setup reference",
+        "kind": "source_step_template",
+        "depends_on": [
+          "prepare_phone_end"
+        ],
+        "connection_id": "adapter_to_socket",
+        "source_steps": [
+          {
+            "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+            "program_sha256": "462365b90da28aa1b57d225000acd367e2c583db0755c3ab105edeefd221b209",
+            "step_id": "step_insert_outlet",
+            "start_s": 30.735211,
+            "end_s": 32.124911,
+            "evidence_ids": [
+              "source_000045",
+              "source_000046",
+              "source_000047"
+            ]
+          }
+        ],
+        "completion_status": "blocked_until_mains_setup_validation"
+      },
+      {
+        "id": "verify_charging",
+        "title": "Require independent seating and charging confirmation",
+        "kind": "missing_success_check",
+        "depends_on": [
+          "prepare_power_setup"
+        ],
+        "connection_id": null,
+        "source_steps": [],
+        "completion_status": "charging_not_observed_or_verified"
+      }
+    ]
+  },
+  "missing_requirements": [
+    {
+      "id": "physical_connector_fit",
+      "description": "Measure connector and port geometry, insertion axis, clearance and seating; USB-C labels alone do not establish fit."
+    },
+    {
+      "id": "electrical_specifications",
+      "description": "Verify adapter output, cable capability, phone requirements and power negotiation; charging is not verified by visible contact."
+    },
+    {
+      "id": "cable_identity_and_ends",
+      "description": "Confirm the cable selected from the charger recording has the intended free end; physical identity across recordings is unknown."
+    },
+    {
+      "id": "flexible_cable_model",
+      "description": "Replace the static cable shape with a validated deformable model or measured routing; do not rigidly transfer its whole mesh."
+    },
+    {
+      "id": "metric_robot_and_scene",
+      "description": "Calibrate scale, camera/world frames, robot reach, grasp, contact and collision geometry before robot planning."
+    },
+    {
+      "id": "mains_setup_validation",
+      "description": "An exact socket/prong standard, electrical state and approved execution setup are unavailable; the mains step stays blocked."
+    },
+    {
+      "id": "independent_success_check",
+      "description": "Use independent seating and charging-state checks; this draft contains no executable robot actions or demonstrated cross-recording success."
+    }
+  ],
+  "robot_actions": [],
+  "claims": {
+    "cross_recording_composition_proposed": true,
+    "same_physical_cable_verified": false,
+    "physical_accuracy_verified": false,
+    "electrical_compatibility_verified": false,
+    "charging_success_verified": false,
+    "simulation_ready": false,
+    "robot_execution_available": false,
+    "new_api_calls": 0,
+    "inference_performed": false
+  },
+  "context_registry_sha256": "5bb5c6b23516c5d27399d6eb5ad0b49da8a811aa9f84ff788e5128bcfcde324a",
+  "limitations": [
+    "Owner-declared connector types are attributed context, not a visual measurement or specification check.",
+    "Source steps describe visible model proposals; hidden contact and seating remain unresolved.",
+    "The two recordings use independent inferred coordinates; their meshes were not merged or rigidly aligned.",
+    "Earlier and later adapter tracklets remain distinct; this task uses adapter_late without asserting re-identification.",
+    "This task draft is data for an agent to inspect, not permission or an interface to execute a real robot."
+  ],
+  "draft_sha256": "861471a37f605aae26e859fbe9a108db43622f4535ab64542d53e3c43faac1e6"
+}

@@ -1,0 +1,14 @@
+{
+  "library": "Three.js",
+  "revision": "180",
+  "upstream": "https://github.com/mrdoob/three.js/tree/r180",
+  "source": "Existing local vendored r180 dependency; OrbitControls import rewritten to local module. No CDN/network runtime.",
+  "files": {
+    "three.module.js": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+    "LICENSE": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+    "three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+    "GLTFLoader.js": "2904f2823e23d5bc1d64512bf4c0d777ac44d728d47c34a9e3d48ce8ef6b761d",
+    "BufferGeometryUtils.js": "248b3e8420bd3de805ca01845c1b0cc62aa2766f3c56bdcead265e306f8e715c",
+    "OrbitControls.js": "06864a0fcb647730bfbc690b6c25a121199d716a3e299a40158509cbd247c3bf"
+  }
+}

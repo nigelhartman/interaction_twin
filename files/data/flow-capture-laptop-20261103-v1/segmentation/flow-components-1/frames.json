@@ -1,0 +1,1523 @@
+{
+  "frames": [
+    {
+      "sample_index": 1,
+      "timestamp_s": 0.0,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000001.png",
+          "area_pixels": 79740,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000001.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 2,
+      "timestamp_s": 0.673278,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000002.png",
+          "area_pixels": 76775,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000002.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 3,
+      "timestamp_s": 1.373156,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000003.png",
+          "area_pixels": 74782,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000003.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 4,
+      "timestamp_s": 2.073033,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000004.png",
+          "area_pixels": 75759,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000004.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 5,
+      "timestamp_s": 2.772911,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000005.png",
+          "area_pixels": 77272,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000005.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 6,
+      "timestamp_s": 3.472789,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000006.png",
+          "area_pixels": 81385,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000006.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 7,
+      "timestamp_s": 4.172556,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000007.png",
+          "area_pixels": 84219,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000007.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 8,
+      "timestamp_s": 4.872544,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000008.png",
+          "area_pixels": 113601,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000008.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 9,
+      "timestamp_s": 5.562444,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000009.png",
+          "area_pixels": 175333,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000009.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 10,
+      "timestamp_s": 6.262311,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000010.png",
+          "area_pixels": 176250,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000010.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 11,
+      "timestamp_s": 6.938956,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000011.png",
+          "area_pixels": 147492,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000011.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 12,
+      "timestamp_s": 7.638867,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000012.png",
+          "area_pixels": 136299,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000012.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 13,
+      "timestamp_s": 8.338689,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000013.png",
+          "area_pixels": 92735,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000013.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 14,
+      "timestamp_s": 9.038511,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000014.png",
+          "area_pixels": 25026,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000014.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000014.png",
+          "area_pixels": 0,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "empty_prediction",
+            "area_below_twelve_percent_of_seed_possible_occlusion",
+            "source_association_withheld"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 15,
+      "timestamp_s": 9.728411,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000015.png",
+          "area_pixels": 70730,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000015.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000015.png",
+          "area_pixels": 0,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "empty_prediction",
+            "area_below_twelve_percent_of_seed_possible_occlusion",
+            "source_association_withheld"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 16,
+      "timestamp_s": 10.428289,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000016.png",
+          "area_pixels": 80521,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000016.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000016.png",
+          "area_pixels": 0,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "empty_prediction",
+            "area_below_twelve_percent_of_seed_possible_occlusion",
+            "source_association_withheld"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 17,
+      "timestamp_s": 11.128167,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000017.png",
+          "area_pixels": 81628,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000017.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000017.png",
+          "area_pixels": 0,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "empty_prediction",
+            "area_below_twelve_percent_of_seed_possible_occlusion",
+            "source_association_withheld"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 18,
+      "timestamp_s": 11.828044,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000018.png",
+          "area_pixels": 70916,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000018.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000018.png",
+          "area_pixels": 0,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "empty_prediction",
+            "area_below_twelve_percent_of_seed_possible_occlusion",
+            "source_association_withheld"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 19,
+      "timestamp_s": 12.494756,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000019.png",
+          "area_pixels": 27362,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000019.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000019.png",
+          "area_pixels": 0,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "empty_prediction",
+            "area_below_twelve_percent_of_seed_possible_occlusion",
+            "source_association_withheld"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 20,
+      "timestamp_s": 13.171256,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000020.png",
+          "area_pixels": 74986,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000020.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000020.png",
+          "area_pixels": 0,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "empty_prediction",
+            "area_below_twelve_percent_of_seed_possible_occlusion",
+            "source_association_withheld"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 21,
+      "timestamp_s": 13.871156,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000021.png",
+          "area_pixels": 74741,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000021.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000021.png",
+          "area_pixels": 0,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "empty_prediction",
+            "area_below_twelve_percent_of_seed_possible_occlusion",
+            "source_association_withheld"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 22,
+      "timestamp_s": 14.571033,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000022.png",
+          "area_pixels": 65510,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000022.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000022.png",
+          "area_pixels": 0,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "empty_prediction",
+            "area_below_twelve_percent_of_seed_possible_occlusion",
+            "source_association_withheld"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 23,
+      "timestamp_s": 15.270911,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000023.png",
+          "area_pixels": 61244,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000023.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000023.png",
+          "area_pixels": 0,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "empty_prediction",
+            "area_below_twelve_percent_of_seed_possible_occlusion",
+            "source_association_withheld"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 24,
+      "timestamp_s": 15.970789,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000024.png",
+          "area_pixels": 64304,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000024.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000024.png",
+          "area_pixels": 0,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "empty_prediction",
+            "area_below_twelve_percent_of_seed_possible_occlusion",
+            "source_association_withheld"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 25,
+      "timestamp_s": 16.670667,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000025.png",
+          "area_pixels": 72435,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000025.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000025.png",
+          "area_pixels": 0,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "empty_prediction",
+            "area_below_twelve_percent_of_seed_possible_occlusion",
+            "source_association_withheld"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 26,
+      "timestamp_s": 17.370544,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000026.png",
+          "area_pixels": 76414,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000026.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000026.png",
+          "area_pixels": 0,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "empty_prediction",
+            "area_below_twelve_percent_of_seed_possible_occlusion",
+            "source_association_withheld"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 27,
+      "timestamp_s": 18.070422,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000027.png",
+          "area_pixels": 129636,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000027.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000027.png",
+          "area_pixels": 34629,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_base/000027.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 28,
+      "timestamp_s": 18.760222,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000028.png",
+          "area_pixels": 101075,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000028.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000028.png",
+          "area_pixels": 135547,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_base/000028.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 29,
+      "timestamp_s": 19.460211,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000029.png",
+          "area_pixels": 108997,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000029.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000029.png",
+          "area_pixels": 182481,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_base/000029.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 30,
+      "timestamp_s": 20.160089,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000030.png",
+          "area_pixels": 101424,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000030.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000030.png",
+          "area_pixels": 163608,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_base/000030.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 31,
+      "timestamp_s": 20.859967,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000031.png",
+          "area_pixels": 100242,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000031.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000031.png",
+          "area_pixels": 150863,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_base/000031.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 32,
+      "timestamp_s": 21.559878,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000032.png",
+          "area_pixels": 116888,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000032.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000032.png",
+          "area_pixels": 152079,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_base/000032.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 33,
+      "timestamp_s": 22.259678,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000033.png",
+          "area_pixels": 116600,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000033.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000033.png",
+          "area_pixels": 140045,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_base/000033.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 34,
+      "timestamp_s": 22.959578,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000034.png",
+          "area_pixels": 99206,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000034.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000034.png",
+          "area_pixels": 127917,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_base/000034.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 35,
+      "timestamp_s": 23.6362,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000035.png",
+          "area_pixels": 85453,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000035.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000035.png",
+          "area_pixels": 117318,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_base/000035.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 36,
+      "timestamp_s": 24.326178,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000036.png",
+          "area_pixels": 80365,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000036.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000036.png",
+          "area_pixels": 108610,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_base/000036.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 37,
+      "timestamp_s": 25.025922,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000037.png",
+          "area_pixels": 82006,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000037.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000037.png",
+          "area_pixels": 110960,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_base/000037.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 38,
+      "timestamp_s": 25.7258,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000038.png",
+          "area_pixels": 85001,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000038.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000038.png",
+          "area_pixels": 114788,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_base/000038.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 39,
+      "timestamp_s": 26.425678,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000039.png",
+          "area_pixels": 84571,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000039.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000039.png",
+          "area_pixels": 114741,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_base/000039.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 40,
+      "timestamp_s": 27.125556,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000040.png",
+          "area_pixels": 84695,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000040.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000040.png",
+          "area_pixels": 114111,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_base/000040.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 41,
+      "timestamp_s": 27.825433,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000041.png",
+          "area_pixels": 83786,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000041.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000041.png",
+          "area_pixels": 112466,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_base/000041.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 42,
+      "timestamp_s": 28.525311,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000042.png",
+          "area_pixels": 83715,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000042.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000042.png",
+          "area_pixels": 111043,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_base/000042.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 43,
+      "timestamp_s": 29.225189,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000043.png",
+          "area_pixels": 83920,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000043.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000043.png",
+          "area_pixels": 111519,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_base/000043.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 44,
+      "timestamp_s": 29.925067,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000044.png",
+          "area_pixels": 83988,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000044.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000044.png",
+          "area_pixels": 112046,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_base/000044.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 45,
+      "timestamp_s": 30.591811,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000045.png",
+          "area_pixels": 84468,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000045.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000045.png",
+          "area_pixels": 112390,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_base/000045.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 46,
+      "timestamp_s": 31.291533,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000046.png",
+          "area_pixels": 84256,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000046.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000046.png",
+          "area_pixels": 112735,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_base/000046.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 47,
+      "timestamp_s": 31.991422,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000047.png",
+          "area_pixels": 83276,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000047.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000047.png",
+          "area_pixels": 109625,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_base/000047.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 48,
+      "timestamp_s": 32.691411,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000048.png",
+          "area_pixels": 85385,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000048.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000048.png",
+          "area_pixels": 112901,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_base/000048.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 49,
+      "timestamp_s": 33.391267,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000049.png",
+          "area_pixels": 86854,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000049.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000049.png",
+          "area_pixels": 116530,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_base/000049.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 50,
+      "timestamp_s": 34.091144,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000050.png",
+          "area_pixels": 89832,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000050.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000050.png",
+          "area_pixels": 123507,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_base/000050.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 51,
+      "timestamp_s": 34.791022,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000051.png",
+          "area_pixels": 103145,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000051.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000051.png",
+          "area_pixels": 152443,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_base/000051.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 52,
+      "timestamp_s": 35.4909,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000052.png",
+          "area_pixels": 107617,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000052.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000052.png",
+          "area_pixels": 155735,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_base/000052.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 53,
+      "timestamp_s": 36.190778,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000053.png",
+          "area_pixels": 111776,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000053.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000053.png",
+          "area_pixels": 164499,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_base/000053.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 54,
+      "timestamp_s": 36.890656,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000054.png",
+          "area_pixels": 107647,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000054.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "laptop_base",
+          "raw_mask_file": "raw_masks/laptop_base/000054.png",
+          "area_pixels": 161569,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_base/000054.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 55,
+      "timestamp_s": 37.567233,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000055.png",
+          "area_pixels": 134295,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000055.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000055.png",
+          "area_pixels": 4090,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000055.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 56,
+      "timestamp_s": 38.267111,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000056.png",
+          "area_pixels": 164065,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000056.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000056.png",
+          "area_pixels": 4212,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000056.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 57,
+      "timestamp_s": 38.966989,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000057.png",
+          "area_pixels": 169960,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000057.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000057.png",
+          "area_pixels": 4660,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000057.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 58,
+      "timestamp_s": 39.666867,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000058.png",
+          "area_pixels": 142047,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000058.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000058.png",
+          "area_pixels": 3999,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000058.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 59,
+      "timestamp_s": 40.366744,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000059.png",
+          "area_pixels": 133841,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000059.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000059.png",
+          "area_pixels": 3879,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000059.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 60,
+      "timestamp_s": 41.066711,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000060.png",
+          "area_pixels": 158919,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000060.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000060.png",
+          "area_pixels": 7219,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000060.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 61,
+      "timestamp_s": 41.766633,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000061.png",
+          "area_pixels": 165767,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000061.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000061.png",
+          "area_pixels": 8526,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000061.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 62,
+      "timestamp_s": 42.466389,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000062.png",
+          "area_pixels": 171257,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000062.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000062.png",
+          "area_pixels": 7776,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000062.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 63,
+      "timestamp_s": 43.166378,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000063.png",
+          "area_pixels": 170429,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000063.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000063.png",
+          "area_pixels": 7428,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000063.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 64,
+      "timestamp_s": 43.856322,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000064.png",
+          "area_pixels": 162242,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000064.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000064.png",
+          "area_pixels": 7606,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000064.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 65,
+      "timestamp_s": 44.556133,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000065.png",
+          "area_pixels": 158044,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000065.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000065.png",
+          "area_pixels": 5495,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000065.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 66,
+      "timestamp_s": 45.2328,
+      "tracks": [
+        {
+          "track_id": "laptop_lid",
+          "raw_mask_file": "raw_masks/laptop_lid/000066.png",
+          "area_pixels": 143169,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/laptop_lid/000066.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000066.png",
+          "area_pixels": 5417,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000066.png",
+          "identity_confirmed": false
+        }
+      ]
+    }
+  ]
+}

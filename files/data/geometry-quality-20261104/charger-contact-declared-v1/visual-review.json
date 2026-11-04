@@ -1,0 +1,17 @@
+{
+  "automatic_approval": false,
+  "format": "interaction-twin-assembly-image-critic-review",
+  "model_result": {
+    "bytes": 6397,
+    "path": "data/geometry-quality-20261104/charger-contact-declared-v1/model-result.json",
+    "sha256": "da2432b3a8ac74ec4ff1538a45eba407ea5ff5532f73a6f317f33c294fb9053a"
+  },
+  "physical_accuracy_verified": false,
+  "receipt": {
+    "bytes": 2777,
+    "path": "data/geometry-quality-20261104/charger-contact-declared-v1/meta-request.json",
+    "sha256": "4ed0c468b75f3128812e0073407cf9b8914ca558107bff689d679e7d65bbdcde"
+  },
+  "scope": "Exact byte-preserved earlier actual multi-case Muse review; unresolved generated appearance and flexible-cable findings retained. New contact-plane calibration is a subsequent automatic candidate, not a favorable model re-review.",
+  "version": 1
+}

@@ -1,0 +1,980 @@
+{
+  "base_object_program_ref": {
+    "bytes": 29722,
+    "path": "data/object-programs/auto-06f94599100e4d661ca4ca4bd97fc82bd37f259060767ec78c3a1d988ca12b67/object-program.json",
+    "sha256": "5a784152ab6787b9f9f71e9adca3ee57632544a496c017420afc030fcf6e28d0"
+  },
+  "baseline_scene_ref": {
+    "bytes": 562258,
+    "path": "data/assembly-refinements/jabra-source-refit-20261103-v2/scene.json",
+    "sha256": "149ab3645f009c3ad33a7d2845bd32328d117510bf77f5349d5afdd9b1c6d9f7"
+  },
+  "claims": {
+    "declared_geometry_derivative_used": true,
+    "manual_geometry_or_poses_used": false,
+    "original_native_assets_preserved": true,
+    "physical_accuracy_verified": false,
+    "physical_robot_execution_available": false,
+    "simulation_ready": false
+  },
+  "component_assets": [
+    {
+      "component_id": "case_base",
+      "geometry_origin": "unchanged_SAM_3D_inference",
+      "native_glb": {
+        "bytes": 13548504,
+        "path": "data/sam3d-upload-jobs/893536982b8b090066f9d9f99058d0bd9a52c3a08c0d9250ec012fbb8eef9535/candidate/asset.glb",
+        "sha256": "ec77850ef135f528de867009482bc9ad2b14e09a7cff3dfe3ad8e6455081622b"
+      },
+      "native_metadata": {
+        "bytes": 15786,
+        "path": "data/sam3d-upload-jobs/893536982b8b090066f9d9f99058d0bd9a52c3a08c0d9250ec012fbb8eef9535/candidate/metadata.json",
+        "sha256": "c33d8234125189bbd299da4c2b0a2844a81d41d1f86020d38ec06920060cff61"
+      },
+      "native_uniform_scale": 0.4257528483867645,
+      "original_native_glb": {
+        "bytes": 13548504,
+        "path": "data/sam3d-upload-jobs/893536982b8b090066f9d9f99058d0bd9a52c3a08c0d9250ec012fbb8eef9535/candidate/asset.glb",
+        "sha256": "ec77850ef135f528de867009482bc9ad2b14e09a7cff3dfe3ad8e6455081622b"
+      }
+    },
+    {
+      "component_id": "case_lid",
+      "geometry_origin": "inherited_approved_geometry_derivative",
+      "native_glb": {
+        "bytes": 5810160,
+        "path": "data/assembly-refinements/jabra-rim-fit-20261103-final-v1/case-lid-derived.glb",
+        "sha256": "2bfab252110eb545848f9f200cd86e411f43c7b27bd81353cf9c133f67bdd4c3"
+      },
+      "native_metadata": {
+        "bytes": 15753,
+        "path": "data/sam3d-upload-jobs/17818e9da11034afcdb166d35cdf2be9a711336e3a7a510363d189b68c4e051a/candidate/metadata.json",
+        "sha256": "ed361a468bd428a78ac2907651e4b82bf7393b34d2e6f7bd625dea6c9d1e3a23"
+      },
+      "native_uniform_scale": 0.43244434033880336,
+      "original_native_glb": {
+        "bytes": 5810084,
+        "path": "data/sam3d-upload-jobs/17818e9da11034afcdb166d35cdf2be9a711336e3a7a510363d189b68c4e051a/candidate/asset.glb",
+        "sha256": "2ac614851e2c00d76fabd4aee09483703740eb6314fefbc2354a66244a6916ba"
+      }
+    },
+    {
+      "component_id": "earbud_a",
+      "geometry_origin": "automatic_geometry_operation_chain",
+      "native_glb": {
+        "bytes": 11017684,
+        "path": "data/geometry-quality-20261104/jabra-temporary-seating-v1/observed-cap/asset.glb",
+        "sha256": "3eaec671270db14bf62faac8bb3e9718c2e6dcfb2e8d022a741eea0807d765fd"
+      },
+      "native_metadata": {
+        "bytes": 15779,
+        "path": "data/sam3d-native-candidates-20261101/earbud-a-v1/metadata.json",
+        "sha256": "4f98762dfc727b16a0c81de7d169a7b35c9bd180d7157684f10dc4139f529b25"
+      },
+      "native_uniform_scale": 0.164592868918978,
+      "original_native_glb": {
+        "bytes": 11017608,
+        "path": "data/sam3d-native-candidates-20261101/earbud-a-v1/asset.glb",
+        "sha256": "5c9b75bdedccac030d8991c5e5db1f6389ccad679a574960dec7da9efd4c4b11"
+      }
+    },
+    {
+      "component_id": "earbud_b",
+      "geometry_origin": "unchanged_SAM_3D_inference",
+      "native_glb": {
+        "bytes": 11486232,
+        "path": "data/sam3d-upload-jobs/3ff517ec1749220c17bab0fa096aa7b94ec234de19307740f12865b57f9ba0c3/candidate/asset.glb",
+        "sha256": "a679735bbd787e8600cbc680a187ba88c358de6b1d2d516a2562d2125c266e8a"
+      },
+      "native_metadata": {
+        "bytes": 15758,
+        "path": "data/sam3d-upload-jobs/3ff517ec1749220c17bab0fa096aa7b94ec234de19307740f12865b57f9ba0c3/candidate/metadata.json",
+        "sha256": "c8b5bb62c1b6b6a355347b8716de3ad4666d2fbdd303b38de9107b5500f52ce6"
+      },
+      "native_uniform_scale": 0.21500629487432357,
+      "original_native_glb": {
+        "bytes": 11486232,
+        "path": "data/sam3d-upload-jobs/3ff517ec1749220c17bab0fa096aa7b94ec234de19307740f12865b57f9ba0c3/candidate/asset.glb",
+        "sha256": "a679735bbd787e8600cbc680a187ba88c358de6b1d2d516a2562d2125c266e8a"
+      }
+    }
+  ],
+  "evidence_program": {
+    "bytes": 172299,
+    "path": "data/flow-sam3d-default-e2e-20261102-v1/flow-procedure-1/interaction.json",
+    "sha256": "05c2f4d93243179013f775bb6832ed66afb4f0d3ec6cc91453e0204e2bafe85a"
+  },
+  "format": "interaction-twin-declared-geometry-derivative",
+  "geometry_report_ref": {
+    "bytes": 7351,
+    "path": "data/geometry-quality-20261104/jabra-temporary-seating-v1/geometry-report.json",
+    "sha256": "f8815de12dfce6634412f5a407892cd25fe2722d8078d319e5bb6678ebafd18b"
+  },
+  "joints": [
+    {
+      "angle_quality": {
+        "angle_interpretation": "estimated_opening_configuration_not_physically_calibrated",
+        "angle_visual_consistency": true,
+        "confidence": "low",
+        "declared_separation_threshold_rad": 0.2617993877991494,
+        "physical_angle_verified": false,
+        "quality_flags": [],
+        "source_alignment_verified": false,
+        "state_comparisons": [
+          {
+            "cited_state": "open",
+            "distance_from_closed_reference_rad": 2.687807048071265,
+            "q_rad": 2.687807048071265,
+            "source_sample_index": 21,
+            "timestamp_s": 6.667256
+          },
+          {
+            "cited_state": "open",
+            "distance_from_closed_reference_rad": 1.553343034274952,
+            "q_rad": 1.553343034274952,
+            "source_sample_index": 28,
+            "timestamp_s": 9.000789
+          },
+          {
+            "cited_state": "open",
+            "distance_from_closed_reference_rad": 2.0420352248333637,
+            "q_rad": 2.0420352248333637,
+            "source_sample_index": 94,
+            "timestamp_s": 31.002722
+          },
+          {
+            "cited_state": "closed",
+            "distance_from_closed_reference_rad": 0.0,
+            "q_rad": -0.0,
+            "source_sample_index": 101,
+            "timestamp_s": 33.336256
+          }
+        ],
+        "test": "all_cited_supported_open_states_separated_from_cited_closed_zero_by_more_than_declared_threshold",
+        "zero_state_alignment_verified": false
+      },
+      "axis": [
+        -0.9999928759235551,
+        0.001556922345648755,
+        0.0034386181740378935
+      ],
+      "child_anchor_native": [
+        0.00991211369381741,
+        -0.2273762687453488,
+        0.1327492269977494
+      ],
+      "child_id": "case_lid",
+      "child_native_scale": 1.0157168459997246,
+      "evidence_ids": [
+        "source_000001",
+        "source_000021",
+        "source_000028",
+        "source_000094",
+        "source_000101"
+      ],
+      "id": "j1_case_base_case_lid",
+      "joint_from_child_zero": [
+        [
+          1.014995205681781,
+          -0.01046946739813667,
+          -0.03682165046581352,
+          -0.007553210674018729
+        ],
+        [
+          -0.03710990673573577,
+          -0.029278347113500202,
+          -1.014616353337553,
+          0.12840017289786831
+        ],
+        [
+          0.009396728829341826,
+          1.0152407989685643,
+          -0.029640054733536994,
+          0.23468321765706054
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "limits_kind": "bounded_estimated_source_configuration_range_not_physical_stops",
+      "limits_rad": [
+        -0.0,
+        2.862339973270698
+      ],
+      "matrix_convention": "parent_native_pose * parent_from_joint * axis_rotation(q) * joint_from_child_zero; refined child mesh native coordinates",
+      "parent_anchor_native": [
+        0.01210514415778824,
+        0.17968891390155306,
+        -0.23184708380602093
+      ],
+      "parent_from_joint": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.01210514415778824
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.17968891390155306
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.23184708380602093
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_id": "case_base",
+      "parent_native_scale": 1.0,
+      "physical_accuracy_verified": false,
+      "physical_limits_rad": null,
+      "samples": [
+        {
+          "q_rad": null,
+          "source_sample_index": 1,
+          "status": "unknown",
+          "timestamp_s": 0.0
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 2,
+          "status": "unknown",
+          "timestamp_s": 0.333367
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 3,
+          "status": "unknown",
+          "timestamp_s": 0.666733
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 4,
+          "status": "unknown",
+          "timestamp_s": 1.000089
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 5,
+          "status": "unknown",
+          "timestamp_s": 1.333456
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 6,
+          "status": "unknown",
+          "timestamp_s": 1.666811
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 7,
+          "status": "unknown",
+          "timestamp_s": 2.000178
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 8,
+          "status": "unknown",
+          "timestamp_s": 2.333544
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 9,
+          "status": "unknown",
+          "timestamp_s": 2.6669
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 10,
+          "status": "unknown",
+          "timestamp_s": 3.000267
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 11,
+          "status": "unknown",
+          "timestamp_s": 3.333633
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 12,
+          "status": "unknown",
+          "timestamp_s": 3.666989
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 13,
+          "status": "unknown",
+          "timestamp_s": 4.000356
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 14,
+          "status": "unknown",
+          "timestamp_s": 4.333711
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 15,
+          "status": "unknown",
+          "timestamp_s": 4.667078
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 16,
+          "status": "unknown",
+          "timestamp_s": 5.000444
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 17,
+          "status": "unknown",
+          "timestamp_s": 5.3338
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 18,
+          "status": "unknown",
+          "timestamp_s": 5.667167
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 19,
+          "status": "unknown",
+          "timestamp_s": 6.000533
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 20,
+          "status": "unknown",
+          "timestamp_s": 6.333889
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 21,
+          "status": "unknown",
+          "timestamp_s": 6.667256
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 22,
+          "status": "unknown",
+          "timestamp_s": 7.000622
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 23,
+          "status": "unknown",
+          "timestamp_s": 7.333978
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 24,
+          "status": "unknown",
+          "timestamp_s": 7.667344
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 25,
+          "status": "unknown",
+          "timestamp_s": 8.0007
+        },
+        {
+          "q_rad": 1.7503962926918548,
+          "source_sample_index": 26,
+          "status": "estimated",
+          "timestamp_s": 8.334067
+        },
+        {
+          "q_rad": 1.5339633578193554,
+          "source_sample_index": 27,
+          "status": "estimated",
+          "timestamp_s": 8.667433
+        },
+        {
+          "q_rad": 1.5871438267396991,
+          "source_sample_index": 28,
+          "status": "estimated",
+          "timestamp_s": 9.000789
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 29,
+          "status": "unknown",
+          "timestamp_s": 9.334156
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 30,
+          "status": "unknown",
+          "timestamp_s": 9.667522
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 31,
+          "status": "unknown",
+          "timestamp_s": 10.000878
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 32,
+          "status": "unknown",
+          "timestamp_s": 10.334244
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 33,
+          "status": "unknown",
+          "timestamp_s": 10.6676
+        },
+        {
+          "q_rad": 2.743867477277711,
+          "source_sample_index": 34,
+          "status": "estimated",
+          "timestamp_s": 11.000967
+        },
+        {
+          "q_rad": 1.7451195077595307,
+          "source_sample_index": 35,
+          "status": "estimated",
+          "timestamp_s": 11.334333
+        },
+        {
+          "q_rad": 1.628201458380085,
+          "source_sample_index": 36,
+          "status": "estimated",
+          "timestamp_s": 11.667689
+        },
+        {
+          "q_rad": 1.6600579143429923,
+          "source_sample_index": 37,
+          "status": "estimated",
+          "timestamp_s": 12.001056
+        },
+        {
+          "q_rad": 1.6673783332297603,
+          "source_sample_index": 38,
+          "status": "estimated",
+          "timestamp_s": 12.334422
+        },
+        {
+          "q_rad": 1.3938225760852896,
+          "source_sample_index": 39,
+          "status": "estimated",
+          "timestamp_s": 12.667778
+        },
+        {
+          "q_rad": 1.481060697031207,
+          "source_sample_index": 40,
+          "status": "estimated",
+          "timestamp_s": 13.001144
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 41,
+          "status": "unknown",
+          "timestamp_s": 13.3345
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 42,
+          "status": "unknown",
+          "timestamp_s": 13.667867
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 43,
+          "status": "unknown",
+          "timestamp_s": 14.001233
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 44,
+          "status": "unknown",
+          "timestamp_s": 14.334589
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 45,
+          "status": "unknown",
+          "timestamp_s": 14.667956
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 46,
+          "status": "unknown",
+          "timestamp_s": 15.001322
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 47,
+          "status": "unknown",
+          "timestamp_s": 15.334678
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 48,
+          "status": "unknown",
+          "timestamp_s": 15.668044
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 49,
+          "status": "unknown",
+          "timestamp_s": 16.001411
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 50,
+          "status": "unknown",
+          "timestamp_s": 16.334767
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 51,
+          "status": "unknown",
+          "timestamp_s": 16.668133
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 52,
+          "status": "unknown",
+          "timestamp_s": 17.001489
+        },
+        {
+          "q_rad": 1.8292724743164719,
+          "source_sample_index": 53,
+          "status": "estimated",
+          "timestamp_s": 17.334856
+        },
+        {
+          "q_rad": 1.7672292763667425,
+          "source_sample_index": 54,
+          "status": "estimated",
+          "timestamp_s": 17.668222
+        },
+        {
+          "q_rad": 1.4942093301610546,
+          "source_sample_index": 55,
+          "status": "estimated",
+          "timestamp_s": 18.001578
+        },
+        {
+          "q_rad": 1.6026659982838933,
+          "source_sample_index": 56,
+          "status": "estimated",
+          "timestamp_s": 18.334944
+        },
+        {
+          "q_rad": 1.6267318890553704,
+          "source_sample_index": 57,
+          "status": "estimated",
+          "timestamp_s": 18.668311
+        },
+        {
+          "q_rad": 1.667933082889292,
+          "source_sample_index": 58,
+          "status": "estimated",
+          "timestamp_s": 19.001667
+        },
+        {
+          "q_rad": 1.7690233908387567,
+          "source_sample_index": 59,
+          "status": "estimated",
+          "timestamp_s": 19.335033
+        },
+        {
+          "q_rad": 1.7112249563337567,
+          "source_sample_index": 60,
+          "status": "estimated",
+          "timestamp_s": 19.668389
+        },
+        {
+          "q_rad": 1.718535009026683,
+          "source_sample_index": 61,
+          "status": "estimated",
+          "timestamp_s": 20.001756
+        },
+        {
+          "q_rad": 1.7631921984596168,
+          "source_sample_index": 62,
+          "status": "estimated",
+          "timestamp_s": 20.335122
+        },
+        {
+          "q_rad": 1.7721115134752574,
+          "source_sample_index": 63,
+          "status": "estimated",
+          "timestamp_s": 20.668478
+        },
+        {
+          "q_rad": 1.7860238231866652,
+          "source_sample_index": 64,
+          "status": "estimated",
+          "timestamp_s": 21.001844
+        },
+        {
+          "q_rad": 1.7582619412275293,
+          "source_sample_index": 65,
+          "status": "estimated",
+          "timestamp_s": 21.335211
+        },
+        {
+          "q_rad": 1.9063707278950077,
+          "source_sample_index": 66,
+          "status": "estimated",
+          "timestamp_s": 21.668567
+        },
+        {
+          "q_rad": 1.7422167637319415,
+          "source_sample_index": 67,
+          "status": "estimated",
+          "timestamp_s": 22.001933
+        },
+        {
+          "q_rad": 1.9159088817251473,
+          "source_sample_index": 68,
+          "status": "estimated",
+          "timestamp_s": 22.335289
+        },
+        {
+          "q_rad": 1.8592438689234176,
+          "source_sample_index": 69,
+          "status": "estimated",
+          "timestamp_s": 22.668656
+        },
+        {
+          "q_rad": 1.7398953687846521,
+          "source_sample_index": 70,
+          "status": "estimated",
+          "timestamp_s": 23.002022
+        },
+        {
+          "q_rad": 1.4468849496502865,
+          "source_sample_index": 71,
+          "status": "estimated",
+          "timestamp_s": 23.335378
+        },
+        {
+          "q_rad": 1.6272776659371049,
+          "source_sample_index": 72,
+          "status": "estimated",
+          "timestamp_s": 23.668744
+        },
+        {
+          "q_rad": 1.777869104258133,
+          "source_sample_index": 73,
+          "status": "estimated",
+          "timestamp_s": 24.002111
+        },
+        {
+          "q_rad": 1.4693373246566246,
+          "source_sample_index": 74,
+          "status": "estimated",
+          "timestamp_s": 24.335467
+        },
+        {
+          "q_rad": 1.3526975962451924,
+          "source_sample_index": 75,
+          "status": "estimated",
+          "timestamp_s": 24.668833
+        },
+        {
+          "q_rad": 1.3589062810969752,
+          "source_sample_index": 76,
+          "status": "estimated",
+          "timestamp_s": 25.0022
+        },
+        {
+          "q_rad": 1.3632060116486096,
+          "source_sample_index": 77,
+          "status": "estimated",
+          "timestamp_s": 25.335556
+        },
+        {
+          "q_rad": 1.6343246193924155,
+          "source_sample_index": 78,
+          "status": "estimated",
+          "timestamp_s": 25.668922
+        },
+        {
+          "q_rad": 1.8859333529144757,
+          "source_sample_index": 79,
+          "status": "estimated",
+          "timestamp_s": 26.002278
+        },
+        {
+          "q_rad": 1.5867798229094894,
+          "source_sample_index": 80,
+          "status": "estimated",
+          "timestamp_s": 26.335644
+        },
+        {
+          "q_rad": 1.6773061896285137,
+          "source_sample_index": 81,
+          "status": "estimated",
+          "timestamp_s": 26.669011
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 82,
+          "status": "unknown",
+          "timestamp_s": 27.002367
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 83,
+          "status": "unknown",
+          "timestamp_s": 27.335733
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 84,
+          "status": "unknown",
+          "timestamp_s": 27.6691
+        },
+        {
+          "q_rad": 1.6452105683518417,
+          "source_sample_index": 85,
+          "status": "estimated",
+          "timestamp_s": 28.002456
+        },
+        {
+          "q_rad": 2.006595820268077,
+          "source_sample_index": 86,
+          "status": "estimated",
+          "timestamp_s": 28.335822
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 87,
+          "status": "unknown",
+          "timestamp_s": 28.669178
+        },
+        {
+          "q_rad": 1.9912373878252965,
+          "source_sample_index": 88,
+          "status": "estimated",
+          "timestamp_s": 29.002544
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 89,
+          "status": "unknown",
+          "timestamp_s": 29.335911
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 90,
+          "status": "unknown",
+          "timestamp_s": 29.669267
+        },
+        {
+          "q_rad": 2.228839684408653,
+          "source_sample_index": 91,
+          "status": "estimated",
+          "timestamp_s": 30.002633
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 92,
+          "status": "unknown",
+          "timestamp_s": 30.336
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 93,
+          "status": "unknown",
+          "timestamp_s": 30.669356
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 94,
+          "status": "unknown",
+          "timestamp_s": 31.002722
+        },
+        {
+          "q_rad": 2.0594781707633367,
+          "source_sample_index": 95,
+          "status": "estimated",
+          "timestamp_s": 31.336089
+        },
+        {
+          "q_rad": 2.121237295348933,
+          "source_sample_index": 96,
+          "status": "estimated",
+          "timestamp_s": 31.669444
+        },
+        {
+          "q_rad": 0.5655432319305137,
+          "source_sample_index": 97,
+          "status": "estimated",
+          "timestamp_s": 32.002811
+        },
+        {
+          "q_rad": null,
+          "source_sample_index": 98,
+          "status": "unknown",
+          "timestamp_s": 32.336167
+        },
+        {
+          "q_rad": 0.6272579235838355,
+          "source_sample_index": 99,
+          "status": "estimated",
+          "timestamp_s": 32.669533
+        },
+        {
+          "q_rad": 0.5034092346638718,
+          "source_sample_index": 100,
+          "status": "estimated",
+          "timestamp_s": 33.0029
+        },
+        {
+          "q_rad": 0.0,
+          "source_sample_index": 101,
+          "status": "estimated",
+          "timestamp_s": 33.336256
+        }
+      ],
+      "simulation_ready": false,
+      "status": "estimated",
+      "type": "revolute",
+      "zero_reference": {
+        "physical_closure_verified": false,
+        "source_sample_index": 101,
+        "state": "estimated_geometric_closed",
+        "timestamp_s": 33.336256
+      }
+    }
+  ],
+  "limitations": [
+    "Case-relative earbud attachment is a source-bracketed estimated state, not verified insertion/contact. Native unseen appearance remains as fallback. Other earbud depth and grasp remain unknown."
+  ],
+  "parent_derived_assembly_ref": {
+    "bytes": 27216,
+    "path": "data/assembly-refinements/jabra-source-refit-20261103-v2/derived-assembly.json",
+    "sha256": "d5e603a37f62bbd9d8c269f98bcd982d30d37de43b5cff8c5c4357337b95744f"
+  },
+  "physical_accuracy_verified": false,
+  "refinement_report_ref": {
+    "bytes": 7351,
+    "path": "data/geometry-quality-20261104/jabra-temporary-seating-v1/geometry-report.json",
+    "sha256": "f8815de12dfce6634412f5a407892cd25fe2722d8078d319e5bb6678ebafd18b"
+  },
+  "removable_relationships": [
+    {
+      "attachment": "removable",
+      "child_id": "earbud_a",
+      "confidence": "medium",
+      "evidence_ids": [
+        "source_000028",
+        "source_000036",
+        "source_000057"
+      ],
+      "id": "j2_case_base_earbud_a",
+      "joint_type": "removable",
+      "parent_id": "case_base",
+      "physical_accuracy_verified": false
+    },
+    {
+      "attachment": "removable",
+      "child_id": "earbud_b",
+      "confidence": "medium",
+      "evidence_ids": [
+        "source_000021",
+        "source_000054",
+        "source_000057"
+      ],
+      "id": "j3_case_base_earbud_b",
+      "joint_type": "removable",
+      "parent_id": "case_base",
+      "physical_accuracy_verified": false
+    }
+  ],
+  "scene_ref": {
+    "bytes": 563249,
+    "path": "data/geometry-quality-20261104/jabra-temporary-seating-v1/scene.json",
+    "sha256": "d3cad06127c6fc7f46ba76b1737807b411f98e3ceb9946f5849ce41807171314"
+  },
+  "simulation_ready": false,
+  "source": {
+    "duration_s": 33.636278,
+    "height": 960,
+    "original_sha256": "0de6f8cb659d256ed53657dea6c796facbb108a645fbe0d9e753c38694969622",
+    "path": "data/flow-sam3d-default-e2e-20261102-v1/source/video.mp4",
+    "sha256": "7474ebd9d06c55b63fc073f632e71e5125353ace2538fa7bcf632cfdc1c3d0f2",
+    "time_domain": "source_video_presentation_seconds",
+    "width": 540
+  },
+  "source_alignment_audit_ref": {
+    "bytes": 5715,
+    "path": "data/geometry-quality-20261104/jabra-temporary-seating-v1/source-audit.json",
+    "sha256": "8551c579bcbf0e3950d4748c1b03a98195507dd8206b8f78a23b17748683607e"
+  },
+  "source_audit_summary": {
+    "default_eligible": true,
+    "geometric_gates_passed": true,
+    "physical_accuracy_verified": false,
+    "source_pixel_gates_passed": true
+  },
+  "temporary_attachments": [
+    {
+      "child_id": "earbud_a",
+      "parent_from_child": [
+        [
+          0.15239074036340472,
+          -0.35406170559039674,
+          -0.029515279075679024,
+          -0.3717894613632089
+        ],
+        [
+          0.11506408389564889,
+          0.018797798099209312,
+          0.36859283796199704,
+          -0.03307210005788974
+        ],
+        [
+          -0.3361414875640181,
+          -0.15408027853701195,
+          0.11279161722933295,
+          -0.1152617187467393
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_id": "case_base",
+      "physical_contact_verified": false,
+      "source_sample_indices": [
+        75,
+        76,
+        77,
+        78
+      ]
+    }
+  ],
+  "unresolved_connections": [],
+  "version": 1,
+  "visual_review_refs": [
+    {
+      "bytes": 858,
+      "path": "data/geometry-quality-20261104/jabra-earbud-orientation-v1/attempt/summary.json",
+      "sha256": "570daa9383cbe6e355be566f0be067da4af47d769594db4c446cf1b89ca54f5c"
+    }
+  ]
+}

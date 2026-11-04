@@ -1,0 +1,48 @@
+{
+  "request_id": "meta-c92461a346e14bc88c0f53cd4a22355e",
+  "provider": "meta_api",
+  "inference_location": "hosted_Meta_Model_API",
+  "model": "sam-3.1",
+  "endpoint": "/v1/responses",
+  "kind": "sam",
+  "payload_sha256": "55ec94d400d3ed5d654c541262b3a41be6b6c0934966ab295204683a8c5f617f",
+  "estimate_usd": "0.002500",
+  "pricing": {
+    "model": "sam-3.1",
+    "kind": "sam",
+    "source": "https://dev.meta.ai/docs/pricing-rate-limits",
+    "observed_at": "2026-10-30",
+    "minimum_video_frames": 50,
+    "per_image_usd": "0.0025",
+    "per_video_frame_usd": "0.0002"
+  },
+  "status": "complete_accounted",
+  "automatic_retries": false,
+  "contributor_mode": false,
+  "request_payload_saved": false,
+  "http_status": 200,
+  "elapsed_s": 2.548,
+  "usage": {
+    "images": 1,
+    "video_frames": 0,
+    "billable_video_frames": 0
+  },
+  "estimated_cost_usd": "0.002500",
+  "budget": {
+    "currency": "USD",
+    "cap_usd": "100.000000",
+    "per_request_cap_usd": "2.000000",
+    "settled_usd": "7.078627",
+    "reserved_usd": "4.038410",
+    "remaining_estimated_usd": "88.882963",
+    "over_cap_usd": "0.000000",
+    "blocked": false,
+    "unresolved_blockers": 0,
+    "unknown_usage": true,
+    "unknown_usage_count": 3,
+    "bounded_unknown_count": 3,
+    "bounded_unknown_usd": "4.038410",
+    "request_count": 168,
+    "scope": "local_ledger_only_not_account_balance"
+  }
+}

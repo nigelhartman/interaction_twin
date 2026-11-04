@@ -1,0 +1,165 @@
+{
+  "source_sample_index": 34,
+  "timestamp_s": 23.059567,
+  "status": "source_observed_prior",
+  "reason": "exact_source_contour_adaptive_mesh_with_cached_estimated_depth_not_new_inference",
+  "source_RGB": {
+    "path": "data/flow-capture-phone-20261103-v1/frames/000034.jpg",
+    "sha256": "fb4a5c3d2f5cbf16e27234eef9aa9c1f07c454adc14608f38cad5e54e940fb21",
+    "bytes": 50639
+  },
+  "source_masks": [
+    {
+      "track_id": "phone_blue",
+      "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000034.png",
+      "sha256": "fd97169b686749f69eda9328fbd1c1f7a90c4f07d474e4a9893eb410660ebb29",
+      "bytes": 1362
+    },
+    {
+      "track_id": "cable_connector",
+      "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/cable_connector/000034.png",
+      "sha256": "021b9beda5d6612eeba5ad37eed249be4d5e664d3fec4ab0535b052f2f8b89fb",
+      "bytes": 940
+    }
+  ],
+  "source_grid_stride_px": 3,
+  "depth_model": {
+    "name": "Ruicheng/moge-2-vits-normal",
+    "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+    "device": "cpu",
+    "input_dimensions": [
+      336,
+      448
+    ],
+    "num_tokens": 600
+  },
+  "vertices": 1186,
+  "triangles": 2255,
+  "visible_component_ids": [
+    "phone_blue",
+    "cable_connector"
+  ],
+  "component_surface_support": [
+    {
+      "component_id": "phone_blue",
+      "source_supported_triangle_count": 2063
+    },
+    {
+      "component_id": "cable_connector",
+      "source_supported_triangle_count": 192
+    }
+  ],
+  "wall_seconds": 0.07522412500111386,
+  "physical_accuracy_verified": false,
+  "asset": {
+    "path": "data/source-visible-flexure/phone-20261104-v3-1/source-034/observed-surface.glb",
+    "sha256": "2511ba39aef14ee7ae998013697a74b608273c36a57cfc5ae273671022cfc14b",
+    "bytes": 108288
+  },
+  "source_pixel_map": {
+    "path": "data/source-visible-flexure/phone-20261104-v3-1/source-034/source-pixel-map.npz",
+    "sha256": "1b7c9bd3c639b1f2b0856cbc52282586f25117e82154c4c6c15a664d454e1c53",
+    "bytes": 21970
+  },
+  "camera_from_asset": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "source_visible_only": true,
+  "triangle_source_footprint_verified": true,
+  "hidden_backs_culled": true,
+  "unlit_exact_vertex_RGB": true,
+  "appearance_mode": "exact_source_JPEG_projected_UV",
+  "texture_source_RGB": {
+    "path": "data/flow-capture-phone-20261103-v1/frames/000034.jpg",
+    "sha256": "fb4a5c3d2f5cbf16e27234eef9aa9c1f07c454adc14608f38cad5e54e940fb21",
+    "bytes": 50639
+  },
+  "sampled_source_RGB_attribute": "_SOURCE_RGB",
+  "vertex_RGB_multiplied_into_texture": false,
+  "virtual_flexure": {
+    "type": "no_joint_recovered_by_observation",
+    "status": "unknown",
+    "origin_camera": null,
+    "axis_camera": null,
+    "angle_rad": null,
+    "reason": "source_visible_surface_does_not_recover_physical_joint_or_rigid_contact"
+  },
+  "new_API_calls": 0,
+  "new_GPU_calls": 0,
+  "source_footprint_proof_version": 2,
+  "cached_depth_parent_map": {
+    "path": "data/source-visible-flexure/phone-20261104-v2/source-034/source-pixel-map.npz",
+    "sha256": "ec180cb173e6b6e957bd22d22eeaababc3bade78b0573cba087284ea5e20e6d7",
+    "bytes": 13194
+  },
+  "depth_sampling": {
+    "maximum_nearest_sampling_distance_px": 8.0,
+    "maximum_interpolation_parent_edge_px": 7.5,
+    "method": "cached_monocular_prior_barycentric_or_bounded_nearest_not_measured_depth",
+    "parent_grid_stride_px": 3
+  },
+  "adaptive_mesh_policy": {
+    "contour_approximation_epsilon_px": 0.0,
+    "contour_vertices": 285,
+    "interior_grid_stride_px": 3,
+    "source_points_before_triangle_pruning": 1188,
+    "maximum_nearest_sampling_distance_px": 8.0,
+    "maximum_interpolation_parent_edge_px": 7.5,
+    "fixed_maximum_vertices": 1800,
+    "triangles_rejected": 78,
+    "source_footprint_proof_version": 2,
+    "source_footprint_rule": "all_unit_pixel_squares_intersecting_closed_triangle_inside_original_2px_SAM_core",
+    "vertex_placement_extra_inset_px": 1,
+    "depth_derivation": "cached_monocular_prior_barycentric_or_bounded_nearest_not_measured_depth",
+    "candidate_linear_depth_samples": 1069,
+    "candidate_nearest_depth_samples": 119,
+    "retained_linear_depth_samples": 1069,
+    "retained_nearest_depth_samples": 117
+  },
+  "new_CPU_depth_inference_calls": 0,
+  "cached_parent_depth_prior_model_intrinsics": [
+    [
+      0.9577241539955139,
+      0.0,
+      0.5
+    ],
+    [
+      0.0,
+      0.7182931303977966,
+      0.5
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "cached_parent_valid_mask_depth_fraction": 1.0,
+  "cached_parent_depth_scale_gauge": 2.7270649575338535,
+  "cached_parent_native_prior_translation_z": 2.1834374009232267,
+  "topology_refined_from_cached_depth": true,
+  "triangles_pruned_by_geometric_and_source_footprint_gates": 78
+}

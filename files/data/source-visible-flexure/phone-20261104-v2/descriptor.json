@@ -1,0 +1,3787 @@
+{
+  "format": "interaction-twin-source-visible-flexure-series",
+  "version": 1,
+  "delivery_revision": 2,
+  "kind": "source_observed_monocular_depth_prior",
+  "source_scene": {
+    "path": "data/mechanism-scenes/648d3924ab106192ea1cdad94c6cdf0b2d44d5c61bba3090cd5dbb1fcb00f298/constrained/scene.json",
+    "sha256": "ae7fe10510761096555ea1e372edc640408b702c36e9a22fdddcac3c1bd5480b",
+    "bytes": 84374
+  },
+  "source_program": {
+    "path": "data/flow-capture-phone-20261103-v1/flow-procedure-1/interaction.json",
+    "sha256": "98cd7e5bb4fc375fb7c164dec7d9a09973d072ccd108449204af9ce942d36165",
+    "bytes": 50334
+  },
+  "source": {
+    "path": "data/flow-capture-phone-20261103-v1/source/video.mp4",
+    "sha256": "1835410d17216b36642759a4a3aa488485f3d62c52df8920b56c58e7a50213b8",
+    "original_sha256": "c2c1a433fe4ec3463c4b318aaa687802520bf3a4fcb740c376a8299b1a4d4fc4",
+    "duration_s": 32.358022,
+    "time_domain": "source_video_presentation_seconds",
+    "width": 720,
+    "height": 960
+  },
+  "camera": {
+    "K": [
+      [
+        767.4952575663017,
+        0.0,
+        359.4182541343073
+      ],
+      [
+        0.0,
+        768.2416128964067,
+        479.54386902177515
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "width": 720,
+    "height": 960,
+    "world_from_camera": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "calibrated": false,
+    "method": "fixed estimated intrinsics from native anchor inferred pointmap",
+    "reference_component": "phone_blue",
+    "reference_sample_index": 4,
+    "per_component_inferred_cameras": {
+      "phone_blue": [
+        [
+          767.4952575663017,
+          0.0,
+          359.4182541343073
+        ],
+        [
+          0.0,
+          768.2416128964067,
+          479.54386902177515
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "cable_connector": [
+        [
+          702.9216486507529,
+          0.0,
+          359.4042519612331
+        ],
+        [
+          0.0,
+          703.646489155002,
+          479.9807395849604
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  },
+  "policy": {
+    "device": "cpu",
+    "input_dimensions": [
+      336,
+      448
+    ],
+    "num_tokens": 600,
+    "use_fp16": false,
+    "downloads_allowed": false,
+    "network_disabled": true,
+    "source_grid_stride_px": "adaptive_at_least3",
+    "maximum_vertices_per_frame": 1800,
+    "mask_core_erosion_px": 2,
+    "maximum_relative_triangle_depth_edge": 0.06,
+    "source_RGB_sampling": "exact_original_JPEG_embedded_UV_with_exact_sampled_RGB_provenance",
+    "hidden_surfaces": "absent_not_inpainted",
+    "source_camera": "unchanged_estimated_native_scene_K",
+    "depth_gauge": "original_parent_native_translation_z_not_independent_geometry_validation",
+    "timing": "nearest_source_keyframe_within_0.18s_only_no_geometric_interpolation",
+    "maximum_source_time_error_s": 0.18,
+    "maximum_contiguous_source_gap_s": 0.5,
+    "frame_selection": "original_parent_known_samples_excluding_original_unknowns_and_prior_failure_barriers",
+    "numerical_fold_parameters": "unknown_not_identifiably_recovered",
+    "minimum_mask_fraction": 0.015,
+    "minimum_valid_depth_fraction": 0.95,
+    "stored_depth": "only_exact_source_pixel_vertex_depth_samples_no_dense_prior_archive",
+    "physical_accuracy_verified": false,
+    "simulation_ready": false,
+    "native_SAM_contract_compatible": false,
+    "triangle_support": "each_full_source_triangle_rectangle_inside_at_least_one2px_eroded_component_SAM_region",
+    "component_visibility": "only_components_with_at_least_one_actual_supported_triangle",
+    "source_semantics": "saved_SAM_masks_fallible_no_new_hand_classifier"
+  },
+  "protocol": {
+    "path": "data/source-visible-flexure/phone-20261104-v2/protocol.json",
+    "sha256": "05c8da206bd289dc9513463bfa9e07cb8eaec39ce9afa09833ce318a0dd8d483",
+    "bytes": 3498
+  },
+  "depth_model": {
+    "name": "Ruicheng/moge-2-vits-normal",
+    "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+    "device": "cpu",
+    "input_dimensions": [
+      336,
+      448
+    ],
+    "num_tokens": 600
+  },
+  "appearance_mode": "exact_source_JPEG_projected_UV",
+  "replacement_component_ids": [
+    "phone_blue",
+    "cable_connector"
+  ],
+  "unaffected_component_ids": [],
+  "closed_native_assets": [
+    {
+      "path": "data/sam3d-upload-jobs/5cf65bb285d005739c08cdb9ad3a970947a8b9bdf4965475a528e9254edc6ded/candidate/asset.glb",
+      "sha256": "384fcf3aeb759d32b87a399d1ef0b91e7570bc871ef5fb7e480542cb1fada544",
+      "bytes": 12741220
+    },
+    {
+      "path": "data/sam3d-upload-jobs/f58eab878942e1866c00e9420f6861df19f02cc09e7cefe61900073a2dbdfe73/candidate/asset.glb",
+      "sha256": "87ec1e06556cdd1703ddc4620b3f00967b0c6cc9f9156571ce4b6ae60a4d59e8",
+      "bytes": 5673096
+    }
+  ],
+  "semantic_relationships": [
+    {
+      "type": "source_visible_interaction_observation",
+      "component_ids": [
+        "phone_blue",
+        "cable_connector"
+      ],
+      "original_interaction_program": {
+        "path": "data/flow-capture-phone-20261103-v1/flow-procedure-1/interaction.json",
+        "sha256": "98cd7e5bb4fc375fb7c164dec7d9a09973d072ccd108449204af9ce942d36165",
+        "bytes": 50334
+      },
+      "physical_joint_recovery": false,
+      "rigid_geometry_recovery": false,
+      "contact_certification": false
+    }
+  ],
+  "samples": [
+    {
+      "source_sample_index": 1,
+      "timestamp_s": 0.0,
+      "status": "unknown",
+      "reason": "original_source_unknown_preserved"
+    },
+    {
+      "source_sample_index": 2,
+      "timestamp_s": 0.696633,
+      "status": "unknown",
+      "reason": "original_source_unknown_preserved"
+    },
+    {
+      "source_sample_index": 3,
+      "timestamp_s": 1.396444,
+      "status": "unknown",
+      "reason": "original_source_unknown_preserved"
+    },
+    {
+      "source_sample_index": 4,
+      "timestamp_s": 2.096322,
+      "status": "source_observed_prior",
+      "reason": "exact_source_visible_component_union_with_CPU_monocular_depth_prior",
+      "source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000004.jpg",
+        "sha256": "47191c6ccf3c5a61b8609330b1940766313b11f409b12dfe8a3ddcdc508dfa24",
+        "bytes": 46167
+      },
+      "source_masks": [
+        {
+          "track_id": "phone_blue",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000004.png",
+          "sha256": "1bdf0441950540a4e9b0a09b50f4fc0cd50f980706a9ffe0a40a044e268e9b2b",
+          "bytes": 1587
+        }
+      ],
+      "source_grid_stride_px": 4,
+      "depth_model": {
+        "name": "Ruicheng/moge-2-vits-normal",
+        "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+        "device": "cpu",
+        "input_dimensions": [
+          336,
+          448
+        ],
+        "num_tokens": 600
+      },
+      "depth_prior_model_intrinsics": [
+        [
+          1.0326708555221558,
+          0.0,
+          0.5
+        ],
+        [
+          0.0,
+          0.7745031118392944,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "valid_mask_depth_fraction": 1.0,
+      "depth_scale_gauge": 1.5369452863524131,
+      "native_prior_translation_z": 1.3375613347682525,
+      "vertices": 1636,
+      "triangles": 3088,
+      "triangles_pruned_by_unknown_pixel_footprint": 8,
+      "visible_component_ids": [
+        "phone_blue"
+      ],
+      "component_surface_support": [
+        {
+          "component_id": "phone_blue",
+          "source_supported_triangle_count": 3088
+        },
+        {
+          "component_id": "cable_connector",
+          "source_supported_triangle_count": 0
+        }
+      ],
+      "wall_seconds": 0.672679666953627,
+      "physical_accuracy_verified": false,
+      "asset": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-004/observed-surface.glb",
+        "sha256": "b0431f70a3cccd7b761764f5e8160d798c92020a850d42c240f5ee381030b7fa",
+        "bytes": 124608
+      },
+      "source_pixel_map": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-004/source-pixel-map.npz",
+        "sha256": "49b3bc4175b86cf79ada395c63812f183dbe7883d4710d026d5a298d0cb63e31",
+        "bytes": 20365
+      },
+      "camera_from_asset": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_visible_only": true,
+      "triangle_source_footprint_verified": true,
+      "hidden_backs_culled": true,
+      "unlit_exact_vertex_RGB": true,
+      "appearance_mode": "exact_source_JPEG_projected_UV",
+      "texture_source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000004.jpg",
+        "sha256": "47191c6ccf3c5a61b8609330b1940766313b11f409b12dfe8a3ddcdc508dfa24",
+        "bytes": 46167
+      },
+      "sampled_source_RGB_attribute": "_SOURCE_RGB",
+      "vertex_RGB_multiplied_into_texture": false,
+      "virtual_flexure": {
+        "type": "no_joint_recovered_by_observation",
+        "status": "unknown",
+        "origin_camera": null,
+        "axis_camera": null,
+        "angle_rad": null,
+        "reason": "source_visible_surface_does_not_recover_physical_joint_or_rigid_contact"
+      },
+      "new_API_calls": 0,
+      "new_GPU_calls": 0,
+      "provenance": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-004/provenance.json",
+        "sha256": "265819d405ecceeb1b55431ffa75fab8590816666b8008bbeb7b7ba31a2325cd",
+        "bytes": 3224
+      }
+    },
+    {
+      "source_sample_index": 5,
+      "timestamp_s": 2.7962,
+      "status": "source_observed_prior",
+      "reason": "exact_source_visible_component_union_with_CPU_monocular_depth_prior",
+      "source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000005.jpg",
+        "sha256": "1791c89a74cff26b28cf60b3c8266f1503361c316d66efb3ab766435d5f1afe3",
+        "bytes": 53627
+      },
+      "source_masks": [
+        {
+          "track_id": "phone_blue",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000005.png",
+          "sha256": "01a0955f82c16a5e8238e124b5bf1a7a4de5e662694af95b0180cb30867bddd7",
+          "bytes": 1563
+        }
+      ],
+      "source_grid_stride_px": 4,
+      "depth_model": {
+        "name": "Ruicheng/moge-2-vits-normal",
+        "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+        "device": "cpu",
+        "input_dimensions": [
+          336,
+          448
+        ],
+        "num_tokens": 600
+      },
+      "depth_prior_model_intrinsics": [
+        [
+          0.9531005024909973,
+          0.0,
+          0.5
+        ],
+        [
+          0.0,
+          0.7148253917694092,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "valid_mask_depth_fraction": 1.0,
+      "depth_scale_gauge": 1.581323331113302,
+      "native_prior_translation_z": 1.3790656608401515,
+      "vertices": 1456,
+      "triangles": 2732,
+      "triangles_pruned_by_unknown_pixel_footprint": 9,
+      "visible_component_ids": [
+        "phone_blue"
+      ],
+      "component_surface_support": [
+        {
+          "component_id": "phone_blue",
+          "source_supported_triangle_count": 2732
+        },
+        {
+          "component_id": "cable_connector",
+          "source_supported_triangle_count": 0
+        }
+      ],
+      "wall_seconds": 0.27660750003997236,
+      "physical_accuracy_verified": false,
+      "asset": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-005/observed-surface.glb",
+        "sha256": "1c04c49349ef5a5c1c3799146ca109909502be663e12699f34271979dd0ca8a1",
+        "bytes": 123480
+      },
+      "source_pixel_map": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-005/source-pixel-map.npz",
+        "sha256": "97bd9268b08a3078abf7d37776fa7d3af9afd506dee50330212f5b530067d719",
+        "bytes": 18245
+      },
+      "camera_from_asset": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_visible_only": true,
+      "triangle_source_footprint_verified": true,
+      "hidden_backs_culled": true,
+      "unlit_exact_vertex_RGB": true,
+      "appearance_mode": "exact_source_JPEG_projected_UV",
+      "texture_source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000005.jpg",
+        "sha256": "1791c89a74cff26b28cf60b3c8266f1503361c316d66efb3ab766435d5f1afe3",
+        "bytes": 53627
+      },
+      "sampled_source_RGB_attribute": "_SOURCE_RGB",
+      "vertex_RGB_multiplied_into_texture": false,
+      "virtual_flexure": {
+        "type": "no_joint_recovered_by_observation",
+        "status": "unknown",
+        "origin_camera": null,
+        "axis_camera": null,
+        "angle_rad": null,
+        "reason": "source_visible_surface_does_not_recover_physical_joint_or_rigid_contact"
+      },
+      "new_API_calls": 0,
+      "new_GPU_calls": 0,
+      "provenance": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-005/provenance.json",
+        "sha256": "3b33e59461e9aa3b565757a852424992a12d1aac6c1ebeaf93947a437c1452dd",
+        "bytes": 3223
+      }
+    },
+    {
+      "source_sample_index": 6,
+      "timestamp_s": 3.496078,
+      "status": "source_observed_prior",
+      "reason": "exact_source_visible_component_union_with_CPU_monocular_depth_prior",
+      "source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000006.jpg",
+        "sha256": "8c0409f7548479e8bb67a572d0cde059d4c73ab1bf9ce346c262ae18b577058d",
+        "bytes": 51475
+      },
+      "source_masks": [
+        {
+          "track_id": "phone_blue",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000006.png",
+          "sha256": "f66d5a2e5fede7d3d190179e826e17791ed8b78c6eb0dea60a7138eb3d7a9490",
+          "bytes": 1713
+        }
+      ],
+      "source_grid_stride_px": 3,
+      "depth_model": {
+        "name": "Ruicheng/moge-2-vits-normal",
+        "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+        "device": "cpu",
+        "input_dimensions": [
+          336,
+          448
+        ],
+        "num_tokens": 600
+      },
+      "depth_prior_model_intrinsics": [
+        [
+          0.904583215713501,
+          0.0,
+          0.5
+        ],
+        [
+          0.0,
+          0.6784374117851257,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "valid_mask_depth_fraction": 1.0,
+      "depth_scale_gauge": 2.006267466123832,
+      "native_prior_translation_z": 1.4428786528147735,
+      "vertices": 1269,
+      "triangles": 2292,
+      "triangles_pruned_by_unknown_pixel_footprint": 6,
+      "visible_component_ids": [
+        "phone_blue"
+      ],
+      "component_surface_support": [
+        {
+          "component_id": "phone_blue",
+          "source_supported_triangle_count": 2292
+        },
+        {
+          "component_id": "cable_connector",
+          "source_supported_triangle_count": 0
+        }
+      ],
+      "wall_seconds": 0.27418787498027086,
+      "physical_accuracy_verified": false,
+      "asset": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-006/observed-surface.glb",
+        "sha256": "910289b172a4af966c865efb5068f560ec87d5188175a9b879cdbf9201814e78",
+        "bytes": 111560
+      },
+      "source_pixel_map": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-006/source-pixel-map.npz",
+        "sha256": "5910aeb3ec46546004cf5c5b91064af2fd4a2299a338219bcf2d7dedf0f9c16a",
+        "bytes": 15848
+      },
+      "camera_from_asset": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_visible_only": true,
+      "triangle_source_footprint_verified": true,
+      "hidden_backs_culled": true,
+      "unlit_exact_vertex_RGB": true,
+      "appearance_mode": "exact_source_JPEG_projected_UV",
+      "texture_source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000006.jpg",
+        "sha256": "8c0409f7548479e8bb67a572d0cde059d4c73ab1bf9ce346c262ae18b577058d",
+        "bytes": 51475
+      },
+      "sampled_source_RGB_attribute": "_SOURCE_RGB",
+      "vertex_RGB_multiplied_into_texture": false,
+      "virtual_flexure": {
+        "type": "no_joint_recovered_by_observation",
+        "status": "unknown",
+        "origin_camera": null,
+        "axis_camera": null,
+        "angle_rad": null,
+        "reason": "source_visible_surface_does_not_recover_physical_joint_or_rigid_contact"
+      },
+      "new_API_calls": 0,
+      "new_GPU_calls": 0,
+      "provenance": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-006/provenance.json",
+        "sha256": "ca51a19214f4d73659d1e785181c3564e08c0aa03c37d1319e10c549b000d229",
+        "bytes": 3224
+      }
+    },
+    {
+      "source_sample_index": 7,
+      "timestamp_s": 4.195956,
+      "status": "source_observed_prior",
+      "reason": "exact_source_visible_component_union_with_CPU_monocular_depth_prior",
+      "source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000007.jpg",
+        "sha256": "d574d3f33a00a34a1e1b8164c4b2b1a79b4b32fdb4a2318348b646267d4a5729",
+        "bytes": 48660
+      },
+      "source_masks": [
+        {
+          "track_id": "phone_blue",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000007.png",
+          "sha256": "292d0c35500b6e55d95d5a928e0e06673d6cc67ef33cc16965134db8e54640a3",
+          "bytes": 1494
+        }
+      ],
+      "source_grid_stride_px": 3,
+      "depth_model": {
+        "name": "Ruicheng/moge-2-vits-normal",
+        "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+        "device": "cpu",
+        "input_dimensions": [
+          336,
+          448
+        ],
+        "num_tokens": 600
+      },
+      "depth_prior_model_intrinsics": [
+        [
+          0.826488196849823,
+          0.0,
+          0.5
+        ],
+        [
+          0.0,
+          0.619866132736206,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "valid_mask_depth_fraction": 1.0,
+      "depth_scale_gauge": 2.7291341114096883,
+      "native_prior_translation_z": 1.709133979553288,
+      "vertices": 1096,
+      "triangles": 1958,
+      "triangles_pruned_by_unknown_pixel_footprint": 11,
+      "visible_component_ids": [
+        "phone_blue"
+      ],
+      "component_surface_support": [
+        {
+          "component_id": "phone_blue",
+          "source_supported_triangle_count": 1958
+        },
+        {
+          "component_id": "cable_connector",
+          "source_supported_triangle_count": 0
+        }
+      ],
+      "wall_seconds": 0.26864237495465204,
+      "physical_accuracy_verified": false,
+      "asset": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-007/observed-surface.glb",
+        "sha256": "f4a96d09b15cb60695b5c1740b86b97ba680fe087be5fd81a475f44fcdd21bce",
+        "bytes": 100580
+      },
+      "source_pixel_map": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-007/source-pixel-map.npz",
+        "sha256": "121e7b9864691613344e93b0f6326f12f5018f09ff637dcc5bfbbe8bb7fd8e87",
+        "bytes": 13930
+      },
+      "camera_from_asset": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_visible_only": true,
+      "triangle_source_footprint_verified": true,
+      "hidden_backs_culled": true,
+      "unlit_exact_vertex_RGB": true,
+      "appearance_mode": "exact_source_JPEG_projected_UV",
+      "texture_source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000007.jpg",
+        "sha256": "d574d3f33a00a34a1e1b8164c4b2b1a79b4b32fdb4a2318348b646267d4a5729",
+        "bytes": 48660
+      },
+      "sampled_source_RGB_attribute": "_SOURCE_RGB",
+      "vertex_RGB_multiplied_into_texture": false,
+      "virtual_flexure": {
+        "type": "no_joint_recovered_by_observation",
+        "status": "unknown",
+        "origin_camera": null,
+        "axis_camera": null,
+        "angle_rad": null,
+        "reason": "source_visible_surface_does_not_recover_physical_joint_or_rigid_contact"
+      },
+      "new_API_calls": 0,
+      "new_GPU_calls": 0,
+      "provenance": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-007/provenance.json",
+        "sha256": "28e3fdb47779db1a37307b53b9d6c573f41f0516cb65f3f13ae8fa98376779b7",
+        "bytes": 3224
+      }
+    },
+    {
+      "source_sample_index": 8,
+      "timestamp_s": 4.895833,
+      "status": "source_observed_prior",
+      "reason": "exact_source_visible_component_union_with_CPU_monocular_depth_prior",
+      "source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000008.jpg",
+        "sha256": "6e7212db2f291d1b8fe385c72e68c777eb9bef471161784c1db4be59937ec3c2",
+        "bytes": 47233
+      },
+      "source_masks": [
+        {
+          "track_id": "phone_blue",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000008.png",
+          "sha256": "5865e6763b15ad2570cfd266dceaa29536758b7e592f90ac4d3caa3599f15705",
+          "bytes": 1363
+        }
+      ],
+      "source_grid_stride_px": 5,
+      "depth_model": {
+        "name": "Ruicheng/moge-2-vits-normal",
+        "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+        "device": "cpu",
+        "input_dimensions": [
+          336,
+          448
+        ],
+        "num_tokens": 600
+      },
+      "depth_prior_model_intrinsics": [
+        [
+          0.816460132598877,
+          0.0,
+          0.5
+        ],
+        [
+          0.0,
+          0.6123450994491577,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "valid_mask_depth_fraction": 1.0,
+      "depth_scale_gauge": 1.9647186949472788,
+      "native_prior_translation_z": 1.3466102482719289,
+      "vertices": 1183,
+      "triangles": 2208,
+      "triangles_pruned_by_unknown_pixel_footprint": 10,
+      "visible_component_ids": [
+        "phone_blue"
+      ],
+      "component_surface_support": [
+        {
+          "component_id": "phone_blue",
+          "source_supported_triangle_count": 2208
+        },
+        {
+          "component_id": "cable_connector",
+          "source_supported_triangle_count": 0
+        }
+      ],
+      "wall_seconds": 0.2699044169858098,
+      "physical_accuracy_verified": false,
+      "asset": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-008/observed-surface.glb",
+        "sha256": "972903fce80851d622cd068d32d16ae219ece4f768ce3d4834adf84e04980743",
+        "bytes": 104244
+      },
+      "source_pixel_map": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-008/source-pixel-map.npz",
+        "sha256": "0779e9000ae3b3d0bfd9b30e90425d38aa40ff1ad7bd71120d4e22df73056bfb",
+        "bytes": 14818
+      },
+      "camera_from_asset": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_visible_only": true,
+      "triangle_source_footprint_verified": true,
+      "hidden_backs_culled": true,
+      "unlit_exact_vertex_RGB": true,
+      "appearance_mode": "exact_source_JPEG_projected_UV",
+      "texture_source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000008.jpg",
+        "sha256": "6e7212db2f291d1b8fe385c72e68c777eb9bef471161784c1db4be59937ec3c2",
+        "bytes": 47233
+      },
+      "sampled_source_RGB_attribute": "_SOURCE_RGB",
+      "vertex_RGB_multiplied_into_texture": false,
+      "virtual_flexure": {
+        "type": "no_joint_recovered_by_observation",
+        "status": "unknown",
+        "origin_camera": null,
+        "axis_camera": null,
+        "angle_rad": null,
+        "reason": "source_visible_surface_does_not_recover_physical_joint_or_rigid_contact"
+      },
+      "new_API_calls": 0,
+      "new_GPU_calls": 0,
+      "provenance": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-008/provenance.json",
+        "sha256": "1005f88fd9a1390a1242d9259008d0c2db6c49df0af71a2f3db41abaf94030a6",
+        "bytes": 3225
+      }
+    },
+    {
+      "source_sample_index": 9,
+      "timestamp_s": 5.595822,
+      "status": "source_observed_prior",
+      "reason": "exact_source_visible_component_union_with_CPU_monocular_depth_prior",
+      "source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000009.jpg",
+        "sha256": "4ca301014bd317f3d9d20f991f201f74d6e5e7448c7a58d8be2e7228d2644f2a",
+        "bytes": 54569
+      },
+      "source_masks": [
+        {
+          "track_id": "phone_blue",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000009.png",
+          "sha256": "850273cc4c164b273b1533d8c7caf3138a17b07ee0c78ea10e0d5ab933a26a35",
+          "bytes": 1287
+        }
+      ],
+      "source_grid_stride_px": 5,
+      "depth_model": {
+        "name": "Ruicheng/moge-2-vits-normal",
+        "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+        "device": "cpu",
+        "input_dimensions": [
+          336,
+          448
+        ],
+        "num_tokens": 600
+      },
+      "depth_prior_model_intrinsics": [
+        [
+          0.8363246917724609,
+          0.0,
+          0.5
+        ],
+        [
+          0.0,
+          0.6272435188293457,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "valid_mask_depth_fraction": 1.0,
+      "depth_scale_gauge": 2.11218990945859,
+      "native_prior_translation_z": 1.317474241015692,
+      "vertices": 1211,
+      "triangles": 2262,
+      "triangles_pruned_by_unknown_pixel_footprint": 9,
+      "visible_component_ids": [
+        "phone_blue"
+      ],
+      "component_surface_support": [
+        {
+          "component_id": "phone_blue",
+          "source_supported_triangle_count": 2262
+        },
+        {
+          "component_id": "cable_connector",
+          "source_supported_triangle_count": 0
+        }
+      ],
+      "wall_seconds": 0.27186529198661447,
+      "physical_accuracy_verified": false,
+      "asset": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-009/observed-surface.glb",
+        "sha256": "b997c128b61bef2ad99359fa40b80be61f023b4f8ea8312f70c7b02aeaccc9ba",
+        "bytes": 112900
+      },
+      "source_pixel_map": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-009/source-pixel-map.npz",
+        "sha256": "6bda3649db8f507c299717e23c981072e663401dbd4a84a82d02c07731f0563d",
+        "bytes": 15233
+      },
+      "camera_from_asset": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_visible_only": true,
+      "triangle_source_footprint_verified": true,
+      "hidden_backs_culled": true,
+      "unlit_exact_vertex_RGB": true,
+      "appearance_mode": "exact_source_JPEG_projected_UV",
+      "texture_source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000009.jpg",
+        "sha256": "4ca301014bd317f3d9d20f991f201f74d6e5e7448c7a58d8be2e7228d2644f2a",
+        "bytes": 54569
+      },
+      "sampled_source_RGB_attribute": "_SOURCE_RGB",
+      "vertex_RGB_multiplied_into_texture": false,
+      "virtual_flexure": {
+        "type": "no_joint_recovered_by_observation",
+        "status": "unknown",
+        "origin_camera": null,
+        "axis_camera": null,
+        "angle_rad": null,
+        "reason": "source_visible_surface_does_not_recover_physical_joint_or_rigid_contact"
+      },
+      "new_API_calls": 0,
+      "new_GPU_calls": 0,
+      "provenance": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-009/provenance.json",
+        "sha256": "9242ca14f8d0804f40009ca84d5262aa1b937f8c56bd30f06406cef183fe5c7e",
+        "bytes": 3223
+      }
+    },
+    {
+      "source_sample_index": 10,
+      "timestamp_s": 6.2956,
+      "status": "source_observed_prior",
+      "reason": "exact_source_visible_component_union_with_CPU_monocular_depth_prior",
+      "source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000010.jpg",
+        "sha256": "50e0cf448e88ac47e4a253831ac5576872a12d048222a57688316e508cb408dd",
+        "bytes": 53599
+      },
+      "source_masks": [
+        {
+          "track_id": "phone_blue",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000010.png",
+          "sha256": "6e0d73573f7967c63535c5e43350ebfdb51b8a841a423148aa20fd952363b3c7",
+          "bytes": 1175
+        }
+      ],
+      "source_grid_stride_px": 3,
+      "depth_model": {
+        "name": "Ruicheng/moge-2-vits-normal",
+        "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+        "device": "cpu",
+        "input_dimensions": [
+          336,
+          448
+        ],
+        "num_tokens": 600
+      },
+      "depth_prior_model_intrinsics": [
+        [
+          0.941049337387085,
+          0.0,
+          0.5
+        ],
+        [
+          0.0,
+          0.7057870030403137,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "valid_mask_depth_fraction": 1.0,
+      "depth_scale_gauge": 2.879790499003592,
+      "native_prior_translation_z": 1.8764239517459875,
+      "vertices": 1302,
+      "triangles": 2372,
+      "triangles_pruned_by_unknown_pixel_footprint": 8,
+      "visible_component_ids": [
+        "phone_blue"
+      ],
+      "component_surface_support": [
+        {
+          "component_id": "phone_blue",
+          "source_supported_triangle_count": 2372
+        },
+        {
+          "component_id": "cable_connector",
+          "source_supported_triangle_count": 0
+        }
+      ],
+      "wall_seconds": 0.26743900001747534,
+      "physical_accuracy_verified": false,
+      "asset": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-010/observed-surface.glb",
+        "sha256": "9a8859fe8818d7c63a239fb9438bbade612c6a875a774f9bc49532a4214ec108",
+        "bytes": 115436
+      },
+      "source_pixel_map": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-010/source-pixel-map.npz",
+        "sha256": "7bd9e72de7d9330d441f2fa4be26c9088565ff1f9023a2f5c4a1c731e19649ba",
+        "bytes": 16221
+      },
+      "camera_from_asset": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_visible_only": true,
+      "triangle_source_footprint_verified": true,
+      "hidden_backs_culled": true,
+      "unlit_exact_vertex_RGB": true,
+      "appearance_mode": "exact_source_JPEG_projected_UV",
+      "texture_source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000010.jpg",
+        "sha256": "50e0cf448e88ac47e4a253831ac5576872a12d048222a57688316e508cb408dd",
+        "bytes": 53599
+      },
+      "sampled_source_RGB_attribute": "_SOURCE_RGB",
+      "vertex_RGB_multiplied_into_texture": false,
+      "virtual_flexure": {
+        "type": "no_joint_recovered_by_observation",
+        "status": "unknown",
+        "origin_camera": null,
+        "axis_camera": null,
+        "angle_rad": null,
+        "reason": "source_visible_surface_does_not_recover_physical_joint_or_rigid_contact"
+      },
+      "new_API_calls": 0,
+      "new_GPU_calls": 0,
+      "provenance": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-010/provenance.json",
+        "sha256": "df4d6bcb15c3febf3a969da10597950d00fa68198dcf16ce5bde7c64a4a30b43",
+        "bytes": 3223
+      }
+    },
+    {
+      "source_sample_index": 11,
+      "timestamp_s": 6.995478,
+      "status": "unknown",
+      "reason": "original_source_unknown_preserved"
+    },
+    {
+      "source_sample_index": 12,
+      "timestamp_s": 7.695356,
+      "status": "unknown",
+      "reason": "insufficient_visible_SAM_union_or_severe_occlusion"
+    },
+    {
+      "source_sample_index": 13,
+      "timestamp_s": 8.395233,
+      "status": "unknown",
+      "reason": "insufficient_visible_SAM_union_or_severe_occlusion"
+    },
+    {
+      "source_sample_index": 14,
+      "timestamp_s": 9.095111,
+      "status": "unknown",
+      "reason": "original_source_unknown_preserved"
+    },
+    {
+      "source_sample_index": 15,
+      "timestamp_s": 9.794989,
+      "status": "unknown",
+      "reason": "insufficient_visible_SAM_union_or_severe_occlusion"
+    },
+    {
+      "source_sample_index": 16,
+      "timestamp_s": 10.494867,
+      "status": "unknown",
+      "reason": "insufficient_visible_SAM_union_or_severe_occlusion"
+    },
+    {
+      "source_sample_index": 17,
+      "timestamp_s": 11.194744,
+      "status": "unknown",
+      "reason": "original_source_unknown_preserved"
+    },
+    {
+      "source_sample_index": 18,
+      "timestamp_s": 11.894622,
+      "status": "unknown",
+      "reason": "original_source_unknown_preserved"
+    },
+    {
+      "source_sample_index": 19,
+      "timestamp_s": 12.594611,
+      "status": "unknown",
+      "reason": "insufficient_visible_SAM_union_or_severe_occlusion"
+    },
+    {
+      "source_sample_index": 20,
+      "timestamp_s": 13.294489,
+      "status": "source_observed_prior",
+      "reason": "exact_source_visible_component_union_with_CPU_monocular_depth_prior",
+      "source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000020.jpg",
+        "sha256": "5111b12fb36664d184923b78211d100d265c95425727e06a53fdba010b8fb23e",
+        "bytes": 52874
+      },
+      "source_masks": [
+        {
+          "track_id": "phone_blue",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000020.png",
+          "sha256": "c2491a8ae85331fd5e2373eb6a7d16bbf8a39f10d8b5372064f4f059f57db306",
+          "bytes": 1314
+        }
+      ],
+      "source_grid_stride_px": 3,
+      "depth_model": {
+        "name": "Ruicheng/moge-2-vits-normal",
+        "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+        "device": "cpu",
+        "input_dimensions": [
+          336,
+          448
+        ],
+        "num_tokens": 600
+      },
+      "depth_prior_model_intrinsics": [
+        [
+          0.8707640767097473,
+          0.0,
+          0.5
+        ],
+        [
+          0.0,
+          0.6530730724334717,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "valid_mask_depth_fraction": 1.0,
+      "depth_scale_gauge": 3.1794861922559132,
+      "native_prior_translation_z": 1.709705041998044,
+      "vertices": 1154,
+      "triangles": 2072,
+      "triangles_pruned_by_unknown_pixel_footprint": 37,
+      "visible_component_ids": [
+        "phone_blue"
+      ],
+      "component_surface_support": [
+        {
+          "component_id": "phone_blue",
+          "source_supported_triangle_count": 2072
+        },
+        {
+          "component_id": "cable_connector",
+          "source_supported_triangle_count": 0
+        }
+      ],
+      "wall_seconds": 0.2811975000076927,
+      "physical_accuracy_verified": false,
+      "asset": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-020/observed-surface.glb",
+        "sha256": "0a13dfae3b42496b43078293e542cda159f6fa6d5cdfc0c21fba8aa833683297",
+        "bytes": 107556
+      },
+      "source_pixel_map": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-020/source-pixel-map.npz",
+        "sha256": "52e247051b06ae5b504d7384e40db27381577b6527339a318e6a084feb2a93b9",
+        "bytes": 14185
+      },
+      "camera_from_asset": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_visible_only": true,
+      "triangle_source_footprint_verified": true,
+      "hidden_backs_culled": true,
+      "unlit_exact_vertex_RGB": true,
+      "appearance_mode": "exact_source_JPEG_projected_UV",
+      "texture_source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000020.jpg",
+        "sha256": "5111b12fb36664d184923b78211d100d265c95425727e06a53fdba010b8fb23e",
+        "bytes": 52874
+      },
+      "sampled_source_RGB_attribute": "_SOURCE_RGB",
+      "vertex_RGB_multiplied_into_texture": false,
+      "virtual_flexure": {
+        "type": "no_joint_recovered_by_observation",
+        "status": "unknown",
+        "origin_camera": null,
+        "axis_camera": null,
+        "angle_rad": null,
+        "reason": "source_visible_surface_does_not_recover_physical_joint_or_rigid_contact"
+      },
+      "new_API_calls": 0,
+      "new_GPU_calls": 0,
+      "provenance": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-020/provenance.json",
+        "sha256": "858fbeeb0b9969788c8a030542697446fa5395cafb80f691dd903dbdb85e6a23",
+        "bytes": 3227
+      }
+    },
+    {
+      "source_sample_index": 21,
+      "timestamp_s": 13.994367,
+      "status": "source_observed_prior",
+      "reason": "exact_source_visible_component_union_with_CPU_monocular_depth_prior",
+      "source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000021.jpg",
+        "sha256": "1ef1fe706a9055331bffe4ef3419deb2c5e77c010bb3bcd5103a7547e507dec1",
+        "bytes": 52077
+      },
+      "source_masks": [
+        {
+          "track_id": "phone_blue",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000021.png",
+          "sha256": "b45dca52a4cd6a821f3fefc7affa01fb49e40c514384f2b2b6c7817d9f3c1314",
+          "bytes": 2116
+        }
+      ],
+      "source_grid_stride_px": 5,
+      "depth_model": {
+        "name": "Ruicheng/moge-2-vits-normal",
+        "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+        "device": "cpu",
+        "input_dimensions": [
+          336,
+          448
+        ],
+        "num_tokens": 600
+      },
+      "depth_prior_model_intrinsics": [
+        [
+          0.8622679710388184,
+          0.0,
+          0.5
+        ],
+        [
+          0.0,
+          0.6467009782791138,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "valid_mask_depth_fraction": 1.0,
+      "depth_scale_gauge": 1.6319542221644634,
+      "native_prior_translation_z": 1.2845578867091816,
+      "vertices": 1192,
+      "triangles": 2211,
+      "triangles_pruned_by_unknown_pixel_footprint": 22,
+      "visible_component_ids": [
+        "phone_blue"
+      ],
+      "component_surface_support": [
+        {
+          "component_id": "phone_blue",
+          "source_supported_triangle_count": 2211
+        },
+        {
+          "component_id": "cable_connector",
+          "source_supported_triangle_count": 0
+        }
+      ],
+      "wall_seconds": 0.27700487500987947,
+      "physical_accuracy_verified": false,
+      "asset": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-021/observed-surface.glb",
+        "sha256": "ce88250af370d14369df4b36e72ad4ea44c9105294841f62e40a4655f403d7fb",
+        "bytes": 109340
+      },
+      "source_pixel_map": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-021/source-pixel-map.npz",
+        "sha256": "08dfa2bd362638ba181695b8081da909120bdfd5f7d549e4eb2be500df0be355",
+        "bytes": 14951
+      },
+      "camera_from_asset": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_visible_only": true,
+      "triangle_source_footprint_verified": true,
+      "hidden_backs_culled": true,
+      "unlit_exact_vertex_RGB": true,
+      "appearance_mode": "exact_source_JPEG_projected_UV",
+      "texture_source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000021.jpg",
+        "sha256": "1ef1fe706a9055331bffe4ef3419deb2c5e77c010bb3bcd5103a7547e507dec1",
+        "bytes": 52077
+      },
+      "sampled_source_RGB_attribute": "_SOURCE_RGB",
+      "vertex_RGB_multiplied_into_texture": false,
+      "virtual_flexure": {
+        "type": "no_joint_recovered_by_observation",
+        "status": "unknown",
+        "origin_camera": null,
+        "axis_camera": null,
+        "angle_rad": null,
+        "reason": "source_visible_surface_does_not_recover_physical_joint_or_rigid_contact"
+      },
+      "new_API_calls": 0,
+      "new_GPU_calls": 0,
+      "provenance": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-021/provenance.json",
+        "sha256": "da77e6ad552a9537bcf3f229376eb2690c63906d586a0555dd18e0a4e73ee677",
+        "bytes": 3229
+      }
+    },
+    {
+      "source_sample_index": 22,
+      "timestamp_s": 14.694167,
+      "status": "source_observed_prior",
+      "reason": "exact_source_visible_component_union_with_CPU_monocular_depth_prior",
+      "source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000022.jpg",
+        "sha256": "dd3cf53defa730ab43546afbd259a803cf06e3e4c62909dd6c826bd8bbcfd046",
+        "bytes": 53208
+      },
+      "source_masks": [
+        {
+          "track_id": "phone_blue",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000022.png",
+          "sha256": "236ffcced886e8da3ab18c5e138cbcd121a0db62ed64d50fa54701a4bdb99c0d",
+          "bytes": 2039
+        }
+      ],
+      "source_grid_stride_px": 4,
+      "depth_model": {
+        "name": "Ruicheng/moge-2-vits-normal",
+        "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+        "device": "cpu",
+        "input_dimensions": [
+          336,
+          448
+        ],
+        "num_tokens": 600
+      },
+      "depth_prior_model_intrinsics": [
+        [
+          0.9210863709449768,
+          0.0,
+          0.5
+        ],
+        [
+          0.0,
+          0.6908147931098938,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "valid_mask_depth_fraction": 1.0,
+      "depth_scale_gauge": 1.618612867357187,
+      "native_prior_translation_z": 1.4234262208045434,
+      "vertices": 1609,
+      "triangles": 3001,
+      "triangles_pruned_by_unknown_pixel_footprint": 46,
+      "visible_component_ids": [
+        "phone_blue"
+      ],
+      "component_surface_support": [
+        {
+          "component_id": "phone_blue",
+          "source_supported_triangle_count": 3001
+        },
+        {
+          "component_id": "cable_connector",
+          "source_supported_triangle_count": 0
+        }
+      ],
+      "wall_seconds": 0.2742049579974264,
+      "physical_accuracy_verified": false,
+      "asset": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-022/observed-surface.glb",
+        "sha256": "238231d95881fab3d75a4f3030dd5d3262ea0f1138277153f0bedf7be063bedf",
+        "bytes": 129956
+      },
+      "source_pixel_map": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-022/source-pixel-map.npz",
+        "sha256": "3f1a26333bbbe7463f2202f36c9e3a000f66ba3c1fed579f9be7fc25d3748e28",
+        "bytes": 20458
+      },
+      "camera_from_asset": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_visible_only": true,
+      "triangle_source_footprint_verified": true,
+      "hidden_backs_culled": true,
+      "unlit_exact_vertex_RGB": true,
+      "appearance_mode": "exact_source_JPEG_projected_UV",
+      "texture_source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000022.jpg",
+        "sha256": "dd3cf53defa730ab43546afbd259a803cf06e3e4c62909dd6c826bd8bbcfd046",
+        "bytes": 53208
+      },
+      "sampled_source_RGB_attribute": "_SOURCE_RGB",
+      "vertex_RGB_multiplied_into_texture": false,
+      "virtual_flexure": {
+        "type": "no_joint_recovered_by_observation",
+        "status": "unknown",
+        "origin_camera": null,
+        "axis_camera": null,
+        "angle_rad": null,
+        "reason": "source_visible_surface_does_not_recover_physical_joint_or_rigid_contact"
+      },
+      "new_API_calls": 0,
+      "new_GPU_calls": 0,
+      "provenance": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-022/provenance.json",
+        "sha256": "8cbf642547b34b9ed1f52344de2fe1d707b6f573f60638f100d44dfb64e227b3",
+        "bytes": 3227
+      }
+    },
+    {
+      "source_sample_index": 23,
+      "timestamp_s": 15.394044,
+      "status": "source_observed_prior",
+      "reason": "exact_source_visible_component_union_with_CPU_monocular_depth_prior",
+      "source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000023.jpg",
+        "sha256": "996ae25d72d539b6a452e9d636ea9df34025ecc5b30249f8ce5f6e2a81908845",
+        "bytes": 54598
+      },
+      "source_masks": [
+        {
+          "track_id": "phone_blue",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000023.png",
+          "sha256": "901a061c84bff3659ea14923875ef17502af9e62ace3689f3d139aed3b48abd3",
+          "bytes": 1909
+        }
+      ],
+      "source_grid_stride_px": 4,
+      "depth_model": {
+        "name": "Ruicheng/moge-2-vits-normal",
+        "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+        "device": "cpu",
+        "input_dimensions": [
+          336,
+          448
+        ],
+        "num_tokens": 600
+      },
+      "depth_prior_model_intrinsics": [
+        [
+          0.9297111630439758,
+          0.0,
+          0.5
+        ],
+        [
+          0.0,
+          0.6972833871841431,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "valid_mask_depth_fraction": 1.0,
+      "depth_scale_gauge": 2.0060379588657935,
+      "native_prior_translation_z": 1.715537462040696,
+      "vertices": 1254,
+      "triangles": 2327,
+      "triangles_pruned_by_unknown_pixel_footprint": 27,
+      "visible_component_ids": [
+        "phone_blue"
+      ],
+      "component_surface_support": [
+        {
+          "component_id": "phone_blue",
+          "source_supported_triangle_count": 2327
+        },
+        {
+          "component_id": "cable_connector",
+          "source_supported_triangle_count": 0
+        }
+      ],
+      "wall_seconds": 0.2814801250351593,
+      "physical_accuracy_verified": false,
+      "asset": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-023/observed-surface.glb",
+        "sha256": "d31ee9500bcddf5011f9575b8d13abb3bdd15c52258f58b80ef87d4d26267d14",
+        "bytes": 114740
+      },
+      "source_pixel_map": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-023/source-pixel-map.npz",
+        "sha256": "0acae22c30ac0a2ce43f93585121b3c2c47683dcb475b51c512c872190850e98",
+        "bytes": 15854
+      },
+      "camera_from_asset": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_visible_only": true,
+      "triangle_source_footprint_verified": true,
+      "hidden_backs_culled": true,
+      "unlit_exact_vertex_RGB": true,
+      "appearance_mode": "exact_source_JPEG_projected_UV",
+      "texture_source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000023.jpg",
+        "sha256": "996ae25d72d539b6a452e9d636ea9df34025ecc5b30249f8ce5f6e2a81908845",
+        "bytes": 54598
+      },
+      "sampled_source_RGB_attribute": "_SOURCE_RGB",
+      "vertex_RGB_multiplied_into_texture": false,
+      "virtual_flexure": {
+        "type": "no_joint_recovered_by_observation",
+        "status": "unknown",
+        "origin_camera": null,
+        "axis_camera": null,
+        "angle_rad": null,
+        "reason": "source_visible_surface_does_not_recover_physical_joint_or_rigid_contact"
+      },
+      "new_API_calls": 0,
+      "new_GPU_calls": 0,
+      "provenance": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-023/provenance.json",
+        "sha256": "0752c4bd11a85662d3d225d63ad68b31cc119cd4dfe9f4d9fb4b7356cd86fdc2",
+        "bytes": 3227
+      }
+    },
+    {
+      "source_sample_index": 24,
+      "timestamp_s": 16.093922,
+      "status": "unknown",
+      "reason": "original_source_unknown_preserved"
+    },
+    {
+      "source_sample_index": 25,
+      "timestamp_s": 16.7938,
+      "status": "source_observed_prior",
+      "reason": "exact_source_visible_component_union_with_CPU_monocular_depth_prior",
+      "source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000025.jpg",
+        "sha256": "e2f2ee6c60f4628cc811a254b746c0f74e006bad5b4783219aaa588a4ce10973",
+        "bytes": 50154
+      },
+      "source_masks": [
+        {
+          "track_id": "phone_blue",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000025.png",
+          "sha256": "29bc883bf31e6565002c079c58d7e7b20868a4ebef7323f50239eea0b9dc05d1",
+          "bytes": 1615
+        }
+      ],
+      "source_grid_stride_px": 4,
+      "depth_model": {
+        "name": "Ruicheng/moge-2-vits-normal",
+        "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+        "device": "cpu",
+        "input_dimensions": [
+          336,
+          448
+        ],
+        "num_tokens": 600
+      },
+      "depth_prior_model_intrinsics": [
+        [
+          0.8623547554016113,
+          0.0,
+          0.5
+        ],
+        [
+          0.0,
+          0.6467660665512085,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "valid_mask_depth_fraction": 1.0,
+      "depth_scale_gauge": 1.9877629148797455,
+      "native_prior_translation_z": 1.5070429141630393,
+      "vertices": 1724,
+      "triangles": 3256,
+      "triangles_pruned_by_unknown_pixel_footprint": 9,
+      "visible_component_ids": [
+        "phone_blue"
+      ],
+      "component_surface_support": [
+        {
+          "component_id": "phone_blue",
+          "source_supported_triangle_count": 3256
+        },
+        {
+          "component_id": "cable_connector",
+          "source_supported_triangle_count": 0
+        }
+      ],
+      "wall_seconds": 0.2894892080221325,
+      "physical_accuracy_verified": false,
+      "asset": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-025/observed-surface.glb",
+        "sha256": "d7f0cea039a44ec638e79b7085fabe4600485d6bc8dfe7666e97a8044f706565",
+        "bytes": 132716
+      },
+      "source_pixel_map": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-025/source-pixel-map.npz",
+        "sha256": "f0044212fb9673791c55718e5cce314ce1ef88a2bceceecd55426aa36b474046",
+        "bytes": 21526
+      },
+      "camera_from_asset": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_visible_only": true,
+      "triangle_source_footprint_verified": true,
+      "hidden_backs_culled": true,
+      "unlit_exact_vertex_RGB": true,
+      "appearance_mode": "exact_source_JPEG_projected_UV",
+      "texture_source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000025.jpg",
+        "sha256": "e2f2ee6c60f4628cc811a254b746c0f74e006bad5b4783219aaa588a4ce10973",
+        "bytes": 50154
+      },
+      "sampled_source_RGB_attribute": "_SOURCE_RGB",
+      "vertex_RGB_multiplied_into_texture": false,
+      "virtual_flexure": {
+        "type": "no_joint_recovered_by_observation",
+        "status": "unknown",
+        "origin_camera": null,
+        "axis_camera": null,
+        "angle_rad": null,
+        "reason": "source_visible_surface_does_not_recover_physical_joint_or_rigid_contact"
+      },
+      "new_API_calls": 0,
+      "new_GPU_calls": 0,
+      "provenance": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-025/provenance.json",
+        "sha256": "1f9898dbaf8b73e01ceac8a77b90776fcf33b5e7ad4a85908c6eb9e4f1bafb45",
+        "bytes": 3225
+      }
+    },
+    {
+      "source_sample_index": 26,
+      "timestamp_s": 17.493789,
+      "status": "source_observed_prior",
+      "reason": "exact_source_visible_component_union_with_CPU_monocular_depth_prior",
+      "source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000026.jpg",
+        "sha256": "b0d851ce7130568fba90ddacff945595b4705ac7f20a4c32eb3412d21b580071",
+        "bytes": 48470
+      },
+      "source_masks": [
+        {
+          "track_id": "phone_blue",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000026.png",
+          "sha256": "55923a306bba178e9664db8cc7de5108b82be897ba3773bdc3ee3b7774c1c9f0",
+          "bytes": 1500
+        }
+      ],
+      "source_grid_stride_px": 4,
+      "depth_model": {
+        "name": "Ruicheng/moge-2-vits-normal",
+        "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+        "device": "cpu",
+        "input_dimensions": [
+          336,
+          448
+        ],
+        "num_tokens": 600
+      },
+      "depth_prior_model_intrinsics": [
+        [
+          0.9614847302436829,
+          0.0,
+          0.5
+        ],
+        [
+          0.0,
+          0.7211135625839233,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "valid_mask_depth_fraction": 1.0,
+      "depth_scale_gauge": 1.7725736066086737,
+      "native_prior_translation_z": 1.5564302831327974,
+      "vertices": 1504,
+      "triangles": 2837,
+      "triangles_pruned_by_unknown_pixel_footprint": 7,
+      "visible_component_ids": [
+        "phone_blue"
+      ],
+      "component_surface_support": [
+        {
+          "component_id": "phone_blue",
+          "source_supported_triangle_count": 2837
+        },
+        {
+          "component_id": "cable_connector",
+          "source_supported_triangle_count": 0
+        }
+      ],
+      "wall_seconds": 0.30213954200735316,
+      "physical_accuracy_verified": false,
+      "asset": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-026/observed-surface.glb",
+        "sha256": "c03d4a25b871f9e494ed4e65767a53444fa7686c3fc78046cac4d5da9fc0fae3",
+        "bytes": 120736
+      },
+      "source_pixel_map": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-026/source-pixel-map.npz",
+        "sha256": "5d1429de5dbf541aac18f712c6b8078c5176434e465c20e7653a30fbed7114a8",
+        "bytes": 18908
+      },
+      "camera_from_asset": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_visible_only": true,
+      "triangle_source_footprint_verified": true,
+      "hidden_backs_culled": true,
+      "unlit_exact_vertex_RGB": true,
+      "appearance_mode": "exact_source_JPEG_projected_UV",
+      "texture_source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000026.jpg",
+        "sha256": "b0d851ce7130568fba90ddacff945595b4705ac7f20a4c32eb3412d21b580071",
+        "bytes": 48470
+      },
+      "sampled_source_RGB_attribute": "_SOURCE_RGB",
+      "vertex_RGB_multiplied_into_texture": false,
+      "virtual_flexure": {
+        "type": "no_joint_recovered_by_observation",
+        "status": "unknown",
+        "origin_camera": null,
+        "axis_camera": null,
+        "angle_rad": null,
+        "reason": "source_visible_surface_does_not_recover_physical_joint_or_rigid_contact"
+      },
+      "new_API_calls": 0,
+      "new_GPU_calls": 0,
+      "provenance": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-026/provenance.json",
+        "sha256": "da6d3763e8df9082c0b31a89a37fd7998f5885a6a541134bae3f3383ce5b6c0d",
+        "bytes": 3228
+      }
+    },
+    {
+      "source_sample_index": 27,
+      "timestamp_s": 18.193667,
+      "status": "source_observed_prior",
+      "reason": "exact_source_visible_component_union_with_CPU_monocular_depth_prior",
+      "source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000027.jpg",
+        "sha256": "ed2c5d5b2faa755d98ff877649065571434e2e606c2d7a0e47704a3aa47e826f",
+        "bytes": 51554
+      },
+      "source_masks": [
+        {
+          "track_id": "phone_blue",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000027.png",
+          "sha256": "9a14bdbffe9359e973d2739e2db66807b39c1cd14c6966867bd4fc89ed115dc1",
+          "bytes": 1381
+        }
+      ],
+      "source_grid_stride_px": 3,
+      "depth_model": {
+        "name": "Ruicheng/moge-2-vits-normal",
+        "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+        "device": "cpu",
+        "input_dimensions": [
+          336,
+          448
+        ],
+        "num_tokens": 600
+      },
+      "depth_prior_model_intrinsics": [
+        [
+          0.9585960507392883,
+          0.0,
+          0.5
+        ],
+        [
+          0.0,
+          0.7189470529556274,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "valid_mask_depth_fraction": 1.0,
+      "depth_scale_gauge": 2.3020734869066763,
+      "native_prior_translation_z": 1.9289511067338427,
+      "vertices": 1741,
+      "triangles": 3285,
+      "triangles_pruned_by_unknown_pixel_footprint": 9,
+      "visible_component_ids": [
+        "phone_blue"
+      ],
+      "component_surface_support": [
+        {
+          "component_id": "phone_blue",
+          "source_supported_triangle_count": 3285
+        },
+        {
+          "component_id": "cable_connector",
+          "source_supported_triangle_count": 0
+        }
+      ],
+      "wall_seconds": 0.29862504202174023,
+      "physical_accuracy_verified": false,
+      "asset": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-027/observed-surface.glb",
+        "sha256": "1193b1ae19427415141ad7e506226d46815a34c6f9c47c992f0705ad0aafccf0",
+        "bytes": 134880
+      },
+      "source_pixel_map": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-027/source-pixel-map.npz",
+        "sha256": "ab435b619cdba0995761c20374d806f68a12bf1e40a53be02fa607d9cd037007",
+        "bytes": 22002
+      },
+      "camera_from_asset": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_visible_only": true,
+      "triangle_source_footprint_verified": true,
+      "hidden_backs_culled": true,
+      "unlit_exact_vertex_RGB": true,
+      "appearance_mode": "exact_source_JPEG_projected_UV",
+      "texture_source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000027.jpg",
+        "sha256": "ed2c5d5b2faa755d98ff877649065571434e2e606c2d7a0e47704a3aa47e826f",
+        "bytes": 51554
+      },
+      "sampled_source_RGB_attribute": "_SOURCE_RGB",
+      "vertex_RGB_multiplied_into_texture": false,
+      "virtual_flexure": {
+        "type": "no_joint_recovered_by_observation",
+        "status": "unknown",
+        "origin_camera": null,
+        "axis_camera": null,
+        "angle_rad": null,
+        "reason": "source_visible_surface_does_not_recover_physical_joint_or_rigid_contact"
+      },
+      "new_API_calls": 0,
+      "new_GPU_calls": 0,
+      "provenance": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-027/provenance.json",
+        "sha256": "1b58a003a33946325597a3b843d20ecdbd8ac5de6633d779a0c7ad4f2321b918",
+        "bytes": 3228
+      }
+    },
+    {
+      "source_sample_index": 28,
+      "timestamp_s": 18.893544,
+      "status": "unknown",
+      "reason": "insufficient_visible_SAM_union_or_severe_occlusion"
+    },
+    {
+      "source_sample_index": 29,
+      "timestamp_s": 19.570167,
+      "status": "source_observed_prior",
+      "reason": "exact_source_visible_component_union_with_CPU_monocular_depth_prior",
+      "source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000029.jpg",
+        "sha256": "d4cd689dd754fc16df421a3b3e0b6468d20aa23d79fd5ba0f22b6d7ddc95eb28",
+        "bytes": 29888
+      },
+      "source_masks": [
+        {
+          "track_id": "phone_blue",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000029.png",
+          "sha256": "fda22248495394a52d7a734aff19b02179f673ea82f4f7819409505b1d803a79",
+          "bytes": 1201
+        }
+      ],
+      "source_grid_stride_px": 3,
+      "depth_model": {
+        "name": "Ruicheng/moge-2-vits-normal",
+        "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+        "device": "cpu",
+        "input_dimensions": [
+          336,
+          448
+        ],
+        "num_tokens": 600
+      },
+      "depth_prior_model_intrinsics": [
+        [
+          0.9850649237632751,
+          0.0,
+          0.5
+        ],
+        [
+          0.0,
+          0.7387986779212952,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "valid_mask_depth_fraction": 1.0,
+      "depth_scale_gauge": 3.6951583794820775,
+      "native_prior_translation_z": 2.4418392126141493,
+      "vertices": 1127,
+      "triangles": 2070,
+      "triangles_pruned_by_unknown_pixel_footprint": 10,
+      "visible_component_ids": [
+        "phone_blue"
+      ],
+      "component_surface_support": [
+        {
+          "component_id": "phone_blue",
+          "source_supported_triangle_count": 2070
+        },
+        {
+          "component_id": "cable_connector",
+          "source_supported_triangle_count": 0
+        }
+      ],
+      "wall_seconds": 0.29790862498339266,
+      "physical_accuracy_verified": false,
+      "asset": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-029/observed-surface.glb",
+        "sha256": "0bf955705285eeeb1851263949653d40421dca567623e0576d95011f1142f7a1",
+        "bytes": 83892
+      },
+      "source_pixel_map": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-029/source-pixel-map.npz",
+        "sha256": "4a2c68611776d5ca5abc94e15073215ddf4ecea23d64625651f366975a4613c0",
+        "bytes": 14236
+      },
+      "camera_from_asset": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_visible_only": true,
+      "triangle_source_footprint_verified": true,
+      "hidden_backs_culled": true,
+      "unlit_exact_vertex_RGB": true,
+      "appearance_mode": "exact_source_JPEG_projected_UV",
+      "texture_source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000029.jpg",
+        "sha256": "d4cd689dd754fc16df421a3b3e0b6468d20aa23d79fd5ba0f22b6d7ddc95eb28",
+        "bytes": 29888
+      },
+      "sampled_source_RGB_attribute": "_SOURCE_RGB",
+      "vertex_RGB_multiplied_into_texture": false,
+      "virtual_flexure": {
+        "type": "no_joint_recovered_by_observation",
+        "status": "unknown",
+        "origin_camera": null,
+        "axis_camera": null,
+        "angle_rad": null,
+        "reason": "source_visible_surface_does_not_recover_physical_joint_or_rigid_contact"
+      },
+      "new_API_calls": 0,
+      "new_GPU_calls": 0,
+      "provenance": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-029/provenance.json",
+        "sha256": "140d473b79f8021dd64e00c3c9bb4645d5fd8fb33f0211e2e96b3d06f48765e2",
+        "bytes": 3228
+      }
+    },
+    {
+      "source_sample_index": 30,
+      "timestamp_s": 20.260089,
+      "status": "source_observed_prior",
+      "reason": "exact_source_visible_component_union_with_CPU_monocular_depth_prior",
+      "source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000030.jpg",
+        "sha256": "96db2d75383200e094aeb49bba9214feb538b9bf05e41a6e2c04e6232dd7db17",
+        "bytes": 40525
+      },
+      "source_masks": [
+        {
+          "track_id": "phone_blue",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000030.png",
+          "sha256": "289a0aced7a20cf1d06618706b0fdbcba7440ee62d733af8db3568d19dab4c96",
+          "bytes": 1257
+        }
+      ],
+      "source_grid_stride_px": 4,
+      "depth_model": {
+        "name": "Ruicheng/moge-2-vits-normal",
+        "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+        "device": "cpu",
+        "input_dimensions": [
+          336,
+          448
+        ],
+        "num_tokens": 600
+      },
+      "depth_prior_model_intrinsics": [
+        [
+          1.047316074371338,
+          0.0,
+          0.5
+        ],
+        [
+          0.0,
+          0.7854870557785034,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "valid_mask_depth_fraction": 1.0,
+      "depth_scale_gauge": 3.772460654477869,
+      "native_prior_translation_z": 1.9511966733916193,
+      "vertices": 1112,
+      "triangles": 2072,
+      "triangles_pruned_by_unknown_pixel_footprint": 5,
+      "visible_component_ids": [
+        "phone_blue"
+      ],
+      "component_surface_support": [
+        {
+          "component_id": "phone_blue",
+          "source_supported_triangle_count": 2072
+        },
+        {
+          "component_id": "cable_connector",
+          "source_supported_triangle_count": 0
+        }
+      ],
+      "wall_seconds": 0.4538461249903776,
+      "physical_accuracy_verified": false,
+      "asset": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-030/observed-surface.glb",
+        "sha256": "99bb42e3ab46cd33b1540ea61852099490dac4606e85cd6d5361446b96425cc5",
+        "bytes": 94200
+      },
+      "source_pixel_map": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-030/source-pixel-map.npz",
+        "sha256": "36bde4dbf302daad65ff3d04ea74129b994ad52506f0638321258aed17bf5d07",
+        "bytes": 14458
+      },
+      "camera_from_asset": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_visible_only": true,
+      "triangle_source_footprint_verified": true,
+      "hidden_backs_culled": true,
+      "unlit_exact_vertex_RGB": true,
+      "appearance_mode": "exact_source_JPEG_projected_UV",
+      "texture_source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000030.jpg",
+        "sha256": "96db2d75383200e094aeb49bba9214feb538b9bf05e41a6e2c04e6232dd7db17",
+        "bytes": 40525
+      },
+      "sampled_source_RGB_attribute": "_SOURCE_RGB",
+      "vertex_RGB_multiplied_into_texture": false,
+      "virtual_flexure": {
+        "type": "no_joint_recovered_by_observation",
+        "status": "unknown",
+        "origin_camera": null,
+        "axis_camera": null,
+        "angle_rad": null,
+        "reason": "source_visible_surface_does_not_recover_physical_joint_or_rigid_contact"
+      },
+      "new_API_calls": 0,
+      "new_GPU_calls": 0,
+      "provenance": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-030/provenance.json",
+        "sha256": "36c9e2b291e8b89c4381776710aa2c531c3c0ca9dea62612ac6db74290b6959a",
+        "bytes": 3224
+      }
+    },
+    {
+      "source_sample_index": 31,
+      "timestamp_s": 20.959933,
+      "status": "source_observed_prior",
+      "reason": "exact_source_visible_component_union_with_CPU_monocular_depth_prior",
+      "source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000031.jpg",
+        "sha256": "b73622e77558a2f2d8480dd8ae4dfdac8e8c43549d7426b63a237f693d92ff30",
+        "bytes": 44386
+      },
+      "source_masks": [
+        {
+          "track_id": "phone_blue",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000031.png",
+          "sha256": "0d931d48b6abc181e2cf9a5018ba6c2ac6cd449dfd3b563c5228b02482fa350c",
+          "bytes": 1235
+        }
+      ],
+      "source_grid_stride_px": 4,
+      "depth_model": {
+        "name": "Ruicheng/moge-2-vits-normal",
+        "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+        "device": "cpu",
+        "input_dimensions": [
+          336,
+          448
+        ],
+        "num_tokens": 600
+      },
+      "depth_prior_model_intrinsics": [
+        [
+          1.057038426399231,
+          0.0,
+          0.5
+        ],
+        [
+          0.0,
+          0.7927788496017456,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "valid_mask_depth_fraction": 1.0,
+      "depth_scale_gauge": 3.1476919434248405,
+      "native_prior_translation_z": 1.9100639986522192,
+      "vertices": 1164,
+      "triangles": 2175,
+      "triangles_pruned_by_unknown_pixel_footprint": 3,
+      "visible_component_ids": [
+        "phone_blue"
+      ],
+      "component_surface_support": [
+        {
+          "component_id": "phone_blue",
+          "source_supported_triangle_count": 2175
+        },
+        {
+          "component_id": "cable_connector",
+          "source_supported_triangle_count": 0
+        }
+      ],
+      "wall_seconds": 0.2983468329766765,
+      "physical_accuracy_verified": false,
+      "asset": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-031/observed-surface.glb",
+        "sha256": "29c5b36f99dfeae8c09a243cd8485a9f69991445d276e4cf8b4e5721c38bb0c0",
+        "bytes": 100544
+      },
+      "source_pixel_map": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-031/source-pixel-map.npz",
+        "sha256": "5bea1e15cccd2292d3f19e14b8edf49ece6d90224c8ff08d6730d63ad8e5d53d",
+        "bytes": 15102
+      },
+      "camera_from_asset": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_visible_only": true,
+      "triangle_source_footprint_verified": true,
+      "hidden_backs_culled": true,
+      "unlit_exact_vertex_RGB": true,
+      "appearance_mode": "exact_source_JPEG_projected_UV",
+      "texture_source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000031.jpg",
+        "sha256": "b73622e77558a2f2d8480dd8ae4dfdac8e8c43549d7426b63a237f693d92ff30",
+        "bytes": 44386
+      },
+      "sampled_source_RGB_attribute": "_SOURCE_RGB",
+      "vertex_RGB_multiplied_into_texture": false,
+      "virtual_flexure": {
+        "type": "no_joint_recovered_by_observation",
+        "status": "unknown",
+        "origin_camera": null,
+        "axis_camera": null,
+        "angle_rad": null,
+        "reason": "source_visible_surface_does_not_recover_physical_joint_or_rigid_contact"
+      },
+      "new_API_calls": 0,
+      "new_GPU_calls": 0,
+      "provenance": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-031/provenance.json",
+        "sha256": "6d5809852f065a67baa8e31cedb261628e60efdde614d51e2cd42b157fc650b9",
+        "bytes": 3226
+      }
+    },
+    {
+      "source_sample_index": 32,
+      "timestamp_s": 21.659811,
+      "status": "unknown",
+      "reason": "insufficient_visible_SAM_union_or_severe_occlusion"
+    },
+    {
+      "source_sample_index": 33,
+      "timestamp_s": 22.359689,
+      "status": "unknown",
+      "reason": "insufficient_visible_SAM_union_or_severe_occlusion"
+    },
+    {
+      "source_sample_index": 34,
+      "timestamp_s": 23.059567,
+      "status": "source_observed_prior",
+      "reason": "exact_source_visible_component_union_with_CPU_monocular_depth_prior",
+      "source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000034.jpg",
+        "sha256": "fb4a5c3d2f5cbf16e27234eef9aa9c1f07c454adc14608f38cad5e54e940fb21",
+        "bytes": 50639
+      },
+      "source_masks": [
+        {
+          "track_id": "phone_blue",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000034.png",
+          "sha256": "fd97169b686749f69eda9328fbd1c1f7a90c4f07d474e4a9893eb410660ebb29",
+          "bytes": 1362
+        },
+        {
+          "track_id": "cable_connector",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/cable_connector/000034.png",
+          "sha256": "021b9beda5d6612eeba5ad37eed249be4d5e664d3fec4ab0535b052f2f8b89fb",
+          "bytes": 940
+        }
+      ],
+      "source_grid_stride_px": 3,
+      "depth_model": {
+        "name": "Ruicheng/moge-2-vits-normal",
+        "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+        "device": "cpu",
+        "input_dimensions": [
+          336,
+          448
+        ],
+        "num_tokens": 600
+      },
+      "depth_prior_model_intrinsics": [
+        [
+          0.9577241539955139,
+          0.0,
+          0.5
+        ],
+        [
+          0.0,
+          0.7182931303977966,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "valid_mask_depth_fraction": 1.0,
+      "depth_scale_gauge": 2.7270649575338535,
+      "native_prior_translation_z": 2.1834374009232267,
+      "vertices": 1064,
+      "triangles": 1875,
+      "triangles_pruned_by_unknown_pixel_footprint": 11,
+      "visible_component_ids": [
+        "phone_blue",
+        "cable_connector"
+      ],
+      "component_surface_support": [
+        {
+          "component_id": "phone_blue",
+          "source_supported_triangle_count": 1753
+        },
+        {
+          "component_id": "cable_connector",
+          "source_supported_triangle_count": 122
+        }
+      ],
+      "wall_seconds": 0.2859121250221506,
+      "physical_accuracy_verified": false,
+      "asset": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-034/observed-surface.glb",
+        "sha256": "83301a0e208e8a8c363d11ce23125f0e17513abd3327f615feb789277de2a2ea",
+        "bytes": 100796
+      },
+      "source_pixel_map": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-034/source-pixel-map.npz",
+        "sha256": "ec180cb173e6b6e957bd22d22eeaababc3bade78b0573cba087284ea5e20e6d7",
+        "bytes": 13194
+      },
+      "camera_from_asset": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_visible_only": true,
+      "triangle_source_footprint_verified": true,
+      "hidden_backs_culled": true,
+      "unlit_exact_vertex_RGB": true,
+      "appearance_mode": "exact_source_JPEG_projected_UV",
+      "texture_source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000034.jpg",
+        "sha256": "fb4a5c3d2f5cbf16e27234eef9aa9c1f07c454adc14608f38cad5e54e940fb21",
+        "bytes": 50639
+      },
+      "sampled_source_RGB_attribute": "_SOURCE_RGB",
+      "vertex_RGB_multiplied_into_texture": false,
+      "virtual_flexure": {
+        "type": "no_joint_recovered_by_observation",
+        "status": "unknown",
+        "origin_camera": null,
+        "axis_camera": null,
+        "angle_rad": null,
+        "reason": "source_visible_surface_does_not_recover_physical_joint_or_rigid_contact"
+      },
+      "new_API_calls": 0,
+      "new_GPU_calls": 0,
+      "provenance": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-034/provenance.json",
+        "sha256": "d3a6600418e45c8e842d567c6c74a00aea6dc63e6cf3e3f6ad35e1014a50a9f1",
+        "bytes": 3527
+      }
+    },
+    {
+      "source_sample_index": 35,
+      "timestamp_s": 23.759444,
+      "status": "source_observed_prior",
+      "reason": "exact_source_visible_component_union_with_CPU_monocular_depth_prior",
+      "source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000035.jpg",
+        "sha256": "259bdaec9b8fae3ec90819d71d5fd02ceeb7038ab051876fddd48ceda5fc64ab",
+        "bytes": 51283
+      },
+      "source_masks": [
+        {
+          "track_id": "phone_blue",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000035.png",
+          "sha256": "e2af01e1dc792edce239b320faae307c97fdf08b6d0834228d277e99e9ad699b",
+          "bytes": 1376
+        },
+        {
+          "track_id": "cable_connector",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/cable_connector/000035.png",
+          "sha256": "d4077508cdf01d9fbe112bddcfd6d10142d1bb5f1766790b65869c6087f5ba99",
+          "bytes": 925
+        }
+      ],
+      "source_grid_stride_px": 3,
+      "depth_model": {
+        "name": "Ruicheng/moge-2-vits-normal",
+        "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+        "device": "cpu",
+        "input_dimensions": [
+          336,
+          448
+        ],
+        "num_tokens": 600
+      },
+      "depth_prior_model_intrinsics": [
+        [
+          0.9650037884712219,
+          0.0,
+          0.5
+        ],
+        [
+          0.0,
+          0.7237528562545776,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "valid_mask_depth_fraction": 1.0,
+      "depth_scale_gauge": 2.7522513461132987,
+      "native_prior_translation_z": 2.0404804423740437,
+      "vertices": 1012,
+      "triangles": 1740,
+      "triangles_pruned_by_unknown_pixel_footprint": 9,
+      "visible_component_ids": [
+        "phone_blue",
+        "cable_connector"
+      ],
+      "component_surface_support": [
+        {
+          "component_id": "phone_blue",
+          "source_supported_triangle_count": 1729
+        },
+        {
+          "component_id": "cable_connector",
+          "source_supported_triangle_count": 11
+        }
+      ],
+      "wall_seconds": 0.2905659169773571,
+      "physical_accuracy_verified": false,
+      "asset": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-035/observed-surface.glb",
+        "sha256": "5204d6eb05ac2c17e280b9aace294e80e9e34d57a98248574795e5ed99593615",
+        "bytes": 98568
+      },
+      "source_pixel_map": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-035/source-pixel-map.npz",
+        "sha256": "b132530ddeeee13a39be82b8daa926a8aadf587234b6103079a3996aea761cb0",
+        "bytes": 12442
+      },
+      "camera_from_asset": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_visible_only": true,
+      "triangle_source_footprint_verified": true,
+      "hidden_backs_culled": true,
+      "unlit_exact_vertex_RGB": true,
+      "appearance_mode": "exact_source_JPEG_projected_UV",
+      "texture_source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000035.jpg",
+        "sha256": "259bdaec9b8fae3ec90819d71d5fd02ceeb7038ab051876fddd48ceda5fc64ab",
+        "bytes": 51283
+      },
+      "sampled_source_RGB_attribute": "_SOURCE_RGB",
+      "vertex_RGB_multiplied_into_texture": false,
+      "virtual_flexure": {
+        "type": "no_joint_recovered_by_observation",
+        "status": "unknown",
+        "origin_camera": null,
+        "axis_camera": null,
+        "angle_rad": null,
+        "reason": "source_visible_surface_does_not_recover_physical_joint_or_rigid_contact"
+      },
+      "new_API_calls": 0,
+      "new_GPU_calls": 0,
+      "provenance": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-035/provenance.json",
+        "sha256": "cafc7a3b5209e210603c1cff2e24279c686efa573b50ed49f490165e7556eb41",
+        "bytes": 3524
+      }
+    },
+    {
+      "source_sample_index": 36,
+      "timestamp_s": 24.459322,
+      "status": "source_observed_prior",
+      "reason": "exact_source_visible_component_union_with_CPU_monocular_depth_prior",
+      "source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000036.jpg",
+        "sha256": "cc7f93903755f66f511e44f61dd6264d199f1bb9bcfe7db653dfbc6b3911b5b5",
+        "bytes": 53426
+      },
+      "source_masks": [
+        {
+          "track_id": "phone_blue",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000036.png",
+          "sha256": "6d3edf8b623bf8a6cfce3d27db986a62ef6e0e33dcaa3b6e4def9f8671290d5c",
+          "bytes": 1412
+        },
+        {
+          "track_id": "cable_connector",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/cable_connector/000036.png",
+          "sha256": "975c6c4c10b030623977aa1aca3c8eea9eca0b0d9a804a76f928fca4fe0a158d",
+          "bytes": 885
+        }
+      ],
+      "source_grid_stride_px": 3,
+      "depth_model": {
+        "name": "Ruicheng/moge-2-vits-normal",
+        "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+        "device": "cpu",
+        "input_dimensions": [
+          336,
+          448
+        ],
+        "num_tokens": 600
+      },
+      "depth_prior_model_intrinsics": [
+        [
+          1.0393989086151123,
+          0.0,
+          0.5
+        ],
+        [
+          0.0,
+          0.7795491814613342,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "valid_mask_depth_fraction": 1.0,
+      "depth_scale_gauge": 2.7295540120359614,
+      "native_prior_translation_z": 1.9641196086218227,
+      "vertices": 1036,
+      "triangles": 1785,
+      "triangles_pruned_by_unknown_pixel_footprint": 36,
+      "visible_component_ids": [
+        "phone_blue",
+        "cable_connector"
+      ],
+      "component_surface_support": [
+        {
+          "component_id": "phone_blue",
+          "source_supported_triangle_count": 1729
+        },
+        {
+          "component_id": "cable_connector",
+          "source_supported_triangle_count": 56
+        }
+      ],
+      "wall_seconds": 0.2973744999617338,
+      "physical_accuracy_verified": false,
+      "asset": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-036/observed-surface.glb",
+        "sha256": "71a0b1b182dfb7e2d27acfcf8b40644a91ba1caa917fe2277fa8f7394767cec8",
+        "bytes": 101828
+      },
+      "source_pixel_map": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-036/source-pixel-map.npz",
+        "sha256": "0ced41b7e9bf7089ef396aebca27252587c98a0912322016d8ca3f454e1c78c2",
+        "bytes": 13038
+      },
+      "camera_from_asset": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_visible_only": true,
+      "triangle_source_footprint_verified": true,
+      "hidden_backs_culled": true,
+      "unlit_exact_vertex_RGB": true,
+      "appearance_mode": "exact_source_JPEG_projected_UV",
+      "texture_source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000036.jpg",
+        "sha256": "cc7f93903755f66f511e44f61dd6264d199f1bb9bcfe7db653dfbc6b3911b5b5",
+        "bytes": 53426
+      },
+      "sampled_source_RGB_attribute": "_SOURCE_RGB",
+      "vertex_RGB_multiplied_into_texture": false,
+      "virtual_flexure": {
+        "type": "no_joint_recovered_by_observation",
+        "status": "unknown",
+        "origin_camera": null,
+        "axis_camera": null,
+        "angle_rad": null,
+        "reason": "source_visible_surface_does_not_recover_physical_joint_or_rigid_contact"
+      },
+      "new_API_calls": 0,
+      "new_GPU_calls": 0,
+      "provenance": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-036/provenance.json",
+        "sha256": "2cedbe661fb446633f987d1cd49ee01d8872e48416918cbe6b78265101870729",
+        "bytes": 3526
+      }
+    },
+    {
+      "source_sample_index": 37,
+      "timestamp_s": 25.1592,
+      "status": "source_observed_prior",
+      "reason": "exact_source_visible_component_union_with_CPU_monocular_depth_prior",
+      "source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000037.jpg",
+        "sha256": "35d6aba14934b353418677cc33241699ef5dc66dc3da2cfdbf6eb2f8a521c776",
+        "bytes": 51314
+      },
+      "source_masks": [
+        {
+          "track_id": "phone_blue",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000037.png",
+          "sha256": "b382517d514bffc71219653a1f2d5f37401e800c22296725ee0be2633f8e6593",
+          "bytes": 1502
+        },
+        {
+          "track_id": "cable_connector",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/cable_connector/000037.png",
+          "sha256": "9add39e4e43316133998e95b80dd993c7cbef60beb1a95a0cdba538f36b8d261",
+          "bytes": 863
+        }
+      ],
+      "source_grid_stride_px": 3,
+      "depth_model": {
+        "name": "Ruicheng/moge-2-vits-normal",
+        "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+        "device": "cpu",
+        "input_dimensions": [
+          336,
+          448
+        ],
+        "num_tokens": 600
+      },
+      "depth_prior_model_intrinsics": [
+        [
+          1.08975088596344,
+          0.0,
+          0.5
+        ],
+        [
+          0.0,
+          0.8173131942749023,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "valid_mask_depth_fraction": 1.0,
+      "depth_scale_gauge": 2.514523098732173,
+      "native_prior_translation_z": 1.804045253767681,
+      "vertices": 1177,
+      "triangles": 2047,
+      "triangles_pruned_by_unknown_pixel_footprint": 47,
+      "visible_component_ids": [
+        "phone_blue",
+        "cable_connector"
+      ],
+      "component_surface_support": [
+        {
+          "component_id": "phone_blue",
+          "source_supported_triangle_count": 1991
+        },
+        {
+          "component_id": "cable_connector",
+          "source_supported_triangle_count": 56
+        }
+      ],
+      "wall_seconds": 0.32417337503284216,
+      "physical_accuracy_verified": false,
+      "asset": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-037/observed-surface.glb",
+        "sha256": "817a0e356cbeb2475045d1940fe90f895bdd537e8843ea0adb53306406ceaf8a",
+        "bytes": 106248
+      },
+      "source_pixel_map": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-037/source-pixel-map.npz",
+        "sha256": "16bb101359df13258293ce4dd8790f96153205bd141445f59fcbdd2f4fdf51eb",
+        "bytes": 14778
+      },
+      "camera_from_asset": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_visible_only": true,
+      "triangle_source_footprint_verified": true,
+      "hidden_backs_culled": true,
+      "unlit_exact_vertex_RGB": true,
+      "appearance_mode": "exact_source_JPEG_projected_UV",
+      "texture_source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000037.jpg",
+        "sha256": "35d6aba14934b353418677cc33241699ef5dc66dc3da2cfdbf6eb2f8a521c776",
+        "bytes": 51314
+      },
+      "sampled_source_RGB_attribute": "_SOURCE_RGB",
+      "vertex_RGB_multiplied_into_texture": false,
+      "virtual_flexure": {
+        "type": "no_joint_recovered_by_observation",
+        "status": "unknown",
+        "origin_camera": null,
+        "axis_camera": null,
+        "angle_rad": null,
+        "reason": "source_visible_surface_does_not_recover_physical_joint_or_rigid_contact"
+      },
+      "new_API_calls": 0,
+      "new_GPU_calls": 0,
+      "provenance": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-037/provenance.json",
+        "sha256": "a05ab98f999e1719e6e1922c29e99ff239bc18a88e91c9c293e6318690f88173",
+        "bytes": 3521
+      }
+    },
+    {
+      "source_sample_index": 38,
+      "timestamp_s": 25.859078,
+      "status": "source_observed_prior",
+      "reason": "exact_source_visible_component_union_with_CPU_monocular_depth_prior",
+      "source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000038.jpg",
+        "sha256": "68a01034bef81f8f33bd09ca1b1813698a70bc6ba6f37b8ac6f4e792f041967d",
+        "bytes": 51502
+      },
+      "source_masks": [
+        {
+          "track_id": "phone_blue",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000038.png",
+          "sha256": "95d9b1495173890fa5b2322c33cc31c6bf1f2102e39d76e112eaa28a4a24326f",
+          "bytes": 1531
+        },
+        {
+          "track_id": "cable_connector",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/cable_connector/000038.png",
+          "sha256": "2b95735f48caf1eb65a4fcefea5260f85b18b4144b31dc73ffbe4ac7b9db8365",
+          "bytes": 926
+        }
+      ],
+      "source_grid_stride_px": 3,
+      "depth_model": {
+        "name": "Ruicheng/moge-2-vits-normal",
+        "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+        "device": "cpu",
+        "input_dimensions": [
+          336,
+          448
+        ],
+        "num_tokens": 600
+      },
+      "depth_prior_model_intrinsics": [
+        [
+          0.9982855916023254,
+          0.0,
+          0.5
+        ],
+        [
+          0.0,
+          0.7487142086029053,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "valid_mask_depth_fraction": 1.0,
+      "depth_scale_gauge": 2.8357046238863783,
+      "native_prior_translation_z": 1.724828217033354,
+      "vertices": 1229,
+      "triangles": 2120,
+      "triangles_pruned_by_unknown_pixel_footprint": 45,
+      "visible_component_ids": [
+        "phone_blue",
+        "cable_connector"
+      ],
+      "component_surface_support": [
+        {
+          "component_id": "phone_blue",
+          "source_supported_triangle_count": 2018
+        },
+        {
+          "component_id": "cable_connector",
+          "source_supported_triangle_count": 102
+        }
+      ],
+      "wall_seconds": 0.32522087497636676,
+      "physical_accuracy_verified": false,
+      "asset": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-038/observed-surface.glb",
+        "sha256": "f9c3c83e6b32f077b461bff0d84eddf0665105dcd7482acacf07b9ffa2230423",
+        "bytes": 108556
+      },
+      "source_pixel_map": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-038/source-pixel-map.npz",
+        "sha256": "83756239d8acc3dfcc4189f98d7a9b9128c7ee6df6e140507e484fbc6b3e2958",
+        "bytes": 14919
+      },
+      "camera_from_asset": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_visible_only": true,
+      "triangle_source_footprint_verified": true,
+      "hidden_backs_culled": true,
+      "unlit_exact_vertex_RGB": true,
+      "appearance_mode": "exact_source_JPEG_projected_UV",
+      "texture_source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000038.jpg",
+        "sha256": "68a01034bef81f8f33bd09ca1b1813698a70bc6ba6f37b8ac6f4e792f041967d",
+        "bytes": 51502
+      },
+      "sampled_source_RGB_attribute": "_SOURCE_RGB",
+      "vertex_RGB_multiplied_into_texture": false,
+      "virtual_flexure": {
+        "type": "no_joint_recovered_by_observation",
+        "status": "unknown",
+        "origin_camera": null,
+        "axis_camera": null,
+        "angle_rad": null,
+        "reason": "source_visible_surface_does_not_recover_physical_joint_or_rigid_contact"
+      },
+      "new_API_calls": 0,
+      "new_GPU_calls": 0,
+      "provenance": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-038/provenance.json",
+        "sha256": "3f503bd9c003705a8b375459aafaebca38d025e0d78e2ad30fdb31b1deaca289",
+        "bytes": 3527
+      }
+    },
+    {
+      "source_sample_index": 39,
+      "timestamp_s": 26.558956,
+      "status": "unknown",
+      "reason": "prior_private_source39_failure_barrier_preserved"
+    },
+    {
+      "source_sample_index": 40,
+      "timestamp_s": 27.258833,
+      "status": "source_observed_prior",
+      "reason": "exact_source_visible_component_union_with_CPU_monocular_depth_prior",
+      "source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000040.jpg",
+        "sha256": "44c8f9bb4530b745c9e46abc22680cd739148475381034d52d2b9b1ccb993c5d",
+        "bytes": 52648
+      },
+      "source_masks": [
+        {
+          "track_id": "phone_blue",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000040.png",
+          "sha256": "63944f6d2590b88bc599d24d6f11dcfa26a676eedcb1e8ebc74f6a8a8b6bbe74",
+          "bytes": 1429
+        }
+      ],
+      "source_grid_stride_px": 3,
+      "depth_model": {
+        "name": "Ruicheng/moge-2-vits-normal",
+        "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+        "device": "cpu",
+        "input_dimensions": [
+          336,
+          448
+        ],
+        "num_tokens": 600
+      },
+      "depth_prior_model_intrinsics": [
+        [
+          0.9733394980430603,
+          0.0,
+          0.5
+        ],
+        [
+          0.0,
+          0.730004608631134,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "valid_mask_depth_fraction": 1.0,
+      "depth_scale_gauge": 2.894936856916863,
+      "native_prior_translation_z": 1.9157636881329012,
+      "vertices": 1082,
+      "triangles": 1906,
+      "triangles_pruned_by_unknown_pixel_footprint": 9,
+      "visible_component_ids": [
+        "phone_blue"
+      ],
+      "component_surface_support": [
+        {
+          "component_id": "phone_blue",
+          "source_supported_triangle_count": 1906
+        },
+        {
+          "component_id": "cable_connector",
+          "source_supported_triangle_count": 0
+        }
+      ],
+      "wall_seconds": 0.43302645900985226,
+      "physical_accuracy_verified": false,
+      "asset": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-040/observed-surface.glb",
+        "sha256": "3f338183a94041cba5193f901e5ecf89d99da9cf4b3f81d1705fd6fbb3f12700",
+        "bytes": 103608
+      },
+      "source_pixel_map": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-040/source-pixel-map.npz",
+        "sha256": "cf27b3a8160d2ed17bde46a96092ca071d3238e6c7dde0816efdc9a2bace3a66",
+        "bytes": 13596
+      },
+      "camera_from_asset": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_visible_only": true,
+      "triangle_source_footprint_verified": true,
+      "hidden_backs_culled": true,
+      "unlit_exact_vertex_RGB": true,
+      "appearance_mode": "exact_source_JPEG_projected_UV",
+      "texture_source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000040.jpg",
+        "sha256": "44c8f9bb4530b745c9e46abc22680cd739148475381034d52d2b9b1ccb993c5d",
+        "bytes": 52648
+      },
+      "sampled_source_RGB_attribute": "_SOURCE_RGB",
+      "vertex_RGB_multiplied_into_texture": false,
+      "virtual_flexure": {
+        "type": "no_joint_recovered_by_observation",
+        "status": "unknown",
+        "origin_camera": null,
+        "axis_camera": null,
+        "angle_rad": null,
+        "reason": "source_visible_surface_does_not_recover_physical_joint_or_rigid_contact"
+      },
+      "new_API_calls": 0,
+      "new_GPU_calls": 0,
+      "provenance": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-040/provenance.json",
+        "sha256": "87646e9bfb8af5e1206496c7080a95bca2179884fc8a237131a536c8ee275e42",
+        "bytes": 3226
+      }
+    },
+    {
+      "source_sample_index": 41,
+      "timestamp_s": 27.958711,
+      "status": "unknown",
+      "reason": "insufficient_visible_SAM_union_or_severe_occlusion"
+    },
+    {
+      "source_sample_index": 42,
+      "timestamp_s": 28.658589,
+      "status": "source_observed_prior",
+      "reason": "exact_source_visible_component_union_with_CPU_monocular_depth_prior",
+      "source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000042.jpg",
+        "sha256": "062d0c432b7e11ef20c1d0e9ed42ca69e74264e0fb97b20e22251675ec3b2bec",
+        "bytes": 54839
+      },
+      "source_masks": [
+        {
+          "track_id": "phone_blue",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000042.png",
+          "sha256": "e146e41b547ac450c4c1fafd5ac4f6242e3d6c7c6438012fda231f219371be25",
+          "bytes": 1966
+        }
+      ],
+      "source_grid_stride_px": 3,
+      "depth_model": {
+        "name": "Ruicheng/moge-2-vits-normal",
+        "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+        "device": "cpu",
+        "input_dimensions": [
+          336,
+          448
+        ],
+        "num_tokens": 600
+      },
+      "depth_prior_model_intrinsics": [
+        [
+          0.9628901481628418,
+          0.0,
+          0.5
+        ],
+        [
+          0.0,
+          0.7221676111221313,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "valid_mask_depth_fraction": 1.0,
+      "depth_scale_gauge": 1.860921913716214,
+      "native_prior_translation_z": 1.3957996928066314,
+      "vertices": 1193,
+      "triangles": 2127,
+      "triangles_pruned_by_unknown_pixel_footprint": 17,
+      "visible_component_ids": [
+        "phone_blue"
+      ],
+      "component_surface_support": [
+        {
+          "component_id": "phone_blue",
+          "source_supported_triangle_count": 2127
+        },
+        {
+          "component_id": "cable_connector",
+          "source_supported_triangle_count": 0
+        }
+      ],
+      "wall_seconds": 0.2997010829858482,
+      "physical_accuracy_verified": false,
+      "asset": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-042/observed-surface.glb",
+        "sha256": "53336358d0357cb502ac1a4c3f70107de20ad7d58f5703385e6e78abc312fcee",
+        "bytes": 111120
+      },
+      "source_pixel_map": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-042/source-pixel-map.npz",
+        "sha256": "352a1f9aab00a5d481f1856439d30140f24e01084333e82176c87263b2e9ac06",
+        "bytes": 14962
+      },
+      "camera_from_asset": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_visible_only": true,
+      "triangle_source_footprint_verified": true,
+      "hidden_backs_culled": true,
+      "unlit_exact_vertex_RGB": true,
+      "appearance_mode": "exact_source_JPEG_projected_UV",
+      "texture_source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000042.jpg",
+        "sha256": "062d0c432b7e11ef20c1d0e9ed42ca69e74264e0fb97b20e22251675ec3b2bec",
+        "bytes": 54839
+      },
+      "sampled_source_RGB_attribute": "_SOURCE_RGB",
+      "vertex_RGB_multiplied_into_texture": false,
+      "virtual_flexure": {
+        "type": "no_joint_recovered_by_observation",
+        "status": "unknown",
+        "origin_camera": null,
+        "axis_camera": null,
+        "angle_rad": null,
+        "reason": "source_visible_surface_does_not_recover_physical_joint_or_rigid_contact"
+      },
+      "new_API_calls": 0,
+      "new_GPU_calls": 0,
+      "provenance": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-042/provenance.json",
+        "sha256": "76262383720a3da2ff5ce8698c986276e167e8afe0f96214e61f76317169e3b3",
+        "bytes": 3227
+      }
+    },
+    {
+      "source_sample_index": 43,
+      "timestamp_s": 29.358467,
+      "status": "unknown",
+      "reason": "original_source_unknown_preserved"
+    },
+    {
+      "source_sample_index": 44,
+      "timestamp_s": 30.058344,
+      "status": "unknown",
+      "reason": "insufficient_visible_SAM_union_or_severe_occlusion"
+    },
+    {
+      "source_sample_index": 45,
+      "timestamp_s": 30.758222,
+      "status": "source_observed_prior",
+      "reason": "exact_source_visible_component_union_with_CPU_monocular_depth_prior",
+      "source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000045.jpg",
+        "sha256": "b5e19151ac1791c03315f3440bc3f7c60e709e8f04a3755357c1715093147a85",
+        "bytes": 50944
+      },
+      "source_masks": [
+        {
+          "track_id": "phone_blue",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000045.png",
+          "sha256": "f02f2b4e218311106e9817d7ed4d3446772e7776a4a44c50eb2c5f08d347ac3e",
+          "bytes": 1687
+        }
+      ],
+      "source_grid_stride_px": 3,
+      "depth_model": {
+        "name": "Ruicheng/moge-2-vits-normal",
+        "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+        "device": "cpu",
+        "input_dimensions": [
+          336,
+          448
+        ],
+        "num_tokens": 600
+      },
+      "depth_prior_model_intrinsics": [
+        [
+          0.9166029095649719,
+          0.0,
+          0.5
+        ],
+        [
+          0.0,
+          0.6874521970748901,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "valid_mask_depth_fraction": 1.0,
+      "depth_scale_gauge": 2.4176980250848144,
+      "native_prior_translation_z": 1.8051762008778152,
+      "vertices": 1456,
+      "triangles": 2691,
+      "triangles_pruned_by_unknown_pixel_footprint": 8,
+      "visible_component_ids": [
+        "phone_blue"
+      ],
+      "component_surface_support": [
+        {
+          "component_id": "phone_blue",
+          "source_supported_triangle_count": 2691
+        },
+        {
+          "component_id": "cable_connector",
+          "source_supported_triangle_count": 0
+        }
+      ],
+      "wall_seconds": 0.40706604201113805,
+      "physical_accuracy_verified": false,
+      "asset": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-045/observed-surface.glb",
+        "sha256": "492afb2c1d88cfda2973aa74ca17dc6c300db1bbc8f33e2f08450bf5ade90f64",
+        "bytes": 120300
+      },
+      "source_pixel_map": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-045/source-pixel-map.npz",
+        "sha256": "85f490be93a0c48108a1dbceb2fdfb55392eeb5e759d43d1b2127a03021530f3",
+        "bytes": 18183
+      },
+      "camera_from_asset": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_visible_only": true,
+      "triangle_source_footprint_verified": true,
+      "hidden_backs_culled": true,
+      "unlit_exact_vertex_RGB": true,
+      "appearance_mode": "exact_source_JPEG_projected_UV",
+      "texture_source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000045.jpg",
+        "sha256": "b5e19151ac1791c03315f3440bc3f7c60e709e8f04a3755357c1715093147a85",
+        "bytes": 50944
+      },
+      "sampled_source_RGB_attribute": "_SOURCE_RGB",
+      "vertex_RGB_multiplied_into_texture": false,
+      "virtual_flexure": {
+        "type": "no_joint_recovered_by_observation",
+        "status": "unknown",
+        "origin_camera": null,
+        "axis_camera": null,
+        "angle_rad": null,
+        "reason": "source_visible_surface_does_not_recover_physical_joint_or_rigid_contact"
+      },
+      "new_API_calls": 0,
+      "new_GPU_calls": 0,
+      "provenance": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-045/provenance.json",
+        "sha256": "73c0fe36ac0025879185909d62a1dcaa41f65e50b73ad03653a3f518d85860cc",
+        "bytes": 3228
+      }
+    },
+    {
+      "source_sample_index": 46,
+      "timestamp_s": 31.4581,
+      "status": "unknown",
+      "reason": "insufficient_visible_SAM_union_or_severe_occlusion"
+    },
+    {
+      "source_sample_index": 47,
+      "timestamp_s": 32.158089,
+      "status": "source_observed_prior",
+      "reason": "exact_source_visible_component_union_with_CPU_monocular_depth_prior",
+      "source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000047.jpg",
+        "sha256": "20d266dc6bc117eeba9a72f78622834cbf84f566390e2cbdde9b76d15e34c699",
+        "bytes": 46098
+      },
+      "source_masks": [
+        {
+          "track_id": "phone_blue",
+          "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000047.png",
+          "sha256": "779981cddc6e86c99e7bd33ecb660a062fc19771cf7c4af5e61b42e83a48b6e8",
+          "bytes": 1420
+        }
+      ],
+      "source_grid_stride_px": 3,
+      "depth_model": {
+        "name": "Ruicheng/moge-2-vits-normal",
+        "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+        "device": "cpu",
+        "input_dimensions": [
+          336,
+          448
+        ],
+        "num_tokens": 600
+      },
+      "depth_prior_model_intrinsics": [
+        [
+          0.9233354926109314,
+          0.0,
+          0.5
+        ],
+        [
+          0.0,
+          0.6925016045570374,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "valid_mask_depth_fraction": 1.0,
+      "depth_scale_gauge": 2.446349609711778,
+      "native_prior_translation_z": 2.1231629468678404,
+      "vertices": 1100,
+      "triangles": 2046,
+      "triangles_pruned_by_unknown_pixel_footprint": 12,
+      "visible_component_ids": [
+        "phone_blue"
+      ],
+      "component_surface_support": [
+        {
+          "component_id": "phone_blue",
+          "source_supported_triangle_count": 2046
+        },
+        {
+          "component_id": "cable_connector",
+          "source_supported_triangle_count": 0
+        }
+      ],
+      "wall_seconds": 0.41290345799643546,
+      "physical_accuracy_verified": false,
+      "asset": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-047/observed-surface.glb",
+        "sha256": "dcacc297c7a39d600d5d6a089b517b5948b3fb0993506e53f6163ff69463a6ca",
+        "bytes": 99172
+      },
+      "source_pixel_map": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-047/source-pixel-map.npz",
+        "sha256": "a8689e387d9903ade1caeb5681cc0e77c804e2e0ececb4a269700684d129164c",
+        "bytes": 14226
+      },
+      "camera_from_asset": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_visible_only": true,
+      "triangle_source_footprint_verified": true,
+      "hidden_backs_culled": true,
+      "unlit_exact_vertex_RGB": true,
+      "appearance_mode": "exact_source_JPEG_projected_UV",
+      "texture_source_RGB": {
+        "path": "data/flow-capture-phone-20261103-v1/frames/000047.jpg",
+        "sha256": "20d266dc6bc117eeba9a72f78622834cbf84f566390e2cbdde9b76d15e34c699",
+        "bytes": 46098
+      },
+      "sampled_source_RGB_attribute": "_SOURCE_RGB",
+      "vertex_RGB_multiplied_into_texture": false,
+      "virtual_flexure": {
+        "type": "no_joint_recovered_by_observation",
+        "status": "unknown",
+        "origin_camera": null,
+        "axis_camera": null,
+        "angle_rad": null,
+        "reason": "source_visible_surface_does_not_recover_physical_joint_or_rigid_contact"
+      },
+      "new_API_calls": 0,
+      "new_GPU_calls": 0,
+      "provenance": {
+        "path": "data/source-visible-flexure/phone-20261104-v2/source-047/provenance.json",
+        "sha256": "71116434921724e05cb37f1a919ddf784e263d289c5f7f083cd62b22f6a33714",
+        "bytes": 3227
+      }
+    }
+  ],
+  "physical_accuracy_verified": false,
+  "simulation_ready": false,
+  "manual_geometry_or_poses_used": false,
+  "native_SAM_contract_compatible": false,
+  "new_API_calls": 0,
+  "new_GPU_calls": 0,
+  "presentation_policy": {
+    "supported_time": "exact_source_visible_related_component_union",
+    "unknown_time": "withhold_all_replacement_components",
+    "original_native": "unchanged_separate_static_inspection_and_native_kinematics",
+    "geometric_interpolation": false,
+    "show_estimated_required": true,
+    "native_hybrid_replay_permitted": false
+  },
+  "limitations": [
+    "Source-visible union is a monocular learned-depth observation, not complete rigid reconstruction or repaired SAM.",
+    "Original native GLBs, joints and descriptive interaction program remain separate and unchanged.",
+    "Only source-visible component-mask regions are represented. Hands, hidden backs, pockets, ports and contact occlusion remain absent.",
+    "Per-frame topology/depth can vary. No geometric interpolation or hidden-surface completion.",
+    "Visible component IDs require actual retained triangles; absence is not proof object did not exist.",
+    "Source RGB reprojection is constructive, not independent3D validation; native depth gauge is not metric.",
+    "No rigid joint, contact, grasp, insertion, physical charging or simulation-ready claim."
+  ]
+}

@@ -1,0 +1,2068 @@
+{
+  "format": "interaction-twin-evidence-procedure",
+  "version": "0.1",
+  "case_id": "flow-capture-laptop-20261103-v1",
+  "summary": "Closed laptop repositioned, lifted to show underside, opened to expose keyboard, held open while screen illuminates, then closed, followed by detaching, displaying and returning power cable.",
+  "source": {
+    "path": "data/flow-capture-laptop-20261103-v1/source/video.mp4",
+    "sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+    "original_sha256": "2dbd13b04096a0f91b55ba4123c8e033812b81f924913e2df1db5dbc63fab9d2",
+    "duration_s": 45.865956,
+    "time_domain": "source_video_presentation_seconds"
+  },
+  "inputs": [
+    {
+      "id": "source_manifest",
+      "path": "data/flow-capture-laptop-20261103-v1/manifest.json",
+      "sha256": "cf74a1c26be00987db198bb20de32d9cbcc40cbd316f80f1188bf71003e229c1",
+      "kind": "source_manifest"
+    },
+    {
+      "id": "source_frame_index",
+      "path": "data/flow-capture-laptop-20261103-v1/frames/index.json",
+      "sha256": "85578b495256684460b5674577f8300ecebf467bed883856f7d794d9c92ec82d",
+      "kind": "source_frame_index"
+    },
+    {
+      "id": "discovery",
+      "path": "data/flow-capture-laptop-20261103-v1/reasoning/flow-discovery-1/discovery.json",
+      "sha256": "77a5893bf95a5df788dae18c8cbae548c108d1f66dd29c32c97d22b4ab332c3b",
+      "kind": "model_discovery"
+    },
+    {
+      "id": "annotations",
+      "path": "annotations/new-flow-capture-laptop-20261103-v1-flow-discovery-1.json",
+      "sha256": "37307bd90e12da156ba9f9a61031f69925e751aa2295f4f7fb69236772657734",
+      "kind": "model_tracklet_proposals"
+    },
+    {
+      "id": "semantic_proposal",
+      "path": "data/flow-capture-laptop-20261103-v1/flow-procedure-proposal-1/proposal.json",
+      "sha256": "253d5839f2eddb394b954ee75d7013e28b7989e521d9c320d339238fbab5731a",
+      "kind": "model_semantic_proposal"
+    },
+    {
+      "id": "compiler",
+      "path": "stage5.py",
+      "sha256": "4d16bda8bb1677533b066bca0cf5259df8666d8384ccbc3c610a9ac89b93fde6",
+      "kind": "deterministic_compiler_code"
+    },
+    {
+      "id": "compiler_cli",
+      "path": "scripts/stage5_compile.py",
+      "sha256": "54d53e0346b2e6a57cb8c52ec527075af45c0775cec5bbd61bd5b8278d84af43",
+      "kind": "deterministic_compiler_orchestration_code"
+    },
+    {
+      "id": "interaction_schema",
+      "path": "schemas/interaction.schema.json",
+      "sha256": "f3a973305d1e6d17053f687684ac0f6fca9bcc3232ef00ccc4fa591c440761e1",
+      "kind": "schema"
+    },
+    {
+      "id": "mask_tracks",
+      "path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/tracks.json",
+      "sha256": "8b5002f6bd5512d08335057ed8b04a230b0a92fc42f4803a8d654aacf284af10",
+      "kind": "actual_sam_masks"
+    },
+    {
+      "id": "mask_quality",
+      "path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/frames.json",
+      "sha256": "12114767356c9d51f9bc1fd0646fb743a3be68d189ec512e4d43df2b20bc32f6",
+      "kind": "geometric_mask_gates"
+    },
+    {
+      "id": "mask_audit",
+      "path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/model-audit-v1/audit.json",
+      "sha256": "5a3b50f872708486903e944d492217ef72cb53ad43384ffa2b67dc24d2e7de1a",
+      "kind": "model_mask_plausibility_audit"
+    },
+    {
+      "id": "model_metadata_1",
+      "path": "data/sam3d-upload-jobs/aed1ba82a2b44bc93314573e4069e2e65be804304199062b7db55d5d58fa7b18/candidate/metadata.json",
+      "sha256": "fcb4c344a9c272df73830fa9d50b106e8ac31b36acc77816891a8c7a716d2099",
+      "kind": "learned_asset_metadata"
+    },
+    {
+      "id": "model_metadata_2",
+      "path": "data/sam3d-upload-jobs/abd1b8a461ad58635ee3b95eb21b2ad9456882038300f345dc98f6cc5d759710/candidate/metadata.json",
+      "sha256": "3ea0c9805f6ad5692b4c6f0df0777d2a5974719821703150e5f60835b9dc05b7",
+      "kind": "learned_asset_metadata"
+    },
+    {
+      "id": "model_metadata_3",
+      "path": "data/sam3d-upload-jobs/ab3678c8245d295c3923ff651c5b6f6d77e91c8d503805affbb69fc8ff991866/candidate/metadata.json",
+      "sha256": "435ffcb4a5fb0204f2d0cf81bbba70e151c0eade55dfccfaa7eb78640d38a186",
+      "kind": "learned_asset_metadata"
+    }
+  ],
+  "reasoning": {
+    "provider": "meta_api",
+    "inference_location": "hosted_Meta_Model_API",
+    "model": "muse-spark-1.3",
+    "role": "visual_procedure_reasoning",
+    "proposal_input_id": "semantic_proposal",
+    "human_reviewed": false,
+    "manual_semantic_story_used": false
+  },
+  "tracklets": [
+    {
+      "id": "laptop_lid",
+      "label": "laptop lid",
+      "candidate_entity_ids": [
+        "laptop_lid_entity_candidate"
+      ],
+      "identity_status": "model_proposed_tracklet_physical_identity_unverified",
+      "source_sample_range": [
+        1,
+        66
+      ],
+      "limitations": [
+        "appearance changes top vs display vs edge-on",
+        "occluded when underside shown samples 15-18",
+        "boundary with base uncertain when closed"
+      ]
+    },
+    {
+      "id": "laptop_base",
+      "label": "laptop base",
+      "candidate_entity_ids": [
+        "laptop_base_entity_candidate"
+      ],
+      "identity_status": "model_proposed_tracklet_physical_identity_unverified",
+      "source_sample_range": [
+        14,
+        54
+      ],
+      "limitations": [
+        "not visible as separate part when closed from top",
+        "bottom vs top faces look different",
+        "partly occluded by hands and lid"
+      ]
+    },
+    {
+      "id": "power_cable",
+      "label": "power cable",
+      "candidate_entity_ids": [
+        "power_cable_entity_candidate"
+      ],
+      "identity_status": "model_proposed_tracklet_physical_identity_unverified",
+      "source_sample_range": [
+        55,
+        66
+      ],
+      "limitations": [
+        "deformable, not rigid, shape varies per frame",
+        "thin and blurred, tight box is approximate",
+        "early rear cable not asserted as same continuity"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "id": "asset_1",
+      "track_id": "laptop_lid",
+      "path": "data/sam3d-upload-jobs/aed1ba82a2b44bc93314573e4069e2e65be804304199062b7db55d5d58fa7b18/candidate/asset.glb",
+      "sha256": "627e9c11c8fc4c87e04443eb61619a36a8320303628406670c000842d7e36146",
+      "backend": "Meta SAM 3D Objects",
+      "geometry_status": "pending_independent_execution_and_source_projection_review",
+      "physical_scale_known": false
+    },
+    {
+      "id": "asset_2",
+      "track_id": "laptop_base",
+      "path": "data/sam3d-upload-jobs/abd1b8a461ad58635ee3b95eb21b2ad9456882038300f345dc98f6cc5d759710/candidate/asset.glb",
+      "sha256": "561419d50c67e8e033e376b8b99e88b417960907800a3a3793a56be752e34f5c",
+      "backend": "Meta SAM 3D Objects",
+      "geometry_status": "pending_independent_execution_and_source_projection_review",
+      "physical_scale_known": false
+    },
+    {
+      "id": "asset_3",
+      "track_id": "power_cable",
+      "path": "data/sam3d-upload-jobs/ab3678c8245d295c3923ff651c5b6f6d77e91c8d503805affbb69fc8ff991866/candidate/asset.glb",
+      "sha256": "8e1918ba6fceb89fd1a4fa2adaf94f013c9e9281f3151d2b4250a3d9d7eb44b7",
+      "backend": "Meta SAM 3D Objects",
+      "geometry_status": "pending_independent_execution_and_source_projection_review",
+      "physical_scale_known": false
+    }
+  ],
+  "evidence": [
+    {
+      "id": "source_000001",
+      "source_index": 1,
+      "timestamp_s": 0.0,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000001.jpg",
+      "frame_sha256": "5895d0bd437a52227115ce90a2614935f9490e1872a953fd26099a0ff007f29c",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000001.png",
+          "mask_sha256": "043ce5e2b3356a24f28e9579bfea20939b316c8f8f057b14981bc92558d01de1",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000002",
+      "source_index": 2,
+      "timestamp_s": 0.673278,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000002.jpg",
+      "frame_sha256": "c86824d7ac94c176eb7dcdc70bdbf4e0bc1df847da511fd873a4c753475d2a14",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000002.png",
+          "mask_sha256": "5fa57becb222d6dbb1166f03f3fc9635747d072714a9885972f56169732c9dea",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000003",
+      "source_index": 3,
+      "timestamp_s": 1.373156,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000003.jpg",
+      "frame_sha256": "384c06e2627394e5ea883fffd0e612630ee7f081fb0d84e974f53c443bb991ad",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000003.png",
+          "mask_sha256": "1205e355f2141f1a3b4f896e96d501e7e651b3dafb158cfb3c5a7e80c3c94e99",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000004",
+      "source_index": 4,
+      "timestamp_s": 2.073033,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000004.jpg",
+      "frame_sha256": "5d6cc48ceb10f67f61ba1b6368675d5265947c3349487effad6b1f485567ab4f",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000004.png",
+          "mask_sha256": "600595e62af85fa7bcc2f1df1995d4fc9c4a493597f34c0a41154f73c749ea40",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000005",
+      "source_index": 5,
+      "timestamp_s": 2.772911,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000005.jpg",
+      "frame_sha256": "cb284837cec386cfa50ea754493b81170570479e9eac24a8e32fd7294fbdb770",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000005.png",
+          "mask_sha256": "05a5d4e011c42243ac82b2de4441e1ad62711606f6b38d10d55d8529b10a6edb",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000006",
+      "source_index": 6,
+      "timestamp_s": 3.472789,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000006.jpg",
+      "frame_sha256": "808031906dd5be7cd27274cf0a77dfeb60f15bcb4ebdf36d1860fa4bd795e6ee",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000006.png",
+          "mask_sha256": "57165fe3d8ad29c769ac6578d1543404e8a11a449e9a946ee1d69d662994a093",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000007",
+      "source_index": 7,
+      "timestamp_s": 4.172556,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000007.jpg",
+      "frame_sha256": "9d70e90bf34b94de2b97ae2b1bb45e427cd567acdb35fe560fe9d958f15b4f5e",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000007.png",
+          "mask_sha256": "8c3a3981f011b280de4694e0c481b26dbc816acb658344ed7af566bf3599b0f4",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000008",
+      "source_index": 8,
+      "timestamp_s": 4.872544,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000008.jpg",
+      "frame_sha256": "a520ce0af87fdd4228e9d48fa8b6ecc6d8337e9471d71d29c89c6265299784df",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000008.png",
+          "mask_sha256": "4072e23b2fa2997b6952d31be85423d2ea0d941f3df7b784237c1a6b3eaefdf2",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000009",
+      "source_index": 9,
+      "timestamp_s": 5.562444,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000009.jpg",
+      "frame_sha256": "d223d74eeba209522945741d619d296ecc3c959a3f39f4e7739659189647f6e8",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000009.png",
+          "mask_sha256": "ea0ae777d2360b0f4b870f06bd191f8a62b3ef1b280be4c8015c6aa579d83ea5",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000010",
+      "source_index": 10,
+      "timestamp_s": 6.262311,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000010.jpg",
+      "frame_sha256": "309db18c3ca4524ea9b5a1c7de8b2c47ca4eb624c7598cc899aa21dc79afee75",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000010.png",
+          "mask_sha256": "8147327a760d4ff3a5ef454d9cb09041853ede8b7f4082a9ce2c872bb392c41f",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000011",
+      "source_index": 11,
+      "timestamp_s": 6.938956,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000011.jpg",
+      "frame_sha256": "4d30c65900194b28e27b81229af14ef9dfba3e6804afb4bc4588ce65b9060b20",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000011.png",
+          "mask_sha256": "c79465f805c3178128438c799d6064055861edc40e14485ff4c7661e15298fdc",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000012",
+      "source_index": 12,
+      "timestamp_s": 7.638867,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000012.jpg",
+      "frame_sha256": "c8abc5e508ad79ecf480bc3684283cfb38fd1ed930d00f25dc9f076c638e72f2",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000012.png",
+          "mask_sha256": "4a0381ea64f841f8f245d38892cddb620e85d85599d221b3a82a8e0e4ab6599b",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000013",
+      "source_index": 13,
+      "timestamp_s": 8.338689,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000013.jpg",
+      "frame_sha256": "a5829b8c17aedd7af37183c505e3091a97a8d103f134b24eae94f1ac53e67060",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000013.png",
+          "mask_sha256": "11185a298ad11dc1459ec117fbce128a344bf2ecec0a01324687a7ea194fba4b",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000014",
+      "source_index": 14,
+      "timestamp_s": 9.038511,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000014.jpg",
+      "frame_sha256": "76f67b00211660aeea23b264930f51f01d2492f10f7f2a97939795ea377b6937",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000014.png",
+          "mask_sha256": "d438a44c8c51f0018f5b22b2157c8b0534ddc7f6a81d87ae79866dc10ee17bde",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000014.png",
+          "mask_sha256": "45b44f5ff2e87b42caa02a1e427008ccf0bdd992fa0b6c778a05d8fdcc322fef",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000015",
+      "source_index": 15,
+      "timestamp_s": 9.728411,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000015.jpg",
+      "frame_sha256": "1ecb7dfedad769308102da39cf46c01f3c2936b80509900ecbb0163fb61aa479",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000015.png",
+          "mask_sha256": "c50021e5a4747b5202e8e087c9ec489ee7c30d93d5d649f68c1d3a2bb2089c03",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000015.png",
+          "mask_sha256": "45b44f5ff2e87b42caa02a1e427008ccf0bdd992fa0b6c778a05d8fdcc322fef",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000016",
+      "source_index": 16,
+      "timestamp_s": 10.428289,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000016.jpg",
+      "frame_sha256": "04f8d0ad3960eb3d057db360a779c626aac66177eec295c7809ddd5f61bfbee8",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000016.png",
+          "mask_sha256": "de8290de24ec3043ee01805839be9f87bb725a542b10f368d094a10edad10a0e",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000016.png",
+          "mask_sha256": "45b44f5ff2e87b42caa02a1e427008ccf0bdd992fa0b6c778a05d8fdcc322fef",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000017",
+      "source_index": 17,
+      "timestamp_s": 11.128167,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000017.jpg",
+      "frame_sha256": "57671b4b2fac773a7cc42fe7a9e50d72a7d767d238ed1957d9e66a34d9f10193",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000017.png",
+          "mask_sha256": "69ee17746615a3abb8c9ee45f5378d7bba4172fe28b0e081a32e99d78540de52",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000017.png",
+          "mask_sha256": "45b44f5ff2e87b42caa02a1e427008ccf0bdd992fa0b6c778a05d8fdcc322fef",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000018",
+      "source_index": 18,
+      "timestamp_s": 11.828044,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000018.jpg",
+      "frame_sha256": "43f0105a9e3e455329e2f849d1b6a6c67bcd4f777f11e88ad462ba09253e342a",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000018.png",
+          "mask_sha256": "d6c8c9cf48a06c6fcd8238dba60d698a6fa20b0fceaa6d7fbd6c7996f0b47d0e",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000018.png",
+          "mask_sha256": "45b44f5ff2e87b42caa02a1e427008ccf0bdd992fa0b6c778a05d8fdcc322fef",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000019",
+      "source_index": 19,
+      "timestamp_s": 12.494756,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000019.jpg",
+      "frame_sha256": "5e1d0c016b3c11dcf7cb479f0e638f20ba679b6777da7bdf69e42e9717967b0f",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000019.png",
+          "mask_sha256": "bc65c469ecfb5eaa45078c1bbf1740c712e48cfda22e23a8f8a024b9b573d7cc",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "uncertain"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000019.png",
+          "mask_sha256": "45b44f5ff2e87b42caa02a1e427008ccf0bdd992fa0b6c778a05d8fdcc322fef",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000020",
+      "source_index": 20,
+      "timestamp_s": 13.171256,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000020.jpg",
+      "frame_sha256": "faee08c77ddaa40ec503965e07924096ab52db67b28c0a4898f6f755803ec544",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000020.png",
+          "mask_sha256": "1a53c672afa074f54b1849d5eba144a128c30be71a7a0175624bdb6e7eb19eb2",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000020.png",
+          "mask_sha256": "45b44f5ff2e87b42caa02a1e427008ccf0bdd992fa0b6c778a05d8fdcc322fef",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000021",
+      "source_index": 21,
+      "timestamp_s": 13.871156,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000021.jpg",
+      "frame_sha256": "d178dd632c24fcb13902329c429b35c998103ae061b138c53ea698328dcd0d41",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000021.png",
+          "mask_sha256": "3f09a372b1a260b2f908cf91aaff9683ac41b3376a8d614c306c23abdb47956f",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000021.png",
+          "mask_sha256": "45b44f5ff2e87b42caa02a1e427008ccf0bdd992fa0b6c778a05d8fdcc322fef",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000022",
+      "source_index": 22,
+      "timestamp_s": 14.571033,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000022.jpg",
+      "frame_sha256": "280ae440a798949259d03035d1dd7f5f80ae12fa94210e584d03d359ec56ea7c",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000022.png",
+          "mask_sha256": "caa0f385181a2a615b25f5f5374f5cc58fd755c6c3d50ee32f3ff40f9d1cfc08",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000022.png",
+          "mask_sha256": "45b44f5ff2e87b42caa02a1e427008ccf0bdd992fa0b6c778a05d8fdcc322fef",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000023",
+      "source_index": 23,
+      "timestamp_s": 15.270911,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000023.jpg",
+      "frame_sha256": "ad9ddc3d4016d209a4d2f6a8a2241c1cda37b24618ac5297128fdba0e6f40983",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000023.png",
+          "mask_sha256": "ea7a6b32d64fff220050805160f753b93fc6ba81911e28a0ace84b9e5f6484ef",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000023.png",
+          "mask_sha256": "45b44f5ff2e87b42caa02a1e427008ccf0bdd992fa0b6c778a05d8fdcc322fef",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000024",
+      "source_index": 24,
+      "timestamp_s": 15.970789,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000024.jpg",
+      "frame_sha256": "0b3cac04bb84a38dc7de921319d4cc8e374bc8f6240ce07203105e6084af58c8",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000024.png",
+          "mask_sha256": "a520b1c99d385955b168a87e3bdf521b08ca2464e1841944c7a19c14460996ad",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000024.png",
+          "mask_sha256": "45b44f5ff2e87b42caa02a1e427008ccf0bdd992fa0b6c778a05d8fdcc322fef",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000025",
+      "source_index": 25,
+      "timestamp_s": 16.670667,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000025.jpg",
+      "frame_sha256": "b2f903b7aef0bcd8b232995eafa8cc27d6343ffa5eae174887cf3554cc3f712e",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000025.png",
+          "mask_sha256": "7b6139619a1370db36eb2ec70d79e54de9a4278151832a459fdc793b84086561",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000025.png",
+          "mask_sha256": "45b44f5ff2e87b42caa02a1e427008ccf0bdd992fa0b6c778a05d8fdcc322fef",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000026",
+      "source_index": 26,
+      "timestamp_s": 17.370544,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000026.jpg",
+      "frame_sha256": "3e9970985aa0d7926b137f0882d0f7895e0b249ee633451516522dd8e45263fd",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000026.png",
+          "mask_sha256": "9bb32e77b7243258f122360b1802aba02d00a905429bd2b64781ba7bf18e021b",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000026.png",
+          "mask_sha256": "45b44f5ff2e87b42caa02a1e427008ccf0bdd992fa0b6c778a05d8fdcc322fef",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000027",
+      "source_index": 27,
+      "timestamp_s": 18.070422,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000027.jpg",
+      "frame_sha256": "0cab93f19a75c2a00dea3eb94447e7ed5036c01ca9b052aa0b23b2c3f730da98",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000027.png",
+          "mask_sha256": "78e0caf405e96a8f8622c0b4fbc96461dacf9596c03752485ff96407c28d42f1",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000027.png",
+          "mask_sha256": "e70778c58211f48ea7d854b3f4659dff86a20257c912a83b7790fe0788ffeffa",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "reject_wrong_or_lost_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000028",
+      "source_index": 28,
+      "timestamp_s": 18.760222,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000028.jpg",
+      "frame_sha256": "4851ccad1c4115d29f0d79dafbf4b08509782b7813a305c91dd3f34409664fbb",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000028.png",
+          "mask_sha256": "7889406a37f1ddbc7b98194f0697c2606032004fd477347731596613b68a56b8",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000028.png",
+          "mask_sha256": "27359c952aa14a6f77d59bc4da3aded06522ec62dfc9a08838bee28e32686444",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000029",
+      "source_index": 29,
+      "timestamp_s": 19.460211,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000029.jpg",
+      "frame_sha256": "f63ad382b313a258bed26f619aa277c3f3d0291860398582899bed9bbd64bc39",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000029.png",
+          "mask_sha256": "bf92d8ec72a18889f58701889db4d47e0f85ebeb851f12e15043ba5ea53909fd",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000029.png",
+          "mask_sha256": "285311532cfbebea271e9b0b1c73f118bdd62847ddb138adf03438b3ee6d0713",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000030",
+      "source_index": 30,
+      "timestamp_s": 20.160089,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000030.jpg",
+      "frame_sha256": "9c5bf4acbbe82f434bdc2d68378d6a4db4253624b10dc06ecbd9b39bbf5c7495",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000030.png",
+          "mask_sha256": "58179c4db93814940629e15786d8d3276e2dc46d3aba87aa182d52daed2ad45a",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000030.png",
+          "mask_sha256": "fb56d750cc0a09cac90c967a653c8c2b7dda72e7c0eef2e5cde9b5cc652043cf",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000031",
+      "source_index": 31,
+      "timestamp_s": 20.859967,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000031.jpg",
+      "frame_sha256": "4ab396a667c802c1acd1eb5b4d75bdf28e6e58eb4ab800db975bfd73ee15740c",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000031.png",
+          "mask_sha256": "68a5faad4454a0b8740b6ffe48ec1ff2be2a791db887675062110d3b07335af1",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000031.png",
+          "mask_sha256": "ab707c6cf00b3e4959318d8c67705c0c5e4e6b5e9b40695791d428fb6653144f",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000032",
+      "source_index": 32,
+      "timestamp_s": 21.559878,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000032.jpg",
+      "frame_sha256": "0a2a6a112230d1b90e45fbaba1ad91e95881400bdd8c38f64bcd1e9617e9fdcc",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000032.png",
+          "mask_sha256": "570de8c9b844f776f98fe1b790f1574915c3c66d8ad4c7636fdb27f723867c89",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000032.png",
+          "mask_sha256": "0221e46ab952378a149c3863ccd727661252f1619892a10934e94ac87e4439a0",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000033",
+      "source_index": 33,
+      "timestamp_s": 22.259678,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000033.jpg",
+      "frame_sha256": "6035fd201f9790a6f8bd938f2a296a22bd3f4a90dae2b581b96a68f4eb0a919d",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000033.png",
+          "mask_sha256": "62f0552018be25f75bec9c423b6166a6872477a190418efba998e408b66a0110",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000033.png",
+          "mask_sha256": "4fcc88c77497ed54108509815c3e4c4e864baa436f689b8ee66988785710d1be",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000034",
+      "source_index": 34,
+      "timestamp_s": 22.959578,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000034.jpg",
+      "frame_sha256": "f990319da802b490642a6e4d98f88d0c8828277286458d2f8784690d867e59cc",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000034.png",
+          "mask_sha256": "591189c3ae8821ec49531536f6ac3d31a1fc5ea47acecd5766ebffc5721d09da",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000034.png",
+          "mask_sha256": "e717f3ef4c79a44a45d5b4f151b9f2465aafa3df9f1ab3f5522eaf3920ef7e20",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000035",
+      "source_index": 35,
+      "timestamp_s": 23.6362,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000035.jpg",
+      "frame_sha256": "4bd6914e6ca791b75cd4d600b0d47db0a52926671ae901ac078c438082935859",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000035.png",
+          "mask_sha256": "eed95b1c78f2489c1310fe15aadb67b698a7aa904688ddf34c6f21e02a646ec6",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000035.png",
+          "mask_sha256": "582459bed12f571da18f5f05f795835c5e0c8da0abb3116b6e47b39e2d6290c0",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000036",
+      "source_index": 36,
+      "timestamp_s": 24.326178,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000036.jpg",
+      "frame_sha256": "6639a0270bba515d929aa0b5e3f5e6fa3e3c6edbfcba48671107f9ade2a0e0a8",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000036.png",
+          "mask_sha256": "3f3bb1befa42a3c335b69a3adbf930bb5cc9d308a9d724f1d11be5a0f041895b",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000036.png",
+          "mask_sha256": "70fc1554187f6bb2f5f35fd66391a4dbc6d3f5f351f683d806668a4899eab58b",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000037",
+      "source_index": 37,
+      "timestamp_s": 25.025922,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000037.jpg",
+      "frame_sha256": "1d8b085480efd86d0c2ef4b2709c2d2ea742dfa9910c2748ff1a0b4672aa5766",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000037.png",
+          "mask_sha256": "8ecfd3394c8bc4d9e56cfa6c3b4d7268f8dd1ddd2908836ca347f88a8eef18f9",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000037.png",
+          "mask_sha256": "42175d256e17c8da76680803b2a9af2477337a7e4182e98f0c340eef84a62e80",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000038",
+      "source_index": 38,
+      "timestamp_s": 25.7258,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000038.jpg",
+      "frame_sha256": "73a80677016c1600bf8543c5b5d88029f377c991f633f7070cf3c3137148265f",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000038.png",
+          "mask_sha256": "282d523a46f0b1742033b68cbc56108a20d586834aa2ae2dbe677be52b061c15",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000038.png",
+          "mask_sha256": "f5d87d771aa85511a2f984351fdb4c879573f8a053fa68df8e52afcfc4d1ee61",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000039",
+      "source_index": 39,
+      "timestamp_s": 26.425678,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000039.jpg",
+      "frame_sha256": "ece3cdc9d921869a2ea0fde620eb874237badd0cb4490d332069909cf673e019",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000039.png",
+          "mask_sha256": "fbc98596779b01495540056d8385b0029006bf6751d67184bd228fca706eb4c1",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000039.png",
+          "mask_sha256": "8a7da1c6851647dc128c43ce9e61398dfebd2f67ecdffcfeb9cbb1591dd571cc",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000040",
+      "source_index": 40,
+      "timestamp_s": 27.125556,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000040.jpg",
+      "frame_sha256": "aeb3fe87c714d989ffd6d12f6395cd578e7ef1a2929f38b3bb143a87fa0640e6",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000040.png",
+          "mask_sha256": "974cc3d491fc4c06e19c03dc94cc60434af68fd8aa5089935485baff3082b7c5",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000040.png",
+          "mask_sha256": "20b1eab46d6838a9ae7aa751da7fa27ce02c27dfe5e24b232973a1601f69202f",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000041",
+      "source_index": 41,
+      "timestamp_s": 27.825433,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000041.jpg",
+      "frame_sha256": "eddd56ec51c8ffaaaae325becf38b5831c756bd88dfcc4117b9a09e85723cb3a",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000041.png",
+          "mask_sha256": "ed5ce8873f207cba7137d4552d79a95398ba94108e177aaa5eed431f9df400cd",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000041.png",
+          "mask_sha256": "6b90f0c619b455a1259c92cada79c4a0c6483d8822bbbcc5b8ff3c543e113411",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000042",
+      "source_index": 42,
+      "timestamp_s": 28.525311,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000042.jpg",
+      "frame_sha256": "065299140b3eb0395872c4fd0b81a8fe966060adc0208d8b54d6f825354e7c69",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000042.png",
+          "mask_sha256": "147ec6f784ca1f896a7641e762d025ca7728b5a231b793962779bdfd2f4229a4",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000042.png",
+          "mask_sha256": "d4af9f300505ba12885fb9c726a3d1ecadf926cd34c00216c354cfee8ee2498c",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000043",
+      "source_index": 43,
+      "timestamp_s": 29.225189,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000043.jpg",
+      "frame_sha256": "4da844da5b05f14590fb67931996678a3052cc1f22a59de14538bcc40d643751",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000043.png",
+          "mask_sha256": "4ea352e265c3b3aa86adcb3b8ca02e050f77d4b94e862f8f3eb7b64e650538af",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000043.png",
+          "mask_sha256": "ca4a27e6170534af212c9436bce91a24bfc2a8ee82724863111f08fed2a04ca0",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000044",
+      "source_index": 44,
+      "timestamp_s": 29.925067,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000044.jpg",
+      "frame_sha256": "7e57e20801461e02ba1d02cfa97935cc8d6054a49850ef89b14c11f8fc1fb569",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000044.png",
+          "mask_sha256": "cc44d41d6b80af27588e5220a6980d382af8c534624e595984f68da4cc227e2d",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000044.png",
+          "mask_sha256": "45ace5141594d515457086c0076c587819651440860c4b79c393992815a6314b",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000045",
+      "source_index": 45,
+      "timestamp_s": 30.591811,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000045.jpg",
+      "frame_sha256": "62291f16debb9e93ee9f628064b395435450de9cc0628a17d07bec3a507aaccb",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000045.png",
+          "mask_sha256": "1d5277d3ac6491b9834d0204a48091fd1d52b82007a2b44d3f5576fca8c638c4",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000045.png",
+          "mask_sha256": "3b9e75a22e61f8cd1134899f155363000c6698c56c8f3a35dd704a13765d5f44",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000046",
+      "source_index": 46,
+      "timestamp_s": 31.291533,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000046.jpg",
+      "frame_sha256": "14686ce4fbcd592e0d01542a3999b604bf1804f41266f603f501454e83e041d4",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000046.png",
+          "mask_sha256": "09360177372f86ae33b77d4012350e907d3cf27dffe1030507c7b49cebe3cb4b",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000046.png",
+          "mask_sha256": "ee613e364bbeadf83fe2ffa7df3c7a81f425231ca1c9b3b3f0d1a225d0c050c4",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000047",
+      "source_index": 47,
+      "timestamp_s": 31.991422,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000047.jpg",
+      "frame_sha256": "78a86e7d09b1ee882893b440fa5db0af102f73d90f778a65660abb0accb9663b",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000047.png",
+          "mask_sha256": "8a4d7995b0cbbf67c60191fb847a7bd3582b776853c6010e7d3a1300231e1ac4",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000047.png",
+          "mask_sha256": "c746d860865c8c85eff73e6a2acc6e2d8c5c655b0be2b2adbadefe9bbe4f31c6",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000048",
+      "source_index": 48,
+      "timestamp_s": 32.691411,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000048.jpg",
+      "frame_sha256": "9f8d393fe5f3c9ee8f651dd10605b0469d34da09fccf9edbeda35b8ebd799884",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000048.png",
+          "mask_sha256": "2ffd0bbe3bb9f4edeecc83982bab60f02566197831c34e6313dbb1a34f5af5d8",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000048.png",
+          "mask_sha256": "b5362975e5befaff28d14f8f520aca62a9d82175db6d339e5b9c8e1f518c5957",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000049",
+      "source_index": 49,
+      "timestamp_s": 33.391267,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000049.jpg",
+      "frame_sha256": "ba6e13684008a6fdffd272334727b017965ce7805f9e5166db58d4e57b4d242b",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000049.png",
+          "mask_sha256": "a0fc069e1d2b9bc09d986689b68a3fd22d82a9a7bf457272025a02873a56e20d",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000049.png",
+          "mask_sha256": "ed957a358c5fe4ba1ec11ccfea44740e84ffccbce4f902cb97a9ed69b3d0e415",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000050",
+      "source_index": 50,
+      "timestamp_s": 34.091144,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000050.jpg",
+      "frame_sha256": "34418c953746e2d71714d439f4997c05c3739ebd8f2652dbc1b271b845db20e1",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000050.png",
+          "mask_sha256": "cb62f8e426452cc03c75bd4f0cafaf20ff6b2b9ae64d25d075483db609e557c2",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000050.png",
+          "mask_sha256": "29055dc9dee33dbc3da74487f88b525bca77e27510aaab479660558886b0c610",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000051",
+      "source_index": 51,
+      "timestamp_s": 34.791022,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000051.jpg",
+      "frame_sha256": "3d211941b444df2b4efdb2166ff719040c623bd55bb848c86f5e74cbb2002160",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000051.png",
+          "mask_sha256": "7b2207c251f5deda0cb1bea9b81b060128047f8b9340f4fe06574704388b2d9f",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000051.png",
+          "mask_sha256": "616d7cd4cbb83bc835b0affe477d0210b4a3db66b6e5bed02ae38fd192b0f561",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000052",
+      "source_index": 52,
+      "timestamp_s": 35.4909,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000052.jpg",
+      "frame_sha256": "0d1a8fde18a108e1b0981ea940b92bf9a7b8076879e4b31cbd607a333af812b2",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000052.png",
+          "mask_sha256": "7faeac316bcefa6c2b7f77670eb3a9f991c2b69c03d100c1d6a763b6a765885e",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000052.png",
+          "mask_sha256": "3d36f7b42edb3914df51a7cf2d1bb21570c029b64e2f9ea110c6c92f54bde12a",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000053",
+      "source_index": 53,
+      "timestamp_s": 36.190778,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000053.jpg",
+      "frame_sha256": "939e9c3f723794649a7e537aca461a18660adb2cae7fc9f5340440fac4540824",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000053.png",
+          "mask_sha256": "3177c6ec03848cfb7aea16994028d6546cb6b11daf9373d72fbca4181a3b20ed",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000053.png",
+          "mask_sha256": "c485df7b85303fd986d7b6e476d813b7bd1db88afa0350c0bd2bb0ebb2771117",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000054",
+      "source_index": 54,
+      "timestamp_s": 36.890656,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000054.jpg",
+      "frame_sha256": "e12dbb35396bbcd2877b8a033f14d5df04d222423d584a77403bc759b0546616",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000054.png",
+          "mask_sha256": "60d2721ff674f6945134d40d5e0d2b5847dc13a25052384aedf716164d58ba39",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "laptop_base",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_base/000054.png",
+          "mask_sha256": "b3ee1b228a504261ea61f5cbc7e70cd6f76f8771a38d5a19d42365a550961e9b",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000055",
+      "source_index": 55,
+      "timestamp_s": 37.567233,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000055.jpg",
+      "frame_sha256": "aa17b5d37ec200ffa74dfef81b134dd8e715f33045cab95fe59901f0aa25ddd3",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000055.png",
+          "mask_sha256": "4573ec9c6190d3c92993ea7eb3f4a8bf52ce4157117163c8d3366d5623022bd2",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/power_cable/000055.png",
+          "mask_sha256": "a40d60e5156c9006b829b6cc24e2cc1af84bc604920adfc21041e44a991cbb0b",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000056",
+      "source_index": 56,
+      "timestamp_s": 38.267111,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000056.jpg",
+      "frame_sha256": "1c160127a71f590563a478202e5d9044561b557c699af860565a9b8bb8860496",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000056.png",
+          "mask_sha256": "21db3ed45fc4f351dcae36aeeb039068fa76ebf9a78726dd7f7d09f98d7b572d",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/power_cable/000056.png",
+          "mask_sha256": "6fcedc5d5e9b091f359335a941e30f93324f75a4f2769fda05e1fc01496e1687",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000057",
+      "source_index": 57,
+      "timestamp_s": 38.966989,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000057.jpg",
+      "frame_sha256": "92b9eaab13cee793ad209a9c8e1543e152b8320733dae0276e326deaa4898874",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000057.png",
+          "mask_sha256": "ba94291c416dc246ea8050d60eb3994897086be78d8bff97818b081230039f59",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/power_cable/000057.png",
+          "mask_sha256": "3ef5080702abb58e43eaa74fb8a620bbb46cbe008cf1d89bcbe6fc25815bc92f",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000058",
+      "source_index": 58,
+      "timestamp_s": 39.666867,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000058.jpg",
+      "frame_sha256": "04a7ee112951694764eca146ad9873328f823dc54634ce5acd7c5646927295b8",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000058.png",
+          "mask_sha256": "c07b067441dcbfdd47ca4c519b7c9d26a91a0ef16f1500b9dec28c84f65df5ca",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/power_cable/000058.png",
+          "mask_sha256": "2834842d438743725c1f6b3d716cbcc1fde5f958b5ca7da594aa68a63ef73cae",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000059",
+      "source_index": 59,
+      "timestamp_s": 40.366744,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000059.jpg",
+      "frame_sha256": "7e959cab41037957ae559b5de47f9828a02fae6a6b6c05999f0cabf7a31f972e",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000059.png",
+          "mask_sha256": "0e1e3bfb8de3b3cdace0827ca8b699317d7091e9776026a38aca825cff9b7807",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/power_cable/000059.png",
+          "mask_sha256": "f56d50e39048c65b2a26bd2b0fb3fc35b037c869b1027e860a5789fdd4f2ef91",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000060",
+      "source_index": 60,
+      "timestamp_s": 41.066711,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000060.jpg",
+      "frame_sha256": "c1b2de48ad449a86615dbe7b66929a28314b2590148406a3d0f3269f4eb0e1d7",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000060.png",
+          "mask_sha256": "fcee52c1e5585576b100adfbca52d246e1c3e3436b5c2f83205c2985fb0fad07",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/power_cable/000060.png",
+          "mask_sha256": "2df6e161c340aef60db25d28b992433fb3ba1d9334ad6c8b1518a27edc45859c",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000061",
+      "source_index": 61,
+      "timestamp_s": 41.766633,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000061.jpg",
+      "frame_sha256": "c1806f39959f6fc17be0581dea927e4706324228f86553b8067ce1ff609bf868",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000061.png",
+          "mask_sha256": "7bffa190bccd22a52288fe4947830225d1a512b51a04668dab823c051daff527",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/power_cable/000061.png",
+          "mask_sha256": "9312f939326055a2e75cd8123e17a359529c8dff9c913d5af1df732d802ea377",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000062",
+      "source_index": 62,
+      "timestamp_s": 42.466389,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000062.jpg",
+      "frame_sha256": "5bf63492195b1fcf7eef44c1dafe9cda95f21b10cb2798b64629c2e2e352fa00",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000062.png",
+          "mask_sha256": "9d4e040f580129ab6656c6050b1a8d12e2139f6fba40caba73585bfe191ec1d0",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/power_cable/000062.png",
+          "mask_sha256": "0696e12dc2fa5c7aafd0b6514732f0bba7db1775849ca3ea3cc256a16bb9f3ee",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000063",
+      "source_index": 63,
+      "timestamp_s": 43.166378,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000063.jpg",
+      "frame_sha256": "3dfe8e94f729ce0d9bd9622d2c45c95156a5c84abb56fe2d0f7182f186a4fcf2",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000063.png",
+          "mask_sha256": "83f8d5348c23ecd2416b7efb9e71d81f3c13f5340fe3190d1844524ea1f9ba95",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/power_cable/000063.png",
+          "mask_sha256": "ffbcfce7fd2544e0fb7d7d03b5d02a235296fa9aed6668e8c3a8ab5cf5731b2a",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000064",
+      "source_index": 64,
+      "timestamp_s": 43.856322,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000064.jpg",
+      "frame_sha256": "8126b62af708f143f8f6bc88aeae8790bfadad3b1e9160413f2cb0383a743ffc",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000064.png",
+          "mask_sha256": "a76dd9e45d8a80c726591d93f06b1c73f0cdcc4f6e4d0a07ed051fb045896891",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/power_cable/000064.png",
+          "mask_sha256": "a8ea2b8f1a0c6b3a74d74f9ea45ba6779c653ede68adadeda9b7330cb565eea1",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000065",
+      "source_index": 65,
+      "timestamp_s": 44.556133,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000065.jpg",
+      "frame_sha256": "72e4c35354436021e60f912518a3d8bd938680408ccb4433dbd59c8da4fa8b56",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000065.png",
+          "mask_sha256": "d6a958690668deea8b3a5f9114aa1327c0509bc10c084f990debcd800bd3e346",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/power_cable/000065.png",
+          "mask_sha256": "5c2c2a5de69e9a546249c661db0e4228310ba9da3e7e0e1e436a807183ce0762",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000066",
+      "source_index": 66,
+      "timestamp_s": 45.2328,
+      "frame_path": "data/flow-capture-laptop-20261103-v1/frames/000066.jpg",
+      "frame_sha256": "c905533348fd7ecf4047f690910c1b4091c516db103411f54120ae0b3b1d24f6",
+      "observations": [
+        {
+          "track_id": "laptop_lid",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000066.png",
+          "mask_sha256": "6a16e88cb0b3003146218e22aaaf2241f3440bbdd926d1aa87e14bb826ee001f",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/power_cable/000066.png",
+          "mask_sha256": "16a6bfdfcc4bc9b389a3fe4a707eb39a35751d4a1e148ae8d9f9f5f08e160043",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "id": "r_lid_to_base",
+      "limitations": [
+        "Hinge area occluded by hands.",
+        "Coarse sampling of fast opening motion."
+      ],
+      "object_track_id": "laptop_base",
+      "predicate": "attached_to",
+      "rationale": "Lid lifts away from base but remains joined at rear edge during opening.",
+      "status": "visual_model_proposal",
+      "subject_track_id": "laptop_lid",
+      "evidence_ids": [
+        "source_000027",
+        "source_000028",
+        "source_000029",
+        "source_000030"
+      ]
+    },
+    {
+      "id": "r_cable_to_laptop",
+      "limitations": [
+        "Plug-socket contact occluded.",
+        "Thin deformable cable shape varies; tight box approximate.",
+        "Early rear cable continuity unresolved."
+      ],
+      "object_track_id": "laptop_lid",
+      "predicate": "removable_from",
+      "rationale": "Cable seen at laptop edge, then held detached, then brought back to edge suggesting removable functional link.",
+      "status": "inferred",
+      "subject_track_id": "power_cable",
+      "evidence_ids": [
+        "source_000055",
+        "source_000058",
+        "source_000065",
+        "source_000066"
+      ]
+    }
+  ],
+  "variables": [
+    {
+      "id": "lid_state",
+      "name": "lid_position_state",
+      "subject_track_id": "laptop_lid",
+      "values": [
+        "closed",
+        "ajar",
+        "open",
+        "unknown"
+      ]
+    },
+    {
+      "id": "base_keyboard_visibility",
+      "name": "keyboard_face_visibility",
+      "subject_track_id": "laptop_base",
+      "values": [
+        "visible",
+        "not_visible",
+        "unknown"
+      ]
+    },
+    {
+      "id": "screen_display",
+      "name": "display_illumination",
+      "subject_track_id": "laptop_lid",
+      "values": [
+        "illuminated",
+        "dark",
+        "unknown"
+      ]
+    },
+    {
+      "id": "cable_connection",
+      "name": "cable_attachment",
+      "subject_track_id": "power_cable",
+      "values": [
+        "attached",
+        "detached",
+        "unknown"
+      ]
+    }
+  ],
+  "assertions": [
+    {
+      "id": "a_lid_closed_05",
+      "rationale": "Patterned top fully covers base on table, seen as closed lid.",
+      "status": "visual_model_proposal",
+      "value": "closed",
+      "variable_id": "lid_state",
+      "evidence_id": "source_000005"
+    },
+    {
+      "id": "a_lid_closed_20",
+      "rationale": "Lid top still flat on table after underside inspection, closed appearance.",
+      "status": "visual_model_proposal",
+      "value": "closed",
+      "variable_id": "lid_state",
+      "evidence_id": "source_000020"
+    },
+    {
+      "id": "a_lid_ajar_27",
+      "rationale": "Lid partly lifted from base, gap visible, neither closed nor fully open.",
+      "status": "visual_model_proposal",
+      "value": "ajar",
+      "variable_id": "lid_state",
+      "evidence_id": "source_000027"
+    },
+    {
+      "id": "a_lid_open_31",
+      "rationale": "Display upright away from keyboard, open posture.",
+      "status": "visual_model_proposal",
+      "value": "open",
+      "variable_id": "lid_state",
+      "evidence_id": "source_000031"
+    },
+    {
+      "id": "a_lid_open_44",
+      "rationale": "Display upright with illuminated logo text, remains open.",
+      "status": "visual_model_proposal",
+      "value": "open",
+      "variable_id": "lid_state",
+      "evidence_id": "source_000044"
+    },
+    {
+      "id": "a_lid_closed_55",
+      "rationale": "Lid flat again after closing motion, top view closed.",
+      "status": "visual_model_proposal",
+      "value": "closed",
+      "variable_id": "lid_state",
+      "evidence_id": "source_000055"
+    },
+    {
+      "id": "a_lid_closed_66",
+      "rationale": "Lid top flat on table during cable handling, closed.",
+      "status": "visual_model_proposal",
+      "value": "closed",
+      "variable_id": "lid_state",
+      "evidence_id": "source_000066"
+    },
+    {
+      "id": "a_base_notvis_20",
+      "rationale": "Closed lid covers top face, keyboard not observable.",
+      "status": "visual_model_proposal",
+      "value": "not_visible",
+      "variable_id": "base_keyboard_visibility",
+      "evidence_id": "source_000020"
+    },
+    {
+      "id": "a_base_vis_31",
+      "rationale": "Keyboard and touchpad top face clearly exposed under open lid.",
+      "status": "visual_model_proposal",
+      "value": "visible",
+      "variable_id": "base_keyboard_visibility",
+      "evidence_id": "source_000031"
+    },
+    {
+      "id": "a_base_unknown_15",
+      "rationale": "Underside faces camera, keyboard face fully occluded, cannot establish state.",
+      "status": "unknown",
+      "value": "unknown",
+      "variable_id": "base_keyboard_visibility",
+      "evidence_id": "source_000015"
+    },
+    {
+      "id": "a_screen_dark_31",
+      "rationale": "Display face dark with no illumination visible.",
+      "status": "visual_model_proposal",
+      "value": "dark",
+      "variable_id": "screen_display",
+      "evidence_id": "source_000031"
+    },
+    {
+      "id": "a_screen_lit_44",
+      "rationale": "Display shows bright text logo, illuminated.",
+      "status": "visual_model_proposal",
+      "value": "illuminated",
+      "variable_id": "screen_display",
+      "evidence_id": "source_000044"
+    },
+    {
+      "id": "a_cable_attached_55",
+      "rationale": "Thin cable runs to rear edge of closed laptop, appears connected.",
+      "status": "visual_model_proposal",
+      "value": "attached",
+      "variable_id": "cable_connection",
+      "evidence_id": "source_000055"
+    },
+    {
+      "id": "a_cable_detached_60",
+      "rationale": "Plug held aloft away from laptop body, clearly detached.",
+      "status": "visual_model_proposal",
+      "value": "detached",
+      "variable_id": "cable_connection",
+      "evidence_id": "source_000060"
+    },
+    {
+      "id": "a_cable_attached_66",
+      "rationale": "Hand at side edge with cable end at port, contact occluded so seating inferred.",
+      "status": "inferred",
+      "value": "attached",
+      "variable_id": "cable_connection",
+      "evidence_id": "source_000066"
+    }
+  ],
+  "steps": [
+    {
+      "description": "Hands contact closed laptop and slide and rotate it across the table surface.",
+      "id": "s_reposition_closed",
+      "limitations": [
+        "Hands occlude edges.",
+        "Coarse sampling limits exact motion onset."
+      ],
+      "participant_track_ids": [
+        "laptop_lid"
+      ],
+      "postconditions": [
+        {
+          "value": "closed",
+          "variable_id": "lid_state",
+          "evidence_id": "source_000011"
+        }
+      ],
+      "preconditions": [
+        {
+          "value": "closed",
+          "variable_id": "lid_state",
+          "evidence_id": "source_000005"
+        }
+      ],
+      "title": "slide and rotate closed laptop",
+      "evidence_ids": [
+        "source_000005",
+        "source_000006",
+        "source_000007",
+        "source_000008",
+        "source_000009",
+        "source_000010",
+        "source_000011"
+      ],
+      "start_s": 2.772911,
+      "end_s": 6.938956
+    },
+    {
+      "description": "Hands lift and tilt closed laptop to show underside with vents then lay it flat.",
+      "id": "s_expose_underside",
+      "limitations": [
+        "Motion blur and oblique views.",
+        "Lid mostly hidden when underside faces camera; boundary with base uncertain."
+      ],
+      "participant_track_ids": [
+        "laptop_lid",
+        "laptop_base"
+      ],
+      "postconditions": [
+        {
+          "value": "closed",
+          "variable_id": "lid_state",
+          "evidence_id": "source_000019"
+        }
+      ],
+      "preconditions": [
+        {
+          "value": "closed",
+          "variable_id": "lid_state",
+          "evidence_id": "source_000014"
+        }
+      ],
+      "title": "lift to expose underside",
+      "evidence_ids": [
+        "source_000014",
+        "source_000015",
+        "source_000016",
+        "source_000017",
+        "source_000018",
+        "source_000019"
+      ],
+      "start_s": 9.038511,
+      "end_s": 12.494756
+    },
+    {
+      "description": "Hands lift front edge of lid away from keyboard base to open display.",
+      "id": "s_open_display",
+      "limitations": [
+        "Hinge area occluded by hands.",
+        "Coarse sampling of fast motion."
+      ],
+      "participant_track_ids": [
+        "laptop_lid",
+        "laptop_base"
+      ],
+      "postconditions": [
+        {
+          "value": "open",
+          "variable_id": "lid_state",
+          "evidence_id": "source_000030"
+        },
+        {
+          "value": "visible",
+          "variable_id": "base_keyboard_visibility",
+          "evidence_id": "source_000030"
+        }
+      ],
+      "preconditions": [
+        {
+          "value": "closed",
+          "variable_id": "lid_state",
+          "evidence_id": "source_000026"
+        }
+      ],
+      "title": "open display lid",
+      "evidence_ids": [
+        "source_000026",
+        "source_000027",
+        "source_000028",
+        "source_000029",
+        "source_000030"
+      ],
+      "start_s": 17.370544,
+      "end_s": 20.160089
+    },
+    {
+      "description": "Open laptop remains on table while display changes from dark to illuminated logo.",
+      "id": "s_open_hold",
+      "limitations": [
+        "No electrical operation verified; only visible illumination.",
+        "Coarse sampling of illumination onset."
+      ],
+      "participant_track_ids": [
+        "laptop_lid",
+        "laptop_base"
+      ],
+      "postconditions": [
+        {
+          "value": "illuminated",
+          "variable_id": "screen_display",
+          "evidence_id": "source_000048"
+        }
+      ],
+      "preconditions": [
+        {
+          "value": "dark",
+          "variable_id": "screen_display",
+          "evidence_id": "source_000031"
+        }
+      ],
+      "title": "hold open with display illumination",
+      "evidence_ids": [
+        "source_000031",
+        "source_000044",
+        "source_000048"
+      ],
+      "start_s": 20.859967,
+      "end_s": 32.691411
+    },
+    {
+      "description": "Hands adjust open laptop then fold display down to closed position.",
+      "id": "s_close_display",
+      "limitations": [
+        "Base partly occluded during rotation.",
+        "Exact closed contact not visible."
+      ],
+      "participant_track_ids": [
+        "laptop_lid"
+      ],
+      "postconditions": [
+        {
+          "value": "closed",
+          "variable_id": "lid_state",
+          "evidence_id": "source_000055"
+        }
+      ],
+      "preconditions": [
+        {
+          "value": "open",
+          "variable_id": "lid_state",
+          "evidence_id": "source_000052"
+        }
+      ],
+      "title": "close display lid",
+      "evidence_ids": [
+        "source_000052",
+        "source_000053",
+        "source_000054",
+        "source_000055"
+      ],
+      "start_s": 35.4909,
+      "end_s": 37.567233
+    },
+    {
+      "description": "Hand detaches power cable, lifts and stretches deformable cable for view, then brings it back to laptop edge.",
+      "id": "s_cable_handle",
+      "limitations": [
+        "Thin deformable cable shape changes non-rigidly.",
+        "Plug-socket contact occluded; seating not proven.",
+        "Coarse sampling."
+      ],
+      "participant_track_ids": [
+        "power_cable",
+        "laptop_lid"
+      ],
+      "postconditions": [
+        {
+          "value": "attached",
+          "variable_id": "cable_connection",
+          "evidence_id": "source_000066"
+        }
+      ],
+      "preconditions": [
+        {
+          "value": "attached",
+          "variable_id": "cable_connection",
+          "evidence_id": "source_000055"
+        }
+      ],
+      "title": "detach inspect and return cable",
+      "evidence_ids": [
+        "source_000055",
+        "source_000058",
+        "source_000060",
+        "source_000061",
+        "source_000065",
+        "source_000066"
+      ],
+      "start_s": 37.567233,
+      "end_s": 45.2328
+    }
+  ],
+  "motion": [],
+  "links": {
+    "scene_viewer": "",
+    "dense_viewer": ""
+  },
+  "runtime_policy": {
+    "state_between_evidence": "unknown",
+    "pose_between_evidence": "absent",
+    "pose_interpolation": false,
+    "simulation_ready": false,
+    "physical_identity_confirmed": false
+  },
+  "limitations": [
+    "Coarse temporal sampling misses exact motion onset and fast lid transitions.",
+    "Occlusion by hands hides hinge area, plug-socket contact and keyboard at times.",
+    "Unresolved identity: early rear cable not proven same continuity as later handled cable; lid top vs display vs edge-on appearance changes.",
+    "No verification of joint axes, latch engagement, seating success, scale or electrical operation.",
+    "States and relationships are fallible model proposals, not verified physical facts.",
+    "Only sampled evidence has semantic state; no persistence is inferred between samples or through occlusion.",
+    "Supported poses are conditional on generated geometry, reference fit and assumed intrinsics; physical pose accuracy is unverified.",
+    "No robot execution, hidden insertion/contact, seating, hinge axis or physical dimensions are generated."
+  ]
+}

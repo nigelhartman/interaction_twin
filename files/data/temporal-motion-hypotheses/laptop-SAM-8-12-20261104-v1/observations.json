@@ -1,0 +1,888 @@
+{
+  "format": "interaction-twin-bidirectional-local-SAM-temporal-observations",
+  "version": 1,
+  "plan_ref": {
+    "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/plan.json",
+    "sha256": "6d20c08eae89a328fe258fb8fc7eb35aa345c4e8e5e944eeb6ddcf09d4c1bad2",
+    "bytes": 21255
+  },
+  "source_ref": {
+    "path": "data/flow-capture-laptop-20261103-v1/source/video.mp4",
+    "sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+    "bytes": 13153854
+  },
+  "evidence_program_ref": {
+    "path": "data/flow-capture-laptop-20261103-v1/flow-procedure-1/interaction.json",
+    "sha256": "ad13657bba9544af8a4b0b11611ef38fe9d5da1520303354d87906003aca25ce",
+    "bytes": 85703
+  },
+  "baseline_scene_ref": {
+    "path": "data/laptop-mating-20261104-v1/final-candidate-v2/scene.json",
+    "sha256": "b18bdee88ee71132d930dace670cba2c0f959196b7d74171842682aeea531afb",
+    "bytes": 281431
+  },
+  "episode_id": "laptop_base-8-12",
+  "rows": [
+    {
+      "frame_index": 0,
+      "timestamp_s": 4.872544,
+      "source_sample_index": 8,
+      "source_RGB": {
+        "image_ref": {
+          "path": "data/flow-capture-laptop-20261103-v1/frames/000008.jpg",
+          "sha256": "a520ce0af87fdd4228e9d48fa8b6ecc6d8337e9471d71d29c89c6265299784df",
+          "bytes": 28345
+        },
+        "timestamp_s": 4.872544,
+        "decoded_gray_sha256": "d369f2b5fef8b9b778e65c368f5c3ed373273b38624857eca0bd96980f69da94",
+        "tracking_width": 361,
+        "tracking_height": 480
+      },
+      "rgb_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/frames/000000.jpg",
+        "sha256": "5ea2188a042368ceb4e8d0225590d418ab131a6b67060cda47c86372a9817e49",
+        "bytes": 27375
+      },
+      "past_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/past/000000.png",
+        "sha256": "3e5b96c2c432a8f03b14d955571815bbf9bfc2c8797ec209a8c55c58b6a23725",
+        "bytes": 875
+      },
+      "future_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/future/000000.png",
+        "sha256": "8945a374ae092534a2bfd00fbde9611797d2058d921e7c3e38de8c0af7d5ece1",
+        "bytes": 857
+      },
+      "forward_backward_mask_IoU": 0.9927946293627641,
+      "status": "estimated",
+      "consensus_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/consensus/000000.png",
+        "sha256": "7709acab9b125d29635878325e8283bab650bd0b839cd286b63682281e806a6c",
+        "bytes": 844
+      },
+      "consensus": "intersection_of_independent_source_mask_propagations",
+      "model_observation_not_ground_truth": true
+    },
+    {
+      "frame_index": 1,
+      "timestamp_s": 5.005833333333333,
+      "source_sample_index": null,
+      "source_RGB": {
+        "video_ref": {
+          "path": "data/flow-capture-laptop-20261103-v1/source/video.mp4",
+          "sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+          "bytes": 13153854
+        },
+        "decoded_frame_index": 150,
+        "timestamp_s": 5.005833333333333,
+        "decoded_gray_sha256": "301a78c92b65f9a8f911b523264c2d627033ce78218ad793f6c36a2583db67e5",
+        "tracking_width": 361,
+        "tracking_height": 480
+      },
+      "rgb_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/frames/000001.jpg",
+        "sha256": "a35e8250295f8e1caa60769a9bf670f22b6b8851a7ad40219b2d828872e8ebb1",
+        "bytes": 30142
+      },
+      "past_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/past/000001.png",
+        "sha256": "72d5725f2a4186fe81b69213f8ec717209a6202983646bc668cab6a8c7bad141",
+        "bytes": 929
+      },
+      "future_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/future/000001.png",
+        "sha256": "5c32d46f67c1b9730a2ce5a1f33d8eebcf744defc60fdc947bb0e94db8f20b1e",
+        "bytes": 934
+      },
+      "forward_backward_mask_IoU": 0.9960433950223356,
+      "status": "estimated",
+      "consensus_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/consensus/000001.png",
+        "sha256": "c89cb9346ca8e9c52d40718216a5b8c10052a04e2f34069da0b4dceb18792159",
+        "bytes": 919
+      },
+      "consensus": "intersection_of_independent_source_mask_propagations",
+      "model_observation_not_ground_truth": true
+    },
+    {
+      "frame_index": 2,
+      "timestamp_s": 5.172444444444444,
+      "source_sample_index": null,
+      "source_RGB": {
+        "video_ref": {
+          "path": "data/flow-capture-laptop-20261103-v1/source/video.mp4",
+          "sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+          "bytes": 13153854
+        },
+        "decoded_frame_index": 155,
+        "timestamp_s": 5.172444444444444,
+        "decoded_gray_sha256": "8628cf698c34da4608e6a05ffb0d9c80bce0ee893b52d47028375f67f46c5eb6",
+        "tracking_width": 361,
+        "tracking_height": 480
+      },
+      "rgb_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/frames/000002.jpg",
+        "sha256": "39be77f6a86b14449af6d3a995808af58b5695801d475bffa8d5fbccd8fd4120",
+        "bytes": 30041
+      },
+      "past_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/past/000002.png",
+        "sha256": "1a64ccbef88d4f3db305443c7584316c38b0c51496f724536ff4f817542f1a41",
+        "bytes": 927
+      },
+      "future_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/future/000002.png",
+        "sha256": "87c25ec0aada796c61d504eac6a51a5ef6db616d2d886f79735cefa6a1feed84",
+        "bytes": 946
+      },
+      "forward_backward_mask_IoU": 0.9960325332275343,
+      "status": "estimated",
+      "consensus_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/consensus/000002.png",
+        "sha256": "542ddaa8e3d38da2fa87279300b1f74306bf75f5ce0d0c87db0ee4fc848cce98",
+        "bytes": 946
+      },
+      "consensus": "intersection_of_independent_source_mask_propagations",
+      "model_observation_not_ground_truth": true
+    },
+    {
+      "frame_index": 3,
+      "timestamp_s": 5.339055555555555,
+      "source_sample_index": null,
+      "source_RGB": {
+        "video_ref": {
+          "path": "data/flow-capture-laptop-20261103-v1/source/video.mp4",
+          "sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+          "bytes": 13153854
+        },
+        "decoded_frame_index": 160,
+        "timestamp_s": 5.339055555555555,
+        "decoded_gray_sha256": "08f5925b0ab145821800bde9b96d47ef68c5598c4ea82750f2857a31f8a3064d",
+        "tracking_width": 361,
+        "tracking_height": 480
+      },
+      "rgb_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/frames/000003.jpg",
+        "sha256": "9e336dcf6425190cf2b1d2a53321fc34c8ea61e73454db10bf5e4d410ab0a633",
+        "bytes": 31343
+      },
+      "past_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/past/000003.png",
+        "sha256": "97c8d5ebbb28817d4cf70ad95609b9b936c24ac42871b172c1089dc982bd9972",
+        "bytes": 990
+      },
+      "future_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/future/000003.png",
+        "sha256": "1900b107f3285250c9cb39038bbc77ca4d8ac9c6c1c181b0184fc9580d0c3583",
+        "bytes": 989
+      },
+      "forward_backward_mask_IoU": 0.9956877854609477,
+      "status": "estimated",
+      "consensus_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/consensus/000003.png",
+        "sha256": "9da84d27c915a5cc05055061250536283182eac6e8e427a67899fb38df4e119e",
+        "bytes": 983
+      },
+      "consensus": "intersection_of_independent_source_mask_propagations",
+      "model_observation_not_ground_truth": true
+    },
+    {
+      "frame_index": 4,
+      "timestamp_s": 5.529111111111112,
+      "source_sample_index": null,
+      "source_RGB": {
+        "video_ref": {
+          "path": "data/flow-capture-laptop-20261103-v1/source/video.mp4",
+          "sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+          "bytes": 13153854
+        },
+        "decoded_frame_index": 166,
+        "timestamp_s": 5.529111111111112,
+        "decoded_gray_sha256": "1dc7c5138f5e9a0c9c63a3410997085d32913f81508aa84308193a0694e7f21d",
+        "tracking_width": 361,
+        "tracking_height": 480
+      },
+      "rgb_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/frames/000004.jpg",
+        "sha256": "16d7cd5fe5bd153d93643bfba9fa51f56a3f1d941e52464cfae67107216e7a25",
+        "bytes": 29847
+      },
+      "past_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/past/000004.png",
+        "sha256": "48f8e1009064f6784afa3653d246a6aea61c290bad5f5cfc9d85c2766fde4c7f",
+        "bytes": 984
+      },
+      "future_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/future/000004.png",
+        "sha256": "18675a3b200dc9885ff63a7351671c45316b79f83c8955ddf45a8edce9ad4b15",
+        "bytes": 971
+      },
+      "forward_backward_mask_IoU": 0.9974435155116423,
+      "status": "estimated",
+      "consensus_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/consensus/000004.png",
+        "sha256": "8b57556ecd3089281ae6905e2cd2f9c4592819b37fd3df435ac414a81e5e364f",
+        "bytes": 969
+      },
+      "consensus": "intersection_of_independent_source_mask_propagations",
+      "model_observation_not_ground_truth": true
+    },
+    {
+      "frame_index": 5,
+      "timestamp_s": 5.562444,
+      "source_sample_index": 9,
+      "source_RGB": {
+        "image_ref": {
+          "path": "data/flow-capture-laptop-20261103-v1/frames/000009.jpg",
+          "sha256": "d223d74eeba209522945741d619d296ecc3c959a3f39f4e7739659189647f6e8",
+          "bytes": 27526
+        },
+        "timestamp_s": 5.562444,
+        "decoded_gray_sha256": "fe697e79418bac0b2ec34c1a13471a764c11712e9ffe4a5ccdc0db8966c90b2a",
+        "tracking_width": 361,
+        "tracking_height": 480
+      },
+      "rgb_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/frames/000005.jpg",
+        "sha256": "48d02c9884d7ecd25207bcfb16809891191483e88c41f0416b6d5d7c01eee0f4",
+        "bytes": 27951
+      },
+      "past_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/past/000005.png",
+        "sha256": "814248e6948ec7a4a5a5efefd43de20cdc1ab0155d70f76d20311c69a91929df",
+        "bytes": 951
+      },
+      "future_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/future/000005.png",
+        "sha256": "44b8471eed4be90dbc9b333851ee953bd1cf8a5e2d8b948ec9d593c9ed35a26e",
+        "bytes": 934
+      },
+      "forward_backward_mask_IoU": 0.9979674796747967,
+      "status": "estimated",
+      "consensus_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/consensus/000005.png",
+        "sha256": "3eac974876c2e1d22fd230f505ca1c9b1c16f72c60e0ab44fcecd8505d0b3439",
+        "bytes": 936
+      },
+      "consensus": "intersection_of_independent_source_mask_propagations",
+      "model_observation_not_ground_truth": true
+    },
+    {
+      "frame_index": 6,
+      "timestamp_s": 5.695777777777777,
+      "source_sample_index": null,
+      "source_RGB": {
+        "video_ref": {
+          "path": "data/flow-capture-laptop-20261103-v1/source/video.mp4",
+          "sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+          "bytes": 13153854
+        },
+        "decoded_frame_index": 171,
+        "timestamp_s": 5.695777777777777,
+        "decoded_gray_sha256": "e6f7682a1717fbfbb236ced2dd88466894b6961be2fecf2fb76fb7d3f4b6f229",
+        "tracking_width": 361,
+        "tracking_height": 480
+      },
+      "rgb_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/frames/000006.jpg",
+        "sha256": "2f14c47d8e0d26dda03f642218ee32381cfcfd9446fa5edd126fa0e3b5ed0bf2",
+        "bytes": 30721
+      },
+      "past_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/past/000006.png",
+        "sha256": "d3c00c2c77ab078c62a1e90f51991368163e42f673daac740e7059d7869d27e9",
+        "bytes": 882
+      },
+      "future_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/future/000006.png",
+        "sha256": "2127274b95e7c3f305b2e865bf712e35894158191464c56a79e04e392ee05f20",
+        "bytes": 884
+      },
+      "forward_backward_mask_IoU": 0.998801501515083,
+      "status": "estimated",
+      "consensus_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/consensus/000006.png",
+        "sha256": "26b614febccaa535d2e4cecfdcd1ad35540c781661face1e6c59533c946a623a",
+        "bytes": 883
+      },
+      "consensus": "intersection_of_independent_source_mask_propagations",
+      "model_observation_not_ground_truth": true
+    },
+    {
+      "frame_index": 7,
+      "timestamp_s": 5.862444444444444,
+      "source_sample_index": null,
+      "source_RGB": {
+        "video_ref": {
+          "path": "data/flow-capture-laptop-20261103-v1/source/video.mp4",
+          "sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+          "bytes": 13153854
+        },
+        "decoded_frame_index": 176,
+        "timestamp_s": 5.862444444444444,
+        "decoded_gray_sha256": "b25f6e0d3c4ecd55a104005aa7158605782100c8b0fe2685eebee3d3dcb29059",
+        "tracking_width": 361,
+        "tracking_height": 480
+      },
+      "rgb_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/frames/000007.jpg",
+        "sha256": "15594ff1f8d8e019ae33818e86e8d197347de51ca2a22dd6806a96759960fa59",
+        "bytes": 32228
+      },
+      "past_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/past/000007.png",
+        "sha256": "4f6701bb1aeaa15e8ccacc1646f1b45b9321017ff53423b618c42ff076428c59",
+        "bytes": 855
+      },
+      "future_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/future/000007.png",
+        "sha256": "2fb593a1e64553dd93dca8a2071e1fafe4b01454b974020c7de2e387314bde0e",
+        "bytes": 865
+      },
+      "forward_backward_mask_IoU": 0.9990606886755711,
+      "status": "estimated",
+      "consensus_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/consensus/000007.png",
+        "sha256": "3f6175aa99a49e59e9f1f72051fddb0eaae39b5668c28b1026e2b8e2da7ba849",
+        "bytes": 856
+      },
+      "consensus": "intersection_of_independent_source_mask_propagations",
+      "model_observation_not_ground_truth": true
+    },
+    {
+      "frame_index": 8,
+      "timestamp_s": 6.029111111111112,
+      "source_sample_index": null,
+      "source_RGB": {
+        "video_ref": {
+          "path": "data/flow-capture-laptop-20261103-v1/source/video.mp4",
+          "sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+          "bytes": 13153854
+        },
+        "decoded_frame_index": 181,
+        "timestamp_s": 6.029111111111112,
+        "decoded_gray_sha256": "7b97f24b0bcba2ba5aa43e990b9056472c1ea976279afcaf91324c12b80a5ada",
+        "tracking_width": 361,
+        "tracking_height": 480
+      },
+      "rgb_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/frames/000008.jpg",
+        "sha256": "959b482535fa28bed53dc65755eb04739115639210be292058280c97c7d871db",
+        "bytes": 33311
+      },
+      "past_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/past/000008.png",
+        "sha256": "da6b2a903c01c5fbaf6094316b3e272d2a76908db320fbe18f23c856c510e8c7",
+        "bytes": 876
+      },
+      "future_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/future/000008.png",
+        "sha256": "73cb91afb3c2ad79a606003aa19fe22f19db7d95b7a9938725c15ad9c256f5ce",
+        "bytes": 887
+      },
+      "forward_backward_mask_IoU": 0.9986129112945403,
+      "status": "estimated",
+      "consensus_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/consensus/000008.png",
+        "sha256": "2e816b25d8d78e307c2a65a8ff17d671dbea8ee53fb224ad662b5f3d2b60c805",
+        "bytes": 886
+      },
+      "consensus": "intersection_of_independent_source_mask_propagations",
+      "model_observation_not_ground_truth": true
+    },
+    {
+      "frame_index": 9,
+      "timestamp_s": 6.195666666666667,
+      "source_sample_index": null,
+      "source_RGB": {
+        "video_ref": {
+          "path": "data/flow-capture-laptop-20261103-v1/source/video.mp4",
+          "sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+          "bytes": 13153854
+        },
+        "decoded_frame_index": 186,
+        "timestamp_s": 6.195666666666667,
+        "decoded_gray_sha256": "1cd6aa6e452865cf30d80103a68630a57b97f19f87410becae5c60b502880f24",
+        "tracking_width": 361,
+        "tracking_height": 480
+      },
+      "rgb_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/frames/000009.jpg",
+        "sha256": "015cafe740cac1e4e875159df8c183a4cdf87648ff06799da79e1f6606ab7d24",
+        "bytes": 28678
+      },
+      "past_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/past/000009.png",
+        "sha256": "d315a6353fa7ca5a5c90c903a72ee3e482d2fc5bfb13ca9bfc524c1bfbcced28",
+        "bytes": 906
+      },
+      "future_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/future/000009.png",
+        "sha256": "cf3950bbed8db792b05ca0ea95323582c4e978a4672052aac1cb318afb18d474",
+        "bytes": 919
+      },
+      "forward_backward_mask_IoU": 0.9983543733092877,
+      "status": "estimated",
+      "consensus_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/consensus/000009.png",
+        "sha256": "fc5778e25248b532656f8db52ae92b8efc792e8b53620a63a86230f9695a0694",
+        "bytes": 909
+      },
+      "consensus": "intersection_of_independent_source_mask_propagations",
+      "model_observation_not_ground_truth": true
+    },
+    {
+      "frame_index": 10,
+      "timestamp_s": 6.262311,
+      "source_sample_index": 10,
+      "source_RGB": {
+        "image_ref": {
+          "path": "data/flow-capture-laptop-20261103-v1/frames/000010.jpg",
+          "sha256": "309db18c3ca4524ea9b5a1c7de8b2c47ca4eb624c7598cc899aa21dc79afee75",
+          "bytes": 23573
+        },
+        "timestamp_s": 6.262311,
+        "decoded_gray_sha256": "debe8aa19304b6d458533df602030c44b25dc83220a73aa55c3c11efba2c8545",
+        "tracking_width": 361,
+        "tracking_height": 480
+      },
+      "rgb_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/frames/000010.jpg",
+        "sha256": "2289f50da5d29b22ecd571ea570129ea2d29fe23b79e78cd6206dbae5a497414",
+        "bytes": 24885
+      },
+      "past_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/past/000010.png",
+        "sha256": "1e2c25e9c262fbb5120a750d9bf556d38a94160d22ae8cccaa727522d81ba106",
+        "bytes": 932
+      },
+      "future_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/future/000010.png",
+        "sha256": "82ad1266018da7341436aeba8ba2d9551e8cf4866ad83231e8e733d5bba45a6a",
+        "bytes": 936
+      },
+      "forward_backward_mask_IoU": 0.9976416163998367,
+      "status": "estimated",
+      "consensus_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/consensus/000010.png",
+        "sha256": "05e085e463a206377e1190aa35a6a49012971c01d4ac90b8da40288646feb8f7",
+        "bytes": 936
+      },
+      "consensus": "intersection_of_independent_source_mask_propagations",
+      "model_observation_not_ground_truth": true
+    },
+    {
+      "frame_index": 11,
+      "timestamp_s": 6.362277777777778,
+      "source_sample_index": null,
+      "source_RGB": {
+        "video_ref": {
+          "path": "data/flow-capture-laptop-20261103-v1/source/video.mp4",
+          "sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+          "bytes": 13153854
+        },
+        "decoded_frame_index": 191,
+        "timestamp_s": 6.362277777777778,
+        "decoded_gray_sha256": "bbf5e963547c69315922d09c54ef0a73533372cf1c78d354f3fe355c43297532",
+        "tracking_width": 361,
+        "tracking_height": 480
+      },
+      "rgb_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/frames/000011.jpg",
+        "sha256": "2b77a6dd1cd7a839a2298ebe6e3bc918eb8c31b550e39fd3e1516ca14d0f28e7",
+        "bytes": 25515
+      },
+      "past_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/past/000011.png",
+        "sha256": "3b0349cfee27b03df0a097b20bb2e697836ac848361fbea693a0a40ec2fbe0b8",
+        "bytes": 957
+      },
+      "future_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/future/000011.png",
+        "sha256": "43dc92ff1a3a1578919e8b0e2bf251256db3a1b9cc00e07d5a0199761a3a0ad3",
+        "bytes": 963
+      },
+      "forward_backward_mask_IoU": 0.9970908083396828,
+      "status": "estimated",
+      "consensus_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/consensus/000011.png",
+        "sha256": "9a92c09e235aa4fcdf3396e4d3412ec4b345f664fbcd91680759e5aa93abe34a",
+        "bytes": 959
+      },
+      "consensus": "intersection_of_independent_source_mask_propagations",
+      "model_observation_not_ground_truth": true
+    },
+    {
+      "frame_index": 12,
+      "timestamp_s": 6.505622222222223,
+      "source_sample_index": null,
+      "source_RGB": {
+        "video_ref": {
+          "path": "data/flow-capture-laptop-20261103-v1/source/video.mp4",
+          "sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+          "bytes": 13153854
+        },
+        "decoded_frame_index": 195,
+        "timestamp_s": 6.505622222222223,
+        "decoded_gray_sha256": "dee612c5bdc6240c1238ce131c536d2e9d6a4c90f4d1cae5c90ac46fa88f818d",
+        "tracking_width": 361,
+        "tracking_height": 480
+      },
+      "rgb_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/frames/000012.jpg",
+        "sha256": "f001b7ca461f1784ec1c689e2d91fcedac15e7bca30bf2734d606654a8d78e1d",
+        "bytes": 26569
+      },
+      "past_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/past/000012.png",
+        "sha256": "0e8ca4d3f8b0322848caf049117506b7807ea7032fc975609bbbd44ead9d59c8",
+        "bytes": 1022
+      },
+      "future_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/future/000012.png",
+        "sha256": "a736bb27b621e457249c55279ad0c994e906fdd4941d54d6e6e5a977c5b06a65",
+        "bytes": 1032
+      },
+      "forward_backward_mask_IoU": 0.994909041542221,
+      "status": "estimated",
+      "consensus_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/consensus/000012.png",
+        "sha256": "013a9de9939bdc224bba9fe41b387e31ab0774dc87ba4c7df292b0873e4ce2fc",
+        "bytes": 1021
+      },
+      "consensus": "intersection_of_independent_source_mask_propagations",
+      "model_observation_not_ground_truth": true
+    },
+    {
+      "frame_index": 13,
+      "timestamp_s": 6.67228888888889,
+      "source_sample_index": null,
+      "source_RGB": {
+        "video_ref": {
+          "path": "data/flow-capture-laptop-20261103-v1/source/video.mp4",
+          "sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+          "bytes": 13153854
+        },
+        "decoded_frame_index": 200,
+        "timestamp_s": 6.67228888888889,
+        "decoded_gray_sha256": "ad3be19c7061237e1104a1d351c70eb70030ea05d74c58920e5398bbe194d3eb",
+        "tracking_width": 361,
+        "tracking_height": 480
+      },
+      "rgb_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/frames/000013.jpg",
+        "sha256": "20208ea84d6af21d300f3a930a56d84a26dd2be7f84379f171ad8d6af2964577",
+        "bytes": 26308
+      },
+      "past_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/past/000013.png",
+        "sha256": "b3a6a7804b290e1b9c122d9e48459b242c7c80172eff4e94ba0978d6ed4c7982",
+        "bytes": 961
+      },
+      "future_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/future/000013.png",
+        "sha256": "03eb6e84a81cd786f49694d5d5aa87b9800c2b9501315754da88cb726e6fc747",
+        "bytes": 951
+      },
+      "forward_backward_mask_IoU": 0.9963783698137124,
+      "status": "estimated",
+      "consensus_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/consensus/000013.png",
+        "sha256": "d9ad25a9f4e0a071c072a15d793c5e9c3b06bff07a1da1fab47adc02e8569a7b",
+        "bytes": 957
+      },
+      "consensus": "intersection_of_independent_source_mask_propagations",
+      "model_observation_not_ground_truth": true
+    },
+    {
+      "frame_index": 14,
+      "timestamp_s": 6.838955555555556,
+      "source_sample_index": null,
+      "source_RGB": {
+        "video_ref": {
+          "path": "data/flow-capture-laptop-20261103-v1/source/video.mp4",
+          "sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+          "bytes": 13153854
+        },
+        "decoded_frame_index": 205,
+        "timestamp_s": 6.838955555555556,
+        "decoded_gray_sha256": "19acac75c8621e8be932f6aaf9a1aa23ad2516464a4f1c5bf75b5eeba0df3b05",
+        "tracking_width": 361,
+        "tracking_height": 480
+      },
+      "rgb_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/frames/000014.jpg",
+        "sha256": "7ec0bd47ca3ddf9567b3be94ea10a4983ebbf55b3b258bbc18d9ae5c3b80109f",
+        "bytes": 26191
+      },
+      "past_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/past/000014.png",
+        "sha256": "404f53db3f7026264cf02177338abb85dcf66eebc06b1f6c752e47307d46df4e",
+        "bytes": 1021
+      },
+      "future_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/future/000014.png",
+        "sha256": "82f31e4981a339812d60b4cc31865465bb9d97b8817a19ef0cdc546f7db62611",
+        "bytes": 1022
+      },
+      "forward_backward_mask_IoU": 0.9959754986331882,
+      "status": "estimated",
+      "consensus_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/consensus/000014.png",
+        "sha256": "31121b79f838c126d8fdf6d17a50b3dab3fb6a3fbcbbb235dc227398da80e5bf",
+        "bytes": 1012
+      },
+      "consensus": "intersection_of_independent_source_mask_propagations",
+      "model_observation_not_ground_truth": true
+    },
+    {
+      "frame_index": 15,
+      "timestamp_s": 6.938956,
+      "source_sample_index": 11,
+      "source_RGB": {
+        "image_ref": {
+          "path": "data/flow-capture-laptop-20261103-v1/frames/000011.jpg",
+          "sha256": "4d30c65900194b28e27b81229af14ef9dfba3e6804afb4bc4588ce65b9060b20",
+          "bytes": 23629
+        },
+        "timestamp_s": 6.938956,
+        "decoded_gray_sha256": "2644d259b80d9f4e5e7cdb7b73452843b8b882a765a27ba5536085bee8800f51",
+        "tracking_width": 361,
+        "tracking_height": 480
+      },
+      "rgb_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/frames/000015.jpg",
+        "sha256": "10ae7c3907a87252b73c1e3a9fcc32aded707c4a0d1daed6f4d199fcc909de2f",
+        "bytes": 25181
+      },
+      "past_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/past/000015.png",
+        "sha256": "66a79f64cb12d1e99105e0ffda405e2a6d9fd5678f34a014cdcbd9f2b72c11d4",
+        "bytes": 1032
+      },
+      "future_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/future/000015.png",
+        "sha256": "756e9e69be0114344a039baa1fc1a292b48ddc77a1b46a377f9c5d8b6eb48742",
+        "bytes": 1025
+      },
+      "forward_backward_mask_IoU": 0.9950919247247682,
+      "status": "estimated",
+      "consensus_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/consensus/000015.png",
+        "sha256": "4f5d249acb38755ce52e3af3eeaa4864a561bf5636662e33c2b8f061339f737b",
+        "bytes": 1025
+      },
+      "consensus": "intersection_of_independent_source_mask_propagations",
+      "model_observation_not_ground_truth": true
+    },
+    {
+      "frame_index": 16,
+      "timestamp_s": 7.005622222222223,
+      "source_sample_index": null,
+      "source_RGB": {
+        "video_ref": {
+          "path": "data/flow-capture-laptop-20261103-v1/source/video.mp4",
+          "sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+          "bytes": 13153854
+        },
+        "decoded_frame_index": 210,
+        "timestamp_s": 7.005622222222223,
+        "decoded_gray_sha256": "d3f2c33f1e3f0272f786b30b013723cfb241fd647a9a0c4d44ab5d10092083d5",
+        "tracking_width": 361,
+        "tracking_height": 480
+      },
+      "rgb_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/frames/000016.jpg",
+        "sha256": "4ec722bff8be37786b7eb6306d27cb1fdf7458c42deda27d4e6c029bde1a1426",
+        "bytes": 29241
+      },
+      "past_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/past/000016.png",
+        "sha256": "93a1a32fb6006b9192bbfad71f4ade6b13e330d5adfda490c14cec286a71c30d",
+        "bytes": 1012
+      },
+      "future_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/future/000016.png",
+        "sha256": "b7513af72a1a74f7a9347f30c1e97aab89cca3b2f8625b2493ff2cb22cdf2dee",
+        "bytes": 1007
+      },
+      "forward_backward_mask_IoU": 0.9943741209563994,
+      "status": "estimated",
+      "consensus_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/consensus/000016.png",
+        "sha256": "1c90512c6e314efa31f2bbf3f1a7a43e748f0123444f179e86b40701d6a3f1d4",
+        "bytes": 1005
+      },
+      "consensus": "intersection_of_independent_source_mask_propagations",
+      "model_observation_not_ground_truth": true
+    },
+    {
+      "frame_index": 17,
+      "timestamp_s": 7.172088888888889,
+      "source_sample_index": null,
+      "source_RGB": {
+        "video_ref": {
+          "path": "data/flow-capture-laptop-20261103-v1/source/video.mp4",
+          "sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+          "bytes": 13153854
+        },
+        "decoded_frame_index": 215,
+        "timestamp_s": 7.172088888888889,
+        "decoded_gray_sha256": "1b93e2f9388fc42d1e0f7623ca321c7ebb49ecccbdd5a100872382e3ad665a27",
+        "tracking_width": 361,
+        "tracking_height": 480
+      },
+      "rgb_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/frames/000017.jpg",
+        "sha256": "a1e8af5fcc49f7403bf1dd486f430f60e5e1a42630b3db79444ffdda5f55c634",
+        "bytes": 28815
+      },
+      "past_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/past/000017.png",
+        "sha256": "05b82b5e709c63e4ac42d9efd7f4e3ace82d26002f50290307c1debb6df91085",
+        "bytes": 974
+      },
+      "future_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/future/000017.png",
+        "sha256": "b8f9ffa9b2a62c816de762702ebd6b84a79273db16e803ab4127acf5f279b31e",
+        "bytes": 949
+      },
+      "forward_backward_mask_IoU": 0.9942118802619271,
+      "status": "estimated",
+      "consensus_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/consensus/000017.png",
+        "sha256": "83399b86009c94f2fade74e99f306cd07462a87c588879fb00e9f678a2ac8eb7",
+        "bytes": 951
+      },
+      "consensus": "intersection_of_independent_source_mask_propagations",
+      "model_observation_not_ground_truth": true
+    },
+    {
+      "frame_index": 18,
+      "timestamp_s": 7.3388333333333335,
+      "source_sample_index": null,
+      "source_RGB": {
+        "video_ref": {
+          "path": "data/flow-capture-laptop-20261103-v1/source/video.mp4",
+          "sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+          "bytes": 13153854
+        },
+        "decoded_frame_index": 220,
+        "timestamp_s": 7.3388333333333335,
+        "decoded_gray_sha256": "885171ad7ac6ad120ca5b0c80dffcbe372eb94de7226d78bb0da26dbe90cb1ea",
+        "tracking_width": 361,
+        "tracking_height": 480
+      },
+      "rgb_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/frames/000018.jpg",
+        "sha256": "b6255dfe468a7b1e1a5ac6b61b7c6deeaa20834753f67f988790bae9b9e1a415",
+        "bytes": 28426
+      },
+      "past_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/past/000018.png",
+        "sha256": "df8c1b79bc36027949ad5d4d67df15c1efed9e955d37b4188e9cbccfe7ad743f",
+        "bytes": 972
+      },
+      "future_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/future/000018.png",
+        "sha256": "337a89af5777c0498efeabc82d2f0d6f145589dd3c2126b95f764b9b78bffeed",
+        "bytes": 952
+      },
+      "forward_backward_mask_IoU": 0.9947413261259144,
+      "status": "estimated",
+      "consensus_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/consensus/000018.png",
+        "sha256": "ca160a02328f4d6202c46a85fa5967b32f0998c3c8b7765014fb2da9d299f8cb",
+        "bytes": 965
+      },
+      "consensus": "intersection_of_independent_source_mask_propagations",
+      "model_observation_not_ground_truth": true
+    },
+    {
+      "frame_index": 19,
+      "timestamp_s": 7.5055555555555555,
+      "source_sample_index": null,
+      "source_RGB": {
+        "video_ref": {
+          "path": "data/flow-capture-laptop-20261103-v1/source/video.mp4",
+          "sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+          "bytes": 13153854
+        },
+        "decoded_frame_index": 225,
+        "timestamp_s": 7.5055555555555555,
+        "decoded_gray_sha256": "900a680c7d999e9adff2a68a9492f9c422d62fd0e21c9da12796f115fa9a1c14",
+        "tracking_width": 361,
+        "tracking_height": 480
+      },
+      "rgb_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/frames/000019.jpg",
+        "sha256": "a77616e85e257f9c101c0be24027f4012787c9b40ee94d7c451ef94625ae19b5",
+        "bytes": 28763
+      },
+      "past_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/past/000019.png",
+        "sha256": "7900e7d9a64961c3166f705e0dee0413f0d3819fb82973633497c3bcfade12aa",
+        "bytes": 890
+      },
+      "future_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/future/000019.png",
+        "sha256": "9fa3d0563c0db0d5d9bf1b2b32eaadd2006c5950a92e37cf0ac641c08cec750b",
+        "bytes": 884
+      },
+      "forward_backward_mask_IoU": 0.9942532105787838,
+      "status": "estimated",
+      "consensus_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/consensus/000019.png",
+        "sha256": "46692fe047f2b8dd54eccc011bfe9e6326adf9b76b81ac5a8cfbb556a4172887",
+        "bytes": 881
+      },
+      "consensus": "intersection_of_independent_source_mask_propagations",
+      "model_observation_not_ground_truth": true
+    },
+    {
+      "frame_index": 20,
+      "timestamp_s": 7.638867,
+      "source_sample_index": 12,
+      "source_RGB": {
+        "image_ref": {
+          "path": "data/flow-capture-laptop-20261103-v1/frames/000012.jpg",
+          "sha256": "c8abc5e508ad79ecf480bc3684283cfb38fd1ed930d00f25dc9f076c638e72f2",
+          "bytes": 24089
+        },
+        "timestamp_s": 7.638867,
+        "decoded_gray_sha256": "5db3e5919f59e703d48a104bd02d4606e1424d973cc1d8e9e6d88643d7db5318",
+        "tracking_width": 361,
+        "tracking_height": 480
+      },
+      "rgb_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/frames/000020.jpg",
+        "sha256": "d3279673dadf3df9eb6f2c1eca3eb87747c44cbc771990046abe0643af325338",
+        "bytes": 25424
+      },
+      "past_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/past/000020.png",
+        "sha256": "e22256fcaafa5fc065b0a21bee92a87b743e1f240889ecf0bd934c68fbd9dbe6",
+        "bytes": 824
+      },
+      "future_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/future/000020.png",
+        "sha256": "c409329e8e41d420a0963be4d25c46cf6347d56c955be8bbdcf3b1fe36888e5b",
+        "bytes": 819
+      },
+      "forward_backward_mask_IoU": 0.9931568942827899,
+      "status": "estimated",
+      "consensus_mask_ref": {
+        "path": "data/temporal-motion-hypotheses/laptop-SAM-8-12-20261104-v1/consensus/000020.png",
+        "sha256": "846b7af5f49eaaf70340e28a2ac30eebd10b62cbe4952b8fda1b80c6424b8f3b",
+        "bytes": 809
+      },
+      "consensus": "intersection_of_independent_source_mask_propagations",
+      "model_observation_not_ground_truth": true
+    }
+  ],
+  "actual_local_SAM2_CPU_states": 2,
+  "new_hosted_API_or_remote_GPU_calls": 0,
+  "physical_accuracy_verified": false,
+  "target_masks_will_be_fitting_inputs_not_independent_tests": true,
+  "wall_seconds": 33.17419058299856
+}

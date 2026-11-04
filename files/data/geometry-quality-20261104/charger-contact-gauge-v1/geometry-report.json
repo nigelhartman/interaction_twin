@@ -1,0 +1,167 @@
+{
+  "assets": [
+    {
+      "component_id": "adapter_early",
+      "derived_asset": {
+        "bytes": 9009880,
+        "path": "data/sam3d-upload-jobs/bfebd5ba2ca15c28fd5c4b602d3487a73541344ee041be3e7531ef33ea94bb89/candidate/asset.glb",
+        "sha256": "74635a414ec57bd5e92bbda01a9b55bb77a8e01152c97c53d8773f0abbf98636"
+      },
+      "geometry_origin": "unchanged_SAM_3D_inference",
+      "operations": [],
+      "original_asset": {
+        "bytes": 9009880,
+        "path": "data/sam3d-upload-jobs/bfebd5ba2ca15c28fd5c4b602d3487a73541344ee041be3e7531ef33ea94bb89/candidate/asset.glb",
+        "sha256": "74635a414ec57bd5e92bbda01a9b55bb77a8e01152c97c53d8773f0abbf98636"
+      }
+    },
+    {
+      "component_id": "adapter_late",
+      "derived_asset": {
+        "bytes": 14253128,
+        "path": "data/geometry-quality-20261104/charger-contact-gauge-v1/adapter-derived.glb",
+        "sha256": "ab643aa435a0e8b5a95058a535939ecb7e3b7f08f6b3eb06738b90b2b52e73c1"
+      },
+      "geometry_origin": "automatic_affine_calibration",
+      "operations": [
+        {
+          "kind": "affine_positions",
+          "matrix": [
+            [
+              1.2599428434865454,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.2599428434865454,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.2599428434865454,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "original_asset": {
+        "bytes": 14253056,
+        "path": "data/sam3d-upload-jobs/8b5ab53e06cb5b2456dcb1d8aa93f3ed1da840ee0bf177cf524defe12a790c88/candidate/asset.glb",
+        "sha256": "369ce5a10634764fac142c654571a5b9281e5379aa947e906619d7809b9f1287"
+      }
+    },
+    {
+      "component_id": "power_cable",
+      "derived_asset": {
+        "bytes": 2431300,
+        "path": "data/sam3d-upload-jobs/9c9f2deb744570f469f8a814742efbd9b1eed234c6f79187d7e51d92841c17a4/candidate/asset.glb",
+        "sha256": "9d308a2d35d4b6eb63a6af7fdd71c9b440d6c41200416d2894d5e4aa33a0e147"
+      },
+      "geometry_origin": "unchanged_SAM_3D_inference",
+      "operations": [],
+      "original_asset": {
+        "bytes": 2431300,
+        "path": "data/sam3d-upload-jobs/9c9f2deb744570f469f8a814742efbd9b1eed234c6f79187d7e51d92841c17a4/candidate/asset.glb",
+        "sha256": "9d308a2d35d4b6eb63a6af7fdd71c9b440d6c41200416d2894d5e4aa33a0e147"
+      }
+    },
+    {
+      "component_id": "wall_outlet",
+      "derived_asset": {
+        "bytes": 9358892,
+        "path": "data/sam3d-upload-jobs/5b2a25363635c7bb67ccf8e386afc02c56860e72157f7a8f586bd2ac2245ebcf/candidate/asset.glb",
+        "sha256": "476967630214300899877caf98739ae9e2c738069bf47c715db10f8e7cdb2f12"
+      },
+      "geometry_origin": "unchanged_SAM_3D_inference",
+      "operations": [],
+      "original_asset": {
+        "bytes": 9358892,
+        "path": "data/sam3d-upload-jobs/5b2a25363635c7bb67ccf8e386afc02c56860e72157f7a8f586bd2ac2245ebcf/candidate/asset.glb",
+        "sha256": "476967630214300899877caf98739ae9e2c738069bf47c715db10f8e7cdb2f12"
+      }
+    }
+  ],
+  "automatic_geometry_constraint": "semantic at_outlet source evidence and geometric support-plane proxies; not measured plug insertion",
+  "base_object_program_ref": {
+    "bytes": 10422,
+    "path": "data/object-programs/auto-36df04c484f3b2c641895f533cc3e020671680e8b4b6d345b7b0617c42b0c40e/object-program.json",
+    "sha256": "22cf370eface496901025c9933e1908f96c085be32df1f1921c2b959a05efda2"
+  },
+  "baseline_scene_ref": {
+    "bytes": 260313,
+    "path": "data/tracking-recoveries/charger-20261103-v1/mask-refit-v1/constrained/scene.json",
+    "sha256": "d69041ae6ab91973397e4e3b4aef476a1df261b5bb5206ddcf8b5e3aa058b8df"
+  },
+  "constant_camera_gauge": 1.2599428434865454,
+  "contact_plane_proxies": [
+    {
+      "absolute_plane_residual_after": 0.0,
+      "absolute_plane_residual_before": 0.20662695474015014,
+      "back_plane_offset_after": -1.001520755118406,
+      "child_back_plane_offset_before": -0.7948938003782559,
+      "normal_camera": [
+        0.1071713303851184,
+        0.8825542340442897,
+        -0.4578343913621835
+      ],
+      "parent_extent": 0.5759310590212763,
+      "parent_front_plane_offset": -1.001520755118406,
+      "proposed_scale": 1.2599428434865454,
+      "sample_index": 46
+    },
+    {
+      "absolute_plane_residual_after": 0.022006571055462665,
+      "absolute_plane_residual_before": 0.1685033121488192,
+      "back_plane_offset_after": -0.7100696370747732,
+      "child_back_plane_offset_before": -0.5635728959814167,
+      "normal_camera": [
+        0.1071713303851184,
+        0.8825542340442897,
+        -0.4578343913621835
+      ],
+      "parent_extent": 0.5759310590212763,
+      "parent_front_plane_offset": -0.7320762081302359,
+      "proposed_scale": 1.2989911568677983,
+      "sample_index": 54
+    },
+    {
+      "absolute_plane_residual_after": 0.021077610742609387,
+      "absolute_plane_residual_before": 0.25545690233442175,
+      "back_plane_offset_after": -1.3403626584029265,
+      "child_back_plane_offset_before": -1.0638281453258953,
+      "normal_camera": [
+        0.1071713303851184,
+        0.8825542340442897,
+        -0.4578343913621835
+      ],
+      "parent_extent": 0.5759310590212764,
+      "parent_front_plane_offset": -1.319285047660317,
+      "proposed_scale": 1.2401298588092577,
+      "sample_index": 66
+    }
+  ],
+  "encoding_proof": {
+    "binary_length_unchanged": true,
+    "derivative_position_bytes_sha256": "a9b3478dc1dda98d2561e9c92ffd708f0485cba3fe5874821f8e9f566f16b178",
+    "original_nonposition_binary_sha256": "7ba4c2c3e8dc9caff1ae4f1dbdeb2e52ba6027acb703d618f585d24d02e5f00b",
+    "original_position_bytes_sha256": "04b1e4b19d9726739bd61e5685b39a700e585445bc1167b934476e2b862f2617",
+    "topology_color_uv_material_image_bytes_preserved": true,
+    "unchanged_nonposition_binary_sha256": "7ba4c2c3e8dc9caff1ae4f1dbdeb2e52ba6027acb703d618f585d24d02e5f00b"
+  },
+  "format": "interaction-twin-geometry-derivative-report",
+  "manual_geometry_or_poses_used": false,
+  "physical_accuracy_verified": false,
+  "source_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c",
+  "training_gauge_relative_spread": 0.04671743513035727,
+  "version": 1
+}

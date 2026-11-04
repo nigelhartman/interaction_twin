@@ -1,0 +1,97 @@
+{
+  "candidates": [
+    {
+      "quantiles": [
+        0.001,
+        0.999
+      ],
+      "mean_training_lid_iou": 0.9203428112259999,
+      "rows": [
+        {
+          "source_sample_index": 1,
+          "child_iou": 0.9189761354888376,
+          "q": 0.0
+        },
+        {
+          "source_sample_index": 27,
+          "child_iou": 0.9230929120764914,
+          "q": 0.917477818702822
+        },
+        {
+          "source_sample_index": 44,
+          "child_iou": 0.9189593861126708,
+          "q": 2.5170623566723322
+        }
+      ],
+      "intrinsic_lid_axis_scale": [
+        0.943816761881131,
+        1.122624993203855,
+        1.0
+      ]
+    },
+    {
+      "quantiles": [
+        0.005,
+        0.995
+      ],
+      "mean_training_lid_iou": 0.9005049553786638,
+      "rows": [
+        {
+          "source_sample_index": 1,
+          "child_iou": 0.9214507370054306,
+          "q": 0.0
+        },
+        {
+          "source_sample_index": 27,
+          "child_iou": 0.881979695431472,
+          "q": 0.9075712110370514
+        },
+        {
+          "source_sample_index": 44,
+          "child_iou": 0.8980844336990887,
+          "q": 2.5132741228718345
+        }
+      ],
+      "intrinsic_lid_axis_scale": [
+        0.9381749724107372,
+        1.122624993203855,
+        1.0
+      ]
+    },
+    {
+      "quantiles": [
+        0.01,
+        0.99
+      ],
+      "mean_training_lid_iou": 0.9097832258476624,
+      "rows": [
+        {
+          "source_sample_index": 1,
+          "child_iou": 0.9278855575151872,
+          "q": 0.0
+        },
+        {
+          "source_sample_index": 27,
+          "child_iou": 0.9141900376726664,
+          "q": 0.9171897750574579
+        },
+        {
+          "source_sample_index": 44,
+          "child_iou": 0.8872740823551333,
+          "q": 2.5132741228718345
+        }
+      ],
+      "intrinsic_lid_axis_scale": [
+        0.9247016974661086,
+        1.122624993203855,
+        1.0
+      ]
+    }
+  ],
+  "selected_quantiles": [
+    0.001,
+    0.999
+  ],
+  "selection_scope": "training_only",
+  "physical_accuracy_verified": false
+}

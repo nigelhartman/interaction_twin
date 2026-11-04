@@ -1,0 +1,57 @@
+{
+  "status": "automatic_geometric_review_only",
+  "accuracy_measured": false,
+  "human_reviewed": false,
+  "manual_seed_boxes_used": false,
+  "manual_corrections_used": false,
+  "gate": "empty, area, global frame size only; identity swaps and leakage may pass; no evidence of hidden completion",
+  "raw_masks_preserved": true,
+  "contact_sheets": [
+    "contact-sheet-01.jpg",
+    "contact-sheet-02.jpg",
+    "contact-sheet-03.jpg",
+    "contact-sheet-04.jpg",
+    "contact-sheet-05.jpg",
+    "contact-sheet-06.jpg"
+  ],
+  "preview_timing": {
+    "method": "nominal_sampling_fps_constant_frame_duration",
+    "fps": 1.5,
+    "source_pts_printed_per_frame": true,
+    "exact_source_video_timing": false
+  },
+  "tracks": {
+    "laptop_lid": {
+      "label": "laptop lid",
+      "raw_frames": 66,
+      "withheld_samples": [],
+      "seed_area_reference_pixels": 82686.5
+    },
+    "laptop_base": {
+      "label": "laptop base",
+      "raw_frames": 41,
+      "withheld_samples": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "seed_area_reference_pixels": 136616.5
+    },
+    "power_cable": {
+      "label": "power cable",
+      "raw_frames": 12,
+      "withheld_samples": [],
+      "seed_area_reference_pixels": 7323.5
+    }
+  }
+}

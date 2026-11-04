@@ -1,0 +1,242 @@
+{
+  "format": "interaction-twin-object-program",
+  "version": "0.2",
+  "created_utc": "2026-11-03T00:35:40.935371+00:00",
+  "evidence_program": {
+    "path": "data/private-native-programs/overnight-camera-wallet-20261103-v2/wallet/procedure/interaction.json",
+    "sha256": "e5c0ebcc71edb3dcfe9078b300ca65fadec017791094622b12dc31aac534329e",
+    "bytes": 130524
+  },
+  "source": {
+    "path": "data/flow-rigid-parts-wallet-20261031-v1/source/video.mp4",
+    "sha256": "b153e7ce79f140c861764c832ba3def149f5596ab4fe23bd3d671af913d5c021",
+    "original_sha256": "1546de58a21b52eb30020d5fafc2b5ca6c88a7c22322419999f5d64f72011cf1",
+    "duration_s": 33.1029,
+    "time_domain": "source_video_presentation_seconds",
+    "width": 540,
+    "height": 960
+  },
+  "source_scene": {
+    "path": "data/mechanism-scenes/914709b13ddf74b06b8991c8743cc5e77f117eed30d0e6a71837c18d9749ac57/private-common/scene.json",
+    "sha256": "9adbedd9799acd0b6ec6dab89f44ba320e6e0613a08f233331ad71ab83fd0138",
+    "bytes": 234542
+  },
+  "constrained_scene": {
+    "path": "data/rigidity-feasibility/overnight-camera-wallet-20261103-v1/wallet/scene.json",
+    "sha256": "9ae828d5e8806ffaea9b057e8d6cb4812cb1fd390636c0fce88717fdc47bfc10",
+    "bytes": 236985
+  },
+  "mechanics": {
+    "path": "data/rigidity-feasibility/overnight-camera-wallet-20261103-v1/wallet/mechanics.json",
+    "sha256": "395f3a5da321d48498842b16fdcdb002f8de86bbb162e2fa8c92f6899914be91",
+    "bytes": 4399
+  },
+  "proposal": {
+    "path": "data/mechanism-pipelines/e5c0ebcc71edb3dcfe9078b300ca65fadec017791094622b12dc31aac534329e/topology/attempt/proposals.json",
+    "sha256": "38b98b372aa330f4038a94bc2243d85c221c7f3538d47c10b041808383575790",
+    "bytes": 7830
+  },
+  "component_assets": [
+    {
+      "component_id": "wallet_holder",
+      "native_glb": {
+        "path": "data/sam3d-native-candidates-20261102/wallet-holder-v1/asset.glb",
+        "sha256": "ee809bb3ec9a63c928e5317001840454f585d9fd4632f2aef6ffad2cef367456",
+        "bytes": 15706696
+      },
+      "native_metadata": {
+        "path": "data/sam3d-native-candidates-20261102/wallet-holder-v1/metadata.json",
+        "sha256": "15c5f560fcb1a10626f3b656b99fb55d71d5bdd2b2934e227fd5b0b044812e7a",
+        "bytes": 15489
+      },
+      "native_uniform_scale": 0.677315890789032
+    },
+    {
+      "component_id": "pouch_flap",
+      "native_glb": {
+        "path": "data/sam3d-upload-jobs/f258e82403de4102f7524e783fb8c8752e3b57c6ecb67cf483b08b611a30acbd/candidate/asset.glb",
+        "sha256": "6a506fb84dd17f023e15782b20ec3c40d8fe7dd69006f9ece56b4eab03945c12",
+        "bytes": 7090436
+      },
+      "native_metadata": {
+        "path": "data/sam3d-upload-jobs/f258e82403de4102f7524e783fb8c8752e3b57c6ecb67cf483b08b611a30acbd/candidate/metadata.json",
+        "sha256": "d324a8095797f44d3b1b80029b4cf2c7817ab1fe666968c7bf0495e835eefbd8",
+        "bytes": 15854
+      },
+      "native_uniform_scale": 0.3374398308465963
+    },
+    {
+      "component_id": "gold_coin",
+      "native_glb": {
+        "path": "data/sam3d-native-candidates-20261102/wallet-coin-v1/asset.glb",
+        "sha256": "2ebda9bb0ee9a42bd60662ce45fb597743b3fd01c14abb720e3a8dfe7108f00e",
+        "bytes": 14224524
+      },
+      "native_metadata": {
+        "path": "data/sam3d-native-candidates-20261102/wallet-coin-v1/metadata.json",
+        "sha256": "93d9c0da733f68c9da0564912162822922e76d930fb81ee7759814ef17f0d8a1",
+        "bytes": 15802
+      },
+      "native_uniform_scale": 0.2112404704093933
+    }
+  ],
+  "joints": [],
+  "unresolved_connections": [
+    {
+      "id": "j_wallet_flap_hinge",
+      "parent_id": "wallet_holder",
+      "child_id": "pouch_flap",
+      "type": "revolute",
+      "status": "unknown",
+      "reason": "rigid_motion_withheld_due_to_explicit_source_nonrigidity",
+      "diagnostic": "Persistent proposal declares: not rigid"
+    }
+  ],
+  "removable_relationships": [
+    {
+      "id": "j_wallet_coin_removable",
+      "parent_id": "wallet_holder",
+      "child_id": "gold_coin",
+      "joint_type": "removable",
+      "attachment": "removable",
+      "confidence": "medium",
+      "evidence_ids": [
+        "source_000052",
+        "source_000058",
+        "source_000071",
+        "source_000076",
+        "source_000083",
+        "source_000088"
+      ],
+      "physical_accuracy_verified": false
+    }
+  ],
+  "coordinate_system": {
+    "camera_frame": "opencv_x_right_y_down_z_forward",
+    "length_units": "inferred_arbitrary_scene_units_no_metric_scale",
+    "angle_units": "radians",
+    "unknown_sample_policy": "withhold_joint_and_child_when_parent_or_joint_unknown",
+    "physical_stops": "unknown"
+  },
+  "implementation_provenance": [
+    {
+      "original_path": "sam3d_common_scene.py",
+      "sha256": "7ebc6c1b03ed8743edd087a83abf3684502f1196211d30ba1318996507d7d87d",
+      "archived_file": {
+        "path": "data/object-programs/auto-91382bad396ae8ad499b1bb3d639c9f5de4170f1ac37c7cf3b8b417430143457/provenance/sam3d_common_scene.py.txt",
+        "sha256": "7ebc6c1b03ed8743edd087a83abf3684502f1196211d30ba1318996507d7d87d",
+        "bytes": 38744
+      }
+    },
+    {
+      "original_path": "sam3d_coordinates.py",
+      "sha256": "0be673e6d96f7852dafa1b1f69b82b867d9f0998648e08d85bc720d142f3954e",
+      "archived_file": {
+        "path": "data/object-programs/auto-91382bad396ae8ad499b1bb3d639c9f5de4170f1ac37c7cf3b8b417430143457/provenance/sam3d_coordinates.py.txt",
+        "sha256": "0be673e6d96f7852dafa1b1f69b82b867d9f0998648e08d85bc720d142f3954e",
+        "bytes": 6172
+      }
+    },
+    {
+      "original_path": "sam3d_source_projection.py",
+      "sha256": "479035d345d8f58f97dd3d3214ad5c59717212ffe21d69d88a840d83e04ecc4a",
+      "archived_file": {
+        "path": "data/object-programs/auto-91382bad396ae8ad499b1bb3d639c9f5de4170f1ac37c7cf3b8b417430143457/provenance/sam3d_source_projection.py.txt",
+        "sha256": "479035d345d8f58f97dd3d3214ad5c59717212ffe21d69d88a840d83e04ecc4a",
+        "bytes": 3829
+      }
+    },
+    {
+      "original_path": "native_appearance.py",
+      "sha256": "445d9100347d03773cb9225b8cfc5da7cf0b49c3384096739d0ea4269587695e",
+      "archived_file": {
+        "path": "data/object-programs/auto-91382bad396ae8ad499b1bb3d639c9f5de4170f1ac37c7cf3b8b417430143457/provenance/native_appearance.py.txt",
+        "sha256": "445d9100347d03773cb9225b8cfc5da7cf0b49c3384096739d0ea4269587695e",
+        "bytes": 25494
+      }
+    },
+    {
+      "original_path": "sam3d_review_catalog.py",
+      "sha256": "b4b4ea94f91dcd79791112efefc96098a49b2c7f6f7e75fbc86e10f3e7f908c3",
+      "archived_file": {
+        "path": "data/object-programs/auto-91382bad396ae8ad499b1bb3d639c9f5de4170f1ac37c7cf3b8b417430143457/provenance/sam3d_review_catalog.py.txt",
+        "sha256": "b4b4ea94f91dcd79791112efefc96098a49b2c7f6f7e75fbc86e10f3e7f908c3",
+        "bytes": 9171
+      }
+    },
+    {
+      "original_path": "native_audit_protocol.py",
+      "sha256": "4a44bd5aab47a90c2f753c54d6e7ca0f190facdd37b7c5609dc9ef61b401e625",
+      "archived_file": {
+        "path": "data/object-programs/auto-91382bad396ae8ad499b1bb3d639c9f5de4170f1ac37c7cf3b8b417430143457/provenance/native_audit_protocol.py.txt",
+        "sha256": "4a44bd5aab47a90c2f753c54d6e7ca0f190facdd37b7c5609dc9ef61b401e625",
+        "bytes": 2619
+      }
+    },
+    {
+      "original_path": "part_ledger.py",
+      "sha256": "c5e846eb5db0e1e94c5f2e082f49951a2393bdf71ee9c908cb327cb3fb18e344",
+      "archived_file": {
+        "path": "data/object-programs/auto-91382bad396ae8ad499b1bb3d639c9f5de4170f1ac37c7cf3b8b417430143457/provenance/part_ledger.py.txt",
+        "sha256": "c5e846eb5db0e1e94c5f2e082f49951a2393bdf71ee9c908cb327cb3fb18e344",
+        "bytes": 13234
+      }
+    },
+    {
+      "original_path": "rigidity_feasibility.py",
+      "sha256": "b7fd553a7d59e8bd6b7188fef56a434dddc2a84c90b4ee0ce2bb81be47e72436",
+      "archived_file": {
+        "path": "data/object-programs/auto-91382bad396ae8ad499b1bb3d639c9f5de4170f1ac37c7cf3b8b417430143457/provenance/rigidity_feasibility.py.txt",
+        "sha256": "b7fd553a7d59e8bd6b7188fef56a434dddc2a84c90b4ee0ce2bb81be47e72436",
+        "bytes": 9702
+      }
+    },
+    {
+      "original_path": "sam3d_mechanisms.py",
+      "sha256": "6e79ac0f92226b38eefb47794bbdaebbc032466f4c76825ac3dcc0c111c80cac",
+      "archived_file": {
+        "path": "data/object-programs/auto-91382bad396ae8ad499b1bb3d639c9f5de4170f1ac37c7cf3b8b417430143457/provenance/sam3d_mechanisms.py.txt",
+        "sha256": "6e79ac0f92226b38eefb47794bbdaebbc032466f4c76825ac3dcc0c111c80cac",
+        "bytes": 53447
+      }
+    },
+    {
+      "original_path": "native_scene_audit.py",
+      "sha256": "5f301f96988c5e65414f7c148f055e9e380c9e899d200a9003775f021661e8e7",
+      "archived_file": {
+        "path": "data/object-programs/auto-91382bad396ae8ad499b1bb3d639c9f5de4170f1ac37c7cf3b8b417430143457/provenance/native_scene_audit.py.txt",
+        "sha256": "5f301f96988c5e65414f7c148f055e9e380c9e899d200a9003775f021661e8e7",
+        "bytes": 25983
+      }
+    },
+    {
+      "original_path": "object_program.py",
+      "sha256": "8cfccc0c4776e6c56d36600b56276efcd72ba934948a20f3f161e422b055ab2f",
+      "archived_file": {
+        "path": "data/object-programs/auto-91382bad396ae8ad499b1bb3d639c9f5de4170f1ac37c7cf3b8b417430143457/provenance/object_program.py.txt",
+        "sha256": "8cfccc0c4776e6c56d36600b56276efcd72ba934948a20f3f161e422b055ab2f",
+        "bytes": 37851
+      }
+    },
+    {
+      "original_path": "mechanism_reasoning.py",
+      "sha256": "1b6ef57a538b7aaafaa1de693cb67882091e866fab4bbe26229a7de1fbd2b529",
+      "archived_file": {
+        "path": "data/object-programs/auto-91382bad396ae8ad499b1bb3d639c9f5de4170f1ac37c7cf3b8b417430143457/provenance/mechanism_reasoning.py.txt",
+        "sha256": "1b6ef57a538b7aaafaa1de693cb67882091e866fab4bbe26229a7de1fbd2b529",
+        "bytes": 20476
+      }
+    }
+  ],
+  "physical_accuracy_verified": false,
+  "simulation_ready": false,
+  "robot_execution_available": false,
+  "manual_joint_coordinates_used": false,
+  "limitations": [
+    "Joint axes, anchors and angles are inferred estimates, not measured mechanism parameters.",
+    "Angle limits are the estimated observed clip range; physical stops, contact and insertion remain unknown.",
+    "Removable relations are fallible Muse hypotheses, not persistent joints or verified identity.",
+    "The camera-relative frame has inferred nonmetric depth and is not a stationary calibrated world.",
+    "This is an agent-readable descriptive program, not verified physics or robot execution."
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "format": "interaction-twin-source-visible-flexure-protocol",
+  "version": 5,
+  "policy": {
+    "device": "cpu",
+    "input_dimensions": [
+      252,
+      448
+    ],
+    "num_tokens": 600,
+    "use_fp16": false,
+    "downloads_allowed": false,
+    "network_disabled": true,
+    "source_grid_stride_px": "contour_adaptive_plus_interior_grid",
+    "maximum_vertices_per_frame": 1800,
+    "mask_core_erosion_px": 2,
+    "maximum_relative_triangle_depth_edge": 0.06,
+    "source_RGB_sampling": "exact_original_JPEG_embedded_UV_with_exact_sampled_RGB_provenance",
+    "hidden_surfaces": "absent_not_inpainted",
+    "source_camera": "unchanged_estimated_native_scene_K",
+    "depth_gauge": "per_frame_native_holder_centroid_depth_over_prior_mask_median",
+    "timing": "nearest_source_keyframe_within_0.18s_only_no_geometric_interpolation",
+    "maximum_source_time_error_s": 0.18,
+    "maximum_contiguous_source_gap_s": 0.5,
+    "frame_selection": "all99_exact_source_frames_except_original_unknowns_and_explicit_Muse_uncertain_or_occluded",
+    "numerical_fold_parameters": "unknown_not_identifiably_recovered",
+    "minimum_mask_fraction": 0.015,
+    "minimum_valid_depth_fraction": 0.95,
+    "stored_depth": "exact_original_cached_sparse_prior_samples_with_barycentric_or_bounded_nearest_weights",
+    "physical_accuracy_verified": false,
+    "simulation_ready": false,
+    "native_SAM_contract_compatible": false,
+    "triangle_support": "all_unit_pixel_squares_intersecting_closed_triangle_inside_original_2px_SAM_core",
+    "contour_smoothing": "automatic_source_contour_only_no_hidden_completion",
+    "depth_sampling_crosses_unknown_source_pixels": false
+  },
+  "depth_model": {
+    "name": "Ruicheng/moge-2-vits-normal",
+    "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+    "device": "cpu",
+    "num_tokens": 600,
+    "input_dimensions": [
+      252,
+      448
+    ]
+  },
+  "source_scene": {
+    "path": "data/rigidity-feasibility/overnight-camera-wallet-20261103-v1/wallet/scene.json",
+    "sha256": "9ae828d5e8806ffaea9b057e8d6cb4812cb1fd390636c0fce88717fdc47bfc10",
+    "bytes": 236985
+  },
+  "source_program": {
+    "path": "data/private-native-programs/overnight-camera-wallet-20261103-v2/wallet/procedure/interaction.json",
+    "sha256": "e5c0ebcc71edb3dcfe9078b300ca65fadec017791094622b12dc31aac534329e",
+    "bytes": 130524
+  },
+  "source_video_sha256": "b153e7ce79f140c861764c832ba3def149f5596ab4fe23bd3d671af913d5c021",
+  "semantic_review": {
+    "provider": "Meta Model API",
+    "model": "muse-spark-1.3",
+    "result_sha256": "9dba61182b348238ac7fad38b7f8d3c9a9c7b75d327c19c4f346b5588e20cd85",
+    "fallible_qualitative_observations_only": true
+  },
+  "native_geometry_unchanged": true,
+  "new_API_calls": 0,
+  "new_GPU_calls": 0,
+  "network_access_during_inference": false,
+  "physical_accuracy_verified": false,
+  "triangle_support": "every pixel of each triangle source-coordinate bounding rectangle lies inside2px_eroded_saved_SAM_union_excluding_coin",
+  "sourceRGB": "exact original RGB at each vertex; triangle interpolation only, no synthesis or inpainting",
+  "unknown_surfaces": "absent; original unknown samples and Muse occluded58/uncertain67 remain barriers",
+  "implementation_sha256": "0e47658ca5a99b69f788df90ce4648eb447a4be56bbd6b5b3cadfb5102871b62",
+  "inference_implementation_sha256": "e700a643fa496bebe568705f314dde264896d8d2d1b12e3e89a888644d22a4cb",
+  "parent_research_descriptor_sha256": "5ea380a4c622137f46691c69e32ed8368d83adbac610a95cf5898fcd39129e49",
+  "appearance_mode": "exact_source_JPEG_projected_UV",
+  "texture_derivation_implementation_sha256": "4278c4bb2a9953352bd76322c9c10be2e67f93a05bfe7f8439617eef9c7a19af",
+  "cached_depth_parent": {
+    "path": "data/source-visible-flexure/wallet-20261104-v4/descriptor.json",
+    "sha256": "49b491f81fd64bae600aa75419b77920f51e859891167f57ecf7120f9d8eba90",
+    "bytes": 433500
+  },
+  "source_footprint_proof_version": 2,
+  "new_CPU_depth_inference_calls": 0,
+  "component_support": "visible IDs require a retained triangle; exact source-mask union core bounds every conservatively covered pixel square",
+  "mesh_implementation_sha256": "995436fac26492351b5893d5676bcf34b04db45401793db5d68bc75ad45b051e",
+  "metadata_correction_implementation_sha256": "d161c3d99fc4919f14ee99d491e5a278d96bb9934bd98bdd7af491085cbeff7b",
+  "metadata_correction_geometry_or_depth_changed": false
+}

@@ -1,0 +1,89 @@
+{
+  "request_id": "meta-f411d9e930e0456b80a7e58d8bbd4da2",
+  "provider": "meta_api",
+  "inference_location": "hosted_Meta_Model_API",
+  "model": "muse-spark-1.3",
+  "endpoint": "/v1/chat/completions",
+  "kind": "text",
+  "payload_sha256": "90090daeed9fafbf68a9be6b381979ee5af4e7bb46e7013ae35885019634e06d",
+  "estimate_usd": "1.378720",
+  "pricing": {
+    "model": "muse-spark-1.3",
+    "kind": "text",
+    "source": "https://dev.meta.ai/docs/pricing-rate-limits",
+    "observed_at": "2026-10-30",
+    "input_per_million_usd": "1.25",
+    "output_per_million_usd": "4.25",
+    "cached_input_per_million_usd": "0.15",
+    "reasoning_per_million_usd": null
+  },
+  "status": "complete_accounted",
+  "automatic_retries": false,
+  "contributor_mode": false,
+  "request_payload_saved": false,
+  "http_status": 200,
+  "elapsed_s": 38.278,
+  "usage": {
+    "input_tokens": 28269,
+    "output_tokens": 4007,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": 2828,
+    "billable_output_tokens": 4007
+  },
+  "estimated_cost_usd": "0.052366",
+  "budget": {
+    "currency": "USD",
+    "cap_usd": "100.000000",
+    "per_request_cap_usd": "2.000000",
+    "settled_usd": "7.130993",
+    "reserved_usd": "4.038410",
+    "remaining_estimated_usd": "88.830597",
+    "over_cap_usd": "0.000000",
+    "blocked": false,
+    "unresolved_blockers": 0,
+    "unknown_usage": true,
+    "unknown_usage_count": 3,
+    "bounded_unknown_count": 3,
+    "bounded_unknown_usd": "4.038410",
+    "request_count": 169,
+    "scope": "local_ledger_only_not_account_balance"
+  },
+  "image_inputs": [
+    {
+      "file": "000001.jpg",
+      "encoded_width": 1540,
+      "encoded_height": 2048,
+      "source_sha256": "5895d0bd437a52227115ce90a2614935f9490e1872a953fd26099a0ff007f29c"
+    },
+    {
+      "file": "baseline-render-000001.png",
+      "encoded_width": 1540,
+      "encoded_height": 2048,
+      "source_sha256": "23c5000d98cedf9ffe5e4b033d41623e101fb31c29c1c03e3b7fe6228c0ba28e"
+    },
+    {
+      "file": "000027.jpg",
+      "encoded_width": 1540,
+      "encoded_height": 2048,
+      "source_sha256": "0cab93f19a75c2a00dea3eb94447e7ed5036c01ca9b052aa0b23b2c3f730da98"
+    },
+    {
+      "file": "baseline-render-000027.png",
+      "encoded_width": 1540,
+      "encoded_height": 2048,
+      "source_sha256": "d2cea139c893f581e4811bd08a2f775ab3746edbb93e534a646ff7ea8bfb3dfe"
+    },
+    {
+      "file": "000044.jpg",
+      "encoded_width": 1540,
+      "encoded_height": 2048,
+      "source_sha256": "7e57e20801461e02ba1d02cfa97935cc8d6054a49850ef89b14c11f8fc1fb569"
+    },
+    {
+      "file": "baseline-render-000044.png",
+      "encoded_width": 1540,
+      "encoded_height": 2048,
+      "source_sha256": "2ed5a7245b218e8f2f8ab4a2de71659b2519f8098cf122b3653f6e2da383fb3f"
+    }
+  ]
+}

@@ -1,0 +1,309 @@
+{
+  "format": "interaction-twin-geometry-derivative-report",
+  "version": 1,
+  "base_object_program_ref": {
+    "path": "data/object-programs/auto-96949ee5d2b737b57417c7454d3775b5b69617c2cbe3aedfe1f1e150da002a25/object-program.json",
+    "sha256": "a5c9ccfb8621a54b38bc45f3d3cdf0338ed343768a6a49c2bef8078aafcd714c",
+    "bytes": 23296
+  },
+  "baseline_scene_ref": {
+    "path": "data/source-joint-gap-refinements/laptop-opening27-20261103-v2/scene.json",
+    "sha256": "a8d9098c228da0c346a9ddecf303bfcd4503575029ce92f9d5c1293bce99862e",
+    "bytes": 279162
+  },
+  "source_sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+  "assets": [
+    {
+      "component_id": "laptop_base",
+      "original_asset": {
+        "path": "data/sam3d-upload-jobs/abd1b8a461ad58635ee3b95eb21b2ad9456882038300f345dc98f6cc5d759710/candidate/asset.glb",
+        "sha256": "561419d50c67e8e033e376b8b99e88b417960907800a3a3793a56be752e34f5c",
+        "bytes": 8895688
+      },
+      "derived_asset": {
+        "path": "data/laptop-mating-20261104-v1/observed-underside-v1/asset.glb",
+        "sha256": "39c69c92c2c943841d8c24093cf1c9c1536894ac38e489e0b8b229d26012845b",
+        "bytes": 8895684
+      },
+      "geometry_origin": "observed_surface_texture_projection",
+      "operations": [
+        {
+          "kind": "observed_surface_texture_projection",
+          "projection_report_ref": {
+            "path": "data/laptop-mating-20261104-v1/observed-underside-v1/projection-report.json",
+            "sha256": "c99942dbadd237632fde9f44fe946fc19559321a16b26b6e10ad176e6818eea4",
+            "bytes": 3879
+          }
+        }
+      ],
+      "appearance_preserved": false
+    },
+    {
+      "component_id": "laptop_lid",
+      "original_asset": {
+        "path": "data/sam3d-upload-jobs/aed1ba82a2b44bc93314573e4069e2e65be804304199062b7db55d5d58fa7b18/candidate/asset.glb",
+        "sha256": "627e9c11c8fc4c87e04443eb61619a36a8320303628406670c000842d7e36146",
+        "bytes": 5216488
+      },
+      "derived_asset": {
+        "path": "data/laptop-mating-20261104-v1/observed-exterior-v1/asset.glb",
+        "sha256": "e47c41f54a99c1af2777b3775a8fa9d6b5f2ab42caa6754d0c280f95f7713527",
+        "bytes": 5216564
+      },
+      "geometry_origin": "automatic_geometry_operation_chain",
+      "operations": [
+        {
+          "kind": "affine_positions",
+          "matrix": [
+            [
+              0.9438214452016718,
+              0.0006974585259373512,
+              -0.0003334889671366216,
+              -0.0037398901718553035
+            ],
+            [
+              0.0006974585259373507,
+              1.1226211869208302,
+              -0.000363576211264043,
+              -0.00022920865258492908
+            ],
+            [
+              -0.0003334889671366216,
+              -0.000363576211264043,
+              0.9999991229624845,
+              -2.137432832473654e-05
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "kind": "observed_surface_texture_projection",
+          "projection_report_ref": {
+            "path": "data/laptop-mating-20261104-v1/observed-exterior-v1/projection-report.json",
+            "sha256": "fb62a3f2ed5a879d08c08c5c8cc2ff24785790197c2ffb120964e0614017dd77",
+            "bytes": 3827
+          }
+        }
+      ],
+      "appearance_preserved": false
+    }
+  ],
+  "calibration": {
+    "method": "source_reviewed_flush_footprints_opposed_panel_normals_nonpenetrating_rear_edge_hinge",
+    "parent_frame": [
+      [
+        0.9999991733887869,
+        0.0012669084430996104,
+        0.00021946466723670377
+      ],
+      [
+        -0.00022264622198839079,
+        0.002511679844096203,
+        0.9999968209414574
+      ],
+      [
+        -0.0012663531905423118,
+        0.9999960431958507,
+        -0.0025119598402919413
+      ]
+    ],
+    "parent_interior_normal": [
+      0.00021946466723670377,
+      0.9999968209414574,
+      -0.0025119598402919413
+    ],
+    "child_interior_normal": [
+      -0.00589887584856248,
+      0.0029985231879446905,
+      0.99997810582153
+    ],
+    "parent_footprint_extents": [
+      1.0001573742406515,
+      0.7634668234491389,
+      0.041748394027495785
+    ],
+    "child_original_intrinsic_extents": [
+      1.0021429839508844,
+      0.6431384840614113,
+      0.02787048737606491
+    ],
+    "intrinsic_lid_axis_scale": [
+      0.943816761881131,
+      1.122624993203855,
+      1.0
+    ],
+    "affine_matrix": [
+      [
+        0.9438214452016718,
+        0.0006974585259373512,
+        -0.0003334889671366216,
+        -0.0037398901718553035
+      ],
+      [
+        0.0006974585259373507,
+        1.1226211869208302,
+        -0.000363576211264043,
+        -0.00022920865258492908
+      ],
+      [
+        -0.0003334889671366216,
+        -0.000363576211264043,
+        0.9999991229624845,
+        -2.137432832473654e-05
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "closed_child_from_parent_native": [
+      [
+        1.0574076498804985,
+        -0.0027729198246481974,
+        0.006013894612518107,
+        0.003843506987004175
+      ],
+      [
+        0.006012566962705194,
+        -0.0005139084183526212,
+        -1.0574111683613052,
+        0.032868968990755365
+      ],
+      [
+        0.0027757974139672676,
+        1.0574246265584835,
+        -0.000498131441482395,
+        0.0005071989459616785
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "pivot_parent_native": [
+      -0.0006346874458770621,
+      0.01897607730510213,
+      -0.3828315274839836
+    ],
+    "pivot_child_derived_native": [
+      -0.005261239024693871,
+      -0.3625010190480798,
+      0.013284851606807313
+    ],
+    "axis_parent_native": [
+      -0.9999991733887867,
+      0.00022264622198839076,
+      0.0012663531905423118
+    ],
+    "minimum_signed_deck_clearance_native": 0.00010001573742406515,
+    "minimum_infinite_plane_clearance_native": -0.030733581046939424,
+    "clearance_scope": "finite_parent_footprint_only; crossing_behind_rear_edge_is_not_deck_penetration",
+    "clearance_angle_sample_count": 181,
+    "numeric_clearance_epsilon_native": 0.00010001573742406515,
+    "closed_signed_deck_clearance_native": 0.00010001573742407857,
+    "closed_lid_footprint_extents": [
+      1.001147663762323,
+      0.7677817311605813,
+      0.030833596784363548
+    ],
+    "physical_contact_verified": false,
+    "geometry_watertightness_verified": false,
+    "physical_accuracy_verified": false
+  },
+  "position_encoding": {
+    "original_position_bytes_sha256": "9318af3e133feb9ee31ac2b9c7146b483631fe33e0173db2c3a0acfca80888fb",
+    "derivative_position_bytes_sha256": "0aa47094933072f2b72e67f999e3b5c70250ff238a2d9ffca9339435a54bc9ad",
+    "unchanged_nonposition_binary_sha256": "3d39a195e90ae50bdc8e6600598dca6dd7e91b99e7827bb4adaae0b326a9b7be",
+    "original_nonposition_binary_sha256": "3d39a195e90ae50bdc8e6600598dca6dd7e91b99e7827bb4adaae0b326a9b7be",
+    "binary_length_unchanged": true,
+    "topology_color_uv_material_image_bytes_preserved": true
+  },
+  "kinematic_refinement": true,
+  "source_constraint_reviews": [
+    {
+      "path": "data/laptop-mating-20261104-v1/critic-before-v1/attempt/summary.json",
+      "sha256": "0bcffb146f5eb382e40996fa2b6cfcfd7d83702cdc3ecaf1abf209cd76ab9179",
+      "bytes": 858
+    },
+    {
+      "path": "data/laptop-mating-20261104-v1/critic-after-v1/attempt/summary.json",
+      "sha256": "c730d2c3db23800d4bf1d93249e2594ff79b1a23ddc8d002fc2655091dd0a58c",
+      "bytes": 855
+    },
+    {
+      "path": "data/laptop-mating-20261104-v1/critic-final-v1/attempt/summary.json",
+      "sha256": "f2de4668269c0af265253bf918660d61edb4138146e311bbf29c459f448903f4",
+      "bytes": 855
+    }
+  ],
+  "source_rule": "Muse observed flush laptop panel width, matching closed depth and rear hinge; no authored metric dimensions",
+  "geometry_train_source_indices": [
+    1,
+    27,
+    44
+  ],
+  "geometry_heldout_source_indices": [
+    16,
+    26,
+    30,
+    54,
+    66
+  ],
+  "heldout_scope": "global_geometry_frozen_before_target_frame_pose_fit; conditional_pose_fit_not_independent_pose_accuracy",
+  "manual_geometry_or_poses_used": false,
+  "physical_accuracy_verified": false,
+  "new_model_calls": 0,
+  "observed_appearance_scope": "Exact source RGB projected only onto visible source-mask/depth-consistent vertices; native colors retained elsewhere, without inpainting.",
+  "source_width_selection_ref": {
+    "path": "data/laptop-mating-20261104-v1/width-selection-v1/result.json",
+    "sha256": "9acd0a36709c91b2123c1b5f0bdb2b6d960a68ea3c4a99d4951a14c9d71e0813",
+    "bytes": 2090
+  },
+  "remaining_visual_issues": [
+    "Source27 opening still has a visually judged relative-width mismatch. Further automatic narrowing was rejected because training-view triangle overlap worsened; source camera and native shape ambiguity remain unresolved.",
+    "A small native rear bevel seam can remain visible in open views despite exact fixed-joint forward kinematics. Moving the pivot inward was rejected because sampled native geometry overlapped.",
+    "The static native boot-screen texture corresponds to source44; it does not simulate the powered-off/on display state in other frames.",
+    "Relative scale, source camera, depth, hinge angles, physical contact and collision geometry remain estimates."
+  ],
+  "visual_findings_fully_resolved": false,
+  "research_derivation": {
+    "implementations": [
+      {
+        "path": "data/laptop-mating-20261104-v1/final-candidate-v2/implementation/assembly_image_critic_v1.py.txt",
+        "sha256": "d8ad5e2eb5e4198f1dd2f8192b9c3e2c4fbaa97df014aba5f8d758edf38f7b59",
+        "bytes": 9071
+      },
+      {
+        "path": "data/laptop-mating-20261104-v1/final-candidate-v2/implementation/declared_geometry_contract_v1.py.txt",
+        "sha256": "2967a3941648af33d039d058c17fb29831b5b01a76f1190f37f5a26f0fe55535",
+        "bytes": 11609
+      },
+      {
+        "path": "data/laptop-mating-20261104-v1/final-candidate-v2/implementation/declared_geometry_view_v1.py.txt",
+        "sha256": "711a0816b9536d465d9ec4b9536c2bf2d0fb63bea2320097f0cf6c74572936a9",
+        "bytes": 14116
+      },
+      {
+        "path": "data/laptop-mating-20261104-v1/final-candidate-v2/implementation/observed_surface_projection_v1.py.txt",
+        "sha256": "9735dc7909df3884bdb74e03aecad4550b456aafa7cbc04feeedfd093782c4f8",
+        "bytes": 16242
+      },
+      {
+        "path": "data/laptop-mating-20261104-v1/final-candidate-v2/implementation/planar_assembly_calibration_v1.py.txt",
+        "sha256": "50267430ea41c1933eb56b338198b0063e0c6067e8733e3728e57f9459a991ca",
+        "bytes": 11109
+      }
+    ],
+    "automatic_geometry_and_appearance_only": true,
+    "manual_geometry_or_poses_used": false
+  }
+}

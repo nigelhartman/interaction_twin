@@ -1,0 +1,448 @@
+{
+  "format": "interaction-twin-source-observation-refinement-v3",
+  "frames": [
+    {
+      "base_visible_face": "occluded",
+      "hinge_seam_uv": [],
+      "hinge_seam_visible": false,
+      "laptop_state": "closed",
+      "lid_visible_face": "exterior",
+      "occlusion_notes": "Closed laptop on table; only exterior lid top with logo visible; base hidden beneath; rear cable is lineage only.",
+      "parts": [
+        {
+          "confidence": 0.95,
+          "hidden_part_pose_observable": true,
+          "observed_bbox_xyxy_normalized": [
+            0.252,
+            0.479,
+            0.888,
+            0.714
+          ],
+          "reason": "Exterior lid top with logo clearly visible; old SAM lid mask correctly covers lid.",
+          "track_id": "laptop_lid",
+          "visibility": "visible"
+        },
+        {
+          "confidence": 0.9,
+          "hidden_part_pose_observable": false,
+          "observed_bbox_xyxy_normalized": [],
+          "reason": "Base hidden beneath closed lid; no keyboard or underside visible; pose not directly observed.",
+          "track_id": "laptop_base",
+          "visibility": "occluded"
+        }
+      ],
+      "sample_index": 1,
+      "state_confidence": 0.95,
+      "timestamp_s": 0.0,
+      "visible_laptop_panel": "laptop_lid",
+      "visible_panel_identity_confidence": 0.95
+    },
+    {
+      "base_visible_face": "underside",
+      "hinge_seam_uv": [],
+      "hinge_seam_visible": false,
+      "laptop_state": "closed",
+      "lid_visible_face": "occluded",
+      "occlusion_notes": "Closed flipped laptop held upright; visible face is base underside with vents; hands occlude corners; lid on far side not visible.",
+      "parts": [
+        {
+          "confidence": 0.9,
+          "hidden_part_pose_observable": false,
+          "observed_bbox_xyxy_normalized": [],
+          "reason": "Lid on far side of closed laptop; not visible except possibly thin edge; SAM lid mask actually covers base underside and is not lid.",
+          "track_id": "laptop_lid",
+          "visibility": "occluded"
+        },
+        {
+          "confidence": 0.9,
+          "hidden_part_pose_observable": true,
+          "observed_bbox_xyxy_normalized": [
+            0.277,
+            0.372,
+            0.859,
+            0.605
+          ],
+          "reason": "Underside with vents, screws and label clearly visible; held by hands; fallible SAM lid box location reused for base.",
+          "track_id": "laptop_base",
+          "visibility": "partly_visible"
+        }
+      ],
+      "sample_index": 16,
+      "state_confidence": 0.9,
+      "timestamp_s": 10.428289,
+      "visible_laptop_panel": "laptop_base",
+      "visible_panel_identity_confidence": 0.9
+    },
+    {
+      "base_visible_face": "occluded",
+      "hinge_seam_uv": [],
+      "hinge_seam_visible": false,
+      "laptop_state": "closed",
+      "lid_visible_face": "exterior",
+      "occlusion_notes": "Closed laptop on table with hands at front edge; exterior lid top visible; base not separately visible; dark front line is meeting edge, not opening.",
+      "parts": [
+        {
+          "confidence": 0.92,
+          "hidden_part_pose_observable": true,
+          "observed_bbox_xyxy_normalized": [
+            0.299,
+            0.447,
+            0.963,
+            0.661
+          ],
+          "reason": "Exterior lid with logo visible from top; old SAM lid box location correct for lid.",
+          "track_id": "laptop_lid",
+          "visibility": "visible"
+        },
+        {
+          "confidence": 0.88,
+          "hidden_part_pose_observable": false,
+          "observed_bbox_xyxy_normalized": [],
+          "reason": "Base hidden beneath closed lid; front thin edge does not give separate base pose; not directly observed.",
+          "track_id": "laptop_base",
+          "visibility": "occluded"
+        }
+      ],
+      "sample_index": 26,
+      "state_confidence": 0.88,
+      "timestamp_s": 17.370544,
+      "visible_laptop_panel": "laptop_lid",
+      "visible_panel_identity_confidence": 0.9
+    },
+    {
+      "base_visible_face": "keyboard",
+      "hinge_seam_uv": [
+        [
+          0.33,
+          0.506
+        ],
+        [
+          0.86,
+          0.511
+        ]
+      ],
+      "hinge_seam_visible": true,
+      "laptop_state": "partially_open",
+      "lid_visible_face": "display",
+      "occlusion_notes": "Partially open laptop held by hands; display side and keyboard deck both visible; hands occlude sides; hinge seam visible at rear.",
+      "parts": [
+        {
+          "confidence": 0.85,
+          "hidden_part_pose_observable": true,
+          "observed_bbox_xyxy_normalized": [
+            0.252,
+            0.336,
+            1.0,
+            0.53
+          ],
+          "reason": "Display face dark screen with bezel visible tilted open; partly occluded by right hand.",
+          "track_id": "laptop_lid",
+          "visibility": "partly_visible"
+        },
+        {
+          "confidence": 0.85,
+          "hidden_part_pose_observable": true,
+          "observed_bbox_xyxy_normalized": [
+            0.26,
+            0.508,
+            0.984,
+            0.731
+          ],
+          "reason": "Keyboard deck and palmrest visible below hinge; partly occluded by hands; saved base mask rejected as wrong.",
+          "track_id": "laptop_base",
+          "visibility": "partly_visible"
+        }
+      ],
+      "sample_index": 27,
+      "state_confidence": 0.85,
+      "timestamp_s": 18.070422,
+      "visible_laptop_panel": "both",
+      "visible_panel_identity_confidence": 0.85
+    },
+    {
+      "base_visible_face": "keyboard",
+      "hinge_seam_uv": [
+        [
+          0.317,
+          0.516
+        ],
+        [
+          0.832,
+          0.51
+        ]
+      ],
+      "hinge_seam_visible": true,
+      "laptop_state": "open",
+      "lid_visible_face": "display",
+      "occlusion_notes": "Open laptop near vertical; display and full keyboard visible; hands at sides; hinge line visible between screen bottom and deck.",
+      "parts": [
+        {
+          "confidence": 0.93,
+          "hidden_part_pose_observable": true,
+          "observed_bbox_xyxy_normalized": [
+            0.284,
+            0.378,
+            0.848,
+            0.656
+          ],
+          "reason": "Display face with dark screen clearly visible; SAM lid location supports lid.",
+          "track_id": "laptop_lid",
+          "visibility": "visible"
+        },
+        {
+          "confidence": 0.93,
+          "hidden_part_pose_observable": true,
+          "observed_bbox_xyxy_normalized": [
+            0.194,
+            0.644,
+            1.0,
+            0.998
+          ],
+          "reason": "Keyboard, touchpad and palmrest clearly visible; SAM base location supports base.",
+          "track_id": "laptop_base",
+          "visibility": "visible"
+        }
+      ],
+      "sample_index": 30,
+      "state_confidence": 0.93,
+      "timestamp_s": 20.160089,
+      "visible_laptop_panel": "both",
+      "visible_panel_identity_confidence": 0.93
+    },
+    {
+      "base_visible_face": "keyboard",
+      "hinge_seam_uv": [
+        [
+          0.34,
+          0.6
+        ],
+        [
+          0.93,
+          0.596
+        ]
+      ],
+      "hinge_seam_visible": true,
+      "laptop_state": "open",
+      "lid_visible_face": "display",
+      "occlusion_notes": "Open laptop with Acer Nitro on screen; display and keyboard both visible; hinge seam visible above keyboard; hands at sides.",
+      "parts": [
+        {
+          "confidence": 0.92,
+          "hidden_part_pose_observable": true,
+          "observed_bbox_xyxy_normalized": [
+            0.283,
+            0.377,
+            1.0,
+            0.62
+          ],
+          "reason": "Display face with logo on screen clearly visible upright.",
+          "track_id": "laptop_lid",
+          "visibility": "visible"
+        },
+        {
+          "confidence": 0.92,
+          "hidden_part_pose_observable": true,
+          "observed_bbox_xyxy_normalized": [
+            0.255,
+            0.611,
+            1.0,
+            0.964
+          ],
+          "reason": "Keyboard deck with full keyboard and touchpad clearly visible.",
+          "track_id": "laptop_base",
+          "visibility": "visible"
+        }
+      ],
+      "sample_index": 54,
+      "state_confidence": 0.93,
+      "timestamp_s": 36.890656,
+      "visible_laptop_panel": "both",
+      "visible_panel_identity_confidence": 0.92
+    },
+    {
+      "base_visible_face": "occluded",
+      "hinge_seam_uv": [],
+      "hinge_seam_visible": false,
+      "laptop_state": "closed",
+      "lid_visible_face": "exterior",
+      "occlusion_notes": "Closed laptop close view; exterior lid top visible; base hidden beneath; hand at side; seam not visible as open hinge.",
+      "parts": [
+        {
+          "confidence": 0.93,
+          "hidden_part_pose_observable": true,
+          "observed_bbox_xyxy_normalized": [
+            0.224,
+            0.592,
+            1.0,
+            0.889
+          ],
+          "reason": "Exterior lid with logo visible; SAM lid box supports lid.",
+          "track_id": "laptop_lid",
+          "visibility": "visible"
+        },
+        {
+          "confidence": 0.88,
+          "hidden_part_pose_observable": false,
+          "observed_bbox_xyxy_normalized": [],
+          "reason": "Base not separately visible when closed from top; thin front edge is not a separate pose observation.",
+          "track_id": "laptop_base",
+          "visibility": "occluded"
+        }
+      ],
+      "sample_index": 55,
+      "state_confidence": 0.92,
+      "timestamp_s": 37.567233,
+      "visible_laptop_panel": "laptop_lid",
+      "visible_panel_identity_confidence": 0.92
+    },
+    {
+      "base_visible_face": "occluded",
+      "hinge_seam_uv": [],
+      "hinge_seam_visible": false,
+      "laptop_state": "closed",
+      "lid_visible_face": "exterior",
+      "occlusion_notes": "Closed laptop on table; exterior lid top visible; base hidden; hand handling cable at side.",
+      "parts": [
+        {
+          "confidence": 0.94,
+          "hidden_part_pose_observable": true,
+          "observed_bbox_xyxy_normalized": [
+            0.073,
+            0.585,
+            0.888,
+            0.916
+          ],
+          "reason": "Exterior lid with pattern and logo visible; SAM lid box supports lid.",
+          "track_id": "laptop_lid",
+          "visibility": "visible"
+        },
+        {
+          "confidence": 0.88,
+          "hidden_part_pose_observable": false,
+          "observed_bbox_xyxy_normalized": [],
+          "reason": "Base hidden beneath closed lid; no keyboard or underside visible.",
+          "track_id": "laptop_base",
+          "visibility": "occluded"
+        }
+      ],
+      "sample_index": 66,
+      "state_confidence": 0.93,
+      "timestamp_s": 45.2328,
+      "visible_laptop_panel": "laptop_lid",
+      "visible_panel_identity_confidence": 0.93
+    }
+  ],
+  "joints": [
+    {
+      "attachment": "persistent",
+      "child_id": "laptop_lid",
+      "confidence": "high",
+      "evidence_ids": [
+        "source_000001",
+        "source_000016",
+        "source_000026",
+        "source_000027",
+        "source_000030",
+        "source_000054",
+        "source_000055",
+        "source_000066"
+      ],
+      "hinge_hints": [
+        {
+          "confidence": "medium",
+          "endpoint_a_normalized": [
+            0.335,
+            0.506
+          ],
+          "endpoint_b_normalized": [
+            0.855,
+            0.511
+          ],
+          "evidence_id": "source_000027",
+          "uncertainty_normalized": 0.06
+        },
+        {
+          "confidence": "medium",
+          "endpoint_a_normalized": [
+            0.317,
+            0.516
+          ],
+          "endpoint_b_normalized": [
+            0.832,
+            0.51
+          ],
+          "evidence_id": "source_000030",
+          "uncertainty_normalized": 0.05
+        },
+        {
+          "confidence": "medium",
+          "endpoint_a_normalized": [
+            0.34,
+            0.6
+          ],
+          "endpoint_b_normalized": [
+            0.93,
+            0.596
+          ],
+          "evidence_id": "source_000054",
+          "uncertainty_normalized": 0.05
+        }
+      ],
+      "id": "j_laptop_base_laptop_lid",
+      "joint_type": "revolute",
+      "limitations": [
+        "2D source hints only, no 3D joint coordinates or angles asserted",
+        "Hidden part poses not directly observed when occluded",
+        "Closed/occluded frames give whole-configuration observation, not hidden-pose measurement",
+        "Vent and bezel lines not used as hinge evidence"
+      ],
+      "parent_id": "laptop_base",
+      "rationale": "Same laptop seen closed showing exterior lid and flipped base underside, then opening through intermediate to open showing display and keyboard rotating about common rear edge; continuity supports single persistent revolute hinge. SAM labels are fallible and corrected for flipped underside.",
+      "state_hints": [
+        {
+          "evidence_id": "source_000001",
+          "state": "closed"
+        },
+        {
+          "evidence_id": "source_000016",
+          "state": "closed"
+        },
+        {
+          "evidence_id": "source_000026",
+          "state": "closed"
+        },
+        {
+          "evidence_id": "source_000027",
+          "state": "intermediate"
+        },
+        {
+          "evidence_id": "source_000030",
+          "state": "open"
+        },
+        {
+          "evidence_id": "source_000054",
+          "state": "open"
+        },
+        {
+          "evidence_id": "source_000055",
+          "state": "closed"
+        },
+        {
+          "evidence_id": "source_000066",
+          "state": "closed"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Source-only tracking coverage; no 3D renders or metric scale",
+    "Old SAM labels treated as fallible, especially lid covering base underside",
+    "Hidden individual part poses treated as unobservable",
+    "No physical closure accuracy, electrical function, or assembly success asserted",
+    "Power cable is lineage only and not a joint target"
+  ],
+  "persistent_attachment": "supported",
+  "physical_accuracy_verified": false,
+  "source_sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+  "title": "Laptop lid-base source-only visible identity and open-state tracking"
+}

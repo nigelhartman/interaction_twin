@@ -1,0 +1,197 @@
+{
+  "format": "interaction-twin-object-program",
+  "version": "0.2",
+  "created_utc": "2026-11-03T15:51:32.666524+00:00",
+  "evidence_program": {
+    "path": "data/flow-capture-phone-20261103-v1/flow-procedure-1/interaction.json",
+    "sha256": "98cd7e5bb4fc375fb7c164dec7d9a09973d072ccd108449204af9ce942d36165",
+    "bytes": 50334
+  },
+  "source": {
+    "path": "data/flow-capture-phone-20261103-v1/source/video.mp4",
+    "sha256": "1835410d17216b36642759a4a3aa488485f3d62c52df8920b56c58e7a50213b8",
+    "original_sha256": "c2c1a433fe4ec3463c4b318aaa687802520bf3a4fcb740c376a8299b1a4d4fc4",
+    "duration_s": 32.358022,
+    "time_domain": "source_video_presentation_seconds",
+    "width": 720,
+    "height": 960
+  },
+  "source_scene": {
+    "path": "data/mechanism-scenes/648d3924ab106192ea1cdad94c6cdf0b2d44d5c61bba3090cd5dbb1fcb00f298/private-common/scene.json",
+    "sha256": "4ab94fa18e56602f931c7ed25b0a7cb6ce611d1de2edbdb8235ae6c0d3dd06cf",
+    "bytes": 83330
+  },
+  "constrained_scene": {
+    "path": "data/mechanism-scenes/648d3924ab106192ea1cdad94c6cdf0b2d44d5c61bba3090cd5dbb1fcb00f298/constrained/scene.json",
+    "sha256": "ae7fe10510761096555ea1e372edc640408b702c36e9a22fdddcac3c1bd5480b",
+    "bytes": 84374
+  },
+  "mechanics": {
+    "path": "data/mechanism-scenes/648d3924ab106192ea1cdad94c6cdf0b2d44d5c61bba3090cd5dbb1fcb00f298/constrained/mechanics.json",
+    "sha256": "9611fcaa731bd4b2991926a211ec30ffdf6c6c5b10a09535feddb03f4fba4531",
+    "bytes": 902
+  },
+  "proposal": {
+    "path": "data/mechanism-pipelines/98cd7e5bb4fc375fb7c164dec7d9a09973d072ccd108449204af9ce942d36165/topology/attempt/proposals.json",
+    "sha256": "77da2cd178859a01fbe01de1a488f27445ce59391bcb7347ca74d62c0cd53f0c",
+    "bytes": 3538
+  },
+  "component_assets": [
+    {
+      "component_id": "phone_blue",
+      "native_glb": {
+        "path": "data/sam3d-upload-jobs/5cf65bb285d005739c08cdb9ad3a970947a8b9bdf4965475a528e9254edc6ded/candidate/asset.glb",
+        "sha256": "384fcf3aeb759d32b87a399d1ef0b91e7570bc871ef5fb7e480542cb1fada544",
+        "bytes": 12741220
+      },
+      "native_metadata": {
+        "path": "data/sam3d-upload-jobs/5cf65bb285d005739c08cdb9ad3a970947a8b9bdf4965475a528e9254edc6ded/candidate/metadata.json",
+        "sha256": "bdbb5d78ae808e18d1590b72c3d612367622601f4ebe8740bc99e4153360534e",
+        "bytes": 15769
+      },
+      "native_uniform_scale": 0.3953689932823181
+    },
+    {
+      "component_id": "cable_connector",
+      "native_glb": {
+        "path": "data/sam3d-upload-jobs/f58eab878942e1866c00e9420f6861df19f02cc09e7cefe61900073a2dbdfe73/candidate/asset.glb",
+        "sha256": "87ec1e06556cdd1703ddc4620b3f00967b0c6cc9f9156571ce4b6ae60a4d59e8",
+        "bytes": 5673096
+      },
+      "native_metadata": {
+        "path": "data/sam3d-upload-jobs/f58eab878942e1866c00e9420f6861df19f02cc09e7cefe61900073a2dbdfe73/candidate/metadata.json",
+        "sha256": "9d551dc34f99f5b2ab768c3380781615242ca4a456ef4617ce2a0503c41ca4a7",
+        "bytes": 15783
+      },
+      "native_uniform_scale": 0.11346037685871124
+    }
+  ],
+  "joints": [],
+  "unresolved_connections": [],
+  "removable_relationships": [
+    {
+      "id": "j_phone_blue_cable_connector",
+      "parent_id": "phone_blue",
+      "child_id": "cable_connector",
+      "joint_type": "removable",
+      "attachment": "removable",
+      "confidence": "medium",
+      "evidence_ids": [
+        "source_000034",
+        "source_000035",
+        "source_000039"
+      ],
+      "physical_accuracy_verified": false
+    }
+  ],
+  "coordinate_system": {
+    "camera_frame": "opencv_x_right_y_down_z_forward",
+    "length_units": "inferred_arbitrary_scene_units_no_metric_scale",
+    "angle_units": "radians",
+    "unknown_sample_policy": "withhold_joint_and_child_when_parent_or_joint_unknown",
+    "physical_stops": "unknown"
+  },
+  "implementation_provenance": [
+    {
+      "original_path": "sam3d_common_scene.py",
+      "sha256": "7ebc6c1b03ed8743edd087a83abf3684502f1196211d30ba1318996507d7d87d",
+      "archived_file": {
+        "path": "data/object-programs/auto-5b14e9528a48ed937e377d41f36bec7e064cea1dcd727b390943544a9da29616/provenance/sam3d_common_scene.py.txt",
+        "sha256": "7ebc6c1b03ed8743edd087a83abf3684502f1196211d30ba1318996507d7d87d",
+        "bytes": 38744
+      }
+    },
+    {
+      "original_path": "sam3d_coordinates.py",
+      "sha256": "0be673e6d96f7852dafa1b1f69b82b867d9f0998648e08d85bc720d142f3954e",
+      "archived_file": {
+        "path": "data/object-programs/auto-5b14e9528a48ed937e377d41f36bec7e064cea1dcd727b390943544a9da29616/provenance/sam3d_coordinates.py.txt",
+        "sha256": "0be673e6d96f7852dafa1b1f69b82b867d9f0998648e08d85bc720d142f3954e",
+        "bytes": 6172
+      }
+    },
+    {
+      "original_path": "sam3d_source_projection.py",
+      "sha256": "479035d345d8f58f97dd3d3214ad5c59717212ffe21d69d88a840d83e04ecc4a",
+      "archived_file": {
+        "path": "data/object-programs/auto-5b14e9528a48ed937e377d41f36bec7e064cea1dcd727b390943544a9da29616/provenance/sam3d_source_projection.py.txt",
+        "sha256": "479035d345d8f58f97dd3d3214ad5c59717212ffe21d69d88a840d83e04ecc4a",
+        "bytes": 3829
+      }
+    },
+    {
+      "original_path": "native_appearance.py",
+      "sha256": "445d9100347d03773cb9225b8cfc5da7cf0b49c3384096739d0ea4269587695e",
+      "archived_file": {
+        "path": "data/object-programs/auto-5b14e9528a48ed937e377d41f36bec7e064cea1dcd727b390943544a9da29616/provenance/native_appearance.py.txt",
+        "sha256": "445d9100347d03773cb9225b8cfc5da7cf0b49c3384096739d0ea4269587695e",
+        "bytes": 25494
+      }
+    },
+    {
+      "original_path": "sam3d_review_catalog.py",
+      "sha256": "b4b4ea94f91dcd79791112efefc96098a49b2c7f6f7e75fbc86e10f3e7f908c3",
+      "archived_file": {
+        "path": "data/object-programs/auto-5b14e9528a48ed937e377d41f36bec7e064cea1dcd727b390943544a9da29616/provenance/sam3d_review_catalog.py.txt",
+        "sha256": "b4b4ea94f91dcd79791112efefc96098a49b2c7f6f7e75fbc86e10f3e7f908c3",
+        "bytes": 9171
+      }
+    },
+    {
+      "original_path": "native_audit_protocol.py",
+      "sha256": "4a44bd5aab47a90c2f753c54d6e7ca0f190facdd37b7c5609dc9ef61b401e625",
+      "archived_file": {
+        "path": "data/object-programs/auto-5b14e9528a48ed937e377d41f36bec7e064cea1dcd727b390943544a9da29616/provenance/native_audit_protocol.py.txt",
+        "sha256": "4a44bd5aab47a90c2f753c54d6e7ca0f190facdd37b7c5609dc9ef61b401e625",
+        "bytes": 2619
+      }
+    },
+    {
+      "original_path": "part_ledger.py",
+      "sha256": "c5e846eb5db0e1e94c5f2e082f49951a2393bdf71ee9c908cb327cb3fb18e344",
+      "archived_file": {
+        "path": "data/object-programs/auto-5b14e9528a48ed937e377d41f36bec7e064cea1dcd727b390943544a9da29616/provenance/part_ledger.py.txt",
+        "sha256": "c5e846eb5db0e1e94c5f2e082f49951a2393bdf71ee9c908cb327cb3fb18e344",
+        "bytes": 13234
+      }
+    },
+    {
+      "original_path": "sam3d_mechanisms.py",
+      "sha256": "6e79ac0f92226b38eefb47794bbdaebbc032466f4c76825ac3dcc0c111c80cac",
+      "archived_file": {
+        "path": "data/object-programs/auto-5b14e9528a48ed937e377d41f36bec7e064cea1dcd727b390943544a9da29616/provenance/sam3d_mechanisms.py.txt",
+        "sha256": "6e79ac0f92226b38eefb47794bbdaebbc032466f4c76825ac3dcc0c111c80cac",
+        "bytes": 53447
+      }
+    },
+    {
+      "original_path": "object_program.py",
+      "sha256": "8cfccc0c4776e6c56d36600b56276efcd72ba934948a20f3f161e422b055ab2f",
+      "archived_file": {
+        "path": "data/object-programs/auto-5b14e9528a48ed937e377d41f36bec7e064cea1dcd727b390943544a9da29616/provenance/object_program.py.txt",
+        "sha256": "8cfccc0c4776e6c56d36600b56276efcd72ba934948a20f3f161e422b055ab2f",
+        "bytes": 37851
+      }
+    },
+    {
+      "original_path": "mechanism_reasoning.py",
+      "sha256": "1b6ef57a538b7aaafaa1de693cb67882091e866fab4bbe26229a7de1fbd2b529",
+      "archived_file": {
+        "path": "data/object-programs/auto-5b14e9528a48ed937e377d41f36bec7e064cea1dcd727b390943544a9da29616/provenance/mechanism_reasoning.py.txt",
+        "sha256": "1b6ef57a538b7aaafaa1de693cb67882091e866fab4bbe26229a7de1fbd2b529",
+        "bytes": 20476
+      }
+    }
+  ],
+  "physical_accuracy_verified": false,
+  "simulation_ready": false,
+  "robot_execution_available": false,
+  "manual_joint_coordinates_used": false,
+  "limitations": [
+    "Joint axes, anchors and angles are inferred estimates, not measured mechanism parameters.",
+    "Angle limits are the estimated observed clip range; physical stops, contact and insertion remain unknown.",
+    "Removable relations are fallible Muse hypotheses, not persistent joints or verified identity.",
+    "The camera-relative frame has inferred nonmetric depth and is not a stationary calibrated world.",
+    "This is an agent-readable descriptive program, not verified physics or robot execution."
+  ]
+}

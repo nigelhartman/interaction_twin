@@ -1,0 +1,168 @@
+{
+  "actual_earbud_seating_or_contact_verified": false,
+  "baseline_scene_ref": {
+    "bytes": 562258,
+    "path": "data/assembly-refinements/jabra-source-refit-20261103-v2/scene.json",
+    "sha256": "149ab3645f009c3ad33a7d2845bd32328d117510bf77f5349d5afdd9b1c6d9f7"
+  },
+  "format": "interaction-twin-geometry-source-audit",
+  "geometry_report_ref": {
+    "bytes": 7351,
+    "path": "data/geometry-quality-20261104/jabra-temporary-seating-v1/geometry-report.json",
+    "sha256": "f8815de12dfce6634412f5a407892cd25fe2722d8078d319e5bb6678ebafd18b"
+  },
+  "manual_geometry_or_poses_used": false,
+  "physical_accuracy_verified": false,
+  "same_mask_or_prior_model_pose_disclosure": "Global gauge/temporary-attachment parameters exclude target masks at75/77; original parent poses and fallible MuseRGBreview already sampled those views. Not an independent pose benchmark.",
+  "source_sha256": "7474ebd9d06c55b63fc073f632e71e5125353ace2538fa7bcf632cfdc1c3d0f2",
+  "summary": {
+    "default_eligible": true,
+    "geometric_gates_passed": true,
+    "physical_accuracy_verified": false,
+    "source_pixel_gates_passed": true
+  },
+  "validation_samples": [
+    {
+      "after_union_iou": 0.8987488415199258,
+      "before_union_iou": 0.8981717195093728,
+      "raster": {
+        "K": [
+          [
+            311.7448281924372,
+            0.0,
+            80.4681777594445
+          ],
+          [
+            0.0,
+            311.421867975948,
+            143.47454675751746
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "height": 288,
+        "width": 162
+      },
+      "retained": true,
+      "role": "heldout",
+      "sample_index": 75,
+      "source_mask_refs": [
+        {
+          "artifact": {
+            "bytes": 1851,
+            "path": "data/flow-sam3d-default-e2e-20261102-v1/segmentation/flow-components-1/raw_masks/case_base/000075.png",
+            "sha256": "57a1de13f30d3690f6719cb1ee5a5c7222b3bf71245a02579e26861814b29489"
+          },
+          "component_id": "case_base"
+        },
+        {
+          "artifact": {
+            "bytes": 1717,
+            "path": "data/flow-sam3d-default-e2e-20261102-v1/segmentation/flow-components-1/raw_masks/case_lid/000075.png",
+            "sha256": "f417d318853bc9045403020443b2a1b067a83642ea910724b4dc10edac03bd7b"
+          },
+          "component_id": "case_lid"
+        },
+        {
+          "artifact": {
+            "bytes": 968,
+            "path": "data/flow-sam3d-default-e2e-20261102-v1/segmentation/flow-components-1/raw_masks/earbud_a/000075.png",
+            "sha256": "99cdfb8beeecb970ea988006df325eae1f602c2effe92309dd15ea7221f6bfba"
+          },
+          "component_id": "earbud_a"
+        },
+        {
+          "artifact": {
+            "bytes": 1133,
+            "path": "data/flow-sam3d-default-e2e-20261102-v1/segmentation/flow-components-1/raw_masks/earbud_b/000075.png",
+            "sha256": "b73e4540c64e2e4acde1d0018deb62b9b167532b9148e990f6f9f76ec72242f5"
+          },
+          "component_id": "earbud_b"
+        }
+      ],
+      "source_rgb_ref": {
+        "bytes": 18085,
+        "path": "data/flow-sam3d-default-e2e-20261102-v1/frames/000075.jpg",
+        "sha256": "859b0cc63770343f9f3ef812551dae2a365ec1fa78c727581cad038fa9087669"
+      }
+    },
+    {
+      "after_union_iou": 0.8754807692307692,
+      "before_union_iou": 0.8754508295263285,
+      "raster": {
+        "K": [
+          [
+            311.7448281924372,
+            0.0,
+            80.4681777594445
+          ],
+          [
+            0.0,
+            311.421867975948,
+            143.47454675751746
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "height": 288,
+        "width": 162
+      },
+      "retained": true,
+      "role": "heldout",
+      "sample_index": 77,
+      "source_mask_refs": [
+        {
+          "artifact": {
+            "bytes": 1848,
+            "path": "data/flow-sam3d-default-e2e-20261102-v1/segmentation/flow-components-1/raw_masks/case_base/000077.png",
+            "sha256": "4a154e1750b2a948ccc2c4e6c69cc8fc8d21522cf876f214f9e82fd3d2bc1b5b"
+          },
+          "component_id": "case_base"
+        },
+        {
+          "artifact": {
+            "bytes": 1675,
+            "path": "data/flow-sam3d-default-e2e-20261102-v1/segmentation/flow-components-1/raw_masks/case_lid/000077.png",
+            "sha256": "3edc19b5326173a1d6383a9f1b494244d573baf385795d5347094996c7ed8a2c"
+          },
+          "component_id": "case_lid"
+        },
+        {
+          "artifact": {
+            "bytes": 941,
+            "path": "data/flow-sam3d-default-e2e-20261102-v1/segmentation/flow-components-1/raw_masks/earbud_a/000077.png",
+            "sha256": "7a67cb27ac9784cd541845da2148e45d8729d2ca2f098d61e138703fc6721c99"
+          },
+          "component_id": "earbud_a"
+        },
+        {
+          "artifact": {
+            "bytes": 963,
+            "path": "data/flow-sam3d-default-e2e-20261102-v1/segmentation/flow-components-1/raw_masks/earbud_b/000077.png",
+            "sha256": "020d8166720f087d54054a749a167cf6378b2aac9363d38f9a3bda357d5a4e69"
+          },
+          "component_id": "earbud_b"
+        }
+      ],
+      "source_rgb_ref": {
+        "bytes": 17549,
+        "path": "data/flow-sam3d-default-e2e-20261102-v1/frames/000077.jpg",
+        "sha256": "15614a713615ab84991b1d9f9baadd646606f6618cd3f40a0cca8519a41326ac"
+      }
+    }
+  ],
+  "version": 1,
+  "visual_review_refs": [
+    {
+      "bytes": 858,
+      "path": "data/geometry-quality-20261104/jabra-earbud-orientation-v1/attempt/summary.json",
+      "sha256": "570daa9383cbe6e355be566f0be067da4af47d769594db4c446cf1b89ca54f5c"
+    }
+  ]
+}

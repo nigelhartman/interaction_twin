@@ -1,0 +1,50 @@
+{
+  "schema_version": "0.1",
+  "case_id": "flow-capture-laptop-20261103-v1",
+  "created_at_utc": "2026-11-03T15:04:03.579566+00:00",
+  "stage": 1,
+  "source": {
+    "file": "source/video.mp4",
+    "url": null,
+    "sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+    "title": null,
+    "uploader": null,
+    "rights_status": "user_recorded_private_test_no_distribution_authorized",
+    "video": {
+      "width": 722,
+      "height": 960,
+      "duration_s": 45.865956,
+      "average_frame_rate": "61920000/2063969",
+      "time_base": "1/90000",
+      "start_time_s": 0.0,
+      "codec": "h264"
+    },
+    "original_sha256": "2dbd13b04096a0f91b55ba4123c8e033812b81f924913e2df1db5dbc63fab9d2",
+    "original_file": "source/original.mp4",
+    "normalization": "normalization.json"
+  },
+  "sampling": {
+    "fps": 1.5,
+    "start_s": 0,
+    "end_s": 45.865956,
+    "max_width": 960,
+    "method": "PTS-based selection; source presentation timestamps retained",
+    "purpose": "coarse_review_not_motion_ground_truth"
+  },
+  "frame_count": 66,
+  "providers": {
+    "reasoning": "codex_cli_development_substitute",
+    "segmentation": "sam2.1_hiera_tiny_local_smoke_only",
+    "geometry": "not_run",
+    "motion": "not_run"
+  },
+  "artifacts": {
+    "frame_index": "frames/index.json",
+    "review": "review.html",
+    "contact_sheets": [
+      "contact-sheet-01.jpg",
+      "contact-sheet-02.jpg",
+      "contact-sheet-03.jpg"
+    ]
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "automatic_approval": false,
+  "format": "interaction-twin-assembly-image-critic-result",
+  "issues": [
+    {
+      "kind": "relative_scale",
+      "severity": "high",
+      "source_sample_indices": [
+        1,
+        27,
+        44
+      ],
+      "suggested_geometric_constraint": "Constrain lid width to equal base width within tight tolerance in all views",
+      "visible_evidence": "Source shows lid flush with base sides; renders show lid overhanging base left/right, worst in 44 and 27 right side"
+    },
+    {
+      "kind": "penetration",
+      "severity": "high",
+      "source_sample_indices": [
+        1
+      ],
+      "suggested_geometric_constraint": "Enforce non-penetration between closed panels with thin slab contact, no interior faces visible when closed",
+      "visible_evidence": "Closed source shows only outer lid top; render 1 shows keyboard and screen interior intersecting at mid-plane"
+    },
+    {
+      "kind": "hinge_anchor",
+      "severity": "medium",
+      "source_sample_indices": [
+        44,
+        27
+      ],
+      "suggested_geometric_constraint": "Anchor hinge axis to rear edge of base so lid bottom meets base rear with no through-gap",
+      "visible_evidence": "Source hinge sits on rear edge; render 44 shows white background gap between screen bottom and base rear"
+    },
+    {
+      "kind": "camera_framing",
+      "severity": "low",
+      "source_sample_indices": [
+        27
+      ],
+      "suggested_geometric_constraint": "Do not penalize right-border clipping where source also clips; judge overflow by relative panel width",
+      "visible_evidence": "Source 27 already crops right lid edge by hand/frame; render 27 also crops but adds true width overhang"
+    }
+  ],
+  "limitations": [
+    "Seam endpoints are approximate visual hints, not metric truth",
+    "Cannot certify true contact, thickness or metric scale from monocular views",
+    "Native generated texture and changing screen logo ignored for geometry",
+    "Hidden internal hinge geometry not observable"
+  ],
+  "physical_accuracy_verified": false,
+  "proposed_rules": [
+    {
+      "confidence": "high",
+      "evidence_sample_indices": [
+        1,
+        27,
+        44
+      ],
+      "rule": "Keep lid width equal to base width; penalize any side overhang of lid beyond base in any view",
+      "unobservable_or_unknown": "Absolute millimetre size unknown; only relative width observable"
+    },
+    {
+      "confidence": "high",
+      "evidence_sample_indices": [
+        27,
+        44
+      ],
+      "rule": "Keep hinge on rear long edge of base; lid bottom edge must meet base rear edge across full width",
+      "unobservable_or_unknown": "Internal hinge mechanism not visible"
+    },
+    {
+      "confidence": "medium",
+      "evidence_sample_indices": [
+        1,
+        44
+      ],
+      "rule": "Keep lid depth consistent with base depth and prevent panel interpenetration; closed state must show only exterior faces with thin seam",
+      "unobservable_or_unknown": "Closed slab thickness and contact pressure not measurable from images"
+    }
+  ],
+  "sample_reviews": [
+    {
+      "appearance": "plausible",
+      "camera_framing": "fully_visible",
+      "closed_contact": "penetration_likely",
+      "evidence": "Source closed shows outer lid with stripes/logo; render shows interior keyboard/screen intersecting, lid wider than base",
+      "hinge_placement": "uncertain",
+      "part_facing": "wrong",
+      "relative_lid_depth": "uncertain",
+      "relative_lid_width": "too_wide",
+      "render_seam_uv": [
+        [
+          0.29,
+          0.6
+        ],
+        [
+          0.76,
+          0.57
+        ]
+      ],
+      "source_sample_index": 1,
+      "source_seam_uv": [
+        [
+          0.25,
+          0.708
+        ],
+        [
+          0.89,
+          0.667
+        ]
+      ],
+      "visible_source_state": "closed"
+    },
+    {
+      "appearance": "plausible",
+      "camera_framing": "source_also_clips",
+      "closed_contact": "not_visible",
+      "evidence": "Source lid aligned to base, right edge minimally cropped by frame/hand; render lid extends beyond base to right and is cropped, same interior facing",
+      "hinge_placement": "plausible",
+      "part_facing": "plausible",
+      "relative_lid_depth": "plausible",
+      "relative_lid_width": "too_wide",
+      "render_seam_uv": [
+        [
+          0.323,
+          0.51
+        ],
+        [
+          0.836,
+          0.506
+        ]
+      ],
+      "source_sample_index": 27,
+      "source_seam_uv": [
+        [
+          0.327,
+          0.494
+        ],
+        [
+          0.832,
+          0.49
+        ]
+      ],
+      "visible_source_state": "partially_open"
+    },
+    {
+      "appearance": "plausible",
+      "camera_framing": "fully_visible",
+      "closed_contact": "not_visible",
+      "evidence": "Source lid flush with base, no gap at rear; render lid wider with side overhang and white gap at hinge, screen content differs but ignored",
+      "hinge_placement": "offset_from_seam",
+      "part_facing": "plausible",
+      "relative_lid_depth": "plausible",
+      "relative_lid_width": "too_wide",
+      "render_seam_uv": [
+        [
+          0.244,
+          0.594
+        ],
+        [
+          0.795,
+          0.599
+        ]
+      ],
+      "source_sample_index": 44,
+      "source_seam_uv": [
+        [
+          0.246,
+          0.574
+        ],
+        [
+          0.743,
+          0.571
+        ]
+      ],
+      "visible_source_state": "open"
+    }
+  ],
+  "summary": "Oversized lid width confirmed in all renders vs flush source; closed render shows wrong faces and penetration; hinge shows rear gap in frontal open view. Right-edge cropping partly exists in source 27 so not purely render error.",
+  "verdict": "needs_repair",
+  "version": 1
+}

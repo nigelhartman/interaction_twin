@@ -1,0 +1,1295 @@
+{
+  "format": "interaction-twin-evidence-procedure",
+  "version": "0.1",
+  "case_id": "flow-capture-phone-20261103-v1",
+  "summary": "Hands inspect blue-cased phone from front back and edges then bring white cable tip to bottom edge and hold contact, followed by continued holding.",
+  "source": {
+    "path": "data/flow-capture-phone-20261103-v1/source/video.mp4",
+    "sha256": "1835410d17216b36642759a4a3aa488485f3d62c52df8920b56c58e7a50213b8",
+    "original_sha256": "c2c1a433fe4ec3463c4b318aaa687802520bf3a4fcb740c376a8299b1a4d4fc4",
+    "duration_s": 32.358022,
+    "time_domain": "source_video_presentation_seconds"
+  },
+  "inputs": [
+    {
+      "id": "source_manifest",
+      "path": "data/flow-capture-phone-20261103-v1/manifest.json",
+      "sha256": "3e2c20a8db78f4ba17926b690e488ee99b8f63f0d4a367444436d083f9c30258",
+      "kind": "source_manifest"
+    },
+    {
+      "id": "source_frame_index",
+      "path": "data/flow-capture-phone-20261103-v1/frames/index.json",
+      "sha256": "f9be9628a74ff2911204339ae698140979f8ebfa8f368a821ec322cdb5878229",
+      "kind": "source_frame_index"
+    },
+    {
+      "id": "discovery",
+      "path": "data/flow-capture-phone-20261103-v1/reasoning/flow-discovery-1/discovery.json",
+      "sha256": "0063714db2e81e88a8c8ca20ec6f8e6aed1119fab899cf22f567afd73ef6393e",
+      "kind": "model_discovery"
+    },
+    {
+      "id": "annotations",
+      "path": "annotations/new-flow-capture-phone-20261103-v1-flow-discovery-1.json",
+      "sha256": "571355aa2ce94be239134e21bc611c38b618834f3d68922d03c67c739a8be8d3",
+      "kind": "model_tracklet_proposals"
+    },
+    {
+      "id": "semantic_proposal",
+      "path": "data/flow-capture-phone-20261103-v1/flow-procedure-proposal-1/proposal.json",
+      "sha256": "e5326bb9ff5101900da31c99efff881df3a6803f3dfbe44d3ce420e9775c7654",
+      "kind": "model_semantic_proposal"
+    },
+    {
+      "id": "compiler",
+      "path": "stage5.py",
+      "sha256": "4d16bda8bb1677533b066bca0cf5259df8666d8384ccbc3c610a9ac89b93fde6",
+      "kind": "deterministic_compiler_code"
+    },
+    {
+      "id": "compiler_cli",
+      "path": "scripts/stage5_compile.py",
+      "sha256": "54d53e0346b2e6a57cb8c52ec527075af45c0775cec5bbd61bd5b8278d84af43",
+      "kind": "deterministic_compiler_orchestration_code"
+    },
+    {
+      "id": "interaction_schema",
+      "path": "schemas/interaction.schema.json",
+      "sha256": "f3a973305d1e6d17053f687684ac0f6fca9bcc3232ef00ccc4fa591c440761e1",
+      "kind": "schema"
+    },
+    {
+      "id": "mask_tracks",
+      "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/tracks.json",
+      "sha256": "c168cff6aa628e32de99f999075654df79e92c5ef794d0365c56aff7385637c1",
+      "kind": "actual_sam_masks"
+    },
+    {
+      "id": "mask_quality",
+      "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/frames.json",
+      "sha256": "6d30bfb7abfa2dc429e8ab30d3aa11bf41c02e455b56fd13d1c81427574bf361",
+      "kind": "geometric_mask_gates"
+    },
+    {
+      "id": "mask_audit",
+      "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/model-audit-v1/audit.json",
+      "sha256": "bc2fe35376915e3daeb44a9597bd11cfcfb3a9b2139e70144e7d144aa6898a88",
+      "kind": "model_mask_plausibility_audit"
+    },
+    {
+      "id": "model_metadata_1",
+      "path": "data/sam3d-upload-jobs/f58eab878942e1866c00e9420f6861df19f02cc09e7cefe61900073a2dbdfe73/candidate/metadata.json",
+      "sha256": "9d551dc34f99f5b2ab768c3380781615242ca4a456ef4617ce2a0503c41ca4a7",
+      "kind": "learned_asset_metadata"
+    },
+    {
+      "id": "model_metadata_2",
+      "path": "data/sam3d-upload-jobs/5cf65bb285d005739c08cdb9ad3a970947a8b9bdf4965475a528e9254edc6ded/candidate/metadata.json",
+      "sha256": "bdbb5d78ae808e18d1590b72c3d612367622601f4ebe8740bc99e4153360534e",
+      "kind": "learned_asset_metadata"
+    }
+  ],
+  "reasoning": {
+    "provider": "meta_api",
+    "inference_location": "hosted_Meta_Model_API",
+    "model": "muse-spark-1.3",
+    "role": "visual_procedure_reasoning",
+    "proposal_input_id": "semantic_proposal",
+    "human_reviewed": false,
+    "manual_semantic_story_used": false
+  },
+  "tracklets": [
+    {
+      "id": "phone_blue",
+      "label": "blue-cased smartphone",
+      "candidate_entity_ids": [
+        "phone_blue_entity_candidate"
+      ],
+      "identity_status": "model_proposed_tracklet_physical_identity_unverified",
+      "source_sample_range": [
+        4,
+        47
+      ],
+      "limitations": [
+        "orientation changes cause appearance change front vs back",
+        "partial finger occlusion",
+        "blur in some samples"
+      ]
+    },
+    {
+      "id": "cable_connector",
+      "label": "cable connector plug",
+      "candidate_entity_ids": [
+        "cable_connector_entity_candidate"
+      ],
+      "identity_status": "model_proposed_tracklet_physical_identity_unverified",
+      "source_sample_range": [
+        32,
+        39
+      ],
+      "limitations": [
+        "very small object, coarse sampling and blur",
+        "partly occluded during insertion",
+        "cable beyond tip is deformable not rigid"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "id": "asset_1",
+      "track_id": "cable_connector",
+      "path": "data/sam3d-upload-jobs/f58eab878942e1866c00e9420f6861df19f02cc09e7cefe61900073a2dbdfe73/candidate/asset.glb",
+      "sha256": "87ec1e06556cdd1703ddc4620b3f00967b0c6cc9f9156571ce4b6ae60a4d59e8",
+      "backend": "Meta SAM 3D Objects",
+      "geometry_status": "pending_independent_execution_and_source_projection_review",
+      "physical_scale_known": false
+    },
+    {
+      "id": "asset_2",
+      "track_id": "phone_blue",
+      "path": "data/sam3d-upload-jobs/5cf65bb285d005739c08cdb9ad3a970947a8b9bdf4965475a528e9254edc6ded/candidate/asset.glb",
+      "sha256": "384fcf3aeb759d32b87a399d1ef0b91e7570bc871ef5fb7e480542cb1fada544",
+      "backend": "Meta SAM 3D Objects",
+      "geometry_status": "pending_independent_execution_and_source_projection_review",
+      "physical_scale_known": false
+    }
+  ],
+  "evidence": [
+    {
+      "id": "source_000001",
+      "source_index": 1,
+      "timestamp_s": 0.0,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000001.jpg",
+      "frame_sha256": "9197108f6e9f6320360d055126760c800a3f02ef34e50c66a4f6c9ce59fbcbf4",
+      "observations": []
+    },
+    {
+      "id": "source_000002",
+      "source_index": 2,
+      "timestamp_s": 0.696633,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000002.jpg",
+      "frame_sha256": "61494e6b5dae9239d44137ed91bbecd6992e6aa022a4f15b3ba93ede66055563",
+      "observations": []
+    },
+    {
+      "id": "source_000003",
+      "source_index": 3,
+      "timestamp_s": 1.396444,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000003.jpg",
+      "frame_sha256": "bcf40ceac8f4cd9d9ba5f495d3d42e1d76c13f7d45fc4c44a0f9ce83b79504a0",
+      "observations": []
+    },
+    {
+      "id": "source_000004",
+      "source_index": 4,
+      "timestamp_s": 2.096322,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000004.jpg",
+      "frame_sha256": "47191c6ccf3c5a61b8609330b1940766313b11f409b12dfe8a3ddcdc508dfa24",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000004.png",
+          "mask_sha256": "1bdf0441950540a4e9b0a09b50f4fc0cd50f980706a9ffe0a40a044e268e9b2b",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000005",
+      "source_index": 5,
+      "timestamp_s": 2.7962,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000005.jpg",
+      "frame_sha256": "1791c89a74cff26b28cf60b3c8266f1503361c316d66efb3ab766435d5f1afe3",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000005.png",
+          "mask_sha256": "01a0955f82c16a5e8238e124b5bf1a7a4de5e662694af95b0180cb30867bddd7",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000006",
+      "source_index": 6,
+      "timestamp_s": 3.496078,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000006.jpg",
+      "frame_sha256": "8c0409f7548479e8bb67a572d0cde059d4c73ab1bf9ce346c262ae18b577058d",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000006.png",
+          "mask_sha256": "f66d5a2e5fede7d3d190179e826e17791ed8b78c6eb0dea60a7138eb3d7a9490",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000007",
+      "source_index": 7,
+      "timestamp_s": 4.195956,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000007.jpg",
+      "frame_sha256": "d574d3f33a00a34a1e1b8164c4b2b1a79b4b32fdb4a2318348b646267d4a5729",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000007.png",
+          "mask_sha256": "292d0c35500b6e55d95d5a928e0e06673d6cc67ef33cc16965134db8e54640a3",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000008",
+      "source_index": 8,
+      "timestamp_s": 4.895833,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000008.jpg",
+      "frame_sha256": "6e7212db2f291d1b8fe385c72e68c777eb9bef471161784c1db4be59937ec3c2",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000008.png",
+          "mask_sha256": "5865e6763b15ad2570cfd266dceaa29536758b7e592f90ac4d3caa3599f15705",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000009",
+      "source_index": 9,
+      "timestamp_s": 5.595822,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000009.jpg",
+      "frame_sha256": "4ca301014bd317f3d9d20f991f201f74d6e5e7448c7a58d8be2e7228d2644f2a",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000009.png",
+          "mask_sha256": "850273cc4c164b273b1533d8c7caf3138a17b07ee0c78ea10e0d5ab933a26a35",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000010",
+      "source_index": 10,
+      "timestamp_s": 6.2956,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000010.jpg",
+      "frame_sha256": "50e0cf448e88ac47e4a253831ac5576872a12d048222a57688316e508cb408dd",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000010.png",
+          "mask_sha256": "6e0d73573f7967c63535c5e43350ebfdb51b8a841a423148aa20fd952363b3c7",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000011",
+      "source_index": 11,
+      "timestamp_s": 6.995478,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000011.jpg",
+      "frame_sha256": "9af830403cc8f5d989b7dba77c88e0c38d6d109483bcc3fba27520ce6de19bf0",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000011.png",
+          "mask_sha256": "6251ba92d6da8dc918c8ede0228db6d8cd53e8b463d7aff595d612a43af6d745",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000012",
+      "source_index": 12,
+      "timestamp_s": 7.695356,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000012.jpg",
+      "frame_sha256": "d29cdbe2de91dd9e7d24edecddca7cd89fc20080aad281859482a4a9be392383",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000012.png",
+          "mask_sha256": "c5d076b992586105a8e7f9837b9d24c6bab4a663f4fb588098d62e5080e41e25",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000013",
+      "source_index": 13,
+      "timestamp_s": 8.395233,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000013.jpg",
+      "frame_sha256": "17981e89f32c599ecf817222ebd1c242ceaf4cdb288bc3b3c391fe497caca5fd",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000013.png",
+          "mask_sha256": "3b08730c14f74e3a69ec2269edc8e3823a9fe70ab4872b33b66faa65def3f497",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000014",
+      "source_index": 14,
+      "timestamp_s": 9.095111,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000014.jpg",
+      "frame_sha256": "d48aca6ae21c915e2e54d49806f7f3ef0465b8ff29b3eabb0614ded7eaa707f8",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000014.png",
+          "mask_sha256": "8b53378d7cc59c190b699d329a765f0a5625bc1a58c647c6b26f43a0a062b9cc",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000015",
+      "source_index": 15,
+      "timestamp_s": 9.794989,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000015.jpg",
+      "frame_sha256": "73cc7cb32bbd5293c09e4321710e156fa165789918c8275b1057af79ebd414a3",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000015.png",
+          "mask_sha256": "511e89a84cff3d2a50104f7633ae0760ed315bfa405eec59b790c09175714d72",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000016",
+      "source_index": 16,
+      "timestamp_s": 10.494867,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000016.jpg",
+      "frame_sha256": "2a869500156db63d2c655b12f050ee4984caaf3e037bff42c659214c7e711171",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000016.png",
+          "mask_sha256": "b4544fff7231c64f8d9d4dcb3ed9ae3beaa28a42942e4a2d884ea9d0eedbd110",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000017",
+      "source_index": 17,
+      "timestamp_s": 11.194744,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000017.jpg",
+      "frame_sha256": "442fb31facbff5e450d4243f534023230b7439acc620347994add55b5b8dd514",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000017.png",
+          "mask_sha256": "1c165f36dd45bdc3dcd24b0c0a30af1d4c6d504ba0796fc381299bca80988c0b",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000018",
+      "source_index": 18,
+      "timestamp_s": 11.894622,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000018.jpg",
+      "frame_sha256": "17fad3dba750e85169c91f35a8765fdb811303cd63ab433041785795de8ca593",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000018.png",
+          "mask_sha256": "24b78fb50802213aea132182de140ecb59813981b5600cea6bf9f5a135241fce",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000019",
+      "source_index": 19,
+      "timestamp_s": 12.594611,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000019.jpg",
+      "frame_sha256": "c7a5146997e51fcac77c7a16c38079f5af6784e1d2d029cb23e736a8ddfff0d8",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000019.png",
+          "mask_sha256": "ff224a3f9d0dddc01d82bc9cf42f24df84c080a618628d1de770a79c24b85000",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000020",
+      "source_index": 20,
+      "timestamp_s": 13.294489,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000020.jpg",
+      "frame_sha256": "5111b12fb36664d184923b78211d100d265c95425727e06a53fdba010b8fb23e",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000020.png",
+          "mask_sha256": "c2491a8ae85331fd5e2373eb6a7d16bbf8a39f10d8b5372064f4f059f57db306",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000021",
+      "source_index": 21,
+      "timestamp_s": 13.994367,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000021.jpg",
+      "frame_sha256": "1ef1fe706a9055331bffe4ef3419deb2c5e77c010bb3bcd5103a7547e507dec1",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000021.png",
+          "mask_sha256": "b45dca52a4cd6a821f3fefc7affa01fb49e40c514384f2b2b6c7817d9f3c1314",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000022",
+      "source_index": 22,
+      "timestamp_s": 14.694167,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000022.jpg",
+      "frame_sha256": "dd3cf53defa730ab43546afbd259a803cf06e3e4c62909dd6c826bd8bbcfd046",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000022.png",
+          "mask_sha256": "236ffcced886e8da3ab18c5e138cbcd121a0db62ed64d50fa54701a4bdb99c0d",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000023",
+      "source_index": 23,
+      "timestamp_s": 15.394044,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000023.jpg",
+      "frame_sha256": "996ae25d72d539b6a452e9d636ea9df34025ecc5b30249f8ce5f6e2a81908845",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000023.png",
+          "mask_sha256": "901a061c84bff3659ea14923875ef17502af9e62ace3689f3d139aed3b48abd3",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000024",
+      "source_index": 24,
+      "timestamp_s": 16.093922,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000024.jpg",
+      "frame_sha256": "686dfa2d5b9db5dd432294e7d728276e81cdd7673ef859cac9f8e2f3a95ddd89",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000024.png",
+          "mask_sha256": "eed7c97cafbf46c79b84b110f5a82196aa0c6ffd9f82eede4e4f108104e31103",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000025",
+      "source_index": 25,
+      "timestamp_s": 16.7938,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000025.jpg",
+      "frame_sha256": "e2f2ee6c60f4628cc811a254b746c0f74e006bad5b4783219aaa588a4ce10973",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000025.png",
+          "mask_sha256": "29bc883bf31e6565002c079c58d7e7b20868a4ebef7323f50239eea0b9dc05d1",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000026",
+      "source_index": 26,
+      "timestamp_s": 17.493789,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000026.jpg",
+      "frame_sha256": "b0d851ce7130568fba90ddacff945595b4705ac7f20a4c32eb3412d21b580071",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000026.png",
+          "mask_sha256": "55923a306bba178e9664db8cc7de5108b82be897ba3773bdc3ee3b7774c1c9f0",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000027",
+      "source_index": 27,
+      "timestamp_s": 18.193667,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000027.jpg",
+      "frame_sha256": "ed2c5d5b2faa755d98ff877649065571434e2e606c2d7a0e47704a3aa47e826f",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000027.png",
+          "mask_sha256": "9a14bdbffe9359e973d2739e2db66807b39c1cd14c6966867bd4fc89ed115dc1",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000028",
+      "source_index": 28,
+      "timestamp_s": 18.893544,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000028.jpg",
+      "frame_sha256": "ffe5d00781d4a025ab446de09223f6dc1223eee0dd7d831581064133455a37e7",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000028.png",
+          "mask_sha256": "5b1821c42bac9f8be7c95077a1029f097f9f1aad69767c479b33dfbcf3aebcd6",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000029",
+      "source_index": 29,
+      "timestamp_s": 19.570167,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000029.jpg",
+      "frame_sha256": "d4cd689dd754fc16df421a3b3e0b6468d20aa23d79fd5ba0f22b6d7ddc95eb28",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000029.png",
+          "mask_sha256": "fda22248495394a52d7a734aff19b02179f673ea82f4f7819409505b1d803a79",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000030",
+      "source_index": 30,
+      "timestamp_s": 20.260089,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000030.jpg",
+      "frame_sha256": "96db2d75383200e094aeb49bba9214feb538b9bf05e41a6e2c04e6232dd7db17",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000030.png",
+          "mask_sha256": "289a0aced7a20cf1d06618706b0fdbcba7440ee62d733af8db3568d19dab4c96",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000031",
+      "source_index": 31,
+      "timestamp_s": 20.959933,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000031.jpg",
+      "frame_sha256": "b73622e77558a2f2d8480dd8ae4dfdac8e8c43549d7426b63a237f693d92ff30",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000031.png",
+          "mask_sha256": "0d931d48b6abc181e2cf9a5018ba6c2ac6cd449dfd3b563c5228b02482fa350c",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000032",
+      "source_index": 32,
+      "timestamp_s": 21.659811,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000032.jpg",
+      "frame_sha256": "e396409025c63abd20888d4c41f79a32067868eb2bea91d0fbbf24a5d9e8d870",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000032.png",
+          "mask_sha256": "e98658c6352aea5523226539a5a0cd76ad42f7da02922edcb828eb31a3d5c903",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "cable_connector",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/cable_connector/000032.png",
+          "mask_sha256": "212234c459fe2ae577769730f4b3c634a7028a19ddca3e277cc9227947deecdb",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "uncertain"
+        }
+      ]
+    },
+    {
+      "id": "source_000033",
+      "source_index": 33,
+      "timestamp_s": 22.359689,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000033.jpg",
+      "frame_sha256": "5452dbb24fc7768095ea916a2140b3d07c46379e85f14917f3787e76a41b88d6",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000033.png",
+          "mask_sha256": "fd30219cb4c631065f26fe966c1ec927e69ce554252b9428c65124369aeb3e2e",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "cable_connector",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/cable_connector/000033.png",
+          "mask_sha256": "b4f76134b07d641c2ff3795b8b748eb409a649ae1f3ff4e96f09cd8c9ed2f7fa",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000034",
+      "source_index": 34,
+      "timestamp_s": 23.059567,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000034.jpg",
+      "frame_sha256": "fb4a5c3d2f5cbf16e27234eef9aa9c1f07c454adc14608f38cad5e54e940fb21",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000034.png",
+          "mask_sha256": "fd97169b686749f69eda9328fbd1c1f7a90c4f07d474e4a9893eb410660ebb29",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "cable_connector",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/cable_connector/000034.png",
+          "mask_sha256": "021b9beda5d6612eeba5ad37eed249be4d5e664d3fec4ab0535b052f2f8b89fb",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000035",
+      "source_index": 35,
+      "timestamp_s": 23.759444,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000035.jpg",
+      "frame_sha256": "259bdaec9b8fae3ec90819d71d5fd02ceeb7038ab051876fddd48ceda5fc64ab",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000035.png",
+          "mask_sha256": "e2af01e1dc792edce239b320faae307c97fdf08b6d0834228d277e99e9ad699b",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "cable_connector",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/cable_connector/000035.png",
+          "mask_sha256": "d4077508cdf01d9fbe112bddcfd6d10142d1bb5f1766790b65869c6087f5ba99",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000036",
+      "source_index": 36,
+      "timestamp_s": 24.459322,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000036.jpg",
+      "frame_sha256": "cc7f93903755f66f511e44f61dd6264d199f1bb9bcfe7db653dfbc6b3911b5b5",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000036.png",
+          "mask_sha256": "6d3edf8b623bf8a6cfce3d27db986a62ef6e0e33dcaa3b6e4def9f8671290d5c",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "cable_connector",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/cable_connector/000036.png",
+          "mask_sha256": "975c6c4c10b030623977aa1aca3c8eea9eca0b0d9a804a76f928fca4fe0a158d",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000037",
+      "source_index": 37,
+      "timestamp_s": 25.1592,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000037.jpg",
+      "frame_sha256": "35d6aba14934b353418677cc33241699ef5dc66dc3da2cfdbf6eb2f8a521c776",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000037.png",
+          "mask_sha256": "b382517d514bffc71219653a1f2d5f37401e800c22296725ee0be2633f8e6593",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "cable_connector",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/cable_connector/000037.png",
+          "mask_sha256": "9add39e4e43316133998e95b80dd993c7cbef60beb1a95a0cdba538f36b8d261",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000038",
+      "source_index": 38,
+      "timestamp_s": 25.859078,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000038.jpg",
+      "frame_sha256": "68a01034bef81f8f33bd09ca1b1813698a70bc6ba6f37b8ac6f4e792f041967d",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000038.png",
+          "mask_sha256": "95d9b1495173890fa5b2322c33cc31c6bf1f2102e39d76e112eaa28a4a24326f",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "cable_connector",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/cable_connector/000038.png",
+          "mask_sha256": "2b95735f48caf1eb65a4fcefea5260f85b18b4144b31dc73ffbe4ac7b9db8365",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000039",
+      "source_index": 39,
+      "timestamp_s": 26.558956,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000039.jpg",
+      "frame_sha256": "cb80a365d136f1f981e3762572c1c41624871464b13efd5e949874adbd098eb9",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000039.png",
+          "mask_sha256": "f343f37089e0c08e96f27f89bfeb48c6cf8158793a1a694d7a793e535f2c6b69",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "cable_connector",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/cable_connector/000039.png",
+          "mask_sha256": "8db4e073f87edb744f5479ba5560a34fb5e31b71e69b70d5e903f9f3a79eb6d2",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000040",
+      "source_index": 40,
+      "timestamp_s": 27.258833,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000040.jpg",
+      "frame_sha256": "44c8f9bb4530b745c9e46abc22680cd739148475381034d52d2b9b1ccb993c5d",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000040.png",
+          "mask_sha256": "63944f6d2590b88bc599d24d6f11dcfa26a676eedcb1e8ebc74f6a8a8b6bbe74",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000041",
+      "source_index": 41,
+      "timestamp_s": 27.958711,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000041.jpg",
+      "frame_sha256": "95bce9cbf95919fcbf1329db11a97debfb84b16944166b618b862bb2da2403c6",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000041.png",
+          "mask_sha256": "ae86afa9e1759fb3938f3ea9d16eb3bd4c78f8de1410e9472b643c39f270da57",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000042",
+      "source_index": 42,
+      "timestamp_s": 28.658589,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000042.jpg",
+      "frame_sha256": "062d0c432b7e11ef20c1d0e9ed42ca69e74264e0fb97b20e22251675ec3b2bec",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000042.png",
+          "mask_sha256": "e146e41b547ac450c4c1fafd5ac4f6242e3d6c7c6438012fda231f219371be25",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000043",
+      "source_index": 43,
+      "timestamp_s": 29.358467,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000043.jpg",
+      "frame_sha256": "abcb2b8fdce92cd2da5d23e19dcb2b55e3d86dbe806da2c2162d14675954f2be",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000043.png",
+          "mask_sha256": "1dea9fa76601cfe459cd1e11daa24e4c9b70ef69ea578bcfab5656567473621b",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000044",
+      "source_index": 44,
+      "timestamp_s": 30.058344,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000044.jpg",
+      "frame_sha256": "77b0a5b2adb851843078b10dc8055ad9791cc9680c1384133b73f09e8e25c1ee",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000044.png",
+          "mask_sha256": "7bebce95f7c355c4d48d6a83f5bfc8adfb5e8b53a5d349f4af96b39ef6fc8eac",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000045",
+      "source_index": 45,
+      "timestamp_s": 30.758222,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000045.jpg",
+      "frame_sha256": "b5e19151ac1791c03315f3440bc3f7c60e709e8f04a3755357c1715093147a85",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000045.png",
+          "mask_sha256": "f02f2b4e218311106e9817d7ed4d3446772e7776a4a44c50eb2c5f08d347ac3e",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000046",
+      "source_index": 46,
+      "timestamp_s": 31.4581,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000046.jpg",
+      "frame_sha256": "f27eb4af93639ccda43e86d443129d5a2189df0ba9bb16df98c16475e6eb64b7",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000046.png",
+          "mask_sha256": "3a0723c9638443166e1dbd64bff5b5a7e3867ef6bafc8e99a8584564f0dcf3b7",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000047",
+      "source_index": 47,
+      "timestamp_s": 32.158089,
+      "frame_path": "data/flow-capture-phone-20261103-v1/frames/000047.jpg",
+      "frame_sha256": "20d266dc6bc117eeba9a72f78622834cbf84f566390e2cbdde9b76d15e34c699",
+      "observations": [
+        {
+          "track_id": "phone_blue",
+          "mask_path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000047.png",
+          "mask_sha256": "779981cddc6e86c99e7bd33ecb660a062fc19771cf7c4af5e61b42e83a48b6e8",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "id": "r_connector_removable",
+      "limitations": [
+        "hidden contact inside port not visible",
+        "coarse sampling and small size with occlusion"
+      ],
+      "object_track_id": "phone_blue",
+      "predicate": "removable_from",
+      "rationale": "white plug is brought to phone bottom edge and appears to contact it, suggesting candidate separable connection without proving seating",
+      "status": "inferred",
+      "subject_track_id": "cable_connector",
+      "evidence_ids": [
+        "source_000035",
+        "source_000036",
+        "source_000037",
+        "source_000038"
+      ]
+    }
+  ],
+  "variables": [
+    {
+      "id": "phone_visible_side",
+      "name": "phone visible side",
+      "subject_track_id": "phone_blue",
+      "values": [
+        "front_screen_visible",
+        "back_case_visible",
+        "edge_visible",
+        "unknown"
+      ]
+    },
+    {
+      "id": "connector_position",
+      "name": "connector position relative to phone",
+      "subject_track_id": "cable_connector",
+      "values": [
+        "separate_from_phone",
+        "near_phone_edge",
+        "contacting_phone_edge",
+        "unknown"
+      ]
+    }
+  ],
+  "assertions": [
+    {
+      "id": "a_phone_front_04",
+      "rationale": "front screen with reflection visible held in hand",
+      "status": "visual_model_proposal",
+      "value": "front_screen_visible",
+      "variable_id": "phone_visible_side",
+      "evidence_id": "source_000004"
+    },
+    {
+      "id": "a_phone_back_08",
+      "rationale": "blue back with camera module visible held between hands",
+      "status": "visual_model_proposal",
+      "value": "back_case_visible",
+      "variable_id": "phone_visible_side",
+      "evidence_id": "source_000008"
+    },
+    {
+      "id": "a_phone_edge_13",
+      "rationale": "phone held horizontally showing bottom edge",
+      "status": "visual_model_proposal",
+      "value": "edge_visible",
+      "variable_id": "phone_visible_side",
+      "evidence_id": "source_000013"
+    },
+    {
+      "id": "a_phone_edge_29",
+      "rationale": "bottom edge with port area presented toward camera",
+      "status": "visual_model_proposal",
+      "value": "edge_visible",
+      "variable_id": "phone_visible_side",
+      "evidence_id": "source_000029"
+    },
+    {
+      "id": "a_phone_edge_32",
+      "rationale": "phone bottom edge presented while cable in other hand",
+      "status": "visual_model_proposal",
+      "value": "edge_visible",
+      "variable_id": "phone_visible_side",
+      "evidence_id": "source_000032"
+    },
+    {
+      "id": "a_phone_edge_34",
+      "rationale": "phone bottom edge held steady as cable approached",
+      "status": "visual_model_proposal",
+      "value": "edge_visible",
+      "variable_id": "phone_visible_side",
+      "evidence_id": "source_000034"
+    },
+    {
+      "id": "a_conn_sep_32",
+      "rationale": "small white tip visible in right hand separate from phone",
+      "status": "visual_model_proposal",
+      "value": "separate_from_phone",
+      "variable_id": "connector_position",
+      "evidence_id": "source_000032"
+    },
+    {
+      "id": "a_conn_sep_34",
+      "rationale": "white tip held at distance from phone edge",
+      "status": "visual_model_proposal",
+      "value": "separate_from_phone",
+      "variable_id": "connector_position",
+      "evidence_id": "source_000034"
+    },
+    {
+      "id": "a_conn_contact_35",
+      "rationale": "tip appears touching phone bottom edge with finger occlusion",
+      "status": "visual_model_proposal",
+      "value": "contacting_phone_edge",
+      "variable_id": "connector_position",
+      "evidence_id": "source_000035"
+    },
+    {
+      "id": "a_conn_contact_38",
+      "rationale": "tip at phone edge partly occluded, cable loop hanging",
+      "status": "visual_model_proposal",
+      "value": "contacting_phone_edge",
+      "variable_id": "connector_position",
+      "evidence_id": "source_000038"
+    }
+  ],
+  "steps": [
+    {
+      "description": "Single hand holds blue-cased phone showing front screen toward camera",
+      "id": "s1_hold_front",
+      "limitations": [
+        "coarse sampling",
+        "partial finger occlusion"
+      ],
+      "participant_track_ids": [
+        "phone_blue"
+      ],
+      "postconditions": [
+        {
+          "value": "front_screen_visible",
+          "variable_id": "phone_visible_side",
+          "evidence_id": "source_000005"
+        }
+      ],
+      "preconditions": [
+        {
+          "value": "front_screen_visible",
+          "variable_id": "phone_visible_side",
+          "evidence_id": "source_000004"
+        }
+      ],
+      "title": "hold phone showing front",
+      "evidence_ids": [
+        "source_000004",
+        "source_000005"
+      ],
+      "start_s": 2.096322,
+      "end_s": 2.7962
+    },
+    {
+      "description": "Both hands hold phone horizontally showing blue back with camera",
+      "id": "s2_show_back",
+      "limitations": [
+        "coarse sampling",
+        "orientation change appearance"
+      ],
+      "participant_track_ids": [
+        "phone_blue"
+      ],
+      "postconditions": [
+        {
+          "value": "back_case_visible",
+          "variable_id": "phone_visible_side",
+          "evidence_id": "source_000009"
+        }
+      ],
+      "preconditions": [
+        {
+          "value": "back_case_visible",
+          "variable_id": "phone_visible_side",
+          "evidence_id": "source_000008"
+        }
+      ],
+      "title": "show phone back",
+      "evidence_ids": [
+        "source_000008",
+        "source_000009"
+      ],
+      "start_s": 4.895833,
+      "end_s": 5.595822
+    },
+    {
+      "description": "Hands rotate phone to present side and bottom edges for inspection",
+      "id": "s3_show_edges",
+      "limitations": [
+        "coarse sampling misses fast rotations",
+        "motion blur"
+      ],
+      "participant_track_ids": [
+        "phone_blue"
+      ],
+      "postconditions": [
+        {
+          "value": "edge_visible",
+          "variable_id": "phone_visible_side",
+          "evidence_id": "source_000015"
+        }
+      ],
+      "preconditions": [
+        {
+          "value": "edge_visible",
+          "variable_id": "phone_visible_side",
+          "evidence_id": "source_000010"
+        }
+      ],
+      "title": "show phone edges",
+      "evidence_ids": [
+        "source_000010",
+        "source_000013",
+        "source_000015"
+      ],
+      "start_s": 6.2956,
+      "end_s": 9.794989
+    },
+    {
+      "description": "Left hand presents phone bottom edge while right hand holds white cable tip separate",
+      "id": "s4_bring_cable",
+      "limitations": [
+        "small tip with blur",
+        "occlusion"
+      ],
+      "participant_track_ids": [
+        "phone_blue",
+        "cable_connector"
+      ],
+      "postconditions": [
+        {
+          "value": "separate_from_phone",
+          "variable_id": "connector_position",
+          "evidence_id": "source_000034"
+        }
+      ],
+      "preconditions": [
+        {
+          "value": "separate_from_phone",
+          "variable_id": "connector_position",
+          "evidence_id": "source_000032"
+        }
+      ],
+      "title": "bring cable tip near phone",
+      "evidence_ids": [
+        "source_000032",
+        "source_000033",
+        "source_000034"
+      ],
+      "start_s": 21.659811,
+      "end_s": 23.059567
+    },
+    {
+      "description": "Right hand moves tip to phone bottom edge and holds contact",
+      "id": "s5_contact_edge",
+      "limitations": [
+        "tip partly occluded by fingers",
+        "hidden contact not visible",
+        "coarse sampling"
+      ],
+      "participant_track_ids": [
+        "phone_blue",
+        "cable_connector"
+      ],
+      "postconditions": [
+        {
+          "value": "contacting_phone_edge",
+          "variable_id": "connector_position",
+          "evidence_id": "source_000038"
+        }
+      ],
+      "preconditions": [
+        {
+          "value": "contacting_phone_edge",
+          "variable_id": "connector_position",
+          "evidence_id": "source_000035"
+        }
+      ],
+      "title": "contact cable to phone edge",
+      "evidence_ids": [
+        "source_000035",
+        "source_000036",
+        "source_000037",
+        "source_000038"
+      ],
+      "start_s": 23.759444,
+      "end_s": 25.859078
+    },
+    {
+      "description": "Hand continues to hold phone with cable extending from bottom edge area while rotating to show sides",
+      "id": "s6_hold_after_contact",
+      "limitations": [
+        "connector track ends at 39 so later contact unresolved",
+        "occlusion and coarse sampling"
+      ],
+      "participant_track_ids": [
+        "phone_blue"
+      ],
+      "postconditions": [
+        {
+          "value": "back_case_visible",
+          "variable_id": "phone_visible_side",
+          "evidence_id": "source_000045"
+        }
+      ],
+      "preconditions": [
+        {
+          "value": "edge_visible",
+          "variable_id": "phone_visible_side",
+          "evidence_id": "source_000039"
+        }
+      ],
+      "title": "hold phone after cable contact",
+      "evidence_ids": [
+        "source_000039",
+        "source_000042",
+        "source_000045"
+      ],
+      "start_s": 26.558956,
+      "end_s": 30.758222
+    }
+  ],
+  "motion": [],
+  "links": {
+    "scene_viewer": "",
+    "dense_viewer": ""
+  },
+  "runtime_policy": {
+    "state_between_evidence": "unknown",
+    "pose_between_evidence": "absent",
+    "pose_interpolation": false,
+    "simulation_ready": false,
+    "physical_identity_confirmed": false
+  },
+  "limitations": [
+    "coarse temporal sampling misses fast rotations and insertion motion",
+    "partial finger occlusion of phone edge and small connector tip",
+    "blur in some samples and very small connector size limit certainty",
+    "unresolved identity of exact port contact and hidden contact inside port",
+    "no electrical operation or successful seating inferred",
+    "States and relationships are fallible model proposals, not verified physical facts.",
+    "Only sampled evidence has semantic state; no persistence is inferred between samples or through occlusion.",
+    "Supported poses are conditional on generated geometry, reference fit and assumed intrinsics; physical pose accuracy is unverified.",
+    "No robot execution, hidden insertion/contact, seating, hinge axis or physical dimensions are generated."
+  ]
+}

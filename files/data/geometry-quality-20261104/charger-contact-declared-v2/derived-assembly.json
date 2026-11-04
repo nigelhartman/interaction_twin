@@ -1,0 +1,195 @@
+{
+  "base_object_program_ref": {
+    "bytes": 10422,
+    "path": "data/object-programs/auto-36df04c484f3b2c641895f533cc3e020671680e8b4b6d345b7b0617c42b0c40e/object-program.json",
+    "sha256": "22cf370eface496901025c9933e1908f96c085be32df1f1921c2b959a05efda2"
+  },
+  "baseline_scene_ref": {
+    "bytes": 260313,
+    "path": "data/tracking-recoveries/charger-20261103-v1/mask-refit-v1/constrained/scene.json",
+    "sha256": "d69041ae6ab91973397e4e3b4aef476a1df261b5bb5206ddcf8b5e3aa058b8df"
+  },
+  "claims": {
+    "declared_geometry_derivative_used": true,
+    "manual_geometry_or_poses_used": false,
+    "original_native_assets_preserved": true,
+    "physical_accuracy_verified": false,
+    "physical_robot_execution_available": false,
+    "simulation_ready": false
+  },
+  "component_assets": [
+    {
+      "component_id": "adapter_early",
+      "geometry_origin": "unchanged_SAM_3D_inference",
+      "native_glb": {
+        "bytes": 9009880,
+        "path": "data/sam3d-upload-jobs/bfebd5ba2ca15c28fd5c4b602d3487a73541344ee041be3e7531ef33ea94bb89/candidate/asset.glb",
+        "sha256": "74635a414ec57bd5e92bbda01a9b55bb77a8e01152c97c53d8773f0abbf98636"
+      },
+      "native_metadata": {
+        "bytes": 15773,
+        "path": "data/sam3d-upload-jobs/bfebd5ba2ca15c28fd5c4b602d3487a73541344ee041be3e7531ef33ea94bb89/candidate/metadata.json",
+        "sha256": "fe07a7bf8190919e21bf12d40955dbae9b7fa37e45c4de23b2cfa160ab2aef0f"
+      },
+      "native_uniform_scale": 0.3226653039455414,
+      "original_native_glb": {
+        "bytes": 9009880,
+        "path": "data/sam3d-upload-jobs/bfebd5ba2ca15c28fd5c4b602d3487a73541344ee041be3e7531ef33ea94bb89/candidate/asset.glb",
+        "sha256": "74635a414ec57bd5e92bbda01a9b55bb77a8e01152c97c53d8773f0abbf98636"
+      }
+    },
+    {
+      "component_id": "adapter_late",
+      "geometry_origin": "automatic_affine_calibration",
+      "native_glb": {
+        "bytes": 14253128,
+        "path": "data/geometry-quality-20261104/charger-contact-gauge-v1/adapter-derived.glb",
+        "sha256": "ab643aa435a0e8b5a95058a535939ecb7e3b7f08f6b3eb06738b90b2b52e73c1"
+      },
+      "native_metadata": {
+        "bytes": 15841,
+        "path": "data/sam3d-upload-jobs/8b5ab53e06cb5b2456dcb1d8aa93f3ed1da840ee0bf177cf524defe12a790c88/candidate/metadata.json",
+        "sha256": "d3af01f2aeddb5fa2bd48a0c4bc5ac9518513a051222abb6ea0d4f8353c111e3"
+      },
+      "native_uniform_scale": 0.21357551217079163,
+      "original_native_glb": {
+        "bytes": 14253056,
+        "path": "data/sam3d-upload-jobs/8b5ab53e06cb5b2456dcb1d8aa93f3ed1da840ee0bf177cf524defe12a790c88/candidate/asset.glb",
+        "sha256": "369ce5a10634764fac142c654571a5b9281e5379aa947e906619d7809b9f1287"
+      }
+    },
+    {
+      "component_id": "power_cable",
+      "geometry_origin": "unchanged_SAM_3D_inference",
+      "native_glb": {
+        "bytes": 2431300,
+        "path": "data/sam3d-upload-jobs/9c9f2deb744570f469f8a814742efbd9b1eed234c6f79187d7e51d92841c17a4/candidate/asset.glb",
+        "sha256": "9d308a2d35d4b6eb63a6af7fdd71c9b440d6c41200416d2894d5e4aa33a0e147"
+      },
+      "native_metadata": {
+        "bytes": 15778,
+        "path": "data/sam3d-upload-jobs/9c9f2deb744570f469f8a814742efbd9b1eed234c6f79187d7e51d92841c17a4/candidate/metadata.json",
+        "sha256": "733d8ef1c67e8acd0d869cfb1586db693bf412cc1738a5adfb56780849f089ce"
+      },
+      "native_uniform_scale": 0.4932176470756531,
+      "original_native_glb": {
+        "bytes": 2431300,
+        "path": "data/sam3d-upload-jobs/9c9f2deb744570f469f8a814742efbd9b1eed234c6f79187d7e51d92841c17a4/candidate/asset.glb",
+        "sha256": "9d308a2d35d4b6eb63a6af7fdd71c9b440d6c41200416d2894d5e4aa33a0e147"
+      }
+    },
+    {
+      "component_id": "wall_outlet",
+      "geometry_origin": "unchanged_SAM_3D_inference",
+      "native_glb": {
+        "bytes": 9358892,
+        "path": "data/sam3d-upload-jobs/5b2a25363635c7bb67ccf8e386afc02c56860e72157f7a8f586bd2ac2245ebcf/candidate/asset.glb",
+        "sha256": "476967630214300899877caf98739ae9e2c738069bf47c715db10f8e7cdb2f12"
+      },
+      "native_metadata": {
+        "bytes": 15767,
+        "path": "data/sam3d-upload-jobs/5b2a25363635c7bb67ccf8e386afc02c56860e72157f7a8f586bd2ac2245ebcf/candidate/metadata.json",
+        "sha256": "fe2749f952785b0e2e927d5b08c47229999a9925156c4ecc6746d4e015d8aeae"
+      },
+      "native_uniform_scale": 0.45916470885276794,
+      "original_native_glb": {
+        "bytes": 9358892,
+        "path": "data/sam3d-upload-jobs/5b2a25363635c7bb67ccf8e386afc02c56860e72157f7a8f586bd2ac2245ebcf/candidate/asset.glb",
+        "sha256": "476967630214300899877caf98739ae9e2c738069bf47c715db10f8e7cdb2f12"
+      }
+    }
+  ],
+  "evidence_program": {
+    "bytes": 116228,
+    "path": "data/flow-capture-charger-20261103-v1/flow-procedure-1/interaction.json",
+    "sha256": "462365b90da28aa1b57d225000acd367e2c583db0755c3ab105edeefd221b209"
+  },
+  "format": "interaction-twin-declared-geometry-derivative",
+  "geometry_report_ref": {
+    "bytes": 6405,
+    "path": "data/geometry-quality-20261104/charger-contact-gauge-v1/geometry-report.json",
+    "sha256": "2dc776265946d636f1c7f643d299e171e208c30491dfc111970aa76e90d6a28d"
+  },
+  "joints": [],
+  "limitations": [
+    "Adapter/outlet support-plane gauge reduces independent floating gap while preserving projection; actual prongs, contact, electrical continuity and seating remain unknown.",
+    "Generated grey adapter face remains a native shape/appearance defect.",
+    "Whole flexible cable is a source-pixel centerline observation; static coil remains separately inspectable and must not replay as rigid deformation."
+  ],
+  "nonrigid_observations_ref": {
+    "bytes": 2487,
+    "path": "data/nonrigid-observations/charger-20261104-v1/nonrigid-observations.json",
+    "sha256": "a81a7ebdbb4766349901f728785756d87dab89e2068deb8fe9a31de8cd96b7ad"
+  },
+  "physical_accuracy_verified": false,
+  "refinement_report_ref": {
+    "bytes": 6405,
+    "path": "data/geometry-quality-20261104/charger-contact-gauge-v1/geometry-report.json",
+    "sha256": "2dc776265946d636f1c7f643d299e171e208c30491dfc111970aa76e90d6a28d"
+  },
+  "removable_relationships": [
+    {
+      "attachment": "removable",
+      "child_id": "power_cable",
+      "confidence": "low",
+      "evidence_ids": [
+        "source_000035",
+        "source_000036",
+        "source_000037"
+      ],
+      "id": "j_adapter_late_to_cable",
+      "joint_type": "removable",
+      "parent_id": "adapter_late",
+      "physical_accuracy_verified": false
+    },
+    {
+      "attachment": "removable",
+      "child_id": "adapter_late",
+      "confidence": "low",
+      "evidence_ids": [
+        "source_000044",
+        "source_000046",
+        "source_000047"
+      ],
+      "id": "j_outlet_to_adapter_late",
+      "joint_type": "removable",
+      "parent_id": "wall_outlet",
+      "physical_accuracy_verified": false
+    }
+  ],
+  "scene_ref": {
+    "bytes": 386010,
+    "path": "data/geometry-quality-20261104/charger-contact-declared-v2/scene.json",
+    "sha256": "305874d31d6fea24c1e0a265c15eb4de510ddcf6623b23bee0e0e053043bc7e7"
+  },
+  "simulation_ready": false,
+  "source": {
+    "duration_s": 45.4229,
+    "height": 960,
+    "original_sha256": "53e407b9a288c199cf6e1827ad5ec99693a86714885c8c628e77daf48802d2df",
+    "path": "data/flow-capture-charger-20261103-v1/source/video.mp4",
+    "sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c",
+    "time_domain": "source_video_presentation_seconds",
+    "width": 718
+  },
+  "source_alignment_audit_ref": {
+    "bytes": 4988,
+    "path": "data/geometry-quality-20261104/charger-contact-declared-v2/source-audit.json",
+    "sha256": "57bc6bce6478b127cf113784ced73a0ae43526fe21ff0a01ad31396f87da55b1"
+  },
+  "source_audit_summary": {
+    "default_eligible": true,
+    "geometric_gates_passed": true,
+    "physical_accuracy_verified": false,
+    "source_pixel_gates_passed": true
+  },
+  "unresolved_connections": [],
+  "version": 1,
+  "visual_review_refs": [
+    {
+      "bytes": 823,
+      "path": "data/geometry-quality-20261104/charger-contact-declared-v1/visual-review.json",
+      "sha256": "652a9d2391c4991402e94493f8d1620557dbfa5b15d4c4f10f281414fb078e44"
+    }
+  ]
+}

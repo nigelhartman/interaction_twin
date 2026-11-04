@@ -1,0 +1,13 @@
+The task: open the case. Place both earbuds on the tray. Close the case.
+
+The lid stays connected.
+
+Each earbud has its own goal.
+
+Both earbuds placed. Now close the case.
+
+It started with a real human demonstration.
+
+Video, parts, connections and an object program. A starting point for robotics.
+
+Interaction Twin.

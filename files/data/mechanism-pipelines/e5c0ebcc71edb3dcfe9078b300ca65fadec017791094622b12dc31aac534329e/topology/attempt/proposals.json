@@ -1,0 +1,230 @@
+{
+  "format": "sam3d-mechanism-proposals",
+  "version": 1,
+  "source_sha256": "b153e7ce79f140c861764c832ba3def149f5596ab4fe23bd3d671af913d5c021",
+  "interaction_sha256": "e5c0ebcc71edb3dcfe9078b300ca65fadec017791094622b12dc31aac534329e",
+  "interaction_path": "data/private-native-programs/overnight-camera-wallet-20261103-v2/wallet/procedure/interaction.json",
+  "coordinate_system": "source_image_pixels_origin_upper_left_y_down",
+  "title": "Wallet pouch flap persistent hinge with removable coin containment",
+  "joints": [
+    {
+      "attachment": "persistent",
+      "child_id": "pouch_flap",
+      "confidence": "medium",
+      "evidence_ids": [
+        "source_000021",
+        "source_000027",
+        "source_000034",
+        "source_000088",
+        "source_000094"
+      ],
+      "hinge_hints": [
+        {
+          "evidence_id": "source_000021",
+          "source_sample_index": 21,
+          "timestamp_s": 6.700589,
+          "image_width": 540,
+          "image_height": 960,
+          "endpoints_px": [
+            [
+              140.14000000000001,
+              347.158
+            ],
+            [
+              436.59000000000003,
+              355.789
+            ]
+          ],
+          "uncertainty_px": 38.4,
+          "confidence": "medium",
+          "normalized_hint": {
+            "confidence": "medium",
+            "endpoint_a_normalized": [
+              0.26,
+              0.362
+            ],
+            "endpoint_b_normalized": [
+              0.81,
+              0.371
+            ],
+            "evidence_id": "source_000021",
+            "uncertainty_normalized": 0.04
+          }
+        },
+        {
+          "evidence_id": "source_000034",
+          "source_sample_index": 34,
+          "timestamp_s": 11.067644,
+          "image_width": 540,
+          "image_height": 960,
+          "endpoints_px": [
+            [
+              350.35,
+              321.26500000000004
+            ],
+            [
+              420.42,
+              455.525
+            ]
+          ],
+          "uncertainty_px": 76.8,
+          "confidence": "low",
+          "normalized_hint": {
+            "confidence": "low",
+            "endpoint_a_normalized": [
+              0.65,
+              0.335
+            ],
+            "endpoint_b_normalized": [
+              0.78,
+              0.475
+            ],
+            "evidence_id": "source_000034",
+            "uncertainty_normalized": 0.08
+          }
+        }
+      ],
+      "id": "j_wallet_flap_hinge",
+      "joint_type": "revolute",
+      "limitations": [
+        "deformable leather, shape changes with folding, not rigid",
+        "partial finger occlusion and blur",
+        "exact snap seating not visible"
+      ],
+      "parent_id": "wallet_holder",
+      "rationale": "Small rectangular flap stays attached to same wallet leaf while seen flat closed in source_000021 and lifted open in source_000027 and source_000034, then flat closed again in source_000094, indicating persistent hinge, not removable.",
+      "state_hints": [
+        {
+          "evidence_id": "source_000021",
+          "source_sample_index": 21,
+          "timestamp_s": 6.700589,
+          "image_width": 540,
+          "image_height": 960,
+          "state": "closed"
+        },
+        {
+          "evidence_id": "source_000027",
+          "source_sample_index": 27,
+          "timestamp_s": 8.7341,
+          "image_width": 540,
+          "image_height": 960,
+          "state": "open"
+        },
+        {
+          "evidence_id": "source_000034",
+          "source_sample_index": 34,
+          "timestamp_s": 11.067644,
+          "image_width": 540,
+          "image_height": 960,
+          "state": "open"
+        },
+        {
+          "evidence_id": "source_000094",
+          "source_sample_index": 94,
+          "timestamp_s": 31.202733,
+          "image_width": 540,
+          "image_height": 960,
+          "state": "closed"
+        }
+      ]
+    },
+    {
+      "attachment": "removable",
+      "child_id": "gold_coin",
+      "confidence": "medium",
+      "evidence_ids": [
+        "source_000052",
+        "source_000058",
+        "source_000071",
+        "source_000076",
+        "source_000083",
+        "source_000088"
+      ],
+      "hinge_hints": [],
+      "id": "j_wallet_coin_removable",
+      "joint_type": "removable",
+      "limitations": [
+        "small size, coarse sampling and blur",
+        "one face rarely resolved, single-coin continuity assumed but occlusion splits possible",
+        "insertion interior not visible, only placement at mouth"
+      ],
+      "parent_id": "wallet_holder",
+      "rationale": "Coin seen at pouch mouth in source_000052, then alone on table in source_000058 and source_000076 and in hand in source_000071, then at mouth in source_000083 and partly inside in source_000088, indicating removable containment, not a hinge.",
+      "state_hints": [
+        {
+          "evidence_id": "source_000052",
+          "source_sample_index": 52,
+          "timestamp_s": 17.1015,
+          "image_width": 540,
+          "image_height": 960,
+          "state": "inserted"
+        },
+        {
+          "evidence_id": "source_000058",
+          "source_sample_index": 58,
+          "timestamp_s": 19.101678,
+          "image_width": 540,
+          "image_height": 960,
+          "state": "removed"
+        },
+        {
+          "evidence_id": "source_000071",
+          "source_sample_index": 71,
+          "timestamp_s": 23.502067,
+          "image_width": 540,
+          "image_height": 960,
+          "state": "removed"
+        },
+        {
+          "evidence_id": "source_000076",
+          "source_sample_index": 76,
+          "timestamp_s": 25.168878,
+          "image_width": 540,
+          "image_height": 960,
+          "state": "removed"
+        },
+        {
+          "evidence_id": "source_000088",
+          "source_sample_index": 88,
+          "timestamp_s": 29.202567,
+          "image_width": 540,
+          "image_height": 960,
+          "state": "inserted"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "deformable leather shape changes; no rigid hinge axis verified",
+    "coarse temporal sampling obscures exact fold and finger motions",
+    "hand and finger occlusion of pouch interior, flap edges and coin",
+    "small coin with blur; single-coin continuity assumed but occlusion splits possible",
+    "states and relationships are fallible model proposals, not verified physical facts",
+    "no persistence inferred between samples or through occlusion",
+    "possible tracklet identity swap between open and closed views unverified"
+  ],
+  "physical_accuracy_verified": false,
+  "simulation_ready": false,
+  "robot_execution_available": false,
+  "reasoning": {
+    "provider": "meta_api",
+    "model": "muse-spark-1.3",
+    "inference_location": "hosted_Meta_Model_API",
+    "request_key": "aef13f4a04acafd2c301b984ee23d58d569432c0ac9af2ffbef3ed829b075c04",
+    "plan_path": "data/mechanism-pipelines/e5c0ebcc71edb3dcfe9078b300ca65fadec017791094622b12dc31aac534329e/topology/plan.json",
+    "plan_sha256": "57a8dcf740de9a3d7d61b83e8d33e92a78956a284fed81c1db7b684ec13e5d61",
+    "model_result_path": "data/mechanism-pipelines/e5c0ebcc71edb3dcfe9078b300ca65fadec017791094622b12dc31aac534329e/topology/attempt/model-result.json",
+    "model_result_sha256": "b2db6cad1b713c1e73b0095a8f7005c909558e063b601b3a28f42b32294f615e",
+    "request_receipt": "data/mechanism-pipelines/e5c0ebcc71edb3dcfe9078b300ca65fadec017791094622b12dc31aac534329e/topology/attempt/request/meta-request.json",
+    "estimated_cost_usd": "0.131415",
+    "usage": {
+      "input_tokens": 92494,
+      "output_tokens": 3717,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 2933,
+      "billable_output_tokens": 3717
+    },
+    "human_reviewed": false,
+    "geometric_joint_fit_performed": false
+  }
+}

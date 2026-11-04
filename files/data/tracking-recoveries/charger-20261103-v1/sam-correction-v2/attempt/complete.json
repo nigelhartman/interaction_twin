@@ -1,0 +1,179 @@
+{
+  "automatic_publication": false,
+  "identity_gap_merge": false,
+  "instance_count": 37,
+  "native_geometry_modified": false,
+  "new_api_calls": 1,
+  "plan": {
+    "bytes": 18374,
+    "path": "data/tracking-recoveries/charger-20261103-v1/sam-correction-v2/plan.json",
+    "sha256": "4caaeac0376a93449529e1b635e89f4f2c59ad681f944f1f60640321643becbd"
+  },
+  "prior_unsent_attempt_preserved": {
+    "failure_phase": "local_box_provenance_validation_before_run_or_request",
+    "network_or_model_client_constructed_during_preflight": false,
+    "new_normalized_prompts": [
+      {
+        "frame_index": 0,
+        "id": 0,
+        "model_box_xyxy_half_open": [
+          0.0,
+          533.76,
+          30.156000000000002,
+          591.36
+        ],
+        "rounded_box_xyxy_half_open": [
+          0,
+          533,
+          31,
+          592
+        ],
+        "rounding_policy": "outward_floor_left_top_ceil_right_bottom_no_clipping",
+        "wire_box_xyxy_inclusive": [
+          0,
+          533,
+          30,
+          591
+        ]
+      },
+      {
+        "frame_index": 6,
+        "id": 0,
+        "model_box_xyxy_half_open": [
+          269.968,
+          340.79999999999995,
+          435.108,
+          503.04
+        ],
+        "rounded_box_xyxy_half_open": [
+          269,
+          340,
+          436,
+          504
+        ],
+        "rounding_policy": "outward_floor_left_top_ceil_right_bottom_no_clipping",
+        "wire_box_xyxy_inclusive": [
+          269,
+          340,
+          435,
+          503
+        ]
+      },
+      {
+        "frame_index": 12,
+        "id": 0,
+        "model_box_xyxy_half_open": [
+          278.584,
+          366.72,
+          423.62,
+          512.64
+        ],
+        "rounded_box_xyxy_half_open": [
+          278,
+          366,
+          424,
+          513
+        ],
+        "rounding_policy": "outward_floor_left_top_ceil_right_bottom_no_clipping",
+        "wire_box_xyxy_inclusive": [
+          278,
+          366,
+          423,
+          512
+        ]
+      },
+      {
+        "frame_index": 16,
+        "id": 0,
+        "model_box_xyxy_half_open": [
+          382.694,
+          321.6,
+          450.904,
+          484.8
+        ],
+        "rounded_box_xyxy_half_open": [
+          382,
+          321,
+          451,
+          485
+        ],
+        "rounding_policy": "outward_floor_left_top_ceil_right_bottom_no_clipping",
+        "wire_box_xyxy_inclusive": [
+          382,
+          321,
+          450,
+          484
+        ]
+      },
+      {
+        "frame_index": 24,
+        "id": 0,
+        "model_box_xyxy_half_open": [
+          469.572,
+          305.28000000000003,
+          611.736,
+          484.8
+        ],
+        "rounded_box_xyxy_half_open": [
+          469,
+          305,
+          612,
+          485
+        ],
+        "rounding_policy": "outward_floor_left_top_ceil_right_bottom_no_clipping",
+        "wire_box_xyxy_inclusive": [
+          469,
+          305,
+          611,
+          484
+        ]
+      },
+      {
+        "frame_index": 36,
+        "id": 0,
+        "model_box_xyxy_half_open": [
+          225.452,
+          410.88,
+          267.814,
+          496.32
+        ],
+        "rounded_box_xyxy_half_open": [
+          225,
+          410,
+          268,
+          497
+        ],
+        "rounding_policy": "outward_floor_left_top_ceil_right_bottom_no_clipping",
+        "wire_box_xyxy_inclusive": [
+          225,
+          410,
+          267,
+          496
+        ]
+      }
+    ],
+    "new_prompt_sha256": "3b438bf6dcca64ca933f663b5a60382c88c3afa9b13e5a9c8743ebfc29cb1812",
+    "old_accounting_or_result_exists": false,
+    "old_intent": {
+      "bytes": 252,
+      "path": "data/tracking-recoveries/charger-20261103-v1/sam-attempt/intent.json",
+      "sha256": "59857f3715717661ddfc54996d06d0b8d5861e15e41693fce01922716cabc08b"
+    },
+    "old_plan": {
+      "bytes": 14382,
+      "path": "data/tracking-recoveries/charger-20261103-v1/sam-plan.json",
+      "sha256": "27e92f8b3601c055d1131ed6523928c42ce29717cb729404b5c6b6150ff700ce"
+    },
+    "original_error": "Box prompts require explicit model-generated provenance"
+  },
+  "request": {
+    "bytes": 1387,
+    "path": "data/tracking-recoveries/charger-20261103-v1/sam-correction-v2/attempt/accounting/meta-request.json",
+    "sha256": "1c9b3d499549fa829f5fec8d9c10b0ab2f358f181068e7b3dd5eee3ecee2ad54"
+  },
+  "result": {
+    "bytes": 49490,
+    "path": "data/tracking-recoveries/charger-20261103-v1/sam-correction-v2/attempt/result/metadata.json",
+    "sha256": "6ba2585c813a82f370e58afcc6a79b2b4c95a2b3662293cbea4f778c923b3030"
+  }
+}

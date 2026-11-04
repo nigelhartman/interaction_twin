@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0",
+  "status": "completed",
+  "backend": "Meta Model API SAM 3.1",
+  "model": "sam-3.1",
+  "response_id": "resp_6aea517505bc1e5f45d54d89",
+  "provider": "Meta Model API hosted inference",
+  "media": "image",
+  "width": 722,
+  "height": 960,
+  "parser": {
+    "package": "meta-sam-parser",
+    "version": "0.1.0"
+  },
+  "learned_inference_executed": true,
+  "usage": {
+    "input_tokens": 0,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 0,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 0,
+    "images_processed": 1
+  },
+  "usage_status": "reported",
+  "frame_sources": [
+    {
+      "video_sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+      "sample_index": 27,
+      "timestamp_s": 18.070422,
+      "time_domain": "source_video_presentation_seconds"
+    }
+  ],
+  "instances": [
+    {
+      "frame_index": 0,
+      "instance_id": "0",
+      "identity_scope": "within_response_visible_track_not_verified_physical_identity",
+      "source": {
+        "video_sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+        "sample_index": 27,
+        "timestamp_s": 18.070422,
+        "time_domain": "source_video_presentation_seconds"
+      },
+      "box_xyxy_half_open": [
+        196,
+        490,
+        714,
+        702
+      ],
+      "mask_encoding": "one_bit",
+      "confidence": 0.95703125,
+      "mask_foreground_pixels": 90422,
+      "mask_raster_shape_hw": [
+        960,
+        722
+      ],
+      "mask": "instance-000001-mask.png",
+      "mask_sha256": "29505ff5c22cc0f989e17f0ec5e66831d0e58619fb7cba183361c964c8818b9e"
+    },
+    {
+      "frame_index": 0,
+      "instance_id": "1",
+      "identity_scope": "within_response_visible_track_not_verified_physical_identity",
+      "source": {
+        "video_sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+        "sample_index": 27,
+        "timestamp_s": 18.070422,
+        "time_domain": "source_video_presentation_seconds"
+      },
+      "box_xyxy_half_open": [
+        182,
+        319,
+        722,
+        489
+      ],
+      "mask_encoding": "one_bit",
+      "confidence": 0.89453125,
+      "mask_foreground_pixels": 71342,
+      "mask_raster_shape_hw": [
+        960,
+        722
+      ],
+      "mask": "instance-000002-mask.png",
+      "mask_sha256": "e499eff69cf1ec1f482cabd13eb6b36df5ecf2cb0e2d95948929f774458c1505"
+    }
+  ],
+  "diagnostics": [],
+  "physical_accuracy_measured": false,
+  "limitations": [
+    "Segmentation is 2D, not 3D reconstruction or contact evidence.",
+    "Object identity can fail at entry, exit or complete occlusion.",
+    "No older SAM2 mask audit is applied to these new masks."
+  ],
+  "input_provenance": {
+    "manifest_sha256": "fc9df85d2c81b0317cb4e3e99fdc09c6fedabc8a5cf08d1e7ea2b7d5162e87af",
+    "image_sha256": "0cab93f19a75c2a00dea3eb94447e7ed5036c01ca9b052aa0b23b2c3f730da98",
+    "prompt_origin": "muse_spark_model_generated_visible_part_boxes_source_observation_v3",
+    "prompt_type": "model_generated_box_prompts",
+    "box_prompts": [
+      {
+        "id": 0,
+        "frame_index": 0,
+        "model_box_xyxy_half_open": [
+          187.72,
+          487.68,
+          710.448,
+          701.76
+        ],
+        "rounded_box_xyxy_half_open": [
+          187,
+          487,
+          711,
+          702
+        ],
+        "wire_box_xyxy_inclusive": [
+          187,
+          487,
+          710,
+          701
+        ],
+        "rounding_policy": "outward_floor_left_top_ceil_right_bottom_no_clipping"
+      },
+      {
+        "id": 1,
+        "frame_index": 0,
+        "model_box_xyxy_half_open": [
+          181.944,
+          322.56,
+          722.0,
+          508.8
+        ],
+        "rounded_box_xyxy_half_open": [
+          181,
+          322,
+          722,
+          509
+        ],
+        "wire_box_xyxy_inclusive": [
+          181,
+          322,
+          721,
+          508
+        ],
+        "rounding_policy": "outward_floor_left_top_ceil_right_bottom_no_clipping"
+      }
+    ],
+    "reference_mask_passed_to_model": false,
+    "inherited_reference_mask_audit_reused": false,
+    "manual_seed_boxes_used": false,
+    "model_box_accuracy_verified": false
+  },
+  "request": {
+    "endpoint": "https://api.meta.ai/v1/responses",
+    "model": "sam-3.1",
+    "metadata": {
+      "mask_encoding": "one_bit",
+      "include_confidence": "true"
+    },
+    "stream": false,
+    "payload_sha256": "fa2e3aec4a55bb3ec6eb71a290ae5ad17bb4f11354579d7780f153a50d6a1964",
+    "transport_and_budget_owned_by_caller": true,
+    "object_prompt_text": "<0f>0<|box;x1=187;y1=487;x2=710;y2=701;w=722;h=960|>,1<|box;x1=181;y1=322;x2=721;y2=508;w=722;h=960|>",
+    "prompt_type": "model_generated_box_prompts"
+  },
+  "raw_response_sha256": "e10166c32d777c88358752e8e48e95ca989987fe6b078b08044bf8337879d613"
+}

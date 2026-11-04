@@ -1,0 +1,19 @@
+{
+  "automatic_approval": false,
+  "physical_accuracy_verified": false,
+  "reason": "Independently verify complaint: source crops show flat outer cap upward with Jabra text and in sample 76 a small red mark, no gold contacts visible. Baseline 00 and other gold-forward tiles show two gold dots upward, opposite to source. Among 24 automatic hypotheses, prefer negative gold-facing smooth-cap view. Candidate 23 shows smooth flat outer-cap surface with no gold dots in the photographed view, teardrop oval with only a small tucked stalk nub, best matching seated cap silhouette. Other smooth-cap candidates show distinctly protruding side stalk lobes or side-thickness views that do not match single-oval seated cap. Texture lacks logo/red mark but shape/facing is closest. Fallible visual preference only.",
+  "remaining_defects": [
+    "Generated texture lacks Jabra logo and red LED detail seen in source; cannot confirm appearance.",
+    "Isolated full-mesh render includes stalk nub that is occluded by case in source; seating occlusion not modeled.",
+    "Silhouette match is approximate under blur and low resolution; not metric seating proof.",
+    "Other smooth-cap candidates remain plausible from silhouette alone; selection is fallible preference."
+  ],
+  "selected_id": "23",
+  "source_cap_observations": [
+    "Source shows flat matte outer cap facing camera, not gold contacts.",
+    "Faint Jabra text visible on cap across samples.",
+    "Sample 76 shows small red dot on broad end of cap near case hinge.",
+    "Teardrop oval with tapered point to lower-left, broad rounded end to upper-right.",
+    "No gold charging dots visible on photographed surface in any of 75/76/77."
+  ]
+}

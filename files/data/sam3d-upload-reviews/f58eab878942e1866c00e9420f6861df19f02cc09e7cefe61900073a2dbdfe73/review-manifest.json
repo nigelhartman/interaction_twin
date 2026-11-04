@@ -1,0 +1,130 @@
+{
+  "format": "sam3d-initial-native-review",
+  "version": 2,
+  "fixture": false,
+  "native_only": true,
+  "component_id": "cable_connector",
+  "title": "Cable connector",
+  "source": {
+    "video_sha256": "1835410d17216b36642759a4a3aa488485f3d62c52df8920b56c58e7a50213b8",
+    "sample_index": 34,
+    "timestamp_s": 23.059567,
+    "source_case": "flow-capture-phone-20261103-v1",
+    "source_sample_index": 34,
+    "time_domain": "source_video_presentation_seconds"
+  },
+  "image_size": [
+    720,
+    960
+  ],
+  "native_glb_sha256": "87ec1e06556cdd1703ddc4620b3f00967b0c6cc9f9156571ce4b6ae60a4d59e8",
+  "native_up": "Y",
+  "mesh_stats": {
+    "bounds": [
+      [
+        -0.1192030981183052,
+        -0.5000626444816589,
+        -0.1438927799463272
+      ],
+      [
+        0.12110581248998642,
+        0.5001410245895386,
+        0.14532418549060822
+      ]
+    ],
+    "primitive_count": 1,
+    "rendered_vertices": 141804,
+    "faces": 283604,
+    "appearance_modes": [
+      "vertex_rgb"
+    ],
+    "rendering_policy": "unlit base color; embedded images/UVs/node transforms preserved; PBR physics not simulated"
+  },
+  "appearance": "official notebook defaults: model-generated vertex colour and coloured Gaussian splat; UV texture baking disabled",
+  "files": [
+    {
+      "path": "candidate-geometry.bin",
+      "sha256": "7c48baea9cc230081090166557d87c007277c7e34f58b8a7ad593d0a75d6d304",
+      "bytes": 11344272
+    },
+    {
+      "path": "candidate-scene.json",
+      "sha256": "a7f39c83244f9de58cc4cc405baefb32bb57bc566473deb663b165850c8dbfe6",
+      "bytes": 1659
+    },
+    {
+      "path": "candidate.glb",
+      "sha256": "87ec1e06556cdd1703ddc4620b3f00967b0c6cc9f9156571ce4b6ae60a4d59e8",
+      "bytes": 5673096
+    },
+    {
+      "path": "mask-overlay.png",
+      "sha256": "2506498849703684e0174132235917344affc89be380a07074ce4dca64131baa",
+      "bytes": 3023
+    },
+    {
+      "path": "model-metadata.json",
+      "sha256": "9d551dc34f99f5b2ab768c3380781615242ca4a456ef4617ce2a0503c41ca4a7",
+      "bytes": 15783
+    },
+    {
+      "path": "source-mask.png",
+      "sha256": "021b9beda5d6612eeba5ad37eed249be4d5e664d3fec4ab0535b052f2f8b89fb",
+      "bytes": 940
+    },
+    {
+      "path": "source-rgb.png",
+      "sha256": "7135817dbc4e955601648cc744fb899dbfbc39f6eb99f244432ff3e849e1ac08",
+      "bytes": 469722
+    }
+  ],
+  "initial_handoff": {
+    "path": "data/initial-sam3d-handoffs/upload-f050768f906f05e072a2be712575b316/handoff.json",
+    "sha256": "f58eab878942e1866c00e9420f6861df19f02cc09e7cefe61900073a2dbdfe73",
+    "bytes": 2512
+  },
+  "import_receipt": {
+    "path": "data/sam3d-upload-jobs/f58eab878942e1866c00e9420f6861df19f02cc09e7cefe61900073a2dbdfe73/candidate/import.json",
+    "sha256": "c0ca47ba126fdf2d5aaf0307036a40cc0db30aced8da3d4babc97fab1645702b"
+  },
+  "scope": {
+    "baseline_required": false,
+    "original_geometry_modified": false,
+    "old_pose_reused": false,
+    "source_video_placement_established": false,
+    "physical_accuracy_verified": false,
+    "metric_scale_verified": false,
+    "assembly_verified": false,
+    "contact_verified": false,
+    "simulation_ready": false,
+    "selected": false,
+    "catalog_changed": false
+  },
+  "renderer": {
+    "shared_source_sha256": "b5e5ad7e2ff040d43886590da70b77ccbaa4cb804e983d47aaf68824514740d6",
+    "review_copy_sha256": "09c6e6f73d21256b2e7be403f767f5c641e32f54954bfde7b4f18d2c59f40c44",
+    "display_background": "neutral",
+    "display_clear_rgba": [
+      0.91,
+      0.93,
+      0.9,
+      1.0
+    ],
+    "native_up": "Y",
+    "geometry_or_material_changed": false,
+    "pbr_rendering": false,
+    "splat_rendering": false
+  },
+  "geometry_transport": {
+    "format": "lossless-native-geometry",
+    "version": 1,
+    "byte_order": "little",
+    "float_encoding": "ieee754-float64",
+    "index_encoding": "uint32",
+    "descriptor_bytes": 1659,
+    "geometry_bytes": 11344272,
+    "combined_scene_budget_bytes": 67108864,
+    "geometry_sha256": "7c48baea9cc230081090166557d87c007277c7e34f58b8a7ad593d0a75d6d304"
+  },
+  "execution_scope": "Genuine-result source bytes revalidated; standalone native candidate only. No physical validity or motion acceptance."
+}

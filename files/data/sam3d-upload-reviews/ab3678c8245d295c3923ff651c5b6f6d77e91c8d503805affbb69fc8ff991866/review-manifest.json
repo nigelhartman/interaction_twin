@@ -1,0 +1,130 @@
+{
+  "format": "sam3d-initial-native-review",
+  "version": 2,
+  "fixture": false,
+  "native_only": true,
+  "component_id": "power_cable",
+  "title": "Power cable",
+  "source": {
+    "video_sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+    "sample_index": 66,
+    "timestamp_s": 45.2328,
+    "source_case": "flow-capture-laptop-20261103-v1",
+    "source_sample_index": 66,
+    "time_domain": "source_video_presentation_seconds"
+  },
+  "image_size": [
+    722,
+    960
+  ],
+  "native_glb_sha256": "8e1918ba6fceb89fd1a4fa2adaf94f013c9e9281f3151d2b4250a3d9d7eb44b7",
+  "native_up": "Y",
+  "mesh_stats": {
+    "bounds": [
+      [
+        -0.11054006218910217,
+        -0.022659532725811005,
+        -0.4997718036174774
+      ],
+      [
+        0.0862618014216423,
+        0.016937116160988808,
+        0.4914715886116028
+      ]
+    ],
+    "primitive_count": 1,
+    "rendered_vertices": 5154,
+    "faces": 10300,
+    "appearance_modes": [
+      "vertex_rgb"
+    ],
+    "rendering_policy": "unlit base color; embedded images/UVs/node transforms preserved; PBR physics not simulated"
+  },
+  "appearance": "official notebook defaults: model-generated vertex colour and coloured Gaussian splat; UV texture baking disabled",
+  "files": [
+    {
+      "path": "candidate-geometry.bin",
+      "sha256": "0a1fd4dc452edaf695640ff969c32c62e3bb6b3c154d4dbd06db60054a6c7804",
+      "bytes": 412224
+    },
+    {
+      "path": "candidate-scene.json",
+      "sha256": "7c9a41bc947debdb1fe87f1fe897fce5d7bf0f083cac173f27e4b6176bdd88b0",
+      "bytes": 1645
+    },
+    {
+      "path": "candidate.glb",
+      "sha256": "8e1918ba6fceb89fd1a4fa2adaf94f013c9e9281f3151d2b4250a3d9d7eb44b7",
+      "bytes": 207032
+    },
+    {
+      "path": "mask-overlay.png",
+      "sha256": "f97139f485b8d995cd41631dda607de3d5537493cbc0afb82607cef4ffb52b5c",
+      "bytes": 3930
+    },
+    {
+      "path": "model-metadata.json",
+      "sha256": "435ffcb4a5fb0204f2d0cf81bbba70e151c0eade55dfccfaa7eb78640d38a186",
+      "bytes": 15795
+    },
+    {
+      "path": "source-mask.png",
+      "sha256": "16a6bfdfcc4bc9b389a3fe4a707eb39a35751d4a1e148ae8d9f9f5f08e160043",
+      "bytes": 1629
+    },
+    {
+      "path": "source-rgb.png",
+      "sha256": "c0d0936ad43381de5ec24547382b07ecfb0bc7114ad3480844852a94fbc0c226",
+      "bytes": 205569
+    }
+  ],
+  "initial_handoff": {
+    "path": "data/initial-sam3d-handoffs/upload-5de5a6f28e0dbad8e3e33c462a92c4bf/handoff.json",
+    "sha256": "ab3678c8245d295c3923ff651c5b6f6d77e91c8d503805affbb69fc8ff991866",
+    "bytes": 2510
+  },
+  "import_receipt": {
+    "path": "data/sam3d-upload-jobs/ab3678c8245d295c3923ff651c5b6f6d77e91c8d503805affbb69fc8ff991866/candidate/import.json",
+    "sha256": "c2cbf603cc58d196ac1296b48ae4b57193722ecfd205ea2899dd71420f359dc7"
+  },
+  "scope": {
+    "baseline_required": false,
+    "original_geometry_modified": false,
+    "old_pose_reused": false,
+    "source_video_placement_established": false,
+    "physical_accuracy_verified": false,
+    "metric_scale_verified": false,
+    "assembly_verified": false,
+    "contact_verified": false,
+    "simulation_ready": false,
+    "selected": false,
+    "catalog_changed": false
+  },
+  "renderer": {
+    "shared_source_sha256": "b5e5ad7e2ff040d43886590da70b77ccbaa4cb804e983d47aaf68824514740d6",
+    "review_copy_sha256": "09c6e6f73d21256b2e7be403f767f5c641e32f54954bfde7b4f18d2c59f40c44",
+    "display_background": "neutral",
+    "display_clear_rgba": [
+      0.91,
+      0.93,
+      0.9,
+      1.0
+    ],
+    "native_up": "Y",
+    "geometry_or_material_changed": false,
+    "pbr_rendering": false,
+    "splat_rendering": false
+  },
+  "geometry_transport": {
+    "format": "lossless-native-geometry",
+    "version": 1,
+    "byte_order": "little",
+    "float_encoding": "ieee754-float64",
+    "index_encoding": "uint32",
+    "descriptor_bytes": 1645,
+    "geometry_bytes": 412224,
+    "combined_scene_budget_bytes": 67108864,
+    "geometry_sha256": "0a1fd4dc452edaf695640ff969c32c62e3bb6b3c154d4dbd06db60054a6c7804"
+  },
+  "execution_scope": "Genuine-result source bytes revalidated; standalone native candidate only. No physical validity or motion acceptance."
+}

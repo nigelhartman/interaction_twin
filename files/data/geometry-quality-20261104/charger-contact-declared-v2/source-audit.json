@@ -1,0 +1,159 @@
+{
+  "baseline_scene_ref": {
+    "bytes": 260313,
+    "path": "data/tracking-recoveries/charger-20261103-v1/mask-refit-v1/constrained/scene.json",
+    "sha256": "d69041ae6ab91973397e4e3b4aef476a1df261b5bb5206ddcf8b5e3aa058b8df"
+  },
+  "excluded_nonrigid_component_ids": [
+    "power_cable"
+  ],
+  "format": "interaction-twin-geometry-source-audit",
+  "geometry_report_ref": {
+    "bytes": 6405,
+    "path": "data/geometry-quality-20261104/charger-contact-gauge-v1/geometry-report.json",
+    "sha256": "2dc776265946d636f1c7f643d299e171e208c30491dfc111970aa76e90d6a28d"
+  },
+  "heldout_scope": "These masks were excluded from global contact-gauge choice; existing baseline poses/masks were prior inferred inputs. This checks projection identity, not physical validity.",
+  "manual_geometry_or_poses_used": false,
+  "physical_accuracy_verified": false,
+  "raster_policy": "Rigid full-triangle union only; precisely power_cable is omitted because its hash-bound nonrigid sidecar withholds rigid scene replay. Both before and after use identical IDs.",
+  "raster_validation_component_ids": [
+    "adapter_early",
+    "adapter_late",
+    "wall_outlet"
+  ],
+  "render_component_ids": [
+    "adapter_early",
+    "adapter_late",
+    "wall_outlet"
+  ],
+  "source_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c",
+  "summary": {
+    "default_eligible": true,
+    "geometric_gates_passed": true,
+    "physical_accuracy_verified": false,
+    "source_pixel_gates_passed": true
+  },
+  "validation_samples": [
+    {
+      "after_union_iou": 0.7645466847090663,
+      "before_union_iou": 0.7645466847090663,
+      "raster": {
+        "K": [
+          [
+            214.70132580760657,
+            0.0,
+            106.98148751918833
+          ],
+          [
+            0.0,
+            214.866521945759,
+            143.5458474819596
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "height": 288,
+        "width": 215
+      },
+      "render_component_ids": [
+        "adapter_early",
+        "adapter_late",
+        "wall_outlet"
+      ],
+      "retained": true,
+      "role": "heldout",
+      "sample_index": 48,
+      "source_mask_refs": [
+        {
+          "artifact": {
+            "bytes": 1346,
+            "path": "data/tracking-recoveries/charger-20261103-v1/sam-correction-v2/attempt/result/instance-000019-mask.png",
+            "sha256": "0fb3fa7d6c790146122c00d8b03f5b57412276749d98d6541fac457f795420fe"
+          },
+          "component_id": "adapter_late"
+        },
+        {
+          "artifact": {
+            "bytes": 1366,
+            "path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000048.png",
+            "sha256": "14dc7e96d89498b47badc208b3394db03bef32aa1af5632b5fc76284f83b1410"
+          },
+          "component_id": "wall_outlet"
+        }
+      ],
+      "source_rgb_ref": {
+        "bytes": 57611,
+        "path": "data/flow-capture-charger-20261103-v1/frames/000048.jpg",
+        "sha256": "9fb406ce63b7780f0826c391c263792d7b7b89124c9e304d8740946bb79869c7"
+      }
+    },
+    {
+      "after_union_iou": 0.7952485151609878,
+      "before_union_iou": 0.7952485151609878,
+      "raster": {
+        "K": [
+          [
+            214.70132580760657,
+            0.0,
+            106.98148751918833
+          ],
+          [
+            0.0,
+            214.866521945759,
+            143.5458474819596
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "height": 288,
+        "width": 215
+      },
+      "render_component_ids": [
+        "adapter_early",
+        "adapter_late",
+        "wall_outlet"
+      ],
+      "retained": true,
+      "role": "heldout",
+      "sample_index": 60,
+      "source_mask_refs": [
+        {
+          "artifact": {
+            "bytes": 1425,
+            "path": "data/tracking-recoveries/charger-20261103-v1/sam-correction-v2/attempt/result/instance-000031-mask.png",
+            "sha256": "d563d3f7113c6ab1dbd7ea417b2af9d567f6ec7fa7d3959aba09e21ab671a076"
+          },
+          "component_id": "adapter_late"
+        },
+        {
+          "artifact": {
+            "bytes": 1830,
+            "path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000060.png",
+            "sha256": "01e44b231e1faab90090c53b891d615815881015c3b1f1c48f1eba3378bd74e9"
+          },
+          "component_id": "wall_outlet"
+        }
+      ],
+      "source_rgb_ref": {
+        "bytes": 82698,
+        "path": "data/flow-capture-charger-20261103-v1/frames/000060.jpg",
+        "sha256": "c8d0b23782229aac523dbfe116ae833469595839572b445b2ac767ae34b781a8"
+      }
+    }
+  ],
+  "version": 1,
+  "visual_review_refs": [
+    {
+      "bytes": 823,
+      "path": "data/geometry-quality-20261104/charger-contact-declared-v1/visual-review.json",
+      "sha256": "652a9d2391c4991402e94493f8d1620557dbfa5b15d4c4f10f281414fb078e44"
+    }
+  ]
+}

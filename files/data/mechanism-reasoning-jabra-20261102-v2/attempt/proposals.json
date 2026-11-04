@@ -1,0 +1,264 @@
+{
+  "format": "sam3d-mechanism-proposals",
+  "version": 1,
+  "source_sha256": "7474ebd9d06c55b63fc073f632e71e5125353ace2538fa7bcf632cfdc1c3d0f2",
+  "interaction_sha256": "05c2f4d93243179013f775bb6832ed66afb4f0d3ec6cc91453e0204e2bafe85a",
+  "interaction_path": "data/flow-sam3d-default-e2e-20261102-v1/flow-procedure-1/interaction.json",
+  "coordinate_system": "source_image_pixels_origin_upper_left_y_down",
+  "title": "Charging case with hinged lid and two removable earbuds - conservative",
+  "joints": [
+    {
+      "attachment": "persistent",
+      "child_id": "case_lid",
+      "confidence": "medium",
+      "evidence_ids": [
+        "source_000001",
+        "source_000021",
+        "source_000028",
+        "source_000094",
+        "source_000101"
+      ],
+      "hinge_hints": [
+        {
+          "evidence_id": "source_000021",
+          "source_sample_index": 21,
+          "timestamp_s": 6.667256,
+          "image_width": 540,
+          "image_height": 960,
+          "endpoints_px": [
+            [
+              134.75,
+              364.42
+            ],
+            [
+              334.18,
+              383.6
+            ]
+          ],
+          "uncertainty_px": 76.8,
+          "confidence": "low",
+          "normalized_hint": {
+            "confidence": "low",
+            "endpoint_a_normalized": [
+              0.25,
+              0.38
+            ],
+            "endpoint_b_normalized": [
+              0.62,
+              0.4
+            ],
+            "evidence_id": "source_000021",
+            "uncertainty_normalized": 0.08
+          }
+        },
+        {
+          "evidence_id": "source_000028",
+          "source_sample_index": 28,
+          "timestamp_s": 9.000789,
+          "image_width": 540,
+          "image_height": 960,
+          "endpoints_px": [
+            [
+              167.09,
+              412.37
+            ],
+            [
+              355.74,
+              412.37
+            ]
+          ],
+          "uncertainty_px": 67.2,
+          "confidence": "low",
+          "normalized_hint": {
+            "confidence": "low",
+            "endpoint_a_normalized": [
+              0.31,
+              0.43
+            ],
+            "endpoint_b_normalized": [
+              0.66,
+              0.43
+            ],
+            "evidence_id": "source_000028",
+            "uncertainty_normalized": 0.07
+          }
+        }
+      ],
+      "id": "j1_case_base_case_lid",
+      "joint_type": "revolute",
+      "limitations": [
+        "lid-base boundary merged while closed in source_000001 and source_000101",
+        "hinge seam partly occluded by hand and shadow in open views",
+        "exact pivot axis not visible, 2D hints are uncertain image estimates only"
+      ],
+      "parent_id": "case_base",
+      "rationale": "Lid remains attached to base while seen closed as single block and open with visible separation, indicating persistent hinged connection rather than removal. Different open states observed.",
+      "state_hints": [
+        {
+          "evidence_id": "source_000001",
+          "source_sample_index": 1,
+          "timestamp_s": 0.0,
+          "image_width": 540,
+          "image_height": 960,
+          "state": "closed"
+        },
+        {
+          "evidence_id": "source_000021",
+          "source_sample_index": 21,
+          "timestamp_s": 6.667256,
+          "image_width": 540,
+          "image_height": 960,
+          "state": "open"
+        },
+        {
+          "evidence_id": "source_000028",
+          "source_sample_index": 28,
+          "timestamp_s": 9.000789,
+          "image_width": 540,
+          "image_height": 960,
+          "state": "open"
+        },
+        {
+          "evidence_id": "source_000094",
+          "source_sample_index": 94,
+          "timestamp_s": 31.002722,
+          "image_width": 540,
+          "image_height": 960,
+          "state": "open"
+        },
+        {
+          "evidence_id": "source_000101",
+          "source_sample_index": 101,
+          "timestamp_s": 33.336256,
+          "image_width": 540,
+          "image_height": 960,
+          "state": "closed"
+        }
+      ]
+    },
+    {
+      "attachment": "removable",
+      "child_id": "earbud_a",
+      "confidence": "medium",
+      "evidence_ids": [
+        "source_000028",
+        "source_000036",
+        "source_000057"
+      ],
+      "hinge_hints": [],
+      "id": "j2_case_base_earbud_a",
+      "joint_type": "removable",
+      "limitations": [
+        "identical appearance to earbud_b, left-right swap possible",
+        "inserted seating contact not verifiable, occlusion by hand",
+        "tracklet identity is model proposal only"
+      ],
+      "parent_id": "case_base",
+      "rationale": "Same component type seen seated inside case cavities and later lying separate on table, indicating removable containment, not a persistent hinge.",
+      "state_hints": [
+        {
+          "evidence_id": "source_000028",
+          "source_sample_index": 28,
+          "timestamp_s": 9.000789,
+          "image_width": 540,
+          "image_height": 960,
+          "state": "inserted"
+        },
+        {
+          "evidence_id": "source_000036",
+          "source_sample_index": 36,
+          "timestamp_s": 11.667689,
+          "image_width": 540,
+          "image_height": 960,
+          "state": "removed"
+        },
+        {
+          "evidence_id": "source_000057",
+          "source_sample_index": 57,
+          "timestamp_s": 18.668311,
+          "image_width": 540,
+          "image_height": 960,
+          "state": "removed"
+        }
+      ]
+    },
+    {
+      "attachment": "removable",
+      "child_id": "earbud_b",
+      "confidence": "medium",
+      "evidence_ids": [
+        "source_000021",
+        "source_000054",
+        "source_000057"
+      ],
+      "hinge_hints": [],
+      "id": "j3_case_base_earbud_b",
+      "joint_type": "removable",
+      "limitations": [
+        "identical appearance to earbud_a, identity assignment is proposal only",
+        "occluded inside case and by fingers, seating not verifiable",
+        "coarse sampling"
+      ],
+      "parent_id": "case_base",
+      "rationale": "Component seen inside case in open views and later outside case on table with empty cavities visible, indicating removable placement.",
+      "state_hints": [
+        {
+          "evidence_id": "source_000021",
+          "source_sample_index": 21,
+          "timestamp_s": 6.667256,
+          "image_width": 540,
+          "image_height": 960,
+          "state": "inserted"
+        },
+        {
+          "evidence_id": "source_000054",
+          "source_sample_index": 54,
+          "timestamp_s": 17.668222,
+          "image_width": 540,
+          "image_height": 960,
+          "state": "removed"
+        },
+        {
+          "evidence_id": "source_000057",
+          "source_sample_index": 57,
+          "timestamp_s": 18.668311,
+          "image_width": 540,
+          "image_height": 960,
+          "state": "removed"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "All classifications and states are fallible proposals, not verified physical facts.",
+    "Earbud_a vs earbud_b identity swap possible throughout; identical black appearance.",
+    "Lid-base boundary uncertain while closed; hinge seam occluded in many views.",
+    "No persistence inferred between samples or through occlusion.",
+    "Hinge endpoints are uncertain 2D image hints only, not 3D axes or limits.",
+    "Masks are silhouettes only; citations use RGB images only."
+  ],
+  "physical_accuracy_verified": false,
+  "simulation_ready": false,
+  "robot_execution_available": false,
+  "reasoning": {
+    "provider": "meta_api",
+    "model": "muse-spark-1.3",
+    "inference_location": "hosted_Meta_Model_API",
+    "request_key": "54d67c9132baa20402f4edc01d3902822ee683bd1401be46f6fd979d492b440b",
+    "plan_path": "data/mechanism-reasoning-jabra-20261102-v2/plan.json",
+    "plan_sha256": "33b2915f9beaec3bd90be0b3c533a78fc881dd67b26813cffcaa60ddceadf669",
+    "model_result_path": "data/mechanism-reasoning-jabra-20261102-v2/attempt/model-result.json",
+    "model_result_sha256": "d24599b7bdab14911a6b320a9050a88ea4c2243d654ad468acec07a2007b8198",
+    "request_receipt": "data/mechanism-reasoning-jabra-20261102-v2/attempt/request/meta-request.json",
+    "estimated_cost_usd": "0.139622",
+    "usage": {
+      "input_tokens": 99838,
+      "output_tokens": 3488,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 2562,
+      "billable_output_tokens": 3488
+    },
+    "human_reviewed": false,
+    "geometric_joint_fit_performed": false
+  }
+}

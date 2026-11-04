@@ -1,0 +1,126 @@
+{
+  "source_sample_index": 6,
+  "timestamp_s": 3.496078,
+  "status": "source_observed_prior",
+  "reason": "exact_source_visible_component_union_with_CPU_monocular_depth_prior",
+  "source_RGB": {
+    "path": "data/flow-capture-phone-20261103-v1/frames/000006.jpg",
+    "sha256": "8c0409f7548479e8bb67a572d0cde059d4c73ab1bf9ce346c262ae18b577058d",
+    "bytes": 51475
+  },
+  "source_masks": [
+    {
+      "track_id": "phone_blue",
+      "path": "data/flow-capture-phone-20261103-v1/segmentation/flow-components-1/raw_masks/phone_blue/000006.png",
+      "sha256": "f66d5a2e5fede7d3d190179e826e17791ed8b78c6eb0dea60a7138eb3d7a9490",
+      "bytes": 1713
+    }
+  ],
+  "source_grid_stride_px": 3,
+  "depth_model": {
+    "name": "Ruicheng/moge-2-vits-normal",
+    "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+    "device": "cpu",
+    "input_dimensions": [
+      336,
+      448
+    ],
+    "num_tokens": 600
+  },
+  "depth_prior_model_intrinsics": [
+    [
+      0.904583215713501,
+      0.0,
+      0.5
+    ],
+    [
+      0.0,
+      0.6784374117851257,
+      0.5
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "valid_mask_depth_fraction": 1.0,
+  "depth_scale_gauge": 2.006267466123832,
+  "native_prior_translation_z": 1.4428786528147735,
+  "vertices": 1269,
+  "triangles": 2292,
+  "triangles_pruned_by_unknown_pixel_footprint": 6,
+  "visible_component_ids": [
+    "phone_blue"
+  ],
+  "component_surface_support": [
+    {
+      "component_id": "phone_blue",
+      "source_supported_triangle_count": 2292
+    },
+    {
+      "component_id": "cable_connector",
+      "source_supported_triangle_count": 0
+    }
+  ],
+  "wall_seconds": 0.27418787498027086,
+  "physical_accuracy_verified": false,
+  "asset": {
+    "path": "data/source-visible-flexure/phone-20261104-v2/source-006/observed-surface.glb",
+    "sha256": "910289b172a4af966c865efb5068f560ec87d5188175a9b879cdbf9201814e78",
+    "bytes": 111560
+  },
+  "source_pixel_map": {
+    "path": "data/source-visible-flexure/phone-20261104-v2/source-006/source-pixel-map.npz",
+    "sha256": "5910aeb3ec46546004cf5c5b91064af2fd4a2299a338219bcf2d7dedf0f9c16a",
+    "bytes": 15848
+  },
+  "camera_from_asset": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "source_visible_only": true,
+  "triangle_source_footprint_verified": true,
+  "hidden_backs_culled": true,
+  "unlit_exact_vertex_RGB": true,
+  "appearance_mode": "exact_source_JPEG_projected_UV",
+  "texture_source_RGB": {
+    "path": "data/flow-capture-phone-20261103-v1/frames/000006.jpg",
+    "sha256": "8c0409f7548479e8bb67a572d0cde059d4c73ab1bf9ce346c262ae18b577058d",
+    "bytes": 51475
+  },
+  "sampled_source_RGB_attribute": "_SOURCE_RGB",
+  "vertex_RGB_multiplied_into_texture": false,
+  "virtual_flexure": {
+    "type": "no_joint_recovered_by_observation",
+    "status": "unknown",
+    "origin_camera": null,
+    "axis_camera": null,
+    "angle_rad": null,
+    "reason": "source_visible_surface_does_not_recover_physical_joint_or_rigid_contact"
+  },
+  "new_API_calls": 0,
+  "new_GPU_calls": 0
+}

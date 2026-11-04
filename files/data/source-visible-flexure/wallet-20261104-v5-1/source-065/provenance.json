@@ -1,0 +1,177 @@
+{
+  "source_sample_index": 65,
+  "timestamp_s": 21.501889,
+  "status": "source_observed_prior",
+  "native_closed_asset_preserved": {
+    "path": "data/sam3d-native-candidates-20261102/wallet-holder-v1/asset.glb",
+    "sha256": "ee809bb3ec9a63c928e5317001840454f585d9fd4632f2aef6ffad2cef367456",
+    "bytes": 15706696
+  },
+  "qualitative_state": {
+    "wallet_state": "unreviewed",
+    "pouch_flap_state": "unreviewed"
+  },
+  "reason": "exact_source_contour_adaptive_mesh_with_cached_estimated_depth_not_new_inference",
+  "asset": {
+    "path": "data/source-visible-flexure/wallet-20261104-v5-1/source-065/observed-surface.glb",
+    "sha256": "aefa38c34aaac3ea4575f435dda45df3fd2e6054bb478a3961052c5f018ae05f",
+    "bytes": 87820
+  },
+  "source_RGB": {
+    "path": "data/flow-rigid-parts-wallet-20261031-v1/frames/000065.jpg",
+    "sha256": "2b0eeee55887a878ae40ce24c97b0c5add6a113675c29a7dc92741061e5d950d",
+    "bytes": 16265
+  },
+  "source_masks": [
+    {
+      "track_id": "wallet_holder",
+      "path": "data/flow-rigid-parts-wallet-20261031-v1/segmentation/flow-components-1/raw_masks/wallet_holder/000065.png",
+      "sha256": "53956901e94f7201df38932ab4a1d42a06357dc73299bcf0620d6cd108cf8eb0",
+      "bytes": 1729
+    },
+    {
+      "track_id": "pouch_flap",
+      "path": "data/flow-rigid-parts-wallet-20261031-v1/segmentation/flow-components-1/raw_masks/pouch_flap/000065.png",
+      "sha256": "398fde3751395361b29f8ce2c752a3eb7c226373fb8af3505436caa95dfffa66",
+      "bytes": 584
+    },
+    {
+      "track_id": "gold_coin",
+      "path": "data/flow-rigid-parts-wallet-20261031-v1/segmentation/flow-components-1/raw_masks/gold_coin/000065.png",
+      "sha256": "398fde3751395361b29f8ce2c752a3eb7c226373fb8af3505436caa95dfffa66",
+      "bytes": 584
+    }
+  ],
+  "source_pixel_map": {
+    "path": "data/source-visible-flexure/wallet-20261104-v5-1/source-065/source-pixel-map.npz",
+    "sha256": "be8bf480438c115a237c0b4bdc77990169b01a8f41f0cdeb107ddcea99b13f34",
+    "bytes": 27766
+  },
+  "source_grid_stride_px": 7,
+  "camera_from_asset": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "vertices": 1471,
+  "triangles": 2844,
+  "source_visible_only": true,
+  "virtual_flexure": {
+    "format": "interaction-twin-virtual-flexure-parameters",
+    "type": "virtual_flexure_band",
+    "status": "unknown",
+    "origin_camera": null,
+    "axis_camera": null,
+    "angle_rad": null,
+    "reason": "monocular_prior_does_not_identifiably_recover_material_joint_or_fold_axis",
+    "angle_is_measured": false,
+    "physical_accuracy_verified": false
+  },
+  "wall_seconds": 0.08809504198143259,
+  "new_API_calls": 0,
+  "new_GPU_calls": 0,
+  "physical_accuracy_verified": false,
+  "depth_model": {
+    "name": "Ruicheng/moge-2-vits-normal",
+    "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+    "device": "cpu"
+  },
+  "triangle_source_footprint_verified": true,
+  "hidden_backs_culled": true,
+  "unlit_exact_vertex_RGB": true,
+  "visible_component_ids": [
+    "wallet_holder"
+  ],
+  "appearance_mode": "exact_source_JPEG_projected_UV",
+  "texture_source_RGB": {
+    "path": "data/flow-rigid-parts-wallet-20261031-v1/frames/000065.jpg",
+    "sha256": "2b0eeee55887a878ae40ce24c97b0c5add6a113675c29a7dc92741061e5d950d",
+    "bytes": 16265
+  },
+  "sampled_source_RGB_attribute": "_SOURCE_RGB",
+  "vertex_RGB_multiplied_into_texture": false,
+  "source_footprint_proof_version": 2,
+  "cached_depth_parent_map": {
+    "path": "data/source-visible-flexure/wallet-20261104-v4/source-065/source-pixel-map.npz",
+    "sha256": "f2bf38e9a44273389ce0dd2deeaf96f58d954d0b32e13adb7eeea9a87b2a258e",
+    "bytes": 19765
+  },
+  "depth_sampling": {
+    "maximum_nearest_sampling_distance_px": 12.0,
+    "maximum_interpolation_parent_edge_px": 15.0,
+    "method": "cached_monocular_prior_barycentric_or_bounded_nearest_not_measured_depth",
+    "parent_grid_stride_px": 6
+  },
+  "adaptive_mesh_policy": {
+    "contour_approximation_epsilon_px": 0.0,
+    "contour_vertices": 335,
+    "interior_grid_stride_px": 7,
+    "source_points_before_triangle_pruning": 1471,
+    "maximum_nearest_sampling_distance_px": 12.0,
+    "maximum_interpolation_parent_edge_px": 15.0,
+    "fixed_maximum_vertices": 1800,
+    "triangles_rejected": 15,
+    "source_footprint_proof_version": 2,
+    "source_footprint_rule": "all_unit_pixel_squares_intersecting_closed_triangle_inside_original_2px_SAM_core",
+    "vertex_placement_extra_inset_px": 1,
+    "depth_derivation": "cached_monocular_prior_barycentric_or_bounded_nearest_not_measured_depth",
+    "candidate_linear_depth_samples": 1217,
+    "candidate_nearest_depth_samples": 254,
+    "retained_linear_depth_samples": 1217,
+    "retained_nearest_depth_samples": 254
+  },
+  "new_CPU_depth_inference_calls": 0,
+  "component_surface_support": [
+    {
+      "component_id": "wallet_holder",
+      "source_supported_triangle_count": 2844
+    },
+    {
+      "component_id": "pouch_flap",
+      "source_supported_triangle_count": 0
+    }
+  ],
+  "cached_parent_depth_prior_model_intrinsics": [
+    [
+      1.7953752279281616,
+      0.0,
+      0.5
+    ],
+    [
+      0.0,
+      1.0098985433578491,
+      0.5
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "cached_parent_valid_mask_depth_fraction": 1.0,
+  "cached_parent_depth_scale_gauge": 2.750274297925609,
+  "cached_parent_native_prior_translation_z": 2.140979092672833,
+  "topology_refined_from_cached_depth": true,
+  "triangles_pruned_by_geometric_and_source_footprint_gates": 15
+}

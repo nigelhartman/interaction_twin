@@ -1,0 +1,1 @@
+globalThis.PhysicsBenchSource={"version":1,"replay":{"path":"showcase/public/physics/newton-contact-20261104-v1.json","sha256":"291ff83b0464973ff40f1be4962a1a6eb94b714d34784e7e9673f183a184b740","bytes":1044615}};

@@ -1,0 +1,200 @@
+{
+  "assets": [
+    {
+      "component_id": "case_base",
+      "derived_asset": {
+        "bytes": 13548504,
+        "path": "data/sam3d-upload-jobs/893536982b8b090066f9d9f99058d0bd9a52c3a08c0d9250ec012fbb8eef9535/candidate/asset.glb",
+        "sha256": "ec77850ef135f528de867009482bc9ad2b14e09a7cff3dfe3ad8e6455081622b"
+      },
+      "geometry_origin": "unchanged_SAM_3D_inference",
+      "input_asset": {
+        "bytes": 13548504,
+        "path": "data/sam3d-upload-jobs/893536982b8b090066f9d9f99058d0bd9a52c3a08c0d9250ec012fbb8eef9535/candidate/asset.glb",
+        "sha256": "ec77850ef135f528de867009482bc9ad2b14e09a7cff3dfe3ad8e6455081622b"
+      },
+      "operations": [],
+      "original_asset": {
+        "bytes": 13548504,
+        "path": "data/sam3d-upload-jobs/893536982b8b090066f9d9f99058d0bd9a52c3a08c0d9250ec012fbb8eef9535/candidate/asset.glb",
+        "sha256": "ec77850ef135f528de867009482bc9ad2b14e09a7cff3dfe3ad8e6455081622b"
+      }
+    },
+    {
+      "component_id": "case_lid",
+      "derived_asset": {
+        "bytes": 5810160,
+        "path": "data/assembly-refinements/jabra-rim-fit-20261103-final-v1/case-lid-derived.glb",
+        "sha256": "2bfab252110eb545848f9f200cd86e411f43c7b27bd81353cf9c133f67bdd4c3"
+      },
+      "geometry_origin": "inherited_approved_geometry_derivative",
+      "input_asset": {
+        "bytes": 5810160,
+        "path": "data/assembly-refinements/jabra-rim-fit-20261103-final-v1/case-lid-derived.glb",
+        "sha256": "2bfab252110eb545848f9f200cd86e411f43c7b27bd81353cf9c133f67bdd4c3"
+      },
+      "operations": [],
+      "original_asset": {
+        "bytes": 5810084,
+        "path": "data/sam3d-upload-jobs/17818e9da11034afcdb166d35cdf2be9a711336e3a7a510363d189b68c4e051a/candidate/asset.glb",
+        "sha256": "2ac614851e2c00d76fabd4aee09483703740eb6314fefbc2354a66244a6916ba"
+      }
+    },
+    {
+      "component_id": "earbud_a",
+      "derived_asset": {
+        "bytes": 11017684,
+        "path": "data/geometry-quality-20261104/jabra-temporary-seating-v1/observed-cap/asset.glb",
+        "sha256": "3eaec671270db14bf62faac8bb3e9718c2e6dcfb2e8d022a741eea0807d765fd"
+      },
+      "geometry_origin": "automatic_geometry_operation_chain",
+      "input_asset": {
+        "bytes": 11017608,
+        "path": "data/sam3d-native-candidates-20261101/earbud-a-v1/asset.glb",
+        "sha256": "5c9b75bdedccac030d8991c5e5db1f6389ccad679a574960dec7da9efd4c4b11"
+      },
+      "operations": [
+        {
+          "kind": "affine_positions",
+          "matrix": [
+            [
+              1.2585009577962563,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.2585009577962563,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.2585009577962563,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        {
+          "kind": "observed_surface_texture_projection",
+          "projection_report_ref": {
+            "bytes": 4445,
+            "path": "data/geometry-quality-20261104/jabra-temporary-seating-v1/observed-cap/projection-report.json",
+            "sha256": "89ee2e01ad93afb40d28796f2888a775caf96b098f4b2f49ffb89a484dda8039"
+          }
+        }
+      ],
+      "original_asset": {
+        "bytes": 11017608,
+        "path": "data/sam3d-native-candidates-20261101/earbud-a-v1/asset.glb",
+        "sha256": "5c9b75bdedccac030d8991c5e5db1f6389ccad679a574960dec7da9efd4c4b11"
+      }
+    },
+    {
+      "component_id": "earbud_b",
+      "derived_asset": {
+        "bytes": 11486232,
+        "path": "data/sam3d-upload-jobs/3ff517ec1749220c17bab0fa096aa7b94ec234de19307740f12865b57f9ba0c3/candidate/asset.glb",
+        "sha256": "a679735bbd787e8600cbc680a187ba88c358de6b1d2d516a2562d2125c266e8a"
+      },
+      "geometry_origin": "unchanged_SAM_3D_inference",
+      "input_asset": {
+        "bytes": 11486232,
+        "path": "data/sam3d-upload-jobs/3ff517ec1749220c17bab0fa096aa7b94ec234de19307740f12865b57f9ba0c3/candidate/asset.glb",
+        "sha256": "a679735bbd787e8600cbc680a187ba88c358de6b1d2d516a2562d2125c266e8a"
+      },
+      "operations": [],
+      "original_asset": {
+        "bytes": 11486232,
+        "path": "data/sam3d-upload-jobs/3ff517ec1749220c17bab0fa096aa7b94ec234de19307740f12865b57f9ba0c3/candidate/asset.glb",
+        "sha256": "a679735bbd787e8600cbc680a187ba88c358de6b1d2d516a2562d2125c266e8a"
+      }
+    }
+  ],
+  "base_object_program_ref": {
+    "bytes": 29722,
+    "path": "data/object-programs/auto-06f94599100e4d661ca4ca4bd97fc82bd37f259060767ec78c3a1d988ca12b67/object-program.json",
+    "sha256": "5a784152ab6787b9f9f71e9adca3ee57632544a496c017420afc030fcf6e28d0"
+  },
+  "baseline_scene_ref": {
+    "bytes": 562258,
+    "path": "data/assembly-refinements/jabra-source-refit-20261103-v2/scene.json",
+    "sha256": "149ab3645f009c3ad33a7d2845bd32328d117510bf77f5349d5afdd9b1c6d9f7"
+  },
+  "encoding_proof": {
+    "binary_length_unchanged": true,
+    "derivative_position_bytes_sha256": "f4724fb85793cfe1a8b9e982ffbe598d48fdda489226f79040e5f12d2044da1e",
+    "original_nonposition_binary_sha256": "fb73975a078ca674ac7d9b74d29d7b882a5e857f830ec6d15c409623b67d2158",
+    "original_position_bytes_sha256": "46716d09cbcaa2a80826163c6d0f3992cbfd77885060ab6c456263a8ab6a0870",
+    "topology_color_uv_material_image_bytes_preserved": true,
+    "unchanged_nonposition_binary_sha256": "fb73975a078ca674ac7d9b74d29d7b882a5e857f830ec6d15c409623b67d2158"
+  },
+  "format": "interaction-twin-geometry-derivative-report",
+  "kinematic_refinement": true,
+  "manual_geometry_or_poses_used": false,
+  "parent_derived_assembly_ref": {
+    "bytes": 27216,
+    "path": "data/assembly-refinements/jabra-source-refit-20261103-v2/derived-assembly.json",
+    "sha256": "d5e603a37f62bbd9d8c269f98bcd982d30d37de43b5cff8c5c4357337b95744f"
+  },
+  "physical_accuracy_verified": false,
+  "selection_plan_ref": {
+    "bytes": 5548,
+    "path": "data/geometry-quality-20261104/jabra-temporary-seating-v1/selection-plan.json",
+    "sha256": "4f7126e453f759df888df357ae530eac12bd27fa086a31b0743c18c0fd6aa10f"
+  },
+  "source_orientation_review_ref": {
+    "bytes": 858,
+    "path": "data/geometry-quality-20261104/jabra-earbud-orientation-v1/attempt/summary.json",
+    "sha256": "570daa9383cbe6e355be566f0be067da4af47d769594db4c446cf1b89ca54f5c"
+  },
+  "source_sha256": "7474ebd9d06c55b63fc073f632e71e5125353ace2538fa7bcf632cfdc1c3d0f2",
+  "temporary_attachments": [
+    {
+      "child_id": "earbud_a",
+      "parent_from_child": [
+        [
+          0.15239074036340472,
+          -0.35406170559039674,
+          -0.029515279075679024,
+          -0.3717894613632089
+        ],
+        [
+          0.11506408389564889,
+          0.018797798099209312,
+          0.36859283796199704,
+          -0.03307210005788974
+        ],
+        [
+          -0.3361414875640181,
+          -0.15408027853701195,
+          0.11279161722933295,
+          -0.1152617187467393
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_id": "case_base",
+      "physical_contact_verified": false,
+      "source_sample_indices": [
+        75,
+        76,
+        77,
+        78
+      ]
+    }
+  ],
+  "version": 1
+}

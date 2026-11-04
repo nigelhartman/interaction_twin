@@ -1,0 +1,690 @@
+{
+  "format": "interaction-twin-actual-mcp-workflow",
+  "version": 1,
+  "created_utc": "2026-11-03T19:49:24.573062+00:00",
+  "transport": "actual_official_sdk_subprocess_stdio",
+  "sdk": "mcp==2.3.0",
+  "workflow": "deterministic_scripted_client_not_live_llm",
+  "instruction": "Prepare a task to charge this phone.",
+  "source_recordings": 2,
+  "native_asset_bytes_verified": [
+    {
+      "twin_id": "flow-capture-phone-20261103-v1--flow-procedure-1",
+      "component_id": "cable_connector",
+      "sha256": "87ec1e06556cdd1703ddc4620b3f00967b0c6cc9f9156571ce4b6ae60a4d59e8",
+      "bytes": 5673096,
+      "uri": "twin://flow-capture-phone-20261103-v1--flow-procedure-1/assets/cable_connector"
+    },
+    {
+      "twin_id": "flow-capture-phone-20261103-v1--flow-procedure-1",
+      "component_id": "phone_blue",
+      "sha256": "384fcf3aeb759d32b87a399d1ef0b91e7570bc871ef5fb7e480542cb1fada544",
+      "bytes": 12741220,
+      "uri": "twin://flow-capture-phone-20261103-v1--flow-procedure-1/assets/phone_blue"
+    },
+    {
+      "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+      "component_id": "wall_outlet",
+      "sha256": "476967630214300899877caf98739ae9e2c738069bf47c715db10f8e7cdb2f12",
+      "bytes": 9358892,
+      "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/assets/wall_outlet"
+    },
+    {
+      "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+      "component_id": "adapter_early",
+      "sha256": "74635a414ec57bd5e92bbda01a9b55bb77a8e01152c97c53d8773f0abbf98636",
+      "bytes": 9009880,
+      "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/assets/adapter_early"
+    },
+    {
+      "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+      "component_id": "power_cable",
+      "sha256": "9d308a2d35d4b6eb63a6af7fdd71c9b440d6c41200416d2894d5e4aa33a0e147",
+      "bytes": 2431300,
+      "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/assets/power_cable"
+    },
+    {
+      "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+      "component_id": "adapter_late",
+      "sha256": "369ce5a10634764fac142c654571a5b9281e5379aa947e906619d7809b9f1287",
+      "bytes": 14253056,
+      "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/assets/adapter_late"
+    }
+  ],
+  "source_evidence_bytes_verified": [
+    {
+      "twin_id": "flow-capture-phone-20261103-v1--flow-procedure-1",
+      "evidence_id": "source_000034",
+      "timestamp_s": 23.059567,
+      "sha256": "fb4a5c3d2f5cbf16e27234eef9aa9c1f07c454adc14608f38cad5e54e940fb21",
+      "bytes": 50639,
+      "uri": "twin://flow-capture-phone-20261103-v1--flow-procedure-1/evidence/source_000034"
+    },
+    {
+      "twin_id": "flow-capture-phone-20261103-v1--flow-procedure-1",
+      "evidence_id": "source_000035",
+      "timestamp_s": 23.759444,
+      "sha256": "259bdaec9b8fae3ec90819d71d5fd02ceeb7038ab051876fddd48ceda5fc64ab",
+      "bytes": 51283,
+      "uri": "twin://flow-capture-phone-20261103-v1--flow-procedure-1/evidence/source_000035"
+    },
+    {
+      "twin_id": "flow-capture-phone-20261103-v1--flow-procedure-1",
+      "evidence_id": "source_000038",
+      "timestamp_s": 25.859078,
+      "sha256": "68a01034bef81f8f33bd09ca1b1813698a70bc6ba6f37b8ac6f4e792f041967d",
+      "bytes": 51502,
+      "uri": "twin://flow-capture-phone-20261103-v1--flow-procedure-1/evidence/source_000038"
+    },
+    {
+      "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+      "evidence_id": "source_000034",
+      "timestamp_s": 23.062989,
+      "sha256": "bf6f581f93f825bfec55033c961091869e1ea29abd97bea9999799b28999b5e5",
+      "bytes": 66366,
+      "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/evidence/source_000034"
+    },
+    {
+      "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+      "evidence_id": "source_000037",
+      "timestamp_s": 25.159378,
+      "sha256": "6d1df1d16b111c9c7acc5850474720e26cdc081dc3330dec8f0ad913bfaa6d34",
+      "bytes": 69076,
+      "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/evidence/source_000037"
+    },
+    {
+      "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+      "evidence_id": "source_000045",
+      "timestamp_s": 30.735211,
+      "sha256": "bddedf475c670397a850b687a4cd4c3515986853858a2cb2d36b8de38a62a7a7",
+      "bytes": 45343,
+      "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/evidence/source_000045"
+    },
+    {
+      "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+      "evidence_id": "source_000047",
+      "timestamp_s": 32.124911,
+      "sha256": "4cf7f4c2560d89806b5039f8bda731f7547d803480e2c5851b39f498508c83ee",
+      "bytes": 69194,
+      "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/evidence/source_000047"
+    },
+    {
+      "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+      "evidence_id": "source_000057",
+      "timestamp_s": 39.090567,
+      "sha256": "8b88f972971d449da218cb254d3a6314cffa82fe34a45ef7c02cf2d1cbe0a81e",
+      "bytes": 54027,
+      "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/evidence/source_000057"
+    },
+    {
+      "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+      "evidence_id": "source_000059",
+      "timestamp_s": 40.490378,
+      "sha256": "e58279679a875ee8eafcedb22102f079a0b5dc6947087d62fb70c585686187ef",
+      "bytes": 84655,
+      "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/evidence/source_000059"
+    }
+  ],
+  "total_native_download_bytes": 53467444,
+  "original_program_file_bytes_included": false,
+  "program_resource_encoding": "MCP JSON serialization; source program SHA remains declared original binding",
+  "task_draft_sha256": "861471a37f605aae26e859fbe9a108db43622f4535ab64542d53e3c43faac1e6",
+  "calls": [
+    {
+      "sequence": 1,
+      "method": "tools/list",
+      "started_at": "2026-11-03T19:49:15.131197+00:00",
+      "elapsed_s": 0.003098791989032179,
+      "sdk_result_json_sha256": "0d2fe25f2517fd3c45e502dae11cce7943ef7618040785f3152d6d1ff3fc4aad",
+      "tools": [
+        "describe_twin",
+        "export_robot_task_bundle",
+        "get_asset",
+        "get_connection_interfaces",
+        "get_evidence",
+        "get_generated_candidate",
+        "get_kinematics",
+        "get_library_facets",
+        "get_motion_experiment",
+        "get_procedure",
+        "get_reconstruction",
+        "get_reconstruction_report",
+        "get_robot_kit",
+        "get_simulation_manifest",
+        "list_motion_experiments",
+        "list_reconstructions",
+        "list_robot_kits",
+        "plan_robot_task",
+        "prepare_cross_recording_task",
+        "query_state",
+        "search_twins",
+        "validate_robot_task"
+      ]
+    },
+    {
+      "sequence": 2,
+      "method": "tools/call",
+      "name": "search_twins",
+      "arguments": {
+        "query": "phone",
+        "limit": 25
+      },
+      "started_at": "2026-11-03T19:49:15.134568+00:00",
+      "elapsed_s": 0.05433958297362551,
+      "sdk_result_json_sha256": "59c6d8de9760ed2e0cd2058986ab562838e20c89d3deab6a312c9a869ab1eb76",
+      "is_error": false,
+      "structured_response_sha256": "bd55fb77700fcc45162002ce5a5c111127ce79644068afbefd68a0e460273d7e"
+    },
+    {
+      "sequence": 3,
+      "method": "tools/call",
+      "name": "search_twins",
+      "arguments": {
+        "query": "charger",
+        "limit": 25
+      },
+      "started_at": "2026-11-03T19:49:15.189121+00:00",
+      "elapsed_s": 0.008587584015913308,
+      "sdk_result_json_sha256": "108d55d51ac142ba70e59dd3cdc6243fee9208348bbb9827daa6ab81391b0b9a",
+      "is_error": false,
+      "structured_response_sha256": "18ded73740e31862dd196e957da18f87d0e981bc542b7d133ea992e0c909136a"
+    },
+    {
+      "sequence": 4,
+      "method": "tools/call",
+      "name": "describe_twin",
+      "arguments": {
+        "twin_id": "flow-capture-phone-20261103-v1--flow-procedure-1"
+      },
+      "started_at": "2026-11-03T19:49:15.197945+00:00",
+      "elapsed_s": 0.2991664159926586,
+      "sdk_result_json_sha256": "c969aedab1ca26d402205c0f6bd5114c4f9a255a20a8dd28358646effc908d1b",
+      "is_error": false,
+      "structured_response_sha256": "e84846918d4e6580b147649c441280585df1bd7db1f16006695034f258a45251"
+    },
+    {
+      "sequence": 5,
+      "method": "resources/read",
+      "uri": "twin://flow-capture-phone-20261103-v1--flow-procedure-1/program",
+      "started_at": "2026-11-03T19:49:15.497289+00:00",
+      "elapsed_s": 0.09631766600068659,
+      "mime_type": "application/json",
+      "content_kind": "text",
+      "decoded_bytes": 50333,
+      "decoded_sha256": "ada41b72e95f6c368ff89d975e793a9510e6f8d7cb30344ed469807f284c1b6e"
+    },
+    {
+      "sequence": 6,
+      "method": "tools/call",
+      "name": "get_procedure",
+      "arguments": {
+        "twin_id": "flow-capture-phone-20261103-v1--flow-procedure-1"
+      },
+      "started_at": "2026-11-03T19:49:15.593754+00:00",
+      "elapsed_s": 0.07897662499453872,
+      "sdk_result_json_sha256": "91448999c71c0b5b6b3c018d16000d695c3cba00b3ca9209c3582379ff324268",
+      "is_error": false,
+      "structured_response_sha256": "563e232bf2d884481fe1d69ecee6119e41fa8fdede17bc66a43c921fa3f49710"
+    },
+    {
+      "sequence": 7,
+      "method": "tools/call",
+      "name": "get_connection_interfaces",
+      "arguments": {
+        "twin_id": "flow-capture-phone-20261103-v1--flow-procedure-1"
+      },
+      "started_at": "2026-11-03T19:49:15.672958+00:00",
+      "elapsed_s": 0.09426195797277614,
+      "sdk_result_json_sha256": "aeed8ec97a28d7d8b84ab79afab7711c6aa5363777a0739188dec740b6389d35",
+      "is_error": false,
+      "structured_response_sha256": "05a7fdafbd422af187d2644d15650d76904cf24140bb375f48e2a39214eda1b0"
+    },
+    {
+      "sequence": 8,
+      "method": "tools/call",
+      "name": "describe_twin",
+      "arguments": {
+        "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1"
+      },
+      "started_at": "2026-11-03T19:49:15.767321+00:00",
+      "elapsed_s": 0.4100757080013864,
+      "sdk_result_json_sha256": "a59ef14209ec01e69b74fed62518f18df11339dab59d4c569f158a3c7ce9d228",
+      "is_error": false,
+      "structured_response_sha256": "30286f302c845d4b07b7b8e9a7a63c56f766c302245a672f499873392ef4ac0e"
+    },
+    {
+      "sequence": 9,
+      "method": "resources/read",
+      "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/program",
+      "started_at": "2026-11-03T19:49:16.177584+00:00",
+      "elapsed_s": 0.14308979199267924,
+      "mime_type": "application/json",
+      "content_kind": "text",
+      "decoded_bytes": 116227,
+      "decoded_sha256": "56998077ea6571223cb725917d3f78969f8bbad19663908d78a211c15a0dba20"
+    },
+    {
+      "sequence": 10,
+      "method": "tools/call",
+      "name": "get_procedure",
+      "arguments": {
+        "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1"
+      },
+      "started_at": "2026-11-03T19:49:16.320919+00:00",
+      "elapsed_s": 0.14784362498903647,
+      "sdk_result_json_sha256": "3de13e0de3bba5b8ef4597da6ac1b186513729a354235687ee420cebb6d56b6a",
+      "is_error": false,
+      "structured_response_sha256": "558d2ec1053357cc752897deac1172a166952b3872758f89a20f2ceb94d5db3e"
+    },
+    {
+      "sequence": 11,
+      "method": "tools/call",
+      "name": "get_connection_interfaces",
+      "arguments": {
+        "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1"
+      },
+      "started_at": "2026-11-03T19:49:16.469175+00:00",
+      "elapsed_s": 0.17901012499351054,
+      "sdk_result_json_sha256": "09b973a917b89119caee7e99e8439e85f81e2941c37ef6b744760eae6772878f",
+      "is_error": false,
+      "structured_response_sha256": "c0565263db0986e85e2da3c2f062d6fd634e41e2eca8cb362a9dcf5b63f88c90"
+    },
+    {
+      "sequence": 12,
+      "method": "tools/call",
+      "name": "prepare_cross_recording_task",
+      "arguments": {
+        "phone_twin_id": "flow-capture-phone-20261103-v1--flow-procedure-1",
+        "charger_twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+        "instruction": "Prepare a task to charge this phone."
+      },
+      "started_at": "2026-11-03T19:49:16.648375+00:00",
+      "elapsed_s": 1.9055833339807577,
+      "sdk_result_json_sha256": "35c4556bdfd9d5d14da0c663f0c8e005416edd30803a293dd4c2cea389171579",
+      "is_error": false,
+      "structured_response_sha256": "028b9aa30b314c0a9895a81d66c8b8e82753b8c78ce697cd28d600986f26a339"
+    },
+    {
+      "sequence": 13,
+      "method": "tools/call",
+      "name": "get_asset",
+      "arguments": {
+        "twin_id": "flow-capture-phone-20261103-v1--flow-procedure-1",
+        "track_id": "cable_connector"
+      },
+      "started_at": "2026-11-03T19:49:18.554350+00:00",
+      "elapsed_s": 0.0727913329610601,
+      "sdk_result_json_sha256": "003a0eb549605331b7d1360df918493d3bb79fe8bb4239ad2834a62e8c872e1b",
+      "is_error": false,
+      "structured_response_sha256": "7ca4ab8541a0f6258cb5c21c5f3a700f8947def8a53962c51bf8c36798e62f5e"
+    },
+    {
+      "sequence": 14,
+      "method": "resources/read",
+      "uri": "twin://flow-capture-phone-20261103-v1--flow-procedure-1/assets/cable_connector",
+      "started_at": "2026-11-03T19:49:18.627191+00:00",
+      "elapsed_s": 0.24229566694702953,
+      "mime_type": "model/gltf-binary",
+      "content_kind": "blob",
+      "decoded_bytes": 5673096,
+      "decoded_sha256": "87ec1e06556cdd1703ddc4620b3f00967b0c6cc9f9156571ce4b6ae60a4d59e8"
+    },
+    {
+      "sequence": 15,
+      "method": "tools/call",
+      "name": "get_asset",
+      "arguments": {
+        "twin_id": "flow-capture-phone-20261103-v1--flow-procedure-1",
+        "track_id": "phone_blue"
+      },
+      "started_at": "2026-11-03T19:49:18.874658+00:00",
+      "elapsed_s": 0.07205708301626146,
+      "sdk_result_json_sha256": "3ad3b86ce5a088895bf38374b7d8e21764bed4349f4b0ac949a72480de9434fb",
+      "is_error": false,
+      "structured_response_sha256": "a5253320c91bd3f15eef8e3958b3ff3527b572cabee3c31970156e7aa09e96f4"
+    },
+    {
+      "sequence": 16,
+      "method": "resources/read",
+      "uri": "twin://flow-capture-phone-20261103-v1--flow-procedure-1/assets/phone_blue",
+      "started_at": "2026-11-03T19:49:18.946760+00:00",
+      "elapsed_s": 0.8723423750489019,
+      "mime_type": "model/gltf-binary",
+      "content_kind": "blob",
+      "decoded_bytes": 12741220,
+      "decoded_sha256": "384fcf3aeb759d32b87a399d1ef0b91e7570bc871ef5fb7e480542cb1fada544"
+    },
+    {
+      "sequence": 17,
+      "method": "tools/call",
+      "name": "get_evidence",
+      "arguments": {
+        "twin_id": "flow-capture-phone-20261103-v1--flow-procedure-1",
+        "evidence_id": "source_000034"
+      },
+      "started_at": "2026-11-03T19:49:19.830867+00:00",
+      "elapsed_s": 0.07916687498800457,
+      "sdk_result_json_sha256": "d38fad9fc907aa923cd0342c4c48f0588afd7f6a26214c218e84b66541be25d0",
+      "is_error": false,
+      "structured_response_sha256": "a24a8493772b789179241a9d3b8d193eca2e13c87bb7a89c75325d05063ec9b1"
+    },
+    {
+      "sequence": 18,
+      "method": "resources/read",
+      "uri": "twin://flow-capture-phone-20261103-v1--flow-procedure-1/evidence/source_000034",
+      "started_at": "2026-11-03T19:49:19.910103+00:00",
+      "elapsed_s": 0.07178566697984934,
+      "mime_type": "image/jpeg",
+      "content_kind": "blob",
+      "decoded_bytes": 50639,
+      "decoded_sha256": "fb4a5c3d2f5cbf16e27234eef9aa9c1f07c454adc14608f38cad5e54e940fb21"
+    },
+    {
+      "sequence": 19,
+      "method": "tools/call",
+      "name": "get_evidence",
+      "arguments": {
+        "twin_id": "flow-capture-phone-20261103-v1--flow-procedure-1",
+        "evidence_id": "source_000035"
+      },
+      "started_at": "2026-11-03T19:49:19.982694+00:00",
+      "elapsed_s": 0.07070133299566805,
+      "sdk_result_json_sha256": "bafe872671f5d71ffb338cdaa388d96427f5c0f74df86058248b4406a8ada9bb",
+      "is_error": false,
+      "structured_response_sha256": "65d589ad3058b420699eecad97510bd19bbae3feb6b186c358209de490b29a96"
+    },
+    {
+      "sequence": 20,
+      "method": "resources/read",
+      "uri": "twin://flow-capture-phone-20261103-v1--flow-procedure-1/evidence/source_000035",
+      "started_at": "2026-11-03T19:49:20.053446+00:00",
+      "elapsed_s": 0.06921641703229398,
+      "mime_type": "image/jpeg",
+      "content_kind": "blob",
+      "decoded_bytes": 51283,
+      "decoded_sha256": "259bdaec9b8fae3ec90819d71d5fd02ceeb7038ab051876fddd48ceda5fc64ab"
+    },
+    {
+      "sequence": 21,
+      "method": "tools/call",
+      "name": "get_evidence",
+      "arguments": {
+        "twin_id": "flow-capture-phone-20261103-v1--flow-procedure-1",
+        "evidence_id": "source_000038"
+      },
+      "started_at": "2026-11-03T19:49:20.122721+00:00",
+      "elapsed_s": 0.06936783401761204,
+      "sdk_result_json_sha256": "e3a55d863c162401cbc62852be5256efd9913d14446c08a1b9d0f1dda5d91f15",
+      "is_error": false,
+      "structured_response_sha256": "d3d070a60952ea323d40a18c069c77646403ab7148edfa125d10324b1229c586"
+    },
+    {
+      "sequence": 22,
+      "method": "resources/read",
+      "uri": "twin://flow-capture-phone-20261103-v1--flow-procedure-1/evidence/source_000038",
+      "started_at": "2026-11-03T19:49:20.192138+00:00",
+      "elapsed_s": 0.07145879202289507,
+      "mime_type": "image/jpeg",
+      "content_kind": "blob",
+      "decoded_bytes": 51502,
+      "decoded_sha256": "68a01034bef81f8f33bd09ca1b1813698a70bc6ba6f37b8ac6f4e792f041967d"
+    },
+    {
+      "sequence": 23,
+      "method": "tools/call",
+      "name": "get_asset",
+      "arguments": {
+        "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+        "track_id": "wall_outlet"
+      },
+      "started_at": "2026-11-03T19:49:20.263661+00:00",
+      "elapsed_s": 0.1404674170189537,
+      "sdk_result_json_sha256": "d0f52008bdbf38966fe7ab02a18d3c3a8a83e9fdd9b9a82ae7d82d63b64254b3",
+      "is_error": false,
+      "structured_response_sha256": "2dcf164075f64a5793a6f4d114047b5ae01b311d3465c50d51b9c3357514ac35"
+    },
+    {
+      "sequence": 24,
+      "method": "resources/read",
+      "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/assets/wall_outlet",
+      "started_at": "2026-11-03T19:49:20.404174+00:00",
+      "elapsed_s": 0.5373832919867709,
+      "mime_type": "model/gltf-binary",
+      "content_kind": "blob",
+      "decoded_bytes": 9358892,
+      "decoded_sha256": "476967630214300899877caf98739ae9e2c738069bf47c715db10f8e7cdb2f12"
+    },
+    {
+      "sequence": 25,
+      "method": "tools/call",
+      "name": "get_asset",
+      "arguments": {
+        "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+        "track_id": "adapter_early"
+      },
+      "started_at": "2026-11-03T19:49:20.950006+00:00",
+      "elapsed_s": 0.1385209999862127,
+      "sdk_result_json_sha256": "f372ee0d0e97e3dc6caf04766ae1ba6bc9c0258ea40da8626775bcad4f1ce3e9",
+      "is_error": false,
+      "structured_response_sha256": "0248e78af18adc2c4009cafacecdf21f5511085dad8e861dfb3ea5bb6edb197c"
+    },
+    {
+      "sequence": 26,
+      "method": "resources/read",
+      "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/assets/adapter_early",
+      "started_at": "2026-11-03T19:49:21.088574+00:00",
+      "elapsed_s": 0.48097670899005607,
+      "mime_type": "model/gltf-binary",
+      "content_kind": "blob",
+      "decoded_bytes": 9009880,
+      "decoded_sha256": "74635a414ec57bd5e92bbda01a9b55bb77a8e01152c97c53d8773f0abbf98636"
+    },
+    {
+      "sequence": 27,
+      "method": "tools/call",
+      "name": "get_asset",
+      "arguments": {
+        "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+        "track_id": "power_cable"
+      },
+      "started_at": "2026-11-03T19:49:21.578489+00:00",
+      "elapsed_s": 0.14054049999685958,
+      "sdk_result_json_sha256": "cf4ab3e09379059a89947ebc7ef0c3117d4e4871ba80e7776bfd8975b366e55d",
+      "is_error": false,
+      "structured_response_sha256": "284d2563f1522f0789e6e1b2d9561142964181f0e405c7428d114c30e8e02e3f"
+    },
+    {
+      "sequence": 28,
+      "method": "resources/read",
+      "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/assets/power_cable",
+      "started_at": "2026-11-03T19:49:21.719073+00:00",
+      "elapsed_s": 0.16512420802609995,
+      "mime_type": "model/gltf-binary",
+      "content_kind": "blob",
+      "decoded_bytes": 2431300,
+      "decoded_sha256": "9d308a2d35d4b6eb63a6af7fdd71c9b440d6c41200416d2894d5e4aa33a0e147"
+    },
+    {
+      "sequence": 29,
+      "method": "tools/call",
+      "name": "get_asset",
+      "arguments": {
+        "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+        "track_id": "adapter_late"
+      },
+      "started_at": "2026-11-03T19:49:21.886372+00:00",
+      "elapsed_s": 0.13084112503565848,
+      "sdk_result_json_sha256": "b3d43deddb484daa212837e4af2af5b26b01ccd784e54db5a6251f38ff2bdfeb",
+      "is_error": false,
+      "structured_response_sha256": "fc212b87f16e4a175d2f5fde0308e33746a7d4c4c4758277efb107c4d6d5e47b"
+    },
+    {
+      "sequence": 30,
+      "method": "resources/read",
+      "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/assets/adapter_late",
+      "started_at": "2026-11-03T19:49:22.017257+00:00",
+      "elapsed_s": 0.9484941250411794,
+      "mime_type": "model/gltf-binary",
+      "content_kind": "blob",
+      "decoded_bytes": 14253056,
+      "decoded_sha256": "369ce5a10634764fac142c654571a5b9281e5379aa947e906619d7809b9f1287"
+    },
+    {
+      "sequence": 31,
+      "method": "tools/call",
+      "name": "get_evidence",
+      "arguments": {
+        "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+        "evidence_id": "source_000034"
+      },
+      "started_at": "2026-11-03T19:49:22.978579+00:00",
+      "elapsed_s": 0.13314941700082272,
+      "sdk_result_json_sha256": "15422ee7e4582407830f3ecdd666306b9a33ee7e416eded331c3ad18cd441e95",
+      "is_error": false,
+      "structured_response_sha256": "ce848b79e7c46978c4375e5acbdfece6caf08d49a1fc29aeed2d83c7fbac918d"
+    },
+    {
+      "sequence": 32,
+      "method": "resources/read",
+      "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/evidence/source_000034",
+      "started_at": "2026-11-03T19:49:23.111802+00:00",
+      "elapsed_s": 0.1296192920417525,
+      "mime_type": "image/jpeg",
+      "content_kind": "blob",
+      "decoded_bytes": 66366,
+      "decoded_sha256": "bf6f581f93f825bfec55033c961091869e1ea29abd97bea9999799b28999b5e5"
+    },
+    {
+      "sequence": 33,
+      "method": "tools/call",
+      "name": "get_evidence",
+      "arguments": {
+        "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+        "evidence_id": "source_000037"
+      },
+      "started_at": "2026-11-03T19:49:23.241491+00:00",
+      "elapsed_s": 0.12920233397744596,
+      "sdk_result_json_sha256": "5d81c60e0ae73b1ccdbfec112830f77ee12dd936cff25ac9fa1990fe12d4592c",
+      "is_error": false,
+      "structured_response_sha256": "60b7a2514745b64445ce1df4f8fdd009bc7e50a3cacbf13f1c966d0942681a08"
+    },
+    {
+      "sequence": 34,
+      "method": "resources/read",
+      "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/evidence/source_000037",
+      "started_at": "2026-11-03T19:49:23.370756+00:00",
+      "elapsed_s": 0.1296458329888992,
+      "mime_type": "image/jpeg",
+      "content_kind": "blob",
+      "decoded_bytes": 69076,
+      "decoded_sha256": "6d1df1d16b111c9c7acc5850474720e26cdc081dc3330dec8f0ad913bfaa6d34"
+    },
+    {
+      "sequence": 35,
+      "method": "tools/call",
+      "name": "get_evidence",
+      "arguments": {
+        "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+        "evidence_id": "source_000045"
+      },
+      "started_at": "2026-11-03T19:49:23.500482+00:00",
+      "elapsed_s": 0.12978104100329801,
+      "sdk_result_json_sha256": "0455ac1661a0781acf72178e854112365a788898734f5bd9d3a74e943b49c292",
+      "is_error": false,
+      "structured_response_sha256": "852b917118a73cd1c01309e094f03b1717006d5cdc43d307fa6efea803423f3a"
+    },
+    {
+      "sequence": 36,
+      "method": "resources/read",
+      "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/evidence/source_000045",
+      "started_at": "2026-11-03T19:49:23.630315+00:00",
+      "elapsed_s": 0.12963358400156721,
+      "mime_type": "image/jpeg",
+      "content_kind": "blob",
+      "decoded_bytes": 45343,
+      "decoded_sha256": "bddedf475c670397a850b687a4cd4c3515986853858a2cb2d36b8de38a62a7a7"
+    },
+    {
+      "sequence": 37,
+      "method": "tools/call",
+      "name": "get_evidence",
+      "arguments": {
+        "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+        "evidence_id": "source_000047"
+      },
+      "started_at": "2026-11-03T19:49:23.760014+00:00",
+      "elapsed_s": 0.13304487499408424,
+      "sdk_result_json_sha256": "9193bfe33dd4e644612bc12baf83c98aea919541657be9f00edbb754c93cd84e",
+      "is_error": false,
+      "structured_response_sha256": "1687b4b2c6a7d3dde2069798ae733a5235b1db36a3cc73a4b77c886913c93099"
+    },
+    {
+      "sequence": 38,
+      "method": "resources/read",
+      "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/evidence/source_000047",
+      "started_at": "2026-11-03T19:49:23.893117+00:00",
+      "elapsed_s": 0.13117866701213643,
+      "mime_type": "image/jpeg",
+      "content_kind": "blob",
+      "decoded_bytes": 69194,
+      "decoded_sha256": "4cf7f4c2560d89806b5039f8bda731f7547d803480e2c5851b39f498508c83ee"
+    },
+    {
+      "sequence": 39,
+      "method": "tools/call",
+      "name": "get_evidence",
+      "arguments": {
+        "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+        "evidence_id": "source_000057"
+      },
+      "started_at": "2026-11-03T19:49:24.024367+00:00",
+      "elapsed_s": 0.13461333297891542,
+      "sdk_result_json_sha256": "6f46694b46ed79f4d1a44fd9c2b40e669e2312af3ffa0a19175826334ee64c64",
+      "is_error": false,
+      "structured_response_sha256": "f846869531782b7cd294e6d9232980a4c39b751ec143270bb1f715a2c8fd7c22"
+    },
+    {
+      "sequence": 40,
+      "method": "resources/read",
+      "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/evidence/source_000057",
+      "started_at": "2026-11-03T19:49:24.159047+00:00",
+      "elapsed_s": 0.13399604201549664,
+      "mime_type": "image/jpeg",
+      "content_kind": "blob",
+      "decoded_bytes": 54027,
+      "decoded_sha256": "8b88f972971d449da218cb254d3a6314cffa82fe34a45ef7c02cf2d1cbe0a81e"
+    },
+    {
+      "sequence": 41,
+      "method": "tools/call",
+      "name": "get_evidence",
+      "arguments": {
+        "twin_id": "flow-capture-charger-20261103-v1--flow-procedure-1",
+        "evidence_id": "source_000059"
+      },
+      "started_at": "2026-11-03T19:49:24.293124+00:00",
+      "elapsed_s": 0.14258987503126264,
+      "sdk_result_json_sha256": "9369b779f032ab24b36bdee5b096f6d038de137eccd6a72584201e087bc9a7f5",
+      "is_error": false,
+      "structured_response_sha256": "c408c569e40c2652ab1dac77ef003026eb3191d20972541fb1ee55b8c784af23"
+    },
+    {
+      "sequence": 42,
+      "method": "resources/read",
+      "uri": "twin://flow-capture-charger-20261103-v1--flow-procedure-1/evidence/source_000059",
+      "started_at": "2026-11-03T19:49:24.435786+00:00",
+      "elapsed_s": 0.1371675839764066,
+      "mime_type": "image/jpeg",
+      "content_kind": "blob",
+      "decoded_bytes": 84655,
+      "decoded_sha256": "e58279679a875ee8eafcedb22102f079a0b5dc6947087d62fb70c585686187ef"
+    }
+  ],
+  "claims": {
+    "read_only_mcp": true,
+    "model_inference": false,
+    "new_api_calls": 0,
+    "robot_execution": false,
+    "physical_success": false
+  }
+}

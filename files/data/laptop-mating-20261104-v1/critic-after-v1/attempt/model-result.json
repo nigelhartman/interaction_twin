@@ -1,0 +1,191 @@
+{
+  "automatic_approval": false,
+  "format": "interaction-twin-assembly-image-critic-result",
+  "issues": [
+    {
+      "kind": "hinge_anchor",
+      "severity": "high",
+      "source_sample_indices": [
+        27,
+        44
+      ],
+      "suggested_geometric_constraint": "Constrain lid hinge edge to stay coincident with base rear edge with only small uniform clearance across all open views, no white background gap.",
+      "visible_evidence": "Renders 27 and 44 show white background strip between lid bottom and base rear, source 27 and 44 show tight dark hinge contact with no through-gap."
+    },
+    {
+      "kind": "relative_scale",
+      "severity": "medium",
+      "source_sample_indices": [
+        27
+      ],
+      "suggested_geometric_constraint": "Constrain lid width to match base width so side edges stay flush in frontal views.",
+      "visible_evidence": "Render 27 lid overhangs base on both sides with right edge clipped at frame, source 27 lid side edges align with base sides under hand hold."
+    },
+    {
+      "kind": "texture",
+      "severity": "medium",
+      "source_sample_indices": [
+        27
+      ],
+      "suggested_geometric_constraint": "Constrain interior display face to stay dark when source shows powered-off black screen, do not project exterior lid graphics onto interior.",
+      "visible_evidence": "Source 27 screen is blank black, render 27 shows mirrored exterior NITRO graphics on screen face."
+    },
+    {
+      "kind": "camera_framing",
+      "severity": "low",
+      "source_sample_indices": [
+        27
+      ],
+      "suggested_geometric_constraint": "Do not penalize right-border clipping alone as geometry error when source also clips.",
+      "visible_evidence": "Both source 27 and render 27 touch right border at lid/hand, so overflow is inherited framing not new geometry."
+    }
+  ],
+  "limitations": [
+    "Seam UVs are approximate full-image hints, not metric truth.",
+    "Camera depth/q are estimates; scale judged from visible alignment only.",
+    "Display content changes across video; blur from native texture not measured.",
+    "Cannot certify hidden contact thickness or simulation."
+  ],
+  "physical_accuracy_verified": false,
+  "proposed_rules": [
+    {
+      "confidence": "high",
+      "evidence_sample_indices": [
+        1,
+        27,
+        44
+      ],
+      "rule": "Keep lid footprint width equal to base width and lid depth equal to base depth so closed top view is flush on front and sides.",
+      "unobservable_or_unknown": "Exact millimeter size and thickness not observable."
+    },
+    {
+      "confidence": "high",
+      "evidence_sample_indices": [
+        27,
+        44
+      ],
+      "rule": "Keep lid hinge edge coincident with base rear edge across all open states, allowing only a small non-penetrating clearance without visible through-gap.",
+      "unobservable_or_unknown": "Internal hinge mechanism and exact clearance unknown."
+    },
+    {
+      "confidence": "medium",
+      "evidence_sample_indices": [
+        1,
+        27,
+        44
+      ],
+      "rule": "Keep correct faces outward: exterior graphics only on lid outer face, dark/display graphics only on inner face as seen in source.",
+      "unobservable_or_unknown": "Underside and unseen faces not verifiable."
+    },
+    {
+      "confidence": "medium",
+      "evidence_sample_indices": [
+        1,
+        44
+      ],
+      "rule": "Prevent lid sinking into base/keyboard in closed and near-closed views; maintain non-penetrating stacked slabs.",
+      "unobservable_or_unknown": "No penetration observed here, but hidden interpenetration cannot be ruled out."
+    }
+  ],
+  "sample_reviews": [
+    {
+      "appearance": "plausible",
+      "camera_framing": "fully_visible",
+      "closed_contact": "plausible",
+      "evidence": "Closed top view lid exterior logo/stripes match source, front edge seam aligns, no sinking visible.",
+      "hinge_placement": "plausible",
+      "part_facing": "plausible",
+      "relative_lid_depth": "plausible",
+      "relative_lid_width": "plausible",
+      "render_seam_uv": [
+        [
+          0.24,
+          0.695
+        ],
+        [
+          0.895,
+          0.665
+        ]
+      ],
+      "source_sample_index": 1,
+      "source_seam_uv": [
+        [
+          0.25,
+          0.705
+        ],
+        [
+          0.885,
+          0.673
+        ]
+      ],
+      "visible_source_state": "closed"
+    },
+    {
+      "appearance": "source_mismatch",
+      "camera_framing": "source_also_clips",
+      "closed_contact": "gap_likely",
+      "evidence": "Source screen blank black with hands, render screen shows exterior NITRO graphics and white hinge gap, lid overhangs base and clips right border like source hand does.",
+      "hinge_placement": "offset_from_seam",
+      "part_facing": "plausible",
+      "relative_lid_depth": "uncertain",
+      "relative_lid_width": "too_wide",
+      "render_seam_uv": [
+        [
+          0.327,
+          0.5
+        ],
+        [
+          0.837,
+          0.495
+        ]
+      ],
+      "source_sample_index": 27,
+      "source_seam_uv": [
+        [
+          0.33,
+          0.49
+        ],
+        [
+          0.85,
+          0.49
+        ]
+      ],
+      "visible_source_state": "partially_open"
+    },
+    {
+      "appearance": "plausible",
+      "camera_framing": "fully_visible",
+      "closed_contact": "gap_likely",
+      "evidence": "Frontal open view both fully visible, display logo roughly matches but render blurry, white hinge gap in render vs tight source hinge.",
+      "hinge_placement": "offset_from_seam",
+      "part_facing": "plausible",
+      "relative_lid_depth": "plausible",
+      "relative_lid_width": "plausible",
+      "render_seam_uv": [
+        [
+          0.244,
+          0.573
+        ],
+        [
+          0.746,
+          0.572
+        ]
+      ],
+      "source_sample_index": 44,
+      "source_seam_uv": [
+        [
+          0.245,
+          0.575
+        ],
+        [
+          0.745,
+          0.573
+        ]
+      ],
+      "visible_source_state": "open"
+    }
+  ],
+  "summary": "Closed view is plausible with no oversize or sinking seen. Claimed right-overflow in 27 is inherited source clipping, but render 27 lid is too wide vs base. No sinking found; opposite residual rear gap in 27/44. Display texture mismatched in 27.",
+  "verdict": "needs_repair",
+  "version": 1
+}

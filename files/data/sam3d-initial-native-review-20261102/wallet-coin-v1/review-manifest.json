@@ -1,0 +1,114 @@
+{
+  "format": "sam3d-initial-native-review",
+  "version": 1,
+  "fixture": false,
+  "native_only": true,
+  "component_id": "gold_coin",
+  "title": "Gold coin",
+  "source": {
+    "video_sha256": "b153e7ce79f140c861764c832ba3def149f5596ab4fe23bd3d671af913d5c021",
+    "sample_index": 76,
+    "timestamp_s": 25.168878,
+    "source_case": "flow-rigid-parts-wallet-20261031-v1",
+    "source_sample_index": 76,
+    "time_domain": "source_video_presentation_seconds"
+  },
+  "image_size": [
+    540,
+    960
+  ],
+  "native_glb_sha256": "2ebda9bb0ee9a42bd60662ce45fb597743b3fd01c14abb720e3a8dfe7108f00e",
+  "native_up": "Y",
+  "mesh_stats": {
+    "bounds": [
+      [
+        -0.4992847442626953,
+        -0.1036781594157219,
+        -0.47879818081855774
+      ],
+      [
+        0.49971532821655273,
+        0.10170754045248032,
+        0.47963106632232666
+      ]
+    ],
+    "primitive_count": 1,
+    "rendered_vertices": 355478,
+    "faces": 711324,
+    "appearance_modes": [
+      "vertex_rgb"
+    ],
+    "rendering_policy": "unlit base color; embedded images/UVs/node transforms preserved; PBR physics not simulated"
+  },
+  "appearance": "official notebook defaults: model-generated vertex colour and coloured Gaussian splat; UV texture baking disabled",
+  "files": [
+    {
+      "path": "candidate-scene.json",
+      "sha256": "75125073d6e57704f2e65847ef9a0b56ace41751ae9642250f95c44a55d50944",
+      "bytes": 60922074
+    },
+    {
+      "path": "candidate.glb",
+      "sha256": "2ebda9bb0ee9a42bd60662ce45fb597743b3fd01c14abb720e3a8dfe7108f00e",
+      "bytes": 14224524
+    },
+    {
+      "path": "mask-overlay.png",
+      "sha256": "6e4bbbf6ee29a374bf53ae60ca57ce1a2aecef62602c7b62195929aeca600da6",
+      "bytes": 2754
+    },
+    {
+      "path": "model-metadata.json",
+      "sha256": "93d9c0da733f68c9da0564912162822922e76d930fb81ee7759814ef17f0d8a1",
+      "bytes": 15802
+    },
+    {
+      "path": "source-mask.png",
+      "sha256": "5479ba5d8047bd3f152eb0ffcbf5a8d66dc9096d7c756747b6c63b856e97583c",
+      "bytes": 1120
+    },
+    {
+      "path": "source-rgb.png",
+      "sha256": "79240e4838a941de3f2458ea0b1381d1258fb5eb37668792cae5eb4eb27b46fb",
+      "bytes": 109723
+    }
+  ],
+  "initial_handoff": {
+    "path": "data/initial-sam3d-handoffs/flow-rigid-parts-wallet-20261031-v1-gold_coin-20261102-v1/handoff.json",
+    "sha256": "b44f1251fdee7f455aba8571d5a5007eee63907003068cd344311a2e6b0b9051",
+    "bytes": 2509
+  },
+  "import_receipt": {
+    "path": "data/sam3d-native-candidates-20261102/wallet-coin-v1/import.json",
+    "sha256": "79b9ec8642e137b08f8ef66ede26b892514f9df3d4543c01654f6ceb95b7558e"
+  },
+  "scope": {
+    "baseline_required": false,
+    "original_geometry_modified": false,
+    "old_pose_reused": false,
+    "source_video_placement_established": false,
+    "physical_accuracy_verified": false,
+    "metric_scale_verified": false,
+    "assembly_verified": false,
+    "contact_verified": false,
+    "simulation_ready": false,
+    "selected": false,
+    "catalog_changed": false
+  },
+  "renderer": {
+    "shared_source_sha256": "b5e5ad7e2ff040d43886590da70b77ccbaa4cb804e983d47aaf68824514740d6",
+    "review_copy_sha256": "09c6e6f73d21256b2e7be403f767f5c641e32f54954bfde7b4f18d2c59f40c44",
+    "display_background": "neutral",
+    "display_clear_rgba": [
+      0.91,
+      0.93,
+      0.9,
+      1.0
+    ],
+    "native_up": "Y",
+    "geometry_or_material_changed": false,
+    "pbr_rendering": false,
+    "splat_rendering": false
+  },
+  "execution_scope": "Genuine-result attestations and source bytes revalidated. Independent root launch evidence is reviewed separately; no physical validity is granted."
+}

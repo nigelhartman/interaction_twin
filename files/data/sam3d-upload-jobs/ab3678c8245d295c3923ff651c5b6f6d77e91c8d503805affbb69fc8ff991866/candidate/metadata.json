@@ -1,0 +1,367 @@
+{
+  "schema_version": "0.1",
+  "status": "imported_initial_native_candidate_pending_alignment",
+  "object_id": "power_cable",
+  "backend": "Meta SAM 3D Objects",
+  "provider": "Meta",
+  "sam3d_output": true,
+  "sam3d_milestone_complete": false,
+  "learned_inference_executed": true,
+  "source": {
+    "video_sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+    "sample_index": 66,
+    "timestamp_s": 45.2328,
+    "source_case": "flow-capture-laptop-20261103-v1",
+    "source_sample_index": 66,
+    "time_domain": "source_video_presentation_seconds",
+    "image_path": "raw/inputs/image-source.png",
+    "mask_path": "raw/inputs/mask-source.png",
+    "image_sha256": "c0d0936ad43381de5ec24547382b07ecfb0bc7114ad3480844852a94fbc0c226",
+    "mask_sha256": "16a6bfdfcc4bc9b389a3fe4a707eb39a35751d4a1e148ae8d9f9f5f08e160043",
+    "width": 722,
+    "height": 960,
+    "mask_provenance": {
+      "prompt_origin": "model_generated_prompt",
+      "original_seed_origin": "meta_api_model_proposal",
+      "model": "sam-3.1",
+      "device": "hosted_Meta_Model_API",
+      "checkpoint_sha256": null,
+      "checkpoint_identity": "provider_managed_not_disclosed",
+      "metadata_file": "segmentation/flow-components-1/metadata.json",
+      "metadata_sha256": "5b94b2758e3a927c6aef635f0662be965cc23996b86c3911fa6759309e37d945",
+      "annotations_file": "segmentation/flow-components-1/annotations.json",
+      "annotations_sha256": "37307bd90e12da156ba9f9a61031f69925e751aa2295f4f7fb69236772657734",
+      "prompts": [
+        {
+          "sample_index": 60,
+          "box_xyxy": [
+            190.608,
+            288.0,
+            722.0,
+            563.52
+          ],
+          "origin": "meta_api_model_proposal",
+          "human_confirmed": false,
+          "source_timestamp_s": 41.066711,
+          "reason": "thin black cable with plug held left and ferrite right"
+        },
+        {
+          "sample_index": 63,
+          "box_xyxy": [
+            0.0,
+            358.08,
+            722.0,
+            482.88
+          ],
+          "origin": "meta_api_model_proposal",
+          "human_confirmed": false,
+          "source_timestamp_s": 43.166378,
+          "reason": "thin black cable with ferrite held in hand stretching off frame"
+        }
+      ],
+      "human_confirmed": false,
+      "manual_seed_boxes_used": false,
+      "accuracy_measured": false,
+      "discovery_file": "reasoning/flow-discovery-1/discovery.json",
+      "discovery_sha256": "77a5893bf95a5df788dae18c8cbae548c108d1f66dd29c32c97d22b4ab332c3b",
+      "prompt_provider": "hosted_Meta_Model_API",
+      "prompt_model": "muse-spark-1.3",
+      "exact_discovery_config_verified": true,
+      "exact_rigid_config_lineage_verified": true,
+      "rigid_selection": {
+        "adapter": "rigid_component_selection_v1",
+        "omission_only_derivative": false,
+        "manual_boxes_used": false,
+        "physical_identity_verified": false,
+        "discovery_file": "reasoning/flow-discovery-1/discovery.json",
+        "discovery_sha256": "77a5893bf95a5df788dae18c8cbae548c108d1f66dd29c32c97d22b4ab332c3b",
+        "discovery_implementation_role": "rigid_component_visual_discovery_v1",
+        "configuration_sha256": "37307bd90e12da156ba9f9a61031f69925e751aa2295f4f7fb69236772657734",
+        "segmentation_metadata_sha256": "5b94b2758e3a927c6aef635f0662be965cc23996b86c3911fa6759309e37d945"
+      },
+      "mask_plausibility_audit_file": "segmentation/flow-components-1/model-audit-v1/audit.json",
+      "mask_plausibility_audit_sha256": "5a3b50f872708486903e944d492217ef72cb53ad43384ffa2b67dc24d2e7de1a",
+      "mask_plausibility_is_accuracy_measurement": false,
+      "backend": "sam-3.1",
+      "manual_intervention": false,
+      "scope": "thin black deformable power cable with small plug and inline ferrite, handled samples 55-66 after being at rear earlier"
+    }
+  },
+  "outputs": {
+    "glb_path": "asset.glb"
+  },
+  "geometry_reconstructed_by_model": true,
+  "manual_geometry_fallback": false,
+  "manual_pose_used": false,
+  "appearance": "official notebook defaults: model-generated vertex colour and coloured Gaussian splat; UV texture baking disabled",
+  "appearance_mode": "vertex-color",
+  "direct_original_video_texture_projection": false,
+  "hidden_surfaces": "model-inferred, not observed or measured",
+  "metric_scale_verified": false,
+  "physical_accuracy_verified": false,
+  "camera_pose_estimated": false,
+  "coordinates": "Unchanged official native GLB; independent nonmetric model gauge",
+  "validation_status": "pending_independent_execution_and_source_projection_review",
+  "model_provenance": {
+    "model_repository": "facebook/sam-3d-objects",
+    "code": {
+      "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/source",
+      "expected_commit": "f91db411c50efee93d8db7aeb323885650f6f722",
+      "official_repository": "https://github.com/facebookresearch/sam-3d-objects",
+      "commit": "f91db411c50efee93d8db7aeb323885650f6f722",
+      "origin": "https://github.com/facebookresearch/sam-3d-objects",
+      "tracked_changes": "",
+      "notebook_inference_sha256": "a3e20615885d2b5eaf1a8af8573d271072de4e27639212317edffcddf1d39cf3"
+    },
+    "checkpoint": {
+      "pipeline_config": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/pipeline.yaml",
+      "files": [
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/pipeline.yaml",
+          "bytes": 3548,
+          "sha256": "53c3d226b21df85c0bb3d16e6e4fa63abde0d6167525765eb929d02bfa9d358c"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/ss_generator.yaml",
+          "bytes": 5076,
+          "sha256": "3c265448bca7c057f94e3ef56adea3a895a10bcd9f15f992a41dd03fa35412cd"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/ss_generator.ckpt",
+          "bytes": 6690136964,
+          "sha256": "225f40479e4cff4f39d6fa14c55be3abad1475bf55b61af3bec1e19ed2f6c146"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/slat_generator.yaml",
+          "bytes": 1986,
+          "sha256": "53029fadff6fe34a0344381a16d64d65d0567d603484952712e8969319559c4e"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/slat_generator.ckpt",
+          "bytes": 4906537684,
+          "sha256": "91529bde8e7daa12d09618a66c319e3a5a6398db6b23b958cedcb1c3f28faabb"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/ss_decoder.yaml",
+          "bytes": 244,
+          "sha256": "baacff269b664f84f7aa1896ebd66128065f6568cdb88d419d5c3d2ccb4193ae"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/ss_decoder.ckpt",
+          "bytes": 147609242,
+          "sha256": "6dac1cd7b7fda5a38e0614fadae441f1794f80e39ea2981f1ac8aff0a7e99340"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/slat_decoder_gs.yaml",
+          "bytes": 576,
+          "sha256": "53f054e02a0c185f0a6885d30bb6ca0ec92efe0a98148688e7f05f7c26afe670"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/slat_decoder_gs.ckpt",
+          "bytes": 171476155,
+          "sha256": "f8077c36a06eaf890dd93cda1937411f793dea1eb80b3dd9329f2038ba84a111"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/slat_decoder_gs_4.yaml",
+          "bytes": 575,
+          "sha256": "3d1dfd4c56cdac56f30e0cf5eb310d4df973fe25c60ac0a462c86ca4e3bf8b48"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/slat_decoder_gs_4.ckpt",
+          "bytes": 170269801,
+          "sha256": "731a0eceaa47945b52aa27f650d695b2aea9cc70945751e5609e5cb5b49f0186"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/slat_decoder_mesh.yaml",
+          "bytes": 300,
+          "sha256": "8f46952764aa985c50109a56f0b4f07625cdb06457aaded74957d26f3520c69e"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/slat_decoder_mesh.ckpt",
+          "bytes": 363726862,
+          "sha256": "85907b37b67d8ce5b099a96629bdcfbd873eb407dee6b3aa9a75deb15038db33"
+        }
+      ],
+      "weights_hashed": true,
+      "checkpoint_count": 6
+    },
+    "adapter_metadata_path": "raw/metadata.json",
+    "adapter_metadata_sha256": "42691c7e2e171281a9f9abac1e4d9f2c803bd3b02cb5a730d63ff53482cbed2f"
+  },
+  "runtime": {
+    "platform": "Linux",
+    "machine": "x86_64",
+    "python": "3.11.0",
+    "device_requested": "cuda",
+    "dependency_presence": {
+      "torch": true,
+      "torchvision": true,
+      "omegaconf": true,
+      "hydra": true,
+      "pytorch3d": true,
+      "kaolin": true,
+      "spconv": true,
+      "utils3d": true,
+      "moge": true,
+      "trimesh": true,
+      "cv2": true,
+      "gradio": true,
+      "seaborn": true
+    },
+    "torch": "2.5.1+cu121",
+    "torch_cuda": "12.1",
+    "cuda_available": true,
+    "gpu_name": "NVIDIA A100-SXM4-80GB",
+    "gpu_memory_gib": 79.249755859375
+  },
+  "native_layout_candidate": {
+    "camera_from_glb": [
+      [
+        0.02994427452590865,
+        -0.11350898055606586,
+        -1.3868848297401315,
+        0.09085655212402344
+      ],
+      [
+        1.0259953564489879,
+        -0.9353190422020486,
+        0.09870307516197721,
+        0.1711839884519577
+      ],
+      [
+        -0.9400358228149104,
+        -1.024463020237646,
+        0.06355038314069683,
+        1.3524738550186157
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "rotation_cv_from_glb": [
+      [
+        0.02151409831911799,
+        -0.08155293145182485,
+        -0.9964367832156386
+      ],
+      [
+        0.7371480966921914,
+        -0.6719997779965428,
+        0.07091531509961113
+      ],
+      [
+        -0.6753886489397014,
+        -0.736047157282882,
+        0.04565911890513841
+      ]
+    ],
+    "translation_cv": [
+      0.09085655212402344,
+      0.1711839884519577,
+      1.3524738550186157
+    ],
+    "uniform_scale": 1.3918442726135254,
+    "matrix_convention": "column vectors; scale included in camera_from_glb",
+    "camera_axes": "+X right, +Y down, +Z forward",
+    "scale_units": "native_model_predicted_scene_units",
+    "metric_scale_verified": false,
+    "convention_verification": "pinned source audit and CPU synthetic math only",
+    "source_video_pose_validated": false,
+    "real_sam3d_inference_validated": false,
+    "sam3d_code_commit": "f91db411c50efee93d8db7aeb323885650f6f722",
+    "pytorch3d_code_commit": "75ebeeaea0908c5527e7b1e305fbc7681382db47",
+    "use_for_initialization_only": true,
+    "accepted_video_pose": false
+  },
+  "fit_contract": {
+    "version": "2",
+    "raw_glb_sha256": "8e1918ba6fceb89fd1a4fa2adaf94f013c9e9281f3151d2b4250a3d9d7eb44b7",
+    "current_adapter_requires": "verified opaque native base-colour appearance",
+    "appearance_mode": "vertex-color",
+    "alignment_eligible": true,
+    "alignment_ineligible_reason": null,
+    "visual_kind": "vertex",
+    "alignment_adapter": "legacy-vertex-colour-v1",
+    "appearance_conversion_performed": false,
+    "native_appearance": {
+      "contract_version": "native-base-color-v1",
+      "source_glb_sha256": "8e1918ba6fceb89fd1a4fa2adaf94f013c9e9281f3151d2b4250a3d9d7eb44b7",
+      "source_glb_bytes": 207032,
+      "original_glb_unchanged": true,
+      "renderer": "legacy_alignment_render",
+      "legacy_vertex_compatibility": true,
+      "legacy_compatible": true,
+      "appearance_modes": [
+        "vertex_rgb"
+      ],
+      "primitive_count": 1,
+      "material_count": 0,
+      "rendered_vertices": 5154,
+      "faces": 10300,
+      "texture_count": 0,
+      "texture_pixels": 0,
+      "uv_preserved": false,
+      "uv_to_vertex_color_conversion": false,
+      "scene_node_transforms_applied": true,
+      "uv_origin": "gltf_top_left; image_rows_preserved",
+      "color_policy": "historical_uint8_vertex_rgb_interpolation_unchanged",
+      "samplers": [],
+      "face_policy": "historical_two_sided_diagnostic_projection_unchanged",
+      "primitive_culling": [
+        {
+          "double_sided": false,
+          "node_winding_sign": 1
+        }
+      ],
+      "vertices_sha256": "22b8849bc39d64c83dd75834bdaf7d4ca22c7e9ac2f8181cbd876764167f4e70",
+      "faces_sha256": "b21ab296ce681990de69a0ecf7d79143598da7183eb3f26e618329d78c6b2f66",
+      "material_policy": "opaque_unlit_base_color_only; no_lighting_or_PBR_shading",
+      "metric_scale_verified": false,
+      "physical_accuracy_verified": false
+    }
+  },
+  "artifact_files": [
+    {
+      "file": "asset.glb",
+      "sha256": "8e1918ba6fceb89fd1a4fa2adaf94f013c9e9281f3151d2b4250a3d9d7eb44b7",
+      "bytes": 207032
+    },
+    {
+      "file": "raw/inputs/image-source.png",
+      "sha256": "c0d0936ad43381de5ec24547382b07ecfb0bc7114ad3480844852a94fbc0c226",
+      "bytes": 205569
+    },
+    {
+      "file": "raw/inputs/mask-source.png",
+      "sha256": "16a6bfdfcc4bc9b389a3fe4a707eb39a35751d4a1e148ae8d9f9f5f08e160043",
+      "bytes": 1629
+    }
+  ],
+  "initial_reconstruction_lineage": {
+    "handoff": {
+      "path": "data/initial-sam3d-handoffs/upload-5de5a6f28e0dbad8e3e33c462a92c4bf/handoff.json",
+      "sha256": "ab3678c8245d295c3923ff651c5b6f6d77e91c8d503805affbb69fc8ff991866",
+      "bytes": 2510
+    },
+    "source_binding_sha256": "e5eebb81aeb00d017d2ed726f19334958e2cd05650966f170d6cd6432a637b01",
+    "raw_asset_sha256": "8e1918ba6fceb89fd1a4fa2adaf94f013c9e9281f3151d2b4250a3d9d7eb44b7",
+    "geometry_bytes_modified": false,
+    "baseline_required": false,
+    "baseline_asset_read": false,
+    "old_poses_read": false,
+    "execution_independently_verified": false
+  },
+  "simulation_ready": false,
+  "selected": false,
+  "catalog_changed": false,
+  "limitations": [
+    "Adapter attestations are contract-checked, not independent proof of execution.",
+    "One visible RGB/mask anchor does not observe hidden surfaces.",
+    "The unchanged native model and inferred layout have an independent, nonmetric gauge.",
+    "A fresh source projection and motion fit are required; no old poses are read or copied.",
+    "No original source, program, asset or preferred model is replaced."
+  ]
+}

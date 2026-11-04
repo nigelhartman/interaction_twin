@@ -1,0 +1,65 @@
+{
+  "format": "interaction-twin-fixed-hinge-gap-refinement-plan",
+  "version": 1,
+  "source_sample_index": 27,
+  "timestamp_s": 18.070422,
+  "baseline_scene": {
+    "path": "data/occluded-hinge-recoveries/laptop-20261103-v1/scene.json",
+    "sha256": "7bf4d8fdc2a5788c51ad1c367c1a21a6a542625bc95e58e366f746530ad7e8d3",
+    "bytes": 268934
+  },
+  "baseline_object_program": {
+    "path": "data/object-programs/auto-46ffd96b002544e06e3744d64a27a04749c586ef3b2cae2995647aeaef92cae9/object-program.json",
+    "sha256": "f735831ddabff771c0f2479a837f1f762418c51bb53c2cadb09080abd892b6ab",
+    "bytes": 23241
+  },
+  "new_SAM_packet": {
+    "path": "data/source-mask-refinements/laptop-opening-27-20261103-v1/plan.json",
+    "sha256": "dae8070ed9b53aeedbb5cc53a35eea953b97f655acb18f535f4894dcd1363caf",
+    "bytes": 6053
+  },
+  "new_Muse_source_observation": {
+    "path": "data/source-observation-refinements/laptop-coverage-20261103-v3/attempt/model-result.json",
+    "sha256": "8a8bcf58385e4fd8cb9d4853ea6a771834cf23e014d588a7c0138a2c403f2c06",
+    "bytes": 14358
+  },
+  "policy": {
+    "angle_grid_count": 181,
+    "maximum_opening_search_rad": 3.141592653589793,
+    "maximum_parent_rotation_component_rad": 0.2617993877991494,
+    "maximum_parent_translation_extent_fraction": 0.15,
+    "maximum_parent_depth_fraction": 0.2,
+    "maximum_fit_evaluations": 1600,
+    "sparse_vertices": 1400,
+    "minimum_full_triangle_component_iou": 0.6,
+    "minimum_full_triangle_union_iou": 0.72,
+    "minimum_source_foreground_coverage": 0.75,
+    "minimum_interior_facing_cosine": 0.05,
+    "maximum_projected_hinge_seam_distance_px": 32.0,
+    "new_api_calls": 0,
+    "new_gpu_calls": 0,
+    "physical_accuracy_verified": false
+  },
+  "implementation": [
+    {
+      "path": "source_joint_gap_refinement_v1.py",
+      "sha256": "a00636c2fe4959ad85f64ddac508083da75c3624d9d1afa8d619e98fedd176b9",
+      "bytes": 5136
+    },
+    {
+      "path": "occluded_hinge_recovery_v1.py",
+      "sha256": "38f5debb093720b1f314cd1823af901ac24be3d15028cbddfc4dbdc6a30e835d",
+      "bytes": 10751
+    },
+    {
+      "path": "scripts/refine_laptop_opening27_20261103_v1.py",
+      "sha256": "930f2afb163b8f8bb004738546ee76ba60e2f08918437b332bde83757b28b4d5",
+      "bytes": 11005
+    }
+  ],
+  "manual_geometry_or_poses_used": false,
+  "automatic_approval": false,
+  "automatic_publication": false,
+  "new_api_calls": 0,
+  "new_gpu_calls": 0
+}

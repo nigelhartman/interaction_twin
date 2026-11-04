@@ -1,0 +1,191 @@
+{
+  "automatic_approval": false,
+  "format": "interaction-twin-assembly-image-critic-result",
+  "issues": [
+    {
+      "kind": "relative_scale",
+      "severity": "medium",
+      "source_sample_indices": [
+        27
+      ],
+      "suggested_geometric_constraint": "Constrain lid width to equal base width within tight tolerance measured across all views where both side edges are visible.",
+      "visible_evidence": "Source27 lid side edges align with base side edges; render27 lid overhangs base on both sides, right side to image border."
+    },
+    {
+      "kind": "hinge_anchor",
+      "severity": "medium",
+      "source_sample_indices": [
+        27,
+        44
+      ],
+      "suggested_geometric_constraint": "Constrain lid hinge axis to coincide with base rear edge so no background gap is visible at the hinge in any open view.",
+      "visible_evidence": "Source27 and source44 show closed hinge line with no daylight; render27 and render44 show continuous white background slit between lid bottom and base rear."
+    },
+    {
+      "kind": "texture",
+      "severity": "low",
+      "source_sample_indices": [
+        27
+      ],
+      "suggested_geometric_constraint": "Constrain display texture selection per-view state or use neutral dark material when source screen is powered off.",
+      "visible_evidence": "Source27 screen is uniform powered-off black; render27 shows bright NITRO boot graphic not present in that source state."
+    },
+    {
+      "kind": "camera_framing",
+      "severity": "low",
+      "source_sample_indices": [
+        27
+      ],
+      "suggested_geometric_constraint": "Do not penalize edge clipping in optimization when source frame itself clips the held part.",
+      "visible_evidence": "Source27 right hand/lid is already at image border; render27 clipping partly reproduces source framing, exaggerated by wider lid."
+    }
+  ],
+  "limitations": [
+    "Seam UV endpoints are approximate visual hints, not metric truth.",
+    "Cannot certify true contact, scale, or thickness from monocular RGB; only visible relative mating.",
+    "Hands, table and wall in source have no render counterpart; blank background expected.",
+    "Display on/off state changes over time; single static texture cannot match both states."
+  ],
+  "physical_accuracy_verified": false,
+  "proposed_rules": [
+    {
+      "confidence": "high",
+      "evidence_sample_indices": [
+        16,
+        27,
+        44
+      ],
+      "rule": "Keep lid width equal to base width; penalize lid side-edge overhang beyond base side edges in any view.",
+      "unobservable_or_unknown": "Exact millimeter width and bevel thickness not observable."
+    },
+    {
+      "confidence": "high",
+      "evidence_sample_indices": [
+        27,
+        44
+      ],
+      "rule": "Keep hinge edge at base rear edge; penalize any visible background slit between lid bottom and base rear in open views.",
+      "unobservable_or_unknown": "Internal hinge mechanism and exact axis depth not observable."
+    },
+    {
+      "confidence": "medium",
+      "evidence_sample_indices": [
+        27,
+        44
+      ],
+      "rule": "Keep opening angle consistent with source silhouette and forbid lid volume intersecting keyboard volume; allow small non-penetrating contact tolerance.",
+      "unobservable_or_unknown": "True contact pressure and closed slab thickness not certifiable."
+    },
+    {
+      "confidence": "medium",
+      "evidence_sample_indices": [
+        16,
+        27,
+        44
+      ],
+      "rule": "Preserve correct panel facing: display inward to keyboard, underside with vents outward when closed, exterior outward.",
+      "unobservable_or_unknown": "Underside-to-exterior thickness distribution not observable."
+    }
+  ],
+  "sample_reviews": [
+    {
+      "appearance": "plausible",
+      "camera_framing": "fully_visible",
+      "closed_contact": "plausible",
+      "evidence": "Closed slab shows underside vents facing camera, thin lid behind; width and stacking plausible, no sinking visible in this view.",
+      "hinge_placement": "plausible",
+      "part_facing": "plausible",
+      "relative_lid_depth": "plausible",
+      "relative_lid_width": "plausible",
+      "render_seam_uv": [
+        [
+          0.27,
+          0.375
+        ],
+        [
+          0.865,
+          0.375
+        ]
+      ],
+      "source_sample_index": 16,
+      "source_seam_uv": [
+        [
+          0.278,
+          0.37
+        ],
+        [
+          0.855,
+          0.361
+        ]
+      ],
+      "visible_source_state": "closed"
+    },
+    {
+      "appearance": "source_mismatch",
+      "camera_framing": "source_also_clips",
+      "closed_contact": "not_visible",
+      "evidence": "Lid is correct rear-hinged edge but too wide vs base and leaves white rear gap; dark off-screen rendered with boot logo; right overflow partly exists in source framing.",
+      "hinge_placement": "offset_from_seam",
+      "part_facing": "plausible",
+      "relative_lid_depth": "plausible",
+      "relative_lid_width": "too_wide",
+      "render_seam_uv": [
+        [
+          0.324,
+          0.495
+        ],
+        [
+          0.844,
+          0.498
+        ]
+      ],
+      "source_sample_index": 27,
+      "source_seam_uv": [
+        [
+          0.326,
+          0.495
+        ],
+        [
+          0.832,
+          0.496
+        ]
+      ],
+      "visible_source_state": "partially_open"
+    },
+    {
+      "appearance": "plausible",
+      "camera_framing": "fully_visible",
+      "closed_contact": "not_visible",
+      "evidence": "Frontal open view hinge on correct rear edge, no lid-keyboard penetration; residual white hinge slit and display logo blur differ from sharp source boot graphic.",
+      "hinge_placement": "offset_from_seam",
+      "part_facing": "plausible",
+      "relative_lid_depth": "plausible",
+      "relative_lid_width": "plausible",
+      "render_seam_uv": [
+        [
+          0.243,
+          0.568
+        ],
+        [
+          0.751,
+          0.569
+        ]
+      ],
+      "source_sample_index": 44,
+      "source_seam_uv": [
+        [
+          0.249,
+          0.573
+        ],
+        [
+          0.74,
+          0.574
+        ]
+      ],
+      "visible_source_state": "open"
+    }
+  ],
+  "summary": "Lid is on correct rear edge with correct facing; closed view plausible. Oversized-width complaint confirmed in 27 where lid overhangs base, right overflow exaggerated but source also clips. Sinking-into-keyboard not observed; opposite residual rear gap with daylight slit in 27 and 44. Display texture mismatch in 27 only; 44 boot graphic plausibly reproduced.",
+  "verdict": "needs_repair",
+  "version": 1
+}

@@ -1,0 +1,559 @@
+{
+  "format": "interaction-twin-observed-surface-presentation",
+  "version": 1,
+  "source_observations": {
+    "path": "data/source-visible-flexure/phone-20261104-v3-1/descriptor.json",
+    "sha256": "bb8bdc6c82a454a7e4f5c0b22ec111b3b6d55e4e64bd788a5879b96b52825431",
+    "bytes": 158490
+  },
+  "source_sha256": "1835410d17216b36642759a4a3aa488485f3d62c52df8920b56c58e7a50213b8",
+  "source_duration_s": 32.358022,
+  "mode": "editorial_source_sample_repeat",
+  "strict_observation_query_maximum_source_time_error_s": 0.18,
+  "display_repeat_cap_s": 0.55,
+  "bound_derivation": "each_side_minimum_of0.55s_and_half_actual_adjacent_source_gap",
+  "nearest_row_includes_unknowns": true,
+  "search_past_unknown_rows": false,
+  "geometry_interpolated": false,
+  "current_geometry": false,
+  "new_tracking_or_geometry_recovered": false,
+  "physical_accuracy_verified": false,
+  "show_estimated_required": true,
+  "required_visible_label": "Observed surface \u00b7 {observation_timestamp_s}s",
+  "required_return_fields": [
+    "observation_timestamp_s",
+    "source_time_error_s",
+    "presentation_mode",
+    "interpolated",
+    "current_geometry"
+  ],
+  "samples": [
+    {
+      "source_sample_index": 1,
+      "observation_timestamp_s": 0.0,
+      "status": "unknown",
+      "left_actual_source_gap_s": 0.696633,
+      "right_actual_source_gap_s": 0.696633,
+      "display_window_start_s": 0.0,
+      "display_window_end_s": 0.3483165,
+      "visible_component_ids": []
+    },
+    {
+      "source_sample_index": 2,
+      "observation_timestamp_s": 0.696633,
+      "status": "unknown",
+      "left_actual_source_gap_s": 0.696633,
+      "right_actual_source_gap_s": 0.6998110000000001,
+      "display_window_start_s": 0.3483165,
+      "display_window_end_s": 1.0465385,
+      "visible_component_ids": []
+    },
+    {
+      "source_sample_index": 3,
+      "observation_timestamp_s": 1.396444,
+      "status": "unknown",
+      "left_actual_source_gap_s": 0.6998110000000001,
+      "right_actual_source_gap_s": 0.6998779999999998,
+      "display_window_start_s": 1.0465385,
+      "display_window_end_s": 1.7463829999999998,
+      "visible_component_ids": []
+    },
+    {
+      "source_sample_index": 4,
+      "observation_timestamp_s": 2.096322,
+      "status": "source_observed_prior",
+      "left_actual_source_gap_s": 0.6998779999999998,
+      "right_actual_source_gap_s": 0.699878,
+      "display_window_start_s": 1.7463829999999998,
+      "display_window_end_s": 2.446261,
+      "visible_component_ids": [
+        "phone_blue"
+      ]
+    },
+    {
+      "source_sample_index": 5,
+      "observation_timestamp_s": 2.7962,
+      "status": "source_observed_prior",
+      "left_actual_source_gap_s": 0.699878,
+      "right_actual_source_gap_s": 0.699878,
+      "display_window_start_s": 2.446261,
+      "display_window_end_s": 3.146139,
+      "visible_component_ids": [
+        "phone_blue"
+      ]
+    },
+    {
+      "source_sample_index": 6,
+      "observation_timestamp_s": 3.496078,
+      "status": "source_observed_prior",
+      "left_actual_source_gap_s": 0.699878,
+      "right_actual_source_gap_s": 0.699878,
+      "display_window_start_s": 3.146139,
+      "display_window_end_s": 3.846017,
+      "visible_component_ids": [
+        "phone_blue"
+      ]
+    },
+    {
+      "source_sample_index": 7,
+      "observation_timestamp_s": 4.195956,
+      "status": "source_observed_prior",
+      "left_actual_source_gap_s": 0.699878,
+      "right_actual_source_gap_s": 0.6998769999999999,
+      "display_window_start_s": 3.846017,
+      "display_window_end_s": 4.545894499999999,
+      "visible_component_ids": [
+        "phone_blue"
+      ]
+    },
+    {
+      "source_sample_index": 8,
+      "observation_timestamp_s": 4.895833,
+      "status": "source_observed_prior",
+      "left_actual_source_gap_s": 0.6998769999999999,
+      "right_actual_source_gap_s": 0.6999890000000004,
+      "display_window_start_s": 4.545894499999999,
+      "display_window_end_s": 5.2458275,
+      "visible_component_ids": [
+        "phone_blue"
+      ]
+    },
+    {
+      "source_sample_index": 9,
+      "observation_timestamp_s": 5.595822,
+      "status": "source_observed_prior",
+      "left_actual_source_gap_s": 0.6999890000000004,
+      "right_actual_source_gap_s": 0.6997780000000002,
+      "display_window_start_s": 5.2458275,
+      "display_window_end_s": 5.945711,
+      "visible_component_ids": [
+        "phone_blue"
+      ]
+    },
+    {
+      "source_sample_index": 10,
+      "observation_timestamp_s": 6.2956,
+      "status": "source_observed_prior",
+      "left_actual_source_gap_s": 0.6997780000000002,
+      "right_actual_source_gap_s": 0.699878,
+      "display_window_start_s": 5.945711,
+      "display_window_end_s": 6.645539,
+      "visible_component_ids": [
+        "phone_blue"
+      ]
+    },
+    {
+      "source_sample_index": 11,
+      "observation_timestamp_s": 6.995478,
+      "status": "unknown",
+      "left_actual_source_gap_s": 0.699878,
+      "right_actual_source_gap_s": 0.699878,
+      "display_window_start_s": 6.645539,
+      "display_window_end_s": 7.345417,
+      "visible_component_ids": []
+    },
+    {
+      "source_sample_index": 12,
+      "observation_timestamp_s": 7.695356,
+      "status": "unknown",
+      "left_actual_source_gap_s": 0.699878,
+      "right_actual_source_gap_s": 0.699876999999999,
+      "display_window_start_s": 7.345417,
+      "display_window_end_s": 8.0452945,
+      "visible_component_ids": []
+    },
+    {
+      "source_sample_index": 13,
+      "observation_timestamp_s": 8.395233,
+      "status": "unknown",
+      "left_actual_source_gap_s": 0.699876999999999,
+      "right_actual_source_gap_s": 0.699878,
+      "display_window_start_s": 8.0452945,
+      "display_window_end_s": 8.745172,
+      "visible_component_ids": []
+    },
+    {
+      "source_sample_index": 14,
+      "observation_timestamp_s": 9.095111,
+      "status": "unknown",
+      "left_actual_source_gap_s": 0.699878,
+      "right_actual_source_gap_s": 0.699878,
+      "display_window_start_s": 8.745172,
+      "display_window_end_s": 9.445049999999998,
+      "visible_component_ids": []
+    },
+    {
+      "source_sample_index": 15,
+      "observation_timestamp_s": 9.794989,
+      "status": "unknown",
+      "left_actual_source_gap_s": 0.699878,
+      "right_actual_source_gap_s": 0.699878,
+      "display_window_start_s": 9.445049999999998,
+      "display_window_end_s": 10.144928,
+      "visible_component_ids": []
+    },
+    {
+      "source_sample_index": 16,
+      "observation_timestamp_s": 10.494867,
+      "status": "unknown",
+      "left_actual_source_gap_s": 0.699878,
+      "right_actual_source_gap_s": 0.6998770000000007,
+      "display_window_start_s": 10.144928,
+      "display_window_end_s": 10.8448055,
+      "visible_component_ids": []
+    },
+    {
+      "source_sample_index": 17,
+      "observation_timestamp_s": 11.194744,
+      "status": "unknown",
+      "left_actual_source_gap_s": 0.6998770000000007,
+      "right_actual_source_gap_s": 0.699878,
+      "display_window_start_s": 10.8448055,
+      "display_window_end_s": 11.544683,
+      "visible_component_ids": []
+    },
+    {
+      "source_sample_index": 18,
+      "observation_timestamp_s": 11.894622,
+      "status": "unknown",
+      "left_actual_source_gap_s": 0.699878,
+      "right_actual_source_gap_s": 0.6999890000000004,
+      "display_window_start_s": 11.544683,
+      "display_window_end_s": 12.2446165,
+      "visible_component_ids": []
+    },
+    {
+      "source_sample_index": 19,
+      "observation_timestamp_s": 12.594611,
+      "status": "unknown",
+      "left_actual_source_gap_s": 0.6999890000000004,
+      "right_actual_source_gap_s": 0.699878,
+      "display_window_start_s": 12.2446165,
+      "display_window_end_s": 12.94455,
+      "visible_component_ids": []
+    },
+    {
+      "source_sample_index": 20,
+      "observation_timestamp_s": 13.294489,
+      "status": "source_observed_prior",
+      "left_actual_source_gap_s": 0.699878,
+      "right_actual_source_gap_s": 0.699878,
+      "display_window_start_s": 12.94455,
+      "display_window_end_s": 13.644428000000001,
+      "visible_component_ids": [
+        "phone_blue"
+      ]
+    },
+    {
+      "source_sample_index": 21,
+      "observation_timestamp_s": 13.994367,
+      "status": "source_observed_prior",
+      "left_actual_source_gap_s": 0.699878,
+      "right_actual_source_gap_s": 0.6997999999999998,
+      "display_window_start_s": 13.644428000000001,
+      "display_window_end_s": 14.344267,
+      "visible_component_ids": [
+        "phone_blue"
+      ]
+    },
+    {
+      "source_sample_index": 22,
+      "observation_timestamp_s": 14.694167,
+      "status": "source_observed_prior",
+      "left_actual_source_gap_s": 0.6997999999999998,
+      "right_actual_source_gap_s": 0.699876999999999,
+      "display_window_start_s": 14.344267,
+      "display_window_end_s": 15.0441055,
+      "visible_component_ids": [
+        "phone_blue"
+      ]
+    },
+    {
+      "source_sample_index": 23,
+      "observation_timestamp_s": 15.394044,
+      "status": "source_observed_prior",
+      "left_actual_source_gap_s": 0.699876999999999,
+      "right_actual_source_gap_s": 0.699878,
+      "display_window_start_s": 15.0441055,
+      "display_window_end_s": 15.743983,
+      "visible_component_ids": [
+        "phone_blue"
+      ]
+    },
+    {
+      "source_sample_index": 24,
+      "observation_timestamp_s": 16.093922,
+      "status": "unknown",
+      "left_actual_source_gap_s": 0.699878,
+      "right_actual_source_gap_s": 0.6998780000000018,
+      "display_window_start_s": 15.743983,
+      "display_window_end_s": 16.443861,
+      "visible_component_ids": []
+    },
+    {
+      "source_sample_index": 25,
+      "observation_timestamp_s": 16.7938,
+      "status": "source_observed_prior",
+      "left_actual_source_gap_s": 0.6998780000000018,
+      "right_actual_source_gap_s": 0.6999889999999986,
+      "display_window_start_s": 16.443861,
+      "display_window_end_s": 17.1437945,
+      "visible_component_ids": [
+        "phone_blue"
+      ]
+    },
+    {
+      "source_sample_index": 26,
+      "observation_timestamp_s": 17.493789,
+      "status": "source_observed_prior",
+      "left_actual_source_gap_s": 0.6999889999999986,
+      "right_actual_source_gap_s": 0.6998780000000018,
+      "display_window_start_s": 17.1437945,
+      "display_window_end_s": 17.843728,
+      "visible_component_ids": [
+        "phone_blue"
+      ]
+    },
+    {
+      "source_sample_index": 27,
+      "observation_timestamp_s": 18.193667,
+      "status": "source_observed_prior",
+      "left_actual_source_gap_s": 0.6998780000000018,
+      "right_actual_source_gap_s": 0.6998769999999972,
+      "display_window_start_s": 17.843728,
+      "display_window_end_s": 18.543605499999998,
+      "visible_component_ids": [
+        "phone_blue"
+      ]
+    },
+    {
+      "source_sample_index": 28,
+      "observation_timestamp_s": 18.893544,
+      "status": "unknown",
+      "left_actual_source_gap_s": 0.6998769999999972,
+      "right_actual_source_gap_s": 0.6766230000000029,
+      "display_window_start_s": 18.543605499999998,
+      "display_window_end_s": 19.2318555,
+      "visible_component_ids": []
+    },
+    {
+      "source_sample_index": 29,
+      "observation_timestamp_s": 19.570167,
+      "status": "source_observed_prior",
+      "left_actual_source_gap_s": 0.6766230000000029,
+      "right_actual_source_gap_s": 0.6899219999999993,
+      "display_window_start_s": 19.2318555,
+      "display_window_end_s": 19.915128000000003,
+      "visible_component_ids": [
+        "phone_blue"
+      ]
+    },
+    {
+      "source_sample_index": 30,
+      "observation_timestamp_s": 20.260089,
+      "status": "source_observed_prior",
+      "left_actual_source_gap_s": 0.6899219999999993,
+      "right_actual_source_gap_s": 0.6998439999999988,
+      "display_window_start_s": 19.915128000000003,
+      "display_window_end_s": 20.610011,
+      "visible_component_ids": [
+        "phone_blue"
+      ]
+    },
+    {
+      "source_sample_index": 31,
+      "observation_timestamp_s": 20.959933,
+      "status": "source_observed_prior",
+      "left_actual_source_gap_s": 0.6998439999999988,
+      "right_actual_source_gap_s": 0.6998780000000018,
+      "display_window_start_s": 20.610011,
+      "display_window_end_s": 21.309872,
+      "visible_component_ids": [
+        "phone_blue"
+      ]
+    },
+    {
+      "source_sample_index": 32,
+      "observation_timestamp_s": 21.659811,
+      "status": "unknown",
+      "left_actual_source_gap_s": 0.6998780000000018,
+      "right_actual_source_gap_s": 0.6998779999999982,
+      "display_window_start_s": 21.309872,
+      "display_window_end_s": 22.00975,
+      "visible_component_ids": []
+    },
+    {
+      "source_sample_index": 33,
+      "observation_timestamp_s": 22.359689,
+      "status": "unknown",
+      "left_actual_source_gap_s": 0.6998779999999982,
+      "right_actual_source_gap_s": 0.6998780000000018,
+      "display_window_start_s": 22.00975,
+      "display_window_end_s": 22.709628000000002,
+      "visible_component_ids": []
+    },
+    {
+      "source_sample_index": 34,
+      "observation_timestamp_s": 23.059567,
+      "status": "source_observed_prior",
+      "left_actual_source_gap_s": 0.6998780000000018,
+      "right_actual_source_gap_s": 0.6998769999999972,
+      "display_window_start_s": 22.709628000000002,
+      "display_window_end_s": 23.4095055,
+      "visible_component_ids": [
+        "phone_blue",
+        "cable_connector"
+      ]
+    },
+    {
+      "source_sample_index": 35,
+      "observation_timestamp_s": 23.759444,
+      "status": "source_observed_prior",
+      "left_actual_source_gap_s": 0.6998769999999972,
+      "right_actual_source_gap_s": 0.6998780000000018,
+      "display_window_start_s": 23.4095055,
+      "display_window_end_s": 24.109383,
+      "visible_component_ids": [
+        "phone_blue",
+        "cable_connector"
+      ]
+    },
+    {
+      "source_sample_index": 36,
+      "observation_timestamp_s": 24.459322,
+      "status": "source_observed_prior",
+      "left_actual_source_gap_s": 0.6998780000000018,
+      "right_actual_source_gap_s": 0.6998779999999982,
+      "display_window_start_s": 24.109383,
+      "display_window_end_s": 24.809261,
+      "visible_component_ids": [
+        "phone_blue",
+        "cable_connector"
+      ]
+    },
+    {
+      "source_sample_index": 37,
+      "observation_timestamp_s": 25.1592,
+      "status": "source_observed_prior",
+      "left_actual_source_gap_s": 0.6998779999999982,
+      "right_actual_source_gap_s": 0.6998780000000018,
+      "display_window_start_s": 24.809261,
+      "display_window_end_s": 25.509138999999998,
+      "visible_component_ids": [
+        "phone_blue",
+        "cable_connector"
+      ]
+    },
+    {
+      "source_sample_index": 38,
+      "observation_timestamp_s": 25.859078,
+      "status": "source_observed_prior",
+      "left_actual_source_gap_s": 0.6998780000000018,
+      "right_actual_source_gap_s": 0.6998779999999982,
+      "display_window_start_s": 25.509138999999998,
+      "display_window_end_s": 26.209017,
+      "visible_component_ids": [
+        "phone_blue",
+        "cable_connector"
+      ]
+    },
+    {
+      "source_sample_index": 39,
+      "observation_timestamp_s": 26.558956,
+      "status": "unknown",
+      "left_actual_source_gap_s": 0.6998779999999982,
+      "right_actual_source_gap_s": 0.6998770000000007,
+      "display_window_start_s": 26.209017,
+      "display_window_end_s": 26.9088945,
+      "visible_component_ids": []
+    },
+    {
+      "source_sample_index": 40,
+      "observation_timestamp_s": 27.258833,
+      "status": "source_observed_prior",
+      "left_actual_source_gap_s": 0.6998770000000007,
+      "right_actual_source_gap_s": 0.6998780000000018,
+      "display_window_start_s": 26.9088945,
+      "display_window_end_s": 27.608772000000002,
+      "visible_component_ids": [
+        "phone_blue"
+      ]
+    },
+    {
+      "source_sample_index": 41,
+      "observation_timestamp_s": 27.958711,
+      "status": "unknown",
+      "left_actual_source_gap_s": 0.6998780000000018,
+      "right_actual_source_gap_s": 0.6998779999999982,
+      "display_window_start_s": 27.608772000000002,
+      "display_window_end_s": 28.30865,
+      "visible_component_ids": []
+    },
+    {
+      "source_sample_index": 42,
+      "observation_timestamp_s": 28.658589,
+      "status": "source_observed_prior",
+      "left_actual_source_gap_s": 0.6998779999999982,
+      "right_actual_source_gap_s": 0.6998780000000018,
+      "display_window_start_s": 28.30865,
+      "display_window_end_s": 29.008528,
+      "visible_component_ids": [
+        "phone_blue"
+      ]
+    },
+    {
+      "source_sample_index": 43,
+      "observation_timestamp_s": 29.358467,
+      "status": "unknown",
+      "left_actual_source_gap_s": 0.6998780000000018,
+      "right_actual_source_gap_s": 0.6998770000000007,
+      "display_window_start_s": 29.008528,
+      "display_window_end_s": 29.7084055,
+      "visible_component_ids": []
+    },
+    {
+      "source_sample_index": 44,
+      "observation_timestamp_s": 30.058344,
+      "status": "unknown",
+      "left_actual_source_gap_s": 0.6998770000000007,
+      "right_actual_source_gap_s": 0.6998779999999982,
+      "display_window_start_s": 29.7084055,
+      "display_window_end_s": 30.408283,
+      "visible_component_ids": []
+    },
+    {
+      "source_sample_index": 45,
+      "observation_timestamp_s": 30.758222,
+      "status": "source_observed_prior",
+      "left_actual_source_gap_s": 0.6998779999999982,
+      "right_actual_source_gap_s": 0.6998780000000018,
+      "display_window_start_s": 30.408283,
+      "display_window_end_s": 31.108161000000003,
+      "visible_component_ids": [
+        "phone_blue"
+      ]
+    },
+    {
+      "source_sample_index": 46,
+      "observation_timestamp_s": 31.4581,
+      "status": "unknown",
+      "left_actual_source_gap_s": 0.6998780000000018,
+      "right_actual_source_gap_s": 0.6999889999999951,
+      "display_window_start_s": 31.108161000000003,
+      "display_window_end_s": 31.8080945,
+      "visible_component_ids": []
+    },
+    {
+      "source_sample_index": 47,
+      "observation_timestamp_s": 32.158089,
+      "status": "source_observed_prior",
+      "left_actual_source_gap_s": 0.6999889999999951,
+      "right_actual_source_gap_s": 0.6999889999999951,
+      "display_window_start_s": 31.8080945,
+      "display_window_end_s": 32.358022,
+      "visible_component_ids": [
+        "phone_blue"
+      ]
+    }
+  ]
+}

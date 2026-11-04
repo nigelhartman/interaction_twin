@@ -1,0 +1,79 @@
+{
+  "format": "sam3d-mechanism-proposals",
+  "version": 1,
+  "source_sha256": "1835410d17216b36642759a4a3aa488485f3d62c52df8920b56c58e7a50213b8",
+  "interaction_sha256": "98cd7e5bb4fc375fb7c164dec7d9a09973d072ccd108449204af9ce942d36165",
+  "interaction_path": "data/flow-capture-phone-20261103-v1/flow-procedure-1/interaction.json",
+  "coordinate_system": "source_image_pixels_origin_upper_left_y_down",
+  "title": "Blue-cased phone with removable cable connector",
+  "joints": [
+    {
+      "attachment": "removable",
+      "child_id": "cable_connector",
+      "confidence": "medium",
+      "evidence_ids": [
+        "source_000034",
+        "source_000035",
+        "source_000039"
+      ],
+      "hinge_hints": [],
+      "id": "j_phone_blue_cable_connector",
+      "joint_type": "removable",
+      "limitations": [
+        "very small connector with blur and partial finger occlusion",
+        "hidden contact inside port not visible; seating not verified",
+        "coarse sampling misses fast insertion motion"
+      ],
+      "parent_id": "phone_blue",
+      "rationale": "Same white tip seen separate from phone bottom edge in source_000034 and then at/contacting/inserted at phone bottom edge in source_000035 and source_000039. Pattern of separate versus edge-contact indicates candidate separable removable connection, not a persistent hinge.",
+      "state_hints": [
+        {
+          "evidence_id": "source_000034",
+          "source_sample_index": 34,
+          "timestamp_s": 23.059567,
+          "image_width": 720,
+          "image_height": 960,
+          "state": "removed"
+        },
+        {
+          "evidence_id": "source_000039",
+          "source_sample_index": 39,
+          "timestamp_s": 26.558956,
+          "image_width": 720,
+          "image_height": 960,
+          "state": "inserted"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "only two model-proposed tracklets considered; no other parts inferred",
+    "touching alone not treated as persistent joint; removable inferred from separate vs edge-contact/inserted views",
+    "orientation changes front vs back and partial occlusion cause possible identity ambiguity",
+    "coarse temporal sampling, blur, and small connector size limit certainty; no seating, electrical, or physical accuracy claimed"
+  ],
+  "physical_accuracy_verified": false,
+  "simulation_ready": false,
+  "robot_execution_available": false,
+  "reasoning": {
+    "provider": "meta_api",
+    "model": "muse-spark-1.3",
+    "inference_location": "hosted_Meta_Model_API",
+    "request_key": "a3a59c9ad20ff70439ae63dc5a0b9bee28afaca900f15996b62c3532228e6e18",
+    "plan_path": "data/mechanism-pipelines/98cd7e5bb4fc375fb7c164dec7d9a09973d072ccd108449204af9ce942d36165/topology/plan.json",
+    "plan_sha256": "8a3944998643ef36c73fe7d0d18d783ba7c9fee5654d6a2d5353dfe4c73a9eb8",
+    "model_result_path": "data/mechanism-pipelines/98cd7e5bb4fc375fb7c164dec7d9a09973d072ccd108449204af9ce942d36165/topology/attempt/model-result.json",
+    "model_result_sha256": "adb53cdcc609bb7dfdeed2a2748ef31567df394c2cbef478a710912f152f32ae",
+    "request_receipt": "data/mechanism-pipelines/98cd7e5bb4fc375fb7c164dec7d9a09973d072ccd108449204af9ce942d36165/topology/attempt/request/meta-request.json",
+    "estimated_cost_usd": "0.127046",
+    "usage": {
+      "input_tokens": 92463,
+      "output_tokens": 2698,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 2370,
+      "billable_output_tokens": 2698
+    },
+    "human_reviewed": false,
+    "geometric_joint_fit_performed": false
+  }
+}

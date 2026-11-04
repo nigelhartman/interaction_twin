@@ -1,0 +1,73 @@
+{
+  "format": "interaction-twin-model-source-mask-refresh-v1",
+  "status": "complete_accounted_candidate_masks",
+  "plan": {
+    "path": "data/source-mask-refinements/laptop-opening-27-20261103-v1/plan.json",
+    "sha256": "dae8070ed9b53aeedbb5cc53a35eea953b97f655acb18f535f4894dcd1363caf",
+    "bytes": 6053
+  },
+  "instances": [
+    {
+      "track_id": "laptop_base",
+      "source": {
+        "video_sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+        "sample_index": 27,
+        "timestamp_s": 18.070422,
+        "time_domain": "source_video_presentation_seconds"
+      },
+      "native_instance_id": "0",
+      "mask": {
+        "path": "data/source-mask-refinements/laptop-opening-27-20261103-v1/attempt/segmentation/instance-000001-mask.png",
+        "sha256": "29505ff5c22cc0f989e17f0ec5e66831d0e58619fb7cba183361c964c8818b9e",
+        "bytes": 2722
+      },
+      "area_pixels": 90422,
+      "bbox_xyxy": [
+        196,
+        490,
+        714,
+        702
+      ],
+      "confidence": 0.95703125,
+      "status": "candidate_mask_requires_fresh_scope_and_pose_gates"
+    },
+    {
+      "track_id": "laptop_lid",
+      "source": {
+        "video_sha256": "602c27daf8eca9ee680e6a8bfa61c9a751abb1d87022e50080c713d87014a798",
+        "sample_index": 27,
+        "timestamp_s": 18.070422,
+        "time_domain": "source_video_presentation_seconds"
+      },
+      "native_instance_id": "1",
+      "mask": {
+        "path": "data/source-mask-refinements/laptop-opening-27-20261103-v1/attempt/segmentation/instance-000002-mask.png",
+        "sha256": "e499eff69cf1ec1f482cabd13eb6b36df5ecf2cb0e2d95948929f774458c1505",
+        "bytes": 2407
+      },
+      "area_pixels": 71342,
+      "bbox_xyxy": [
+        182,
+        320,
+        722,
+        489
+      ],
+      "confidence": 0.89453125,
+      "status": "candidate_mask_requires_fresh_scope_and_pose_gates"
+    }
+  ],
+  "native_result": {
+    "path": "data/source-mask-refinements/laptop-opening-27-20261103-v1/attempt/segmentation/metadata.json",
+    "sha256": "86639e36cca3c6d1cb17231a100c79b771171e1feed14e4cfa2ed3398fcf2700",
+    "bytes": 4902
+  },
+  "receipt": {
+    "path": "data/source-mask-refinements/laptop-opening-27-20261103-v1/attempt/accounting/meta-request.json",
+    "sha256": "4b4c0fabf38f939f6f9ff81aaa405e56ad4c444613aab3ae0864e3120c249be5",
+    "bytes": 1384
+  },
+  "new_api_calls": 1,
+  "estimated_cost_usd": "0.002500",
+  "automatic_publication": false,
+  "geometry_or_pose_fit_performed": false
+}

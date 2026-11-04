@@ -1,0 +1,135 @@
+{
+  "format": "interaction-twin-cross-recording-muse-review",
+  "version": 1,
+  "status": "validated_saved_muse_assessment",
+  "model": "muse-spark-1.3",
+  "inference_location": "hosted_Meta_Model_API",
+  "review_scope": "text_metadata_only_no_images_or_meshes",
+  "task_file_sha256": "5d88dd1cab5b0b4a8d1757cc094bf30a98cc106c60d8d94dbad55c3c19c4200f",
+  "task_draft_sha256": "861471a37f605aae26e859fbe9a108db43622f4535ab64542d53e3c43faac1e6",
+  "trace_file_sha256": "3f97b9aa92d04184be5582251137778cb21274dc8f5e3e7393d116f938b0b1ff",
+  "packet_sha256": "50ff379d1aa2b55a53c5bceee178ca062a7be419cf11fb90ec2363c886321915",
+  "result": {
+    "candidate_reviews": [
+      {
+        "assessment": "candidate_only_requires_validation",
+        "candidate_id": "cable_to_adapter",
+        "evidence_refs": [
+          "flow-capture-charger-20261103-v1--flow-procedure-1#source_000034",
+          "flow-capture-charger-20261103-v1--flow-procedure-1#source_000037"
+        ],
+        "reason": "Within-recording tracklet candidate only; USB-C labels are owner-reported context not visual measurement, and physical fit, seating, and dimensions are unverified from metadata alone."
+      },
+      {
+        "assessment": "insufficient_evidence",
+        "candidate_id": "cable_to_phone",
+        "evidence_refs": [
+          "flow-capture-charger-20261103-v1--flow-procedure-1#source_000057",
+          "flow-capture-charger-20261103-v1--flow-procedure-1#source_000059",
+          "flow-capture-phone-20261103-v1--flow-procedure-1#source_000035",
+          "flow-capture-phone-20261103-v1--flow-procedure-1#source_000038"
+        ],
+        "reason": "Cross-recording composition with unknown physical cable identity; separate inferred coordinate systems with no merge/alignment, static cable mesh, and no verified fit, insertion, or charging."
+      },
+      {
+        "assessment": "candidate_only_requires_validation",
+        "candidate_id": "adapter_to_socket",
+        "evidence_refs": [
+          "flow-capture-charger-20261103-v1--flow-procedure-1#source_000045",
+          "flow-capture-charger-20261103-v1--flow-procedure-1#source_000047"
+        ],
+        "reason": "Within-recording tracklet candidate only using adapter_late; mains type is unspecified owner context with coarse meshes, and exact standard, fit, electrical state, and safe setup remain unverified."
+      }
+    ],
+    "overall_assessment": "conditional_task_draft_only",
+    "proposed_improvements": [
+      {
+        "recommendation": "Measure connector/port geometry, insertion axis, clearance and seating with calibrated instruments; do not treat USB-C owner labels as fit evidence.",
+        "requirement_id": "physical_connector_fit",
+        "source_step_refs": [
+          "flow-capture-charger-20261103-v1--flow-procedure-1#step_join_cable_adapter",
+          "flow-capture-phone-20261103-v1--flow-procedure-1#s5_contact_edge"
+        ]
+      },
+      {
+        "recommendation": "Verify adapter output, cable capability, phone input requirements and negotiation with independent electrical checks; visible contact does not verify charging.",
+        "requirement_id": "electrical_specifications",
+        "source_step_refs": [
+          "flow-capture-charger-20261103-v1--flow-procedure-1#step_join_cable_adapter",
+          "flow-capture-phone-20261103-v1--flow-procedure-1#s5_contact_edge"
+        ]
+      },
+      {
+        "recommendation": "Confirm which physical cable and which free end is intended, with tracked identity across recordings; do not assert same-cable identity across separate captures.",
+        "requirement_id": "cable_identity_and_ends",
+        "source_step_refs": [
+          "flow-capture-charger-20261103-v1--flow-procedure-1#step_display_cable_end",
+          "flow-capture-phone-20261103-v1--flow-procedure-1#s4_bring_cable"
+        ]
+      },
+      {
+        "recommendation": "Replace static cable mesh transfer with validated deformable cable model and measured routing/strains for any development planning.",
+        "requirement_id": "flexible_cable_model",
+        "source_step_refs": [
+          "flow-capture-charger-20261103-v1--flow-procedure-1#step_display_cable_end",
+          "flow-capture-phone-20261103-v1--flow-procedure-1#s4_bring_cable"
+        ]
+      },
+      {
+        "recommendation": "Calibrate metric scale, align camera/world frames, and validate robot reach, grasp, collision and contact geometry before any robot planning; separate recording frames are not merged.",
+        "requirement_id": "metric_robot_and_scene",
+        "source_step_refs": [
+          "flow-capture-phone-20261103-v1--flow-procedure-1#s3_show_edges",
+          "flow-capture-phone-20261103-v1--flow-procedure-1#s5_contact_edge"
+        ]
+      },
+      {
+        "recommendation": "Keep mains step blocked until exact socket/prong standard, de-energized state, and approved execution setup are validated by qualified procedure.",
+        "requirement_id": "mains_setup_validation",
+        "source_step_refs": [
+          "flow-capture-charger-20261103-v1--flow-procedure-1#step_insert_outlet"
+        ]
+      },
+      {
+        "recommendation": "Add independent seating and charging-state checks; draft contains evidence-linked templates only with no demonstrated cross-recording success or executable actions.",
+        "requirement_id": "independent_success_check",
+        "source_step_refs": [
+          "flow-capture-charger-20261103-v1--flow-procedure-1#step_join_cable_adapter",
+          "flow-capture-phone-20261103-v1--flow-procedure-1#s5_contact_edge"
+        ]
+      }
+    ],
+    "robot_execution_available": false,
+    "simulation_ready": false,
+    "summary": "Metadata-only critique of a conditional development draft composing separate phone and charger captures; no cross-recording identity, fit, electrical compatibility, insertion success, charging, metric accuracy, or robot readiness is verified.",
+    "unknowns": [
+      "Whether cable free end in charger recording is same physical instance as plug in phone recording",
+      "Actual connector/port geometry, clearance, insertion axis and seating depth",
+      "Adapter output, cable rating, phone requirement and negotiation compatibility",
+      "Metric scale and rigid alignment between two independent inferred coordinate systems",
+      "Whether visible contact resulted in seated insertion or charging success",
+      "Exact mains socket/prong standard and electrical/approval state for socket step",
+      "Impact of static cable mesh, phone mesh extra plate, and coarse adapter/socket meshes on geometry truth"
+    ]
+  },
+  "result_sha256": "e87c427e0f10bef82942fde08dedff867715b1233f7d4901fbbc512ac4053a79",
+  "estimated_cost_usd": "0.017769",
+  "usage": {
+    "input_tokens": 5157,
+    "output_tokens": 2664,
+    "cached_input_tokens": 0,
+    "reasoning_tokens": 1516,
+    "billable_output_tokens": 2664
+  },
+  "new_api_calls": 1,
+  "task_modified": false,
+  "human_reviewed": false,
+  "physical_accuracy_verified": false,
+  "simulation_ready": false,
+  "robot_execution_available": false,
+  "limitations": [
+    "This model received only saved metadata, not source images or geometry.",
+    "Valid identifiers and citations do not prove semantic or physical correctness.",
+    "The deterministic task draft remains unchanged; this is a separate fallible critique."
+  ]
+}

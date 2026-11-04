@@ -1,0 +1,115 @@
+{
+  "format": "interaction-twin-assembly-image-critic-plan",
+  "version": 1,
+  "manifest": {
+    "path": "data/laptop-mating-20261104-v1/baseline-visual-manifest.json",
+    "sha256": "08cfacbb815cac5772d7dbb517b0f12dfd0657d3ba6a0b53207c866bf8654a75",
+    "bytes": 11196
+  },
+  "images": [
+    {
+      "path": "data/flow-capture-laptop-20261103-v1/frames/000001.jpg",
+      "sha256": "5895d0bd437a52227115ce90a2614935f9490e1872a953fd26099a0ff007f29c",
+      "bytes": 19899,
+      "kind": "real_source_rgb",
+      "sample_index": 1,
+      "timestamp_s": 0.0
+    },
+    {
+      "path": "data/laptop-mating-20261104-v1/baseline-render-000001.png",
+      "sha256": "23c5000d98cedf9ffe5e4b033d41623e101fb31c29c1c03e3b7fe6228c0ba28e",
+      "bytes": 24701,
+      "kind": "new_full_native_triangle_source_camera_render",
+      "sample_index": 1,
+      "timestamp_s": 0.0
+    },
+    {
+      "path": "data/flow-capture-laptop-20261103-v1/frames/000027.jpg",
+      "sha256": "0cab93f19a75c2a00dea3eb94447e7ed5036c01ca9b052aa0b23b2c3f730da98",
+      "bytes": 27278,
+      "kind": "real_source_rgb",
+      "sample_index": 27,
+      "timestamp_s": 18.070422
+    },
+    {
+      "path": "data/laptop-mating-20261104-v1/baseline-render-000027.png",
+      "sha256": "d2cea139c893f581e4811bd08a2f775ab3746edbb93e534a646ff7ea8bfb3dfe",
+      "bytes": 45862,
+      "kind": "new_full_native_triangle_source_camera_render",
+      "sample_index": 27,
+      "timestamp_s": 18.070422
+    },
+    {
+      "path": "data/flow-capture-laptop-20261103-v1/frames/000044.jpg",
+      "sha256": "7e57e20801461e02ba1d02cfa97935cc8d6054a49850ef89b14c11f8fc1fb569",
+      "bytes": 33459,
+      "kind": "real_source_rgb",
+      "sample_index": 44,
+      "timestamp_s": 29.925067
+    },
+    {
+      "path": "data/laptop-mating-20261104-v1/baseline-render-000044.png",
+      "sha256": "2ed5a7245b218e8f2f8ab4a2de71659b2519f8098cf122b3653f6e2da383fb3f",
+      "bytes": 55892,
+      "kind": "new_full_native_triangle_source_camera_render",
+      "sample_index": 44,
+      "timestamp_s": 29.925067
+    }
+  ],
+  "wire_provenance": {
+    "payload_sha256": "90090daeed9fafbf68a9be6b381979ee5af4e7bb46e7013ae35885019634e06d",
+    "image_inputs": [
+      {
+        "file": "000001.jpg",
+        "encoded_width": 1540,
+        "encoded_height": 2048,
+        "source_sha256": "5895d0bd437a52227115ce90a2614935f9490e1872a953fd26099a0ff007f29c"
+      },
+      {
+        "file": "baseline-render-000001.png",
+        "encoded_width": 1540,
+        "encoded_height": 2048,
+        "source_sha256": "23c5000d98cedf9ffe5e4b033d41623e101fb31c29c1c03e3b7fe6228c0ba28e"
+      },
+      {
+        "file": "000027.jpg",
+        "encoded_width": 1540,
+        "encoded_height": 2048,
+        "source_sha256": "0cab93f19a75c2a00dea3eb94447e7ed5036c01ca9b052aa0b23b2c3f730da98"
+      },
+      {
+        "file": "baseline-render-000027.png",
+        "encoded_width": 1540,
+        "encoded_height": 2048,
+        "source_sha256": "d2cea139c893f581e4811bd08a2f775ab3746edbb93e534a646ff7ea8bfb3dfe"
+      },
+      {
+        "file": "000044.jpg",
+        "encoded_width": 1540,
+        "encoded_height": 2048,
+        "source_sha256": "7e57e20801461e02ba1d02cfa97935cc8d6054a49850ef89b14c11f8fc1fb569"
+      },
+      {
+        "file": "baseline-render-000044.png",
+        "encoded_width": 1540,
+        "encoded_height": 2048,
+        "source_sha256": "2ed5a7245b218e8f2f8ab4a2de71659b2519f8098cf122b3653f6e2da383fb3f"
+      }
+    ],
+    "payload_bytes": 1145079
+  },
+  "implementation": {
+    "path": "data/laptop-mating-20261104-v1/critic-before-v1/implementation.py.txt",
+    "sha256": "d8ad5e2eb5e4198f1dd2f8192b9c3e2c4fbaa97df014aba5f8d758edf38f7b59",
+    "bytes": 9071
+  },
+  "max_output_tokens": 16000,
+  "maximum_new_requests": 1,
+  "automatic_retries": false,
+  "prompt_sha256": "7c93ef734da360a8973da9bf1fe41ec84124dfe3dba5cc0dba5023eacc21d63c",
+  "schema_sha256": "71419d5e74d86164b19fdff3b2faef15fc8b7e6d368459dc9d7b30031ba042f9",
+  "provider_schema_sha256": "0dac460fe5aa86816f6611e901f5ae3bf8dc3699fac1e11bef9fefb6779f8f7a",
+  "new_gpu_requests": 0,
+  "automatic_publication": false,
+  "authorization_scope": "Nov4_user_requested_new_source_render_visual_mating_comparisons_not_old_denied_packet"
+}

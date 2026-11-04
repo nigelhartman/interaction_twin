@@ -1,0 +1,577 @@
+{
+  "automatic_publication": false,
+  "automatic_retries": false,
+  "component_id": "adapter_late",
+  "correction_implementation": {
+    "bytes": 5256,
+    "path": "charger_tracking_sam_correction_v2.py",
+    "sha256": "ec3f64715e63003fc217c55f710a15fdff890e1cefb21ef1f765cee1104987d6"
+  },
+  "encoding": {
+    "bytes": 38891,
+    "path": "data/tracking-recoveries/charger-20261103-v1/sam-video-input/encoding.json",
+    "sha256": "c79e91d6dd9fd2810ea3fc62c9645cfe50a9078e52abfc016d5cbadc09a11597"
+  },
+  "estimated_video_usd": "0.0100",
+  "format": "interaction-twin-charger-sam-pretransport-correction",
+  "frame_sources": [
+    {
+      "sample_index": 30,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 30,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 20.263478,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 31,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 31,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 20.963356,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 32,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 32,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 21.663233,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 33,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 33,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 22.363111,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 34,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 34,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 23.062989,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 35,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 35,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 23.762867,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 36,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 36,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 24.459511,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 37,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 37,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 25.159378,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 38,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 38,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 25.859178,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 39,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 39,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 26.559156,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 40,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 40,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 27.259033,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 41,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 41,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 27.958956,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 42,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 42,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 28.658822,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 43,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 43,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 29.358767,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 44,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 44,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 30.058544,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 45,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 45,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 30.735211,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 46,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 46,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 31.425111,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 47,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 47,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 32.124911,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 48,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 48,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 32.824878,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 49,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 49,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 33.524733,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 50,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 50,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 34.224611,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 51,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 51,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 34.924489,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 52,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 52,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 35.624367,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 53,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 53,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 36.301078,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 54,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 54,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 36.990844,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 55,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 55,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 37.690822,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 56,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 56,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 38.390711,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 57,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 57,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 39.090567,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 58,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 58,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 39.790444,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 59,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 59,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 40.490378,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 60,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 60,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 41.190356,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 61,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 61,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 41.890056,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 62,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 62,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 42.589933,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 63,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 63,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 43.289811,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 64,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 64,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 43.989689,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 65,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 65,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 44.689567,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    },
+    {
+      "sample_index": 66,
+      "source_case": "flow-capture-charger-20261103-v1",
+      "source_sample_index": 66,
+      "time_domain": "source_video_presentation_seconds",
+      "timestamp_s": 45.389556,
+      "video_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c"
+    }
+  ],
+  "height": 960,
+  "identity_gap_merge": false,
+  "implementation": {
+    "bytes": 15281,
+    "path": "charger_tracking_recovery_20261103_v1.py",
+    "sha256": "6f159c8592423dfc9f26cf2a6052c1ec61c354eb5925624d837353079cd76e1f"
+  },
+  "localization_result": {
+    "bytes": 2770,
+    "path": "data/tracking-recoveries/charger-20261103-v1/localization-attempt/result.json",
+    "sha256": "fae112630cc7c3a3091a5d7b3abc468eb36b728d6ac52c6c7bba7a932847d01f"
+  },
+  "localized_by": {
+    "bytes": 698,
+    "path": "data/tracking-recoveries/charger-20261103-v1/localization-attempt/accepted-localization.json",
+    "sha256": "6ad33b7a05d0fdeaa9d89c9ddd3735ebcd54d7ba4c27f169ea67b5f49c5f139d"
+  },
+  "lossy_video_compression_disclosed": true,
+  "maximum_estimated_request_guard_usd": "2.000000",
+  "maximum_new_requests": 1,
+  "model": "sam-3.1",
+  "native_geometry_modified": false,
+  "objects": [
+    {
+      "box_xyxy": [
+        0.0,
+        533.76,
+        30.156000000000002,
+        591.36
+      ],
+      "frame_index": 0,
+      "id": 0
+    },
+    {
+      "box_xyxy": [
+        269.968,
+        340.79999999999995,
+        435.108,
+        503.04
+      ],
+      "frame_index": 6,
+      "id": 0
+    },
+    {
+      "box_xyxy": [
+        278.584,
+        366.72,
+        423.62,
+        512.64
+      ],
+      "frame_index": 12,
+      "id": 0
+    },
+    {
+      "box_xyxy": [
+        382.694,
+        321.6,
+        450.904,
+        484.8
+      ],
+      "frame_index": 16,
+      "id": 0
+    },
+    {
+      "box_xyxy": [
+        469.572,
+        305.28000000000003,
+        611.736,
+        484.8
+      ],
+      "frame_index": 24,
+      "id": 0
+    },
+    {
+      "box_xyxy": [
+        225.452,
+        410.88,
+        267.814,
+        496.32
+      ],
+      "frame_index": 36,
+      "id": 0
+    }
+  ],
+  "original_prepared_payload_not_sent": true,
+  "parser": {
+    "learned_inference_executed": false,
+    "network_accessed": false,
+    "package": "meta-sam-parser",
+    "version": "0.1.0"
+  },
+  "pretransport_failure_proof": {
+    "failure_phase": "local_box_provenance_validation_before_run_or_request",
+    "network_or_model_client_constructed_during_preflight": false,
+    "new_normalized_prompts": [
+      {
+        "frame_index": 0,
+        "id": 0,
+        "model_box_xyxy_half_open": [
+          0.0,
+          533.76,
+          30.156000000000002,
+          591.36
+        ],
+        "rounded_box_xyxy_half_open": [
+          0,
+          533,
+          31,
+          592
+        ],
+        "rounding_policy": "outward_floor_left_top_ceil_right_bottom_no_clipping",
+        "wire_box_xyxy_inclusive": [
+          0,
+          533,
+          30,
+          591
+        ]
+      },
+      {
+        "frame_index": 6,
+        "id": 0,
+        "model_box_xyxy_half_open": [
+          269.968,
+          340.79999999999995,
+          435.108,
+          503.04
+        ],
+        "rounded_box_xyxy_half_open": [
+          269,
+          340,
+          436,
+          504
+        ],
+        "rounding_policy": "outward_floor_left_top_ceil_right_bottom_no_clipping",
+        "wire_box_xyxy_inclusive": [
+          269,
+          340,
+          435,
+          503
+        ]
+      },
+      {
+        "frame_index": 12,
+        "id": 0,
+        "model_box_xyxy_half_open": [
+          278.584,
+          366.72,
+          423.62,
+          512.64
+        ],
+        "rounded_box_xyxy_half_open": [
+          278,
+          366,
+          424,
+          513
+        ],
+        "rounding_policy": "outward_floor_left_top_ceil_right_bottom_no_clipping",
+        "wire_box_xyxy_inclusive": [
+          278,
+          366,
+          423,
+          512
+        ]
+      },
+      {
+        "frame_index": 16,
+        "id": 0,
+        "model_box_xyxy_half_open": [
+          382.694,
+          321.6,
+          450.904,
+          484.8
+        ],
+        "rounded_box_xyxy_half_open": [
+          382,
+          321,
+          451,
+          485
+        ],
+        "rounding_policy": "outward_floor_left_top_ceil_right_bottom_no_clipping",
+        "wire_box_xyxy_inclusive": [
+          382,
+          321,
+          450,
+          484
+        ]
+      },
+      {
+        "frame_index": 24,
+        "id": 0,
+        "model_box_xyxy_half_open": [
+          469.572,
+          305.28000000000003,
+          611.736,
+          484.8
+        ],
+        "rounded_box_xyxy_half_open": [
+          469,
+          305,
+          612,
+          485
+        ],
+        "rounding_policy": "outward_floor_left_top_ceil_right_bottom_no_clipping",
+        "wire_box_xyxy_inclusive": [
+          469,
+          305,
+          611,
+          484
+        ]
+      },
+      {
+        "frame_index": 36,
+        "id": 0,
+        "model_box_xyxy_half_open": [
+          225.452,
+          410.88,
+          267.814,
+          496.32
+        ],
+        "rounded_box_xyxy_half_open": [
+          225,
+          410,
+          268,
+          497
+        ],
+        "rounding_policy": "outward_floor_left_top_ceil_right_bottom_no_clipping",
+        "wire_box_xyxy_inclusive": [
+          225,
+          410,
+          267,
+          496
+        ]
+      }
+    ],
+    "new_prompt_sha256": "3b438bf6dcca64ca933f663b5a60382c88c3afa9b13e5a9c8743ebfc29cb1812",
+    "old_accounting_or_result_exists": false,
+    "old_intent": {
+      "bytes": 252,
+      "path": "data/tracking-recoveries/charger-20261103-v1/sam-attempt/intent.json",
+      "sha256": "59857f3715717661ddfc54996d06d0b8d5861e15e41693fce01922716cabc08b"
+    },
+    "old_plan": {
+      "bytes": 14382,
+      "path": "data/tracking-recoveries/charger-20261103-v1/sam-plan.json",
+      "sha256": "27e92f8b3601c055d1131ed6523928c42ce29717cb729404b5c6b6150ff700ce"
+    },
+    "original_error": "Box prompts require explicit model-generated provenance"
+  },
+  "program": {
+    "bytes": 116228,
+    "path": "data/flow-capture-charger-20261103-v1/flow-procedure-1/interaction.json",
+    "sha256": "462365b90da28aa1b57d225000acd367e2c583db0755c3ab105edeefd221b209"
+  },
+  "prompt_origin": "model_generated_fresh_Muse_adapter_body_localization",
+  "source_coordinate_resize_or_crop": false,
+  "version": 1,
+  "video": {
+    "bytes": 4668428,
+    "path": "data/tracking-recoveries/charger-20261103-v1/sam-video-input/sampled-compact-1fps.mp4",
+    "sha256": "678388e312c5a37bffa703390bc09976688c9fff2d07cbf02b150e9cfb6cf639"
+  },
+  "width": 718
+}

@@ -1,0 +1,50 @@
+{
+  "format": "interaction-twin-nonrigid-observations",
+  "version": 1,
+  "evidence_program": {
+    "bytes": 116228,
+    "path": "data/flow-capture-charger-20261103-v1/flow-procedure-1/interaction.json",
+    "sha256": "462365b90da28aa1b57d225000acd367e2c583db0755c3ab105edeefd221b209"
+  },
+  "source": {
+    "path": "data/flow-capture-charger-20261103-v1/source/video.mp4",
+    "sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c",
+    "original_sha256": "53e407b9a288c199cf6e1827ad5ec99693a86714885c8c628e77daf48802d2df",
+    "duration_s": 45.4229,
+    "time_domain": "source_video_presentation_seconds"
+  },
+  "source_time_domain": "source_video_presentation_seconds",
+  "component_id": "power_cable",
+  "trace_ref": {
+    "path": "data/nonrigid-observations/charger-20261104-v1/source-cable-trace.json",
+    "sha256": "339c55716a5e1de151cabc3e8e5b1b9eb635f2a85b775fe7b477045967e47dda",
+    "bytes": 2538153
+  },
+  "sample_count": 66,
+  "depth": "undefined",
+  "endpoint_physical_identity": "unknown",
+  "invisible_spans_completed": false,
+  "physical_accuracy_verified": false,
+  "simulation_ready": false,
+  "display_policy": {
+    "rigid_native_pose_replay": "withheld_for_known_nonrigid_component",
+    "native_static_asset_inspection_retained": true,
+    "viewer_representation": "source_pixel_polyline_overlay_video_camera_only",
+    "temporal_interpolation": "none",
+    "maximum_nearest_sample_offset_s": 0.36,
+    "unknown_rows_are_barriers": true,
+    "display_between_samples": "nearest_saved_annotation_estimate_not_motion_measurement"
+  },
+  "limitations": [
+    "A visible SAM silhouette is fallible evidence; this path is not a reconstructed 3D rod.",
+    "Masks can include hands, connectors and background; principal skeleton paths can be ambiguous.",
+    "Disconnected spans, crossings, loops, border truncation and unknown physical endpoints remain explicit.",
+    "No invisible spans, future-frame interpolation, connector orientation, length in metres or material parameters are inferred.",
+    "An existing static SAM 3D appearance asset does not provide measured cable deformation.",
+    "Only one selected visible skeleton path may be present when the source mask has branches/disconnected spans; physical endpoints and depth remain unknown."
+  ],
+  "original_trace_sha256": "339c55716a5e1de151cabc3e8e5b1b9eb635f2a85b775fe7b477045967e47dda",
+  "fresh_skeleton_recomputation_verified": true,
+  "new_api_calls": 0,
+  "new_gpu_calls": 0
+}

@@ -1,0 +1,2627 @@
+{
+  "format": "interaction-twin-evidence-procedure",
+  "version": "0.1",
+  "case_id": "flow-capture-charger-20261103-v1",
+  "summary": "chronological visual procedure shows white adapter inspected, cable straightened on floor, cable joined to adapter, assembly placed at wall outlet, and free cable end displayed.",
+  "source": {
+    "path": "data/flow-capture-charger-20261103-v1/source/video.mp4",
+    "sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c",
+    "original_sha256": "53e407b9a288c199cf6e1827ad5ec99693a86714885c8c628e77daf48802d2df",
+    "duration_s": 45.4229,
+    "time_domain": "source_video_presentation_seconds"
+  },
+  "inputs": [
+    {
+      "id": "source_manifest",
+      "path": "data/flow-capture-charger-20261103-v1/manifest.json",
+      "sha256": "2afdedf274580ce5bb5a9317b3720c9f7f9736f2765dcc7a357aec5d1bdb0826",
+      "kind": "source_manifest"
+    },
+    {
+      "id": "source_frame_index",
+      "path": "data/flow-capture-charger-20261103-v1/frames/index.json",
+      "sha256": "e8d8acffca705b10efdb09b7a3fdd3bef5560529b9a68795ed84094661b4788f",
+      "kind": "source_frame_index"
+    },
+    {
+      "id": "discovery",
+      "path": "data/flow-capture-charger-20261103-v1/reasoning/flow-discovery-1/discovery.json",
+      "sha256": "9617edd4e79bfdf98bdd1bec09335d7ea7b08ce3d5d68901bbcc87029f020727",
+      "kind": "model_discovery"
+    },
+    {
+      "id": "annotations",
+      "path": "annotations/new-flow-capture-charger-20261103-v1-flow-discovery-1.json",
+      "sha256": "28a7974cbfd4ba81b311ef3972928906a2acd5611e40d470c89598f693b42d7c",
+      "kind": "model_tracklet_proposals"
+    },
+    {
+      "id": "semantic_proposal",
+      "path": "data/flow-capture-charger-20261103-v1/flow-procedure-proposal-1/proposal.json",
+      "sha256": "0c50aa26c358da270d46097e165069ea7ce0d1af80099b99616bd3f5ba144db1",
+      "kind": "model_semantic_proposal"
+    },
+    {
+      "id": "compiler",
+      "path": "stage5.py",
+      "sha256": "4d16bda8bb1677533b066bca0cf5259df8666d8384ccbc3c610a9ac89b93fde6",
+      "kind": "deterministic_compiler_code"
+    },
+    {
+      "id": "compiler_cli",
+      "path": "scripts/stage5_compile.py",
+      "sha256": "54d53e0346b2e6a57cb8c52ec527075af45c0775cec5bbd61bd5b8278d84af43",
+      "kind": "deterministic_compiler_orchestration_code"
+    },
+    {
+      "id": "interaction_schema",
+      "path": "schemas/interaction.schema.json",
+      "sha256": "f3a973305d1e6d17053f687684ac0f6fca9bcc3232ef00ccc4fa591c440761e1",
+      "kind": "schema"
+    },
+    {
+      "id": "mask_tracks",
+      "path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/tracks.json",
+      "sha256": "3a24c422beeefa1f4b61ff14face27516d3243bd2ed6f03d7f70aa11dcbebe57",
+      "kind": "actual_sam_masks"
+    },
+    {
+      "id": "mask_quality",
+      "path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/frames.json",
+      "sha256": "4aa86d0a84ed8ee753bc76c6708ce62e262377a94293753ed212d85c7e2a2d70",
+      "kind": "geometric_mask_gates"
+    },
+    {
+      "id": "mask_audit",
+      "path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/model-audit-v1/audit.json",
+      "sha256": "df115e1cbfd97c9adb942005b8a748afbed8a5b5125e1498f5b8672dff9a81ea",
+      "kind": "model_mask_plausibility_audit"
+    },
+    {
+      "id": "model_metadata_1",
+      "path": "data/sam3d-upload-jobs/5b2a25363635c7bb67ccf8e386afc02c56860e72157f7a8f586bd2ac2245ebcf/candidate/metadata.json",
+      "sha256": "fe2749f952785b0e2e927d5b08c47229999a9925156c4ecc6746d4e015d8aeae",
+      "kind": "learned_asset_metadata"
+    },
+    {
+      "id": "model_metadata_2",
+      "path": "data/sam3d-upload-jobs/bfebd5ba2ca15c28fd5c4b602d3487a73541344ee041be3e7531ef33ea94bb89/candidate/metadata.json",
+      "sha256": "fe07a7bf8190919e21bf12d40955dbae9b7fa37e45c4de23b2cfa160ab2aef0f",
+      "kind": "learned_asset_metadata"
+    },
+    {
+      "id": "model_metadata_3",
+      "path": "data/sam3d-upload-jobs/9c9f2deb744570f469f8a814742efbd9b1eed234c6f79187d7e51d92841c17a4/candidate/metadata.json",
+      "sha256": "733d8ef1c67e8acd0d869cfb1586db693bf412cc1738a5adfb56780849f089ce",
+      "kind": "learned_asset_metadata"
+    },
+    {
+      "id": "model_metadata_4",
+      "path": "data/sam3d-upload-jobs/8b5ab53e06cb5b2456dcb1d8aa93f3ed1da840ee0bf177cf524defe12a790c88/candidate/metadata.json",
+      "sha256": "d3af01f2aeddb5fa2bd48a0c4bc5ac9518513a051222abb6ea0d4f8353c111e3",
+      "kind": "learned_asset_metadata"
+    }
+  ],
+  "reasoning": {
+    "provider": "meta_api",
+    "inference_location": "hosted_Meta_Model_API",
+    "model": "muse-spark-1.3",
+    "role": "visual_procedure_reasoning",
+    "proposal_input_id": "semantic_proposal",
+    "human_reviewed": false,
+    "manual_semantic_story_used": false
+  },
+  "tracklets": [
+    {
+      "id": "adapter_early",
+      "label": "white power adapter",
+      "candidate_entity_ids": [
+        "adapter_early_entity_candidate"
+      ],
+      "identity_status": "model_proposed_tracklet_physical_identity_unverified",
+      "source_sample_range": [
+        1,
+        16
+      ],
+      "limitations": [
+        "coarse sampling and motion blur",
+        "partial hand occlusion",
+        "identity after disappearance not asserted"
+      ]
+    },
+    {
+      "id": "adapter_late",
+      "label": "white power adapter",
+      "candidate_entity_ids": [
+        "adapter_late_entity_candidate"
+      ],
+      "identity_status": "model_proposed_tracklet_physical_identity_unverified",
+      "source_sample_range": [
+        22,
+        66
+      ],
+      "limitations": [
+        "uncertain if same physical instance as early track due to full out-of-view gap samples 17-21",
+        "partial occlusion by hands and outlet",
+        "appearance changes with viewpoint"
+      ]
+    },
+    {
+      "id": "power_cable",
+      "label": "white cable",
+      "candidate_entity_ids": [
+        "power_cable_entity_candidate"
+      ],
+      "identity_status": "model_proposed_tracklet_physical_identity_unverified",
+      "source_sample_range": [
+        1,
+        66
+      ],
+      "limitations": [
+        "deformable, not rigid, shape changes continuously",
+        "self-overlap and hand occlusion",
+        "thin structure blurred in coarse samples"
+      ]
+    },
+    {
+      "id": "wall_outlet",
+      "label": "wall outlet",
+      "candidate_entity_ids": [
+        "wall_outlet_entity_candidate"
+      ],
+      "identity_status": "model_proposed_tracklet_physical_identity_unverified",
+      "source_sample_range": [
+        1,
+        66
+      ],
+      "limitations": [
+        "static background object, scale and position shift with camera motion",
+        "partially out of frame in some samples"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "id": "asset_1",
+      "track_id": "wall_outlet",
+      "path": "data/sam3d-upload-jobs/5b2a25363635c7bb67ccf8e386afc02c56860e72157f7a8f586bd2ac2245ebcf/candidate/asset.glb",
+      "sha256": "476967630214300899877caf98739ae9e2c738069bf47c715db10f8e7cdb2f12",
+      "backend": "Meta SAM 3D Objects",
+      "geometry_status": "pending_independent_execution_and_source_projection_review",
+      "physical_scale_known": false
+    },
+    {
+      "id": "asset_2",
+      "track_id": "adapter_early",
+      "path": "data/sam3d-upload-jobs/bfebd5ba2ca15c28fd5c4b602d3487a73541344ee041be3e7531ef33ea94bb89/candidate/asset.glb",
+      "sha256": "74635a414ec57bd5e92bbda01a9b55bb77a8e01152c97c53d8773f0abbf98636",
+      "backend": "Meta SAM 3D Objects",
+      "geometry_status": "pending_independent_execution_and_source_projection_review",
+      "physical_scale_known": false
+    },
+    {
+      "id": "asset_3",
+      "track_id": "power_cable",
+      "path": "data/sam3d-upload-jobs/9c9f2deb744570f469f8a814742efbd9b1eed234c6f79187d7e51d92841c17a4/candidate/asset.glb",
+      "sha256": "9d308a2d35d4b6eb63a6af7fdd71c9b440d6c41200416d2894d5e4aa33a0e147",
+      "backend": "Meta SAM 3D Objects",
+      "geometry_status": "pending_independent_execution_and_source_projection_review",
+      "physical_scale_known": false
+    },
+    {
+      "id": "asset_4",
+      "track_id": "adapter_late",
+      "path": "data/sam3d-upload-jobs/8b5ab53e06cb5b2456dcb1d8aa93f3ed1da840ee0bf177cf524defe12a790c88/candidate/asset.glb",
+      "sha256": "369ce5a10634764fac142c654571a5b9281e5379aa947e906619d7809b9f1287",
+      "backend": "Meta SAM 3D Objects",
+      "geometry_status": "pending_independent_execution_and_source_projection_review",
+      "physical_scale_known": false
+    }
+  ],
+  "evidence": [
+    {
+      "id": "source_000001",
+      "source_index": 1,
+      "timestamp_s": 0.0,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000001.jpg",
+      "frame_sha256": "7a489a883f3864fc573e76c85460c6bb6d8491eb8641d625a0e2634eb0f77641",
+      "observations": [
+        {
+          "track_id": "adapter_early",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_early/000001.png",
+          "mask_sha256": "377b0880c4205c314677719d753ead21802fef84e66bb25555c3b57921a2b592",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000001.png",
+          "mask_sha256": "9037e4b063236e2d276a8ef04ec2c5733b3a1c32ee7d7834d20bdbd38ab91efa",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000001.png",
+          "mask_sha256": "0d4957444b9768f09169fcf079815347ff730310744815279df88d8f2a48d30a",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000002",
+      "source_index": 2,
+      "timestamp_s": 0.699978,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000002.jpg",
+      "frame_sha256": "aadb5704e9a4eb174ced06c4bc3e522a4e5be39054d07bd9d8d03716be46b9a8",
+      "observations": [
+        {
+          "track_id": "adapter_early",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_early/000002.png",
+          "mask_sha256": "a5fcf7ba3dd8886be0543d29b1434dfe1da27df79bc55ba966fca723e0165076",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000002.png",
+          "mask_sha256": "6f4d8717e5aa348568f7a1d1aa134652770f5c633a38b5af894ce294d854ffd2",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000002.png",
+          "mask_sha256": "3d4ec083ef1f16a6453d0b1a4b3b25bea5bba28c7275a7a3684edccdf6fd9008",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000003",
+      "source_index": 3,
+      "timestamp_s": 1.399778,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000003.jpg",
+      "frame_sha256": "6dcae169560c57a1aa16975dced3078566b75c71355c93255beec459bef436fb",
+      "observations": [
+        {
+          "track_id": "adapter_early",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_early/000003.png",
+          "mask_sha256": "96e83eeba7d1fdf814997d06e6133831cb7bed9881296e7d50526293e09f4116",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000003.png",
+          "mask_sha256": "400b59a8c3a4bd8785f6b9fc4b5fdeed5216eb5e8e270d1668448a7cef7b61c9",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000003.png",
+          "mask_sha256": "60a7f60bc816bd99fdc83709fbde52dd6413e37d1148acda137e74210dca9f82",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000004",
+      "source_index": 4,
+      "timestamp_s": 2.0996,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000004.jpg",
+      "frame_sha256": "9d98d387bd710e9e57b499ad1ede18f0ad08364f2a01cb5651b2560bcf831187",
+      "observations": [
+        {
+          "track_id": "adapter_early",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_early/000004.png",
+          "mask_sha256": "29a16bfd0f04a03b6c67ec0a2439ee83ee4a0e25921542d94133e2aeca104030",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000004.png",
+          "mask_sha256": "1b23cc2f8cf3e1f33fb6daadff504806e1d3df01d204d20ef297e6b7939c8e09",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000004.png",
+          "mask_sha256": "bba8cc96eeb39660ac048bb680c28b8354679a74db02400315e77c5e07433c4a",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000005",
+      "source_index": 5,
+      "timestamp_s": 2.799567,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000005.jpg",
+      "frame_sha256": "383728e667a371b582327870c3896ef9f31371267ac91646d4ff0957b8f1e28b",
+      "observations": [
+        {
+          "track_id": "adapter_early",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_early/000005.png",
+          "mask_sha256": "46f12568ee8a331149ba4441cda4d38246a14fbace944a9e1805318c40c571e5",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000005.png",
+          "mask_sha256": "3afac0fab5ad49b17f6ed50a02e2d4ed1f2f8205fca5476c837cb301b5ab15ca",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000005.png",
+          "mask_sha256": "ed462f4cd541c42c969b3f9be24c8951b524dc7e372c4c06fc21752299eae5d5",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000006",
+      "source_index": 6,
+      "timestamp_s": 3.499556,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000006.jpg",
+      "frame_sha256": "26e1a79922e6af2d23da0d69b722520d8fd5f4b26304ae5e2cae3dec258689fd",
+      "observations": [
+        {
+          "track_id": "adapter_early",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_early/000006.png",
+          "mask_sha256": "b74c5942dd48bc8a91eee7b1ab61280120eb56bafde3b3187493ab1c6c7684b8",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000006.png",
+          "mask_sha256": "671c02d6be49018d692ca79800acefe3a1ab18eb2e97411a70c5536d66335a35",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000006.png",
+          "mask_sha256": "cbe520558da97bec29aa2cf394adce10062651bb37c076289b879f5fa789892a",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000007",
+      "source_index": 7,
+      "timestamp_s": 4.199378,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000007.jpg",
+      "frame_sha256": "f6c36246a2eae90162b7c1be0fdcea5f7b6267f1d005b1cb80b2f342ac6680f4",
+      "observations": [
+        {
+          "track_id": "adapter_early",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_early/000007.png",
+          "mask_sha256": "7f631e3badf421d59e6f8e43863aa7dc81f9032c90cdeff169e51a4f47bfb0b5",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000007.png",
+          "mask_sha256": "6652150a621df851c1f325d43c41ad9307359078e26a23680f6c981eb534ec37",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000007.png",
+          "mask_sha256": "f06eb71cdf32873af047d7e8ea271a2a9025bc0978db3a6e574479ebf1b47706",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000008",
+      "source_index": 8,
+      "timestamp_s": 4.899267,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000008.jpg",
+      "frame_sha256": "47677873d6614890f448fa9960b1915e8ccab31c1d6a9480a2fbd3855f4b18af",
+      "observations": [
+        {
+          "track_id": "adapter_early",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_early/000008.png",
+          "mask_sha256": "30f7f7ebd6645d51fe233a15126429750f3f0b75465aebad8be64c2450aadecb",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000008.png",
+          "mask_sha256": "6535e620cb9c642252682987829c71789982809d443701c9a0ad9a41127d4db1",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000008.png",
+          "mask_sha256": "3a1d864e8684a3f652b778dfab544308341a1c4c046a586f05eaa610ab82a0d1",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000009",
+      "source_index": 9,
+      "timestamp_s": 5.599144,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000009.jpg",
+      "frame_sha256": "2069878cd1aef5f759330486e31f88048b35a1efd157a3c24d3abfcb2f562c64",
+      "observations": [
+        {
+          "track_id": "adapter_early",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_early/000009.png",
+          "mask_sha256": "0f69e40f2eabd833e33addaaf673c7c8e7692ccf66f0912d17716d645add0043",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000009.png",
+          "mask_sha256": "2895cddab39ed2fd76dfff7b20d183b8267bb59eb485cf74c2f652143813a50c",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000009.png",
+          "mask_sha256": "1c8adcf07cdd43418f31cbd01fd2c31e08dee8de77a994147a841a40371782e9",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000010",
+      "source_index": 10,
+      "timestamp_s": 6.299022,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000010.jpg",
+      "frame_sha256": "77a927df05bf4de8307767a44bb679e7712ec20b5beccac32c87a097fe40e997",
+      "observations": [
+        {
+          "track_id": "adapter_early",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_early/000010.png",
+          "mask_sha256": "93ebf618ce0a68be91ffcbcb125efab8036c73a1c296f65fc7ea837fedccea8b",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000010.png",
+          "mask_sha256": "6cb701db20ab3bb9728e041f980652d9d3502756aa147059bc02a9c4f0338d96",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000010.png",
+          "mask_sha256": "6d1d6099c67767d4da905a04fd82c43351711c32586e8fcfd5d97f261c35aabf",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000011",
+      "source_index": 11,
+      "timestamp_s": 6.9989,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000011.jpg",
+      "frame_sha256": "df03a43cdd45db313109aeac04ec2ed8736982d2c288c740b7ad0b2e2fc57647",
+      "observations": [
+        {
+          "track_id": "adapter_early",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_early/000011.png",
+          "mask_sha256": "b2b5263e164fca9857b7b890461421cd60107a18acbb28b624b40a928b88f801",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000011.png",
+          "mask_sha256": "4ec6a7a1a4e3e027fcdcea63532660144f407169b35a2f2cb86cef96d40dadbd",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000011.png",
+          "mask_sha256": "42b04a487fce13234f4d96fe9d712c1ecb375d5827d45d0a18d414ac7cc73bfe",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000012",
+      "source_index": 12,
+      "timestamp_s": 7.698778,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000012.jpg",
+      "frame_sha256": "d064c69135e83b0b24179873af95a3b606a1562e23595b090359c805bbdc030f",
+      "observations": [
+        {
+          "track_id": "adapter_early",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_early/000012.png",
+          "mask_sha256": "082edb0f2b2b36d7a0698cc17fae29b91e050d06d95821273afc4fd550b2340b",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000012.png",
+          "mask_sha256": "31b9a2df944f0b5e2ecdaa5548424006d701aee7fd38b776d2e7ba8ad7173406",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000012.png",
+          "mask_sha256": "025518374991532f11892fb3b92c924af0c711c6e42deec11bcbb761f57fcffa",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000013",
+      "source_index": 13,
+      "timestamp_s": 8.398656,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000013.jpg",
+      "frame_sha256": "ca26bbc93f5a1afb2c47c260d9a354318a824678cb498e586be9f3d6e77d6332",
+      "observations": [
+        {
+          "track_id": "adapter_early",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_early/000013.png",
+          "mask_sha256": "0f9a7655912cd604865a4448d0dcce64d73c7f3150ed66b4abe35e268262d284",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000013.png",
+          "mask_sha256": "7516b53578832cf472a4a6b42c4e4e9d1e13766e1a6f25375e3b3fb1a1dbb05c",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000013.png",
+          "mask_sha256": "255c66e3fdf7722fdc44a341d56595c1e2e26d99263e0d1c68539070c0f96814",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000014",
+      "source_index": 14,
+      "timestamp_s": 9.098533,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000014.jpg",
+      "frame_sha256": "b91108ae7c8344382bf46c7e437a13e28b6811a06d16203dbb307b5a22fbcf90",
+      "observations": [
+        {
+          "track_id": "adapter_early",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_early/000014.png",
+          "mask_sha256": "1a477d466d87d5f38e49c6639c60a42d20e14cf14dfd06ccb53cf6cf40dc35b8",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000014.png",
+          "mask_sha256": "6f9370f4ecac24d75705d60f50520a3c7804e5f0ca9d380e585c649b947d4021",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000014.png",
+          "mask_sha256": "e394b361a80e67558b054728bcda8b3b59eefaf78d367831ac4a36feb039cff5",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000015",
+      "source_index": 15,
+      "timestamp_s": 9.798411,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000015.jpg",
+      "frame_sha256": "0c142fb7d3efefbe32fbfc454921b55c4d5dbaea25c14eb2ca2b9a6631d80c60",
+      "observations": [
+        {
+          "track_id": "adapter_early",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_early/000015.png",
+          "mask_sha256": "3b9b41b503f4154fd67223852de54499b4540010af3b1f2339321cd4cac958ad",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000015.png",
+          "mask_sha256": "6effd88af0f56baec72762cfae9c268a9af6c623ca607a638678755052cf4c7a",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000015.png",
+          "mask_sha256": "381ff8246fdb79993e3619f94304e44171f5b3b769a910e2e7977ddcd2f11d24",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000016",
+      "source_index": 16,
+      "timestamp_s": 10.473389,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000016.jpg",
+      "frame_sha256": "5f376ea7344c6723f07babd2a7df8fc960efd9ee8931f756ede2c277dced7f8e",
+      "observations": [
+        {
+          "track_id": "adapter_early",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_early/000016.png",
+          "mask_sha256": "1873a14f6ad2ab899fca11ea1d736fe04b61b9845674e709255dddee56e1a55d",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000016.png",
+          "mask_sha256": "5519a3adca31d4a0586ae0f9ae8179581a407baa628076ffc25b28c5ff03ff67",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000016.png",
+          "mask_sha256": "087d2c2b7954e97830e7e7a98f44b5d022a9d71f32015ca615cebcb32d47d07a",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000017",
+      "source_index": 17,
+      "timestamp_s": 11.165033,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000017.jpg",
+      "frame_sha256": "2f012f69722559fb8d3ef6f5c2e249d48f9cadbec935a992c604710ad590d9b3",
+      "observations": [
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000017.png",
+          "mask_sha256": "e5033144fa44bc4dee58e6b88b239b08c793045c3d1f9e2f6e11dc113f3a58ee",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000017.png",
+          "mask_sha256": "a23d06efba2b7d237b4e9f69a9c5d653540a594d6b2881aebb3fd3e6a9082e83",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000018",
+      "source_index": 18,
+      "timestamp_s": 11.864767,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000018.jpg",
+      "frame_sha256": "7545597d58036281a1eb551a74d812ea5bd475f6a9866552c6bf4991cb81f611",
+      "observations": [
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000018.png",
+          "mask_sha256": "dad4d231b963e896f30502a76df7ff4885bf7ef8a93a47da77c1e838a4ef32ef",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000018.png",
+          "mask_sha256": "94bba7deff0d22f8fd22127c4f3752b8fc11098ba4a01f70a75fd6473af15f7a",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000019",
+      "source_index": 19,
+      "timestamp_s": 12.564633,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000019.jpg",
+      "frame_sha256": "f435f73952f36fee48f14bee9530a4fcdf7e275686544d8db83779f47d033f53",
+      "observations": [
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000019.png",
+          "mask_sha256": "b21f6694e467a1dc6d5d12c447d8283774b2ed5f1813dfee280507a7b6b70f20",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000019.png",
+          "mask_sha256": "227d71b7c91ef2dd8c538398e722dc64c069312b39881e43527f47e93aa0cb65",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000020",
+      "source_index": 20,
+      "timestamp_s": 13.264511,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000020.jpg",
+      "frame_sha256": "6268e6df5d881f5be6cc09da14394eb23081f828a616198d430fac546e89b710",
+      "observations": [
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000020.png",
+          "mask_sha256": "01c28622494799170d348e9fbf6c4b8163763d839863080b91c105b3705d34af",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000020.png",
+          "mask_sha256": "6f9a1064650549380d53434c0f3dc1286ac6e60032c9df44d3ab899549fb4053",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000021",
+      "source_index": 21,
+      "timestamp_s": 13.964389,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000021.jpg",
+      "frame_sha256": "43d1403ab95a619438d06c7c7ee3aa42d88b8fbddd30678ec8409950c89f1adb",
+      "observations": [
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000021.png",
+          "mask_sha256": "9f2f58e6f2c105657a03b31d0742c80ddbce464b9a37ad32a5009c629cab2fe8",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000021.png",
+          "mask_sha256": "f4bad63ad40fc1c72827ac222dcf1a1ceea2d0602d65e1b34898652c0e4a19a3",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000022",
+      "source_index": 22,
+      "timestamp_s": 14.664378,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000022.jpg",
+      "frame_sha256": "cd4fdb7ed4622de691ee514a8c6156d46f578cd3b055e3c8c6042ac10610496a",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000022.png",
+          "mask_sha256": "11c9efe2e595d0b51741ffb6a89cb326d4b0d56a439244a081ea8277b29dcb0d",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000022.png",
+          "mask_sha256": "433ae3b3cfa817b3bbbf6277bb45d9c3559d7ae8dccdddf295fdbef205cd83a5",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000022.png",
+          "mask_sha256": "6a7b0670d7ef05803e0d55a4ae919c3b0d74d69e372f08e8f56d573c41caee52",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000023",
+      "source_index": 23,
+      "timestamp_s": 15.364267,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000023.jpg",
+      "frame_sha256": "e139de9ed08488736448360b8b345194f3b0b3bfc9e266dfee92d9e901114de8",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000023.png",
+          "mask_sha256": "704541eb28e6c98e30b791dcbe2028ae9f78fff0885997e323eaee472e050b2d",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "reject_wrong_or_lost_mask"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000023.png",
+          "mask_sha256": "35dda0a99c41448a68a783ee0d4a1c8e88bbcf845f9d96f1c4898d02bb66ee0d",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000023.png",
+          "mask_sha256": "b858e36ee877eb5bef50a267f2e9dfb18d6b6a25ab7a24598bf526efd08e96cf",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000024",
+      "source_index": 24,
+      "timestamp_s": 16.064167,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000024.jpg",
+      "frame_sha256": "de758d5fb207e02d5ac0484e31e451beac962692b355631cf587e114f70889ad",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000024.png",
+          "mask_sha256": "1b937398e8b18f5f01b58445e95c37ed10d487fc193182ee13a8e18d7158f472",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000024.png",
+          "mask_sha256": "5167a74f26d1e272618fa5071f4416beaeee6458c864c762035e2c19a900e1c8",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000024.png",
+          "mask_sha256": "3d64bc3219d77839adb91dd5b26ed556bdd8eb05d8c05940cedf53d8afc8f595",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000025",
+      "source_index": 25,
+      "timestamp_s": 16.764078,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000025.jpg",
+      "frame_sha256": "cebc97b001b4cd6c96068647f7942adeec5bd2cbe6bda5661c47f609e6c2a7e1",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000025.png",
+          "mask_sha256": "00d86faefa2ad642daed625f925d185342c21fb054c059c64cbba1ed4c6f5c40",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000025.png",
+          "mask_sha256": "907a00d3a18bd20cd5ef298cbf44fb014cb5952f6c7a53f4a13158b84a0713de",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000025.png",
+          "mask_sha256": "4219cf4dc65d6736e56c78d4dda7c9692997eb93894555709124d3bf739c9932",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000026",
+      "source_index": 26,
+      "timestamp_s": 17.463956,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000026.jpg",
+      "frame_sha256": "cb2b852e7de7c01e9abc5758c10cc903a892330b7ded80d0a52fc85ed050c8f7",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000026.png",
+          "mask_sha256": "11c9efe2e595d0b51741ffb6a89cb326d4b0d56a439244a081ea8277b29dcb0d",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000026.png",
+          "mask_sha256": "8c753cace37fe1f7ef8d6f35885646f70fe8518998c6ad1f043f5d46786136c4",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000026.png",
+          "mask_sha256": "323755c40b777c7593fb2e9bd894f190702cd2cb4c813516f9e40530398e893d",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000027",
+      "source_index": 27,
+      "timestamp_s": 18.163922,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000027.jpg",
+      "frame_sha256": "a9adc4473998a5d4351250743b209ff6ccd826d20197a6de04e3bb30abe9c639",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000027.png",
+          "mask_sha256": "11c9efe2e595d0b51741ffb6a89cb326d4b0d56a439244a081ea8277b29dcb0d",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000027.png",
+          "mask_sha256": "06938ac5e43c805928d43b0b94f42a0d660c9fb04e0b1533403b1b6f7a3160e9",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000027.png",
+          "mask_sha256": "271d3cb679c5a4c08b0661e5025e12f10b91bfa3b882b2d27329350ad542b511",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000028",
+      "source_index": 28,
+      "timestamp_s": 18.863722,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000028.jpg",
+      "frame_sha256": "1df7aeb354fda4f9f28bc490983afc6bbdacde5bd2c0146385eda8acdfe821fc",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000028.png",
+          "mask_sha256": "11c9efe2e595d0b51741ffb6a89cb326d4b0d56a439244a081ea8277b29dcb0d",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000028.png",
+          "mask_sha256": "2794d64f5c24d828e579ba767b3e05314b4a3160d6267b5c84094cb022bc502c",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000028.png",
+          "mask_sha256": "0b30260258bdf2eb8fab569c082b50c99b4a0fd623830e9424871041b73c9bcb",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000029",
+      "source_index": 29,
+      "timestamp_s": 19.5636,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000029.jpg",
+      "frame_sha256": "63a5d549bf7e592993322a9c6c68344525f25faf41eaa329bd6c79f9d5d0cec4",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000029.png",
+          "mask_sha256": "11c9efe2e595d0b51741ffb6a89cb326d4b0d56a439244a081ea8277b29dcb0d",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000029.png",
+          "mask_sha256": "d5b207058acfacd34329fa0e577115a17182c69d0490cba7efbc5e68eaf71da6",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000029.png",
+          "mask_sha256": "2a1052e1ac5864c24f6b6dcc875f35221fa0e4ded039eb67d3405d999de4bceb",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000030",
+      "source_index": 30,
+      "timestamp_s": 20.263478,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000030.jpg",
+      "frame_sha256": "55286ee75772fa6b5e2286eadc1a7a652491e2a0f072091947baba672bb8e301",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000030.png",
+          "mask_sha256": "27894f08d7202dd86583ad19d564d8e552b2e3a42a1493a41d29e15b58057c2d",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000030.png",
+          "mask_sha256": "b22d83486de3f0bcad4ed3a70ca325a81d430d2279a88483122f53f50d92b652",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000030.png",
+          "mask_sha256": "2c916a7d5f0018fa64f503c822a01c3a95890e95482426091063e033ff437296",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000031",
+      "source_index": 31,
+      "timestamp_s": 20.963356,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000031.jpg",
+      "frame_sha256": "b70a3c3e575f70a56ceea48cd3d6cdb1e5dd690a2eb17ba3f76d20ad6d626123",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000031.png",
+          "mask_sha256": "9651364d55086e829665dfafdb90af846ea03cb0ba6b4bae52160cc68dd6616f",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000031.png",
+          "mask_sha256": "081babe3edfaac9cdd96f50bcf3d77ac237961bd250c1f295ecff0a92cba55dc",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000031.png",
+          "mask_sha256": "ec0a483bba1e71ddb3f8fce394dc06a9224a24b290ecbd5ee385c727df624c31",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000032",
+      "source_index": 32,
+      "timestamp_s": 21.663233,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000032.jpg",
+      "frame_sha256": "c3c9e234f311e5ce7047bce8864d3b8876722a41e0c1d8cd66b08628f1be9dee",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000032.png",
+          "mask_sha256": "11c9efe2e595d0b51741ffb6a89cb326d4b0d56a439244a081ea8277b29dcb0d",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000032.png",
+          "mask_sha256": "f7fc7f2ea7860ed1e2f218fa5bd904ddcf04831c5221cd68333adb4ce4164927",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000032.png",
+          "mask_sha256": "a9633b84841e002d45e5c1cd778b66d38f24c480164f4a0316b42ae064e69034",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000033",
+      "source_index": 33,
+      "timestamp_s": 22.363111,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000033.jpg",
+      "frame_sha256": "aed09ff5062e646f86d24cc3902f24944e02a56a2f70228287b0c5712013fb80",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000033.png",
+          "mask_sha256": "65883e9ac0c200d51ff4c68a45ead1a5a417b64b106ba8d15f2f71542cd277e5",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000033.png",
+          "mask_sha256": "c5659e5d81f089d876a8b2f434d3b9f6c40e986c12a50a02df17430a04f2e859",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000033.png",
+          "mask_sha256": "a6fe6718135d7eda4899e7be235c2976a2481ab307fd5c9cdd133f8c1f1473bf",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000034",
+      "source_index": 34,
+      "timestamp_s": 23.062989,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000034.jpg",
+      "frame_sha256": "bf6f581f93f825bfec55033c961091869e1ea29abd97bea9999799b28999b5e5",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000034.png",
+          "mask_sha256": "ee90c649fe2bd73df1df71a3bc4810cb8999954ca0f378b6f7f7f217020f2235",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000034.png",
+          "mask_sha256": "aeec95e41467f0d58f31adb958858b3cab75cf3f5d68eb57c19d9e77a617d73e",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000034.png",
+          "mask_sha256": "7b07a9568f64924362f86ebfc9f0d2a7894ded4b06ea5211469b902e5c66cc0c",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000035",
+      "source_index": 35,
+      "timestamp_s": 23.762867,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000035.jpg",
+      "frame_sha256": "dd46def31af90dff6a4e58e59df6ed6d5d83e37b8aafe12562eb9fb3e31fd52c",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000035.png",
+          "mask_sha256": "92ebefc46e120f23bd5260ed477e1b051cbdeeab660204964e428d8c998a87d9",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000035.png",
+          "mask_sha256": "7a712ad4f618d4f1b824f6e294a0cf2d8fbe5776f323501eb123039ec6fd70f6",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000035.png",
+          "mask_sha256": "4283a5e0d9357e9adf0005aa6344833a9a254e5316bfbdf648f14b88a48995dc",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000036",
+      "source_index": 36,
+      "timestamp_s": 24.459511,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000036.jpg",
+      "frame_sha256": "7cb7729270276e4a59b73a2e13b0bf0d83c4e513e15de1cca53e558ef57b7bd8",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000036.png",
+          "mask_sha256": "271b3f2964d54bb55cfc8180f845bb91052fcfc2968371e04d487cd34d1512c9",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000036.png",
+          "mask_sha256": "d864e3a796b93b93e75b2d85efd711cdac47aa474841346a051f865ed62ab355",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000036.png",
+          "mask_sha256": "f5789f1c7098e9acacd3bced694d51a73ed3ef83ffd003bb48dc03042b12651c",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000037",
+      "source_index": 37,
+      "timestamp_s": 25.159378,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000037.jpg",
+      "frame_sha256": "6d1df1d16b111c9c7acc5850474720e26cdc081dc3330dec8f0ad913bfaa6d34",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000037.png",
+          "mask_sha256": "ed4ea8d9fce1a572fb134e7d576d0ef60d4c3d1be4f58027e5be3f27d2c6825d",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000037.png",
+          "mask_sha256": "bddef3314efaac77ff56bc9fd1e2d6e3254227b63d1dc4e29fccf6f41ad20b96",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000037.png",
+          "mask_sha256": "4ea7ad999b6fce4c14e0c5a1928b536e46687b2d0a3239c4a0e81c910909beaa",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000038",
+      "source_index": 38,
+      "timestamp_s": 25.859178,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000038.jpg",
+      "frame_sha256": "a0611ab03273d8460e5ea275d06f151f67328d96200074d74eaea88583159829",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000038.png",
+          "mask_sha256": "6402f4969f15829918e9282cfe96de876d643240ff862fc3d7ca5b8185a5dc0d",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "reject_wrong_or_lost_mask"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000038.png",
+          "mask_sha256": "8a96f32b7f0c5674d955329105e51063e97cf320b793cce0c7741059ee1cf6e5",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000038.png",
+          "mask_sha256": "a6c3271a076b72131036f98b58ebf82e2459236787063d8225a1fb3729d3856c",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000039",
+      "source_index": 39,
+      "timestamp_s": 26.559156,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000039.jpg",
+      "frame_sha256": "7f63e0673648582ad336fa47b3fd6dbab527c6dedbe8521ebd9e30ba0978bb71",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000039.png",
+          "mask_sha256": "c1013bc86c07426b9da72615bee3903e6107342722609c112d762a5f87803261",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000039.png",
+          "mask_sha256": "0aee8c6010e6745aa93ad5557e0610c5573feff512c665362061b470fdbae6f0",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000039.png",
+          "mask_sha256": "86f9b8c9e1135c6322c52069a3f0e28d366903320c12df44d23ce02eaaa5ba5b",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000040",
+      "source_index": 40,
+      "timestamp_s": 27.259033,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000040.jpg",
+      "frame_sha256": "7f0991d1918c95a2ef56b31d716e79db70d056638cdca550d56259e304a83ae7",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000040.png",
+          "mask_sha256": "84da30e620c19a5cd670d7a8db96954f315f68864d33535e49b198da6113587f",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000040.png",
+          "mask_sha256": "b10b7043130527f028b7f66c7c96bda1461d6285088d0330bfdd7475e5597421",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000040.png",
+          "mask_sha256": "428ddad008989833312ec979819163d9c6b160f60e0f3d329efe1945bddd0450",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000041",
+      "source_index": 41,
+      "timestamp_s": 27.958956,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000041.jpg",
+      "frame_sha256": "a7a76ab9055ea7997cc75e6759399491678d8bfd577593d8600f55d0987f7369",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000041.png",
+          "mask_sha256": "45244fd0c63f4c5c0b94fc1fb2419cdaa53947e342baf75ec7642efc670ea58c",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000041.png",
+          "mask_sha256": "b4905778c23ef7eddce8cd8a3129eceebe0fcc54a8607c5e8559fcd21894f3b5",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000041.png",
+          "mask_sha256": "e4f6266fb2d5a5917cab2c719e716c48715e521f0dd5f6edc6d3b01cace3a6e8",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000042",
+      "source_index": 42,
+      "timestamp_s": 28.658822,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000042.jpg",
+      "frame_sha256": "5a1f6849a9652e4e8e17a56aa97086de339df76e8ae6845c88f7e06212483a72",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000042.png",
+          "mask_sha256": "bee6434fb78257d971b1f905ac5588baae00d10bc03003a8f038aed6f0fd3789",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "reject_wrong_or_lost_mask"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000042.png",
+          "mask_sha256": "71066e96da42a00e4eac2bd5cbf337ac66aa5e3a28b4e56fae26925d0d174399",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000042.png",
+          "mask_sha256": "9a7662d250580d73786ac36fa02833f274e756432f9209f8dfa2cf0cc2c80471",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000043",
+      "source_index": 43,
+      "timestamp_s": 29.358767,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000043.jpg",
+      "frame_sha256": "b249f114e073e12e4406731e2eff19eae57a10c249a454ebfc0cd9ea4c81ce2d",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000043.png",
+          "mask_sha256": "6570d890d8a31c9af2269b52ad9e86ed120dee3a36aa32b5be1e1ac2000478b0",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000043.png",
+          "mask_sha256": "f41cbbfa2b79d99791563bdbdd66e4a0e5d1e520439c0dc84ba7fb86f958382d",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000043.png",
+          "mask_sha256": "7251ebe30645da7495e79b40cb20f7d4da71f86326d2fa926b17877261eaecb2",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000044",
+      "source_index": 44,
+      "timestamp_s": 30.058544,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000044.jpg",
+      "frame_sha256": "090d9fc9be53448f63bdcbae3e0659a0fec655f02c9e0d6238b9c3e871e9295c",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000044.png",
+          "mask_sha256": "57c5fd37f52a050d4aaed1711b637aeea53b77485b7548dc1e0ccdec17d7bb8f",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000044.png",
+          "mask_sha256": "4f88d37f36ea69743051977d98b2c161113758e8dcc836b9e57c04c8c13e5572",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000044.png",
+          "mask_sha256": "88a0b7207994feafbcc267ec758faa28a24c1c39482ac735956fba6f44bf2b4b",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000045",
+      "source_index": 45,
+      "timestamp_s": 30.735211,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000045.jpg",
+      "frame_sha256": "bddedf475c670397a850b687a4cd4c3515986853858a2cb2d36b8de38a62a7a7",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000045.png",
+          "mask_sha256": "5041c1ae0786f661e199abd5f35a816a34e86321738fc74ff7f72fc2822f908c",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "reject_wrong_or_lost_mask"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000045.png",
+          "mask_sha256": "94ad034d733b63b0dd7f65e37017d3501f3173b570cb42113925feeae516a49f",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000045.png",
+          "mask_sha256": "384e17f649e108bb117f660454767e8373072c63733665d4e05f322c7458c110",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000046",
+      "source_index": 46,
+      "timestamp_s": 31.425111,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000046.jpg",
+      "frame_sha256": "301dbff6eec7f0abd732d2f03f818a398831a0bee326e04d7e2085437095d907",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000046.png",
+          "mask_sha256": "81ebd84a035985fb2772e661418104607a0372baa4e9c8905d4334e5bd8a9a3d",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000046.png",
+          "mask_sha256": "579f3f3c8773cf805d47f680d6b673d5f2ef222200edba783e11644c612a142f",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000046.png",
+          "mask_sha256": "0d6bf16f5e0deadc7496143537c3148c37365208b4d0d466e30b0cf59c8dbfe3",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000047",
+      "source_index": 47,
+      "timestamp_s": 32.124911,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000047.jpg",
+      "frame_sha256": "4cf7f4c2560d89806b5039f8bda731f7547d803480e2c5851b39f498508c83ee",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000047.png",
+          "mask_sha256": "065c3c7326fcf212ae1ac85b413c775addd6278416a2b85684364d07de0a1bc6",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000047.png",
+          "mask_sha256": "59eb5f97b0d26b62179a7d9471e717cd67691cc0ca1199b8f336db9425716b12",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000047.png",
+          "mask_sha256": "3ac5ef82269348c73b6232f2f70eb4b27c3325ac94acfb00ffc68f68b9bd6022",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000048",
+      "source_index": 48,
+      "timestamp_s": 32.824878,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000048.jpg",
+      "frame_sha256": "9fb406ce63b7780f0826c391c263792d7b7b89124c9e304d8740946bb79869c7",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000048.png",
+          "mask_sha256": "2d1a28bdc1f04eeda8d3278f41506e83ae7d7ae6fed17aada7be5a2b7b0e4770",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000048.png",
+          "mask_sha256": "04b838f39cddb8dc6c9eebc0a5855007f6dc42e97c097c24348c9b5c88285eb9",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000048.png",
+          "mask_sha256": "14dc7e96d89498b47badc208b3394db03bef32aa1af5632b5fc76284f83b1410",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000049",
+      "source_index": 49,
+      "timestamp_s": 33.524733,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000049.jpg",
+      "frame_sha256": "d08686c4ae8b501324dc4dba3db1f8d4616716bf8b90367bc1841707c2ebe663",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000049.png",
+          "mask_sha256": "88c3ba7ebe72c5b24bc7356799dfbfd2587a468de020f57b3ef1de5b49d84cb9",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "reject_wrong_or_lost_mask"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000049.png",
+          "mask_sha256": "82df72b995f7503592cada0bd85a15e780d7d3197a7e2bf222aefc2d4deb315f",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000049.png",
+          "mask_sha256": "815d5034ff57dcc99870c03abd5bef9c8bec8faed701107cb71308249aba46dc",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000050",
+      "source_index": 50,
+      "timestamp_s": 34.224611,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000050.jpg",
+      "frame_sha256": "b8b5f6e4e8f3d7cfbbd715f27982821deb3f68b4042d9f4d7d5b96185426ff21",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000050.png",
+          "mask_sha256": "2de16790df7a7d52f5f1446ce5e65493dd302cf553495db218129ac1414b1c2d",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000050.png",
+          "mask_sha256": "54532efe3f04ea7d6ba29c219d1fa6389d6623454c754c7d82fe92e07a6d287d",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000050.png",
+          "mask_sha256": "72a7d3256569bb100d03b198b3ff5fec77da055c5c84f313b300d56da8773a71",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000051",
+      "source_index": 51,
+      "timestamp_s": 34.924489,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000051.jpg",
+      "frame_sha256": "986d5244cc883bee7ca26c974fd5814318799d83cacc1895376547445ba7b618",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000051.png",
+          "mask_sha256": "d450247cedd69898b1b9b0c5d064adf52c58de3084e1890a5998ccc8115b4727",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000051.png",
+          "mask_sha256": "76d7a7eafc4590b69344e441de0c1359b1bd97890460c86a5a0c89e17d348d8e",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000051.png",
+          "mask_sha256": "d63ba6974f0fc4ee9944a7d3399a901e2d1009d27998b542634b36cecf7aec27",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000052",
+      "source_index": 52,
+      "timestamp_s": 35.624367,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000052.jpg",
+      "frame_sha256": "8124b5a9fc8a18add163ac1e746a2ea6baf052fe0845192c8fd7f8eaced4248b",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000052.png",
+          "mask_sha256": "eed6986a72c43d8159b429bc674e11642f1d5a0c6703d6f814970aa2c398587b",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "reject_wrong_or_lost_mask"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000052.png",
+          "mask_sha256": "2a112284c4341fffa7ff521ce19b9aed67709f0cd96ccea85edbfa5d5953aaea",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000052.png",
+          "mask_sha256": "677966e3214e8dafcd71aaaa3b16a2623894771c28781f24ca66c91831093b73",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000053",
+      "source_index": 53,
+      "timestamp_s": 36.301078,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000053.jpg",
+      "frame_sha256": "b673966ec21af18a7efafc63a1df441854fe056a03ca10f3a4e3f1b08398257b",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000053.png",
+          "mask_sha256": "d9c9671660828b11c2963437c106d347c1c2ba3a292c734198a901618cd9a51d",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000053.png",
+          "mask_sha256": "b4325020bf75b756f71accd232159b11451f5fa5e4c4b5a9845e393781038de5",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000053.png",
+          "mask_sha256": "5cf3b8346599c7aff9e87152c0d4b7ff6710e497a6b0f96b7e061378108c7350",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000054",
+      "source_index": 54,
+      "timestamp_s": 36.990844,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000054.jpg",
+      "frame_sha256": "c487e76ff7ad3057a87fdc7837ce0cbd9c7fdac45baf677200a44cfa3af24934",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000054.png",
+          "mask_sha256": "adac5c38597b0ca2f665b20ffd289e3c4bd3c9a3fe02b0882869cf2b5a1dc20e",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000054.png",
+          "mask_sha256": "d00e0a78b95644e0c3abd185581993a3bb9367cec2a2b84b83db6c2d48b4fd84",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000054.png",
+          "mask_sha256": "56f494c8044099da42e371a8515637225efa04f1f489cf3f50cca8014261696d",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000055",
+      "source_index": 55,
+      "timestamp_s": 37.690822,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000055.jpg",
+      "frame_sha256": "fe8f9094990df7cfa9ef14942378d8041df9ff24c1083b1f76f5f6f078788e1f",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000055.png",
+          "mask_sha256": "37c2f1f46e7945054c64b82dd34770c4cb70f2ce35bc3c9e88a0b701b597f5b6",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000055.png",
+          "mask_sha256": "c6ab2c4b03e994f2c05ac2021f4a18d4d293f4de0c83908c3c285c581499470f",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000055.png",
+          "mask_sha256": "df31251841a4e94e28fe1da8fc892868b1d2a37c30a665950840d178fa14e745",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000056",
+      "source_index": 56,
+      "timestamp_s": 38.390711,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000056.jpg",
+      "frame_sha256": "0fbae7842771a2b88a61c803184a864011d52057c8457364e1050fb9a19538bf",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000056.png",
+          "mask_sha256": "bcdde1ad135dfd850d4e51d033e14d1fcb16a2267e3b1475a544bbbd9bdfd47e",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "reject_wrong_or_lost_mask"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000056.png",
+          "mask_sha256": "561671b336f9bddb76e962f63d024e293622997e422055056f5d49a8b5adccb2",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000056.png",
+          "mask_sha256": "7f6e0f2da2c1381c6f2adb399fe6ea36fe5e7a445ae41703c82f31aeed16fd31",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000057",
+      "source_index": 57,
+      "timestamp_s": 39.090567,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000057.jpg",
+      "frame_sha256": "8b88f972971d449da218cb254d3a6314cffa82fe34a45ef7c02cf2d1cbe0a81e",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000057.png",
+          "mask_sha256": "85d2409e569e794789758bd087757d2fd57346abd134c143225985feb9b820d9",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000057.png",
+          "mask_sha256": "a6d928bbe00e0f867fddb0231c62f541af3d009bb8b015e8a292bc6ae8af4f47",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000057.png",
+          "mask_sha256": "f3036c19a6c1ed3c6812fa23eefb0b4d8ed6adee0422feeb2e5bf93ad7d2d120",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000058",
+      "source_index": 58,
+      "timestamp_s": 39.790444,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000058.jpg",
+      "frame_sha256": "bb7f2588dada1d53826a6bec20914c914c0347175c5ee66d3997176dbe983e56",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000058.png",
+          "mask_sha256": "ddda276b16dda5cd6ae0d8814607eed653b43fb6b96d510bdd259e6ec43a8572",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000058.png",
+          "mask_sha256": "523529c35f1a5c7a0ba85e1a44b1824cec4a3281d9d3e347c58dab6107206cf4",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000058.png",
+          "mask_sha256": "6feb7281c9137fb932bbb6b9030bb608eae428088815f458a4c8783522c8c655",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000059",
+      "source_index": 59,
+      "timestamp_s": 40.490378,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000059.jpg",
+      "frame_sha256": "e58279679a875ee8eafcedb22102f079a0b5dc6947087d62fb70c585686187ef",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000059.png",
+          "mask_sha256": "d4a841a524f153290c61206a1fc3245ce86d02e2808ccc8c7a8a87cf5a99591e",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000059.png",
+          "mask_sha256": "5206970f40c7ca37434849093cebd357b7dca622b4be0e5b0cd01e4a63cf0dfa",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000059.png",
+          "mask_sha256": "27cacd4992d56b0b32d041df7d8e212e45fc949b9243016bc425a72f214ca16e",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000060",
+      "source_index": 60,
+      "timestamp_s": 41.190356,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000060.jpg",
+      "frame_sha256": "c8d0b23782229aac523dbfe116ae833469595839572b445b2ac767ae34b781a8",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000060.png",
+          "mask_sha256": "8ec7d1402d77a99c0849c17f59d185f591f5996eb1a4d5d4ba30c9eb6214ee2a",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000060.png",
+          "mask_sha256": "9b737dcd0f54df137da11adffda167303d818f640d21f8902a35b29042e27644",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000060.png",
+          "mask_sha256": "01e44b231e1faab90090c53b891d615815881015c3b1f1c48f1eba3378bd74e9",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    },
+    {
+      "id": "source_000061",
+      "source_index": 61,
+      "timestamp_s": 41.890056,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000061.jpg",
+      "frame_sha256": "e914db510f1ad5cf8d80ed607a9b3b7a9479333872761829ed9fbb815c9d87b9",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000061.png",
+          "mask_sha256": "5043bfd5362b7d5d6d30f742e0aca69533b5e368a29fa1fb5e78fbc34ce1aeb3",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000061.png",
+          "mask_sha256": "4f978d96729f818fe7e5ebf55f2ded7b110744cd18b60940d2872fe02c8618de",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000061.png",
+          "mask_sha256": "45c4577bc64696301e7828324af29c3517716a20e208677946095870a09994aa",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000062",
+      "source_index": 62,
+      "timestamp_s": 42.589933,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000062.jpg",
+      "frame_sha256": "7a219bd5fa6cc58ae671dd6696ae872465cd4d74c770a309f81eec806d05dacd",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000062.png",
+          "mask_sha256": "d8ce65396b830945f3737b065783a18b160d1196e43b693adbf81f5ef9391c9e",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000062.png",
+          "mask_sha256": "d0b1628f1275242c6512cea5d1862e980581e47a8bb36fe030e6b9623bfec4af",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000062.png",
+          "mask_sha256": "b894cf2192eef425cd60d9a02ed09b1e613117fb23a9febaa5ee7a1d1a49e9c6",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000063",
+      "source_index": 63,
+      "timestamp_s": 43.289811,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000063.jpg",
+      "frame_sha256": "3fa416d571bc344dff3bbefb1ee8939b90f78391ca2d2ed28b7168a7dad88fd5",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000063.png",
+          "mask_sha256": "8e7917e6dbeda361183168760a88f1d9e85a10c3dbd6288de2a65109d09e2b6f",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000063.png",
+          "mask_sha256": "0514ab3843f544b0a3c3c27eaeb7e6497cbebe60eb6b4ae585dff5eb6dcc7828",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000063.png",
+          "mask_sha256": "6ead29031c5524465a36bac93d22e2df7fe7045676742c0429bd48be3fe5758d",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000064",
+      "source_index": 64,
+      "timestamp_s": 43.989689,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000064.jpg",
+      "frame_sha256": "9be8f6731fe14a40ab523ce15fe056c1427dade422a66b16efa20a09c8d821a4",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000064.png",
+          "mask_sha256": "3dc0cd65a88938ebcf58ad50048cda9aef0a1d7f3a6853d297d17312ececfd1f",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000064.png",
+          "mask_sha256": "e395834da88d1e746f0c2f44eb9920d9f917cdf6a7c863222b43a355da60c2db",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000064.png",
+          "mask_sha256": "7bb32df3b4720cc6968ec7be489648df025812c505cbce3e7aea6014ec1a37ad",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000065",
+      "source_index": 65,
+      "timestamp_s": 44.689567,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000065.jpg",
+      "frame_sha256": "87342acb3120a5ad0b82d13065d618c600b00b875bcedb6e6956fa1f49b48f57",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000065.png",
+          "mask_sha256": "4cf02c803ad0a97f8d772e88621ff1c6d5416c7b6b09d4c2c8518b5f5d0b9ff7",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000065.png",
+          "mask_sha256": "f0cd5ec54856da54af45e38da6b3aa2458403fb1f51dfb23029eb72ad7cfe9cd",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000065.png",
+          "mask_sha256": "748bf3d92a62fe8a30c5b20a229d682d148d3188ff81a203f93dae9af41b0456",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "not_model_audited"
+        }
+      ]
+    },
+    {
+      "id": "source_000066",
+      "source_index": 66,
+      "timestamp_s": 45.389556,
+      "frame_path": "data/flow-capture-charger-20261103-v1/frames/000066.jpg",
+      "frame_sha256": "513d611bbe4c5d3707af3bc2a512979262b9c968220499906ffe791851f14512",
+      "observations": [
+        {
+          "track_id": "adapter_late",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/adapter_late/000066.png",
+          "mask_sha256": "f8c1385e1031f70ab8192054f52cad533c3ea205d87260776bf5d258aba43c37",
+          "gate_status": "withheld_geometric_gate",
+          "audit_status": "reject_wrong_or_lost_mask"
+        },
+        {
+          "track_id": "power_cable",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/power_cable/000066.png",
+          "mask_sha256": "69f8004ab3fbf39bb2657a6873d9a83d52dc4be568289078f26588742f1d5d2e",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        },
+        {
+          "track_id": "wall_outlet",
+          "mask_path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/raw_masks/wall_outlet/000066.png",
+          "mask_sha256": "2b9066cd94361ae549d8474efec012a5741bec2b7c56384a67c2a797ba733948",
+          "gate_status": "candidate_geometric_gate_only",
+          "audit_status": "plausible_visible_mask"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "id": "rel_early_late_identity",
+      "limitations": [
+        "full out-of-view gap samples 17-21",
+        "appearance changes with viewpoint"
+      ],
+      "object_track_id": "adapter_late",
+      "predicate": "possibly_same_entity",
+      "rationale": "similar white adapter appearance before disappearance and after reappearance but gap prevents identity verification",
+      "status": "unknown",
+      "subject_track_id": "adapter_early",
+      "evidence_ids": [
+        "source_000014",
+        "source_000034"
+      ]
+    },
+    {
+      "id": "rel_cable_to_adapter",
+      "limitations": [
+        "contact point partly occluded by fingers",
+        "seating not verifiable"
+      ],
+      "object_track_id": "adapter_late",
+      "predicate": "attached_to",
+      "rationale": "cable tip brought to and held at adapter body in close-up hand manipulation",
+      "status": "visual_model_proposal",
+      "subject_track_id": "power_cable",
+      "evidence_ids": [
+        "source_000035",
+        "source_000036",
+        "source_000037"
+      ]
+    },
+    {
+      "id": "rel_adapter_to_outlet",
+      "limitations": [
+        "prongs occluded during insertion",
+        "electrical contact not visible"
+      ],
+      "object_track_id": "wall_outlet",
+      "predicate": "attached_to",
+      "rationale": "adapter moved to outlet and positioned in socket with cable trailing",
+      "status": "visual_model_proposal",
+      "subject_track_id": "adapter_late",
+      "evidence_ids": [
+        "source_000045",
+        "source_000046",
+        "source_000047"
+      ]
+    }
+  ],
+  "variables": [
+    {
+      "id": "var_adapter_early_pos",
+      "name": "adapter early position",
+      "subject_track_id": "adapter_early",
+      "values": [
+        "on_floor",
+        "in_hand",
+        "unknown"
+      ]
+    },
+    {
+      "id": "var_adapter_late_pos",
+      "name": "adapter late position",
+      "subject_track_id": "adapter_late",
+      "values": [
+        "on_floor",
+        "in_hand",
+        "at_outlet",
+        "unknown"
+      ]
+    },
+    {
+      "id": "var_cable_arrangement",
+      "name": "cable arrangement",
+      "subject_track_id": "power_cable",
+      "values": [
+        "coiled_on_floor",
+        "extended_on_floor",
+        "attached_to_adapter",
+        "extended_from_outlet",
+        "unknown"
+      ]
+    },
+    {
+      "id": "var_outlet_contact",
+      "name": "outlet contact state",
+      "subject_track_id": "wall_outlet",
+      "values": [
+        "adapter_separate",
+        "adapter_inserted",
+        "unknown"
+      ]
+    }
+  ],
+  "assertions": [
+    {
+      "id": "a_early_on_floor_s01",
+      "rationale": "small white adapter visible on floor separate from cable in sample 1",
+      "status": "visual_model_proposal",
+      "value": "on_floor",
+      "variable_id": "var_adapter_early_pos",
+      "evidence_id": "source_000001"
+    },
+    {
+      "id": "a_early_in_hand_s07",
+      "rationale": "hand holds adapter above floor in sample 7 with partial occlusion",
+      "status": "visual_model_proposal",
+      "value": "in_hand",
+      "variable_id": "var_adapter_early_pos",
+      "evidence_id": "source_000007"
+    },
+    {
+      "id": "a_early_in_hand_s14",
+      "rationale": "adapter held in hand oriented vertically in sample 14",
+      "status": "visual_model_proposal",
+      "value": "in_hand",
+      "variable_id": "var_adapter_early_pos",
+      "evidence_id": "source_000014"
+    },
+    {
+      "id": "a_cable_coiled_s01",
+      "rationale": "cable coiled loop on floor in sample 1",
+      "status": "visual_model_proposal",
+      "value": "coiled_on_floor",
+      "variable_id": "var_cable_arrangement",
+      "evidence_id": "source_000001"
+    },
+    {
+      "id": "a_cable_extended_s24",
+      "rationale": "cable stretched across floor manipulated by hands in sample 24",
+      "status": "visual_model_proposal",
+      "value": "extended_on_floor",
+      "variable_id": "var_cable_arrangement",
+      "evidence_id": "source_000024"
+    },
+    {
+      "id": "a_late_on_floor_s22",
+      "rationale": "same-appearing adapter visible at frame edge on floor in sample 22",
+      "status": "visual_model_proposal",
+      "value": "on_floor",
+      "variable_id": "var_adapter_late_pos",
+      "evidence_id": "source_000022"
+    },
+    {
+      "id": "a_late_unknown_s30",
+      "rationale": "adapter not clearly discernible due to framing and occlusion in sample 30",
+      "status": "unknown",
+      "value": "unknown",
+      "variable_id": "var_adapter_late_pos",
+      "evidence_id": "source_000030"
+    },
+    {
+      "id": "a_late_in_hand_s37",
+      "rationale": "adapter held in left hand while right hand at cable end in sample 37",
+      "status": "visual_model_proposal",
+      "value": "in_hand",
+      "variable_id": "var_adapter_late_pos",
+      "evidence_id": "source_000037"
+    },
+    {
+      "id": "a_cable_attached_s37",
+      "rationale": "cable tip at adapter body with fingers occluding contact in sample 37",
+      "status": "visual_model_proposal",
+      "value": "attached_to_adapter",
+      "variable_id": "var_cable_arrangement",
+      "evidence_id": "source_000037"
+    },
+    {
+      "id": "a_outlet_separate_s44",
+      "rationale": "adapter held in hands away from wall outlet in sample 44",
+      "status": "visual_model_proposal",
+      "value": "adapter_separate",
+      "variable_id": "var_outlet_contact",
+      "evidence_id": "source_000044"
+    },
+    {
+      "id": "a_outlet_inserted_s47",
+      "rationale": "adapter positioned at outlet with hand pressure in sample 47, prongs occluded",
+      "status": "visual_model_proposal",
+      "value": "adapter_inserted",
+      "variable_id": "var_outlet_contact",
+      "evidence_id": "source_000047"
+    },
+    {
+      "id": "a_late_at_outlet_s47",
+      "rationale": "adapter in hand at outlet location in sample 47",
+      "status": "visual_model_proposal",
+      "value": "at_outlet",
+      "variable_id": "var_adapter_late_pos",
+      "evidence_id": "source_000047"
+    },
+    {
+      "id": "a_cable_from_outlet_s55",
+      "rationale": "cable extends from adapter in outlet across floor in sample 55",
+      "status": "visual_model_proposal",
+      "value": "extended_from_outlet",
+      "variable_id": "var_cable_arrangement",
+      "evidence_id": "source_000055"
+    }
+  ],
+  "steps": [
+    {
+      "description": "hand reaches to floor adapter and lifts it, visible across coarse samples",
+      "id": "step_grasp_adapter",
+      "limitations": [
+        "hand motion blurred in coarse samples",
+        "partial occlusion"
+      ],
+      "participant_track_ids": [
+        "adapter_early"
+      ],
+      "postconditions": [
+        {
+          "value": "in_hand",
+          "variable_id": "var_adapter_early_pos",
+          "evidence_id": "source_000007"
+        }
+      ],
+      "preconditions": [
+        {
+          "value": "on_floor",
+          "variable_id": "var_adapter_early_pos",
+          "evidence_id": "source_000005"
+        }
+      ],
+      "title": "grasp and lift adapter off floor",
+      "evidence_ids": [
+        "source_000005",
+        "source_000006",
+        "source_000007"
+      ],
+      "start_s": 2.799567,
+      "end_s": 4.199378
+    },
+    {
+      "description": "hand holds and turns adapter in air showing different faces",
+      "id": "step_hold_rotate_adapter",
+      "limitations": [
+        "orientation changes cause appearance change",
+        "exact rotation uncertain"
+      ],
+      "participant_track_ids": [
+        "adapter_early"
+      ],
+      "postconditions": [
+        {
+          "value": "in_hand",
+          "variable_id": "var_adapter_early_pos",
+          "evidence_id": "source_000014"
+        }
+      ],
+      "preconditions": [
+        {
+          "value": "in_hand",
+          "variable_id": "var_adapter_early_pos",
+          "evidence_id": "source_000008"
+        }
+      ],
+      "title": "hold and rotate adapter in hand",
+      "evidence_ids": [
+        "source_000008",
+        "source_000011",
+        "source_000014"
+      ],
+      "start_s": 4.899267,
+      "end_s": 9.098533
+    },
+    {
+      "description": "hands spread and straighten deformable cable on floor",
+      "id": "step_straighten_cable",
+      "limitations": [
+        "deformable shape with self-occlusion",
+        "only segments clearly visible",
+        "coarse sampling"
+      ],
+      "participant_track_ids": [
+        "power_cable"
+      ],
+      "postconditions": [
+        {
+          "value": "extended_on_floor",
+          "variable_id": "var_cable_arrangement",
+          "evidence_id": "source_000030"
+        }
+      ],
+      "preconditions": [
+        {
+          "value": "coiled_on_floor",
+          "variable_id": "var_cable_arrangement",
+          "evidence_id": "source_000020"
+        }
+      ],
+      "title": "spread and straighten cable",
+      "evidence_ids": [
+        "source_000020",
+        "source_000021",
+        "source_000024",
+        "source_000030"
+      ],
+      "start_s": 13.264511,
+      "end_s": 20.263478
+    },
+    {
+      "description": "hands bring cable plug to adapter and hold at adapter port",
+      "id": "step_join_cable_adapter",
+      "limitations": [
+        "contact partly occluded by fingers",
+        "seating not verifiable"
+      ],
+      "participant_track_ids": [
+        "adapter_late",
+        "power_cable"
+      ],
+      "postconditions": [
+        {
+          "value": "attached_to_adapter",
+          "variable_id": "var_cable_arrangement",
+          "evidence_id": "source_000037"
+        },
+        {
+          "value": "in_hand",
+          "variable_id": "var_adapter_late_pos",
+          "evidence_id": "source_000037"
+        }
+      ],
+      "preconditions": [
+        {
+          "value": "in_hand",
+          "variable_id": "var_adapter_late_pos",
+          "evidence_id": "source_000034"
+        },
+        {
+          "value": "extended_on_floor",
+          "variable_id": "var_cable_arrangement",
+          "evidence_id": "source_000034"
+        }
+      ],
+      "title": "insert cable into adapter",
+      "evidence_ids": [
+        "source_000034",
+        "source_000035",
+        "source_000036",
+        "source_000037"
+      ],
+      "start_s": 23.062989,
+      "end_s": 25.159378
+    },
+    {
+      "description": "hand carries adapter assembly to wall and positions in outlet",
+      "id": "step_insert_outlet",
+      "limitations": [
+        "prongs occluded",
+        "final contact not visible",
+        "camera motion"
+      ],
+      "participant_track_ids": [
+        "adapter_late",
+        "power_cable",
+        "wall_outlet"
+      ],
+      "postconditions": [
+        {
+          "value": "adapter_inserted",
+          "variable_id": "var_outlet_contact",
+          "evidence_id": "source_000047"
+        },
+        {
+          "value": "at_outlet",
+          "variable_id": "var_adapter_late_pos",
+          "evidence_id": "source_000047"
+        }
+      ],
+      "preconditions": [
+        {
+          "value": "adapter_separate",
+          "variable_id": "var_outlet_contact",
+          "evidence_id": "source_000045"
+        }
+      ],
+      "title": "insert adapter into wall outlet",
+      "evidence_ids": [
+        "source_000045",
+        "source_000046",
+        "source_000047"
+      ],
+      "start_s": 30.735211,
+      "end_s": 32.124911
+    },
+    {
+      "description": "hand picks up and displays free cable end while adapter remains at outlet",
+      "id": "step_display_cable_end",
+      "limitations": [
+        "tip small and blurred",
+        "exact connector geometry uncertain"
+      ],
+      "participant_track_ids": [
+        "power_cable",
+        "adapter_late",
+        "wall_outlet"
+      ],
+      "postconditions": [
+        {
+          "value": "extended_from_outlet",
+          "variable_id": "var_cable_arrangement",
+          "evidence_id": "source_000059"
+        },
+        {
+          "value": "adapter_inserted",
+          "variable_id": "var_outlet_contact",
+          "evidence_id": "source_000059"
+        }
+      ],
+      "preconditions": [
+        {
+          "value": "extended_from_outlet",
+          "variable_id": "var_cable_arrangement",
+          "evidence_id": "source_000057"
+        },
+        {
+          "value": "adapter_inserted",
+          "variable_id": "var_outlet_contact",
+          "evidence_id": "source_000057"
+        }
+      ],
+      "title": "display free cable end",
+      "evidence_ids": [
+        "source_000057",
+        "source_000058",
+        "source_000059"
+      ],
+      "start_s": 39.090567,
+      "end_s": 40.490378
+    }
+  ],
+  "motion": [],
+  "links": {
+    "scene_viewer": "",
+    "dense_viewer": ""
+  },
+  "runtime_policy": {
+    "state_between_evidence": "unknown",
+    "pose_between_evidence": "absent",
+    "pose_interpolation": false,
+    "simulation_ready": false,
+    "physical_identity_confirmed": false
+  },
+  "limitations": [
+    "coarse temporal sampling with motion blur and gaps limits continuity",
+    "partial hand occlusion and viewpoint changes obscure contact and seating",
+    "unresolved identity between early and late adapter across out-of-view gap samples 17-21",
+    "deformable cable self-overlap makes arrangement and tip geometry uncertain",
+    "States and relationships are fallible model proposals, not verified physical facts.",
+    "Only sampled evidence has semantic state; no persistence is inferred between samples or through occlusion.",
+    "Supported poses are conditional on generated geometry, reference fit and assumed intrinsics; physical pose accuracy is unverified.",
+    "No robot execution, hidden insertion/contact, seating, hinge axis or physical dimensions are generated."
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "source_sample_index": 64,
+  "timestamp_s": 21.158522,
+  "status": "source_observed_prior",
+  "native_closed_asset_preserved": {
+    "path": "data/sam3d-native-candidates-20261102/wallet-holder-v1/asset.glb",
+    "sha256": "ee809bb3ec9a63c928e5317001840454f585d9fd4632f2aef6ffad2cef367456",
+    "bytes": 15706696
+  },
+  "qualitative_state": {
+    "wallet_state": "unreviewed",
+    "pouch_flap_state": "unreviewed"
+  },
+  "reason": "exact_source_RGB_SAM_region_with_CPU_learned_monocular_depth_prior",
+  "asset": {
+    "path": "data/source-visible-flexure/wallet-20261104-v4/source-064/observed-surface.glb",
+    "sha256": "1e9a8bcbdb958be9444dbf71bbfd61a11a6adcdf76be0566d7abfb4098fda0a8",
+    "bytes": 92048
+  },
+  "source_RGB": {
+    "path": "data/flow-rigid-parts-wallet-20261031-v1/frames/000064.jpg",
+    "sha256": "a6c16e8c6bb16b1cab6cba06e8e4a3c5db504e6a7959777db4e657b292b1291f",
+    "bytes": 12523
+  },
+  "source_masks": [
+    {
+      "track_id": "wallet_holder",
+      "path": "data/flow-rigid-parts-wallet-20261031-v1/segmentation/flow-components-1/raw_masks/wallet_holder/000064.png",
+      "sha256": "f87036cc098604edb5806c9227287d3f62b33053be59c5cf97956fdb094b07ae",
+      "bytes": 1662
+    },
+    {
+      "track_id": "pouch_flap",
+      "path": "data/flow-rigid-parts-wallet-20261031-v1/segmentation/flow-components-1/raw_masks/pouch_flap/000064.png",
+      "sha256": "398fde3751395361b29f8ce2c752a3eb7c226373fb8af3505436caa95dfffa66",
+      "bytes": 584
+    },
+    {
+      "track_id": "gold_coin",
+      "path": "data/flow-rigid-parts-wallet-20261031-v1/segmentation/flow-components-1/raw_masks/gold_coin/000064.png",
+      "sha256": "266d5cd445427155cd6fd464129a2b76dd4481285555bd00ede1cb703eb07aa9",
+      "bytes": 1069
+    }
+  ],
+  "source_pixel_map": {
+    "path": "data/source-visible-flexure/wallet-20261104-v4/source-064/source-pixel-map.npz",
+    "sha256": "b475c8d2b647a476c18d5cddfc0343499a74255fdf0afdb9affa1a0d34b8966a",
+    "bytes": 21085
+  },
+  "source_grid_stride_px": 5,
+  "depth_prior_model_intrinsics": [
+    [
+      1.6600261926651,
+      0.0,
+      0.5
+    ],
+    [
+      0.0,
+      0.9337647557258606,
+      0.5
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "valid_mask_depth_fraction": 1.0,
+  "camera_from_asset": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "depth_scale_gauge": 2.1736866471334184,
+  "native_prior_translation_z": 2.2072825454247846,
+  "vertices": 1661,
+  "triangles": 3128,
+  "source_visible_only": true,
+  "virtual_flexure": {
+    "format": "interaction-twin-virtual-flexure-parameters",
+    "type": "virtual_flexure_band",
+    "status": "unknown",
+    "origin_camera": null,
+    "axis_camera": null,
+    "angle_rad": null,
+    "reason": "monocular_prior_does_not_identifiably_recover_material_joint_or_fold_axis",
+    "angle_is_measured": false,
+    "physical_accuracy_verified": false
+  },
+  "wall_seconds": 0.22726875002263114,
+  "new_API_calls": 0,
+  "new_GPU_calls": 0,
+  "physical_accuracy_verified": false,
+  "parent_research_asset_sha256": "b53b82a1450c946b361da815ca56a2050338719975d1eda6ae1f117570715fc6",
+  "depth_model": {
+    "name": "Ruicheng/moge-2-vits-normal",
+    "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+    "device": "cpu"
+  },
+  "triangles_pruned_by_unknown_pixel_footprint": 14,
+  "triangle_source_footprint_verified": true,
+  "hidden_backs_culled": true,
+  "unlit_exact_vertex_RGB": true,
+  "visible_component_ids": [
+    "wallet_holder"
+  ],
+  "appearance_mode": "exact_source_JPEG_projected_UV",
+  "texture_source_RGB": {
+    "path": "data/flow-rigid-parts-wallet-20261031-v1/frames/000064.jpg",
+    "sha256": "a6c16e8c6bb16b1cab6cba06e8e4a3c5db504e6a7959777db4e657b292b1291f",
+    "bytes": 12523
+  },
+  "sampled_source_RGB_attribute": "_SOURCE_RGB",
+  "vertex_RGB_multiplied_into_texture": false,
+  "geometry_unchanged_from_footprint_verified_parent": true
+}

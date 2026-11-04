@@ -1,0 +1,115 @@
+{
+  "format": "interaction-twin-assembly-image-critic-plan",
+  "version": 1,
+  "manifest": {
+    "path": "data/laptop-mating-20261104-v1/observed-calibrated-v1/visual-manifest.json",
+    "sha256": "cf3c796bb1eddefd3ecebd3bde032861a508cb3d04b9be001d2884cf1bd60db0",
+    "bytes": 11759
+  },
+  "images": [
+    {
+      "path": "data/flow-capture-laptop-20261103-v1/frames/000001.jpg",
+      "sha256": "5895d0bd437a52227115ce90a2614935f9490e1872a953fd26099a0ff007f29c",
+      "bytes": 19899,
+      "kind": "real_source_rgb",
+      "sample_index": 1,
+      "timestamp_s": 0.0
+    },
+    {
+      "path": "data/laptop-mating-20261104-v1/observed-calibrated-v1/full-render-000001.png",
+      "sha256": "f44f633ba50cac7229ace4a9a069346405e85945d8ce040190fd4e680978fccb",
+      "bytes": 20377,
+      "kind": "new_full_native_triangle_source_camera_render",
+      "sample_index": 1,
+      "timestamp_s": 0.0
+    },
+    {
+      "path": "data/flow-capture-laptop-20261103-v1/frames/000027.jpg",
+      "sha256": "0cab93f19a75c2a00dea3eb94447e7ed5036c01ca9b052aa0b23b2c3f730da98",
+      "bytes": 27278,
+      "kind": "real_source_rgb",
+      "sample_index": 27,
+      "timestamp_s": 18.070422
+    },
+    {
+      "path": "data/laptop-mating-20261104-v1/observed-calibrated-v1/full-render-000027.png",
+      "sha256": "77d66194189641710e1f8ea05f38fa69c2b7a11f970f50826ee15a0c1bf1e6e1",
+      "bytes": 46366,
+      "kind": "new_full_native_triangle_source_camera_render",
+      "sample_index": 27,
+      "timestamp_s": 18.070422
+    },
+    {
+      "path": "data/flow-capture-laptop-20261103-v1/frames/000044.jpg",
+      "sha256": "7e57e20801461e02ba1d02cfa97935cc8d6054a49850ef89b14c11f8fc1fb569",
+      "bytes": 33459,
+      "kind": "real_source_rgb",
+      "sample_index": 44,
+      "timestamp_s": 29.925067
+    },
+    {
+      "path": "data/laptop-mating-20261104-v1/observed-calibrated-v1/full-render-000044.png",
+      "sha256": "5f8b026eb84eaf88a99b7d42e5ed5fb3487dac0a37cd93e36d4b45aa3e3f3dfb",
+      "bytes": 50027,
+      "kind": "new_full_native_triangle_source_camera_render",
+      "sample_index": 44,
+      "timestamp_s": 29.925067
+    }
+  ],
+  "wire_provenance": {
+    "payload_sha256": "1f6557583c5d3045f7d896eb5afb8ce58a944e4b9962ea9832ae425ae5abdfe3",
+    "image_inputs": [
+      {
+        "file": "000001.jpg",
+        "encoded_width": 1540,
+        "encoded_height": 2048,
+        "source_sha256": "5895d0bd437a52227115ce90a2614935f9490e1872a953fd26099a0ff007f29c"
+      },
+      {
+        "file": "full-render-000001.png",
+        "encoded_width": 1540,
+        "encoded_height": 2048,
+        "source_sha256": "f44f633ba50cac7229ace4a9a069346405e85945d8ce040190fd4e680978fccb"
+      },
+      {
+        "file": "000027.jpg",
+        "encoded_width": 1540,
+        "encoded_height": 2048,
+        "source_sha256": "0cab93f19a75c2a00dea3eb94447e7ed5036c01ca9b052aa0b23b2c3f730da98"
+      },
+      {
+        "file": "full-render-000027.png",
+        "encoded_width": 1540,
+        "encoded_height": 2048,
+        "source_sha256": "77d66194189641710e1f8ea05f38fa69c2b7a11f970f50826ee15a0c1bf1e6e1"
+      },
+      {
+        "file": "000044.jpg",
+        "encoded_width": 1540,
+        "encoded_height": 2048,
+        "source_sha256": "7e57e20801461e02ba1d02cfa97935cc8d6054a49850ef89b14c11f8fc1fb569"
+      },
+      {
+        "file": "full-render-000044.png",
+        "encoded_width": 1540,
+        "encoded_height": 2048,
+        "source_sha256": "5f8b026eb84eaf88a99b7d42e5ed5fb3487dac0a37cd93e36d4b45aa3e3f3dfb"
+      }
+    ],
+    "payload_bytes": 1141028
+  },
+  "implementation": {
+    "path": "data/laptop-mating-20261104-v1/critic-after-v1/implementation.py.txt",
+    "sha256": "d8ad5e2eb5e4198f1dd2f8192b9c3e2c4fbaa97df014aba5f8d758edf38f7b59",
+    "bytes": 9071
+  },
+  "max_output_tokens": 16000,
+  "maximum_new_requests": 1,
+  "automatic_retries": false,
+  "prompt_sha256": "4075969ae479a1c11f2b476abbe28e37528fcaafe6961119a8bc577ae193e402",
+  "schema_sha256": "71419d5e74d86164b19fdff3b2faef15fc8b7e6d368459dc9d7b30031ba042f9",
+  "provider_schema_sha256": "0dac460fe5aa86816f6611e901f5ae3bf8dc3699fac1e11bef9fefb6779f8f7a",
+  "new_gpu_requests": 0,
+  "automatic_publication": false,
+  "authorization_scope": "Nov4_user_requested_new_source_render_visual_mating_comparisons_not_old_denied_packet"
+}

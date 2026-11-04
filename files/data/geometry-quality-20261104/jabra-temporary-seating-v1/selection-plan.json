@@ -1,0 +1,216 @@
+{
+  "baseline_scene_ref": {
+    "bytes": 562258,
+    "path": "data/assembly-refinements/jabra-source-refit-20261103-v2/scene.json",
+    "sha256": "149ab3645f009c3ad33a7d2845bd32328d117510bf77f5349d5afdd9b1c6d9f7"
+  },
+  "cap_plane_offset_after": -1.5322550480390615,
+  "cap_plane_offset_before": -1.217523942708929,
+  "constant_native_camera_gauge": 1.2585009577962563,
+  "contained_source_samples": [
+    75,
+    76,
+    77,
+    78
+  ],
+  "containment_rule": "earbud_visible_mask_inside_parent_convex_source_mask>=0.9",
+  "coverage": [
+    {
+      "sample_index": 30,
+      "source_mask_inside_case_hull_fraction": 0.11040278180237613
+    },
+    {
+      "sample_index": 32,
+      "source_mask_inside_case_hull_fraction": 0.27632950990615224
+    },
+    {
+      "sample_index": 33,
+      "source_mask_inside_case_hull_fraction": 0.4681818181818182
+    },
+    {
+      "sample_index": 36,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 37,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 39,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 40,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 41,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 42,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 43,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 44,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 45,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 46,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 47,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 48,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 49,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 50,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 51,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 52,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 53,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 54,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 55,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 56,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 57,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 58,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 59,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 60,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 61,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 62,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 65,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 66,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 67,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 68,
+      "source_mask_inside_case_hull_fraction": 0.0
+    },
+    {
+      "sample_index": 75,
+      "source_mask_inside_case_hull_fraction": 0.9958945548833189
+    },
+    {
+      "sample_index": 76,
+      "source_mask_inside_case_hull_fraction": 0.9911752044769694
+    },
+    {
+      "sample_index": 77,
+      "source_mask_inside_case_hull_fraction": 0.9926103021082373
+    },
+    {
+      "sample_index": 78,
+      "source_mask_inside_case_hull_fraction": 1.0
+    }
+  ],
+  "format": "interaction-twin-source-temporary-containment-plan",
+  "heldout_scope": "Global gauge/temporary-attachment parameters exclude target masks at75/77; original parent poses and fallible MuseRGBreview already sampled those views. Not an independent pose benchmark.",
+  "heldout_source_sample_indices": [
+    75,
+    77
+  ],
+  "manual_geometry_or_poses_used": false,
+  "parent_derived_assembly_ref": {
+    "bytes": 27216,
+    "path": "data/assembly-refinements/jabra-source-refit-20261103-v2/derived-assembly.json",
+    "sha256": "d5e603a37f62bbd9d8c269f98bcd982d30d37de43b5cff8c5c4357337b95744f"
+  },
+  "parent_from_derived_earbud_native": [
+    [
+      0.15239074036340472,
+      -0.35406170559039674,
+      -0.029515279075679024,
+      -0.3717894613632089
+    ],
+    [
+      0.11506408389564889,
+      0.018797798099209312,
+      0.36859283796199704,
+      -0.03307210005788974
+    ],
+    [
+      -0.3361414875640181,
+      -0.15408027853701195,
+      0.11279161722933295,
+      -0.1152617187467393
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "physical_accuracy_verified": false,
+  "plane_rule": "observed-cap99percent-support flush with automatic parent cavity-rim plane at witness",
+  "reference_sample_index": 76,
+  "selected_automatic_orientation_id": "23",
+  "target_plane_offset": -1.5322550480390613,
+  "version": 1,
+  "visual_review_ref": {
+    "bytes": 858,
+    "path": "data/geometry-quality-20261104/jabra-earbud-orientation-v1/attempt/summary.json",
+    "sha256": "570daa9383cbe6e355be566f0be067da4af47d769594db4c446cf1b89ca54f5c"
+  }
+}

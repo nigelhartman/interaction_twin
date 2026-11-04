@@ -1,0 +1,82 @@
+{
+  "automatic_approval": false,
+  "case_reviews": [
+    {
+      "case_id": "jabra",
+      "recommended_general_constraints": [
+        "Require multi-view depth consistency; source-camera overlap alone must not certify insertion or relative depth.",
+        "Require automatic non-penetration and floating-part detection with clearance margins from orbit views.",
+        "Require component identity and facing check - charging contacts vs back cap - before seating claims.",
+        "Declare all scales and depths as estimated in arbitrary units until independent metric reference exists.",
+        "Prohibit grasp, contact-force, or charging-function claims from visual overlay alone."
+      ],
+      "safe_display_scope": "May show source-camera render alongside source crop only as illustrative shape sample with orbit diagnostic visible. Must label scale/contact/insertion as unknown, show both earbuds as estimated separate parts, and must not present in-case seating, lid closure, or grasp as verified.",
+      "unobservable": [
+        "True metric size, inter-part depth, and seating depth in case wells.",
+        "Actual contact, penetration, hinge clearance, or lid containment.",
+        "Grasp stability, charging continuity, or physical function.",
+        "Whether external earbud is supported or floating; hand is not modeled."
+      ],
+      "verdict": "needs_repair",
+      "visible_defects": [
+        "Source-camera fit hides depth: in-case earbud shows gold contacts up while source in-case earbud shows back cap with red mark, indicating flipped/swapped facing.",
+        "Diagnostic orbit shows lower external earbud intersecting underside of case base, contradicting source where it is held separate in fingers.",
+        "Diagnostic orbit shows small upper fragment floating detached from case, indicating unresolved loose-part depth.",
+        "Relative earbud-to-case size and in-case seating depth remain estimated; no plausible containment demonstrated.",
+        "Lid hinge appearance matches silhouette but clearance and closure cannot be verified."
+      ]
+    },
+    {
+      "case_id": "charger",
+      "recommended_general_constraints": [
+        "Require orbit-view insertion check; source-camera overlap must not certify plug-in.",
+        "Require automatic connector-gap and floating detection between adapter, outlet face, and cable ends.",
+        "Flag power cable as deformable; prohibit static generated loop as deformation or physics simulation.",
+        "Declare scale, contact, and electrical function unknown without independent measurement.",
+        "Limit cable display to camera-plane centreline illustration, not 3D simulated drape or floor contact."
+      ],
+      "safe_display_scope": "May show source-camera render as 2D illustrative overlay only with orbit gap diagnostic visible. Must label adapter insertion, cable connection, and drape as unverified, static, and non-functional, with no claim of plugged-in or powered state.",
+      "unobservable": [
+        "True metric scale, plug insertion depth, and wall contact force.",
+        "Electrical continuity, charging function, or mechanical retention.",
+        "True 3D cable shape, sag, floor contact, or deformation dynamics.",
+        "Outlet mounting and adapter orientation in world coordinates."
+      ],
+      "verdict": "needs_repair",
+      "visible_defects": [
+        "Diagnostic orbit shows adapter floating with clear gap from outlet face, not inserted; source-camera view hides this gap.",
+        "Diagnostic orbit shows cable coil floating detached from adapter body with no verified end connection.",
+        "Source-camera cable shows large static loops that do not match source deformable drape; static native model cannot represent deformation.",
+        "Adapter side shows flat grey patch not seen in source, indicating generated appearance artifact.",
+        "Missing adapter_early history limits functional interpretation."
+      ]
+    },
+    {
+      "case_id": "wallet",
+      "recommended_general_constraints": [
+        "Require explicit deformable flag for wallet body and missing flap; prohibit rigid articulated-twin claims.",
+        "Require ground/support plane check; floating in orbit must block contact claims.",
+        "Declare scale and inter-object depth unknown when objects are widely separated in crop.",
+        "Require missing-component disclosure - pouch_flap absent - before any containment claim.",
+        "Limit display to sampled diagnostic with private-scene disclaimer, not approved alignment."
+      ],
+      "safe_display_scope": "May show source-camera pair as sampled appearance illustration only with orbit view and disclaimer that native common-scene is private diagnostic. Must not present wallet as rigid container, show coin inside wallet, or imply measured distance, closure, or co-location.",
+      "unobservable": [
+        "True metric scale of wallet and coin and distance between them.",
+        "Contact with table, containment, flap state, or wallet deformation.",
+        "Physical material, closure force, grasp, or functional use.",
+        "Any rigid hinge or articulated motion; no usable flap model exists."
+      ],
+      "verdict": "uncertain",
+      "visible_defects": [
+        "Source crop shows only wallet corner and distant coin with large empty gap; relative depth and scale are unconstrained.",
+        "Both objects appear floating without ground plane in orbit; no contact or support verified.",
+        "Missing pouch_flap means containment/insertion cannot be judged; wallet cannot be shown as closed holder.",
+        "Source-mask similarity does not prove co-location or size; physical scale remains arbitrary.",
+        "Private diagnostic geometry must not be promoted as approved library rigid twin."
+      ]
+    }
+  ],
+  "physical_accuracy_verified": false,
+  "summary": "All three assemblies fail physical verification. Jabra shows facing flip and orbit penetration/floating of external earbuds with estimated scale. Charger shows orbit gap: adapter unplugged and static cable detached, hiding behind source overlap; cable is not deformable simulation. Wallet shows distant separated parts, floating with no ground, missing flap, private diagnostic only. Display limited to illustrative source-camera samples with orbit diagnostics and unknown scale/contact/function disclaimers."
+}

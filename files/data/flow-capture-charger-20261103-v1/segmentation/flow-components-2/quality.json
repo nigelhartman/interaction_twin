@@ -1,0 +1,81 @@
+{
+  "status": "automatic_geometric_review_only",
+  "accuracy_measured": false,
+  "human_reviewed": false,
+  "manual_seed_boxes_used": false,
+  "manual_corrections_used": false,
+  "gate": "empty, area, global frame size only; identity swaps and leakage may pass; no evidence of hidden completion",
+  "raw_masks_preserved": true,
+  "contact_sheets": [
+    "contact-sheet-01.jpg",
+    "contact-sheet-02.jpg",
+    "contact-sheet-03.jpg",
+    "contact-sheet-04.jpg",
+    "contact-sheet-05.jpg",
+    "contact-sheet-06.jpg"
+  ],
+  "preview_timing": {
+    "method": "nominal_sampling_fps_constant_frame_duration",
+    "fps": 1.5,
+    "source_pts_printed_per_frame": true,
+    "exact_source_video_timing": false
+  },
+  "tracks": {
+    "adapter_early": {
+      "label": "white power adapter",
+      "raw_frames": 16,
+      "withheld_samples": [],
+      "seed_area_reference_pixels": 10645.5
+    },
+    "adapter_late": {
+      "label": "white power adapter",
+      "raw_frames": 45,
+      "withheld_samples": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        32,
+        33,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        66
+      ],
+      "seed_area_reference_pixels": 8053.0
+    },
+    "power_cable": {
+      "label": "white cable",
+      "raw_frames": 66,
+      "withheld_samples": [],
+      "seed_area_reference_pixels": 14809.5
+    },
+    "wall_outlet": {
+      "label": "wall outlet",
+      "raw_frames": 66,
+      "withheld_samples": [],
+      "seed_area_reference_pixels": 12244.5
+    }
+  }
+}

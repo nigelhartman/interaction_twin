@@ -1,0 +1,75 @@
+{
+  "format": "interaction-twin-source-visible-flexure-protocol",
+  "version": 4,
+  "source_scene": {
+    "path": "data/mechanism-scenes/648d3924ab106192ea1cdad94c6cdf0b2d44d5c61bba3090cd5dbb1fcb00f298/constrained/scene.json",
+    "sha256": "ae7fe10510761096555ea1e372edc640408b702c36e9a22fdddcac3c1bd5480b",
+    "bytes": 84374
+  },
+  "source_program": {
+    "path": "data/flow-capture-phone-20261103-v1/flow-procedure-1/interaction.json",
+    "sha256": "98cd7e5bb4fc375fb7c164dec7d9a09973d072ccd108449204af9ce942d36165",
+    "bytes": 50334
+  },
+  "source_video_sha256": "1835410d17216b36642759a4a3aa488485f3d62c52df8920b56c58e7a50213b8",
+  "depth_model": {
+    "name": "Ruicheng/moge-2-vits-normal",
+    "checkpoint_sha256": "79a16621928c2bf0ed04659218c55c01075e950507f40bb3332fb4c873d3e1dc",
+    "device": "cpu",
+    "input_dimensions": [
+      336,
+      448
+    ],
+    "num_tokens": 600
+  },
+  "policy": {
+    "device": "cpu",
+    "input_dimensions": [
+      336,
+      448
+    ],
+    "num_tokens": 600,
+    "use_fp16": false,
+    "downloads_allowed": false,
+    "network_disabled": true,
+    "source_grid_stride_px": "adaptive_at_least3",
+    "maximum_vertices_per_frame": 1800,
+    "mask_core_erosion_px": 2,
+    "maximum_relative_triangle_depth_edge": 0.06,
+    "source_RGB_sampling": "exact_original_JPEG_embedded_UV_with_exact_sampled_RGB_provenance",
+    "hidden_surfaces": "absent_not_inpainted",
+    "source_camera": "unchanged_estimated_native_scene_K",
+    "depth_gauge": "original_parent_native_translation_z_not_independent_geometry_validation",
+    "timing": "nearest_source_keyframe_within_0.18s_only_no_geometric_interpolation",
+    "maximum_source_time_error_s": 0.18,
+    "maximum_contiguous_source_gap_s": 0.5,
+    "frame_selection": "original_parent_known_samples_excluding_original_unknowns_and_prior_failure_barriers",
+    "numerical_fold_parameters": "unknown_not_identifiably_recovered",
+    "minimum_mask_fraction": 0.015,
+    "minimum_valid_depth_fraction": 0.95,
+    "stored_depth": "only_exact_source_pixel_vertex_depth_samples_no_dense_prior_archive",
+    "physical_accuracy_verified": false,
+    "simulation_ready": false,
+    "native_SAM_contract_compatible": false,
+    "triangle_support": "each_full_source_triangle_rectangle_inside_at_least_one2px_eroded_component_SAM_region",
+    "component_visibility": "only_components_with_at_least_one_actual_supported_triangle",
+    "source_semantics": "saved_SAM_masks_fallible_no_new_hand_classifier"
+  },
+  "appearance_mode": "exact_source_JPEG_projected_UV",
+  "replacement_component_ids": [
+    "phone_blue",
+    "cable_connector"
+  ],
+  "baseline_depth_gauge_component_id": "phone_blue",
+  "parent_staging_ledger_sha256": "c569e38f580e1d92f56bec61a6e738aa81bf4a305154011afcc05a0354b2b98d",
+  "parent_staging_protocol_sha256": "e9757ca3420e65f5d220fd425987c23ac538b3c42f1b2d3e2f3b7421d0a2fec1",
+  "source_union": "all_related_parts_in_source_camera_observation_no_native_hybrid",
+  "new_API_calls": 0,
+  "new_GPU_calls": 0,
+  "network_access_during_inference": false,
+  "physical_accuracy_verified": false,
+  "native_geometry_unchanged": true,
+  "implementation_sha256": "5c9df92cfcbc8c894accc375b29ab4766ba559b039f6f1a9450f10b74110c729",
+  "texture_derivation_implementation_sha256": "4278c4bb2a9953352bd76322c9c10be2e67f93a05bfe7f8439617eef9c7a19af",
+  "component_support": "every triangle source rectangle lies inside at least one individual2px-eroded component SAM region; visible IDs require>=1such triangle"
+}

@@ -1,0 +1,162 @@
+{
+  "format": "interaction-twin-observed-surface-texture-projection",
+  "version": 1,
+  "appearance_mode": "vertex_rgb",
+  "input_asset_ref": {
+    "path": "data/sam3d-upload-jobs/abd1b8a461ad58635ee3b95eb21b2ad9456882038300f345dc98f6cc5d759710/candidate/asset.glb",
+    "sha256": "561419d50c67e8e033e376b8b99e88b417960907800a3a3793a56be752e34f5c",
+    "bytes": 8895688
+  },
+  "output_asset_ref": {
+    "path": "data/laptop-mating-20261104-v1/observed-underside-v1/asset.glb",
+    "sha256": "39c69c92c2c943841d8c24093cf1c9c1536894ac38e489e0b8b229d26012845b",
+    "bytes": 8895684
+  },
+  "source_rgb_ref": {
+    "path": "data/flow-capture-laptop-20261103-v1/frames/000016.jpg",
+    "sha256": "04f8d0ad3960eb3d057db360a779c626aac66177eec295c7809ddd5f61bfbee8",
+    "bytes": 24737
+  },
+  "source_mask_ref": {
+    "path": "data/flow-capture-laptop-20261103-v1/segmentation/flow-components-1/raw_masks/laptop_lid/000016.png",
+    "sha256": "de8290de24ec3043ee01805839be9f87bb725a542b10f368d094a10edad10a0e",
+    "bytes": 1792
+  },
+  "source_camera": {
+    "K": [
+      [
+        789.5255101107914,
+        0.0,
+        360.3581772244096
+      ],
+      [
+        0.0,
+        789.6726993536929,
+        479.42648770396977
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "width": 722,
+    "height": 960,
+    "world_from_camera": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "calibrated": false,
+    "method": "fixed estimated intrinsics from native anchor inferred pointmap",
+    "reference_component": "laptop_base",
+    "reference_sample_index": 44,
+    "per_component_inferred_cameras": {
+      "laptop_base": [
+        [
+          789.5255101107914,
+          0.0,
+          360.3581772244096
+        ],
+        [
+          0.0,
+          789.6726993536929,
+          479.42648770396977
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "laptop_lid": [
+        [
+          789.5255101107914,
+          0.0,
+          360.3581772244096
+        ],
+        [
+          0.0,
+          789.6726993536929,
+          479.42648770396977
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  },
+  "camera_from_native_mesh": [
+    [
+      0.6847559244342969,
+      -0.0008746298258631717,
+      0.00021704988370199586,
+      0.07962112508167292
+    ],
+    [
+      -0.00043981237790435525,
+      -0.46830938495752933,
+      -0.4995774361013774,
+      0.014539368403602773
+    ],
+    [
+      0.0007865450124097119,
+      0.4995768640752104,
+      -0.46830954118358,
+      1.4201992441784648
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "projection_map_ref": {
+    "path": "data/laptop-mating-20261104-v1/observed-underside-v1/projection-map.npz",
+    "sha256": "d251aef104c420ce0f8b757fe936205e18f126736dd175ed13846f5d42ba93c6",
+    "bytes": 209177
+  },
+  "policy": {
+    "maximum_texture_pixels": 1048576,
+    "source_mask_erosion_px": 3,
+    "maximum_relative_source_depth_error": 0.002,
+    "minimum_painted_texels": 1000,
+    "maximum_changed_material_images": 1,
+    "source_color_sampling": "nearest_original_RGB_pixel_no_colour_synthesis",
+    "UV_overlap_policy": "first_and_last_original_face_raster_ownership_must_agree",
+    "hidden_surface_policy": "native_texture_fallback",
+    "physical_accuracy_verified": false
+  },
+  "painted_vertex_count": 55289,
+  "native_fallback_vertex_count": 167081,
+  "native_geometry_and_UV_unchanged": true,
+  "source_RGB_pixels_copied_without_synthesis": true,
+  "manual_pixel_editing_used": false,
+  "new_api_calls": 0,
+  "new_gpu_calls": 0,
+  "physical_accuracy_verified": false
+}

@@ -1,0 +1,196 @@
+{
+  "format": "interaction-twin-observed-surface-texture-projection",
+  "version": 1,
+  "appearance_mode": "vertex_rgb",
+  "input_asset_ref": {
+    "path": "data/geometry-quality-20261104/jabra-temporary-seating-v1/earbud-a-gauge-derived.glb",
+    "sha256": "3111c26fc0694197767a9d4f98494d0a747154a60c351d09a5cd3229acf74245",
+    "bytes": 11017684
+  },
+  "output_asset_ref": {
+    "path": "data/geometry-quality-20261104/jabra-temporary-seating-v1/observed-cap/asset.glb",
+    "sha256": "3eaec671270db14bf62faac8bb3e9718c2e6dcfb2e8d022a741eea0807d765fd",
+    "bytes": 11017684
+  },
+  "source_rgb_ref": {
+    "path": "data/flow-sam3d-default-e2e-20261102-v1/frames/000076.jpg",
+    "sha256": "302f39e1d385a5fde9658a5a42e68f4c69411f32ea80b59af3f55a75a10a13d4",
+    "bytes": 19046
+  },
+  "source_mask_ref": {
+    "path": "data/flow-sam3d-default-e2e-20261102-v1/segmentation/flow-components-1/raw_masks/earbud_a/000076.png",
+    "sha256": "fe001ad96b29557be542443caae0684e4765b1ddd8c73580fae77594cc1eeba4",
+    "bytes": 953
+  },
+  "source_camera": {
+    "K": [
+      [
+        1039.149427308124,
+        0.0,
+        269.393925864815
+      ],
+      [
+        0.0,
+        1038.07289325316,
+        479.41515585839153
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "width": 540,
+    "height": 960,
+    "world_from_camera": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "calibrated": false,
+    "method": "fixed estimated intrinsics from native anchor inferred pointmap",
+    "reference_component": "case_base",
+    "reference_sample_index": 57,
+    "per_component_inferred_cameras": {
+      "case_base": [
+        [
+          1039.149427308124,
+          0.0,
+          269.393925864815
+        ],
+        [
+          0.0,
+          1038.07289325316,
+          479.41515585839153
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "case_lid": [
+        [
+          1056.659407365022,
+          0.0,
+          269.38130477780464
+        ],
+        [
+          0.0,
+          1055.4601022521122,
+          479.351147370252
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "earbud_a": [
+        [
+          1055.819403572193,
+          0.0,
+          269.5043917434069
+        ],
+        [
+          0.0,
+          1056.1440163874938,
+          479.19904631341825
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "earbud_b": [
+        [
+          1022.8569451294134,
+          0.0,
+          269.4176809784357
+        ],
+        [
+          0.0,
+          1022.8043807169207,
+          479.2456484417975
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  },
+  "camera_from_native_mesh": [
+    [
+      0.1552779206669013,
+      -0.039839685648715636,
+      -0.03731459901640262,
+      -0.14224629928003632
+    ],
+    [
+      -0.0522512269583169,
+      -0.14103603472814405,
+      -0.06685401026484579,
+      -0.3916486777271597
+    ],
+    [
+      -0.01579205919738942,
+      0.07491627896894751,
+      -0.14570166269035117,
+      2.126570805381882
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "projection_map_ref": {
+    "path": "data/geometry-quality-20261104/jabra-temporary-seating-v1/observed-cap/projection-map.npz",
+    "sha256": "433911a587236d34a36ad8bfc9818c6a6da03fbc750c6aaf464a788f7aeafe76",
+    "bytes": 142722
+  },
+  "policy": {
+    "maximum_texture_pixels": 1048576,
+    "source_mask_erosion_px": 3,
+    "maximum_relative_source_depth_error": 0.002,
+    "minimum_painted_texels": 1000,
+    "maximum_changed_material_images": 1,
+    "source_color_sampling": "nearest_original_RGB_pixel_no_colour_synthesis",
+    "UV_overlap_policy": "first_and_last_original_face_raster_ownership_must_agree",
+    "hidden_surface_policy": "native_texture_fallback",
+    "physical_accuracy_verified": false
+  },
+  "painted_vertex_count": 54096,
+  "native_fallback_vertex_count": 221328,
+  "native_geometry_and_UV_unchanged": true,
+  "source_RGB_pixels_copied_without_synthesis": true,
+  "manual_pixel_editing_used": false,
+  "new_api_calls": 0,
+  "new_gpu_calls": 0,
+  "physical_accuracy_verified": false
+}

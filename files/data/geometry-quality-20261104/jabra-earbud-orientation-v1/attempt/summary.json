@@ -1,0 +1,23 @@
+{
+  "automatic_approval": false,
+  "estimated_cost_usd": "0.060790",
+  "format": "interaction-twin-assembly-image-critic-review",
+  "model_result": {
+    "bytes": 1698,
+    "path": "data/geometry-quality-20261104/jabra-earbud-orientation-v1/attempt/result.json",
+    "sha256": "6cfafdf975a22c8b1fdd3b0c77044c6504aa98752568b1a8325889e04572524b"
+  },
+  "new_api_calls": 1,
+  "physical_accuracy_verified": false,
+  "plan": {
+    "bytes": 132746,
+    "path": "data/geometry-quality-20261104/jabra-earbud-orientation-v1/plan.json",
+    "sha256": "48d548e7c76defaf7124c8b31de15ef3046b21652d6c339492d8e90d7dbeb356"
+  },
+  "receipt": {
+    "bytes": 2353,
+    "path": "data/geometry-quality-20261104/jabra-earbud-orientation-v1/attempt/request/meta-request.json",
+    "sha256": "ecb63797ed1d62d675b898e04aa58ea188ecf2b7a34cce5f12c1869235224aab"
+  },
+  "version": 1
+}

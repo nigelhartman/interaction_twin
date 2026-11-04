@@ -1,0 +1,13 @@
+An agent’s first day.
+
+Find a case with removable earbuds. Found: four parts, a hinged lid and source video.
+
+First, understand the object: its parts, connection and evidence.
+
+Then prototype the task: open the case and move the earbuds.
+
+Release both earbuds on their targets. Close the case and withdraw.
+
+Models, program and evidence, together.
+
+Interaction Twin. Show it once. Keep how it works.

@@ -1,0 +1,106 @@
+{
+  "status": "automatic_geometric_review_only",
+  "accuracy_measured": false,
+  "human_reviewed": false,
+  "manual_seed_boxes_used": false,
+  "manual_corrections_used": false,
+  "gate": "empty, area, global frame size only; identity swaps and leakage may pass; no evidence of hidden completion",
+  "raw_masks_preserved": true,
+  "contact_sheets": [
+    "contact-sheet-01.jpg",
+    "contact-sheet-02.jpg",
+    "contact-sheet-03.jpg",
+    "contact-sheet-04.jpg",
+    "contact-sheet-05.jpg",
+    "contact-sheet-06.jpg",
+    "contact-sheet-07.jpg",
+    "contact-sheet-08.jpg",
+    "contact-sheet-09.jpg"
+  ],
+  "preview_timing": {
+    "method": "nominal_sampling_fps_constant_frame_duration",
+    "fps": 3.0,
+    "source_pts_printed_per_frame": true,
+    "exact_source_video_timing": false
+  },
+  "tracks": {
+    "case_base": {
+      "label": "charging case base",
+      "raw_frames": 101,
+      "withheld_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        98
+      ],
+      "seed_area_reference_pixels": 18059.5
+    },
+    "case_lid": {
+      "label": "charging case lid",
+      "raw_frames": 101,
+      "withheld_samples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        13,
+        14,
+        15,
+        44
+      ],
+      "seed_area_reference_pixels": 18972.0
+    },
+    "earbud_a": {
+      "label": "wireless earbud",
+      "raw_frames": 51,
+      "withheld_samples": [
+        29,
+        31,
+        34,
+        35,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        79
+      ],
+      "seed_area_reference_pixels": 5271.5
+    },
+    "earbud_b": {
+      "label": "wireless earbud",
+      "raw_frames": 64,
+      "withheld_samples": [
+        21,
+        22,
+        30,
+        32,
+        33,
+        34,
+        35
+      ],
+      "seed_area_reference_pixels": 5578.0
+    }
+  }
+}

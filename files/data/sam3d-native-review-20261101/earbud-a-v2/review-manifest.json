@@ -1,0 +1,140 @@
+{
+  "format": "sam3d-native-review",
+  "version": 1,
+  "fixture": false,
+  "native_comparison_only": true,
+  "binding": {
+    "case_id": "flow-rigid-parts-jabra-20261031-v1--flow-procedure-1",
+    "track_id": "earbud_a",
+    "program_sha256": "31708efdb18a645052d03760eaa9c8f9d03efea60c340d0859510cf38024bad5",
+    "video_sha256": "7474ebd9d06c55b63fc073f632e71e5125353ace2538fa7bcf632cfdc1c3d0f2",
+    "sample_index": 40,
+    "timestamp_s": 13.001144,
+    "time_domain": "source_video_presentation_seconds",
+    "width": 540,
+    "height": 960
+  },
+  "input_bundle_manifest_sha256": "e0eb1b8c1005932098c80f7e5bb6f9bec6127a3be5cfa3901d23201f54fd541f",
+  "import_receipt": {
+    "path": "data/sam3d-native-candidates-20261101/earbud-a-v1/import.json",
+    "sha256": "83b6f1de15e7f46b254774131df0046fa24214eca3e3ee54274b7d57a7324b8d"
+  },
+  "files": [
+    {
+      "path": "baseline-scene.json",
+      "sha256": "20746783227b6fa037a17157a19fd2032f3d9631d423d2f483ef184b8a0eb820",
+      "bytes": 632279
+    },
+    {
+      "path": "baseline.glb",
+      "sha256": "d8962c2d72136a8d9318ee7682ff56db2c50ea0bbab3c9eec834da76bbc0254d",
+      "bytes": 159812
+    },
+    {
+      "path": "candidate-scene.json",
+      "sha256": "684091041ab8a5057363fc8d3ac2d0a870a991276488a90f379a40f07be47c54",
+      "bytes": 47357350
+    },
+    {
+      "path": "candidate.glb",
+      "sha256": "5c9b75bdedccac030d8991c5e5db1f6389ccad679a574960dec7da9efd4c4b11",
+      "bytes": 11017608
+    },
+    {
+      "path": "source-mask.png",
+      "sha256": "dbf20cf4d4645925739c0c43cd48497330787bb137738cb8512700d510651c05",
+      "bytes": 1072
+    },
+    {
+      "path": "source-rgb.png",
+      "sha256": "6b403bf2c990f4f6f76cd39860987c002f100dec0586cb5a5e4ed551601437ac",
+      "bytes": 193749
+    }
+  ],
+  "baseline": {
+    "backend": "TripoSR",
+    "asset_sha256": "d8962c2d72136a8d9318ee7682ff56db2c50ea0bbab3c9eec834da76bbc0254d",
+    "native_up": "Z",
+    "mesh_stats": {
+      "bounds": [
+        [
+          -0.16231437027454376,
+          -0.5301518440246582,
+          -0.4471774697303772
+        ],
+        [
+          0.1904662549495697,
+          0.49872758984565735,
+          0.44804149866104126
+        ]
+      ],
+      "primitive_count": 1,
+      "rendered_vertices": 3976,
+      "faces": 7936,
+      "appearance_modes": [
+        "vertex_rgb"
+      ],
+      "rendering_policy": "unlit base color; embedded images/UVs/node transforms preserved; PBR physics not simulated"
+    },
+    "appearance": "Preserved generated appearance"
+  },
+  "candidate": {
+    "backend": "Meta SAM 3D Objects",
+    "asset_sha256": "5c9b75bdedccac030d8991c5e5db1f6389ccad679a574960dec7da9efd4c4b11",
+    "native_up": "Y",
+    "mesh_stats": {
+      "bounds": [
+        [
+          -0.37139931321144104,
+          -0.2114366739988327,
+          -0.49897563457489014
+        ],
+        [
+          0.37342530488967896,
+          0.21056939661502838,
+          0.4998105466365814
+        ]
+      ],
+      "primitive_count": 1,
+      "rendered_vertices": 275424,
+      "faces": 550820,
+      "appearance_modes": [
+        "vertex_rgb"
+      ],
+      "rendering_policy": "unlit base color; embedded images/UVs/node transforms preserved; PBR physics not simulated"
+    },
+    "appearance_mode": "vertex-color",
+    "appearance": "Model-generated appearance; hidden surfaces inferred",
+    "selected": false
+  },
+  "renderer": {
+    "shared_source_path": "workspace/scene.js",
+    "shared_source_sha256": "b5e5ad7e2ff040d43886590da70b77ccbaa4cb804e983d47aaf68824514740d6",
+    "review_copy_sha256": "09c6e6f73d21256b2e7be403f767f5c641e32f54954bfde7b4f18d2c59f40c44",
+    "camera_only_patch": "Native display orbit supports per-asset Y-up or recorded Z-up default; no geometry/pose modification",
+    "lighting": "unlit base color",
+    "pbr_rendering": false,
+    "splat_rendering": false,
+    "display_background": "neutral",
+    "display_clear_rgba": [
+      0.91,
+      0.93,
+      0.9,
+      1
+    ],
+    "native_color_values_modified": false
+  },
+  "scope": {
+    "independent_gauges": true,
+    "geometry_bytes_modified": false,
+    "pose_reused": false,
+    "source_video_alignment_established": false,
+    "metric_scale_verified": false,
+    "physical_accuracy_verified": false,
+    "assembly_verified": false,
+    "contact_verified": false,
+    "simulation_executed": false,
+    "preferred_model_changed": false
+  },
+  "execution_evidence": "Adapter/import attestations checked; review root launch receipt separately. This page does not prove inference execution or physical accuracy."
+}

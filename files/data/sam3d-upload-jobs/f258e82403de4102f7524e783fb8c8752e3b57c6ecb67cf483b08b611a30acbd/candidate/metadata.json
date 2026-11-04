@@ -1,0 +1,367 @@
+{
+  "schema_version": "0.1",
+  "status": "imported_initial_native_candidate_pending_alignment",
+  "object_id": "pouch_flap",
+  "backend": "Meta SAM 3D Objects",
+  "provider": "Meta",
+  "sam3d_output": true,
+  "sam3d_milestone_complete": false,
+  "learned_inference_executed": true,
+  "source": {
+    "video_sha256": "b153e7ce79f140c861764c832ba3def149f5596ab4fe23bd3d671af913d5c021",
+    "sample_index": 29,
+    "timestamp_s": 9.400822,
+    "source_case": "flow-rigid-parts-wallet-20261031-v1",
+    "source_sample_index": 29,
+    "time_domain": "source_video_presentation_seconds",
+    "image_path": "raw/inputs/image-source.png",
+    "mask_path": "raw/inputs/mask-source.png",
+    "image_sha256": "264a386a8e876b50c8e833a26a71d0c60e458a407e8492a24a04ca93e656c11c",
+    "mask_sha256": "b1c33ef9ebdfce19bf0a4fde7da3695f72214a7e351d312e5f1ef5a38865722b",
+    "width": 540,
+    "height": 960,
+    "mask_provenance": {
+      "prompt_origin": "model_generated_prompt",
+      "original_seed_origin": "meta_api_model_proposal",
+      "model": "sam-3.1",
+      "device": "hosted_Meta_Model_API",
+      "checkpoint_sha256": null,
+      "checkpoint_identity": "provider_managed_not_disclosed",
+      "metadata_file": "segmentation/flow-components-1/metadata.json",
+      "metadata_sha256": "df65a55e540777c91f66c4f13e8f8e4f83bd7e770109814cd021c773a7fcda50",
+      "annotations_file": "segmentation/flow-components-1/annotations.json",
+      "annotations_sha256": "62e58b2d8dc0cfabb47fc01b7cf87c41cc1756d536a3cc85354289fc8ff4e4bc",
+      "prompts": [
+        {
+          "sample_index": 29,
+          "box_xyxy": [
+            58.32,
+            296.64,
+            360.72,
+            425.28
+          ],
+          "origin": "meta_api_model_proposal",
+          "human_confirmed": false,
+          "source_timestamp_s": 9.400822,
+          "reason": "lifted black leather flap with snap over coin pocket"
+        },
+        {
+          "sample_index": 89,
+          "box_xyxy": [
+            97.2,
+            182.4,
+            402.3,
+            321.6
+          ],
+          "origin": "meta_api_model_proposal",
+          "human_confirmed": false,
+          "source_timestamp_s": 29.535922,
+          "reason": "small black leather coin flap held upright by fingers"
+        }
+      ],
+      "human_confirmed": false,
+      "manual_seed_boxes_used": false,
+      "accuracy_measured": false,
+      "discovery_file": "reasoning/flow-discovery-1/discovery.json",
+      "discovery_sha256": "f5d69ea96af2d379804d580646d560ed4ab575706a71cdd2ce15bb67e62a8a77",
+      "prompt_provider": "hosted_Meta_Model_API",
+      "prompt_model": "muse-spark-1.3",
+      "exact_discovery_config_verified": true,
+      "exact_rigid_config_lineage_verified": true,
+      "rigid_selection": {
+        "adapter": "rigid_component_selection_v1",
+        "omission_only_derivative": false,
+        "manual_boxes_used": false,
+        "physical_identity_verified": false,
+        "discovery_file": "reasoning/flow-discovery-1/discovery.json",
+        "discovery_sha256": "f5d69ea96af2d379804d580646d560ed4ab575706a71cdd2ce15bb67e62a8a77",
+        "discovery_implementation_role": "rigid_component_visual_discovery_v1",
+        "configuration_sha256": "62e58b2d8dc0cfabb47fc01b7cf87c41cc1756d536a3cc85354289fc8ff4e4bc",
+        "segmentation_metadata_sha256": "df65a55e540777c91f66c4f13e8f8e4f83bd7e770109814cd021c773a7fcda50"
+      },
+      "mask_plausibility_audit_file": "segmentation/flow-components-1/model-audit-v1/audit.json",
+      "mask_plausibility_audit_sha256": "702152f366a0be53aa44d8892b0c2780ddff0002041589f98d45965eaffde99d",
+      "mask_plausibility_is_accuracy_measurement": false,
+      "backend": "sam-3.1",
+      "manual_intervention": false,
+      "scope": "small rectangular snap flap covering coin pocket on one wallet leaf; deformable leather piece hinged, seen open lifted and closed flat samples 22-94"
+    }
+  },
+  "outputs": {
+    "glb_path": "asset.glb"
+  },
+  "geometry_reconstructed_by_model": true,
+  "manual_geometry_fallback": false,
+  "manual_pose_used": false,
+  "appearance": "official notebook defaults: model-generated vertex colour and coloured Gaussian splat; UV texture baking disabled",
+  "appearance_mode": "vertex-color",
+  "direct_original_video_texture_projection": false,
+  "hidden_surfaces": "model-inferred, not observed or measured",
+  "metric_scale_verified": false,
+  "physical_accuracy_verified": false,
+  "camera_pose_estimated": false,
+  "coordinates": "Unchanged official native GLB; independent nonmetric model gauge",
+  "validation_status": "pending_independent_execution_and_source_projection_review",
+  "model_provenance": {
+    "model_repository": "facebook/sam-3d-objects",
+    "code": {
+      "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/source",
+      "expected_commit": "f91db411c50efee93d8db7aeb323885650f6f722",
+      "official_repository": "https://github.com/facebookresearch/sam-3d-objects",
+      "commit": "f91db411c50efee93d8db7aeb323885650f6f722",
+      "origin": "https://github.com/facebookresearch/sam-3d-objects",
+      "tracked_changes": "",
+      "notebook_inference_sha256": "a3e20615885d2b5eaf1a8af8573d271072de4e27639212317edffcddf1d39cf3"
+    },
+    "checkpoint": {
+      "pipeline_config": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/pipeline.yaml",
+      "files": [
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/pipeline.yaml",
+          "bytes": 3548,
+          "sha256": "53c3d226b21df85c0bb3d16e6e4fa63abde0d6167525765eb929d02bfa9d358c"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/ss_generator.yaml",
+          "bytes": 5076,
+          "sha256": "3c265448bca7c057f94e3ef56adea3a895a10bcd9f15f992a41dd03fa35412cd"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/ss_generator.ckpt",
+          "bytes": 6690136964,
+          "sha256": "225f40479e4cff4f39d6fa14c55be3abad1475bf55b61af3bec1e19ed2f6c146"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/slat_generator.yaml",
+          "bytes": 1986,
+          "sha256": "53029fadff6fe34a0344381a16d64d65d0567d603484952712e8969319559c4e"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/slat_generator.ckpt",
+          "bytes": 4906537684,
+          "sha256": "91529bde8e7daa12d09618a66c319e3a5a6398db6b23b958cedcb1c3f28faabb"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/ss_decoder.yaml",
+          "bytes": 244,
+          "sha256": "baacff269b664f84f7aa1896ebd66128065f6568cdb88d419d5c3d2ccb4193ae"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/ss_decoder.ckpt",
+          "bytes": 147609242,
+          "sha256": "6dac1cd7b7fda5a38e0614fadae441f1794f80e39ea2981f1ac8aff0a7e99340"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/slat_decoder_gs.yaml",
+          "bytes": 576,
+          "sha256": "53f054e02a0c185f0a6885d30bb6ca0ec92efe0a98148688e7f05f7c26afe670"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/slat_decoder_gs.ckpt",
+          "bytes": 171476155,
+          "sha256": "f8077c36a06eaf890dd93cda1937411f793dea1eb80b3dd9329f2038ba84a111"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/slat_decoder_gs_4.yaml",
+          "bytes": 575,
+          "sha256": "3d1dfd4c56cdac56f30e0cf5eb310d4df973fe25c60ac0a462c86ca4e3bf8b48"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/slat_decoder_gs_4.ckpt",
+          "bytes": 170269801,
+          "sha256": "731a0eceaa47945b52aa27f650d695b2aea9cc70945751e5609e5cb5b49f0186"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/slat_decoder_mesh.yaml",
+          "bytes": 300,
+          "sha256": "8f46952764aa985c50109a56f0b4f07625cdb06457aaded74957d26f3520c69e"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/slat_decoder_mesh.ckpt",
+          "bytes": 363726862,
+          "sha256": "85907b37b67d8ce5b099a96629bdcfbd873eb407dee6b3aa9a75deb15038db33"
+        }
+      ],
+      "weights_hashed": true,
+      "checkpoint_count": 6
+    },
+    "adapter_metadata_path": "raw/metadata.json",
+    "adapter_metadata_sha256": "1423730c8fd92fa66ee1e68604c04767c5409edfbd8f2ee79d20c5cb6539bb81"
+  },
+  "runtime": {
+    "platform": "Linux",
+    "machine": "x86_64",
+    "python": "3.11.0",
+    "device_requested": "cuda",
+    "dependency_presence": {
+      "torch": true,
+      "torchvision": true,
+      "omegaconf": true,
+      "hydra": true,
+      "pytorch3d": true,
+      "kaolin": true,
+      "spconv": true,
+      "utils3d": true,
+      "moge": true,
+      "trimesh": true,
+      "cv2": true,
+      "gradio": true,
+      "seaborn": true
+    },
+    "torch": "2.5.1+cu121",
+    "torch_cuda": "12.1",
+    "cuda_available": true,
+    "gpu_name": "NVIDIA A100-SXM4-80GB",
+    "gpu_memory_gib": 79.249755859375
+  },
+  "native_layout_candidate": {
+    "camera_from_glb": [
+      [
+        -0.3964731970444868,
+        -0.07026726976989137,
+        -0.10588459405307885,
+        -0.06612665951251984
+      ],
+      [
+        0.0798673485870902,
+        -0.40760986134154303,
+        -0.028555910074323114,
+        -0.1807166039943695
+      ],
+      [
+        -0.09884454000281559,
+        -0.047505201500361215,
+        0.4016379528573195,
+        2.0323216915130615
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "rotation_cv_from_glb": [
+      [
+        -0.9522794141579745,
+        -0.16877326131946396,
+        -0.25432165388447914
+      ],
+      [
+        0.19183145920033282,
+        -0.9790282996602767,
+        -0.0685877520070366
+      ],
+      [
+        -0.23741231777651284,
+        -0.11410159827057487,
+        0.9646845166374781
+      ]
+    ],
+    "translation_cv": [
+      -0.06612665951251984,
+      -0.1807166039943695,
+      2.0323216915130615
+    ],
+    "uniform_scale": 0.41634124517440796,
+    "matrix_convention": "column vectors; scale included in camera_from_glb",
+    "camera_axes": "+X right, +Y down, +Z forward",
+    "scale_units": "native_model_predicted_scene_units",
+    "metric_scale_verified": false,
+    "convention_verification": "pinned source audit and CPU synthetic math only",
+    "source_video_pose_validated": false,
+    "real_sam3d_inference_validated": false,
+    "sam3d_code_commit": "f91db411c50efee93d8db7aeb323885650f6f722",
+    "pytorch3d_code_commit": "75ebeeaea0908c5527e7b1e305fbc7681382db47",
+    "use_for_initialization_only": true,
+    "accepted_video_pose": false
+  },
+  "fit_contract": {
+    "version": "2",
+    "raw_glb_sha256": "6a506fb84dd17f023e15782b20ec3c40d8fe7dd69006f9ece56b4eab03945c12",
+    "current_adapter_requires": "verified opaque native base-colour appearance",
+    "appearance_mode": "vertex-color",
+    "alignment_eligible": true,
+    "alignment_ineligible_reason": null,
+    "visual_kind": "vertex",
+    "alignment_adapter": "legacy-vertex-colour-v1",
+    "appearance_conversion_performed": false,
+    "native_appearance": {
+      "contract_version": "native-base-color-v1",
+      "source_glb_sha256": "6a506fb84dd17f023e15782b20ec3c40d8fe7dd69006f9ece56b4eab03945c12",
+      "source_glb_bytes": 7090436,
+      "original_glb_unchanged": true,
+      "renderer": "legacy_alignment_render",
+      "legacy_vertex_compatibility": true,
+      "legacy_compatible": true,
+      "appearance_modes": [
+        "vertex_rgb"
+      ],
+      "primitive_count": 1,
+      "material_count": 0,
+      "rendered_vertices": 177246,
+      "faces": 354460,
+      "texture_count": 0,
+      "texture_pixels": 0,
+      "uv_preserved": false,
+      "uv_to_vertex_color_conversion": false,
+      "scene_node_transforms_applied": true,
+      "uv_origin": "gltf_top_left; image_rows_preserved",
+      "color_policy": "historical_uint8_vertex_rgb_interpolation_unchanged",
+      "samplers": [],
+      "face_policy": "historical_two_sided_diagnostic_projection_unchanged",
+      "primitive_culling": [
+        {
+          "double_sided": false,
+          "node_winding_sign": 1
+        }
+      ],
+      "vertices_sha256": "f545dd77d594c2b0220c498df43198de4b7388ec50aff552f509ee054967d9d5",
+      "faces_sha256": "11890b9a0ea979419c3b62eee252bd81c1d3f0c2a9dbe01fe890b640136cd8b2",
+      "material_policy": "opaque_unlit_base_color_only; no_lighting_or_PBR_shading",
+      "metric_scale_verified": false,
+      "physical_accuracy_verified": false
+    }
+  },
+  "artifact_files": [
+    {
+      "file": "asset.glb",
+      "sha256": "6a506fb84dd17f023e15782b20ec3c40d8fe7dd69006f9ece56b4eab03945c12",
+      "bytes": 7090436
+    },
+    {
+      "file": "raw/inputs/image-source.png",
+      "sha256": "264a386a8e876b50c8e833a26a71d0c60e458a407e8492a24a04ca93e656c11c",
+      "bytes": 352193
+    },
+    {
+      "file": "raw/inputs/mask-source.png",
+      "sha256": "b1c33ef9ebdfce19bf0a4fde7da3695f72214a7e351d312e5f1ef5a38865722b",
+      "bytes": 1600
+    }
+  ],
+  "initial_reconstruction_lineage": {
+    "handoff": {
+      "path": "data/initial-sam3d-handoffs/flow-rigid-parts-wallet-20261031-v1-pouch_flap-20261102-v1/handoff.json",
+      "sha256": "f258e82403de4102f7524e783fb8c8752e3b57c6ecb67cf483b08b611a30acbd",
+      "bytes": 2510
+    },
+    "source_binding_sha256": "8e61fe2a868a514f51146fa58ece906b5ac9025ebc503eccf36618628fb0bebc",
+    "raw_asset_sha256": "6a506fb84dd17f023e15782b20ec3c40d8fe7dd69006f9ece56b4eab03945c12",
+    "geometry_bytes_modified": false,
+    "baseline_required": false,
+    "baseline_asset_read": false,
+    "old_poses_read": false,
+    "execution_independently_verified": false
+  },
+  "simulation_ready": false,
+  "selected": false,
+  "catalog_changed": false,
+  "limitations": [
+    "Adapter attestations are contract-checked, not independent proof of execution.",
+    "One visible RGB/mask anchor does not observe hidden surfaces.",
+    "The unchanged native model and inferred layout have an independent, nonmetric gauge.",
+    "A fresh source projection and motion fit are required; no old poses are read or copied.",
+    "No original source, program, asset or preferred model is replaced."
+  ]
+}

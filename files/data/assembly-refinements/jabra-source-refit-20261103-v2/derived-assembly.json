@@ -1,0 +1,932 @@
+{
+  "format": "interaction-twin-declared-derived-assembly",
+  "version": 1,
+  "created_utc": "2026-11-03T20:16:04.224864+00:00",
+  "status": "reviewed_geometric_derivative_with_gaps",
+  "source": {
+    "path": "data/flow-sam3d-default-e2e-20261102-v1/source/video.mp4",
+    "sha256": "7474ebd9d06c55b63fc073f632e71e5125353ace2538fa7bcf632cfdc1c3d0f2",
+    "original_sha256": "0de6f8cb659d256ed53657dea6c796facbb108a645fbe0d9e753c38694969622",
+    "duration_s": 33.636278,
+    "time_domain": "source_video_presentation_seconds",
+    "width": 540,
+    "height": 960
+  },
+  "evidence_program": {
+    "path": "data/flow-sam3d-default-e2e-20261102-v1/flow-procedure-1/interaction.json",
+    "sha256": "05c2f4d93243179013f775bb6832ed66afb4f0d3ec6cc91453e0204e2bafe85a",
+    "bytes": 172299
+  },
+  "base_object_program_ref": {
+    "path": "data/object-programs/auto-06f94599100e4d661ca4ca4bd97fc82bd37f259060767ec78c3a1d988ca12b67/object-program.json",
+    "sha256": "5a784152ab6787b9f9f71e9adca3ee57632544a496c017420afc030fcf6e28d0",
+    "bytes": 29722
+  },
+  "refinement_report_ref": {
+    "path": "data/assembly-refinements/jabra-rim-fit-20261103-final-v1/report.json",
+    "sha256": "7fff414aebaa23c417973b373624a316a73002f721cf7612b9fed43ec2e3fb1c",
+    "bytes": 191587
+  },
+  "scene_ref": {
+    "path": "data/assembly-refinements/jabra-source-refit-20261103-v2/scene.json",
+    "sha256": "149ab3645f009c3ad33a7d2845bd32328d117510bf77f5349d5afdd9b1c6d9f7",
+    "bytes": 562258
+  },
+  "source_alignment_audit_ref": {
+    "path": "data/assembly-refinements/jabra-source-refit-20261103-v2/source-audit.json",
+    "sha256": "7762760528919f3727b69b689ffc9de6a606761e2d5a6b5840e4fc8b25f670fd",
+    "bytes": 237450
+  },
+  "component_assets": [
+    {
+      "component_id": "case_base",
+      "native_glb": {
+        "path": "data/sam3d-upload-jobs/893536982b8b090066f9d9f99058d0bd9a52c3a08c0d9250ec012fbb8eef9535/candidate/asset.glb",
+        "sha256": "ec77850ef135f528de867009482bc9ad2b14e09a7cff3dfe3ad8e6455081622b",
+        "bytes": 13548504
+      },
+      "native_metadata": {
+        "path": "data/sam3d-upload-jobs/893536982b8b090066f9d9f99058d0bd9a52c3a08c0d9250ec012fbb8eef9535/candidate/metadata.json",
+        "sha256": "c33d8234125189bbd299da4c2b0a2844a81d41d1f86020d38ec06920060cff61",
+        "bytes": 15786
+      },
+      "native_uniform_scale": 0.4257528483867645,
+      "original_native_glb": {
+        "path": "data/sam3d-upload-jobs/893536982b8b090066f9d9f99058d0bd9a52c3a08c0d9250ec012fbb8eef9535/candidate/asset.glb",
+        "sha256": "ec77850ef135f528de867009482bc9ad2b14e09a7cff3dfe3ad8e6455081622b",
+        "bytes": 13548504
+      },
+      "geometry_origin": "unchanged_SAM_3D_inference"
+    },
+    {
+      "component_id": "case_lid",
+      "native_glb": {
+        "path": "data/assembly-refinements/jabra-rim-fit-20261103-final-v1/case-lid-derived.glb",
+        "sha256": "2bfab252110eb545848f9f200cd86e411f43c7b27bd81353cf9c133f67bdd4c3",
+        "bytes": 5810160
+      },
+      "native_metadata": {
+        "path": "data/sam3d-upload-jobs/17818e9da11034afcdb166d35cdf2be9a711336e3a7a510363d189b68c4e051a/candidate/metadata.json",
+        "sha256": "ed361a468bd428a78ac2907651e4b82bf7393b34d2e6f7bd625dea6c9d1e3a23",
+        "bytes": 15753
+      },
+      "native_uniform_scale": 0.43244434033880336,
+      "original_native_glb": {
+        "path": "data/sam3d-upload-jobs/17818e9da11034afcdb166d35cdf2be9a711336e3a7a510363d189b68c4e051a/candidate/asset.glb",
+        "sha256": "2ac614851e2c00d76fabd4aee09483703740eb6314fefbc2354a66244a6916ba",
+        "bytes": 5810084
+      },
+      "geometry_origin": "automatic_bounded_native_rim_derivative"
+    },
+    {
+      "component_id": "earbud_a",
+      "native_glb": {
+        "path": "data/sam3d-native-candidates-20261101/earbud-a-v1/asset.glb",
+        "sha256": "5c9b75bdedccac030d8991c5e5db1f6389ccad679a574960dec7da9efd4c4b11",
+        "bytes": 11017608
+      },
+      "native_metadata": {
+        "path": "data/sam3d-native-candidates-20261101/earbud-a-v1/metadata.json",
+        "sha256": "4f98762dfc727b16a0c81de7d169a7b35c9bd180d7157684f10dc4139f529b25",
+        "bytes": 15779
+      },
+      "native_uniform_scale": 0.164592868918978,
+      "original_native_glb": {
+        "path": "data/sam3d-native-candidates-20261101/earbud-a-v1/asset.glb",
+        "sha256": "5c9b75bdedccac030d8991c5e5db1f6389ccad679a574960dec7da9efd4c4b11",
+        "bytes": 11017608
+      },
+      "geometry_origin": "unchanged_SAM_3D_inference"
+    },
+    {
+      "component_id": "earbud_b",
+      "native_glb": {
+        "path": "data/sam3d-upload-jobs/3ff517ec1749220c17bab0fa096aa7b94ec234de19307740f12865b57f9ba0c3/candidate/asset.glb",
+        "sha256": "a679735bbd787e8600cbc680a187ba88c358de6b1d2d516a2562d2125c266e8a",
+        "bytes": 11486232
+      },
+      "native_metadata": {
+        "path": "data/sam3d-upload-jobs/3ff517ec1749220c17bab0fa096aa7b94ec234de19307740f12865b57f9ba0c3/candidate/metadata.json",
+        "sha256": "c8b5bb62c1b6b6a355347b8716de3ad4666d2fbdd303b38de9107b5500f52ce6",
+        "bytes": 15758
+      },
+      "native_uniform_scale": 0.21500629487432357,
+      "original_native_glb": {
+        "path": "data/sam3d-upload-jobs/3ff517ec1749220c17bab0fa096aa7b94ec234de19307740f12865b57f9ba0c3/candidate/asset.glb",
+        "sha256": "a679735bbd787e8600cbc680a187ba88c358de6b1d2d516a2562d2125c266e8a",
+        "bytes": 11486232
+      },
+      "geometry_origin": "unchanged_SAM_3D_inference"
+    }
+  ],
+  "joints": [
+    {
+      "id": "j1_case_base_case_lid",
+      "type": "revolute",
+      "parent_id": "case_base",
+      "child_id": "case_lid",
+      "status": "estimated",
+      "axis": [
+        -0.9999928759235551,
+        0.001556922345648755,
+        0.0034386181740378935
+      ],
+      "parent_from_joint": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.01210514415778824
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.17968891390155306
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.23184708380602093
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "joint_from_child_zero": [
+        [
+          1.014995205681781,
+          -0.01046946739813667,
+          -0.03682165046581352,
+          -0.007553210674018729
+        ],
+        [
+          -0.03710990673573577,
+          -0.029278347113500202,
+          -1.014616353337553,
+          0.12840017289786831
+        ],
+        [
+          0.009396728829341826,
+          1.0152407989685643,
+          -0.029640054733536994,
+          0.23468321765706054
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent_anchor_native": [
+        0.01210514415778824,
+        0.17968891390155306,
+        -0.23184708380602093
+      ],
+      "child_anchor_native": [
+        0.00991211369381741,
+        -0.2273762687453488,
+        0.1327492269977494
+      ],
+      "parent_anchor_vertex_id": null,
+      "child_anchor_vertex_id": null,
+      "parent_native_scale": 1.0,
+      "child_native_scale": 1.0157168459997246,
+      "limits_rad": [
+        -0.0,
+        2.862339973270698
+      ],
+      "limits_kind": "bounded_estimated_source_configuration_range_not_physical_stops",
+      "physical_limits_rad": null,
+      "zero_reference": {
+        "state": "estimated_geometric_closed",
+        "source_sample_index": 101,
+        "timestamp_s": 33.336256,
+        "physical_closure_verified": false
+      },
+      "angle_quality": {
+        "angle_visual_consistency": true,
+        "test": "all_cited_supported_open_states_separated_from_cited_closed_zero_by_more_than_declared_threshold",
+        "declared_separation_threshold_rad": 0.2617993877991494,
+        "state_comparisons": [
+          {
+            "source_sample_index": 21,
+            "timestamp_s": 6.667256,
+            "cited_state": "open",
+            "q_rad": 2.687807048071265,
+            "distance_from_closed_reference_rad": 2.687807048071265
+          },
+          {
+            "source_sample_index": 28,
+            "timestamp_s": 9.000789,
+            "cited_state": "open",
+            "q_rad": 1.553343034274952,
+            "distance_from_closed_reference_rad": 1.553343034274952
+          },
+          {
+            "source_sample_index": 94,
+            "timestamp_s": 31.002722,
+            "cited_state": "open",
+            "q_rad": 2.0420352248333637,
+            "distance_from_closed_reference_rad": 2.0420352248333637
+          },
+          {
+            "source_sample_index": 101,
+            "timestamp_s": 33.336256,
+            "cited_state": "closed",
+            "q_rad": -0.0,
+            "distance_from_closed_reference_rad": 0.0
+          }
+        ],
+        "angle_interpretation": "estimated_opening_configuration_not_physically_calibrated",
+        "confidence": "low",
+        "physical_angle_verified": false,
+        "zero_state_alignment_verified": false,
+        "source_alignment_verified": false,
+        "quality_flags": []
+      },
+      "evidence_ids": [
+        "source_000001",
+        "source_000021",
+        "source_000028",
+        "source_000094",
+        "source_000101"
+      ],
+      "matrix_convention": "parent_native_pose * parent_from_joint * axis_rotation(q) * joint_from_child_zero; refined child mesh native coordinates",
+      "physical_accuracy_verified": false,
+      "simulation_ready": false,
+      "axis_frame": "joint_frame_after_parent_from_joint",
+      "samples": [
+        {
+          "source_sample_index": 1,
+          "timestamp_s": 0.0,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 2,
+          "timestamp_s": 0.333367,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 3,
+          "timestamp_s": 0.666733,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 4,
+          "timestamp_s": 1.000089,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 5,
+          "timestamp_s": 1.333456,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 6,
+          "timestamp_s": 1.666811,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 7,
+          "timestamp_s": 2.000178,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 8,
+          "timestamp_s": 2.333544,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 9,
+          "timestamp_s": 2.6669,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 10,
+          "timestamp_s": 3.000267,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 11,
+          "timestamp_s": 3.333633,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 12,
+          "timestamp_s": 3.666989,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 13,
+          "timestamp_s": 4.000356,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 14,
+          "timestamp_s": 4.333711,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 15,
+          "timestamp_s": 4.667078,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 16,
+          "timestamp_s": 5.000444,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 17,
+          "timestamp_s": 5.3338,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 18,
+          "timestamp_s": 5.667167,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 19,
+          "timestamp_s": 6.000533,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 20,
+          "timestamp_s": 6.333889,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 21,
+          "timestamp_s": 6.667256,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 22,
+          "timestamp_s": 7.000622,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 23,
+          "timestamp_s": 7.333978,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 24,
+          "timestamp_s": 7.667344,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 25,
+          "timestamp_s": 8.0007,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 26,
+          "timestamp_s": 8.334067,
+          "status": "estimated",
+          "q_rad": 1.7503962926918548
+        },
+        {
+          "source_sample_index": 27,
+          "timestamp_s": 8.667433,
+          "status": "estimated",
+          "q_rad": 1.5339633578193554
+        },
+        {
+          "source_sample_index": 28,
+          "timestamp_s": 9.000789,
+          "status": "estimated",
+          "q_rad": 1.5871438267396991
+        },
+        {
+          "source_sample_index": 29,
+          "timestamp_s": 9.334156,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 30,
+          "timestamp_s": 9.667522,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 31,
+          "timestamp_s": 10.000878,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 32,
+          "timestamp_s": 10.334244,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 33,
+          "timestamp_s": 10.6676,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 34,
+          "timestamp_s": 11.000967,
+          "status": "estimated",
+          "q_rad": 2.743867477277711
+        },
+        {
+          "source_sample_index": 35,
+          "timestamp_s": 11.334333,
+          "status": "estimated",
+          "q_rad": 1.7451195077595307
+        },
+        {
+          "source_sample_index": 36,
+          "timestamp_s": 11.667689,
+          "status": "estimated",
+          "q_rad": 1.628201458380085
+        },
+        {
+          "source_sample_index": 37,
+          "timestamp_s": 12.001056,
+          "status": "estimated",
+          "q_rad": 1.6600579143429923
+        },
+        {
+          "source_sample_index": 38,
+          "timestamp_s": 12.334422,
+          "status": "estimated",
+          "q_rad": 1.6673783332297603
+        },
+        {
+          "source_sample_index": 39,
+          "timestamp_s": 12.667778,
+          "status": "estimated",
+          "q_rad": 1.3938225760852896
+        },
+        {
+          "source_sample_index": 40,
+          "timestamp_s": 13.001144,
+          "status": "estimated",
+          "q_rad": 1.481060697031207
+        },
+        {
+          "source_sample_index": 41,
+          "timestamp_s": 13.3345,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 42,
+          "timestamp_s": 13.667867,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 43,
+          "timestamp_s": 14.001233,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 44,
+          "timestamp_s": 14.334589,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 45,
+          "timestamp_s": 14.667956,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 46,
+          "timestamp_s": 15.001322,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 47,
+          "timestamp_s": 15.334678,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 48,
+          "timestamp_s": 15.668044,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 49,
+          "timestamp_s": 16.001411,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 50,
+          "timestamp_s": 16.334767,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 51,
+          "timestamp_s": 16.668133,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 52,
+          "timestamp_s": 17.001489,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 53,
+          "timestamp_s": 17.334856,
+          "status": "estimated",
+          "q_rad": 1.8292724743164719
+        },
+        {
+          "source_sample_index": 54,
+          "timestamp_s": 17.668222,
+          "status": "estimated",
+          "q_rad": 1.7672292763667425
+        },
+        {
+          "source_sample_index": 55,
+          "timestamp_s": 18.001578,
+          "status": "estimated",
+          "q_rad": 1.4942093301610546
+        },
+        {
+          "source_sample_index": 56,
+          "timestamp_s": 18.334944,
+          "status": "estimated",
+          "q_rad": 1.6026659982838933
+        },
+        {
+          "source_sample_index": 57,
+          "timestamp_s": 18.668311,
+          "status": "estimated",
+          "q_rad": 1.6267318890553704
+        },
+        {
+          "source_sample_index": 58,
+          "timestamp_s": 19.001667,
+          "status": "estimated",
+          "q_rad": 1.667933082889292
+        },
+        {
+          "source_sample_index": 59,
+          "timestamp_s": 19.335033,
+          "status": "estimated",
+          "q_rad": 1.7690233908387567
+        },
+        {
+          "source_sample_index": 60,
+          "timestamp_s": 19.668389,
+          "status": "estimated",
+          "q_rad": 1.7112249563337567
+        },
+        {
+          "source_sample_index": 61,
+          "timestamp_s": 20.001756,
+          "status": "estimated",
+          "q_rad": 1.718535009026683
+        },
+        {
+          "source_sample_index": 62,
+          "timestamp_s": 20.335122,
+          "status": "estimated",
+          "q_rad": 1.7631921984596168
+        },
+        {
+          "source_sample_index": 63,
+          "timestamp_s": 20.668478,
+          "status": "estimated",
+          "q_rad": 1.7721115134752574
+        },
+        {
+          "source_sample_index": 64,
+          "timestamp_s": 21.001844,
+          "status": "estimated",
+          "q_rad": 1.7860238231866652
+        },
+        {
+          "source_sample_index": 65,
+          "timestamp_s": 21.335211,
+          "status": "estimated",
+          "q_rad": 1.7582619412275293
+        },
+        {
+          "source_sample_index": 66,
+          "timestamp_s": 21.668567,
+          "status": "estimated",
+          "q_rad": 1.9063707278950077
+        },
+        {
+          "source_sample_index": 67,
+          "timestamp_s": 22.001933,
+          "status": "estimated",
+          "q_rad": 1.7422167637319415
+        },
+        {
+          "source_sample_index": 68,
+          "timestamp_s": 22.335289,
+          "status": "estimated",
+          "q_rad": 1.9159088817251473
+        },
+        {
+          "source_sample_index": 69,
+          "timestamp_s": 22.668656,
+          "status": "estimated",
+          "q_rad": 1.8592438689234176
+        },
+        {
+          "source_sample_index": 70,
+          "timestamp_s": 23.002022,
+          "status": "estimated",
+          "q_rad": 1.7398953687846521
+        },
+        {
+          "source_sample_index": 71,
+          "timestamp_s": 23.335378,
+          "status": "estimated",
+          "q_rad": 1.4468849496502865
+        },
+        {
+          "source_sample_index": 72,
+          "timestamp_s": 23.668744,
+          "status": "estimated",
+          "q_rad": 1.6272776659371049
+        },
+        {
+          "source_sample_index": 73,
+          "timestamp_s": 24.002111,
+          "status": "estimated",
+          "q_rad": 1.777869104258133
+        },
+        {
+          "source_sample_index": 74,
+          "timestamp_s": 24.335467,
+          "status": "estimated",
+          "q_rad": 1.4693373246566246
+        },
+        {
+          "source_sample_index": 75,
+          "timestamp_s": 24.668833,
+          "status": "estimated",
+          "q_rad": 1.3526975962451924
+        },
+        {
+          "source_sample_index": 76,
+          "timestamp_s": 25.0022,
+          "status": "estimated",
+          "q_rad": 1.3589062810969752
+        },
+        {
+          "source_sample_index": 77,
+          "timestamp_s": 25.335556,
+          "status": "estimated",
+          "q_rad": 1.3632060116486096
+        },
+        {
+          "source_sample_index": 78,
+          "timestamp_s": 25.668922,
+          "status": "estimated",
+          "q_rad": 1.6343246193924155
+        },
+        {
+          "source_sample_index": 79,
+          "timestamp_s": 26.002278,
+          "status": "estimated",
+          "q_rad": 1.8859333529144757
+        },
+        {
+          "source_sample_index": 80,
+          "timestamp_s": 26.335644,
+          "status": "estimated",
+          "q_rad": 1.5867798229094894
+        },
+        {
+          "source_sample_index": 81,
+          "timestamp_s": 26.669011,
+          "status": "estimated",
+          "q_rad": 1.6773061896285137
+        },
+        {
+          "source_sample_index": 82,
+          "timestamp_s": 27.002367,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 83,
+          "timestamp_s": 27.335733,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 84,
+          "timestamp_s": 27.6691,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 85,
+          "timestamp_s": 28.002456,
+          "status": "estimated",
+          "q_rad": 1.6452105683518417
+        },
+        {
+          "source_sample_index": 86,
+          "timestamp_s": 28.335822,
+          "status": "estimated",
+          "q_rad": 2.006595820268077
+        },
+        {
+          "source_sample_index": 87,
+          "timestamp_s": 28.669178,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 88,
+          "timestamp_s": 29.002544,
+          "status": "estimated",
+          "q_rad": 1.9912373878252965
+        },
+        {
+          "source_sample_index": 89,
+          "timestamp_s": 29.335911,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 90,
+          "timestamp_s": 29.669267,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 91,
+          "timestamp_s": 30.002633,
+          "status": "estimated",
+          "q_rad": 2.228839684408653
+        },
+        {
+          "source_sample_index": 92,
+          "timestamp_s": 30.336,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 93,
+          "timestamp_s": 30.669356,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 94,
+          "timestamp_s": 31.002722,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 95,
+          "timestamp_s": 31.336089,
+          "status": "estimated",
+          "q_rad": 2.0594781707633367
+        },
+        {
+          "source_sample_index": 96,
+          "timestamp_s": 31.669444,
+          "status": "estimated",
+          "q_rad": 2.121237295348933
+        },
+        {
+          "source_sample_index": 97,
+          "timestamp_s": 32.002811,
+          "status": "estimated",
+          "q_rad": 0.5655432319305137
+        },
+        {
+          "source_sample_index": 98,
+          "timestamp_s": 32.336167,
+          "status": "unknown",
+          "q_rad": null
+        },
+        {
+          "source_sample_index": 99,
+          "timestamp_s": 32.669533,
+          "status": "estimated",
+          "q_rad": 0.6272579235838355
+        },
+        {
+          "source_sample_index": 100,
+          "timestamp_s": 33.0029,
+          "status": "estimated",
+          "q_rad": 0.5034092346638718
+        },
+        {
+          "source_sample_index": 101,
+          "timestamp_s": 33.336256,
+          "status": "estimated",
+          "q_rad": 0.0
+        }
+      ]
+    }
+  ],
+  "removable_relationships": [
+    {
+      "id": "j2_case_base_earbud_a",
+      "parent_id": "case_base",
+      "child_id": "earbud_a",
+      "joint_type": "removable",
+      "attachment": "removable",
+      "confidence": "medium",
+      "evidence_ids": [
+        "source_000028",
+        "source_000036",
+        "source_000057"
+      ],
+      "physical_accuracy_verified": false
+    },
+    {
+      "id": "j3_case_base_earbud_b",
+      "parent_id": "case_base",
+      "child_id": "earbud_b",
+      "joint_type": "removable",
+      "attachment": "removable",
+      "confidence": "medium",
+      "evidence_ids": [
+        "source_000021",
+        "source_000054",
+        "source_000057"
+      ],
+      "physical_accuracy_verified": false
+    }
+  ],
+  "unresolved_connections": [],
+  "source_audit_summary": {
+    "original_supported_samples": 78,
+    "retained_samples": 49,
+    "newly_withheld_samples": 29,
+    "supported_child_median_convex_mask_iou": 0.8995649605241958,
+    "supported_union_median_convex_mask_iou": 0.816818945599664,
+    "default_eligible": true,
+    "physical_accuracy_verified": false,
+    "original_unknown_samples": 23,
+    "total_unknown_samples": 52
+  },
+  "claims": {
+    "original_native_assets_preserved": true,
+    "declared_derivative_geometry_used": true,
+    "manual_geometry_or_poses_used": false,
+    "conditional_convex_source_mask_check_performed": true,
+    "physical_accuracy_verified": false,
+    "simulation_ready": false,
+    "physical_robot_execution_available": false
+  },
+  "physical_accuracy_verified": false,
+  "simulation_ready": false,
+  "limitations": [
+    "The original native descriptive program remains separately available.",
+    "One lid is an explicitly declared bounded mathematical derivative, not a new SAM-generated mesh.",
+    "Mask agreement is conditional and depth, metric scale, contact, grasp and physical simulation remain unverified."
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "format": "sam3d-initial-native-review",
+  "version": 2,
+  "fixture": false,
+  "native_only": true,
+  "component_id": "pouch_flap",
+  "title": "Pouch flap",
+  "source": {
+    "video_sha256": "b153e7ce79f140c861764c832ba3def149f5596ab4fe23bd3d671af913d5c021",
+    "sample_index": 29,
+    "timestamp_s": 9.400822,
+    "source_case": "flow-rigid-parts-wallet-20261031-v1",
+    "source_sample_index": 29,
+    "time_domain": "source_video_presentation_seconds"
+  },
+  "image_size": [
+    540,
+    960
+  ],
+  "native_glb_sha256": "6a506fb84dd17f023e15782b20ec3c40d8fe7dd69006f9ece56b4eab03945c12",
+  "native_up": "Y",
+  "mesh_stats": {
+    "bounds": [
+      [
+        -0.5006875991821289,
+        -0.271747350692749,
+        -0.09180346131324768
+      ],
+      [
+        0.4998176097869873,
+        0.28015410900115967,
+        0.09077779948711395
+      ]
+    ],
+    "primitive_count": 1,
+    "rendered_vertices": 177246,
+    "faces": 354460,
+    "appearance_modes": [
+      "vertex_rgb"
+    ],
+    "rendering_policy": "unlit base color; embedded images/UVs/node transforms preserved; PBR physics not simulated"
+  },
+  "appearance": "official notebook defaults: model-generated vertex colour and coloured Gaussian splat; UV texture baking disabled",
+  "files": [
+    {
+      "path": "candidate-geometry.bin",
+      "sha256": "dc73cc75c2077cb7cc18b62d91c5a4aa8b1bb839b82801b454efe420d2efea53",
+      "bytes": 14179296
+    },
+    {
+      "path": "candidate-scene.json",
+      "sha256": "43b2c59578b2c04093623817c3f97bf0f56db082b00fee0ecc663e094e07a857",
+      "bytes": 1652
+    },
+    {
+      "path": "candidate.glb",
+      "sha256": "6a506fb84dd17f023e15782b20ec3c40d8fe7dd69006f9ece56b4eab03945c12",
+      "bytes": 7090436
+    },
+    {
+      "path": "mask-overlay.png",
+      "sha256": "eb4c8168eed698c77bed3c270374c066692c2968929d4379a083cd70c2a965e4",
+      "bytes": 3263
+    },
+    {
+      "path": "model-metadata.json",
+      "sha256": "d324a8095797f44d3b1b80029b4cf2c7817ab1fe666968c7bf0495e835eefbd8",
+      "bytes": 15854
+    },
+    {
+      "path": "source-mask.png",
+      "sha256": "b1c33ef9ebdfce19bf0a4fde7da3695f72214a7e351d312e5f1ef5a38865722b",
+      "bytes": 1600
+    },
+    {
+      "path": "source-rgb.png",
+      "sha256": "264a386a8e876b50c8e833a26a71d0c60e458a407e8492a24a04ca93e656c11c",
+      "bytes": 352193
+    }
+  ],
+  "initial_handoff": {
+    "path": "data/initial-sam3d-handoffs/flow-rigid-parts-wallet-20261031-v1-pouch_flap-20261102-v1/handoff.json",
+    "sha256": "f258e82403de4102f7524e783fb8c8752e3b57c6ecb67cf483b08b611a30acbd",
+    "bytes": 2510
+  },
+  "import_receipt": {
+    "path": "data/sam3d-upload-jobs/f258e82403de4102f7524e783fb8c8752e3b57c6ecb67cf483b08b611a30acbd/candidate/import.json",
+    "sha256": "4bedb54296c392abffb854c8346478db69532325e48a660002723b50403b3eb6"
+  },
+  "scope": {
+    "baseline_required": false,
+    "original_geometry_modified": false,
+    "old_pose_reused": false,
+    "source_video_placement_established": false,
+    "physical_accuracy_verified": false,
+    "metric_scale_verified": false,
+    "assembly_verified": false,
+    "contact_verified": false,
+    "simulation_ready": false,
+    "selected": false,
+    "catalog_changed": false
+  },
+  "renderer": {
+    "shared_source_sha256": "b5e5ad7e2ff040d43886590da70b77ccbaa4cb804e983d47aaf68824514740d6",
+    "review_copy_sha256": "09c6e6f73d21256b2e7be403f767f5c641e32f54954bfde7b4f18d2c59f40c44",
+    "display_background": "neutral",
+    "display_clear_rgba": [
+      0.91,
+      0.93,
+      0.9,
+      1.0
+    ],
+    "native_up": "Y",
+    "geometry_or_material_changed": false,
+    "pbr_rendering": false,
+    "splat_rendering": false
+  },
+  "geometry_transport": {
+    "format": "lossless-native-geometry",
+    "version": 1,
+    "byte_order": "little",
+    "float_encoding": "ieee754-float64",
+    "index_encoding": "uint32",
+    "descriptor_bytes": 1652,
+    "geometry_bytes": 14179296,
+    "combined_scene_budget_bytes": 67108864,
+    "geometry_sha256": "dc73cc75c2077cb7cc18b62d91c5a4aa8b1bb839b82801b454efe420d2efea53"
+  },
+  "execution_scope": "Genuine-result source bytes revalidated; standalone native candidate only. No physical validity or motion acceptance."
+}

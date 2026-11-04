@@ -1,0 +1,230 @@
+{
+  "format": "interaction-twin-part-ledger",
+  "version": 1,
+  "evidence_program": {
+    "path": "data/flow-capture-charger-20261103-v1/flow-procedure-1/interaction.json",
+    "sha256": "462365b90da28aa1b57d225000acd367e2c583db0755c3ab105edeefd221b209",
+    "bytes": 116228
+  },
+  "source_sha256": "67a9b305ef3004e71ce7bffad7db87ea84679a118b2e95ab3db3b37dcdf9ee6c",
+  "original_source_sha256": "53e407b9a288c199cf6e1827ad5ec99693a86714885c8c628e77daf48802d2df",
+  "segmentation": {
+    "tracks": {
+      "path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/tracks.json",
+      "sha256": "3a24c422beeefa1f4b61ff14face27516d3243bd2ed6f03d7f70aa11dcbebe57",
+      "bytes": 232983
+    },
+    "quality": {
+      "path": "data/flow-capture-charger-20261103-v1/segmentation/flow-components-2/frames.json",
+      "sha256": "4aa86d0a84ed8ee753bc76c6708ce62e262377a94293753ed212d85c7e2a2d70",
+      "bytes": 74516
+    }
+  },
+  "parts": [
+    {
+      "id": "adapter_early",
+      "label": "white power adapter",
+      "physical_identity_verified": false,
+      "mask_track_id": "adapter_early",
+      "mask_status_counts": {
+        "candidate_visible": 16
+      },
+      "selection_status": "selected",
+      "reconstruction_status": "complete_with_gaps",
+      "geometry_status": "native_generated",
+      "native": {
+        "metadata": {
+          "path": "data/sam3d-upload-jobs/bfebd5ba2ca15c28fd5c4b602d3487a73541344ee041be3e7531ef33ea94bb89/candidate/metadata.json",
+          "sha256": "fe07a7bf8190919e21bf12d40955dbae9b7fa37e45c4de23b2cfa160ab2aef0f",
+          "bytes": 15773
+        },
+        "asset": {
+          "path": "data/sam3d-upload-jobs/bfebd5ba2ca15c28fd5c4b602d3487a73541344ee041be3e7531ef33ea94bb89/candidate/asset.glb",
+          "sha256": "74635a414ec57bd5e92bbda01a9b55bb77a8e01152c97c53d8773f0abbf98636",
+          "bytes": 9009880
+        },
+        "program_asset_id": "asset_2",
+        "source_image": {
+          "path": "data/sam3d-upload-jobs/bfebd5ba2ca15c28fd5c4b602d3487a73541344ee041be3e7531ef33ea94bb89/candidate/raw/inputs/image-source.png",
+          "sha256": "5edd423b9599a08c1e0d9fa97b21d7188f6d41e870d3f2dba6542e4efc7f2efa",
+          "bytes": 589779
+        },
+        "source_mask": {
+          "path": "data/sam3d-upload-jobs/bfebd5ba2ca15c28fd5c4b602d3487a73541344ee041be3e7531ef33ea94bb89/candidate/raw/inputs/mask-source.png",
+          "sha256": "0f69e40f2eabd833e33addaaf673c7c8e7692ccf66f0912d17716d645add0043",
+          "bytes": 1741
+        },
+        "source_sample_index": 9,
+        "source_timestamp_s": 5.599144,
+        "manual_geometry_used": false,
+        "manual_pose_used": false
+      },
+      "pending_reason": null,
+      "relationship_ids": [
+        "rel_early_late_identity"
+      ],
+      "physical_scale_known": false
+    },
+    {
+      "id": "adapter_late",
+      "label": "white power adapter",
+      "physical_identity_verified": false,
+      "mask_track_id": "adapter_late",
+      "mask_status_counts": {
+        "candidate_visible": 39,
+        "withheld_due_to_occlusion_or_ambiguity": 6
+      },
+      "selection_status": "selected",
+      "reconstruction_status": "complete_with_gaps",
+      "geometry_status": "native_generated",
+      "native": {
+        "metadata": {
+          "path": "data/sam3d-upload-jobs/8b5ab53e06cb5b2456dcb1d8aa93f3ed1da840ee0bf177cf524defe12a790c88/candidate/metadata.json",
+          "sha256": "d3af01f2aeddb5fa2bd48a0c4bc5ac9518513a051222abb6ea0d4f8353c111e3",
+          "bytes": 15841
+        },
+        "asset": {
+          "path": "data/sam3d-upload-jobs/8b5ab53e06cb5b2456dcb1d8aa93f3ed1da840ee0bf177cf524defe12a790c88/candidate/asset.glb",
+          "sha256": "369ce5a10634764fac142c654571a5b9281e5379aa947e906619d7809b9f1287",
+          "bytes": 14253056
+        },
+        "program_asset_id": "asset_4",
+        "source_image": {
+          "path": "data/sam3d-upload-jobs/8b5ab53e06cb5b2456dcb1d8aa93f3ed1da840ee0bf177cf524defe12a790c88/candidate/raw/inputs/image-source.png",
+          "sha256": "9ae560dcd1ccd0225f27d37de638f7b56e2ed3b724d7fd1937eced54587f6847",
+          "bytes": 593704
+        },
+        "source_mask": {
+          "path": "data/sam3d-upload-jobs/8b5ab53e06cb5b2456dcb1d8aa93f3ed1da840ee0bf177cf524defe12a790c88/candidate/raw/inputs/mask-source.png",
+          "sha256": "92ebefc46e120f23bd5260ed477e1b051cbdeeab660204964e428d8c998a87d9",
+          "bytes": 1613
+        },
+        "source_sample_index": 35,
+        "source_timestamp_s": 23.762867,
+        "manual_geometry_used": false,
+        "manual_pose_used": false
+      },
+      "pending_reason": null,
+      "relationship_ids": [
+        "rel_early_late_identity",
+        "rel_cable_to_adapter",
+        "rel_adapter_to_outlet"
+      ],
+      "physical_scale_known": false
+    },
+    {
+      "id": "power_cable",
+      "label": "white cable",
+      "physical_identity_verified": false,
+      "mask_track_id": "power_cable",
+      "mask_status_counts": {
+        "candidate_visible": 66
+      },
+      "selection_status": "selected",
+      "reconstruction_status": "complete_with_gaps",
+      "geometry_status": "native_generated",
+      "native": {
+        "metadata": {
+          "path": "data/sam3d-upload-jobs/9c9f2deb744570f469f8a814742efbd9b1eed234c6f79187d7e51d92841c17a4/candidate/metadata.json",
+          "sha256": "733d8ef1c67e8acd0d869cfb1586db693bf412cc1738a5adfb56780849f089ce",
+          "bytes": 15778
+        },
+        "asset": {
+          "path": "data/sam3d-upload-jobs/9c9f2deb744570f469f8a814742efbd9b1eed234c6f79187d7e51d92841c17a4/candidate/asset.glb",
+          "sha256": "9d308a2d35d4b6eb63a6af7fdd71c9b440d6c41200416d2894d5e4aa33a0e147",
+          "bytes": 2431300
+        },
+        "program_asset_id": "asset_3",
+        "source_image": {
+          "path": "data/sam3d-upload-jobs/9c9f2deb744570f469f8a814742efbd9b1eed234c6f79187d7e51d92841c17a4/candidate/raw/inputs/image-source.png",
+          "sha256": "7a4a449edf182c91fcafc1a8f0b69524a3c7182e006499fb2d1b951eae0554b4",
+          "bytes": 523963
+        },
+        "source_mask": {
+          "path": "data/sam3d-upload-jobs/9c9f2deb744570f469f8a814742efbd9b1eed234c6f79187d7e51d92841c17a4/candidate/raw/inputs/mask-source.png",
+          "sha256": "9037e4b063236e2d276a8ef04ec2c5733b3a1c32ee7d7834d20bdbd38ab91efa",
+          "bytes": 2266
+        },
+        "source_sample_index": 1,
+        "source_timestamp_s": 0.0,
+        "manual_geometry_used": false,
+        "manual_pose_used": false
+      },
+      "pending_reason": null,
+      "relationship_ids": [
+        "rel_cable_to_adapter"
+      ],
+      "physical_scale_known": false
+    },
+    {
+      "id": "wall_outlet",
+      "label": "wall outlet",
+      "physical_identity_verified": false,
+      "mask_track_id": "wall_outlet",
+      "mask_status_counts": {
+        "candidate_visible": 66
+      },
+      "selection_status": "selected",
+      "reconstruction_status": "complete_with_gaps",
+      "geometry_status": "native_generated",
+      "native": {
+        "metadata": {
+          "path": "data/sam3d-upload-jobs/5b2a25363635c7bb67ccf8e386afc02c56860e72157f7a8f586bd2ac2245ebcf/candidate/metadata.json",
+          "sha256": "fe2749f952785b0e2e927d5b08c47229999a9925156c4ecc6746d4e015d8aeae",
+          "bytes": 15767
+        },
+        "asset": {
+          "path": "data/sam3d-upload-jobs/5b2a25363635c7bb67ccf8e386afc02c56860e72157f7a8f586bd2ac2245ebcf/candidate/asset.glb",
+          "sha256": "476967630214300899877caf98739ae9e2c738069bf47c715db10f8e7cdb2f12",
+          "bytes": 9358892
+        },
+        "program_asset_id": "asset_1",
+        "source_image": {
+          "path": "data/sam3d-upload-jobs/5b2a25363635c7bb67ccf8e386afc02c56860e72157f7a8f586bd2ac2245ebcf/candidate/raw/inputs/image-source.png",
+          "sha256": "9b64c76549acf213f05aa423e0615c05d3610c81262b0ad3b9cf0005031bed33",
+          "bytes": 640288
+        },
+        "source_mask": {
+          "path": "data/sam3d-upload-jobs/5b2a25363635c7bb67ccf8e386afc02c56860e72157f7a8f586bd2ac2245ebcf/candidate/raw/inputs/mask-source.png",
+          "sha256": "0d6bf16f5e0deadc7496143537c3148c37365208b4d0d466e30b0cf59c8dbfe3",
+          "bytes": 1352
+        },
+        "source_sample_index": 46,
+        "source_timestamp_s": 31.425111,
+        "manual_geometry_used": false,
+        "manual_pose_used": false
+      },
+      "pending_reason": null,
+      "relationship_ids": [
+        "rel_adapter_to_outlet"
+      ],
+      "physical_scale_known": false
+    }
+  ],
+  "inputs": [
+    {
+      "path": "data/flow-capture-charger-20261103-v1/flow-inputs-1/component-selection.json",
+      "sha256": "93262373ddcb7d13527e34db76ed7270788ab8b73286a62f98bb070b4e892c5b",
+      "bytes": 3055
+    },
+    {
+      "path": "data/flow-capture-charger-20261103-v1/flow-model-receipts-1/components.json",
+      "sha256": "1165fe5bd58f08771e4982c113d2c1e7c5f4e0750e1286cc38ed8df4176554d1",
+      "bytes": 12404
+    }
+  ],
+  "summary": {
+    "components": 4,
+    "native_generated": 4,
+    "pending": 0,
+    "all_native_assets_compiled": true,
+    "physical_identity_merged": false
+  },
+  "implementation": {
+    "path": "part_ledger.py",
+    "sha256": "c5e846eb5db0e1e94c5f2e082f49951a2393bdf71ee9c908cb327cb3fb18e344"
+  },
+  "physical_accuracy_verified": false,
+  "simulation_ready": false,
+  "training_performed": false
+}

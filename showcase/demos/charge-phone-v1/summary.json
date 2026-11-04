@@ -1,0 +1,17 @@
+{
+  "format": "interaction-twin-charge-phone-demo",
+  "version": 1,
+  "status": "saved_actual_mcp_workflow",
+  "source_recordings": 2,
+  "connection_candidates": 3,
+  "draft_steps": 5,
+  "mcp_calls": 42,
+  "verified_native_models": 6,
+  "verified_evidence_frames": 9,
+  "task_sha256": "5d88dd1cab5b0b4a8d1757cc094bf30a98cc106c60d8d94dbad55c3c19c4200f",
+  "trace_sha256": "3f97b9aa92d04184be5582251137778cb21274dc8f5e3e7393d116f938b0b1ff",
+  "live_llm_agent": false,
+  "new_api_calls": 0,
+  "physical_success_verified": false,
+  "robot_execution_available": false
+}

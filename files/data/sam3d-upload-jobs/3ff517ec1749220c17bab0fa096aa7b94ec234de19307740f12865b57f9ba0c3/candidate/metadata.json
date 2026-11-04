@@ -1,0 +1,367 @@
+{
+  "schema_version": "0.1",
+  "status": "imported_initial_native_candidate_pending_alignment",
+  "object_id": "earbud_b",
+  "backend": "Meta SAM 3D Objects",
+  "provider": "Meta",
+  "sam3d_output": true,
+  "sam3d_milestone_complete": false,
+  "learned_inference_executed": true,
+  "source": {
+    "video_sha256": "7474ebd9d06c55b63fc073f632e71e5125353ace2538fa7bcf632cfdc1c3d0f2",
+    "sample_index": 61,
+    "timestamp_s": 20.001756,
+    "source_case": "flow-sam3d-default-e2e-20261102-v1",
+    "source_sample_index": 61,
+    "time_domain": "source_video_presentation_seconds",
+    "image_path": "raw/inputs/image-source.png",
+    "mask_path": "raw/inputs/mask-source.png",
+    "image_sha256": "62641e779bccb1110235efb2f38e77103ff1e6d3e9a19791ae08645d341d5a2e",
+    "mask_sha256": "bc020aecf855b23ec032a4c39943472513ed967b028f349f2aeca08c818a3b42",
+    "width": 540,
+    "height": 960,
+    "mask_provenance": {
+      "prompt_origin": "model_generated_prompt",
+      "original_seed_origin": "meta_api_model_proposal",
+      "model": "sam-3.1",
+      "device": "hosted_Meta_Model_API",
+      "checkpoint_sha256": null,
+      "checkpoint_identity": "provider_managed_not_disclosed",
+      "metadata_file": "segmentation/flow-components-1/metadata.json",
+      "metadata_sha256": "5411444165f5629e66e85369843ec299caf71788f39a879273f14cee22e29fbb",
+      "annotations_file": "segmentation/flow-components-1/annotations.json",
+      "annotations_sha256": "66ad1cc8f65e9a9d72e45eef7391fe3e021cadbebbdb13e7fd20a40155e03d2b",
+      "prompts": [
+        {
+          "sample_index": 58,
+          "box_xyxy": [
+            232.2,
+            401.28,
+            318.06,
+            513.6
+          ],
+          "origin": "meta_api_model_proposal",
+          "human_confirmed": false,
+          "source_timestamp_s": 19.001667,
+          "reason": "middle black earbud on table with gold contacts visible"
+        },
+        {
+          "sample_index": 76,
+          "box_xyxy": [
+            57.78,
+            413.76,
+            153.9,
+            532.8
+          ],
+          "origin": "meta_api_model_proposal",
+          "human_confirmed": false,
+          "source_timestamp_s": 25.0022,
+          "reason": "black earbud held between fingers near open case"
+        }
+      ],
+      "human_confirmed": false,
+      "manual_seed_boxes_used": false,
+      "accuracy_measured": false,
+      "discovery_file": "reasoning/flow-discovery-1/discovery.json",
+      "discovery_sha256": "b0415d5b2608a9cc45e6885e9d4662ec6dffdc716190e98c922ba6087dfdd628",
+      "prompt_provider": "hosted_Meta_Model_API",
+      "prompt_model": "muse-spark-1.3",
+      "exact_discovery_config_verified": true,
+      "exact_rigid_config_lineage_verified": true,
+      "rigid_selection": {
+        "adapter": "rigid_component_selection_v1",
+        "omission_only_derivative": false,
+        "manual_boxes_used": false,
+        "physical_identity_verified": false,
+        "discovery_file": "reasoning/flow-discovery-1/discovery.json",
+        "discovery_sha256": "b0415d5b2608a9cc45e6885e9d4662ec6dffdc716190e98c922ba6087dfdd628",
+        "discovery_implementation_role": "rigid_component_visual_discovery_v1",
+        "configuration_sha256": "66ad1cc8f65e9a9d72e45eef7391fe3e021cadbebbdb13e7fd20a40155e03d2b",
+        "segmentation_metadata_sha256": "5411444165f5629e66e85369843ec299caf71788f39a879273f14cee22e29fbb"
+      },
+      "mask_plausibility_audit_file": "segmentation/flow-components-1/model-audit-v1/audit.json",
+      "mask_plausibility_audit_sha256": "c2779e82fe8aebf6c32d8e9bbf99800fd754b9a15ae4b429e69602e4c2884ffe",
+      "mask_plausibility_is_accuracy_measurement": false,
+      "backend": "sam-3.1",
+      "manual_intervention": false,
+      "scope": "second black wireless earbud, seen inside case then removed to table then reinserted"
+    }
+  },
+  "outputs": {
+    "glb_path": "asset.glb"
+  },
+  "geometry_reconstructed_by_model": true,
+  "manual_geometry_fallback": false,
+  "manual_pose_used": false,
+  "appearance": "official notebook defaults: model-generated vertex colour and coloured Gaussian splat; UV texture baking disabled",
+  "appearance_mode": "vertex-color",
+  "direct_original_video_texture_projection": false,
+  "hidden_surfaces": "model-inferred, not observed or measured",
+  "metric_scale_verified": false,
+  "physical_accuracy_verified": false,
+  "camera_pose_estimated": false,
+  "coordinates": "Unchanged official native GLB; independent nonmetric model gauge",
+  "validation_status": "pending_independent_execution_and_source_projection_review",
+  "model_provenance": {
+    "model_repository": "facebook/sam-3d-objects",
+    "code": {
+      "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/source",
+      "expected_commit": "f91db411c50efee93d8db7aeb323885650f6f722",
+      "official_repository": "https://github.com/facebookresearch/sam-3d-objects",
+      "commit": "f91db411c50efee93d8db7aeb323885650f6f722",
+      "origin": "https://github.com/facebookresearch/sam-3d-objects",
+      "tracked_changes": "",
+      "notebook_inference_sha256": "a3e20615885d2b5eaf1a8af8573d271072de4e27639212317edffcddf1d39cf3"
+    },
+    "checkpoint": {
+      "pipeline_config": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/pipeline.yaml",
+      "files": [
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/pipeline.yaml",
+          "bytes": 3548,
+          "sha256": "53c3d226b21df85c0bb3d16e6e4fa63abde0d6167525765eb929d02bfa9d358c"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/ss_generator.yaml",
+          "bytes": 5076,
+          "sha256": "3c265448bca7c057f94e3ef56adea3a895a10bcd9f15f992a41dd03fa35412cd"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/ss_generator.ckpt",
+          "bytes": 6690136964,
+          "sha256": "225f40479e4cff4f39d6fa14c55be3abad1475bf55b61af3bec1e19ed2f6c146"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/slat_generator.yaml",
+          "bytes": 1986,
+          "sha256": "53029fadff6fe34a0344381a16d64d65d0567d603484952712e8969319559c4e"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/slat_generator.ckpt",
+          "bytes": 4906537684,
+          "sha256": "91529bde8e7daa12d09618a66c319e3a5a6398db6b23b958cedcb1c3f28faabb"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/ss_decoder.yaml",
+          "bytes": 244,
+          "sha256": "baacff269b664f84f7aa1896ebd66128065f6568cdb88d419d5c3d2ccb4193ae"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/ss_decoder.ckpt",
+          "bytes": 147609242,
+          "sha256": "6dac1cd7b7fda5a38e0614fadae441f1794f80e39ea2981f1ac8aff0a7e99340"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/slat_decoder_gs.yaml",
+          "bytes": 576,
+          "sha256": "53f054e02a0c185f0a6885d30bb6ca0ec92efe0a98148688e7f05f7c26afe670"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/slat_decoder_gs.ckpt",
+          "bytes": 171476155,
+          "sha256": "f8077c36a06eaf890dd93cda1937411f793dea1eb80b3dd9329f2038ba84a111"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/slat_decoder_gs_4.yaml",
+          "bytes": 575,
+          "sha256": "3d1dfd4c56cdac56f30e0cf5eb310d4df973fe25c60ac0a462c86ca4e3bf8b48"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/slat_decoder_gs_4.ckpt",
+          "bytes": 170269801,
+          "sha256": "731a0eceaa47945b52aa27f650d695b2aea9cc70945751e5609e5cb5b49f0186"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/slat_decoder_mesh.yaml",
+          "bytes": 300,
+          "sha256": "8f46952764aa985c50109a56f0b4f07625cdb06457aaded74957d26f3520c69e"
+        },
+        {
+          "path": "/mnt/vast-kisski/home/nigel.hartman01/u29467/.local/state/ai-training/sam3d-20261101-v1/runtime/weights/2e73555018d2741ccd486e56c24fac41155a1dc6/checkpoints/slat_decoder_mesh.ckpt",
+          "bytes": 363726862,
+          "sha256": "85907b37b67d8ce5b099a96629bdcfbd873eb407dee6b3aa9a75deb15038db33"
+        }
+      ],
+      "weights_hashed": true,
+      "checkpoint_count": 6
+    },
+    "adapter_metadata_path": "raw/metadata.json",
+    "adapter_metadata_sha256": "1266169b724446bfc2a829d517942ce3ccdb419a1ad254a128fbbe80402e4c72"
+  },
+  "runtime": {
+    "platform": "Linux",
+    "machine": "x86_64",
+    "python": "3.11.0",
+    "device_requested": "cuda",
+    "dependency_presence": {
+      "torch": true,
+      "torchvision": true,
+      "omegaconf": true,
+      "hydra": true,
+      "pytorch3d": true,
+      "kaolin": true,
+      "spconv": true,
+      "utils3d": true,
+      "moge": true,
+      "trimesh": true,
+      "cv2": true,
+      "gradio": true,
+      "seaborn": true
+    },
+    "torch": "2.5.1+cu121",
+    "torch_cuda": "12.1",
+    "cuda_available": true,
+    "gpu_name": "NVIDIA A100-SXM4-80GB",
+    "gpu_memory_gib": 79.249755859375
+  },
+  "native_layout_candidate": {
+    "camera_from_glb": [
+      [
+        0.15976128552246285,
+        0.07191987577015171,
+        -0.1082887058472956,
+        0.00963200256228447
+      ],
+      [
+        0.12527808252832814,
+        -0.0393769490554789,
+        0.15867400107696808,
+        -0.05813165754079819
+      ],
+      [
+        0.03470323303240727,
+        -0.18894329320977296,
+        -0.07428794158415128,
+        1.8330767154693604
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "rotation_cv_from_glb": [
+      [
+        0.7756628724860897,
+        0.3491808246677823,
+        -0.5257564644690126
+      ],
+      [
+        0.6082422098425689,
+        -0.1911804684985257,
+        0.7703839579265086
+      ],
+      [
+        0.16848893854629404,
+        -0.9173455075101269,
+        -0.3606781077893853
+      ]
+    ],
+    "translation_cv": [
+      0.00963200256228447,
+      -0.05813165754079819,
+      1.8330767154693604
+    ],
+    "uniform_scale": 0.20596742630004883,
+    "matrix_convention": "column vectors; scale included in camera_from_glb",
+    "camera_axes": "+X right, +Y down, +Z forward",
+    "scale_units": "native_model_predicted_scene_units",
+    "metric_scale_verified": false,
+    "convention_verification": "pinned source audit and CPU synthetic math only",
+    "source_video_pose_validated": false,
+    "real_sam3d_inference_validated": false,
+    "sam3d_code_commit": "f91db411c50efee93d8db7aeb323885650f6f722",
+    "pytorch3d_code_commit": "75ebeeaea0908c5527e7b1e305fbc7681382db47",
+    "use_for_initialization_only": true,
+    "accepted_video_pose": false
+  },
+  "fit_contract": {
+    "version": "2",
+    "raw_glb_sha256": "a679735bbd787e8600cbc680a187ba88c358de6b1d2d516a2562d2125c266e8a",
+    "current_adapter_requires": "verified opaque native base-colour appearance",
+    "appearance_mode": "vertex-color",
+    "alignment_eligible": true,
+    "alignment_ineligible_reason": null,
+    "visual_kind": "vertex",
+    "alignment_adapter": "legacy-vertex-colour-v1",
+    "appearance_conversion_performed": false,
+    "native_appearance": {
+      "contract_version": "native-base-color-v1",
+      "source_glb_sha256": "a679735bbd787e8600cbc680a187ba88c358de6b1d2d516a2562d2125c266e8a",
+      "source_glb_bytes": 11486232,
+      "original_glb_unchanged": true,
+      "renderer": "legacy_alignment_render",
+      "legacy_vertex_compatibility": true,
+      "legacy_compatible": true,
+      "appearance_modes": [
+        "vertex_rgb"
+      ],
+      "primitive_count": 1,
+      "material_count": 0,
+      "rendered_vertices": 287124,
+      "faces": 574272,
+      "texture_count": 0,
+      "texture_pixels": 0,
+      "uv_preserved": false,
+      "uv_to_vertex_color_conversion": false,
+      "scene_node_transforms_applied": true,
+      "uv_origin": "gltf_top_left; image_rows_preserved",
+      "color_policy": "historical_uint8_vertex_rgb_interpolation_unchanged",
+      "samplers": [],
+      "face_policy": "historical_two_sided_diagnostic_projection_unchanged",
+      "primitive_culling": [
+        {
+          "double_sided": false,
+          "node_winding_sign": 1
+        }
+      ],
+      "vertices_sha256": "c5efe6b0add0890fd54ccec42bfaa1661761474106b85375ff2553500a1e723f",
+      "faces_sha256": "c0a94ae3e6237f983023b3f0ce499becdd74a0d21ab92f56756918ea7e9b82e3",
+      "material_policy": "opaque_unlit_base_color_only; no_lighting_or_PBR_shading",
+      "metric_scale_verified": false,
+      "physical_accuracy_verified": false
+    }
+  },
+  "artifact_files": [
+    {
+      "file": "asset.glb",
+      "sha256": "a679735bbd787e8600cbc680a187ba88c358de6b1d2d516a2562d2125c266e8a",
+      "bytes": 11486232
+    },
+    {
+      "file": "raw/inputs/image-source.png",
+      "sha256": "62641e779bccb1110235efb2f38e77103ff1e6d3e9a19791ae08645d341d5a2e",
+      "bytes": 230752
+    },
+    {
+      "file": "raw/inputs/mask-source.png",
+      "sha256": "bc020aecf855b23ec032a4c39943472513ed967b028f349f2aeca08c818a3b42",
+      "bytes": 1104
+    }
+  ],
+  "initial_reconstruction_lineage": {
+    "handoff": {
+      "path": "data/initial-sam3d-handoffs/upload-86ea9ab31b972249225ede76000b784c/handoff.json",
+      "sha256": "3ff517ec1749220c17bab0fa096aa7b94ec234de19307740f12865b57f9ba0c3",
+      "bytes": 2508
+    },
+    "source_binding_sha256": "840a3657417d5d8e2a705265dcb0bc9393fc97b8ee0bd4cd6624ae40f54cfcf6",
+    "raw_asset_sha256": "a679735bbd787e8600cbc680a187ba88c358de6b1d2d516a2562d2125c266e8a",
+    "geometry_bytes_modified": false,
+    "baseline_required": false,
+    "baseline_asset_read": false,
+    "old_poses_read": false,
+    "execution_independently_verified": false
+  },
+  "simulation_ready": false,
+  "selected": false,
+  "catalog_changed": false,
+  "limitations": [
+    "Adapter attestations are contract-checked, not independent proof of execution.",
+    "One visible RGB/mask anchor does not observe hidden surfaces.",
+    "The unchanged native model and inferred layout have an independent, nonmetric gauge.",
+    "A fresh source projection and motion fit are required; no old poses are read or copied.",
+    "No original source, program, asset or preferred model is replaced."
+  ]
+}

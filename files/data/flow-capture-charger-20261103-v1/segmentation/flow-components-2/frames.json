@@ -1,0 +1,2217 @@
+{
+  "frames": [
+    {
+      "sample_index": 1,
+      "timestamp_s": 0.0,
+      "tracks": [
+        {
+          "track_id": "adapter_early",
+          "raw_mask_file": "raw_masks/adapter_early/000001.png",
+          "area_pixels": 4055,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_early/000001.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000001.png",
+          "area_pixels": 9345,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000001.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000001.png",
+          "area_pixels": 6251,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000001.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 2,
+      "timestamp_s": 0.699978,
+      "tracks": [
+        {
+          "track_id": "adapter_early",
+          "raw_mask_file": "raw_masks/adapter_early/000002.png",
+          "area_pixels": 4098,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_early/000002.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000002.png",
+          "area_pixels": 9586,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000002.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000002.png",
+          "area_pixels": 6450,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000002.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 3,
+      "timestamp_s": 1.399778,
+      "tracks": [
+        {
+          "track_id": "adapter_early",
+          "raw_mask_file": "raw_masks/adapter_early/000003.png",
+          "area_pixels": 3999,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_early/000003.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000003.png",
+          "area_pixels": 9740,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000003.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000003.png",
+          "area_pixels": 7368,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000003.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 4,
+      "timestamp_s": 2.0996,
+      "tracks": [
+        {
+          "track_id": "adapter_early",
+          "raw_mask_file": "raw_masks/adapter_early/000004.png",
+          "area_pixels": 3981,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_early/000004.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000004.png",
+          "area_pixels": 10034,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000004.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000004.png",
+          "area_pixels": 9119,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000004.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 5,
+      "timestamp_s": 2.799567,
+      "tracks": [
+        {
+          "track_id": "adapter_early",
+          "raw_mask_file": "raw_masks/adapter_early/000005.png",
+          "area_pixels": 5001,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_early/000005.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000005.png",
+          "area_pixels": 13101,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000005.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000005.png",
+          "area_pixels": 16324,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000005.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 6,
+      "timestamp_s": 3.499556,
+      "tracks": [
+        {
+          "track_id": "adapter_early",
+          "raw_mask_file": "raw_masks/adapter_early/000006.png",
+          "area_pixels": 5931,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_early/000006.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000006.png",
+          "area_pixels": 15802,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000006.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000006.png",
+          "area_pixels": 12551,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000006.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 7,
+      "timestamp_s": 4.199378,
+      "tracks": [
+        {
+          "track_id": "adapter_early",
+          "raw_mask_file": "raw_masks/adapter_early/000007.png",
+          "area_pixels": 8377,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_early/000007.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000007.png",
+          "area_pixels": 14711,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000007.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000007.png",
+          "area_pixels": 11114,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000007.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 8,
+      "timestamp_s": 4.899267,
+      "tracks": [
+        {
+          "track_id": "adapter_early",
+          "raw_mask_file": "raw_masks/adapter_early/000008.png",
+          "area_pixels": 12036,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_early/000008.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000008.png",
+          "area_pixels": 14713,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000008.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000008.png",
+          "area_pixels": 10808,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000008.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 9,
+      "timestamp_s": 5.599144,
+      "tracks": [
+        {
+          "track_id": "adapter_early",
+          "raw_mask_file": "raw_masks/adapter_early/000009.png",
+          "area_pixels": 16161,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_early/000009.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000009.png",
+          "area_pixels": 14573,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000009.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000009.png",
+          "area_pixels": 9954,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000009.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 10,
+      "timestamp_s": 6.299022,
+      "tracks": [
+        {
+          "track_id": "adapter_early",
+          "raw_mask_file": "raw_masks/adapter_early/000010.png",
+          "area_pixels": 10317,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_early/000010.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000010.png",
+          "area_pixels": 14028,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000010.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000010.png",
+          "area_pixels": 10821,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000010.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 11,
+      "timestamp_s": 6.9989,
+      "tracks": [
+        {
+          "track_id": "adapter_early",
+          "raw_mask_file": "raw_masks/adapter_early/000011.png",
+          "area_pixels": 17236,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_early/000011.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000011.png",
+          "area_pixels": 14080,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000011.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000011.png",
+          "area_pixels": 10856,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000011.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 12,
+      "timestamp_s": 7.698778,
+      "tracks": [
+        {
+          "track_id": "adapter_early",
+          "raw_mask_file": "raw_masks/adapter_early/000012.png",
+          "area_pixels": 7315,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_early/000012.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000012.png",
+          "area_pixels": 14265,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000012.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000012.png",
+          "area_pixels": 9984,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000012.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 13,
+      "timestamp_s": 8.398656,
+      "tracks": [
+        {
+          "track_id": "adapter_early",
+          "raw_mask_file": "raw_masks/adapter_early/000013.png",
+          "area_pixels": 6924,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_early/000013.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000013.png",
+          "area_pixels": 14008,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000013.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000013.png",
+          "area_pixels": 8848,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000013.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 14,
+      "timestamp_s": 9.098533,
+      "tracks": [
+        {
+          "track_id": "adapter_early",
+          "raw_mask_file": "raw_masks/adapter_early/000014.png",
+          "area_pixels": 9290,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_early/000014.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000014.png",
+          "area_pixels": 14382,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000014.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000014.png",
+          "area_pixels": 8026,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000014.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 15,
+      "timestamp_s": 9.798411,
+      "tracks": [
+        {
+          "track_id": "adapter_early",
+          "raw_mask_file": "raw_masks/adapter_early/000015.png",
+          "area_pixels": 10186,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_early/000015.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000015.png",
+          "area_pixels": 14435,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000015.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000015.png",
+          "area_pixels": 9293,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000015.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 16,
+      "timestamp_s": 10.473389,
+      "tracks": [
+        {
+          "track_id": "adapter_early",
+          "raw_mask_file": "raw_masks/adapter_early/000016.png",
+          "area_pixels": 11088,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_early/000016.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000016.png",
+          "area_pixels": 14322,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000016.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000016.png",
+          "area_pixels": 18349,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000016.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 17,
+      "timestamp_s": 11.165033,
+      "tracks": [
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000017.png",
+          "area_pixels": 16642,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000017.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000017.png",
+          "area_pixels": 28423,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000017.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 18,
+      "timestamp_s": 11.864767,
+      "tracks": [
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000018.png",
+          "area_pixels": 18067,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000018.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000018.png",
+          "area_pixels": 15592,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000018.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 19,
+      "timestamp_s": 12.564633,
+      "tracks": [
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000019.png",
+          "area_pixels": 18224,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000019.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000019.png",
+          "area_pixels": 11772,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000019.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 20,
+      "timestamp_s": 13.264511,
+      "tracks": [
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000020.png",
+          "area_pixels": 17040,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000020.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000020.png",
+          "area_pixels": 9242,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000020.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 21,
+      "timestamp_s": 13.964389,
+      "tracks": [
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000021.png",
+          "area_pixels": 15347,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000021.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000021.png",
+          "area_pixels": 14508,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000021.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 22,
+      "timestamp_s": 14.664378,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000022.png",
+          "area_pixels": 0,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "empty_prediction",
+            "area_below_twelve_percent_of_seed_possible_occlusion",
+            "source_association_withheld"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000022.png",
+          "area_pixels": 14084,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000022.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000022.png",
+          "area_pixels": 18946,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000022.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 23,
+      "timestamp_s": 15.364267,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000023.png",
+          "area_pixels": 6,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "too_few_pixels",
+            "area_below_twelve_percent_of_seed_possible_occlusion"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000023.png",
+          "area_pixels": 13180,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000023.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000023.png",
+          "area_pixels": 21047,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000023.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 24,
+      "timestamp_s": 16.064167,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000024.png",
+          "area_pixels": 2,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "too_few_pixels",
+            "area_below_twelve_percent_of_seed_possible_occlusion"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000024.png",
+          "area_pixels": 17058,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000024.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000024.png",
+          "area_pixels": 19271,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000024.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 25,
+      "timestamp_s": 16.764078,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000025.png",
+          "area_pixels": 1,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "too_few_pixels",
+            "area_below_twelve_percent_of_seed_possible_occlusion"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000025.png",
+          "area_pixels": 15931,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000025.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000025.png",
+          "area_pixels": 20146,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000025.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 26,
+      "timestamp_s": 17.463956,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000026.png",
+          "area_pixels": 0,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "empty_prediction",
+            "area_below_twelve_percent_of_seed_possible_occlusion",
+            "source_association_withheld"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000026.png",
+          "area_pixels": 16322,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000026.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000026.png",
+          "area_pixels": 14943,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000026.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 27,
+      "timestamp_s": 18.163922,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000027.png",
+          "area_pixels": 0,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "empty_prediction",
+            "area_below_twelve_percent_of_seed_possible_occlusion",
+            "source_association_withheld"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000027.png",
+          "area_pixels": 21509,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000027.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000027.png",
+          "area_pixels": 12974,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000027.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 28,
+      "timestamp_s": 18.863722,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000028.png",
+          "area_pixels": 0,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "empty_prediction",
+            "area_below_twelve_percent_of_seed_possible_occlusion",
+            "source_association_withheld"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000028.png",
+          "area_pixels": 12682,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000028.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000028.png",
+          "area_pixels": 17761,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000028.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 29,
+      "timestamp_s": 19.5636,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000029.png",
+          "area_pixels": 0,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "empty_prediction",
+            "area_below_twelve_percent_of_seed_possible_occlusion",
+            "source_association_withheld"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000029.png",
+          "area_pixels": 16411,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000029.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000029.png",
+          "area_pixels": 22004,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000029.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 30,
+      "timestamp_s": 20.263478,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000030.png",
+          "area_pixels": 990,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_late/000030.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000030.png",
+          "area_pixels": 11266,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000030.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000030.png",
+          "area_pixels": 22216,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000030.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 31,
+      "timestamp_s": 20.963356,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000031.png",
+          "area_pixels": 1186,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_late/000031.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000031.png",
+          "area_pixels": 12114,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000031.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000031.png",
+          "area_pixels": 19247,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000031.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 32,
+      "timestamp_s": 21.663233,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000032.png",
+          "area_pixels": 0,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "empty_prediction",
+            "area_below_twelve_percent_of_seed_possible_occlusion",
+            "source_association_withheld"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000032.png",
+          "area_pixels": 8043,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000032.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000032.png",
+          "area_pixels": 20052,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000032.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 33,
+      "timestamp_s": 22.363111,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000033.png",
+          "area_pixels": 1,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "too_few_pixels",
+            "area_below_twelve_percent_of_seed_possible_occlusion"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000033.png",
+          "area_pixels": 10462,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000033.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000033.png",
+          "area_pixels": 17470,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000033.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 34,
+      "timestamp_s": 23.062989,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000034.png",
+          "area_pixels": 8272,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_late/000034.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000034.png",
+          "area_pixels": 9535,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000034.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000034.png",
+          "area_pixels": 18395,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000034.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 35,
+      "timestamp_s": 23.762867,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000035.png",
+          "area_pixels": 15430,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_late/000035.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000035.png",
+          "area_pixels": 7785,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000035.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000035.png",
+          "area_pixels": 19910,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000035.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 36,
+      "timestamp_s": 24.459511,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000036.png",
+          "area_pixels": 123,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "area_below_twelve_percent_of_seed_possible_occlusion"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000036.png",
+          "area_pixels": 7443,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000036.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000036.png",
+          "area_pixels": 19730,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000036.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 37,
+      "timestamp_s": 25.159378,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000037.png",
+          "area_pixels": 109,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "area_below_twelve_percent_of_seed_possible_occlusion"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000037.png",
+          "area_pixels": 7678,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000037.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000037.png",
+          "area_pixels": 19312,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000037.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 38,
+      "timestamp_s": 25.859178,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000038.png",
+          "area_pixels": 1,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "too_few_pixels",
+            "area_below_twelve_percent_of_seed_possible_occlusion"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000038.png",
+          "area_pixels": 8061,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000038.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000038.png",
+          "area_pixels": 17763,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000038.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 39,
+      "timestamp_s": 26.559156,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000039.png",
+          "area_pixels": 16,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "area_below_twelve_percent_of_seed_possible_occlusion"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000039.png",
+          "area_pixels": 10392,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000039.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000039.png",
+          "area_pixels": 15438,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000039.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 40,
+      "timestamp_s": 27.259033,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000040.png",
+          "area_pixels": 16,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "area_below_twelve_percent_of_seed_possible_occlusion"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000040.png",
+          "area_pixels": 11192,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000040.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000040.png",
+          "area_pixels": 14337,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000040.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 41,
+      "timestamp_s": 27.958956,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000041.png",
+          "area_pixels": 445,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "area_below_twelve_percent_of_seed_possible_occlusion"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000041.png",
+          "area_pixels": 9972,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000041.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000041.png",
+          "area_pixels": 14052,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000041.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 42,
+      "timestamp_s": 28.658822,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000042.png",
+          "area_pixels": 76,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "area_below_twelve_percent_of_seed_possible_occlusion"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000042.png",
+          "area_pixels": 7516,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000042.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000042.png",
+          "area_pixels": 14001,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000042.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 43,
+      "timestamp_s": 29.358767,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000043.png",
+          "area_pixels": 17,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "area_below_twelve_percent_of_seed_possible_occlusion"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000043.png",
+          "area_pixels": 7668,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000043.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000043.png",
+          "area_pixels": 14523,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000043.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 44,
+      "timestamp_s": 30.058544,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000044.png",
+          "area_pixels": 7,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "too_few_pixels",
+            "area_below_twelve_percent_of_seed_possible_occlusion"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000044.png",
+          "area_pixels": 10376,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000044.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000044.png",
+          "area_pixels": 29870,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000044.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 45,
+      "timestamp_s": 30.735211,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000045.png",
+          "area_pixels": 177,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "area_below_twelve_percent_of_seed_possible_occlusion"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000045.png",
+          "area_pixels": 13323,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000045.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000045.png",
+          "area_pixels": 22367,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000045.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 46,
+      "timestamp_s": 31.425111,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000046.png",
+          "area_pixels": 7834,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_late/000046.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000046.png",
+          "area_pixels": 9405,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000046.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000046.png",
+          "area_pixels": 18238,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000046.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 47,
+      "timestamp_s": 32.124911,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000047.png",
+          "area_pixels": 102,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "area_below_twelve_percent_of_seed_possible_occlusion"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000047.png",
+          "area_pixels": 9612,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000047.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000047.png",
+          "area_pixels": 18456,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000047.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 48,
+      "timestamp_s": 32.824878,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000048.png",
+          "area_pixels": 110,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "area_below_twelve_percent_of_seed_possible_occlusion"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000048.png",
+          "area_pixels": 12465,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000048.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000048.png",
+          "area_pixels": 20897,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000048.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 49,
+      "timestamp_s": 33.524733,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000049.png",
+          "area_pixels": 65,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "area_below_twelve_percent_of_seed_possible_occlusion"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000049.png",
+          "area_pixels": 11966,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000049.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000049.png",
+          "area_pixels": 26629,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000049.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 50,
+      "timestamp_s": 34.224611,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000050.png",
+          "area_pixels": 187,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "area_below_twelve_percent_of_seed_possible_occlusion"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000050.png",
+          "area_pixels": 9891,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000050.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000050.png",
+          "area_pixels": 33129,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000050.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 51,
+      "timestamp_s": 34.924489,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000051.png",
+          "area_pixels": 124,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "area_below_twelve_percent_of_seed_possible_occlusion"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000051.png",
+          "area_pixels": 10465,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000051.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000051.png",
+          "area_pixels": 34820,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000051.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 52,
+      "timestamp_s": 35.624367,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000052.png",
+          "area_pixels": 48,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "area_below_twelve_percent_of_seed_possible_occlusion"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000052.png",
+          "area_pixels": 11839,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000052.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000052.png",
+          "area_pixels": 24918,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000052.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 53,
+      "timestamp_s": 36.301078,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000053.png",
+          "area_pixels": 38,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "area_below_twelve_percent_of_seed_possible_occlusion"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000053.png",
+          "area_pixels": 12675,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000053.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000053.png",
+          "area_pixels": 23422,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000053.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 54,
+      "timestamp_s": 36.990844,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000054.png",
+          "area_pixels": 33,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "area_below_twelve_percent_of_seed_possible_occlusion"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000054.png",
+          "area_pixels": 12948,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000054.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000054.png",
+          "area_pixels": 22699,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000054.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 55,
+      "timestamp_s": 37.690822,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000055.png",
+          "area_pixels": 39,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "area_below_twelve_percent_of_seed_possible_occlusion"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000055.png",
+          "area_pixels": 19585,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000055.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000055.png",
+          "area_pixels": 27780,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000055.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 56,
+      "timestamp_s": 38.390711,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000056.png",
+          "area_pixels": 46,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "area_below_twelve_percent_of_seed_possible_occlusion"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000056.png",
+          "area_pixels": 14670,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000056.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000056.png",
+          "area_pixels": 26387,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000056.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 57,
+      "timestamp_s": 39.090567,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000057.png",
+          "area_pixels": 9573,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_late/000057.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000057.png",
+          "area_pixels": 16417,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000057.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000057.png",
+          "area_pixels": 19839,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000057.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 58,
+      "timestamp_s": 39.790444,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000058.png",
+          "area_pixels": 8954,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_late/000058.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000058.png",
+          "area_pixels": 15999,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000058.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000058.png",
+          "area_pixels": 18573,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000058.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 59,
+      "timestamp_s": 40.490378,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000059.png",
+          "area_pixels": 9347,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_late/000059.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000059.png",
+          "area_pixels": 15036,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000059.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000059.png",
+          "area_pixels": 19637,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000059.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 60,
+      "timestamp_s": 41.190356,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000060.png",
+          "area_pixels": 9497,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_late/000060.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000060.png",
+          "area_pixels": 15821,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000060.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000060.png",
+          "area_pixels": 20325,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000060.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 61,
+      "timestamp_s": 41.890056,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000061.png",
+          "area_pixels": 10023,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_late/000061.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000061.png",
+          "area_pixels": 15971,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000061.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000061.png",
+          "area_pixels": 21635,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000061.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 62,
+      "timestamp_s": 42.589933,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000062.png",
+          "area_pixels": 10123,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_late/000062.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000062.png",
+          "area_pixels": 15930,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000062.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000062.png",
+          "area_pixels": 21633,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000062.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 63,
+      "timestamp_s": 43.289811,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000063.png",
+          "area_pixels": 10275,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_late/000063.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000063.png",
+          "area_pixels": 18163,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000063.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000063.png",
+          "area_pixels": 22207,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000063.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 64,
+      "timestamp_s": 43.989689,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000064.png",
+          "area_pixels": 5376,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_late/000064.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000064.png",
+          "area_pixels": 12440,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000064.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000064.png",
+          "area_pixels": 13681,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000064.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 65,
+      "timestamp_s": 44.689567,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000065.png",
+          "area_pixels": 2734,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/adapter_late/000065.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000065.png",
+          "area_pixels": 11693,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000065.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000065.png",
+          "area_pixels": 6745,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000065.png",
+          "identity_confirmed": false
+        }
+      ]
+    },
+    {
+      "sample_index": 66,
+      "timestamp_s": 45.389556,
+      "tracks": [
+        {
+          "track_id": "adapter_late",
+          "raw_mask_file": "raw_masks/adapter_late/000066.png",
+          "area_pixels": 106,
+          "status": "withheld_geometric_gate",
+          "reasons": [
+            "area_below_twelve_percent_of_seed_possible_occlusion"
+          ],
+          "candidate_mask_file": null,
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "power_cable",
+          "raw_mask_file": "raw_masks/power_cable/000066.png",
+          "area_pixels": 11248,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/power_cable/000066.png",
+          "identity_confirmed": false
+        },
+        {
+          "track_id": "wall_outlet",
+          "raw_mask_file": "raw_masks/wall_outlet/000066.png",
+          "area_pixels": 5703,
+          "status": "candidate_geometric_gate_only",
+          "reasons": [],
+          "candidate_mask_file": "candidate_masks/wall_outlet/000066.png",
+          "identity_confirmed": false
+        }
+      ]
+    }
+  ]
+}

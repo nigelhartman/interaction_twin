@@ -1,0 +1,24 @@
+{
+  "format": "interaction-twin-assembly-image-critic-review",
+  "version": 1,
+  "plan": {
+    "path": "data/laptop-mating-20261104-v1/critic-final-v1/plan.json",
+    "sha256": "50ec21f6db683b3acb283c21dad82a3d4699b7c1486531a5f71dc743f5de7dc8",
+    "bytes": 4322
+  },
+  "model_result": {
+    "path": "data/laptop-mating-20261104-v1/critic-final-v1/attempt/model-result.json",
+    "sha256": "1299b52d190a3e759debad21b2264f57ffd63fdc3da768904358230a2b6c56e8",
+    "bytes": 6649
+  },
+  "receipt": {
+    "path": "data/laptop-mating-20261104-v1/critic-final-v1/attempt/request/meta-request.json",
+    "sha256": "a59e49fe7de791dd1a0bd35f2b2bba2d936fc3fb6c9bad1ffb36303d0aa44551",
+    "bytes": 2744
+  },
+  "verdict": "needs_repair",
+  "new_api_calls": 1,
+  "estimated_cost_usd": "0.053954",
+  "automatic_approval": false,
+  "physical_accuracy_verified": false
+}
