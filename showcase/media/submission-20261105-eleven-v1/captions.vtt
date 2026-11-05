@@ -1,0 +1,181 @@
+WEBVTT
+
+1
+00:00:00.400 --> 00:00:02.954
+An ordinary three D model shows you an object.
+
+2
+00:00:03.105 --> 00:00:05.183
+A demonstration shows you how it works.
+
+3
+00:00:05.357 --> 00:00:07.645
+Interaction Twin connects the two.
+
+4
+00:00:09.400 --> 00:00:12.987
+Record an everyday interaction, and turn it into a source-linked object
+
+5
+00:00:13.022 --> 00:00:16.552
+program: the parts, their connections, and what happened.
+
+6
+00:00:16.877 --> 00:00:20.534
+Your agent can inspect that knowledge, follow its evidence, and reuse
+
+7
+00:00:20.580 --> 00:00:21.196
+it.
+
+8
+00:00:26.000 --> 00:00:28.798
+Combine a phone and charger from separate recordings.
+
+9
+00:00:29.007 --> 00:00:32.676
+Describe a new task, then rehearse it in three D before physical
+
+10
+00:00:32.734 --> 00:00:33.488
+validation.
+
+11
+00:00:41.073 --> 00:00:42.501
+Show an interaction once.
+
+12
+00:00:42.652 --> 00:00:44.300
+Keep how it works.
+
+13
+00:00:45.400 --> 00:00:49.127
+The library turns recorded demonstrations into objects you can explore.
+
+14
+00:00:49.452 --> 00:00:53.550
+Compare source video with connected replay, inspect individual parts,
+
+15
+00:00:53.573 --> 00:00:56.185
+and download geometry and descriptive files.
+
+16
+00:00:56.627 --> 00:00:59.053
+Every example keeps its evidence close.
+
+17
+00:01:03.300 --> 00:01:06.017
+An object program adds meaning to geometry.
+
+18
+00:01:06.261 --> 00:01:10.452
+It describes which parts belong together, which relationships are estimated,
+
+19
+00:01:10.521 --> 00:01:12.216
+and which actions were observed.
+
+20
+00:01:12.425 --> 00:01:16.175
+Source references are preserved, while unknown physical properties stay
+
+21
+00:01:16.233 --> 00:01:17.092
+explicit.
+
+22
+00:01:21.300 --> 00:01:22.856
+Muse proposes the structure.
+
+23
+00:01:23.181 --> 00:01:27.059
+Separate prompts ask the same model to critique it alongside code checks.
+
+24
+00:01:27.233 --> 00:01:30.867
+Repairs can follow, before the owner approves the exact revision.
+
+25
+00:01:35.300 --> 00:01:39.259
+That knowledge reaches an agent through a local, read-only M C P
+
+26
+00:01:39.410 --> 00:01:42.916
+server. The agent can search, inspect interfaces, retrieve
+
+27
+00:01:42.951 --> 00:01:45.424
+geometry, and follow source evidence.
+
+28
+00:01:48.300 --> 00:01:50.425
+The phone and charger make reuse concrete.
+
+29
+00:01:50.668 --> 00:01:54.511
+A saved client inspected two recordings and prepared a shared task draft.
+
+30
+00:01:54.755 --> 00:01:58.064
+Those interface matches are candidates; compatibility still needs
+
+31
+00:01:58.110 --> 00:01:59.771
+independent validation.
+
+32
+00:02:03.350 --> 00:02:05.951
+The preview makes a proposed task easier to inspect.
+
+33
+00:02:06.125 --> 00:02:09.167
+The case and earbuds become a complete, editable rehearsal.
+
+34
+00:02:09.410 --> 00:02:12.057
+The source recording remains available for comparison.
+
+35
+00:02:12.336 --> 00:02:15.761
+Then the same approach brings the phone and charger into one scene.
+
+36
+00:02:16.364 --> 00:02:20.509
+These authored kinematics communicate an idea before contact, insertion,
+
+37
+00:02:20.625 --> 00:02:23.365
+and hardware execution are validated.
+
+38
+00:02:30.300 --> 00:02:34.120
+Meta's models provide perception and proposals: Muse for structure,
+
+39
+00:02:34.294 --> 00:02:38.322
+SAM for segmentation, and SAM three D for component drafts.
+
+40
+00:02:38.833 --> 00:02:42.955
+Our code builds source-linked object programs, manages checks, review
+
+41
+00:02:43.002 --> 00:02:46.403
+and approval, and exposes the results through viewers and M C
+
+42
+00:02:46.531 --> 00:02:47.622
+P.
+
+43
+00:02:49.300 --> 00:02:51.483
+The next step is physical validation.
+
+44
+00:02:51.657 --> 00:02:55.616
+The foundation is inspectable: real demonstrations, reusable
+
+45
+00:02:55.662 --> 00:02:58.031
+object knowledge. Interaction Twin.
