@@ -1,6 +1,6 @@
 {
   "format": "interaction-twin-public-source-release",
-  "version": 13,
+  "version": 14,
   "owner_authorized_repository": "nigelhartman/interaction_twin",
   "layout": "self_contained_runtime_in_app; documentation_at_root",
   "private_state_excluded": true,
@@ -2087,6 +2087,11 @@
       "bytes": 5672
     },
     {
+      "path": "app/scripts/mix_elevenlabs_final_20261105_v1.py",
+      "sha256": "823dec959280b7514ec511ebd2b40d1362f1a367972c36a5d2b47295cad8d8d7",
+      "bytes": 14207
+    },
+    {
       "path": "app/scripts/normalize_generation_visual_aliases.py",
       "sha256": "e0978284334b7e9d1fc3c5cec9c269fca31abee3b40f34846e4bef1348733c7f",
       "bytes": 718
@@ -2130,6 +2135,11 @@
       "path": "app/scripts/prepare_dense_geometry_input.py",
       "sha256": "35b723a10b0d7269938e1e2020bd7dee9e6463aadda65ef3a2bec0048ba3732b",
       "bytes": 13550
+    },
+    {
+      "path": "app/scripts/prepare_elevenlabs_timed_narration_20261105_v1.py",
+      "sha256": "24be6fee34d6222407542a6a577d52057203b40cd7e4d62a2cddde4ff5ae8b75",
+      "bytes": 3306
     },
     {
       "path": "app/scripts/prepare_initial_sam3d.py",
@@ -2972,6 +2982,26 @@
       "bytes": 954
     },
     {
+      "path": "app/showcase/brand-native-capture.html",
+      "sha256": "88bf4813f122c309d6a22d02efe30625a1cbbaeec57a0474e73e911c7b465419",
+      "bytes": 1775
+    },
+    {
+      "path": "app/showcase/brand-native-capture.js",
+      "sha256": "ab1b7ca4bee560749c6e98b1cc7cd7a028851d329703f32f675e6a971f79dee1",
+      "bytes": 13571
+    },
+    {
+      "path": "app/showcase/brand-refined-capture-v1.html",
+      "sha256": "d617a045667c738782f4b770fc58a2fac799ba756685d4e00adfcae91aeb16f1",
+      "bytes": 1873
+    },
+    {
+      "path": "app/showcase/brand-refined-capture-v1.js",
+      "sha256": "5c531b8257dbcbfb9b7f60ccf2fcae56dd879fa70f377018bca963f3e1116492",
+      "bytes": 16426
+    },
+    {
       "path": "app/showcase/brand/v2/favicon-16.png",
       "sha256": "4260bd86112a1c268b93fb900262fc13e867c49a5dc0245ee9bd613bd5a847fc",
       "bytes": 624
@@ -3000,26 +3030,6 @@
       "path": "app/showcase/brand/v2/wordmark.svg",
       "sha256": "31623cac4a44d401a2224e17d85a485dec78218b7a562ffccf159be8b08f70a6",
       "bytes": 689
-    },
-    {
-      "path": "app/showcase/brand-native-capture.html",
-      "sha256": "88bf4813f122c309d6a22d02efe30625a1cbbaeec57a0474e73e911c7b465419",
-      "bytes": 1775
-    },
-    {
-      "path": "app/showcase/brand-native-capture.js",
-      "sha256": "ab1b7ca4bee560749c6e98b1cc7cd7a028851d329703f32f675e6a971f79dee1",
-      "bytes": 13571
-    },
-    {
-      "path": "app/showcase/brand-refined-capture-v1.html",
-      "sha256": "d617a045667c738782f4b770fc58a2fac799ba756685d4e00adfcae91aeb16f1",
-      "bytes": 1873
-    },
-    {
-      "path": "app/showcase/brand-refined-capture-v1.js",
-      "sha256": "5c531b8257dbcbfb9b7f60ccf2fcae56dd879fa70f377018bca963f3e1116492",
-      "bytes": 16426
     },
     {
       "path": "app/showcase/case-B-display-adapter-20261105-v3.js",
@@ -3138,8 +3148,8 @@
     },
     {
       "path": "app/showcase/film.html",
-      "sha256": "add9127156ec7aeba7b431779f6b2fbb49b040b60dae50d9a86f7a978aed8aec",
-      "bytes": 5392
+      "sha256": "3d01fdda313e21d7f7681ac894c23e05e46ef29fc4fed73c5e7395e31994695c",
+      "bytes": 5274
     },
     {
       "path": "app/showcase/flagship-capture-20261104-v1.html",
@@ -3158,8 +3168,8 @@
     },
     {
       "path": "app/showcase/index.html",
-      "sha256": "e4f3b63e1e642b2859d4e3139a26e92d019c4b3221f32c6a1a9a8b90c41b676e",
-      "bytes": 12046
+      "sha256": "239950828ee236e1745647a4e664bea06ee307733b2fee87a8ddf2600eac075e",
+      "bytes": 12081
     },
     {
       "path": "app/showcase/industrial-arm-presentation-20261105-v1.js",
@@ -3428,8 +3438,8 @@
     },
     {
       "path": "app/showcase/walkthrough.html",
-      "sha256": "2ff0ec9ed80a45888748d0c8192b42cc5b91572e13de4c36ebdeb7962df5c357",
-      "bytes": 3701
+      "sha256": "6f9d422a250cf8fce64f4a4e0d887291f7f025b80d3ef5889cf867ef2eb50389",
+      "bytes": 3546
     },
     {
       "path": "app/sim_readiness.py",
@@ -4245,6 +4255,11 @@
       "path": "app/tests/test_dynamic_trailer_20261104_v3.py",
       "sha256": "2924b5d1d22a884de8abe6033e3c2268ec41a134bdfd656294edb5e489374d39",
       "bytes": 8026
+    },
+    {
+      "path": "app/tests/test_elevenlabs_timed_mix_v1.py",
+      "sha256": "23708649972771717f301d78762f5773b851c9b760d014a3d8cbb691a9224cc9",
+      "bytes": 3173
     },
     {
       "path": "app/tests/test_estimated_motion_v1.cjs",
@@ -5803,8 +5818,8 @@
     },
     {
       "path": "docs/PUBLIC_RELEASE.md",
-      "sha256": "af120ec95b08c5983d9dbab3314568162b91d48334211d578a05e710650e2f0e",
-      "bytes": 4108
+      "sha256": "855db4f02bdc9d9fb8a724d119474044e7170c6eb62c1f3b69d59028f258e607",
+      "bytes": 3977
     },
     {
       "path": "docs/admin-api.md",
@@ -5838,8 +5853,8 @@
     },
     {
       "path": "docs/film-reproduction.md",
-      "sha256": "1657f38f38063d6e8c1d9ef186d758c8fe9fb0cb305d5a1fc138767fa66d60e3",
-      "bytes": 4363
+      "sha256": "966d787473d43ef601caf5d4c42c46df13f6b6b366bf82f1c486bf5d68c42981",
+      "bytes": 5366
     },
     {
       "path": "docs/github-pages.md",
@@ -5863,13 +5878,13 @@
     },
     {
       "path": "docs/media/captions.vtt",
-      "sha256": "adc00e47e7b5e49fbcf0cf03e51f4467b840a5890188c9f2ab1b61d00b686257",
-      "bytes": 608
+      "sha256": "f1ca0063cd07679a5bf83262097d09b66d5e19d6af42a1b71082052366d2606f",
+      "bytes": 908
     },
     {
       "path": "docs/media/interaction-twin-45s.mp4",
-      "sha256": "b13b02fe7ee4d2dbe9d282889276f7e6fb0dd57c571bb8d515bb74b5d88d31e9",
-      "bytes": 6342169
+      "sha256": "46f02b91088e4566fd2e4d1c345b770483e7b4b62e37c559d20b58e9542db935",
+      "bytes": 6289425
     },
     {
       "path": "docs/media/meta-company-logo.jpg",
@@ -5883,13 +5898,13 @@
     },
     {
       "path": "docs/media/trailer-poster.jpg",
-      "sha256": "2fea8daaeaff38a51e84c8f2da5c576ddf08ec0f6d47fa2b333c41b1cfdb0e46",
-      "bytes": 137674
+      "sha256": "e10d959f5c7d46214a9c882cf67c5742acf416b62ffce4e44fa6bd19c659dcc8",
+      "bytes": 47678
     },
     {
       "path": "docs/media/transcript.txt",
-      "sha256": "9c85f815c445c9626678fbdf607517e66fee7e9773b64443085ae8e5894e5cf6",
-      "bytes": 504
+      "sha256": "906122f89f4ebae7c1d105e8c79e8cb95c5b6e47cfc36398fc31a8c17b0e201b",
+      "bytes": 505
     },
     {
       "path": "docs/meta-budget.md",
@@ -6063,7 +6078,7 @@
     },
     "README_trailer": {
       "path": "docs/media/interaction-twin-45s.mp4",
-      "sha256": "b13b02fe7ee4d2dbe9d282889276f7e6fb0dd57c571bb8d515bb74b5d88d31e9",
+      "sha256": "46f02b91088e4566fd2e4d1c345b770483e7b4b62e37c559d20b58e9542db935",
       "duration_s": 45,
       "full180s_movie_in_source": false,
       "captions": "docs/media/captions.vtt",
@@ -6084,6 +6099,22 @@
       "unchanged_narration_music_AAC_packets_verified": true,
       "new180_opening_1350_decoded_frames_equal_new45": true,
       "new_API_calls": 0
+    },
+    "ElevenLabs_final_audio": {
+      "requested_voice_id": "cBTYF7NiJbR8Bvmdeuse",
+      "model": "eleven_multilingual_v2",
+      "unique_narration_takes": 11,
+      "all_speech_at_normal_speed": true,
+      "video_packets_and_PTS_unchanged": true,
+      "short_seconds": 45,
+      "long_seconds": 180,
+      "timestamp_subtitles": true,
+      "closing_line_end_s": 44.3,
+      "offline_timing_fixtures_passed": 6,
+      "credential_or_raw_provider_responses_included": false,
+      "readme_inline_attachment_unchanged": true,
+      "music": "participant-supplied Corporate Startup soundtrack",
+      "prior_case_revision_audio_copy_proof_is_historical": true
     }
   }
 }

@@ -12,9 +12,12 @@ The implementation is inspectable in these source files:
 - [`build_story_robot_films_20261105_v1.py`](../app/scripts/build_story_robot_films_20261105_v1.py) assembles the separately validated case and charging captures with the visual pipeline and application walkthrough.
 - [`replace_case_film_20261105_v3.py`](../app/scripts/replace_case_film_20261105_v3.py) replaces the case shot once for both film lengths, copies the other video ranges and audio packets, and checks the copied decoded pictures. A small keyframe-boundary interval is explicitly recorded as re-encoded.
 
+- [`prepare_elevenlabs_timed_narration_20261105_v1.py`](../app/scripts/prepare_elevenlabs_timed_narration_20261105_v1.py) prepares shared request bodies and timing windows offline; it reads no credentials and makes no API calls.
+- [`mix_elevenlabs_final_20261105_v1.py`](../app/scripts/mix_elevenlabs_final_20261105_v1.py) validates returned character timestamps, places speech and captions, ducks music, checks encoded loudness and copies the video stream. Actual provider requests and credentials are not included.
+
 The browser captures have exact-byte receipts and independent intake validators. A recorder trace is checked against the pinned authored plan and source references; the downloaded video is separately decoded to check its dimensions and continuous clock. Those checks are evidence about the displayed rehearsal and recording, not a physical validation.
 
-The latest short film's [narration transcript](media/transcript.txt) and [English captions](media/captions.vtt) accompany its downloadable MP4. The current narration uses the normal local voice; the editor preserves that audio when replacing the case shot.
+The latest short film's [narration transcript](media/transcript.txt) and [English captions](media/captions.vtt) accompany its downloadable MP4. The final narration uses the author-selected ElevenLabs voice with character-level timestamps. Eleven complete takes are shared across the two lengths. All speech stays at normal speed; the closing sentence is placed at 41.048–44.3 seconds. The new Corporate Startup soundtrack is quiet and ducks beneath speech. Both final remuxes preserve every encoded video packet and timestamp.
 
 The source checkout deliberately excludes the recordings, saved approved assets, private capture bindings, review receipts and rendered working files. Exact film reproduction requires those separately approved inputs at the paths checked by the helpers. Generated capture pages contain references to that omitted saved context and are local developer tools; they are not additional public demo routes. Do not substitute another asset or rebind an old receipt to changed bytes.
 
@@ -31,3 +34,9 @@ node --test tests/test_case_B_display_proxy_v3.cjs
 The Node test exercises ordered endpoint motion and camera continuity with synthetic coordinates. Saved-asset checks explicitly skip when their separate inputs are absent. Full captures and fresh inference are not reproduced by these fixtures.
 
 In the optional film environment, `python -B -m unittest discover -s tests -p test_case_film_replacement_v3.py -v` checks the editor's segment/copy behavior using a tiny generated clip. It uses no owner footage.
+
+The offline timestamp, subtitle, and ending-alignment fixtures run without FFmpeg, provider access, or credentials:
+
+```sh
+python3 -I -S -B -m unittest discover -s tests -p test_elevenlabs_timed_mix_v1.py -v
+```
