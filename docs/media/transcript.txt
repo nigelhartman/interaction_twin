@@ -1,0 +1,5 @@
+An ordinary three D model shows you an object. A demonstration shows you how it works. Interaction Twin connects the two.
+
+Record an everyday interaction, and turn it into a source-linked object program: the parts, their connections, and what happened. Your agent can inspect that knowledge, follow its evidence, and reuse it.
+
+Combine a phone and charger from separate recordings. Describe a new task, then rehearse it in three D before physical validation. Show an interaction once. Keep how it works.

@@ -12,7 +12,7 @@
 
 https://github.com/user-attachments/assets/e5097536-f51c-4747-9b42-e236fd88cb21
 
-<p align="center">▶ <a href="docs/media/interaction-twin-45s.mp4">Open the trailer MP4</a> · Sound and English captions on the demo page.</p>
+<p align="center">▶ <a href="docs/media/interaction-twin-45s.mp4">Latest trailer MP4</a> · Sound and English captions on the demo page.</p>
 
 An object is more than its shape. A case opens on a hinge. Earbuds can be removed. A cable connects parts from different scenes. Reusing those interactions needs geometry, relationships, action order and evidence together.
 
@@ -71,7 +71,7 @@ The descriptive format preserves:
 - Removable parts, proposed relationships and demonstrated action steps.
 - Timestamped evidence, unknown intervals and explicit physical-readiness flags.
 
-See the [object-program format](docs/object-program.md), [MCP guide](docs/mcp.md) and [technical overview](docs/technical-overview-20261104.md).
+See the [object-program format](docs/object-program.md), [MCP guide](docs/mcp.md), [technical overview](docs/technical-overview-20261104.md) and [film/rehearsal implementation](docs/film-reproduction.md).
 
 For the earbud example, the lid follows its parent through an estimated revolute joint. Attachment is enforced by forward kinematics. That prevents independent lid drift, while the physical hinge location, metric dimensions and contact still require validation.
 

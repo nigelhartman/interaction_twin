@@ -1,6 +1,6 @@
 {
   "format": "interaction-twin-public-source-release",
-  "version": 12,
+  "version": 13,
   "owner_authorized_repository": "nigelhartman/interaction_twin",
   "layout": "self_contained_runtime_in_app; documentation_at_root",
   "private_state_excluded": true,
@@ -13,8 +13,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "f3d2311f39cf6678f2578762c6d03f476d9f05c2d549dbfefa17503098ac9ed9",
-      "bytes": 10854
+      "sha256": "a257ce395e28ba1a4af1ba81e5c156b51b4f5d007d8288132ea445363e801fef",
+      "bytes": 10912
     },
     {
       "path": "app/admin/admin.css",
@@ -1422,6 +1422,31 @@
       "bytes": 4576
     },
     {
+      "path": "app/scripts/bind_case_motion_capture_20261105_v1.py",
+      "sha256": "d84a05919fb40c5773e9f4c2e311ff328a8c6fa888126d475ed015f2d78c99b0",
+      "bytes": 3656
+    },
+    {
+      "path": "app/scripts/bind_case_motion_capture_20261105_v2.py",
+      "sha256": "eaf8ae9eb5b61f8782e02ed43302eb24def31c14e0c1b6fcb823f16708d2a638",
+      "bytes": 3676
+    },
+    {
+      "path": "app/scripts/bind_case_motion_capture_20261105_v3.py",
+      "sha256": "556fa2d6857d120c54ef8305f13a298a02654db8fedc35e58695ddbc106e7313",
+      "bytes": 3704
+    },
+    {
+      "path": "app/scripts/bind_charging_capture_20261105_v1.py",
+      "sha256": "8d03724f851f7fadbded96a9fc39d8bf79703bfd7d5d1d47a52112ee4f41fbd4",
+      "bytes": 4151
+    },
+    {
+      "path": "app/scripts/bind_charging_capture_20261105_v2.py",
+      "sha256": "c80a788ffe0d1e4fecf8502bff3bdb56a8516e4ff94710d7e3c1eaa4463e1668",
+      "bytes": 4175
+    },
+    {
       "path": "app/scripts/build_agent_preview.py",
       "sha256": "862726382007ea57a911d5c4529af9a6b9a24a1ad4a1378a9b0848dd21de28b2",
       "bytes": 6255
@@ -1457,9 +1482,34 @@
       "bytes": 936
     },
     {
+      "path": "app/scripts/build_case_B_proxy_binding_20261105_v3.cjs",
+      "sha256": "6bca21d95a18ab4ff7d4aa6259c43cc57e0e9dda9a5f93d29afca3a7475bcb35",
+      "bytes": 3254
+    },
+    {
+      "path": "app/scripts/build_case_B_proxy_capture_20261105_v3.cjs",
+      "sha256": "72d8feb4091f165b5e53bac5cf318941208493fa5a3dffc42ce64d1d1fd43159",
+      "bytes": 6154
+    },
+    {
+      "path": "app/scripts/build_case_grasp_binding_20261105_v2.cjs",
+      "sha256": "6aae392ab063ba25712c53836aa53877892314b7dcfacfc78755a5a47489865e",
+      "bytes": 2746
+    },
+    {
+      "path": "app/scripts/build_case_grasp_capture_page_20261105_v2.cjs",
+      "sha256": "05ffa6a883a09ef011cff4de88478277e601506f9b10748718043ef423137a61",
+      "bytes": 6344
+    },
+    {
       "path": "app/scripts/build_charger_tracking_proof_20261103_v1.py",
       "sha256": "20eca2333ffa1eb8512a9da9392c414da1e73b81cfc0d34f49ab8ed43698fa93",
       "bytes": 6404
+    },
+    {
+      "path": "app/scripts/build_charging_visual_capture_20261105_v2.cjs",
+      "sha256": "cc6c9e403df38205b2536551dc7247d07fc5c575745f0db8a1df5d2e5b23e596",
+      "bytes": 3588
     },
     {
       "path": "app/scripts/build_cobalt_trailer_20261103.py",
@@ -1500,6 +1550,11 @@
       "path": "app/scripts/build_flagship_trailer_20261104_v2.py",
       "sha256": "c90e080dd8e14c31ced354fd73a0850f89a02506339753e75d65ce08f3617f00",
       "bytes": 13231
+    },
+    {
+      "path": "app/scripts/build_flagship_trailer_20261105_v3.py",
+      "sha256": "4cc628608a9a0cee13f3e94fa3468142829995ca6daeea9c7fd8cb36c3b0f019",
+      "bytes": 19008
     },
     {
       "path": "app/scripts/build_geometry_review.py",
@@ -1692,6 +1747,16 @@
       "bytes": 14058
     },
     {
+      "path": "app/scripts/build_story_narration_20261105_v3.py",
+      "sha256": "a98d9b997c49aa5a84a37053710625b8d631340eba944fc862874c185f2a9006",
+      "bytes": 6750
+    },
+    {
+      "path": "app/scripts/build_story_robot_films_20261105_v1.py",
+      "sha256": "97d86e5979b60ed6b2d3c134de9b47691f510632f837e727cc6ce6ddfe199340",
+      "bytes": 8706
+    },
+    {
       "path": "app/scripts/build_studio_showcase_media.py",
       "sha256": "7d160b462fe4d1edf33b63629aaae2cf88d42d4be5152b75ce8120e4eecee9ab",
       "bytes": 36595
@@ -1710,6 +1775,11 @@
       "path": "app/scripts/build_submission_final_20261104_v3.py",
       "sha256": "8fd04efbf39a4ceed57967b6530f44ec076c2f43c950e318152c202674cc4b35",
       "bytes": 6019
+    },
+    {
+      "path": "app/scripts/build_submission_final_20261105_v4.py",
+      "sha256": "46b06ddb5c47a9dea29870ff518c2f22638093dee5e53bda1b6a4b239d89cf8f",
+      "bytes": 12038
     },
     {
       "path": "app/scripts/build_submission_review_artifacts.py",
@@ -1750,6 +1820,16 @@
       "path": "app/scripts/calibrate_laptop_mating_20261104_v1.py",
       "sha256": "11072d12201d1d0cd909d0429ff5ac2db02139c96bfb8898af17a8ebfbfcae58",
       "bytes": 16096
+    },
+    {
+      "path": "app/scripts/check_case_factory_surface_20261105_v3.py",
+      "sha256": "b4ab20830f17cef5d66465259f3e2279e52e125a1369cb89183ffd8cc9c90a0c",
+      "bytes": 3369
+    },
+    {
+      "path": "app/scripts/check_case_release_obstacles_20261105_v3.py",
+      "sha256": "c39aedb9a4c0d20f40cc8fc2a075e06cb4ee4e5f410eb4febffab498d3286da4",
+      "bytes": 3443
     },
     {
       "path": "app/scripts/check_rigidity_feasibility.py",
@@ -1850,6 +1930,16 @@
       "path": "app/scripts/export_automatic_camera_display.py",
       "sha256": "da641924a2e5404cd6bb006bfdaa531f2ac4a6f7442606d19a166d756dd98dcb",
       "bytes": 5321
+    },
+    {
+      "path": "app/scripts/export_case_factory_boxes_20261105_v3.mjs",
+      "sha256": "2503c85b053c314fc0709ee123ee4df4372f941f5ff381f5e65f2cc76a0d87a9",
+      "bytes": 3299
+    },
+    {
+      "path": "app/scripts/export_case_factory_release_boxes_20261105_v3.mjs",
+      "sha256": "5d9583e63605342e860bfde21b6332c22d14442bda7048ff730d5badcb78b483",
+      "bytes": 3560
     },
     {
       "path": "app/scripts/export_observed_completion.py",
@@ -2015,6 +2105,21 @@
       "path": "app/scripts/pack_upgrade_result.py",
       "sha256": "32efb295b324c46c34d4f2f527173566cd9006feaf6c8ca9266e0082e19d0cc4",
       "bytes": 3750
+    },
+    {
+      "path": "app/scripts/prepare_case_B_proxy_20261105_v3.py",
+      "sha256": "0ce077c3c0f47b8f80e2bd662dd67cb60e91989ea75aa373cf20022efc45a985",
+      "bytes": 4725
+    },
+    {
+      "path": "app/scripts/prepare_case_grasp_capture_20261105_v2.py",
+      "sha256": "6518d175d15520bb66a2e58be807adb57ff56b1fbf09d2e492bb7d85a5cb63f8",
+      "bytes": 10892
+    },
+    {
+      "path": "app/scripts/prepare_case_motion_capture_20261105_v1.py",
+      "sha256": "051536bd29de60f0d0bf60c424bf70153328a14d12159f08ef36f2b309a3a4cd",
+      "bytes": 12729
     },
     {
       "path": "app/scripts/prepare_component_assets.py",
@@ -2190,6 +2295,11 @@
       "path": "app/scripts/render_local_candidate_report.py",
       "sha256": "478372aec515b7ae32021f3e5ccdc40e230d324730440769cabef33f6671da13",
       "bytes": 10823
+    },
+    {
+      "path": "app/scripts/replace_case_film_20261105_v3.py",
+      "sha256": "90e42f9c469b97cfd4e506c0f1f2577f291706b46dee1805f1f3420dcf393a59",
+      "bytes": 10486
     },
     {
       "path": "app/scripts/restore_capture_review_runtime_20261103.py",
@@ -2732,6 +2842,31 @@
       "bytes": 6212
     },
     {
+      "path": "app/scripts/validate_case_motion_capture_20261105_v1.cjs",
+      "sha256": "19ee5e967b986d1e685e7bde9da4ed81bb24c7951e112b0ba07362fe02394119",
+      "bytes": 5191
+    },
+    {
+      "path": "app/scripts/validate_case_motion_capture_20261105_v2.cjs",
+      "sha256": "740f58524b7edc78613b3c2eb9d278acda9b11205a77089586d3a3a363f8acdd",
+      "bytes": 6203
+    },
+    {
+      "path": "app/scripts/validate_case_motion_capture_20261105_v3.cjs",
+      "sha256": "492ae703ab5c052ffe0aec376c85ab90e30dc9ef6f6db640e5fca01b1fc90f1e",
+      "bytes": 7920
+    },
+    {
+      "path": "app/scripts/validate_charging_capture_20261105_v1.cjs",
+      "sha256": "78b4ce593f434d622e2b907fa2c2695102618df21f1f8fcc2a6a3e81e8c90fa0",
+      "bytes": 5188
+    },
+    {
+      "path": "app/scripts/validate_charging_capture_20261105_v2.cjs",
+      "sha256": "6c081244d7c00a8f9c9aec4225710d43e50a734b86ecd471059e2695a97efe2f",
+      "bytes": 1778
+    },
+    {
       "path": "app/scripts/validate_observed_surface.py",
       "sha256": "7ddfd3c012ce2e92695d32b294d88627dbd560ce7ed4b4ba981f4441ee1a3cd8",
       "bytes": 582
@@ -2887,6 +3022,76 @@
       "bytes": 16426
     },
     {
+      "path": "app/showcase/case-B-display-adapter-20261105-v3.js",
+      "sha256": "321b0eefcc7f3dc0c85062f5b624d88bf5f6ca3f60492ad713ad7ae6c8e23dc1",
+      "bytes": 3516
+    },
+    {
+      "path": "app/showcase/case-grasp-adapter-20261105-v2.js",
+      "sha256": "14b15f7af4e585a240bb7aeadf58ec10e36a077c7adb3a4eea4ca56029a3decb",
+      "bytes": 3813
+    },
+    {
+      "path": "app/showcase/case-motion-capture-20261105-v1.html",
+      "sha256": "4a785db671712532119a53b2a66555259d476484f9e92c0711b96ba3074f2587",
+      "bytes": 6883
+    },
+    {
+      "path": "app/showcase/case-motion-capture-20261105-v1.js",
+      "sha256": "f1f2c8b8ee6e7b6ca67fe847c154fb4384eafbf0976a5d2f147bffb183739351",
+      "bytes": 65667
+    },
+    {
+      "path": "app/showcase/case-motion-capture-20261105-v2.html",
+      "sha256": "5de3306ef5e29d2cac7808c1312872ded87de3398ccc1a9bbe098fa6450ffa74",
+      "bytes": 7037
+    },
+    {
+      "path": "app/showcase/case-motion-capture-20261105-v2.js",
+      "sha256": "ad06e7da75c234e7847d3f61392e292704a1e2dc19114f6b93319a5c8f68de67",
+      "bytes": 97636
+    },
+    {
+      "path": "app/showcase/case-motion-capture-20261105-v3.html",
+      "sha256": "2941bf811ce0d6c5a359e608dd127872f86b0973279c6540484cf92829c8181e",
+      "bytes": 7144
+    },
+    {
+      "path": "app/showcase/case-motion-capture-20261105-v3.js",
+      "sha256": "7f1129a6a4dacfb7b781b5affb0f64848b1ba90bcebdbdcbd35d949be1773bab",
+      "bytes": 102185
+    },
+    {
+      "path": "app/showcase/charging-rehearsal-20261105-v1.html",
+      "sha256": "72c0238037b27e5f422c74a9239f621b476366b2210241c745e3936c73624799",
+      "bytes": 2212
+    },
+    {
+      "path": "app/showcase/charging-rehearsal-20261105-v1.js",
+      "sha256": "08d141af524a7ec75b9e19c9b100b8fbd9bfcdf1266d41c26cb3b88fdecab1b6",
+      "bytes": 20781
+    },
+    {
+      "path": "app/showcase/charging-rehearsal-20261105-v2.html",
+      "sha256": "c87cb7d76ac756e5fb2d60f7bbd0896803ef1d9e0b0df854caa9df9bdb2680f2",
+      "bytes": 2212
+    },
+    {
+      "path": "app/showcase/charging-rehearsal-20261105-v2.js",
+      "sha256": "20f6f2ae9d6872f67c4a64d220b372c77460b7abb36a80d43ef689fa874409ec",
+      "bytes": 20952
+    },
+    {
+      "path": "app/showcase/charging-rehearsal-plan-20261105-v1.js",
+      "sha256": "5f15e088cc32e87ab3b942faae42c1b2c0424a7ac7fdaeecd53f29db0c963af9",
+      "bytes": 3330
+    },
+    {
+      "path": "app/showcase/charging-rehearsal-view-20261105-v1.js",
+      "sha256": "1a4b6ae446a25314c85202671fe72eeaf122747f0a2a2fb570ab59433b334b96",
+      "bytes": 3766
+    },
+    {
       "path": "app/showcase/cobalt.css",
       "sha256": "1c58f04a51dafcc8b45c937cd30acb314379e214555f907f8bfb4aa03e6ec7a7",
       "bytes": 3917
@@ -2933,8 +3138,8 @@
     },
     {
       "path": "app/showcase/film.html",
-      "sha256": "f84fb927b3d811c6cde7e51843a3a3a83a33c2231ba02e66944d8d2ab871c820",
-      "bytes": 4812
+      "sha256": "add9127156ec7aeba7b431779f6b2fbb49b040b60dae50d9a86f7a978aed8aec",
+      "bytes": 5392
     },
     {
       "path": "app/showcase/flagship-capture-20261104-v1.html",
@@ -2953,8 +3158,13 @@
     },
     {
       "path": "app/showcase/index.html",
-      "sha256": "0c8520ad75b88ab8dbcf0a42201086740937ea693aeb4123919827f68c91a434",
+      "sha256": "e4f3b63e1e642b2859d4e3139a26e92d019c4b3221f32c6a1a9a8b90c41b676e",
       "bytes": 12046
+    },
+    {
+      "path": "app/showcase/industrial-arm-presentation-20261105-v1.js",
+      "sha256": "4b25afae0495483c536a7cd1a4afa6be6ed91eea0ae718d0609baef58cfc9a50",
+      "bytes": 6897
     },
     {
       "path": "app/showcase/laptop-hinge-review-v1.html",
@@ -3218,8 +3428,8 @@
     },
     {
       "path": "app/showcase/walkthrough.html",
-      "sha256": "2f58bdde162fd758cb03dd5a29279a809a60445894408a0c1d9abd73deec258e",
-      "bytes": 3266
+      "sha256": "2ff0ec9ed80a45888748d0c8192b42cc5b91572e13de4c36ebdeb7962df5c357",
+      "bytes": 3701
     },
     {
       "path": "app/sim_readiness.py",
@@ -3832,6 +4042,26 @@
       "bytes": 4421
     },
     {
+      "path": "app/tests/test_case_B_display_proxy_v3.cjs",
+      "sha256": "244d4bf2a90c8fd7003ce2727b96d8523887eb00fc520a8b78c29c550a3fa8b5",
+      "bytes": 3892
+    },
+    {
+      "path": "app/tests/test_case_film_replacement_v3.py",
+      "sha256": "6e559b5c54db1675b3bb707be971433c478bebd8c648657eb31e94e043f7432d",
+      "bytes": 2685
+    },
+    {
+      "path": "app/tests/test_case_motion_capture_20261105_v1.cjs",
+      "sha256": "957f0b18af2583297fb18ab14da9cdb951c14f4afde545c4d3e8d35894ace22f",
+      "bytes": 3498
+    },
+    {
+      "path": "app/tests/test_case_surface_grasp_v2.cjs",
+      "sha256": "bd096c352d5919050658e4ff5662cde7e8b909b5b047b707833338e5369b6f73",
+      "bytes": 3744
+    },
+    {
       "path": "app/tests/test_charger_mask_refit_20261103_v1.py",
       "sha256": "ba467bbe5fc2a1d4e9b0c1c7456030e4bd217ab68236ce73dae77fff0eb2a8c3",
       "bytes": 1293
@@ -3845,6 +4075,16 @@
       "path": "app/tests/test_charger_tracking_sam_correction_v2.py",
       "sha256": "70bf4c6a08348a09c85e4e9c9e2d0b41fd19f02c53f4fa22f97ef7f1336d5338",
       "bytes": 2211
+    },
+    {
+      "path": "app/tests/test_charging_capture_clock_v1.py",
+      "sha256": "340cbbc161c9475a499b931e2ec126cfb118441d9403386b1da6d9f166f12aa9",
+      "bytes": 1497
+    },
+    {
+      "path": "app/tests/test_charging_rehearsal_v1.cjs",
+      "sha256": "6a2367158a567a8eec7eac8a1fd6058d349c9d46e58a979c34e5ae262f3d2d5f",
+      "bytes": 7822
     },
     {
       "path": "app/tests/test_cobalt_library_preview.cjs",
@@ -4105,6 +4345,11 @@
       "path": "app/tests/test_incremental_observed_revision_v2.py",
       "sha256": "73800b9a15851b5af1465382b8f705add5a54d3ee87b2f0beb968e94b4c242b3",
       "bytes": 9782
+    },
+    {
+      "path": "app/tests/test_industrial_capture_intake_v2.cjs",
+      "sha256": "5b44c18c38771a853db1346014de78fe7d21dab0757c346782bd048d8e13a745",
+      "bytes": 2702
     },
     {
       "path": "app/tests/test_initial_sam3d_handoff.py",
@@ -5558,8 +5803,8 @@
     },
     {
       "path": "docs/PUBLIC_RELEASE.md",
-      "sha256": "49fdc43de5e412ee10686ceddb425d01261878a7e81c8866cc17e9d8b924ad63",
-      "bytes": 3234
+      "sha256": "af120ec95b08c5983d9dbab3314568162b91d48334211d578a05e710650e2f0e",
+      "bytes": 4108
     },
     {
       "path": "docs/admin-api.md",
@@ -5592,6 +5837,11 @@
       "bytes": 8209
     },
     {
+      "path": "docs/film-reproduction.md",
+      "sha256": "1657f38f38063d6e8c1d9ef186d758c8fe9fb0cb305d5a1fc138767fa66d60e3",
+      "bytes": 4363
+    },
+    {
       "path": "docs/github-pages.md",
       "sha256": "53012a37e50697dc80bfb56248e4846b88f12c718c49f0050e6e6d4c665c10bf",
       "bytes": 1843
@@ -5612,9 +5862,14 @@
       "bytes": 20220
     },
     {
+      "path": "docs/media/captions.vtt",
+      "sha256": "adc00e47e7b5e49fbcf0cf03e51f4467b840a5890188c9f2ab1b61d00b686257",
+      "bytes": 608
+    },
+    {
       "path": "docs/media/interaction-twin-45s.mp4",
-      "sha256": "f73d2b36e40c53105d94cbaf973a1335327f9f138ef3ef33464db51ba85a2166",
-      "bytes": 5014495
+      "sha256": "b13b02fe7ee4d2dbe9d282889276f7e6fb0dd57c571bb8d515bb74b5d88d31e9",
+      "bytes": 6342169
     },
     {
       "path": "docs/media/meta-company-logo.jpg",
@@ -5628,8 +5883,13 @@
     },
     {
       "path": "docs/media/trailer-poster.jpg",
-      "sha256": "74d6d217e8d5e8216452b84b176772361ae0e26b5a036448134e002aeb858990",
-      "bytes": 133775
+      "sha256": "2fea8daaeaff38a51e84c8f2da5c576ddf08ec0f6d47fa2b333c41b1cfdb0e46",
+      "bytes": 137674
+    },
+    {
+      "path": "docs/media/transcript.txt",
+      "sha256": "9c85f815c445c9626678fbdf607517e66fee7e9773b64443085ae8e5894e5cf6",
+      "bytes": 504
     },
     {
       "path": "docs/meta-budget.md",
@@ -5762,7 +6022,7 @@
     "python_fixture_checks_passed": 27,
     "node_fixture_checks_passed": 66,
     "node_saved_data_skips": 3,
-    "local_documentation_links_checked": 57,
+    "local_documentation_links_checked": 70,
     "empty_catalog_build": {
       "cases": 0,
       "errors": []
@@ -5803,9 +6063,27 @@
     },
     "README_trailer": {
       "path": "docs/media/interaction-twin-45s.mp4",
-      "sha256": "f73d2b36e40c53105d94cbaf973a1335327f9f138ef3ef33464db51ba85a2166",
+      "sha256": "b13b02fe7ee4d2dbe9d282889276f7e6fb0dd57c571bb8d515bb74b5d88d31e9",
       "duration_s": 45,
-      "full180s_movie_in_source": false
+      "full180s_movie_in_source": false,
+      "captions": "docs/media/captions.vtt",
+      "transcript": "docs/media/transcript.txt",
+      "inline_GitHub_attachment_preserved": true
+    },
+    "film_editor_source_review": {
+      "selected_new_source_files": 49,
+      "source_only_charging_math_node_passed": 4,
+      "source_only_B_proxy_contract_node_passed": 1,
+      "saved_capture_node_skips": 15,
+      "stdlib_decoded_clock_python_passed": 4,
+      "optional_media_synthetic_codec_python_passed": 4,
+      "full_film_reproduction_inputs_included": false,
+      "source_helpers_contain_no_model_or_publish_calls": true,
+      "authored_A_copy_display_proxy_original_B_retained": true,
+      "new45_and180_full_decode_passed": true,
+      "unchanged_narration_music_AAC_packets_verified": true,
+      "new180_opening_1350_decoded_frames_equal_new45": true,
+      "new_API_calls": 0
     }
   }
 }

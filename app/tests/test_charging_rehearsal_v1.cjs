@@ -1,0 +1,39 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),fs=require('fs'),path=require('path'),crypto=require('crypto');
+const root=path.resolve(__dirname,'..'),C=require('../showcase/robot-controller.js'),Q=require('../showcase/charging-rehearsal-plan-20261105-v1.js'),V=require('../showcase/charging-rehearsal-view-20261105-v1.js');
+const goals={end_a:[-.30,.05,.2265],end_b:[.22,.1174,.3315]},ports=Object.fromEntries(Object.entries(goals).map(([id,p])=>[id,[p[0],p[1],p[2]-.0475]]));
+const boxes=[[[.099,.018,-.14],[.341,.217,.28]],[[-.391,.018,-.075],[-.209,.082,.175]]];
+test('ordered two-end attachment, visible seating, release and full final hold',()=>{
+ const p=Q.build(goals);assert.equal(p.timeline.duration_s,13);assert.deepEqual(p.releases.map(r=>r.id),['end_a','end_b']);assert.ok(p.releases[1].time_s-p.releases[0].time_s>4);
+ for(let i=0;i<=1560;i++){const s=Q.at(p,i/120);assert.ok(s.ik.reachable);assert.ok(s.ik.residual<1e-9);assert.ok(C.forward(s.ik.joints,p.timeline.robot).within_limits);for(const id of ['end_a','end_b']){if(s.attached===id)assert.ok(C.distance(s.objects[id].position,s.tool)<1e-9);if(s.endpoints[id].released)assert.ok(s.endpoints[id].position_error<1e-9);}}
+ const end=Q.at(p,13);assert.equal(end.attached,null);assert.equal(end.gripper,0);assert.ok(end.final_hold);assert.equal(C.distance(end.tool,Q.HOME),0);assert.deepEqual(end.endpoints.end_a.quaternion_xyzw,[0,0,0,1]);assert.equal(end.physical_insertion_verified,false);assert.equal(end.charging_success_verified,false);
+ assert.equal(Q.at(p,11.29).final_hold,false);for(const t of [11.3,12,13])assert.equal(Q.at(p,t).final_hold,true);
+});
+test('constant insertion axes, unchanged seated first end during second end operation',()=>{
+ const p=Q.build(goals);for(const phase of p.timeline.phases.filter(x=>x.step.title?.startsWith('Seat '))){assert.equal(phase.before.tool[0],phase.after.tool[0]);assert.equal(phase.before.tool[1],phase.after.tool[1]);assert.ok(phase.before.tool[2]>phase.after.tool[2]);}
+ for(let t=4.3;t<13;t+=.13){const s=Q.at(p,t);assert.equal(s.endpoints.end_a.position_error,0);}
+});
+test('fixed full trajectory camera includes arm housings, actual models and both ports',()=>{
+ const p=Q.build(goals),f=V.fit(p,boxes,ports);assert.equal(f.full_task_samples_checked,391);assert.equal(f.proof.all_points_inside,true);assert.ok(f.proof.world_max[1]>1);assert.ok(f.maximum_ik_residual<1e-9);
+ for(let t=0;t<=13;t+=.037){const s=Q.at(p,t);for(const point of [s.ik.origin,s.ik.elbow,s.ik.wrist,s.ik.tip,...V.cablePoints(s),...Object.values(ports)]){const n=f.project(point);assert.ok(Math.abs(n[0])<.87&&Math.abs(n[1])<.87&&n[2]>0);}}
+ assert.throws(()=>V.fit(p,[],ports));assert.throws(()=>Q.build({end_a:[50,0,0],end_b:goals.end_b}));
+});
+test('phone staging uses exact selected broadside source5 and rigid source-camera flip',{skip:!fs.existsSync(path.join(root,'showcase/charging-rehearsal-20261105-v1.bindings.json'))},()=>{
+ const b=JSON.parse(fs.readFileSync(path.join(root,'showcase/charging-rehearsal-20261105-v1.bindings.json')));assert.equal(b.phone.surface_sample_index,5);assert.deepEqual(b.phone.display.rotation_matrix3,[[1,0,0],[0,0,-1],[0,1,0]]);assert.equal(b.physical_insertion_verified,false);assert.equal(b.charging_success_verified,false);
+ // A source-only release can retain these tests without shipping private saved data.
+ const descriptor=path.join(root,b.phone.surface_descriptor.path);if(!fs.existsSync(descriptor))return;
+ const raw=fs.readFileSync(descriptor);assert.equal(crypto.createHash('sha256').update(raw).digest('hex'),b.phone.surface_descriptor.sha256);const row=JSON.parse(raw).samples.find(r=>r.source_sample_index===5);assert.deepEqual(row.asset,b.phone.asset);assert.deepEqual(row.source_RGB,b.phone.source_RGB);assert.deepEqual(row.source_pixel_map,b.phone.source_pixel_map);assert.deepEqual(row.camera_from_asset,b.phone.source_camera_from_asset);
+ for(const r of [b.phone.asset,b.phone.source_RGB,b.phone.source_mask,b.phone.source_pixel_map,b.charger.asset]){const bytes=fs.readFileSync(path.join(root,r.path));assert.equal(bytes.length,r.bytes);assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),r.sha256);}
+});
+test('editorial push is continuous, focuses the active connection and returns both models',()=>{
+ const p=Q.build(goals),f=V.fit(p,boxes,ports);assert.equal(f.editorial_camera,true);assert.equal(f.full_rig_required_during_establishing_only,true);assert.deepEqual(V.cameraAt(f,0).position,f.position);assert.notDeepEqual(V.cameraAt(f,4.5).position,f.position);assert.notDeepEqual(V.cameraAt(f,9.55).target,V.cameraAt(f,4.5).target);assert.deepEqual(V.cameraAt(f,12).position,V.cameraAt(f,13).position);
+ for(const k of f.keys.slice(1,-1)){const a=V.cameraAt(f,k.time_s-1e-6),b=V.cameraAt(f,k.time_s+1e-6);assert.ok(C.distance(a.position,b.position)<1e-5);assert.ok(C.distance(a.target,b.target)<1e-5);}
+});
+test('capture intake independently recomputes all action, endpoint and camera samples',{skip:!fs.existsSync(path.join(root,'data/source-visible-flexure/phone-20261104-v3-1/descriptor.json'))},()=>{
+ const assetPath=path.join(root,'data/source-visible-flexure/phone-20261104-v3-1/descriptor.json');if(!fs.existsSync(assetPath))return;
+ const {validate}=require('../scripts/validate_charging_capture_20261105_v1.cjs'),bindings=JSON.parse(fs.readFileSync(path.join(root,'showcase/charging-rehearsal-20261105-v1.bindings.json'))),p=Q.build(goals),view=V.fit(p,boxes,ports),end=Q.at(p,13);
+ const d={format:'interaction-twin-charging-rehearsal-capture',version:1,duration_s:13,canvas:[1920,1080],fps:30,authored_kinematic_rehearsal:true,physical_insertion_verified:false,physical_grasp_verified:false,charging_success_verified:false,physical_scale_verified:false,native_phone_geometry_repaired:false,source_and_native_bytes_modified:false,camera_microphone_access:false,new_API_calls:0,new_remote_GPU_calls:0,bindings,video_ref:{path:'output/charging-rehearsal-20261105-v1/charging-rehearsal-v1.webm',sha256:'0'.repeat(64),bytes:99},asset_staging:Object.fromEntries(['phone','charger'].map((n,i)=>[n,{asset:bindings[n].asset,original_source_vertices_modified:false,uniform_scale:1,world_bounds:boxes[i]}])),final_endpoint_goals:end.endpoints,final_gripper_attached:null,final_tool_retreated:true,final_tool:end.tool,ordered_releases:p.releases,final_hold_start_s:11.3,final_hold_duration_s:1.7,actions:p.timeline.phases.map(x=>({start_s:x.start_s,end_s:x.end_s,...x.step})),camera:view,port_proxy:{authored:true,native_port_location_verified:false},cable_proxy:{procedural:true,simulated_forces:false},trace:[]};
+ for(let frame=0;frame<=390;frame++){const time_s=frame/30,s=Q.at(p,time_s),v=V.cameraAt(view,time_s);d.trace.push({frame:Math.floor(time_s*30),time_s,phase_index:s.phase_index,action:s.phase.title,op:s.phase.op,attached:s.attached,tool:s.tool,gripper:s.gripper,joints:s.ik.joints,ik_residual:s.ik.residual,reachable:s.ik.reachable,endpoints:s.endpoints,camera_position:v.position,camera_target:v.target,final_hold:s.final_hold});}
+ d.phone_display_geometry_derivative=true;d.asset_staging.phone.display_derivative={kind:'illustrative_source_face_fixture',reference_camera_estimated_depth_scale:.12,maximum_source_XY_error:0,UV_RGB_unchanged:true,display_vertices_modified:true,native_geometry_repaired:false,recovered_hidden_back:false,recovered_physical_port:false};
+ assert.equal(validate(d).passed,true);for(const mutate of [x=>x.trace[100].tool[0]+=.01,x=>x.trace[100].camera_position[0]+=.01,x=>x.final_endpoint_goals.end_b.released=false,x=>x.physical_insertion_verified=true,x=>x.trace.splice(100,20),x=>x.asset_staging.phone.display_derivative.native_geometry_repaired=true]){const changed=JSON.parse(JSON.stringify(d));mutate(changed);assert.throws(()=>validate(changed));}
+});
