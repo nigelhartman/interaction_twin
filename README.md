@@ -10,7 +10,11 @@
   <a href="https://nigelhartman.github.io/interaction_twin/showcase/walkthrough.html">3-minute walkthrough</a>
 </p>
 
-https://github.com/user-attachments/assets/e5097536-f51c-4747-9b42-e236fd88cb21
+
+
+https://github.com/user-attachments/assets/f86a9f6b-9880-405b-ac13-b56e1cde3f03
+
+
 
 <p align="center">▶ <a href="docs/media/interaction-twin-45s.mp4">Latest trailer MP4</a> · Sound and English captions on the demo page.</p>
 
