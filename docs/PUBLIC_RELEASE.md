@@ -6,6 +6,8 @@ The custom work covers the descriptive interaction/object-program representation
 
 The public demo includes five owner-recorded example families. The YouTube-origin camera recording remains excluded pending confirmed reuse rights. Generated geometry and source-visible surfaces are draft outputs, not measured physical assets. Media is presented for project demonstration; no broad third-party asset license is implied.
 
+Nigel captured the demonstrations with Ray-Ban Meta glasses, using hands-free first-person video while manipulating the objects. This hardware attribution is separate from the Meta models used by the downstream analysis pipeline; it does not imply a live glasses SDK integration or Meta endorsement. The official Meta logo in the README is unchanged from Meta’s brand-resource image and is used for the hackathon attribution under the permission confirmed by the participant. Meta retains its trademark rights.
+
 The trailer uses project graphics, owner-recorded footage, a local synthetic voice and original procedural instrumental music. It uses no imported stock music. The extended film distinguishes illustrated review logic, actual saved MCP retrieval and authored robot motion.
 
 No project-wide open-source license has been granted. Applicable upstream terms and notices remain in force. The vendored Three.js notice is in [`app/workspace/robot-vendor/LICENSE`](../app/workspace/robot-vendor/LICENSE); it covers that dependency, not the project as a whole. Obtain and use Meta models, weights and SDKs under their respective upstream terms.

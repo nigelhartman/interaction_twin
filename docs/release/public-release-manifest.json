@@ -1,6 +1,6 @@
 {
   "format": "interaction-twin-public-source-release",
-  "version": 11,
+  "version": 12,
   "owner_authorized_repository": "nigelhartman/interaction_twin",
   "layout": "self_contained_runtime_in_app; documentation_at_root",
   "private_state_excluded": true,
@@ -13,8 +13,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "ee8ef6d9bdca6e8cf14045eb544439f6c1941462f970b8200e3ecc0e5cdaafd7",
-      "bytes": 9179
+      "sha256": "f3d2311f39cf6678f2578762c6d03f476d9f05c2d549dbfefa17503098ac9ed9",
+      "bytes": 10854
     },
     {
       "path": "app/admin/admin.css",
@@ -5558,8 +5558,8 @@
     },
     {
       "path": "docs/PUBLIC_RELEASE.md",
-      "sha256": "ad3f191c3db07088b7e28dcc7ecefc3a499ac35721ce8e55c5dacd09cd8a957a",
-      "bytes": 2720
+      "sha256": "49fdc43de5e412ee10686ceddb425d01261878a7e81c8866cc17e9d8b924ad63",
+      "bytes": 3234
     },
     {
       "path": "docs/admin-api.md",
@@ -5615,6 +5615,11 @@
       "path": "docs/media/interaction-twin-45s.mp4",
       "sha256": "f73d2b36e40c53105d94cbaf973a1335327f9f138ef3ef33464db51ba85a2166",
       "bytes": 5014495
+    },
+    {
+      "path": "docs/media/meta-company-logo.jpg",
+      "sha256": "0d98835ece3caa6e28a1786fe3a9227cd6479e4e9bc0244f8e69d040825f573b",
+      "bytes": 313224
     },
     {
       "path": "docs/media/pipeline.svg",
@@ -5748,8 +5753,8 @@
     },
     {
       "path": "docs/technical-overview-20261104.md",
-      "sha256": "865739e145f25d439d906d21a0347c6d1ae3a402335cd3ce9ab4e3d5a088e417",
-      "bytes": 12317
+      "sha256": "af3b113a7b3293777f320044eb8b74f7a7c476fb5e7515d4eb975bb2a520cf0f",
+      "bytes": 13087
     }
   ],
   "manifest_self_excluded": true,

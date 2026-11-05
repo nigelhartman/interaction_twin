@@ -4,6 +4,12 @@ Interaction Twin prepares reusable object-interaction context from ordinary demo
 
 The [public demo](https://nigelhartman.github.io/interaction_twin/) contains five owner-recorded example families. It is a static snapshot: saved results and browser rendering, with no upload, paid inference, private admin or hosted MCP service. The source branch contains the implementation; see the [review setup](source-setup.md) to run it with an empty catalog.
 
+## Hands-free capture with Ray-Ban Meta
+
+Nigel used Ray-Ban Meta glasses to capture the demonstrations. A first-person camera with both hands free was practical for opening a case, manipulating small parts and connecting a cable while recording the interaction. This is capture hardware in the workflow, alongside Muse, SAM and SAM 3D; it is not an on-glasses reconstruction or robot-control application.
+
+The pipeline ingests the resulting ordinary video files. No live glasses SDK integration is required for these saved examples, and the glasses do not establish calibrated object dimensions or camera poses. Meta documents hands-free photo and video capture in its [AI glasses overview](https://about.fb.com/news/2026/07/metas-ai-glasses-your-questions-answered/).
+
 ## Why Muse Spark
 
 Our task spans visual evidence, relationships and action order. A useful model must help explain what moves, how parts relate and what a proposed reconstruction gets wrong. We use Muse Spark 1.3 for that reasoning and review role, while segmentation, mesh generation and deterministic checks have separate responsibilities.

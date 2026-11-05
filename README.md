@@ -20,6 +20,22 @@ An object is more than its shape. A case opens on a hinge. Earbuds can be remove
 
 ![Video → segmentation → 3D parts → descriptive object program → agent reuse](docs/media/pipeline.svg)
 
+## Built with Meta — from hands-free capture to reusable interactions
+
+<p><a href="https://www.meta.com/en-gb/brand/resources/meta/company-brand/"><img src="docs/media/meta-company-logo.jpg" width="320" alt="Meta — technology used for this hackathon project"></a></p>
+
+**Nigel recorded the demonstrations with Ray-Ban Meta glasses.** Hands-free capture kept both hands available to open cases, handle small parts and connect cables—the interactions the project aims to preserve.
+
+| Meta technology | What we used it for |
+| --- | --- |
+| **[Ray-Ban Meta glasses](https://www.meta.com/ai-glasses/ray-ban-meta/)** | First-person, hands-free demonstration video. The glasses capture the source; reconstruction runs in our separate pipeline. |
+| **[Muse Spark 1.3](https://dev.meta.ai/docs/models#muse-spark)** | Propose parts, relationships and actions; critique candidates through separate evidence, geometry, mechanics and semantics prompts. |
+| **[SAM 3.1](https://github.com/facebookresearch/sam3)** | Segment visible parts and keep their masks tied to the source frames. |
+| **[SAM 3D Objects](https://github.com/facebookresearch/sam-3d-objects)** | Generate separate 3D component drafts from selected frames and masks. |
+| **[CoTracker3](https://github.com/facebookresearch/co-tracker)** | Supply additional tracked point correspondences for motion estimates. |
+
+Our application joins those outputs into an evidence-linked object program. **Build → critique → targeted repair → owner approval** keeps the agentic loop bounded before people or agents reuse a curated result. See [how the models and our code fit together](docs/technical-overview-20261104.md).
+
 ## Try it
 
 | Explore | What you can do |
